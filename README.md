@@ -48,3 +48,9 @@ Open a `SKILL.md`, copy the **Prompt** block, and paste it into Super Magic (or 
 This library is **crowdsourced** — built by and for the community. Have a skill your peers would love, or a fix for an existing one? Fork the repo, add or edit a `SKILL.md`, and open a pull request; once it's merged it goes live on the docs site.
 
 See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the four steps and the format. The bar: a skill solves one real MSP workflow, carries its own guardrails, and contains no client or partner data.
+
+## Community
+
+- 📚 **[Browse the Skill Library](https://docs.getthread.com/skill-library/overview)** — every skill live, searchable by category, connector, role, and outcome.
+- 🧵 **[Thread Crew](https://thread-crew.circle.so)** — ask questions and swap ideas with other Thread partners.
+- 💬 **[AI Service Unleashed](https://www.getthread.com/aisu-community)** — the community and weekly webinar for AI-forward MSPs.
