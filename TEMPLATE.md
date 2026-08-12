@@ -1,19 +1,19 @@
 <!--
 Canonical Skill template. Copy this into skills/<category>/<slug>/SKILL.md and fill it in.
-Every skill in this library follows this exact shape. See CONTRIBUTING.md for the rules
-and research/tool-catalog.md for the tools/connectors and Flow filters you may rely on.
-Delete this comment block in your copy.
+Every skill in this library follows this exact shape. See CONTRIBUTING.md for the rules and
+the fixed lists of roles, outcomes, and connectors you may use. Delete this comment block in
+your copy.
 -->
 ---
 name: Short Title Case Name
 description: When to reach for this skill, in one line — this is the trigger the agent matches.
-category: One of the categories in README.md
+category: One of the existing folders in skills/
 tools: [search_tickets, add_ticket_note]   # metadata for validation — do NOT name these in the prompt
 connectors: []            # e.g. [NinjaOne]; [Zapier: Microsoft Teams]; [] if native-only
 scope: both               # single | global | both — one ticket, across all tickets, or either
 flow: yes                 # yes | no — can a Flow trigger this automatically on matching tickets?
-role: [Technician]        # 1-2 values from research/taxonomy.md — who reaches for this skill
-outcome: [Faster Resolution & Response]   # 1-2 values from research/taxonomy.md — what it's worth
+role: [Technician]        # 1-2 values from the list in CONTRIBUTING.md — who reaches for this skill
+outcome: [Faster Resolution & Response]   # 1-2 values from the list in CONTRIBUTING.md — what it's worth
 ---
 
 # Short Title Case Name
