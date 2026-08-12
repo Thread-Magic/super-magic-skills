@@ -1,8 +1,8 @@
 # Thread Skills
 
-A library of ready-to-use Skills for the Thread agent (Super Magic). Each Skill is a small, reusable instruction set that tells the agent how to run one MSP workflow well: triaging a ticket, drafting a client reply, prepping a QBR, responding to a phishing report.
+A library of ready-to-use Skills for Super Magic and Super Magic Agents. Each Skill is a small, reusable instruction set that tells the agent how to run one MSP workflow well: triaging a ticket, drafting a client reply, prepping a QBR, responding to a phishing report.
 
-These are drawn from how partners actually use the agent — a full study of production usage (27,000+ conversations and 500+ partner-authored skills) plus verified capability research on every connector. Where a workflow showed up many times in slightly different forms, we merged the variants into one canonical Skill that covers the superset of what they did. Nothing here contains partner names, client data, or environment-specific detail. Read a Skill, adapt the specifics to your stack, and load it.
+These are drawn from how partners actually use the agent plus verified capability research on every connector. Nothing here contains partner names, client data, or environment-specific detail. Read a Skill, adapt the specifics to your stack, and load it.
 
 Browse them all — searchable by category, connector, role, and outcome — on the [Thread docs site](https://docs.getthread.com/skill-library/overview). **This repo is where they're crowdsourced: [suggest an idea](../../issues/new?template=skill-idea.yml) or [contribute a skill](CONTRIBUTING.md), and it goes live on the docs site.**
 
