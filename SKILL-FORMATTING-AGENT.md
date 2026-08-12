@@ -145,9 +145,7 @@ when it's absent.
   point you at" when global. Flows are **event-triggered only** (created / updated / replied /
   status-changed, filtered on board, status, priority, type/subtype/item, category, company, contact,
   team, owner, member, source, agreement, SLA, severity, sentiment, touchpoint, day/time) — there is
-  **no schedule/duration** trigger. A cadence/digest/sweep is `flow: no` (manual/global); don't
-  over-claim an unattended scheduled Flow.
-
+  **no schedule/duration** trigger. A cadence/digest/sweep is `flow: no` (manual/global)
 ---
 
 ## Hard limits — never build on these (see `research/tool-catalog.md` "NOT supported")
@@ -160,7 +158,6 @@ when it's absent.
 - **Can't run** — needs a missing tool or an unsupported capability.
 - **Not value-added** — thin, generic, or something a tech wouldn't actually reach for.
 - **Duplicates a stronger sibling** — improve the existing one and cross-reference; don't ship a near-copy.
-- **Over-claims Flows** — a scheduled/duration "unattended" trigger Flows can't do. Make it manual or drop it.
 
 ## Sanitize
 No client or partner names, no people, no hostnames, no credentials, no ticket IDs, no
