@@ -1,0 +1,101 @@
+name: 💡 Suggest a skill idea
+description: No code needed — describe a Super Magic workflow you wish existed, and we'll help turn it into a skill.
+title: "[Skill idea] "
+labels: ["skill-idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping grow the library! You don't need to write a prompt — just describe the
+        workflow in plain English. A maintainer (or our formatting agent) will shape it into a
+        proper skill. Prefer to write the whole thing yourself? [Fork and open a PR](../../blob/main/CONTRIBUTING.md) instead.
+  - type: input
+    id: name
+    attributes:
+      label: What would you call this skill?
+      placeholder: e.g. "After-Hours Voicemail Digest"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What should it do?
+      description: Describe the workflow the way you'd explain it to a new tech — step by step, in plain English.
+      placeholder: |
+        e.g. When a voicemail-to-ticket comes in overnight, read the transcript, set a priority,
+        draft a short internal note summarizing who called and why, and flag anything urgent.
+    validations:
+      required: true
+  - type: input
+    id: trigger
+    attributes:
+      label: When would you reach for it?
+      description: The moment or situation that should make someone (or a Flow) run this.
+      placeholder: e.g. "Every morning when reviewing overnight tickets" / "Whenever a phishing report comes in"
+    validations:
+      required: true
+  - type: textarea
+    id: tools
+    attributes:
+      label: What does it touch?
+      description: Which tickets, and any integrations (PSA, RMM, documentation, etc.). Don't worry about exact tool names.
+      placeholder: e.g. "Reads tickets on the Voicemail board. Uses NinjaOne to check if the caller's device is offline. Native otherwise."
+    validations:
+      required: false
+  - type: dropdown
+    id: category
+    attributes:
+      label: Best-fit category (optional)
+      description: Where would this live? Pick the closest — we'll confirm on review.
+      options:
+        - Triage & Routing
+        - QA & Closure
+        - Scheduling & Dispatch
+        - Communication
+        - Documentation
+        - Escalation
+        - Onboarding & Access
+        - Devices & Infrastructure
+        - Security
+        - Vendor Runbooks
+        - Liongard Inspectors
+        - Compliance & Audit
+        - Troubleshooting Playbooks
+        - Alert Runbooks
+        - End-User Guides
+        - Role Rituals
+        - Localized
+        - Microsoft 365 Administration
+        - PSA-Specific Workflows
+        - Change & Problem Management
+        - Voice & Messenger
+        - Industry Packs
+        - MSP Business Operations
+        - Reporting & Analytics
+        - Account Management
+        - Client Lifecycle
+        - Finance & Billing
+        - Sales & Quoting
+        - Automation & Flows
+        - Connectors
+        - Training & Enablement
+        - Personal Productivity
+        - Not sure
+    validations:
+      required: false
+  - type: textarea
+    id: guardrails
+    attributes:
+      label: What should it NOT do? (optional)
+      description: Any safety limits — e.g. "never close a ticket without confirmation", "draft the reply, don't send it".
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: My description contains no client names, credentials, ticket IDs, or other private data.
+          required: true
+        - label: I searched existing issues and skills, and this isn't already covered.
+          required: true

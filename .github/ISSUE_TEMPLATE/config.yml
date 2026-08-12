@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Browse the Skill Library
+    url: https://docs.getthread.com/skill-library/overview
+    about: See every skill live on the Thread docs site, searchable by category, connector, role, and outcome.
+  - name: 🧵 Thread Crew community
+    url: https://thread-crew.circle.so
+    about: Ask questions and swap ideas with other Thread partners.
+  - name: 💬 AI Service Unleashed
+    url: https://www.getthread.com/aisu-community
+    about: The community and weekly webinar for AI-forward MSPs.

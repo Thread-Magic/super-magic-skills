@@ -1,0 +1,32 @@
+name: 🔧 Improve an existing skill
+description: Suggest a fix or improvement to a skill that's already in the library.
+title: "[Improve] "
+labels: ["skill-improvement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Spotted a skill that could be sharper, safer, or more accurate? Tell us which one and what
+        to change. Small fix you can make yourself? [Fork and open a PR](../../blob/main/CONTRIBUTING.md) — even a one-line prompt tweak is welcome.
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill?
+      description: Link the skill's SKILL.md, or give its name and category.
+      placeholder: e.g. skills/triage-and-routing/ticket-triage/SKILL.md
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change, and why?
+      description: What's wrong or missing today, and what "better" looks like. Real-world examples help.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: My description contains no client names, credentials, ticket IDs, or other private data.
+          required: true

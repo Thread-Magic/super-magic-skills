@@ -1,0 +1,27 @@
+# Tells the Thread docs site to regenerate the Skill Library whenever skills change on main.
+# The docs repo (Thread-Magic/mintlify-docs) listens for a `skills-updated`
+# repository_dispatch and re-runs scripts/sync_skills.py; Mintlify then redeploys.
+#
+# Requires a secret named DOCS_DISPATCH_TOKEN in THIS repo: a token with write access to
+# the docs repo (fine-grained PAT with Contents: read & write, or a classic PAT with
+# `repo` scope). Without it, the docs repo's nightly schedule still keeps things in sync —
+# this workflow just makes the update instant.
+
+name: Notify docs of skill changes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger docs sync
+        env:
+          GH_TOKEN: ${{ secrets.DOCS_DISPATCH_TOKEN }}
+        run: |
+          gh api repos/Thread-Magic/mintlify-docs/dispatches \
+            -f event_type=skills-updated
