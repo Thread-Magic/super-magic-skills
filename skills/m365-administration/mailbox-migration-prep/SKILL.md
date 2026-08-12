@@ -1,6 +1,6 @@
 ---
 name: Mailbox Migration Prep
-description: Build the pre-migration checklist for tenant-to-tenant or on-prem-to-cloud mailbox moves — full inventory, the list of things that break, holds and licensing checks, and the user comms plan. Use when a migration is being scoped or scheduled, before anyone touches a migration batch.
+description: Build the pre-migration checklist for tenant-to-tenant or on-prem mailbox moves: inventory, breakage list, holds and licensing, and user comms.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

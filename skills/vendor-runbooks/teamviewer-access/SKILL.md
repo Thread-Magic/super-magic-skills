@@ -1,6 +1,6 @@
 ---
 name: TeamViewer Access
-description: A TeamViewer remote-access problem landed — troubleshoot host/agent health, unattended access, and session connectivity from the symptom and docs, watch for the commercial-use-detected flag, and hand the technician into the console. Access tool, not a script surface.
+description: Troubleshoot TeamViewer remote access: host and agent health, unattended access, session connectivity, and the commercial-use-detected flag on handoff.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_itglue, add_ticket_note, update_ticket]
 connectors: []

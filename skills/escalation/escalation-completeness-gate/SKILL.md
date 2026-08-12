@@ -1,6 +1,6 @@
 ---
 name: Escalation Completeness Gate
-description: Review tickets entering an "Escalation Requested" status against the escalation checklist and bounce incomplete ones back to the requesting technician with specific, itemized feedback.
+description: Review tickets entering Escalation Requested status against the escalation checklist and bounce incomplete ones back to the tech with itemized feedback.
 category: Escalation
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []

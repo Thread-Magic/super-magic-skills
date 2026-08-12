@@ -1,6 +1,6 @@
 ---
 name: Change Request Prerequisites
-description: A change request needs validating before it goes for approval — check it against the prerequisites template (justification, scope, rollback, window, approver) and bounce incomplete requests with an itemized list.
+description: Validate a change request against the prerequisites template — justification, scope, rollback, window, approver — and bounce incomplete requests itemized.
 category: Compliance & Audit
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket]
 connectors: []

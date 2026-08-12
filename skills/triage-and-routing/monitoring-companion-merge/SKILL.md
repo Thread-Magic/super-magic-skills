@@ -1,6 +1,6 @@
 ---
 name: Monitoring Companion Merge
-description: Merge companion tickets that multiple monitoring tools opened for the same underlying event on the same device, folding them into one parent within a time buffer.
+description: Merge companion tickets that multiple monitoring tools opened for the same event on one device, folding them into a single parent within a time buffer.
 category: Triage & Routing
 tools: [search_tickets, merge_ticket, add_ticket_note]
 connectors: []

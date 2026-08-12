@@ -1,6 +1,6 @@
 ---
 name: Typosquat Domain Alert
-description: A lookalike or typosquatted domain impersonating a client was reported or detected — gather registrar and DNS facts without visiting it, gauge attack capability, and draft the client warning.
+description: Work a typosquat or lookalike domain alert impersonating a client: gather registrar and DNS facts without visiting, gauge capability, draft a warning.
 category: Security
 tools: [liongard_domain, search_clients, search_tickets, web_search, add_ticket_note, update_ticket, view_openDraft]
 connectors: [Liongard]

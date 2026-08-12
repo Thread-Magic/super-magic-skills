@@ -1,6 +1,6 @@
 ---
 name: MDR Client Onboarding
-description: A client is being onboarded to a new MDR/SOC service — scope the assets, wire alert routing into the desk, record escalation contacts and authority, and set baseline-noise expectations for the first weeks.
+description: Onboard a client to a new MDR or SOC service: scope assets, wire alert routing into the desk, record escalation contacts, and set noise expectations.
 category: Security
 tools: [search_clients, search_contacts, search_tickets, search_ninjaone_devices, connectwise_rmm_search_devices, search_itglue, add_ticket_note, create_ticket, update_ticket]
 connectors: [NinjaOne, ConnectWise RMM, IT Glue]

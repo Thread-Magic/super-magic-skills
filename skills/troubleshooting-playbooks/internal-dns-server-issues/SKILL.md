@@ -1,6 +1,6 @@
 ---
 name: Internal DNS Server Issues
-description: Diagnose AD-integrated DNS problems — machines resolving stale/wrong internal names, external resolution dead but internal fine (or vice versa), records vanishing overnight — distinct from public DNS/domain records, which the dns-domain-issues playbook owns.
+description: Fix AD-integrated internal DNS — stale records, external dead while internal works (or reverse), records vanishing — distinct from public DNS/domain.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, liongard_launchpoint, liongard_metric, liongard_timeline, web_search]
 connectors: [IT Glue, Hudu, Liongard]

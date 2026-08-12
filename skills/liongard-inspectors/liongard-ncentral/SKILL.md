@@ -1,6 +1,6 @@
 ---
 name: Liongard N-central Read
-description: Interrogate a client's N-able N-central footprint through the Liongard N-central inspector — managed device inventory, agent/probe status, patch state, monitored services, customers/sites. Use for "what does N-central manage for them?", offline-agent checks, or patch-currency questions during triage.
+description: Interrogate a client's N-able N-central footprint via Liongard: managed device inventory, agent/probe status, patch state, monitored services, sites.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

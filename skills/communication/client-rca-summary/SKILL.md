@@ -1,6 +1,6 @@
 ---
 name: Client RCA Summary
-description: Draft a client-safe root-cause summary for a resolved issue — what happened, impact, cause, and what prevents recurrence — written defensively. Use for a single-ticket RCA the client asks for, short of a full major-incident letter.
+description: Draft a client-safe root-cause summary for a resolved issue — what happened, impact, cause, and prevention — written defensively for one ticket.
 category: Communication
 tools: [search_tickets, search_knowledge_base, view_openDraft]
 connectors: []

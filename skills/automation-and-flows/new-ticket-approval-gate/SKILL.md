@@ -1,6 +1,6 @@
 ---
 name: New Ticket Approval Gate
-description: For configured clients, every new ticket requires the client's designated approver to authorize work before it begins — fire send_approval on intake, hold the ticket in a waiting status, and record the outcome; timeout means not approved.
+description: Configured clients require the designated approver to authorize work on every new ticket — fire send_approval on intake, hold, and record the outcome.
 category: Automation & Flows
 tools: [search_tickets, search_clients, search_contacts, send_approval, update_ticket, add_ticket_note]
 connectors: []

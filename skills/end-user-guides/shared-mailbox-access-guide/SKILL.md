@@ -1,6 +1,6 @@
 ---
 name: Shared Mailbox Access Guide
-description: Draft reply-ready instructions for an end user to open a shared mailbox they've been granted — desktop, web, and mobile paths — "tell the user how to open the shared mailbox."
+description: Draft reply-ready instructions for an end user to open a shared mailbox they've been granted access to — desktop, web, and mobile paths covered.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

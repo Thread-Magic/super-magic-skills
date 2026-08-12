@@ -1,6 +1,6 @@
 ---
 name: Contract Renewal Routing
-description: Catch contract renewal and expiry notices landing in the service queue and route them to the right owner — retitled to a standard, moved to the sales/AM board, with context attached.
+description: Catch renewal and expiry notices in the service queue and route them to the right sales or account manager, retitled and moved with context attached.
 category: Client Lifecycle
 tools: [search_tickets, update_ticket, add_ticket_note, list_boards, search_clients, search_members]
 connectors: []

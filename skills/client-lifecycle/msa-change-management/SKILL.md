@@ -1,6 +1,6 @@
 ---
 name: MSA Change Management
-description: Work through what an agreement change — tier, scope, seats, sites — means operationally: what changes on the desk, who must be notified, and how effective dating is handled.
+description: Work through what an MSA change in tier, scope, seats, or sites means operationally: desk updates, notifications, and how effective dating is handled.
 category: Client Lifecycle
 tools: [search_clients, search_contacts, search_tickets, create_ticket, add_ticket_note, list_boards]
 connectors: []

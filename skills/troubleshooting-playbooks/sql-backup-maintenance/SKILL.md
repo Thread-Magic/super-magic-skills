@@ -1,6 +1,6 @@
 ---
 name: SQL Backup and Maintenance
-description: Diagnose SQL Server backup and maintenance problems — runaway transaction-log growth, recovery-model confusion (FULL vs SIMPLE), failed or missing log backups breaking point-in-time recovery, and VSS/app-backup interplay — from the recovery model and backup history, never by shrinking or breaking the log chain. Performance tuning lives in sql-server-performance.
+description: Fix SQL Server backup issues: runaway log growth, FULL vs SIMPLE recovery model, missing log backups, VSS conflicts, and broken point-in-time recovery.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

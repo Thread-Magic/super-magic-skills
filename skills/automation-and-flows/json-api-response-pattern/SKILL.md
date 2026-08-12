@@ -1,6 +1,6 @@
 ---
 name: JSON API Response Pattern
-description: BASE skill for machine integrations — when an external system calls Super Magic and will parse the reply, respond with only a raw JSON object matching the requested schema. Load when building or reviewing any prompt whose consumer is code, not a person.
+description: Base skill for machine integrations: when an external system calls Super Magic and parses the reply, respond with only a raw JSON object matching schema.
 category: Automation & Flows
 tools: []
 connectors: []

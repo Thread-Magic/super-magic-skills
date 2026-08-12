@@ -1,6 +1,6 @@
 ---
 name: Device-to-User Mapping
-description: Answer "who uses this device" or "what device does this user have" by combining RMM last-logged-on data with contact records, ticket history, and documentation. Use whenever a ticket names a person but not a machine, or a machine but not a person.
+description: Answer "who uses this device" by combining RMM last-logged-on data with contact records, ticket history, and documentation when a ticket names only one.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, search_contacts, search_tickets, search_itglue, add_ticket_note]
 connectors: [NinjaOne, IT Glue]

@@ -1,6 +1,6 @@
 ---
 name: PSA Closed Status Taxonomy
-description: For any PSA-synced desk (ConnectWise, Autotask, HaloPSA) — identify every closed-family status that still leaks into "open" search results, and maintain the exclusion list that keeps reports and sweeps honest.
+description: PSA closed-status taxonomy (ConnectWise, Autotask, HaloPSA): find every closed-family status leaking into open searches and maintain the exclusion list.
 category: PSA-Specific
 tools: [search_tickets, list_ticket_statuses, list_boards, search_knowledge_base]
 connectors: []

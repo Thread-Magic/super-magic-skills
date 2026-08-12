@@ -1,6 +1,6 @@
 ---
 name: Vacation Handoff Pack
-description: Pre-PTO handoff prep — which of my tickets need transferring, which just need watching, and a per-ticket one-liner brief so the covering tech can act without archaeology.
+description: Pre-PTO handoff prep listing which tickets need transferring, which need watching, and a per-ticket one-liner brief so cover techs can act fast.
 category: Personal Productivity
 tools: [search_tickets, search_members, update_ticket, add_ticket_note]
 connectors: []

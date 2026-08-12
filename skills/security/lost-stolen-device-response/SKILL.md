@@ -1,6 +1,6 @@
 ---
 name: Lost or Stolen Device Response
-description: A user reports a lost or stolen laptop or phone — work the lock/wipe decision, assess what data and access were on it, and drive the carrier/police steps, with the destructive actions gated on explicit approval.
+description: Respond to a lost or stolen laptop or phone: decide lock or wipe, assess exposed data and access, and drive carrier or police steps with approval gates.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

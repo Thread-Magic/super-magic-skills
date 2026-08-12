@@ -1,6 +1,6 @@
 ---
 name: End-of-Day Wrap-Up
-description: A technician closing out their day — sweep my tickets for anything stale >24h, awaiting-client without a follow-up sent, status mismatches, and line up tomorrow's first moves.
+description: End-of-day sweep for a technician: stale tickets over 24h, awaiting-client with no follow-up, status mismatches, and tomorrow's first moves lined up.
 category: Personal Productivity
 tools: [search_tickets, add_ticket_note, update_ticket]
 connectors: []

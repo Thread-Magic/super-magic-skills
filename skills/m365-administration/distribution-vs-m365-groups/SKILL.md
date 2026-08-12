@@ -1,6 +1,6 @@
 ---
 name: Distribution vs M365 Groups
-description: Choose the right group type for the ask — distribution list, M365 Group, mail-enabled security group, or dynamic — and handle DL-to-M365-Group upgrades with the blockers checked first. Use when a ticket asks for "a group email," "a team," or wants to modernize an old distribution list.
+description: Pick between distribution lists, Microsoft 365 Groups, mail-enabled security groups, and dynamic groups, and handle DL-to-M365-Group upgrades.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

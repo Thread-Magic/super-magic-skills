@@ -1,6 +1,6 @@
 ---
 name: Outlook Client Issues
-description: Diagnose Outlook desktop problems — crashes, hangs, search broken, "profile keeps asking for password", crash-on-send — via profile, data-file, and add-in isolation branches with rebuild criteria.
+description: Diagnose Outlook desktop crashes, hangs, broken search, password prompts, and crash-on-send using profile, data-file, and add-in isolation branches.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

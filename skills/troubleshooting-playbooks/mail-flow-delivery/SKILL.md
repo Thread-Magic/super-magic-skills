@@ -1,6 +1,6 @@
 ---
 name: Mail Flow & Delivery
-description: Diagnose email delivery problems — bounces/NDRs, mail not arriving, mail stuck outbound, one sender blocked — by decoding the NDR and tracing the message through the client's actual mail path.
+description: Diagnose email delivery — NDR bounces, mail not arriving, stuck outbound, one sender blocked — by decoding the bounce and tracing the actual mail path.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

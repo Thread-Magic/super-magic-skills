@@ -1,6 +1,6 @@
 ---
 name: Cork Protection Posture
-description: A Cork cyber-warranty posture signal landed — read which required control slipped, understand that the signal is a warranty-eligibility gap (not an active incident), and drive it back into compliance before coverage lapses.
+description: Handle Cork cyber-warranty posture signals: identify the required control that slipped and restore it to compliance before warranty coverage lapses.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_itglue, add_ticket_note, update_ticket]
 connectors: []

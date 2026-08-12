@@ -1,6 +1,6 @@
 ---
 name: Aging, SLA & Follow-Up
-description: Sweep open tickets for real staleness — measured by last meaningful client-facing update, not last touch — separate MSP-owned stalls from legitimate waits, nudge the assigned tech, and drive clean follow-up or closure with sign-off.
+description: Sweep open tickets for real staleness by last client-facing update, separate MSP stalls from legitimate waits, nudge techs, and drive clean closure.
 category: QA & Closure
 tools: [search_tickets, add_ticket_note, update_ticket, schedule_ticket, search_members, list_boards, list_ticket_statuses]
 connectors: []

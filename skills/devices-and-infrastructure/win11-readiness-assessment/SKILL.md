@@ -1,6 +1,6 @@
 ---
 name: Windows 11 Readiness Assessment
-description: Assess which of a client's devices can upgrade to Windows 11 — CPU generation, TPM, RAM, and OS edition flags from RMM device details — and produce an upgrade-blocker list. Use for "which machines can't run Win11" or planning an OS migration.
+description: Assess which client devices can upgrade to Windows 11 — CPU generation, TPM, RAM, and edition flags from RMM device details — with an upgrade-blocker list.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, add_ticket_note]
 connectors: [NinjaOne]

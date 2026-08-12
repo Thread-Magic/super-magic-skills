@@ -1,6 +1,6 @@
 ---
 name: Retention Policy Requests
-description: Handle requests to change retention or deletion policies in Microsoft Purview — confirm exact scope, warn about legal-hold interaction and irreversible deletion, and gate on documented authorization. Use when a ticket asks to keep mail for N years, auto-delete old items, or change what's retained.
+description: Change Microsoft Purview retention and deletion policies with scope confirmed, legal-hold interaction flagged, and authorization documented.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

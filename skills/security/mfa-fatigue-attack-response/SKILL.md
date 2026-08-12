@@ -1,6 +1,6 @@
 ---
 name: MFA Fatigue Attack Response
-description: A user is getting a flood of MFA push prompts they didn't start (push bombing / MFA fatigue) — treat the password as already known, contain the account, and drive the tenant toward number-matching so approval spam stops working.
+description: Respond to MFA push bombing and fatigue attacks: treat the password as known, contain the account, and enforce number-matching so approval spam fails.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

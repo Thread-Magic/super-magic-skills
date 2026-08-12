@@ -1,6 +1,6 @@
 ---
 name: Runbook Recommender
-description: Match a ticket against the desk's approved runbooks and post up to three runbook links as a single internal note — only when the fit is confident; otherwise post nothing.
+description: Match a ticket against the desk's approved runbooks and post up to three runbook links as a single internal note — only when confident, otherwise nothing.
 category: Documentation
 tools: [list_ticket_runbooks, recommend_runbooks, search_runbooks, get_runbook_form_link, add_ticket_note, search_knowledge_base]
 connectors: [Runbooks]

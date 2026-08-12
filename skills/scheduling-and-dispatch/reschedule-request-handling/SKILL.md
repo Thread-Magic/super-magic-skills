@@ -1,6 +1,6 @@
 ---
 name: Reschedule Request Handling
-description: A client asks to move an appointment — find the schedule entry or booking, propose new slots that actually work, update the entry, and confirm back to the client.
+description: A client asks to move an appointment: find the schedule entry or booking, propose new slots that actually work, update it, and confirm to the client.
 category: Scheduling & Dispatch
 tools: [search_tickets, update_schedule_entry, schedule_ticket, add_ticket_note, get_timezest_scheduling_requests, create_timezest_scheduling_request]
 connectors: [TimeZest]

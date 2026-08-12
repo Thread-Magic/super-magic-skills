@@ -1,6 +1,6 @@
 ---
 name: Veeam Restore Operations
-description: Run a Veeam restore request end-to-end — choosing the right restore type (file-level vs application-item vs full-VM vs Instant Recovery), picking the correct restore point, restoring to a safe location, and verifying the data — distinct from diagnosing why a backup failed (backup-failure-triage / backup-restore-request for intake).
+description: Run Veeam restores end to end: pick file-level, application-item, full-VM, or Instant Recovery, choose the right point, target a safe location, verify.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, send_approval, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Supporting Manufacturing Clients
-description: Vertical pack for manufacturing and industrial clients — the OT/IT boundary (never touch PLCs/SCADA without the OT owner), ERP/MES stack, shift patterns and line-down urgency, and shop-floor devices. Load when the client is a manufacturer or the ticket mentions the shop floor, a production line, machine controllers, or industrial equipment.
+description: Manufacturing client pack covering the OT/IT boundary, PLC and SCADA hands-off rules, ERP/MES stacks, shift patterns, and line-down urgency.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

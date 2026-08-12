@@ -1,6 +1,6 @@
 ---
 name: Password Expiry Change Guide
-description: Draft reply-ready instructions for an end user to change a password that's about to expire (or just did) before it locks them out — "send the user steps to change their expiring password."
+description: Draft reply-ready instructions for an end user to change a password that's about to expire (or just did) before it locks them out of their account.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

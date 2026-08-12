@@ -1,6 +1,6 @@
 ---
 name: Follow-up Chaser
-description: Draft a polite, escalating follow-up when a client hasn't replied on a ticket — first nudge, second nudge, or final pre-closure attempt, tone matched to the attempt number.
+description: Draft a polite, escalating follow-up when a client hasn't replied on a ticket — first nudge, second nudge, or final pre-closure attempt with tone.
 category: Communication
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []

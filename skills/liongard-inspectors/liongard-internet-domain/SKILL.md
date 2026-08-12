@@ -1,6 +1,6 @@
 ---
 name: Liongard Internet Domain & TLS Read
-description: Answer domain, DNS, and certificate questions from Liongard's Internet Domain/DNS and TLS/SSL inspectors — registrar and expiry, DNS record changes, mail-auth records, and cert-expiry sweeps across one client or all of them.
+description: Answer domain, DNS, and TLS questions via Liongard Internet Domain and TLS inspectors: registrar, expiry, DNS changes, mail-auth records, cert sweeps.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_domain, liongard_metric, liongard_detection, liongard_timeline, liongard_query]
 connectors: [Liongard]

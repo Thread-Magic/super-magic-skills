@@ -1,6 +1,6 @@
 ---
 name: VMware vSAN and vMotion
-description: Diagnose VMware vSphere problems — vSAN health warnings and resync storms, vMotion/DRS migration failures, datastore latency and APD/PDL — from vCenter health and event evidence, never by migrating or rebooting hosts blindly.
+description: Diagnose VMware vSphere: vSAN health warnings, resync storms, vMotion and DRS migration failures, datastore latency, and APD or PDL via vCenter events.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

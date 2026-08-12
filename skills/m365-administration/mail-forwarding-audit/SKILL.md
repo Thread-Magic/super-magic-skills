@@ -1,6 +1,6 @@
 ---
 name: Mail Forwarding Audit
-description: Inventory every forwarding path in a tenant or mailbox — mailbox-level forwarding, inbox rules, and transport rules — and treat external forwarding as the security surface it is. Use when a ticket asks "is anything forwarding out," a security review needs a forwarding sweep, or mail is arriving somewhere it shouldn't.
+description: Inventory every mail forwarding path in a tenant or mailbox: mailbox forwarding, inbox rules, and transport rules, treating external forwarding as risk.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, add_ticket_note, update_ticket, log_time_entry, web_search]
 connectors: [IT Glue]

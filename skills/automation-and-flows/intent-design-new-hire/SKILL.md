@@ -1,6 +1,6 @@
 ---
 name: New Hire Intent Design
-description: Build the new-hire onboarding intake intent — collect the full checklist up front so the ticket arrives complete and routes straight into the onboarding workflow. Use when asked to "build a new hire intent", "automate onboarding requests", or when new-user setup ranks high in Intent Mining.
+description: Design the new-hire onboarding intake intent: collect the full checklist up front so the ticket arrives complete and routes into the onboarding workflow.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets]
 connectors: []

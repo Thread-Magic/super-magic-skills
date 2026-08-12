@@ -1,6 +1,6 @@
 ---
 name: Liongard Kaseya VSA Read
-description: Interrogate a client's Kaseya VSA footprint through the Liongard Kaseya VSA inspector — managed agent inventory, online/check-in status, patch state, monitor sets, organizations/machine groups. Use for "what does VSA manage for them?", offline-agent checks, or patch-currency questions during triage.
+description: Interrogate a client's Kaseya VSA footprint via Liongard: managed agent inventory, online status, patch state, monitor sets, and machine groups.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

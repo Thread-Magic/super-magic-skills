@@ -1,6 +1,6 @@
 ---
 name: Defender M365 Alerts
-description: A Microsoft Defender / Entra alert arrived — Safe Links or Safe Attachments detonation, suspicious inbox rule, or risky sign-in. Identify the alert family, correlate it to its Defender incident, and route to the right runbook with portal paths for the tech.
+description: Triage Microsoft Defender and Entra alerts: Safe Links or Safe Attachments detonation, suspicious inbox rules, risky sign-in. Correlate to the incident.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

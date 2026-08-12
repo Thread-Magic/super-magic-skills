@@ -1,6 +1,6 @@
 ---
 name: Live Chat Etiquette
-description: House rules for working a live Messenger chat — response cadence, holding messages, handoff phrasing, and ending the chat cleanly. Use when drafting chat replies, coaching a tech on chat conduct, or writing the desk's chat playbook.
+description: House rules for working a live Messenger chat — response cadence, holding messages, handoff phrasing, and ending the chat cleanly for the desk playbook.
 category: Voice & Messenger
 tools: [search_tickets, search_knowledge_base, view_openDraft]
 connectors: []

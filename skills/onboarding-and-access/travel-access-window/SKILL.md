@@ -1,6 +1,6 @@
 ---
 name: Travel Access Window
-description: Open a temporary conditional-access exception for a traveling user with an automatic expiry and a tracked revert task. Use when a ticket says a user is traveling and will be blocked by location or device sign-in policies.
+description: Open a temporary conditional access exception for a traveling user with automatic expiry and a tracked revert task so location policies stay in place.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, update_ticket, schedule_ticket, send_approval, log_time_entry]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Adobe Creative Cloud Licensing
-description: Diagnose Adobe Creative Cloud licensing and sign-in problems — sign-in loops, "you don't have access", named-user vs shared-device confusion, and Admin Console assignment/entitlement gaps — from the Admin Console entitlement and the exact sign-in error, never by reinstalling first.
+description: Fix Adobe Creative Cloud sign-in loops, access-denied errors, and Admin Console entitlement gaps between named-user and shared-device licensing.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, NinjaOne]

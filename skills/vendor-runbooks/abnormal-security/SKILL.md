@@ -1,6 +1,6 @@
 ---
 name: Abnormal Security
-description: An Abnormal email case landed — read its account-takeover and BEC/behavioral signals, treat an ATO case as an identity incident (not just an email one), and follow through on what auto-remediation didn't cover.
+description: Triage Abnormal Security email cases: read ATO and BEC behavioral signals, treat account takeover as an identity incident, finish auto-remediation gaps.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Liongard Windows Server Read
-description: Interrogate a client's Windows Servers through Liongard — installed roles, local admin members, services, patch level, OS version and EOL flags. Use for "what does this server do", local-admin audits, EOL-OS sweeps, or patch-posture checks per server.
+description: Interrogate a client's Windows Servers via Liongard: installed roles, local admin members, services, patch level, OS version and end-of-life flags.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

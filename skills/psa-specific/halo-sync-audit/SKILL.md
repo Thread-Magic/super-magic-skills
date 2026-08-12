@@ -1,6 +1,6 @@
 ---
 name: Halo Sync Audit
-description: For desks synced to HaloPSA — sweep for Thread↔Halo divergence, with special attention to the known pattern of statuses not carrying over; reconcile toward Halo as master.
+description: Sweep Thread ↔ HaloPSA divergence — especially the known pattern of statuses not carrying over — and reconcile toward Halo as the master system.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

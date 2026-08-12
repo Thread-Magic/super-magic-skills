@@ -1,6 +1,6 @@
 ---
 name: Technical to Plain English
-description: Translate a technical resolution, diagnosis, or explanation into language a non-technical stakeholder can understand — "explain this to the office manager," "make this client-friendly."
+description: Translate a technical resolution, diagnosis, or explanation into language a non-technical stakeholder can understand — "make this client-friendly."
 category: Communication
 tools: [search_tickets]
 connectors: []

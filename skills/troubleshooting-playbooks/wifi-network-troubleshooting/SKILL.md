@@ -1,6 +1,6 @@
 ---
 name: Wi-Fi & Network Troubleshooting
-description: Diagnose wireless and LAN problems — slow/dropping Wi-Fi, can't connect, dead zones, "the internet is down" — by laddering scope from single user to AP to site before touching anything.
+description: Diagnose Wi-Fi and LAN issues: slow or dropping Wi-Fi, connection failures, dead zones, and internet-down reports by laddering user to AP to site scope.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

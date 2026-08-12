@@ -1,6 +1,6 @@
 ---
 name: DLP Alert Triage
-description: A data-loss-prevention alert fired — someone emailed, uploaded, or copied something the policy watches — separate business-process false positives from real exfiltration signals, investigating with respect for employee privacy.
+description: Triage a DLP alert: separate business-process false positives from real data exfiltration signals, investigating with respect for employee privacy.
 category: Security
 tools: [search_tickets, search_contacts, search_clients, add_ticket_note, update_ticket]
 connectors: []

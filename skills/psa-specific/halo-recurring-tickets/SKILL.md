@@ -1,6 +1,6 @@
 ---
 name: Halo Recurring Tickets
-description: For desks synced to HaloPSA — handle Halo's template-generated recurring tickets and parent/child structures correctly: work the instance, never the template, and respect parent/child closure rules.
+description: HaloPSA recurring tickets and parent/child structures: work the generated instance, never the template, and respect parent/child closure rules on sync.
 category: PSA-Specific
 tools: [search_tickets, update_ticket, add_ticket_note]
 connectors: []

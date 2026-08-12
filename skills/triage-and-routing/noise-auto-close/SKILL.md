@@ -1,6 +1,6 @@
 ---
 name: Noise Auto-Close
-description: Close pure-noise tickets — bounce-backs, vendor auto-replies, thanks-only messages, offline alerts whose device already reconnected — behind multiple independent stop conditions; any sign of a real user message or a flapping device aborts the close.
+description: Close pure-noise tickets — bounce-backs, vendor auto-replies, thanks-only messages, reconnected offline alerts — behind independent stop conditions.
 category: Triage & Routing
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []

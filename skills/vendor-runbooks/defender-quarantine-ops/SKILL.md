@@ -1,6 +1,6 @@
 ---
 name: Defender Quarantine Ops
-description: A Microsoft 365 quarantine item needs review or a user requested a release — apply the quarantine-release-request discipline with Defender-specific portal paths, verdict types, and release mechanics.
+description: Review Microsoft 365 Defender quarantine items and release requests using Defender portal paths, verdict types, and disciplined release mechanics.
 category: Vendor Runbooks
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket]
 connectors: []

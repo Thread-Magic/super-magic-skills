@@ -1,6 +1,6 @@
 ---
 name: CSAT Trends Report
-description: Someone wants satisfaction scores over time — by client, technician, or ticket category — with honest treatment of response rates, so a 3-response month is never presented like a 300-response month.
+description: Track CSAT scores over time by client, technician, or ticket category with honest treatment of response rates so a 3-response month isn't shown as 300.
 category: Reporting & Analytics
 tools: [search_tickets, search_clients, search_members, list_boards]
 connectors: []

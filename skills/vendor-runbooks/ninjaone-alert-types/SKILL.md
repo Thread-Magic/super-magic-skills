@@ -1,6 +1,6 @@
 ---
 name: NinjaOne Alert Types
-description: A NinjaOne-native condition/threshold alert landed — classify the alert type (offline, resource threshold, service, patch, hardware/health, security), read live device state with the real NinjaOne tools, and route each class to its runbook with a deep-link handoff.
+description: Classify NinjaOne condition and threshold alerts (offline, resource, service, patch, hardware, security) and route each class with a deep-link handoff.
 category: Vendor Runbooks
 tools: [list_ninjaone_alerts, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note]
 connectors: [NinjaOne]

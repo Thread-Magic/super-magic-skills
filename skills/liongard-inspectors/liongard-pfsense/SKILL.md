@@ -1,6 +1,6 @@
 ---
 name: Liongard pfSense Read
-description: Interrogate a client's pfSense firewall through the Liongard pfSense inspector — version, interfaces, firewall/NAT rules, VPN config, packages, admin access. Use for "what's their pfSense config?", rule/exposure review during triage, or version-currency checks.
+description: Interrogate a client's pfSense firewall via the Liongard pfSense inspector: version, interfaces, firewall/NAT rules, VPN config, packages, admins.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

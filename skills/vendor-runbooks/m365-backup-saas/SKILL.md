@@ -1,6 +1,6 @@
 ---
 name: M365 SaaS Backup
-description: A SaaS backup ticket arrived (M365/Google Workspace backup products generically) — a point-in-time restore request, a protection-scope/license reconciliation, or a job failure. Verify authorization before restores and reconcile protected seats against real users.
+description: Work M365 and Google Workspace SaaS backup tickets: point-in-time restores, license and seat reconciliation, and job failures with authorization checks.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

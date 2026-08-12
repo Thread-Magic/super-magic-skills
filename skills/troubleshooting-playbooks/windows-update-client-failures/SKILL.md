@@ -1,6 +1,6 @@
 ---
 name: Windows Update Client Failures
-description: Diagnose a single machine failing Windows updates — 0x8024xxxx/0x800Fxxxx errors, updates that loop or roll back, "checking for updates" forever — by first identifying which update source the machine actually reports to (WU, WSUS, or Intune), then walking the component-store repair ladder in order.
+description: Diagnose Windows Update client failures: 0x8024xxxx and 0x800Fxxxx errors, update loops and rollbacks, and stuck scans across WU, WSUS, and Intune sources.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

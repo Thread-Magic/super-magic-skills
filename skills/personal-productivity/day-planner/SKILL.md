@@ -1,6 +1,6 @@
 ---
 name: Day Planner
-description: Plan a technician's day around their calendar and their ticket queue — "I finish at 5:30, I'm in <timezone>" — producing a realistic time-blocked plan, not just a priority list.
+description: Plan a technician's day around calendar and queue, honoring shift end and timezone, producing a realistic time-blocked plan and not just priorities.
 category: Personal Productivity
 tools: [search_tickets, search_members]
 connectors: []

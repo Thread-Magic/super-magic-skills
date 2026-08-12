@@ -1,6 +1,6 @@
 ---
 name: Password Reset Intent Design
-description: Build the password-reset intent — the highest-volume deflection target on most desks — with an SSPR-first reply path and a strict identity-verification handoff. Use when asked to "build a password reset intent", "deflect password tickets", or when Intent Mining ranks password reset as a top candidate.
+description: Design the password-reset intent — the top deflection target on most desks — with an SSPR-first reply path and a strict identity-verification handoff.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets, search_knowledge_base]
 connectors: []

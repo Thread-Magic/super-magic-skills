@@ -1,6 +1,6 @@
 ---
 name: AD CS / Internal PKI Issues
-description: Diagnose internal certificate-authority problems on AD CS — enrollment and template failures, CRL/revocation-check breakage, and expiry cascades (CA or issued certs expiring) — from the failing enrollment error and CRL validity, never by reissuing blindly.
+description: Troubleshoot AD CS internal PKI issues — enrollment and template failures, CRL revocation-check errors, and certificate expiry cascades before reissuing.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, Liongard, NinjaOne]

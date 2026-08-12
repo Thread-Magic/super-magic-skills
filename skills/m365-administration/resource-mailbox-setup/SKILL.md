@@ -1,6 +1,6 @@
 ---
 name: Resource Mailbox Setup
-description: Create and configure room or equipment mailboxes — booking policies, auto-accept vs delegate approval, recurring-meeting and duration limits — so bookings behave the way the client expects. Use when a ticket asks for a bookable meeting room, projector, vehicle, or "why does the room double-book / never respond."
+description: Create Exchange room and equipment mailboxes with booking policies, auto-accept or delegate approval, and recurring-meeting and duration limits.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

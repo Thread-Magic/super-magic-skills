@@ -1,6 +1,6 @@
 ---
 name: Churn Save Deep Dive
-description: When a client says they want to leave — an unflinching full-history analysis of what went wrong, what we did well, and the honest talking points for a win-back conversation.
+description: Analyze a client's churn intent using full ticket history to surface what went wrong, what worked, and honest talking points for win-back calls.
 category: Client Lifecycle
 tools: [search_tickets, search_clients, search_contacts]
 connectors: []

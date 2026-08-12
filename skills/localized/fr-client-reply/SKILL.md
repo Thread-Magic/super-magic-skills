@@ -1,6 +1,6 @@
 ---
 name: Réponse client
-description: Rédiger une réponse externe au client dans la voix et le format maison — point d'avancement, note de statut, message de clôture ou tout e-mail client sur un ticket. (Draft a client-facing reply in the house voice — status updates, closing messages, any client email on a ticket, in French.)
+description: Rédiger une réponse client dans la voix maison: point d'avancement, note de statut, message de clôture ou tout e-mail client sur un ticket.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []

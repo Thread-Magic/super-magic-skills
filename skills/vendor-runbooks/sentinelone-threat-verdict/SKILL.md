@@ -1,6 +1,6 @@
 ---
 name: SentinelOne Threat Verdict
-description: A SentinelOne threat detection needs triage — read the static vs behavioral engine verdict and mitigation status, direct kill/quarantine/rollback/disconnect decisions, and hold the line on exclusion requests.
+description: Triage SentinelOne threat detections: read static vs behavioral engine verdicts, direct kill, quarantine, rollback, and hold on exclusion requests.
 category: Vendor Runbooks
 tools: [search_tickets, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

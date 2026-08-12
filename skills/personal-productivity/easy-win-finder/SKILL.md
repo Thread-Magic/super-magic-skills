@@ -1,6 +1,6 @@
 ---
 name: Easy Win Finder
-description: "Recommend an easy ticket that just came in" — surface quick-win candidates from the queue that match the requesting technician's skills, with why each is quick.
+description: Surface quick-win ticket candidates from the queue that match the requesting technician's skills, with a short reason each one is fast to close.
 category: Personal Productivity
 tools: [search_tickets, search_members]
 connectors: []

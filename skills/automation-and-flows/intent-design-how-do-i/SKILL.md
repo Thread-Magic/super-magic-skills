@@ -1,6 +1,6 @@
 ---
 name: How-Do-I Self-Help Router Intent Design
-description: Build the catch-all "how do I…" self-help router — classify the how-to, serve the matching end-user guide or KB article, and escalate only when no guidance exists. Use when asked to "build a how-to intent", "deflect how-do-I questions", or when general how-to queries dominate Intent Mining.
+description: Design the catch-all "how do I" self-help router intent: classify the how-to, serve the matching end-user guide or KB article, escalate only if no match.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets, search_knowledge_base]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Invoice Dispute Investigation
-description: When a client disputes a charge or questions an invoice line and you need to reconstruct the work evidence from tickets and time entries, then draft a factual response.
+description: When a client disputes an invoice line, reconstruct the work evidence from tickets and time entries, then draft a factual response backed by the record.
 category: Finance & Billing
 tools: [search_tickets, search_clients, search_contacts, add_ticket_note]
 connectors: []

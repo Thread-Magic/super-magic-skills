@@ -1,6 +1,6 @@
 ---
 name: Dispatch Control Tower
-description: The dispatcher's live picture in one view — unassigned queue, at-risk tickets, today's scheduled work, and who is free right now.
+description: The dispatcher's live picture in one view — unassigned queue, at-risk tickets, today's scheduled work, and which technicians are free to pick up right now.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_members, list_boards, list_ticket_priorities]
 connectors: []

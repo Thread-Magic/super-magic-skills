@@ -1,6 +1,6 @@
 ---
 name: Respuesta al cliente
-description: Redactar una respuesta externa al cliente con la voz y el formato de la casa — actualizaciones de resolución, notas de estado, mensajes de cierre o cualquier correo de cara al cliente sobre un ticket. (Spanish version of Client Reply — drafts on-brand client-facing ticket replies.)
+description: Redactar una respuesta externa al cliente con voz y formato de la casa: actualizaciones, notas de estado, cierre o cualquier correo del ticket.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []

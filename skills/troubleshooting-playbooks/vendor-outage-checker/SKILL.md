@@ -1,6 +1,6 @@
 ---
 name: Vendor Outage Checker
-description: When a ticket smells like a vendor or service outage (M365, ISP, SaaS app), check the vendor's status page and outage reports on the web and post sourced findings to the ticket — the commonly requested "is it just us or is it down for everyone?" workflow.
+description: Check vendor status pages and outage reports for M365, ISPs, and SaaS apps, then post sourced findings to the ticket to confirm is it down for everyone.
 category: Troubleshooting Playbooks
 tools: [web_search, add_ticket_note, search_tickets, run_assistive_ai]
 connectors: []

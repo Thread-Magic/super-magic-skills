@@ -1,6 +1,6 @@
 ---
 name: Zapier DocuSign Authorization
-description: Send a change-authorization or offboarding-acknowledgment for signature from a ticket via DocuSign, track completion, and file the signed document. Use for "get sign-off on this change", "send the offboarding acknowledgment for signature", or any work that needs a signed authorization before it proceeds.
+description: Send change-authorization or offboarding-acknowledgment for signature from a ticket via DocuSign, track completion, and file the signed document.
 category: Connectors
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket]
 connectors: [Zapier: DocuSign]

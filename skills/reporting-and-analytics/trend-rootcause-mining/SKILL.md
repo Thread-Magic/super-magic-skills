@@ -1,6 +1,6 @@
 ---
 name: Trend Root-Cause Mining
-description: Someone asks what is making the desk so busy, what is driving ticket volume, or what the top recurring issues are for a period.
+description: Find what is driving ticket volume and making the desk busy by mining recent tickets for top recurring issues and root causes across a chosen period.
 category: Reporting & Analytics
 tools: [search_tickets, list_boards, search_clients]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Out of Office Guide
-description: Draft reply-ready instructions for an end user to set their own out-of-office reply correctly — dates, internal vs. external messages — "send the user steps to set their OOO."
+description: Draft reply-ready instructions for an end user to set their own out-of-office reply correctly — dates, internal versus external messages for OOO.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

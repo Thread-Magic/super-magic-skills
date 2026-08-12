@@ -1,6 +1,6 @@
 ---
 name: Liongard ConnectWise Automate Read
-description: Interrogate a client's ConnectWise Automate (LabTech) footprint through the Liongard Automate inspector — managed computer inventory, agent check-in status, patch state, monitors, locations. Use for "what does Automate manage for them?", offline-agent checks, or patch-currency questions during triage.
+description: Interrogate ConnectWise Automate (LabTech) via Liongard: managed computer inventory, agent check-in status, patch state, monitors, and locations.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

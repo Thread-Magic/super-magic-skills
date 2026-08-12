@@ -1,6 +1,6 @@
 ---
 name: Liongard Access Pattern
-description: The base pattern for reading ANY system's config/state through Liongard — resolve environment, find the inspector launchpoint by systemType, verify it last ran successfully, then query the dataprint. Use it directly for systems without a dedicated skill, and follow it inside every liongard-inspectors skill.
+description: Base pattern for reading any system's config through Liongard: resolve environment, find inspector by systemType, verify run, query dataprint.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline, liongard_alert]
 connectors: [Liongard]

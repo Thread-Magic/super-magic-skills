@@ -1,6 +1,6 @@
 ---
 name: No-Response Closure Sequence
-description: Close out a ticket whose client has gone silent after three documented contact attempts — send the templated final message, close with a note inviting reopen, and refuse to close anything with fewer attempts on record.
+description: Close a ticket after a client goes silent following three documented contact attempts: send the templated final message, close with a reopen-invite note.
 category: QA & Closure
 tools: [search_tickets, add_ticket_note, update_ticket, list_ticket_statuses]
 connectors: []

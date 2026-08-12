@@ -1,6 +1,6 @@
 ---
 name: Super Magic Enablement
-description: Prep a "show and tell" of the highest-value Super Magic use cases for THIS team — grounded in their own recent tickets, so every example is one the audience recognizes.
+description: Prep a show-and-tell of the highest-value Super Magic use cases for a specific team, grounded in their own recent tickets so every example is recognizable.
 category: Training & Enablement
 tools: [search_tickets, search_thread_docs, search_members]
 connectors: []

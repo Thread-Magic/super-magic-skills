@@ -1,6 +1,6 @@
 ---
 name: OneDrive Storage Governance
-description: Set OneDrive policy deliberately — storage quotas, retention on leaver accounts, sync scope (which devices/domains can sync), and external-sharing posture. Use when a client asks about OneDrive limits, "what happens to files when someone leaves," blocking personal-device sync, or tightening OneDrive sharing.
+description: Set OneDrive governance: storage quotas, leaver-account retention, sync scope by device or domain, and external-sharing posture for the tenant.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

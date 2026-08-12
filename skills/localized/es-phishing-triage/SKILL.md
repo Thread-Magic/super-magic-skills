@@ -1,6 +1,6 @@
 ---
 name: Triaje de phishing
-description: Un usuario reportó un correo sospechoso o un ticket de reporte de phishing cayó en el tablero de seguridad — evaluarlo sin tocar la carga maliciosa, comprobar el radio de impacto, contener si es malicioso y responder al reportante con un veredicto. (Spanish version of Phishing Triage — safe indicator capture, blast radius, containment, verdict.)
+description: Triaje de phishing de un correo sospechoso: evaluar sin tocar la carga, medir radio de impacto, contener si es malicioso y responder al reportante.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

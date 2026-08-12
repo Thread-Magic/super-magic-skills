@@ -1,6 +1,6 @@
 ---
 name: Storage Capacity Planning
-description: Turn repeated disk-space alerts into a trend-based capacity forecast per server/NAS — growth rate, projected full date, and an expansion-options brief the account team can price. Use when a device alerts on disk for the third time, or someone asks "how long until this fills up" or "what should we buy".
+description: Turn repeated disk-space alerts into a trend-based capacity forecast per server or NAS — growth rate, projected full date, and expansion options to price.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, list_ninjaone_alerts, search_tickets, search_itglue, search_hudu, add_ticket_note, create_ticket]
 connectors: [NinjaOne, IT Glue, Hudu]

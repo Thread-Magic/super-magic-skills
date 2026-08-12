@@ -1,6 +1,6 @@
 ---
 name: Network Share Slowness
-description: Diagnose slow file shares — copies crawl, folders take forever to open, one office is fine and another isn't — by laddering SMB version negotiation, signing/encryption overhead, antivirus filter drivers, DFS referrals, and the physical path.
+description: Diagnose slow SMB file shares — sluggish copies, crawling folder listings, one office fine — through SMB version, signing, AV filters, and DFS referrals.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

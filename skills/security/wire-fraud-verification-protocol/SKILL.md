@@ -1,6 +1,6 @@
 ---
 name: Wire Fraud Verification Protocol
-description: The callback-verification standard for ANY request to change or add payment details — banking changes, new wire instructions, payroll redirects — verify out-of-band to a number on file before anything moves, no exceptions.
+description: Callback verification for any payment change request: banking updates, new wire instructions, or payroll redirects — verify out-of-band, no exceptions.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Session Token Theft Response
-description: An account shows malicious activity even though MFA passed and the password looks fine — a stolen session cookie or token is in play, so revoke sessions and tokens, not just the password.
+description: Respond to stolen session cookies or tokens after MFA-passed account abuse: revoke sessions and tokens system-wide, not just the user's password.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

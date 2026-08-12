@@ -1,6 +1,6 @@
 ---
 name: Axcient Backup Alerts
-description: An Axcient x360Recover alert needs triage — distinguish appliance-based vs Direct-to-Cloud failure families, verify retention is doing what the client's design says, and state the last recoverable point.
+description: Triage Axcient x360Recover alerts: distinguish appliance vs Direct-to-Cloud failure families, verify retention, and state the last recoverable point.
 category: Vendor Runbooks
 tools: [search_tickets, search_itglue, get_ninjaone_device, get_ninjaone_device_activities, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

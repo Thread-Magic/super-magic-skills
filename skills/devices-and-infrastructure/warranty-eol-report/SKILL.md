@@ -1,6 +1,6 @@
 ---
 name: Warranty and EOL Report
-description: Build an aging-fleet report for a client — end-of-life operating systems, old hardware, and warranty status where a source exposes it. Use for "what's running out of support at <client>" or lifecycle-risk reporting.
+description: Build an aging-fleet report for a client — end-of-life operating systems, old hardware, and warranty status where a source exposes it, for lifecycle risk.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, liongard_device, liongard_metric, search_itglue, add_ticket_note]
 connectors: [NinjaOne, Liongard, IT Glue]

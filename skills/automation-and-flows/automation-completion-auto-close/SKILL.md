@@ -1,6 +1,6 @@
 ---
 name: Automation Completion Auto-Close
-description: When note evidence shows an intent or external automation actually finished the work, verify it and close the ticket with an audit note — aborting the moment any human message arrives after completion. Answers the "auto-close tickets the automation already handled" workflow.
+description: When note evidence shows an intent or external automation finished the work, verify and auto-close the ticket — abort if any human message arrives after.
 category: Automation & Flows
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []

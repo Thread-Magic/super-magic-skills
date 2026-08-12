@@ -1,6 +1,6 @@
 ---
 name: Working From Home Checklist
-description: Draft a reply-ready remote-work setup checklist for an end user — connectivity, VPN, phone, and how to get help — tailored to the client's remote stack; "send the user a work-from-home checklist."
+description: Draft a reply-ready remote-work setup checklist for an end user — connectivity, VPN, phone, and how to get help — tailored to the client's stack.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

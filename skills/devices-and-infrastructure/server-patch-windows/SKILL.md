@@ -1,6 +1,6 @@
 ---
 name: Server Patch Windows
-description: Plan and verify per-client server patching — map every server to its agreed maintenance window, sequence reboots correctly (dependencies first, domain controllers last and never together), and run the post-patch verification pass. Use for "when do <client>'s servers patch", planning a patch cycle, or verifying last night's window.
+description: Plan and verify per-client server patching — map each server to its maintenance window, sequence reboots correctly, and run post-patch verification passes.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, list_ninjaone_alerts, set_ninjaone_device_maintenance, get_ninjaone_device_link, connectwise_rmm_search_devices, connectwise_rmm_get_device, search_itglue, search_hudu, add_ticket_note, create_ticket, schedule_ticket]
 connectors: [NinjaOne, ConnectWise RMM, IT Glue, Hudu]

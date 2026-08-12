@@ -1,6 +1,6 @@
 ---
 name: Bad Review Response Prep
-description: After a poor CSAT score or negative review, prepare internal talking points plus an external response draft — facts from the ticket record only, zero defensiveness.
+description: After a poor CSAT score or negative review, prepare internal talking points plus an external response draft — facts only, zero defensiveness.
 category: Communication
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []

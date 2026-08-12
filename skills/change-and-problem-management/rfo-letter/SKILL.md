@@ -1,6 +1,6 @@
 ---
 name: RFO Letter
-description: Draft the reason-for-outage letter a client receives after a major incident — facts, impact, remediation, prevention — written defensively: every sentence is one the MSP can stand behind if the letter ends up in front of lawyers or insurers.
+description: Draft the reason-for-outage letter a client receives after a major incident (facts, impact, remediation, prevention) written defensively for legal review.
 category: Change & Problem Management
 tools: [search_tickets, search_knowledge_base, add_ticket_note, search_contacts]
 connectors: []

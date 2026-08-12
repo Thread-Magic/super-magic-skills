@@ -1,6 +1,6 @@
 ---
 name: IT Glue Asset & Contact Lookup
-description: On demand, pull a client's IT Glue contacts, credential links, and flex-asset configs and post a plain-text summary with deep links onto the ticket — degrading to the KB or ticket history when IT Glue isn't connected. Use for "get me the IT Glue info for this client"; runs manually on demand.
+description: On demand, pull IT Glue contacts, credentials, and flex-asset configs into a plain-text ticket summary, degrading to KB or ticket history if unavailable.
 category: Devices & Infrastructure
 tools: [search_itglue, search_knowledge_base, search_tickets, add_ticket_note]
 connectors: [IT Glue]

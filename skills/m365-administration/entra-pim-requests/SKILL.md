@@ -1,6 +1,6 @@
 ---
 name: Entra PIM Requests
-description: Handle privileged-role requests through Privileged Identity Management — eligible vs active assignments, activation justification, and time-boxing — instead of handing out standing admin. Use when a ticket asks to "make <user> an admin", grant a directory role, or activate/extend a PIM assignment.
+description: Handle Entra Privileged Identity Management role requests with eligible vs active assignments, activation justification, and time-boxed access.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, schedule_ticket, web_search]
 connectors: [IT Glue, Hudu]

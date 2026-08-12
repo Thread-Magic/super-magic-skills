@@ -1,6 +1,6 @@
 ---
 name: Supporting Insurance Agencies
-description: Vertical pack for independent insurance agency clients — the AMS (Applied Epic, EZLynx, AMS360, HawkSoft-class), carrier-portal sprawl and IVANS downloads, E&O sensitivity (the activity trail is legal evidence), and the renewal-season rhythm. Load when the client is an insurance agency or brokerage, or the ticket names an AMS, a carrier portal, or ACORD forms.
+description: Independent insurance agency pack for Applied Epic, EZLynx, and HawkSoft AMS, carrier portals, IVANS downloads, ACORD forms, and E&O trails.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

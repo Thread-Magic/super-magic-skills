@@ -1,6 +1,6 @@
 ---
 name: Conditional Access Review
-description: Periodic inventory and gap review of a tenant's Conditional Access policies — overlaps, legacy-auth gaps, unprotected apps, and report-only discipline for any change. Use for "review <client>'s CA policies", posture assessments, or after an incident that a CA policy should have stopped.
+description: Inventory a tenant's Conditional Access policies to find overlaps, legacy-auth gaps, unprotected apps, with report-only discipline for changes.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, create_ticket, schedule_ticket, send_approval, web_search]
 connectors: [IT Glue, Hudu]

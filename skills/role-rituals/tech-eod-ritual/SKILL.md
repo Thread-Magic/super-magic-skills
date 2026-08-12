@@ -1,6 +1,6 @@
 ---
 name: Tech End-of-Day Ritual
-description: A technician's close-of-day runbook — EOD wrap-up, time-entry compliance self-check, and tomorrow's first move — run when a tech says "wrap up my day", "EOD", or on a scheduled end-of-shift flow.
+description: A technician's close-of-day runbook: EOD wrap-up, time-entry compliance self-check, and lining up tomorrow's first move before logging off for the day.
 category: Role Rituals
 tools: [search_tickets, log_time_entry]
 connectors: []

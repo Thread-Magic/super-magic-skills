@@ -1,6 +1,6 @@
 ---
 name: IIS Web App
-description: Diagnose IIS-hosted web application failures — app pool crashes and rapid-fail protection, binding/SSL problems, HTTP 500/502/503 decoding, and recycling behaviour — from the app pool state, HTTP.sys/FREB logs, and the exact sub-status, never from the browser error alone.
+description: Diagnose IIS web app failures — app pool crashes, rapid-fail protection, binding and SSL problems, HTTP 500/502/503 codes — using HTTP.sys and FREB logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

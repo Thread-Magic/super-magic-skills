@@ -1,6 +1,6 @@
 ---
 name: Client Health Report
-description: Summarize one client's support health for a period — volume vs the prior period, recurring issues, noisy assets and users, SLA performance, and two or three recommendations. Weekly or ad-hoc.
+description: Summarize a client's support health for a period — volume trend, recurring issues, noisy assets, SLA performance, and a few concrete recommendations.
 category: Account Management
 tools: [search_tickets, search_clients]
 connectors: []

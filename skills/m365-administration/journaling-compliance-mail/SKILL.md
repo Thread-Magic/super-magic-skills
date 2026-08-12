@@ -1,6 +1,6 @@
 ---
 name: Journaling & Compliance Mail
-description: Handle journaling and compliance-copy requests — legal/regulatory justification required, journal target must be external to the tenant, storage and third-party-archive implications costed, and retention/hold offered first where it fits. Use when a ticket asks to journal mail, BCC-copy all messages somewhere, or feed an external compliance archive.
+description: Handle Exchange journaling and compliance-copy requests with legal justification, external journal targets, cost impact, and retention alternatives.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

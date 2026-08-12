@@ -1,6 +1,6 @@
 ---
 name: Backup Restore Request
-description: Intake and work a restore request — deleted files, prior versions, whole mailboxes or servers — pinning down exactly what/when/where, being honest about RPO limits, and verifying the restored data with the requester.
+description: Intake backup restore requests — deleted files, prior versions, mailboxes, servers — pinning down what, when, RPO limits, and verifying with requester.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, send_approval, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

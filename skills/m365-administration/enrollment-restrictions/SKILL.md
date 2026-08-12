@@ -1,6 +1,6 @@
 ---
 name: Enrollment Restrictions
-description: Configure or explain Intune enrollment restrictions — personal vs corporate device rules, platform blocks, device limits, and how "corporate" is actually determined. Use for "stop personal devices from enrolling", "block Android from management", or when a restriction is bouncing legitimate enrollments.
+description: Configure Intune enrollment restrictions: personal vs corporate device rules, platform blocks, device limits, and corporate identifier logic.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Scanner & Copier Fleet
-description: Work MFP/copier tickets beyond printing — scan-to-folder failures after credential or SMB changes, address-book cleanup, firmware quirks, panel errors — with a clear line between what the desk fixes and what the lease vendor owns.
+description: Fix MFP and copier scan-to-folder failures after SMB or credential changes, address-book cleanup, firmware quirks, and panel errors on leased fleets.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

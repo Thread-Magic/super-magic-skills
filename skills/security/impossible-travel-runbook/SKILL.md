@@ -1,6 +1,6 @@
 ---
 name: Impossible Travel Runbook
-description: An impossible-travel or atypical-location sign-in alert fired for a user — check VPN and travel explanations, verify with the user via a number on file, and contain on confirmed account takeover.
+description: Investigate an impossible-travel or atypical-location sign-in alert: check VPN and travel, verify with the user by phone, and contain on confirmed ATO.
 category: Security
 tools: [search_tickets, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: [IT Glue]

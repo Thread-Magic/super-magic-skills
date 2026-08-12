@@ -1,6 +1,6 @@
 ---
 name: Sentiment Closure Report
-description: Closed tickets in a date range bucketed by sentiment score, per client / tech / period, with the driver messages cited so a low score is explainable — not just a number. Runs manually on demand.
+description: Bucket closed tickets by sentiment score per client, tech, or period, with driver messages cited so a low score is explainable, not just a number.
 category: Reporting & Analytics
 tools: [search_tickets, search_clients, search_members]
 connectors: []

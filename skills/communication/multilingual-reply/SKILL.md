@@ -1,6 +1,6 @@
 ---
 name: Multilingual Reply
-description: Draft the client reply in the client's own language — detect it from their messages, write natively in it, and provide an English back-translation so the technician can verify before sending.
+description: Draft the client reply in the client's own language — detect it from their messages, write natively, and provide an English back-translation to verify.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []

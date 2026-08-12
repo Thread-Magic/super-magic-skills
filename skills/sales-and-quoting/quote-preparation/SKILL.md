@@ -1,6 +1,6 @@
 ---
 name: Quote Preparation
-description: When a client needs a quote and you want structured options (e.g. 1-year vs 3-year, good/better/best) with explicit assumptions, ready to hand to the sales owner.
+description: Prepare a client quote with structured options like 1-year vs 3-year or good, better, best tiers, plus explicit assumptions ready for the sales owner.
 category: Sales & Quoting
 tools: [search_tickets, search_clients, web_search, add_ticket_note]
 connectors: []

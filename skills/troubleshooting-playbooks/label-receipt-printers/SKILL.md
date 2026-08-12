@@ -1,6 +1,6 @@
 ---
 name: Label and Receipt Printers
-description: Diagnose thermal label and receipt printers — Zebra/thermal/POS units — where the print language (ZPL/EPL/ESC-POS) and driver mode, the spooler, and network/connection are the usual faults, distinct from office laser/MFP printing (printer-troubleshooting) and POS-app issues (pos-system-issues).
+description: Troubleshoot Zebra thermal label and ESC/POS receipt printers — ZPL/EPL print language, driver mode, spooler, and network faults — distinct from MFPs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

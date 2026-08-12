@@ -1,6 +1,6 @@
 ---
 name: Silent Ticket Detector
-description: Find tickets where the client replied and no technician has responded within the threshold — surface each with wait time, @mention the assigned tech, and offer a drafted response.
+description: Find tickets where the client replied but no technician responded within threshold — surface each with wait time, @mention the tech, and draft a reply.
 category: QA & Closure
 tools: [search_tickets, search_members, add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Mailbox Quota Management
-description: Investigate a full or filling mailbox and choose the right fix — targeted cleanup, archive enablement, or a license upgrade — based on where the size actually lives. Use when a ticket says "mailbox full," "can't send or receive," or quota warnings are firing.
+description: Investigate full or filling Exchange mailboxes and choose targeted cleanup, archive enablement, or license upgrade based on where size lives.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

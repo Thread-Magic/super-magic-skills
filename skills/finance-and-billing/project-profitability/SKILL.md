@@ -1,6 +1,6 @@
 ---
 name: Project Profitability
-description: Someone wants to know whether a fixed-fee project is on budget — logged hours versus budgeted hours, burn alerts at 70% and 90%, and documented evidence of scope creep.
+description: Check whether a fixed-fee project is on budget — logged hours versus budgeted hours, burn alerts at 70% and 90%, and documented evidence of scope creep.
 category: Finance & Billing
 tools: [search_tickets, search_clients, search_members]
 connectors: []

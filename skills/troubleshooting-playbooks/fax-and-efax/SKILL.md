@@ -1,6 +1,6 @@
 ---
 name: Fax & eFax
-description: Work fax tickets — analog line dead, ATA-based fax failing or corrupting pages, eFax/cloud-fax not sending or receiving — across the line / ATA-settings / service-portal matrix, with healthcare-grade reliability expectations taken seriously.
+description: Work fax tickets — dead analog lines, ATA fax page corruption, eFax cloud portals not sending or receiving — across the line, ATA, and portal matrix.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Note Format Standard
-description: Base skill defining the house format for internal ticket notes — structure, tone, and the plain-text rules for notes that sync to a PSA. Other skills reference this standard.
+description: Base skill defining the house format, tone, and plain-text PSA-sync rules for internal ticket notes. Other documentation skills reference this standard.
 category: Documentation
 tools: [add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Maintenance Freeze Windows
-description: Record and enforce client freeze calendars (tax season, go-lives, retail peak) — freezes block change scheduling at intake, and the only way through one is the documented exception path with the client's named sign-off.
+description: Record and enforce client freeze calendars (tax season, go-lives, retail peak) so freezes block change scheduling unless a documented exception is signed.
 category: Change & Problem Management
 tools: [search_knowledge_base, search_tickets, search_clients, add_ticket_note, update_ticket, send_approval]
 connectors: []

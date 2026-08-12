@@ -1,6 +1,6 @@
 ---
 name: De-escalation Reply
-description: Draft the response to an angry or frustrated client message — acknowledge, own what's ours, commit to a concrete next step with a time — without ever matching their tone.
+description: Draft the response to an angry client message — acknowledge, own what's ours, commit to a concrete next step with a time, without matching their tone.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []

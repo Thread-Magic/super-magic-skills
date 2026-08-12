@@ -1,6 +1,6 @@
 ---
 name: New Hire Onboarding
-description: Run a new-employee onboarding request end to end — role-based accounts, licenses, groups, hardware, and MFA against the client's own checklist. Use when a ticket asks to set up, onboard, provision, or "create accounts for" a new starter.
+description: Run a new-hire onboarding end to end with role-based accounts, licenses, groups, hardware, and MFA driven from the client's own onboarding checklist.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, send_approval, log_time_entry]
 connectors: []

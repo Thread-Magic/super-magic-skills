@@ -1,6 +1,6 @@
 ---
 name: B2B Collaboration Setup
-description: Set up cross-tenant collaboration between a client and a partner organization — scoped cross-tenant access settings, MFA/device trust decisions, and a documented rollback. Use when a ticket asks to "let <partner org>'s users into our tenant", fix double-MFA for external users, or restrict which domains can be invited.
+description: Configure Entra B2B cross-tenant collaboration between partner organizations with scoped access settings, MFA and device trust, and rollback.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, web_search]
 connectors: [IT Glue, Hudu]

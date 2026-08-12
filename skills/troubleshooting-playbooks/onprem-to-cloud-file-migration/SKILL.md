@@ -1,6 +1,6 @@
 ---
 name: On-Prem to Cloud File Migration
-description: Work file-server → SharePoint Online / OneDrive migration problems — permission translation (NTFS to SharePoint), path-length and illegal-character failures, and post-migration sync (OneDrive/Known Folder Move) issues — from the migration tool's error report, honest about what doesn't translate, never by forcing structure that breaks sync.
+description: Fix file-server to SharePoint Online and OneDrive migration issues: NTFS permission translation, path length, illegal characters, and sync errors.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

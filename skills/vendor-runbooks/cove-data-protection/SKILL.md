@@ -1,6 +1,6 @@
 ---
 name: Cove Data Protection Alerts
-description: An N-able Cove Data Protection backup ticket arrived — classify the failure family, verify recoverability rather than assuming it, and keep archive/retention sessions straight from standard sessions. Verify against N-able's current Cove documentation.
+description: Work N-able Cove Data Protection backup tickets: classify the failure family, verify recoverability, and keep archive and retention sessions straight.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

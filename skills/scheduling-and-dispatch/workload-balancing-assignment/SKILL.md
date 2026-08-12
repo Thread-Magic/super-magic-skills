@@ -1,6 +1,6 @@
 ---
 name: Workload-Balancing Assignment
-description: Assign a ticket to the technician with the best availability score — a transparent formula (base capacity minus open tickets minus scheduled blocks) with the math shown, runnable unattended inside a Flow.
+description: Assign a ticket to the tech with the best availability score — base capacity minus open tickets minus scheduled blocks — with math shown, runs in Flows.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_members, list_ticket_priorities, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

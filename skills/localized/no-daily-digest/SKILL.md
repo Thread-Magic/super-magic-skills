@@ -1,6 +1,6 @@
 ---
 name: Daglig oversikt
-description: En tekniker ber om en oppsummering av sine åpne saker — hva som trenger svar, hva som haster, hva som er planlagt i dag — lesbar på under ett minutt, med en ultrakort 3-linjers variant. (Norwegian version of Daily Digest — skimmable morning summary of the requesting member's open tickets.)
+description: Daglig oversikt over en teknikers åpne saker: hva som trenger svar, hva som haster, hva som er planlagt i dag, med ultrakort 3-linjers variant.
 category: Localized
 tools: [search_tickets, search_members]
 connectors: []

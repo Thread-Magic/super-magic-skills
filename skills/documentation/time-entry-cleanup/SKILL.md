@@ -1,6 +1,6 @@
 ---
 name: Time Entry Cleanup
-description: Turn raw, rough time notes into clean, standardized time entries — client-facing and internal versions — recording only work the engineer explicitly stated was done.
+description: Turn raw, rough time notes into clean, standardized time entries with client-facing and internal versions, recording only work explicitly stated as done.
 category: Documentation
 tools: [search_tickets, log_time_entry, add_ticket_note]
 connectors: []

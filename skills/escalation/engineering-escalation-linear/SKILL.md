@@ -1,6 +1,6 @@
 ---
 name: Engineering Escalation to Linear
-description: Escalate a ticket (or a recurring ticket pattern) to the engineering team as a Linear issue, with aggregated evidence and affected-client count, cross-referenced both ways.
+description: Escalate a ticket or recurring pattern to engineering as a Linear issue, with aggregated evidence and affected-client count, cross-referenced both ways.
 category: Escalation
 tools: [search_tickets, add_ticket_note, list_issues, get_issue, create_issue, create_comment, list_teams, list_issue_labels]
 connectors: [Linear]

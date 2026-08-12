@@ -1,6 +1,6 @@
 ---
 name: Todyl Platform
-description: A Todyl alert landed — first determine which plane it came from (SASE network, endpoint EDR, or identity/SIEM detection), because the same platform emits all three and each demands a different runbook.
+description: Route Todyl alerts by plane: SASE network, endpoint EDR, or identity and SIEM detection. Each plane needs a different runbook from the same platform.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

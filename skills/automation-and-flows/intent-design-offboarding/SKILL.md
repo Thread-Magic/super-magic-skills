@@ -1,6 +1,6 @@
 ---
 name: Offboarding Intent Design
-description: Build the employee-termination intake intent with an authorized-requester check and urgency handling designed in from the start. Use when asked to "build an offboarding intent", "automate termination requests", or when user-departure tickets rank high in Intent Mining.
+description: Design the employee-termination intake intent with an authorized-requester check and urgency handling built in from the start for offboarding tickets.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets]
 connectors: []

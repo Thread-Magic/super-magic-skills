@@ -1,6 +1,6 @@
 ---
 name: Mac Support
-description: The Windows tech's ladder for Mac tickets — keychain password prompts, MDM enrollment, app permissions (TCC), FileVault — mapping Mac-specific causes so the tech doesn't apply Windows reflexes to macOS.
+description: The Windows tech's ladder for Mac tickets — keychain prompts, MDM enrollment, TCC app permissions, FileVault — mapping macOS causes vs Windows reflexes.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

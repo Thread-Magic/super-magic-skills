@@ -1,6 +1,6 @@
 ---
 name: Halo SLA and Priorities
-description: For desks synced to HaloPSA — read Halo's SLA/priority interplay correctly: priority selects the response and fix targets within the client's SLA, and hold statuses pause the clock.
+description: HaloPSA SLA and priority interplay: priority sets response and fix targets within the client's SLA, and configured hold statuses pause the clock.
 category: PSA-Specific
 tools: [search_tickets, list_ticket_priorities, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

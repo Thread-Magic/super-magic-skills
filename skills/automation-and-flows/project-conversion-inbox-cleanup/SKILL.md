@@ -1,6 +1,6 @@
 ---
 name: Project Conversion Inbox Cleanup
-description: When a ticket is converted to a project type or moved to a project board, set the documented attribute that removes it from live inbox/queue views so day-to-day dispatch isn't cluttered by long-running project work. Answers the "keep project tickets out of the reactive inbox" workflow.
+description: When a ticket is converted to a project or moved to a project board, set the attribute that removes it from live inbox and queue views so dispatch is tidy.
 category: Automation & Flows
 tools: [search_tickets, update_ticket, add_ticket_note]
 connectors: []

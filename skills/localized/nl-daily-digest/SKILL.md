@@ -1,6 +1,6 @@
 ---
 name: Dagelijkse samenvatting
-description: Een technicus vraagt om een overzicht van zijn of haar open tickets — wat wacht op antwoord, wat is urgent, wat staat vandaag gepland — te scannen in minder dan een minuut, met een ultrakorte 3-regelvariant. (Dutch daily digest of a technician's open tickets — replies due, urgent items, today's schedule.)
+description: Dagelijkse samenvatting van openstaande tickets van een technicus: wat wacht op antwoord, wat is urgent, wat staat vandaag gepland, met 3-regelvariant.
 category: Localized
 tools: [search_tickets, search_members]
 connectors: []

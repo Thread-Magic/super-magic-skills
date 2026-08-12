@@ -1,6 +1,6 @@
 ---
 name: Group Membership Request
-description: Handle a security-group membership change — state what the group actually grants, get the right approver, set a review date. Use when a ticket asks to add or remove someone from a security group or role group.
+description: Handle a security group membership change by stating what the group actually grants, getting the right approver, and setting a review date on the change.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, send_approval, log_time_entry]
 connectors: []

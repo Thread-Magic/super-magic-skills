@@ -1,6 +1,6 @@
 ---
 name: Notion Client Runbook Database
-description: Create and maintain a client-runbooks database in Notion — one entry per client per system — and update entries when a ticket reveals an environment fact has changed. Use when asked to "set up a client runbook database", "update <client>'s runbook", or "keep our client docs in Notion current".
+description: Create and maintain a Notion client-runbooks database, one entry per client per system, updating entries when tickets reveal environment changes.
 category: Connectors
 tools: [search_tickets, search_clients]
 connectors: [Notion]

@@ -1,6 +1,6 @@
 ---
 name: Courtesy Reply Status Revert
-description: When a thanks-only client reply flips a resolved ticket back to a responded/open status, revert it to the correct status per a fixed per-board map — the revert is the only permitted write.
+description: When a thanks-only client reply flips a resolved ticket back to open, revert it to the correct status per a fixed per-board map — the only permitted write.
 category: Triage & Routing
 tools: [search_tickets, update_ticket, list_ticket_statuses]
 connectors: []

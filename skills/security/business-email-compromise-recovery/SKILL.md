@@ -1,6 +1,6 @@
 ---
 name: Business Email Compromise Recovery
-description: A BEC is confirmed (not just suspected) — a client mailbox was taken over and used for fraud — run the full recovery: kill sessions and tokens, sweep rules and forwarding, assess and notify downstream victims, and follow the money.
+description: Recover from confirmed BEC: kill sessions and tokens, sweep mail rules and forwarding, notify downstream victims, and trace the fraudulent funds.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

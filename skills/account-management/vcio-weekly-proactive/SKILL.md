@@ -1,6 +1,6 @@
 ---
 name: vCIO Weekly Proactive
-description: Answer "which three clients should I proactively contact this week and why" — pick the highest-leverage outreach targets from live ticket signals and give a reason and an opener for each.
+description: Pick the three highest-leverage clients to proactively contact this week from live ticket signals, with a reason and a suggested opener for each outreach.
 category: Account Management
 tools: [search_tickets, search_clients]
 connectors: []

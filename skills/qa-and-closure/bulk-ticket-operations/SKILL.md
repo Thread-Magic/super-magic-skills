@@ -1,6 +1,6 @@
 ---
 name: Bulk Ticket Operations
-description: The safe procedure for "close/reassign/update all tickets where <filter>" — enumerate and itemize first, per-ticket eligibility check, explicit sign-off on the full list, chunked writes with progress, per-ticket audit note, abort on anomaly. The only skill authorized to execute bulk ticket writes.
+description: Safe procedure for bulk close, reassign, or update ticket operations: enumerate, eligibility check, chunked writes, audit notes, abort on anomaly.
 category: QA & Closure
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses, list_boards, search_members]
 connectors: []

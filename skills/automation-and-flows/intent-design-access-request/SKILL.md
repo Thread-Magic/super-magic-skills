@@ -1,6 +1,6 @@
 ---
 name: Access Request Intent Design
-description: Build the access-request intent for folders, distribution lists, and shared mailboxes — capturing resource, justification, and approver so the ticket arrives approvable. Use when asked to "build an access request intent", "automate permission requests", or when access changes rank high in Intent Mining.
+description: Design an access-request intent for folders, distribution lists, and shared mailboxes — capture resource, justification, and approver on intake.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: SOP Builder
-description: Write a full standard operating procedure — scope, prerequisites, numbered procedure, validation, and escalation criteria — from a ticket, an existing rough doc, or a described process.
+description: Write a standard operating procedure — scope, prerequisites, numbered steps, validation, escalation — from a ticket, a rough doc, or a described process.
 category: Documentation
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Budget Planning Brief
-description: Prep for a client's annual IT budget conversation — hardware refresh forecast, license spend picture, and the project pipeline — assembled from tickets, assets, and roadmap items.
+description: Prep a client's annual IT budget conversation — hardware refresh forecast, license spend, and project pipeline — from tickets, assets, and roadmap items.
 category: Account Management
 tools: [search_tickets, search_clients, search_ninjaone_devices]
 connectors: [NinjaOne]

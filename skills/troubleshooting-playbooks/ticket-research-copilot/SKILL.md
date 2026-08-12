@@ -1,6 +1,6 @@
 ---
 name: Ticket Research Copilot
-description: One-pass, read-only research sweep for a ticket already being worked — similar resolved tickets (this client first, then all clients), KB, IT Glue/Hudu docs, and live RMM device state — returned as a cited brief. The mid-ticket twin of new-ticket-first-touch.
+description: Read-only research sweep for an in-progress ticket: similar resolved tickets, KB, IT Glue and Hudu docs, and live RMM device state as a cited brief.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, add_ticket_note]
 connectors: [IT Glue, Hudu, NinjaOne]

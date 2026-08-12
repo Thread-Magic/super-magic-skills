@@ -1,6 +1,6 @@
 ---
 name: Password & MFA Recovery
-description: Reset a password or recover MFA with the identity-verification ladder, a locked-vs-disabled check, and secure credential delivery. Use when a user is locked out, forgot a password, or lost/replaced their authenticator device.
+description: Reset a password or recover MFA with an identity verification ladder, locked-versus-disabled account check, and secure delivery of the new credential.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_knowledge_base, search_itglue, add_ticket_note, log_time_entry]
 connectors: []

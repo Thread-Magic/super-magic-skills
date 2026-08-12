@@ -1,6 +1,6 @@
 ---
 name: Mail Flow Reports
-description: Produce a periodic mail flow health summary for a client — volume trends, spam/malware catch rates, top senders and recipients, connector health, and forwarding anomalies — with flags on what changed since last period. Use for monthly/quarterly email health reviews or "is our mail filtering actually working" asks.
+description: Produce periodic Exchange Online mail flow health summaries: volume trends, spam/malware catch rates, top senders, connector health, forwarding.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, log_time_entry, web_search]
 connectors: [IT Glue]

@@ -1,6 +1,6 @@
 ---
 name: Autotask Contracts Blocks
-description: For desks synced to Autotask — deeper contract mechanics beyond type labels: block-hour burn tracking from visible time entries, retainer-threshold alerting conventions, and the edge cases (exclusions, overlapping contracts, expired-contract work) that misclassify coverage.
+description: Autotask contract mechanics: block-hour burn tracking, retainer-threshold alerts, and exclusions, overlapping contracts, and expired-contract edge cases.
 category: PSA-Specific
 tools: [search_tickets, search_clients, update_ticket, add_ticket_note, log_time_entry]
 connectors: []

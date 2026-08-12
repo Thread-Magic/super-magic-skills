@@ -1,6 +1,6 @@
 ---
 name: Status Nudger
-description: Chase tickets stuck in a waiting status — re-send the pending approval or post the templated client nudge for that status, never nudging twice within the window.
+description: Chase tickets stuck in a waiting status — re-send the pending approval or post the templated client nudge, never nudging twice inside one window.
 category: QA & Closure
 tools: [search_tickets, send_approval, add_ticket_note, list_ticket_statuses]
 connectors: []

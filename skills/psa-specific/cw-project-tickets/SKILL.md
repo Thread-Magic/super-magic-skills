@@ -1,6 +1,6 @@
 ---
 name: CW Project Tickets
-description: For desks synced to ConnectWise Manage — recognize when a ticket is really a project ticket, understand the project→phase→ticket structure, and act within what Thread can actually see of the Projects module.
+description: Recognize ConnectWise Manage project tickets, understand the project → phase → ticket structure, and work within what Thread sees of the Projects module.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

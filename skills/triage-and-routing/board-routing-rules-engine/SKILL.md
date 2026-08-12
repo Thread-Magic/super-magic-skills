@@ -1,6 +1,6 @@
 ---
 name: Board Routing Rules Engine
-description: Route catch-all tickets to the right board (NOC, procurement, security, help desk) by walking a prioritized keyword-and-signal rule list — every ticket gets a decisive destination.
+description: Route catch-all tickets to the right board (NOC, procurement, security, help desk) by walking a prioritized keyword-and-signal rule list to a result.
 category: Triage & Routing
 tools: [search_tickets, list_boards, update_ticket, add_ticket_note]
 connectors: []

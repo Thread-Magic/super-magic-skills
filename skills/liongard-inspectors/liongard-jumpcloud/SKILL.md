@@ -1,6 +1,6 @@
 ---
 name: Liongard JumpCloud Read
-description: Interrogate a client's JumpCloud directory through the Liongard JumpCloud inspector — users, MFA enrollment, admins, groups, bound devices/systems, SSO app assignments. Use for "who's in their JumpCloud?", MFA-coverage or admin reviews, or offboarding checks during triage.
+description: Interrogate a client's JumpCloud directory via Liongard: users, MFA enrollment, admins, groups, bound systems, and SSO app assignments for reviews.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

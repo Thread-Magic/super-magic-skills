@@ -1,6 +1,6 @@
 ---
 name: RADIUS / NPS Authentication
-description: Diagnose 802.1X / RADIUS authentication failures via Windows NPS — Wi-Fi, wired, and VPN auth rejects, certificate and connection/network-policy mismatches, shared-secret and NPS-registration problems — from the NPS event log reason codes, never from "wifi won't connect".
+description: Diagnose 802.1X and RADIUS authentication failures on Windows NPS: Wi-Fi, wired, VPN rejects, certificates, and shared-secret issues via NPS event logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, Liongard]

@@ -1,6 +1,6 @@
 ---
 name: Knowledge Base Taxonomy
-description: Design the category and tag structure for a knowledge base so articles are findable — a coherent hierarchy, a controlled tag vocabulary, and naming/placement rules — grounded in what the desk actually documents rather than an idealized tree.
+description: Design a knowledge base category hierarchy and controlled tag vocabulary with naming and placement rules, grounded in what the desk actually documents.
 category: Documentation
 tools: [search_knowledge_base, search_tickets, search_itglue, search_hudu, notion-search, notion-create-pages, notion-update-page]
 connectors: [IT Glue, Hudu, Notion]

@@ -1,6 +1,6 @@
 ---
 name: First Contact Resolution Report
-description: Someone wants the desk's FCR rate — what share of tickets were resolved by the first assignee with no handoffs — with the definition stated explicitly in the output so the number can't be argued with later.
+description: Report the desk's FCR rate, the share of tickets resolved by first assignee with no handoffs, with the definition stated to prevent later disputes.
 category: Reporting & Analytics
 tools: [search_tickets, search_members, list_boards, list_ticket_statuses]
 connectors: []

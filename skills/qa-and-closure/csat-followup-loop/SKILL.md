@@ -1,6 +1,6 @@
 ---
 name: CSAT Follow-Up Loop
-description: Close the satisfaction loop after a ticket closes — make sure the CSAT ask went out (native survey or a form link), pull the response back into the ticket as a note, and flag detractors to a lead the same day.
+description: Close the CSAT loop after ticket closure: confirm the survey went out, pull the response into the ticket as a note, and flag detractors to a lead.
 category: QA & Closure
 tools: [search_tickets, add_ticket_note, update_ticket, search_members]
 connectors: [Zapier: Typeform, Zapier: Microsoft Teams, Zapier: Outlook]

@@ -1,6 +1,6 @@
 ---
 name: CW Agreement-Aware Triage
-description: For desks synced to ConnectWise Manage — read the client's CW agreement type at ticket intake and route/label the work as covered vs billable before anyone touches it.
+description: ConnectWise Manage triage: read the client's CW agreement type at intake and route or label the work as covered vs billable before anyone touches it.
 category: PSA-Specific
 tools: [search_tickets, search_clients, update_ticket, add_ticket_note, list_boards]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Liongard UniFi Read
-description: Interrogate a client's Ubiquiti UniFi controller through the Liongard inspector — device inventory, adoption state, firmware drift, WLAN/network config. Use for "what UniFi gear do they have", wifi triage context, or firmware-currency checks.
+description: Interrogate a client's Ubiquiti UniFi controller via the Liongard inspector: device inventory, adoption state, firmware drift, and WLAN/network config.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

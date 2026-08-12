@@ -1,6 +1,6 @@
 ---
 name: Klantantwoord
-description: Stel een extern klantantwoord op in de eigen huisstijl en het eigen format — oplossingsupdates, statusberichten, afsluitende berichten of elke andere klantgerichte e-mail op een ticket. (Draft a client-facing reply in the house voice — status updates, closing messages, any client email on a ticket, in Dutch.)
+description: Extern klantantwoord opstellen in de huisstijl: oplossingsupdates, statusberichten, afsluitende berichten of elke klantgerichte e-mail op een ticket.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []

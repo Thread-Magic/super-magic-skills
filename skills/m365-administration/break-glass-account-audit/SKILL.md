@@ -1,6 +1,6 @@
 ---
 name: Break-Glass Account Audit
-description: Verify a tenant's emergency-access accounts actually work when everything else is broken — CA exclusions on every policy, sealed credentials, sign-in alerting, and a quarterly test sign-in. Use for periodic break-glass audits, before any CA change, or when nobody can say where the emergency credentials are.
+description: Audit Entra emergency-access break-glass accounts: Conditional Access exclusions, sealed credentials, sign-in alerting, and quarterly test.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, create_ticket, schedule_ticket, send_approval, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: CrowdStrike Falcon Alerts
-description: A CrowdStrike Falcon detection or incident landed — parse the detection anatomy, decide whether Network Contain is warranted, and know when mass simultaneous endpoint failures mean a vendor-side problem rather than an attack.
+description: Triage CrowdStrike Falcon detections: parse detection anatomy, decide when Network Contain is warranted, and spot mass endpoint failures as vendor-side.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Security Noise Tuning
-description: The same benign security alert keeps firing — quantify the false-positive rate, build an evidence pack, and recommend a retune at the source tool instead of ignoring it in the queue.
+description: Reduce recurring false-positive security alerts: quantify the FP rate, build an evidence pack, and recommend a retune at the source tool.
 category: Security
 tools: [search_tickets, add_ticket_note]
 connectors: []

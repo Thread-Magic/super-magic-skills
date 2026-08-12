@@ -1,6 +1,6 @@
 ---
 name: KB Article Draft
-description: Turn a resolved ticket into a reusable knowledge-base article draft — title, symptoms, cause, numbered resolution, and a "when this applies" section — with all client specifics stripped.
+description: Turn a resolved ticket into a reusable knowledge-base article draft with title, symptoms, cause, numbered resolution, and stripped client specifics.
 category: Documentation
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu]
 connectors: [IT Glue, Hudu]

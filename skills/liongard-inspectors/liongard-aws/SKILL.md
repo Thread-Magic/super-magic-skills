@@ -1,6 +1,6 @@
 ---
 name: Liongard AWS Read
-description: Answer AWS account questions from the Liongard AWS inspector — IAM users and access-key age, root/MFA posture, S3 exposure flags, security groups, and resource census — without console access.
+description: Answer AWS account questions via Liongard AWS inspector: IAM users, access-key age, root/MFA posture, S3 exposure, security groups, resource census.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_metric, liongard_detection, liongard_timeline, liongard_query]
 connectors: [Liongard]

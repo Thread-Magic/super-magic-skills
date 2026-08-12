@@ -1,6 +1,6 @@
 ---
 name: HIPAA Safeguards Checklist
-description: Walk a healthcare client's environment against the HIPAA Security Rule technical safeguards and return a checklist of what's in place versus missing — a technical review to inform the client's compliance work, explicitly not legal advice.
+description: Walk a healthcare client's environment against the HIPAA Security Rule technical safeguards, returning a checklist of what's in place versus missing.
 category: Compliance & Audit
 tools: [search_tickets, search_itglue, search_hudu, add_ticket_note]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Expectation-Setting Acknowledgment
-description: Draft the first-touch acknowledgment on a new ticket — what we understood, how seriously we're treating it, what happens next, and when the client will hear from us.
+description: Draft the first-touch acknowledgment on a new ticket — what we understood, how seriously we're treating it, next steps, and when the client hears back.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []

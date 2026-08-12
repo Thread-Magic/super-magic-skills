@@ -1,6 +1,6 @@
 ---
 name: APC UPS Alerts
-description: An APC UPS alert arrived — on-battery event, low runtime, self-test failure, or replace-battery indicator. Separate utility problems from UPS problems, run the battery-replacement workflow, and verify graceful shutdown actually works.
+description: Work APC UPS alerts: on-battery events, low runtime, self-test failure, or replace-battery indicators. Separate utility issues from UPS hardware faults.
 category: Vendor Runbooks
 tools: [search_tickets, search_itglue, add_ticket_note, update_ticket]
 connectors: []

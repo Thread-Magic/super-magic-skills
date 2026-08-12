@@ -1,6 +1,6 @@
 ---
 name: Reopen Forensics
-description: Analyze why tickets reopen — patterns by technician, client, and issue type over a window, with representative examples and the distinction between premature closure, recurrence, and client-initiated reopens.
+description: Analyze why tickets reopen: patterns by technician, client, and issue type over a window, distinguishing premature closure, recurrence, and client reopens.
 category: QA & Closure
 tools: [search_tickets, search_members, search_clients]
 connectors: []

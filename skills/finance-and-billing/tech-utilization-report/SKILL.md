@@ -1,6 +1,6 @@
 ---
 name: Tech Utilization Report
-description: Leadership wants billable utilization per technician — logged billable hours against capacity — with role-aware targets and explicit framing that utilization measures workload economics, not a person's worth. Leadership-only.
+description: Report billable utilization per technician — logged billable hours against capacity — with role-aware targets and framing as workload economics, not worth.
 category: Finance & Billing
 tools: [search_tickets, search_members]
 connectors: []

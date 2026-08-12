@@ -1,6 +1,6 @@
 ---
 name: Vendor Fraud BEC Alert
-description: A business-email-compromise or payment-fraud attempt was reported (fake invoice, banking-change request, executive impersonation) — freeze pending payments, run the callback verification ladder, and investigate the message.
+description: Respond to a BEC or payment-fraud attempt (fake invoice, banking-change request, exec impersonation): freeze payments and run callback verification.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

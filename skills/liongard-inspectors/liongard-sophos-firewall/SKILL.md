@@ -1,6 +1,6 @@
 ---
 name: Liongard Sophos Firewall Read
-description: Interrogate a client's Sophos Firewall (XG/SFOS) through the Liongard Sophos Firewall inspector — firmware, firewall rules, port-forwards/NAT, VPN config, interfaces, admin access. Use for "what's their Sophos firewall config?", rule/exposure review during triage, or firmware-currency checks.
+description: Interrogate a client's Sophos Firewall (XG/SFOS) via Liongard: firmware, firewall rules, port-forwards/NAT, VPN config, interfaces, admin access.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

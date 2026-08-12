@@ -1,6 +1,6 @@
 ---
 name: Synthèse quotidienne
-description: Un technicien demande un récapitulatif de ses tickets ouverts — qui attend une réponse, ce qui est urgent, ce qui est planifié aujourd'hui — lisible en moins d'une minute, avec une variante ultra-courte en 3 lignes. (French daily digest of a technician's open tickets — replies due, urgent items, today's schedule.)
+description: Synthèse quotidienne des tickets ouverts d'un technicien: qui attend réponse, ce qui est urgent, ce qui est planifié aujourd'hui, variante 3 lignes.
 category: Localized
 tools: [search_tickets, search_members]
 connectors: []

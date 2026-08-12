@@ -1,6 +1,6 @@
 ---
 name: Offboarding Completeness Audit
-description: Post-offboarding sweep for anything missed — licenses still assigned, live delegations, unreturned devices, lingering MFA methods and sessions, external shares. Use after an offboarding closes, or on a periodic sweep of recent departures.
+description: Post-offboarding sweep for licenses still assigned, live delegations, unreturned devices, lingering MFA methods and sessions, and external share links.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_itglue, search_knowledge_base, add_ticket_note, create_ticket, update_ticket, log_time_entry]
 connectors: []

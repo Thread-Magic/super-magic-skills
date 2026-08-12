@@ -1,6 +1,6 @@
 ---
 name: Zero-Day Emergency Response
-description: A vendor 0-day dropped — actively exploited, no patch or an emergency patch just released — and every client's exposure must be counted, mitigated, and communicated tonight, not next patch cycle.
+description: Coordinate an emergency response to an actively exploited zero-day: count each client's exposure, apply mitigations, and communicate the same night.
 category: Security
 tools: [search_tickets, search_clients, add_ticket_note, update_ticket, create_ticket, search_ninjaone_devices, connectwise_rmm_search_devices, search_itglue, web_search, view_openDraft]
 connectors: [NinjaOne, ConnectWise RMM, IT Glue]

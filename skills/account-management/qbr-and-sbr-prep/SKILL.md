@@ -1,6 +1,6 @@
 ---
 name: QBR & SBR Prep
-description: Prepare an internal brief before a quarterly or strategic business review with a client — volume trends, recurring issues, high-effort work, sentiment, opportunities, a suggested agenda, and the questions the client is likely to ask.
+description: Prepare an internal brief before a quarterly or strategic business review — trends, recurring issues, sentiment, opportunities, agenda, likely questions.
 category: Account Management
 tools: [search_tickets, search_clients, search_contacts, liongard_cyber_risk_dashboard, liongard_metric, search_ninjaone_devices]
 connectors: [Liongard, NinjaOne]

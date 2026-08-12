@@ -1,6 +1,6 @@
 ---
 name: Server Decommission Runbook
-description: Safely retire a server — map dependencies, migrate or confirm data, clean up DNS/records/monitoring/backup, wipe, and update documentation — with an approval gate before anything destructive. Use when someone asks to decommission, retire, or "spin down" a server.
+description: Safely retire a server — map dependencies, migrate data, clean up DNS, monitoring, backup, wipe, and update docs, with an approval gate before destruction.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, liongard_launchpoint, liongard_metric, liongard_timeline, search_itglue, search_knowledge_base, create_ticket, add_ticket_note, send_approval]
 connectors: [NinjaOne, Liongard, IT Glue]

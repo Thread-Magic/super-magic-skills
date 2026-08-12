@@ -1,6 +1,6 @@
 ---
 name: Automation Opportunity Finder
-description: Mine recent tickets for repetitive manual work, estimate the time each pattern burns, and route every finding to the right fix — flow, intent, RMM policy, monitoring change, or training. Use when asked "what should we automate", "find our zero-touch opportunities", or "where is the team wasting time".
+description: Mine recent tickets for repetitive manual work, estimate hours burned per pattern, and route each finding to a flow, intent, RMM policy, or training fix.
 category: Automation & Flows
 tools: [search_tickets, list_boards, list_flows, list_intents]
 connectors: []

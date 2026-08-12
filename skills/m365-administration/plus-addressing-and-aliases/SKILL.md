@@ -1,6 +1,6 @@
 ---
 name: Plus Addressing & Aliases
-description: Handle requests for extra email addresses on a mailbox — plus addressing for self-service tagging, proxy aliases for real alternate addresses, and the send-from-alias caveats stated before anyone promises it. Use when a ticket asks for "another email address for," signup-tracking addresses, or "reply coming from the wrong address" complaints.
+description: Handle requests for extra mailbox addresses: plus addressing for self-service tagging, proxy aliases, and the send-from-alias caveats stated.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

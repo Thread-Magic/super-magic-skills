@@ -1,6 +1,6 @@
 ---
 name: Insider Risk Basics
-description: A ticket smells like insider risk — data staging by a departing employee, sabotage signs, access abuse — the rule is DO NOT investigate solo: preserve evidence quietly, escalate to client leadership/HR per policy, and keep it confidential.
+description: Handle insider-risk signals like data staging, sabotage, or access abuse: preserve evidence quietly, escalate to client HR, and keep it confidential.
 category: Security
 tools: [search_tickets, add_ticket_note, update_ticket, search_itglue]
 connectors: [IT Glue]

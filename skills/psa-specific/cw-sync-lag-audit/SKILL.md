@@ -1,6 +1,6 @@
 ---
 name: CW Sync Lag Audit
-description: For desks synced to ConnectWise Manage — sweep for Thread↔CW divergence (status, owner, board mismatches), separate real drift from sync lag, and propose safe reconciliation with CW as master.
+description: Sweep Thread ↔ ConnectWise Manage divergence — status, owner, board mismatches — separate real drift from sync lag, and reconcile with CW as the master.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

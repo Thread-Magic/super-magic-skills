@@ -1,6 +1,6 @@
 ---
 name: New User Created Alert
-description: An alert fired for an unexpected user or admin account creation in a client tenant — cross-check for an authorizing ticket before raising alarm, and contain if no one can claim it.
+description: Investigate an unexpected user or admin account creation in a client tenant: check for an authorizing ticket and contain if no one can claim it.
 category: Security
 tools: [search_tickets, search_members, search_contacts, add_ticket_note, update_ticket]
 connectors: []

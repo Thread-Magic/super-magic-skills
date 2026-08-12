@@ -1,6 +1,6 @@
 ---
 name: Supporting Construction and Field Services
-description: Vertical pack for construction, trades, and field-service clients — plan-room and field apps (Procore, Bluebeam, ServiceTitan-class), rugged tablets and jobsite connectivity, equipment tracking, and the crack-of-dawn crew clock. Load when the client is a contractor/field-service firm or the ticket involves a jobsite, field device, or plan-room app.
+description: Construction and field-service pack for Procore, Bluebeam, and ServiceTitan, plus rugged tablets, jobsite connectivity, and crew clocks.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

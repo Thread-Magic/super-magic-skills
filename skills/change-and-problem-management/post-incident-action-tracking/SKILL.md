@@ -1,6 +1,6 @@
 ---
 name: Post-Incident Action Tracking
-description: Turn post-incident review action items into real tickets with owners and due dates, then run the follow-through audit that catches the ones quietly dying — the discipline that makes postmortems more than a feelings meeting.
+description: Turn post-incident review action items into real tickets with owners and due dates, then run the follow-through audit that catches ones dying in backlog.
 category: Change & Problem Management
 tools: [search_tickets, create_ticket, update_ticket, add_ticket_note, list_boards, search_members]
 connectors: []

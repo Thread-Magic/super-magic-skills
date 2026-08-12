@@ -1,6 +1,6 @@
 ---
 name: DNS Filtering Alerts
-description: A DNS-filter block event or category complaint arrived (Cisco Umbrella, DNSFilter, or similar) — separate security blocks (possible infection signal) from category blocks (policy), and keep bypass/category-change discipline.
+description: Handle DNS-filter block events from Cisco Umbrella, DNSFilter, and similar tools: separate security blocks from category blocks, keep bypass discipline.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

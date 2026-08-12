@@ -1,6 +1,6 @@
 ---
 name: Skill Authoring Coach
-description: Help a member write a good Super Magic skill — sharpen the description into a real trigger, structure the workflow, add the guardrails the workflow needs. Use when asked to "help me write a skill", "improve my skill", "why doesn't my skill trigger", or to review a draft skill's wording.
+description: Help a member write a good Super Magic skill: sharpen the description into a real trigger, structure the workflow, and add the guardrails it needs.
 category: Automation & Flows
 tools: [list_skills, load_skill, create_skill, update_skill, search_tickets]
 connectors: []

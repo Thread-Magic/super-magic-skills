@@ -1,6 +1,6 @@
 ---
 name: RMM Cross-Tool Reconciliation
-description: Reconcile a client's device lists across RMM, EDR/security, backup, and documentation — find devices missing agents, orphans in one tool only, and count mismatches that distort billing. Use for "why do NinjaOne and our docs disagree on device count" or an agent-coverage audit.
+description: Reconcile device lists across RMM, EDR, backup, and documentation — find missing agents, single-tool orphans, and count mismatches that distort billing.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, connectwise_rmm_search_devices, liongard_device, liongard_metric, search_immybot_computers, search_itglue, search_hudu, add_ticket_note]
 connectors: [NinjaOne, ConnectWise RMM, Liongard, ImmyBot, IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Dispatcher Morning Ritual
-description: A dispatcher's board-open runbook — morning dispatch report, clear unassigned via workload balancing, SLA-risk check, and yesterday's assignment audit — run when a dispatcher says "open the board", "morning dispatch", or on a scheduled weekday flow.
+description: A dispatcher's board-open runbook: morning dispatch report, clear unassigned via workload balancing, SLA-risk check, and yesterday's assignment audit.
 category: Role Rituals
 tools: [search_tickets, search_members, list_boards, update_ticket]
 connectors: []

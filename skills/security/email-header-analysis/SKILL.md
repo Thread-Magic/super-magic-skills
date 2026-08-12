@@ -1,6 +1,6 @@
 ---
 name: Email Header Analysis
-description: Someone pasted raw email headers and wants a verdict — parse authentication results, the received path, and spoof indicators, and return a verdict with explicit confidence.
+description: Parse raw email headers for a spoofing verdict: analyze authentication results, the received path, and spoof indicators with explicit confidence.
 category: Security
 tools: [search_tickets, web_search, add_ticket_note]
 connectors: []

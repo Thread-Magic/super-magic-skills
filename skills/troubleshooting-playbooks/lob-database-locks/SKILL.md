@@ -1,6 +1,6 @@
 ---
 name: LOB Database Locks
-description: Clear "record is locked by another user" and stuck-session tickets in line-of-business apps — identify the locking session through the app's own admin tooling and release it by the vendor-approved method only; never kill database sessions ad hoc.
+description: Clear record-locked-by-another-user tickets in LOB apps — find the locking session in the vendor admin console and release it approved-only, never kill DB.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

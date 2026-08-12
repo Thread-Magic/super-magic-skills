@@ -1,6 +1,6 @@
 ---
 name: Phishing-Triage
-description: Ein Nutzer hat eine verdächtige E-Mail gemeldet oder ein Phishing-Meldeticket ist auf dem Sicherheits-Board gelandet — sie bewerten, ohne die Nutzlast zu berühren, den Streuradius prüfen, bei Bösartigkeit eindämmen und dem Melder mit einem Urteil antworten. (Phishing triage — assess without touching the payload, check blast radius, contain, reply to the reporter — in German.)
+description: Phishing-Triage einer verdächtigen E-Mail: Bewertung ohne Nutzlast, Streuradius prüfen, bei Böserkennung eindämmen, Melder mit Urteil antworten.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

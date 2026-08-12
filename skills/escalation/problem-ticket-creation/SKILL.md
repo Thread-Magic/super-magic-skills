@@ -1,6 +1,6 @@
 ---
 name: Problem Ticket Creation
-description: When an incident recurs past the threshold, create a problem/RCA ticket that links the incidents and documents the current workaround — so the pattern gets a permanent owner instead of serial firefighting.
+description: When an incident recurs past threshold, create a problem/RCA ticket linking the incidents and documenting the workaround so the pattern gets a real owner.
 category: Escalation
 tools: [search_tickets, create_ticket, add_ticket_note, update_ticket, list_boards, list_ticket_statuses]
 connectors: []

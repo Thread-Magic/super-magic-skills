@@ -1,6 +1,6 @@
 ---
 name: New Computer First Day Guide
-description: Draft reply-ready instructions for an end user receiving a new or replacement computer — what to expect, what to do first, what NOT to do — "send the user their new-machine first-day guide."
+description: Draft reply-ready instructions for an end user receiving a new or replacement computer — what to expect, what to do first, and what NOT to do.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

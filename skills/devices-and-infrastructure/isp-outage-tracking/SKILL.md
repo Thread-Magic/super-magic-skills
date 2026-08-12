@@ -1,6 +1,6 @@
 ---
 name: ISP Outage Tracking
-description: Manage the lifecycle of a circuit outage in the carrier's hands — capture the carrier ticket reference, run the escalation clock, and keep the client informed on a cadence while waiting on the provider. Use when a site's internet/WAN is down and the ISP owns the fix.
+description: Manage a circuit outage while the carrier owns the fix — capture the carrier ticket reference, run the escalation clock, and keep the client informed.
 category: Devices & Infrastructure
 tools: [search_itglue, search_hudu, search_tickets, update_ticket, add_ticket_note, schedule_ticket, web_search, send_approval]
 connectors: [IT Glue, Hudu]

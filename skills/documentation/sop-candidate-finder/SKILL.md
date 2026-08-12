@@ -1,6 +1,6 @@
 ---
 name: SOP Candidate Finder
-description: Sweep recently resolved tickets for documentation-worthy resolutions — recurring fixes, senior-only knowledge, vendor workarounds — and rank what should become an SOP or KB article.
+description: Sweep recently resolved tickets for documentation-worthy resolutions like recurring fixes and vendor workarounds, ranking SOP and KB article candidates.
 category: Documentation
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu]
 connectors: [IT Glue, Hudu]

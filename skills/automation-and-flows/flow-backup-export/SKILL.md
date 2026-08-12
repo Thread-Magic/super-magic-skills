@@ -1,6 +1,6 @@
 ---
 name: Flow Backup Export
-description: Dump every flow definition to a JSON or markdown snapshot for archive and diffing — a point-in-time backup of the desk's automation, read-only with no restore path. Answers the "back up / snapshot our flows" workflow; runs manually on demand.
+description: Dump every flow definition to a JSON or markdown snapshot for archive and diffing — a read-only point-in-time backup of the desk's automation, no restore.
 category: Automation & Flows
 tools: [list_flows, get_flow]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Anti-Spam Policy Tuning
-description: Adjust Exchange Online Protection / Defender anti-spam policies from evidence, never from complaints alone — scoped overrides over broad allow-lists, time-limited exceptions, and the verdict data to justify each change. Use when a client says "too much spam getting through" or "legitimate mail keeps getting filtered."
+description: Tune Exchange Online Protection and Defender anti-spam policies from verdict evidence with scoped overrides and time-limited exceptions.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

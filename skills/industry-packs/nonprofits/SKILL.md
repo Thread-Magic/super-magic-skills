@@ -1,6 +1,6 @@
 ---
 name: Supporting Nonprofits
-description: Vertical pack for nonprofit clients — donor systems (Blackbaud-class), grant/donated licensing (TechSoup, Microsoft nonprofit grants), board-and-volunteer access hygiene, budget sensitivity, and the year-end giving season. Load when the client is a nonprofit or the ticket names a donor CRM, donated licenses, or volunteer access.
+description: Nonprofit client pack covering Blackbaud donor CRM, TechSoup and Microsoft grant licensing, board access hygiene, and year-end giving.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

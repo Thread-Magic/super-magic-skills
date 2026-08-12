@@ -1,6 +1,6 @@
 ---
 name: Flow Debugger
-description: Diagnose why a flow or intent didn't fire on a ticket — filters vs actual attributes, flow ordering, board scoping, trigger-event mismatch. Use when asked "why didn't my flow run", "the intent didn't trigger", or "this automation isn't working".
+description: Diagnose why a flow or intent didn't fire on a ticket — filters vs actual attributes, flow ordering, board scoping, and trigger-event mismatch.
 category: Automation & Flows
 tools: [list_flows, get_flow, list_intents, get_intent, search_tickets, list_flow_filter_attributes, list_flow_filter_attribute_values]
 connectors: []

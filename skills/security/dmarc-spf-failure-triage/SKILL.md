@@ -1,6 +1,6 @@
 ---
 name: DMARC SPF Failure Triage
-description: A ticket involves email authentication failures (SPF, DKIM, DMARC) — determine whether it's a real spoofing attempt or a sender misconfiguration, and explain it to the client safely.
+description: Diagnose SPF, DKIM, and DMARC email authentication failures: distinguish real spoofing attempts from sender misconfiguration and explain to the client.
 category: Security
 tools: [search_tickets, liongard_domain, add_ticket_note, update_ticket, view_openDraft]
 connectors: [Liongard]

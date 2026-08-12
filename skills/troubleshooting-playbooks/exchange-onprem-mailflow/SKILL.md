@@ -1,6 +1,6 @@
 ---
 name: Exchange On-Prem Mail Flow
-description: Diagnose on-premises Exchange transport problems — messages stuck in queues, send/receive connector faults, TLS/cert failures, backpressure and disk-full transport stalls — from the queue viewer and protocol logs, not guesswork. For the hybrid seam use exchange-hybrid-issues.
+description: Diagnose on-prem Exchange transport — stuck queues, send/receive connector faults, TLS/cert failures, backpressure — using Queue Viewer and protocol logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, NinjaOne]

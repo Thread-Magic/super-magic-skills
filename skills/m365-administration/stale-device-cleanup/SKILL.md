@@ -1,6 +1,6 @@
 ---
 name: Stale Device Cleanup
-description: Clean up stale Entra device objects on a last-activity threshold — with the BitLocker-key-loss warning, Autopilot exclusions, and a disable-first pattern before any delete. Use for "there are hundreds of old devices in Entra", periodic device hygiene, or pre-migration directory cleanup.
+description: Clean up stale Entra device objects on a last-activity threshold with BitLocker-key-loss warnings, Autopilot exclusions, and disable-before-delete.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, schedule_ticket, web_search]
 connectors: [IT Glue, Hudu]

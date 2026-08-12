@@ -1,6 +1,6 @@
 ---
 name: Supporting Dental Practices
-description: Vertical pack for dental-practice clients — the PMS and imaging stack (Dentrix, Eaglesoft, Open Dental, Dexis-class sensors), HIPAA handling inside tickets, and the morning-huddle downtime clock. Load when the client is a dental office or the ticket names dental software or x-ray sensors.
+description: Dental practice pack covering Dentrix, Eaglesoft, and Open Dental PMS, Dexis-class x-ray sensors, HIPAA, and morning-huddle downtime.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

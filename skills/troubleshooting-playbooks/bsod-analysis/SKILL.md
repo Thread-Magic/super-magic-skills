@@ -1,6 +1,6 @@
 ---
 name: BSOD Analysis
-description: Triage Windows blue screens from the stop code and faulting module — never from folklore — correlating with recent changes (patches, drivers, new hardware) to split driver vs hardware vs storage causes.
+description: Triage Windows blue screens by stop code and faulting module, correlating recent patches, drivers, or hardware to split driver, storage, and RAM causes.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, NinjaOne]

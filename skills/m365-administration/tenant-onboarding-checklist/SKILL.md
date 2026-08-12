@@ -1,6 +1,6 @@
 ---
 name: Tenant Onboarding Checklist
-description: Bring a new M365 tenant under management the disciplined way — GDAP scoping, break-glass accounts, security-defaults-vs-CA decision, admin and licensing inventory, documentation — as a tracked checklist of tickets. Use when the MSP signs a new client with an existing tenant or stands up a fresh one.
+description: Onboard a new Microsoft 365 tenant: GDAP scoping, break-glass accounts, security-defaults-vs-CA decision, admin and licensing inventory.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, update_ticket, create_ticket, schedule_ticket, send_approval, web_search]
 connectors: [IT Glue, Hudu, Liongard]

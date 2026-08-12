@@ -1,6 +1,6 @@
 ---
 name: Voice Catchall Identification
-description: Identify the client and contact behind an unknown caller — a voice ticket carrying only a phone number — using number, spoken-name, and company clues from the transcript. Use when a voice-sourced ticket has no company or sits on the catchall contact.
+description: Identify the client and contact behind an unknown caller on a voice ticket with only a phone number, using number, name, and company clues from transcript.
 category: Voice & Messenger
 tools: [search_tickets, search_contacts, search_clients, assign_contact, update_ticket, add_ticket_note]
 connectors: []

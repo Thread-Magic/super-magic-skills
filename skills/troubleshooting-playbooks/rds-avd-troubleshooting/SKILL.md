@@ -1,6 +1,6 @@
 ---
 name: RDS / AVD Troubleshooting
-description: Diagnose Remote Desktop Services and Azure Virtual Desktop session problems — can't connect, stuck at "loading profile", licensing errors, black screens, printers missing in session — by identifying the layer (broker, host, licensing, profile, redirection) before touching anything.
+description: Diagnose Remote Desktop Services and Azure Virtual Desktop session issues: connect failures, profile hangs, licensing, black screens, missing printers.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, Liongard]

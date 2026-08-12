@@ -1,6 +1,6 @@
 ---
 name: 1Password Business
-description: A 1Password Business rollout or admin ticket arrived — vault and group structure, sharing discipline, the Emergency Kit and admin/recovery-group account recovery, and offboarding via suspend-then-recover. Verify against 1Password's current documentation.
+description: Run 1Password Business admin work: vault and group structure, sharing discipline, the Emergency Kit, recovery groups, and suspend-then-recover offboarding.
 category: Vendor Runbooks
 tools: [search_tickets, search_contacts, search_itglue, search_hudu, search_knowledge_base, add_ticket_note, create_ticket, update_ticket]
 connectors: []

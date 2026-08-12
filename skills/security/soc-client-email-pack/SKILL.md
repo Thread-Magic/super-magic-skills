@@ -1,6 +1,6 @@
 ---
 name: SOC Client Email Pack
-description: A security event needs its first client outreach — pick the per-threat-type template (leaked credentials, vendor fraud/BEC, inbox rule, lookalike domain), fill it with verified facts only, and present a draft.
+description: Pick the right client-outreach template for a security event (leaked credentials, BEC, inbox rule, lookalike domain) and draft with verified facts only.
 category: Security
 tools: [search_tickets, search_contacts, view_openDraft, send_client_email]
 connectors: []

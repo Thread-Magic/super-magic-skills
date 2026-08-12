@@ -1,6 +1,6 @@
 ---
 name: Mobile Email Setup
-description: Get corporate mail working on a phone — new-device setup, "my email stopped syncing", unexpected MDM enrollment prompts, native Mail vs Outlook app choices — with the BYOD consent boundary held firmly.
+description: Set up corporate mail on a phone — new-device config, sync failures, MDM enrollment prompts, native Mail vs Outlook — holding the BYOD consent boundary.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

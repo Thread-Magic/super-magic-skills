@@ -1,6 +1,6 @@
 ---
 name: Liongard Network Documentation Sync
-description: Keep network documentation honest by diffing what Liongard inspectors actually see (firewalls, switches, wireless, hypervisors, servers) against what the doc platform says, then drafting corrections. Use for "is our documentation for <client> accurate", pre-onboarding/QBR doc audits, or after a project to true-up the docs.
+description: Diff what Liongard inspectors see (firewalls, switches, wireless, hypervisors, servers) against the doc platform and draft network-doc corrections.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_timeline]
 connectors: [Liongard]

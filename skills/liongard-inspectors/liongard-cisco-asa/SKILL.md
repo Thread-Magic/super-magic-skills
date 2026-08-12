@@ -1,6 +1,6 @@
 ---
 name: Liongard Cisco ASA Read
-description: Interrogate a client's Cisco ASA firewall through the Liongard Cisco ASA inspector — software version, interfaces, access lists/NAT, VPN (IPsec/AnyConnect) config, admin access. Use for "what's their ASA config?", ACL/exposure review during triage, or version-currency checks.
+description: Interrogate a client's Cisco ASA firewall via Liongard: software version, interfaces, ACLs/NAT, IPsec/AnyConnect VPN config, and admin access review.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

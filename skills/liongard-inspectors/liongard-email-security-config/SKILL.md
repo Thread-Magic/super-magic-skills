@@ -1,6 +1,6 @@
 ---
 name: Liongard Email Security Config Read
-description: Read a client's email-security platform configuration (Mimecast/Proofpoint-class) through its Liongard inspector — policy posture, connector state, and config drift — to answer "how is their mail filtering actually set up" without an admin console.
+description: Read a client's Mimecast/Proofpoint-class email security config via Liongard: policy posture, connector state, and config drift without admin console.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_metric, liongard_detection, liongard_timeline, liongard_query]
 connectors: [Liongard]

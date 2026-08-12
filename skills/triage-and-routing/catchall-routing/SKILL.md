@@ -1,6 +1,6 @@
 ---
 name: Catchall Routing
-description: Identify the correct client and contact for a ticket that landed in a catchall or no-company mailbox — including forwarded mail and vendor alerts — then reassign it or hand back candidates.
+description: Identify the correct client and contact for a ticket that landed in a catchall or no-company mailbox, including forwarded mail and vendor alert routing.
 category: Triage & Routing
 tools: [search_tickets, search_clients, search_contacts, assign_contact, update_ticket, add_ticket_note, create_ticket]
 connectors: []

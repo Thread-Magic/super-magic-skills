@@ -1,6 +1,6 @@
 ---
 name: Liongard SentinelOne Read
-description: Interrogate a client's SentinelOne tenant through the Liongard SentinelOne inspector — protected agents, agent/version health, threat detections, policy/site assignment, admins. Use for "are their S1 agents healthy?", coverage-gap checks, or EDR posture questions during triage.
+description: Interrogate a client's SentinelOne tenant via Liongard: protected agents, agent/version health, threat detections, policy/site assignment, admins.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline, liongard_alert]
 connectors: [Liongard]

@@ -1,6 +1,6 @@
 ---
 name: Archive Mailbox Enablement
-description: Enable an Exchange Online archive (In-Place Archive) when it actually solves the quota problem — license check, move-policy expectations, and auto-expanding archive caveats stated honestly. Use when a mailbox is full and archiving is on the table, or a ticket asks to "turn on the archive."
+description: Enable Exchange Online In-Place Archive mailboxes to solve quota issues, with license checks, move-policy expectations, and archive caveats.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

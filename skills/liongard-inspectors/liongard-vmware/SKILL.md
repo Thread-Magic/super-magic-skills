@@ -1,6 +1,6 @@
 ---
 name: Liongard VMware Read
-description: Interrogate a client's vCenter/ESXi estate through Liongard — host versions/build levels, datastore capacity, snapshot sprawl, VM inventory and placement. Use for "what's on their VMware", capacity questions, snapshot hygiene, or host-version currency during triage and QBR prep.
+description: Interrogate a client's vCenter/ESXi estate via Liongard: host versions and build levels, datastore capacity, snapshot sprawl, VM inventory/placement.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

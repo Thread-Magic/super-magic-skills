@@ -1,6 +1,6 @@
 ---
 name: Zapier Teams Approval Gate
-description: Use Teams "Send Approval Request and Wait" as the human-in-the-loop gate before privileged or irreversible actions — offboarding, admin changes, out-of-contract spend. Use when a workflow needs a real named-human sign-off in Teams before proceeding.
+description: Use Teams "Send Approval Request and Wait" as the human-in-the-loop gate before privileged actions — offboarding, admin changes, out-of-contract spend.
 category: Connectors
 tools: [search_tickets, add_ticket_note, update_ticket, send_approval]
 connectors: [Zapier: Microsoft Teams]

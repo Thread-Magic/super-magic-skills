@@ -1,6 +1,6 @@
 ---
 name: M365 Group Lifecycle
-description: Govern the full life of Microsoft 365 Groups — who can create them, naming, expiration/renewal, ownership, and clean retirement — and keep the group-vs-DL-vs-security-group decision straight. Use when a client asks to control group sprawl, set who can make groups/teams, handle expiring or ownerless groups, or clean up dead groups.
+description: Govern Microsoft 365 Groups lifecycle: creation controls, naming, expiration and renewal, ownership handoff, and clean retirement of dead groups.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

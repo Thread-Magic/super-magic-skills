@@ -1,6 +1,6 @@
 ---
 name: VPN Connect Guide
-description: Draft reply-ready instructions for an end user to connect to their company VPN using the client's actual VPN software — "send the user steps to get on the VPN."
+description: Draft reply-ready instructions for an end user to connect to their company VPN using the client's actual VPN software and login flow.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

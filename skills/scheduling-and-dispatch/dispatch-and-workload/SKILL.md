@@ -1,6 +1,6 @@
 ---
 name: Dispatch & Workload
-description: A dispatcher wants the full queue picture — unassigned tickets by priority and age, open work per technician, lightest-load assignment proposals, and a daily audit of what got assigned where.
+description: Give a dispatcher the full queue picture: unassigned tickets by priority and age, open work per tech, lightest-load proposals, and a daily audit.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_members, list_boards, list_ticket_priorities, update_ticket, schedule_ticket]
 connectors: []

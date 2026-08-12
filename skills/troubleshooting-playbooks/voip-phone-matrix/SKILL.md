@@ -1,6 +1,6 @@
 ---
 name: VoIP Phone Matrix
-description: Diagnose VoIP problems — inbound calls failing, ring groups misbehaving, one-way audio, dead phones, provisioning failures — by first splitting one-phone vs site vs trunk, then working the right layer.
+description: Diagnose VoIP problems: inbound calls failing, ring group misbehavior, one-way audio, dead phones, provisioning fails, by splitting phone vs site vs trunk.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

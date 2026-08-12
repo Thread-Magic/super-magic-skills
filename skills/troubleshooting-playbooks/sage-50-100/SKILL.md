@@ -1,6 +1,6 @@
 ---
 name: Sage 50 / Sage 100
-description: Diagnose Sage 50 and Sage 100 problems — data-path and share-permission faults, the Pervasive/Actian (PSQL) database engine service, and multi-user access errors — under period-close time pressure, from the connection manager and engine state, never by touching company data blindly.
+description: Diagnose Sage 50 and Sage 100 problems: data-path faults, share permissions, Pervasive/Actian PSQL engine service, and multi-user access errors at close.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, Liongard]

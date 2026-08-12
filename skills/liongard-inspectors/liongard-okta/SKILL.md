@@ -1,6 +1,6 @@
 ---
 name: Liongard Okta Read
-description: Answer Okta tenant questions from the Liongard Okta inspector — app assignments, admin roles, MFA policies, and deactivated-user hygiene — for clients using Okta as their identity front door.
+description: Answer Okta tenant questions via the Liongard Okta inspector: app assignments, admin roles, MFA policies, and deactivated-user hygiene reviews.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_metric, liongard_identity, liongard_detection, liongard_timeline, liongard_query]
 connectors: [Liongard]

@@ -1,6 +1,6 @@
 ---
 name: Supporting Medical Clinics
-description: Vertical pack for medical-clinic and physician-practice clients — the EMR/EHR stack (eClinicalWorks, Athenahealth-class), e-prescribing and lab interfaces, telehealth, HIPAA/PHI ticket hygiene, and on-call urgency. Load when the client is a medical practice or the ticket names an EMR, e-prescribing, or telehealth platform.
+description: Medical clinic pack for eClinicalWorks and Athenahealth EMR, e-prescribing, lab interfaces, telehealth, and HIPAA PHI ticket hygiene.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

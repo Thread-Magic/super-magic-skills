@@ -1,6 +1,6 @@
 ---
 name: Client Offboarding
-description: Run a clean client exit — data handover, access revocation on both sides, final billing notes, and the documentation package — as a tracked checklist that protects both parties.
+description: Run a clean client exit checklist covering data handover, mutual access revocation, final billing notes, and the documentation package for both parties.
 category: Client Lifecycle
 tools: [search_clients, search_contacts, search_tickets, create_ticket, update_ticket, list_boards, search_itglue, search_hudu]
 connectors: [IT Glue, Hudu]

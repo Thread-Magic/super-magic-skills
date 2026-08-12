@@ -1,6 +1,6 @@
 ---
 name: Supporting Auto Dealerships
-description: Vertical pack for auto-dealership clients — the DMS (CDK, Reynolds & Reynolds, Dealertrack, Tekion-class) and the 2024 CDK-outage lesson, OEM-mandated tooling and certified interfaces, the sales-floor vs service-bay split, F&I data sensitivity under the FTC Safeguards Rule, and month-end urgency. Load when the client is a dealership or the ticket names a DMS, F&I, the service lane, or OEM systems.
+description: Auto dealership pack covering DMS platforms (CDK, Reynolds, Tekion), OEM tooling, F&I data under FTC Safeguards, and month-end urgency.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

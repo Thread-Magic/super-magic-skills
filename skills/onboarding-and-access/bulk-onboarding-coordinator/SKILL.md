@@ -1,6 +1,6 @@
 ---
 name: Bulk Onboarding Coordinator
-description: Coordinate a multi-hire onboarding wave — one parent ticket, a child ticket per hire, and a consolidated status table kept current. Use when a client sends several new starters at once (seasonal wave, acquisition, new office, intern class).
+description: Coordinate a multi-hire onboarding wave with one parent ticket, child ticket per hire, and a consolidated status table kept current through cutover.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, create_ticket, update_ticket, add_ticket_note, log_time_entry]
 connectors: []

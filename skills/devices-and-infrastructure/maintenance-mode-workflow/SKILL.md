@@ -1,6 +1,6 @@
 ---
 name: Maintenance Mode Workflow
-description: Put a device into (or take it out of) RMM maintenance mode with an explicit duration and reason, plus a follow-up task so monitoring is re-enabled on time. Use for "silence monitoring on <device> during the migration" or "set maintenance for tonight's window".
+description: Put a device into or out of RMM maintenance mode with an explicit duration and reason, plus a follow-up task so monitoring is re-enabled on schedule.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, set_ninjaone_device_maintenance, add_ticket_note, create_ticket, schedule_ticket]
 connectors: [NinjaOne]

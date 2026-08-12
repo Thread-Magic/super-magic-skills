@@ -1,6 +1,6 @@
 ---
 name: Post-Churn Autopsy
-description: After a client terminates — reconstruct the causes from ticket evidence, extract the lessons, and identify the early-warning signals we missed so the next departure is caught in time.
+description: After a client terminates, reconstruct causes from ticket evidence, extract lessons, and identify early-warning signals so the next churn is caught early.
 category: Client Lifecycle
 tools: [search_tickets, search_clients]
 connectors: []

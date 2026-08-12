@@ -1,6 +1,6 @@
 ---
 name: CW Time Entry Conventions
-description: For desks synced to ConnectWise Manage — log time entries that survive the CW sync: correct work role/work type, deliberate billable flag, agreement application, and plain-text notes.
+description: ConnectWise Manage time entries that survive sync: correct work role/type, deliberate billable flag, agreement application, and plain-text notes.
 category: PSA-Specific
 tools: [search_tickets, log_time_entry, add_ticket_note]
 connectors: []

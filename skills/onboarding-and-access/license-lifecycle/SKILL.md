@@ -1,6 +1,6 @@
 ---
 name: License Lifecycle
-description: Assign or reclaim software licenses — check for unused licenses before buying, and leave a billing note on every change. Use when a ticket asks to add a license, free one up, or asks why the client is paying for seats.
+description: Assign or reclaim software licenses by checking for unused seats before buying and leaving a billing note on every change so client spend stays accurate.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, update_ticket, send_approval, log_time_entry]
 connectors: []

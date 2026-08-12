@@ -1,6 +1,6 @@
 ---
 name: After-Hours Voicemail Digest
-description: Build the morning digest of overnight voicemails and after-hours calls — urgent items first, callbacks owed with deadlines, and which tickets were created. Use for "what came in overnight on the phones" or a scheduled 7am flow.
+description: Build a morning digest of overnight voicemails and after-hours calls — urgent items first, callbacks owed with deadlines, and which tickets were created.
 category: Voice & Messenger
 tools: [search_tickets, list_boards, add_ticket_note]
 connectors: []

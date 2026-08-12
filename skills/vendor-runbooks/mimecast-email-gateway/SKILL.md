@@ -1,6 +1,6 @@
 ---
 name: Mimecast Email Gateway
-description: A Mimecast event needs working — a held message release request, a URL Protect click alert, or an impersonation-protect hit. Read the hold reason, apply release discipline, and treat allowed clicks as live incidents.
+description: Work Mimecast gateway events: held-message release requests, URL Protect click alerts, and impersonation-protect hits. Treat allowed clicks as incidents.
 category: Vendor Runbooks
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket]
 connectors: []

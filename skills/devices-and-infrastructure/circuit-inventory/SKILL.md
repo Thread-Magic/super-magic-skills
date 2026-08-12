@@ -1,6 +1,6 @@
 ---
 name: Circuit Inventory
-description: Build or refresh the inventory of a client's circuits — internet, WAN/MPLS/SD-WAN underlays, POTS-replacement lines — with carrier, circuit ID, account reference, site, bandwidth, and renewal dates. Use for "what circuits does <client> have", renewal planning, or when an outage reveals nobody knows the circuit ID.
+description: Refresh a client circuit inventory — internet, WAN/MPLS/SD-WAN, POTS-replacement — with carrier, circuit ID, site, bandwidth, and renewal dates.
 category: Devices & Infrastructure
 tools: [search_itglue, search_hudu, search_tickets, add_ticket_note, create_ticket, schedule_ticket]
 connectors: [IT Glue, Hudu]

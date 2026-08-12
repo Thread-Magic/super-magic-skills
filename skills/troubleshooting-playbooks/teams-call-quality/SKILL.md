@@ -1,6 +1,6 @@
 ---
 name: Teams Call Quality
-description: Diagnose choppy audio, robotic voice, frozen video, and drops in Teams calls/meetings — CQD-style layer isolation (device → machine → network path) without assuming access to CQD, and honest about which network segments the MSP can actually fix. Teams sign-in/crash/feature problems belong to teams-issues.
+description: Fix Microsoft Teams call quality: choppy audio, robotic voice, frozen video, and drops via CQD-style device, machine, and network path layer isolation.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

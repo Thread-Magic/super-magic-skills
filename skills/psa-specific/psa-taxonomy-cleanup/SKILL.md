@@ -1,6 +1,6 @@
 ---
 name: PSA Taxonomy Cleanup
-description: Rationalizing a PSA desk's ticket type / subtype / category sprawl — a manual sweep that censuses real usage from tickets, proposes merges and retirements, and enforces migration discipline before anything is changed.
+description: Rationalize PSA ticket type/subtype/category sprawl: census real usage from tickets, propose merges and retirements, enforce migration discipline first.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses]
 connectors: []

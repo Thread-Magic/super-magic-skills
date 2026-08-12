@@ -1,6 +1,6 @@
 ---
 name: VPN Issues Intent Design
-description: Build the VPN-connectivity intent — a short self-help ladder plus environment capture (client, location, error text) so escalated tickets arrive diagnosable. Use when asked to "build a VPN intent", "deflect VPN tickets", or when remote-access issues rank high in Intent Mining.
+description: Design the VPN connectivity intent: a short self-help ladder plus environment capture — client, location, error text — so escalations arrive diagnosable.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets, search_knowledge_base]
 connectors: []

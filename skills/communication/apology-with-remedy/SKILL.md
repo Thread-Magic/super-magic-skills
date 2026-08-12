@@ -1,6 +1,6 @@
 ---
 name: Apology With Remedy
-description: Draft the message for when the desk genuinely failed — specific acknowledgment of what went wrong, a concrete remedy, and one prevention step — without groveling and without admissions beyond the established facts.
+description: Draft the message when the desk genuinely failed — specific acknowledgment, concrete remedy, and one prevention step, without groveling or overreach.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []

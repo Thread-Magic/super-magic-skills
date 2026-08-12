@@ -1,6 +1,6 @@
 ---
 name: Entra User Lifecycle (Zapier)
-description: Create, update, or disable Microsoft Entra ID users through the Zapier connector — identity resolved from the PSA/ticket first (Entra has no search), approval gated before every write. Use when an onboarding/offboarding/update ticket should execute directly against Entra via Zapier.
+description: Create, update, or disable Microsoft Entra ID users through the Zapier connector with identity resolved from the PSA and approval gated on every write.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, send_approval, log_time_entry]
 connectors: [Zapier: Microsoft Entra ID]

@@ -1,6 +1,6 @@
 ---
 name: Outlook Search Issues
-description: Diagnose Outlook search returning nothing, missing recent mail, or "results may be incomplete" — determining local-index vs server search and the cached-mode window before recommending anything, with index rebuild strictly last. Broader Outlook breakage (profiles, connectivity, add-ins) belongs to outlook-client-issues.
+description: Fix Outlook search returning nothing or incomplete results by isolating local index vs server search and cached-mode window before rebuilding the index.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

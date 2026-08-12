@@ -1,6 +1,6 @@
 ---
 name: New Ticket First Touch
-description: One-pass first touch on a new ticket — classify it, check for duplicates, pull similar resolved tickets, and draft an acknowledgment for the tech to review and send.
+description: One-pass first touch on a new ticket: classify it, check duplicates, pull similar resolved tickets, and draft an acknowledgment for the tech to review.
 category: Triage & Routing
 tools: [search_tickets, search_knowledge_base, run_assistive_ai, add_ticket_note, update_ticket, list_ticket_priorities]
 connectors: []

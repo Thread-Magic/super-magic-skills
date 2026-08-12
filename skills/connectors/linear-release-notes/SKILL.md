@@ -1,6 +1,6 @@
 ---
 name: Linear Release Notes
-description: Turn a completed Linear cycle's issues into client-safe release notes, then post the relevant fix notice to each affected ticket. Use for "write release notes from the last cycle", "tell clients their bug is fixed", or "close the loop on shipped escalations".
+description: Turn a completed Linear cycle's issues into client-safe release notes and post fix notices to affected tickets. Close the loop on shipped bugs.
 category: Connectors
 tools: [search_tickets, add_ticket_note, update_ticket]
 connectors: [Linear]

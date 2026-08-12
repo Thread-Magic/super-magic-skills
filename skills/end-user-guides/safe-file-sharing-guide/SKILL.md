@@ -1,6 +1,6 @@
 ---
 name: Safe File Sharing Guide
-description: Draft reply-ready instructions for an end user to share files the approved way — links over attachments, the right audience setting, external-sharing rules — "tell the user how to share this file properly."
+description: Draft reply-ready instructions for an end user to share files the approved way — links over attachments, right audience, external-sharing rules.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Slow Computer
-description: Work a "computer is slow" ticket through a measured triage ladder — resource hogs, disk health and pressure, startup load, profile weight — ending with honest when-to-reimage or when-to-replace criteria.
+description: Triage a slow-computer ticket via resource hogs, disk health, startup load, and profile weight, ending with reimage or replace decision criteria.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, NinjaOne]

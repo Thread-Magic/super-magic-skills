@@ -1,6 +1,6 @@
 ---
 name: Bitdefender GravityZone
-description: A Bitdefender GravityZone alert landed — identify which detection layer fired (on-access AV, behavioral ATC, HyperDetect, network attack, EDR incident), read Risk Analytics findings correctly, and use quarantine/rollback options without over- or under-trusting them.
+description: Triage Bitdefender GravityZone alerts: identify the detection layer (AV, ATC, HyperDetect, EDR) and use Risk Analytics, quarantine, and rollback safely.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

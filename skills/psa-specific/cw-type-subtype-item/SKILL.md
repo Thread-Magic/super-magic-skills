@@ -1,6 +1,6 @@
 ---
 name: CW Type / Subtype / Item Classification
-description: For desks synced to ConnectWise Manage — classify tickets with CW's three-level Type → Subtype → Item taxonomy using only values that exist in the board's configuration, never invented ones.
+description: Classify ConnectWise Manage tickets with the three-level Type → Subtype → Item taxonomy using only values configured on the board — never invented ones.
 category: PSA-Specific
 tools: [search_tickets, list_boards, update_ticket, add_ticket_note]
 connectors: []

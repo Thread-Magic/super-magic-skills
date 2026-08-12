@@ -1,6 +1,6 @@
 ---
 name: Group Policy Troubleshooting
-description: Diagnose "GPO not applying" — drive mappings, lock screens, software installs, security settings missing — by reading gpresult output and walking the scope/filtering/inheritance ladder before touching any policy.
+description: Diagnose GPO not applying — missing drive mappings, lock screens, software installs — by reading gpresult and walking scope, filtering, and inheritance.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, liongard_launchpoint, liongard_metric, liongard_timeline, web_search]
 connectors: [IT Glue, Hudu, Liongard]

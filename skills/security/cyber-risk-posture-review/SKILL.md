@@ -1,6 +1,6 @@
 ---
 name: Cyber Risk Posture Review
-description: A client's security posture needs reviewing — combine the cyber risk dashboard, identity data, open detections, and incident history into a posture summary with the top ranked risks.
+description: Review a client's security posture using the cyber risk dashboard, identity data, open detections, and incident history, ranking the top risks.
 category: Security
 tools: [liongard_cyber_risk_dashboard, liongard_identity, liongard_detection, search_tickets, add_ticket_note]
 connectors: [Liongard]

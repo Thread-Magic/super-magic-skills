@@ -1,6 +1,6 @@
 ---
 name: Distribution List Management
-description: Add or remove distribution-list members with owner approval and a documented reason. Use when a ticket asks to add someone to, remove someone from, or clean up a distribution list or email group.
+description: Add or remove distribution list members with owner approval and a documented reason logged on the ticket, keeping email groups clean and auditable.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, send_approval, log_time_entry]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Entra Connect Sync Errors
-description: Diagnose Entra Connect (Azure AD Connect) sync problems — export errors, duplicate attributes, quarantined objects, users not appearing/updating in the cloud — reading the specific sync error before acting, and never widening or forcing sync runs blind.
+description: Fix Entra Connect (Azure AD Connect) sync errors — export failures, duplicate attributes, quarantined objects, users missing in the cloud — no blind runs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

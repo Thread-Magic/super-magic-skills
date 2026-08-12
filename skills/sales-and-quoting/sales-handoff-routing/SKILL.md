@@ -1,6 +1,6 @@
 ---
 name: Sales Handoff Routing
-description: When a ticket turns out to be a sales conversation — a purchase ask, renewal, expansion, or pricing question — and it should move to the sales board and the account owner with a clean summary.
+description: Move a service ticket that turns out to be a sales conversation, a purchase, renewal, expansion, or pricing question, to the sales board and account owner.
 category: Sales & Quoting
 tools: [search_tickets, update_ticket, add_ticket_note, list_boards, search_members]
 connectors: [Zapier: Microsoft Outlook]

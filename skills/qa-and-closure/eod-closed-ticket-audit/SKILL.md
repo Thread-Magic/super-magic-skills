@@ -1,6 +1,6 @@
 ---
 name: EOD Closed Ticket Audit
-description: End-of-day quality sweep of every ticket closed today — check each against the closure rubric (resolution evidence, documentation, classification, time, closure message) and produce a pass/fail summary with reopen recommendations.
+description: End-of-day quality sweep of every ticket closed today against the closure rubric: resolution, docs, classification, time, message, with pass/fail summary.
 category: QA & Closure
 tools: [search_tickets, add_ticket_note, update_ticket, list_boards]
 connectors: []

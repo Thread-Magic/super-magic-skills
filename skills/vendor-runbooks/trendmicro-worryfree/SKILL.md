@@ -1,6 +1,6 @@
 ---
 name: Trend Micro Worry-Free
-description: A Trend Micro Worry-Free alert landed — triage by detection engine (signature, predictive ML, behavior monitoring, web reputation), work within the MSP-tier console model, and know when a client is actually on Apex Central / Vision One instead.
+description: Triage Trend Micro Worry-Free alerts by engine (signature, ML, behavior, web reputation) and know when a client is on Apex Central or Vision One instead.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

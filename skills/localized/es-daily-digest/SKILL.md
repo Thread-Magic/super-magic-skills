@@ -1,6 +1,6 @@
 ---
 name: Resumen diario
-description: Un técnico pide un resumen de sus tickets abiertos — qué espera respuesta, qué es urgente, qué está agendado para hoy — legible en menos de un minuto, con una variante ultracorta de 3 líneas. (Spanish version of Daily Digest — skimmable morning summary of the requesting member's open tickets.)
+description: Resumen diario de los tickets abiertos de un técnico: qué espera respuesta, qué es urgente, qué está agendado hoy, con variante ultracorta.
 category: Localized
 tools: [search_tickets, search_members]
 connectors: []

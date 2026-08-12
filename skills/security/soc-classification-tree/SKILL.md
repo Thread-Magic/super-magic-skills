@@ -1,6 +1,6 @@
 ---
 name: SOC Classification Tree
-description: Classify a security-board ticket down the Incident/Request/Problem tree and set type, subtype, and item consistently — use whenever a security ticket needs classification or a tech asks how to categorize an alert.
+description: Classify a security ticket down the Incident, Request, and Problem tree and set type, subtype, and item consistently for reporting and routing.
 category: Security
 tools: [list_boards, list_ticket_statuses, search_tickets, update_ticket, add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Acronis Cyber Protect
-description: An Acronis Cyber Protect alert arrived — first decide whether it is a backup failure or an Active Protection (anti-ransomware/security) detection, then run the matching discipline; the two must never be triaged the same way.
+description: Handle Acronis Cyber Protect alerts: separate a backup failure from an Active Protection anti-ransomware detection and run the matching triage discipline.
 category: Vendor Runbooks
 tools: [search_tickets, search_itglue, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

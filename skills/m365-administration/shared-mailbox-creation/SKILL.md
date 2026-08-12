@@ -1,6 +1,6 @@
 ---
 name: Shared Mailbox Creation
-description: Create a new Exchange Online shared mailbox end-to-end — naming, license implications at the 50GB threshold, initial delegation, and the documentation note. Use when a ticket asks for a new shared mailbox, team inbox, or group email address that people need to work out of.
+description: Create Exchange Online shared mailboxes: naming, licensing at the 50GB threshold, initial delegation, and documentation for team inboxes.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

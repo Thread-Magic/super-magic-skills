@@ -1,6 +1,6 @@
 ---
 name: SOC Shift Handoff
-description: Security-desk shift change with investigations in flight — hand off open security work with evidence state, containment-in-progress status, and watch items, so the incoming shift can act in minute one without re-deriving anyone's reasoning.
+description: Hand off open security investigations at shift change: evidence state, containment progress, and watch items so the next shift can act immediately.
 category: Security
 tools: [search_tickets, search_members, add_ticket_note]
 connectors: []

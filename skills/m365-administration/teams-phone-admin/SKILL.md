@@ -1,6 +1,6 @@
 ---
 name: Teams Phone Admin
-description: Configure Microsoft Teams Phone for a client — assign/reassign phone numbers, apply calling and caller-ID policies, and stand up basic auto-attendants and call queues. Configuration only, not live call control. Use when a client asks to give a user a phone number, change calling permissions, or set up a main-line menu / hunt group in Teams.
+description: Configure Microsoft Teams Phone: assign numbers, apply calling and caller-ID policies, and build basic auto-attendants and call queues.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

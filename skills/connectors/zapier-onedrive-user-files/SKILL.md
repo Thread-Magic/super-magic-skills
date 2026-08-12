@@ -1,6 +1,6 @@
 ---
 name: Zapier OneDrive User Files
-description: Work a user's OneDrive during troubleshooting and data-recovery tickets — fetch the specific file in question, run KQL search to locate "lost" documents, and mint sharing links with hygiene. Use for "the user says the file is gone", "find <document> in their OneDrive", or "get me a safe link to that file".
+description: Work a user's OneDrive during troubleshooting — fetch specific files, run KQL search for lost documents, and mint sharing links with hygiene.
 category: Connectors
 tools: [search_tickets, search_contacts, add_ticket_note]
 connectors: [Zapier: OneDrive]

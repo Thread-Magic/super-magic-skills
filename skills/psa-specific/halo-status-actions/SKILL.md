@@ -1,6 +1,6 @@
 ---
 name: Halo Status Actions
-description: For desks synced to HaloPSA — Halo transitions tickets through configured Actions, not raw status edits; pick the action that matches the intent so the right status, note visibility, and notifications fire together.
+description: HaloPSA transitions run through configured Actions, not raw status edits — pick the action that fires the right status, note visibility, and notifications.
 category: PSA-Specific
 tools: [search_tickets, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

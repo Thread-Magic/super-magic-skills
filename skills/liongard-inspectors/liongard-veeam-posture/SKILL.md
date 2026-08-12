@@ -1,6 +1,6 @@
 ---
 name: Liongard Veeam Posture Read
-description: Interrogate a client's Veeam deployment through Liongard — job inventory and schedules, repository capacity, protected-VM census, license state. Use for "what does Veeam protect at <client>", coverage-gap checks, and repo-capacity questions; for a job FAILURE alert use vendor-runbooks/veeam-job-failures instead.
+description: Interrogate a client's Veeam deployment via Liongard: job inventory and schedules, repository capacity, protected-VM census, and license state.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

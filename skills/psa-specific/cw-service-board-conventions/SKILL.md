@@ -1,6 +1,6 @@
 ---
 name: CW Service Board Conventions
-description: For desks synced to ConnectWise Manage running multiple boards — decide which work belongs on which board and execute cross-board moves without losing status, classification, or history.
+description: ConnectWise Manage multi-board desks: pick which board work belongs on and execute cross-board moves without losing status, classification, or history.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

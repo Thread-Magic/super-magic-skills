@@ -1,6 +1,6 @@
 ---
 name: SSPR Password Reset Guide
-description: Draft reply-ready instructions an end user can follow to reset their own password via self-service password reset — "send the user steps to reset their password themselves."
+description: Draft reply-ready instructions an end user can follow to reset their own password via self-service password reset without calling the help desk.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

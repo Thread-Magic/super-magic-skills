@@ -1,6 +1,6 @@
 ---
 name: Priority Downgrade Guard
-description: On a priority change, if AI triage lowered a priority that a human or the client had explicitly set higher, restore the higher priority — deterministic, restore-only, never an upgrade of its own.
+description: On a priority change, if AI triage lowered a priority a human or client explicitly set higher, restore the higher priority — deterministic, restore only.
 category: Triage & Routing
 tools: [search_tickets, update_ticket, list_ticket_priorities, add_ticket_note]
 connectors: []

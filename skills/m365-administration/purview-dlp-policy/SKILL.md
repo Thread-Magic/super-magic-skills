@@ -1,6 +1,6 @@
 ---
 name: Purview DLP Policy
-description: Scope, test, and roll out a Microsoft Purview Data Loss Prevention policy the safe way — test-mode first, narrow scope, evidence before enforce — so a new rule doesn't block legitimate business overnight. Use when a client asks to "stop staff emailing credit-card/SSN/PHI data," prevent data exfiltration, or meet a compliance requirement with DLP.
+description: Scope, test, and roll out Microsoft Purview DLP policies with test-mode first, narrow scope, and evidence before enforce to protect PII and PHI.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

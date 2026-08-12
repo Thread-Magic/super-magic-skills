@@ -1,6 +1,6 @@
 ---
 name: PSA-Is-Master Reconciliation
-description: For any PSA-synced desk (ConnectWise, Autotask, HaloPSA) — the generic pattern for resolving a Thread↔PSA disagreement on a ticket: rule out sync lag first, then move Thread to match the PSA, never the reverse.
+description: Generic Thread ↔ PSA reconciliation pattern (ConnectWise, Autotask, HaloPSA): rule out sync lag first, then move Thread to match PSA, never the reverse.
 category: PSA-Specific
 tools: [search_tickets, list_ticket_statuses, list_boards, update_ticket, add_ticket_note]
 connectors: []

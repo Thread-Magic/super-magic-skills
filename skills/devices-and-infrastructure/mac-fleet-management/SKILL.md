@@ -1,6 +1,6 @@
 ---
 name: Mac Fleet Management
-description: Review the Macs a client has under RMM management — agent health, macOS version and update posture, disk/encryption basics, and awareness of a separate MDM owning updates. Use when someone asks "how are the Macs looking", a Mac-specific rollout is planned, or a macOS ticket needs fleet context.
+description: Review Macs under RMM — agent health, macOS version and update posture, disk and encryption basics, and awareness of a separate MDM owning updates.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, list_ninjaone_alerts, get_ninjaone_device_link, connectwise_rmm_search_devices, search_itglue, search_hudu, add_ticket_note, create_ticket]
 connectors: [NinjaOne, ConnectWise RMM, IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: WiFi Connect Guide
-description: Draft reply-ready instructions for an end user connecting a work device to wifi — office network, home network, and captive-portal awareness — "send the user wifi connection steps."
+description: Draft reply-ready instructions for an end user connecting a work device to wifi — office network, home network, and captive-portal awareness.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

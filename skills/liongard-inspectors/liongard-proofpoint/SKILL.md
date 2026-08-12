@@ -1,6 +1,6 @@
 ---
 name: Liongard Proofpoint Read
-description: Interrogate a client's Proofpoint Essentials tenant through the Liongard Proofpoint inspector — protected domains, users/licenses, filtering policy, spooling, admins. Use for "what's their Proofpoint config?", mail-security posture checks, or domain-coverage questions during triage.
+description: Interrogate a client's Proofpoint Essentials tenant via Liongard: protected domains, users and licenses, filtering policy, spooling, and admins.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

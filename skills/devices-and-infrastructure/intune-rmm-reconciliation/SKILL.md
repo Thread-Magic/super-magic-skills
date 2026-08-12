@@ -1,6 +1,6 @@
 ---
 name: Intune vs RMM Reconciliation
-description: Reconcile a client's Intune-enrolled device list against the RMM agent inventory — find machines missing an RMM agent, machines missing Intune enrollment, and double-managed conflicts. Use for "are all Intune devices in the RMM", "why does this machine have no agent", or before an MDM/RMM policy rollout.
+description: Reconcile an Intune-enrolled device list against RMM agent inventory — find machines missing an RMM agent, missing Intune, or double-managed conflicts.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, list_ninjaone_organizations, get_ninjaone_device, connectwise_rmm_search_devices, connectwise_rmm_list_companies, liongard_launchpoint, liongard_query, liongard_metric, search_itglue, search_hudu, add_ticket_note, create_ticket]
 connectors: [NinjaOne, ConnectWise RMM, Liongard, IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Exchange Hybrid Issues
-description: Diagnose Exchange hybrid problems — mail stuck between on-prem and Exchange Online, free/busy blank across the boundary, migrations stalled, "user not found" after moves — always starting from which side owns the mailbox.
+description: Troubleshoot Exchange hybrid — mail stuck on-prem/cloud, blank free-busy, stalled migrations, user-not-found after moves — starting from mailbox ownership.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

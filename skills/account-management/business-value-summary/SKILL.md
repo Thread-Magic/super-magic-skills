@@ -1,6 +1,6 @@
 ---
 name: Business Value Summary
-description: Summarize the value delivered to a client this period in business terms — outcomes achieved, time saved, incidents prevented — as the backbone of a client-facing "what you got from us" story.
+description: Summarize value delivered to a client this period in business terms — outcomes achieved, time saved, incidents prevented — as a client-facing story spine.
 category: Account Management
 tools: [search_tickets, search_clients]
 connectors: []

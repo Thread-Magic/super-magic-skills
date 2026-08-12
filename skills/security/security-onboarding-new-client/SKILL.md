@@ -1,6 +1,6 @@
 ---
 name: Security Onboarding New Client
-description: A new client is being onboarded and their security baseline is unknown — run the intake: MFA coverage, admin inventory, backup posture, EDR presence — and produce the day-one risk list before the first incident finds the gaps for you.
+description: Run a new-client security intake: MFA coverage, admin inventory, backup posture, EDR presence, and produce the day-one risk list before an incident.
 category: Security
 tools: [search_clients, search_contacts, search_tickets, search_ninjaone_devices, connectwise_rmm_search_devices, search_itglue, liongard_environment, liongard_identity, liongard_metric, add_ticket_note, create_ticket]
 connectors: [NinjaOne, ConnectWise RMM, IT Glue, Liongard]

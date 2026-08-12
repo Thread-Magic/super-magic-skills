@@ -1,6 +1,6 @@
 ---
 name: Multi-Issue Ticket Splitter
-description: Detect when one ticket bundles two or more distinct problems and split it into cross-linked sibling tickets, one purpose each — purposes confirmed by the tech, never inferred silently.
+description: Detect when one ticket bundles two or more distinct problems and split it into cross-linked sibling tickets, one purpose each, with tech confirmation.
 category: Triage & Routing
 tools: [search_tickets, create_ticket, update_ticket, add_ticket_note]
 connectors: []

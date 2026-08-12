@@ -1,6 +1,6 @@
 ---
 name: Backup Failure Triage
-description: Classify a backup-failure alert into its failure mode using alert text plus device state, check recurrence, and decide fix-here vs escalate-to-vendor. Use when a backup job failed, a backup alert lands, or someone asks "did backups run for <client>".
+description: Classify a backup failure by alert text and device state, check for recurrence, and decide whether to fix locally or escalate to the backup vendor.
 category: Devices & Infrastructure
 tools: [list_ninjaone_alerts, get_ninjaone_device, get_ninjaone_device_activities, search_tickets, search_itglue, add_ticket_note]
 connectors: [NinjaOne, IT Glue]

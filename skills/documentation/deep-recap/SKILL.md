@@ -1,6 +1,6 @@
 ---
 name: Deep Recap
-description: Build a comprehensive ticket recap beyond the default template — full message/note/time-entry history, related sibling tickets for the client, a timeline, and current blockers. The "give me a REAL recap, not the two-line summary" workflow.
+description: Build a full ticket recap covering messages, notes, time entries, related sibling tickets, timeline, and current blockers — beyond the default summary.
 category: Documentation
 tools: [search_tickets, list_recap_templates, add_ticket_note, search_clients]
 connectors: []

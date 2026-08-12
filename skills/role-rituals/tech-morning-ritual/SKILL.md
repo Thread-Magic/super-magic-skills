@@ -1,6 +1,6 @@
 ---
 name: Tech Morning Ritual
-description: A technician's 15-minute start-of-day runbook — digest, schedule check, easy-win pick, first-response sweep — run when a tech says "start my day", "what should I work on", or on a weekday-morning schedule.
+description: A technician's 15-minute start-of-day runbook: digest, schedule check, easy-win pick, and a first-response sweep before diving into ticket work.
 category: Role Rituals
 tools: [search_tickets, search_members, list_boards]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Liongard Sophos Central Read
-description: Interrogate a client's Sophos Central tenant through the Liongard Sophos Central inspector — protected endpoints, threat/health status, tamper protection, policy assignment, admin list. Use for "are their Sophos endpoints healthy?", coverage-gap checks during triage, or endpoint-security posture questions.
+description: Interrogate a client's Sophos Central tenant via Liongard: protected endpoints, threat/health status, tamper protection, policy, and admin list.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline, liongard_alert]
 connectors: [Liongard]

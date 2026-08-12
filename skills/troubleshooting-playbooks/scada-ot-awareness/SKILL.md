@@ -1,6 +1,6 @@
 ---
 name: SCADA / OT Awareness
-description: Support an OT-adjacent ticket safely — knowing the hard boundary between IT and operational technology (SCADA/PLC/HMI/ICS), never touching controllers or industrial networks, and routing to the right OT/vendor owner. A safety-and-scope playbook, not a fix-it one. Cross-reference industry-packs/manufacturing.
+description: Support OT-adjacent tickets safely: hard IT vs SCADA/PLC/HMI/ICS boundary, never touching controllers, and routing to the correct OT or vendor owner.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

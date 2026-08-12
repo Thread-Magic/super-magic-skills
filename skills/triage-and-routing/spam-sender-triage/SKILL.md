@@ -1,6 +1,6 @@
 ---
 name: Spam Sender Triage
-description: Close tickets from known-spam senders and patterns — after verifying a human did not forward the message in for investigation.
+description: Close tickets from known-spam senders and patterns after verifying a human did not forward the message in for investigation or phishing analysis.
 category: Triage & Routing
 tools: [search_tickets, search_contacts, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []

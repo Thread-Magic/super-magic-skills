@@ -1,6 +1,6 @@
 ---
 name: Triage d'hameçonnage
-description: Un utilisateur a signalé un e-mail suspect ou un ticket de signalement d'hameçonnage est arrivé sur le tableau sécurité — l'évaluer sans toucher à la charge, mesurer le rayon d'exposition, contenir si malveillant, et répondre au déclarant avec un verdict. (Phishing triage — assess without touching the payload, check blast radius, contain, reply to the reporter — in French.)
+description: Triage d'hameçonnage d'un e-mail suspect: évaluer sans toucher la charge, mesurer le rayon d'exposition, contenir si malveillant, répondre au déclarant.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

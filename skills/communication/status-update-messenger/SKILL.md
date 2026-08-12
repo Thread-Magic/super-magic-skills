@@ -1,6 +1,6 @@
 ---
 name: Status Update Messenger
-description: One command sets the ticket status and posts the matching templated client message from a per-status map — so a status change and the client-facing note that should go with it happen together. Runs manually on demand.
+description: One command sets the ticket status and posts the matching templated client message from a per-status map, so status and note change together.
 category: Communication
 tools: [update_ticket, list_ticket_statuses, add_ticket_note]
 connectors: []

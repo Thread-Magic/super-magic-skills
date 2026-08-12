@@ -1,6 +1,6 @@
 ---
 name: Compliance Questionnaire Assist
-description: A client received a security or compliance questionnaire (from their customer, prospect, or regulator) — draft answers from documented facts only, cite sources, and flag unknowns honestly instead of guessing.
+description: Draft answers to a client's security or compliance questionnaire from documented facts only, cite each source, and flag unknowns instead of guessing.
 category: Compliance & Audit
 tools: [search_itglue, search_knowledge_base, search_tickets, add_ticket_note]
 connectors: [IT Glue]

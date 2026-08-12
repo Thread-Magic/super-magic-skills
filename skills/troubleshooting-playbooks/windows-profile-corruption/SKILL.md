@@ -1,6 +1,6 @@
 ---
 name: Windows Profile Corruption
-description: Handle "logged in to a temporary profile" and broken-profile tickets — confirm via the profile-service event IDs, choose repair vs rebuild deliberately, and run the data-preservation checklist before anything is deleted.
+description: Fix Windows profile corruption and temporary-profile logons: confirm via profile-service event IDs, choose repair vs rebuild, and preserve user data first.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, get_ninjaone_device_link, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, NinjaOne]

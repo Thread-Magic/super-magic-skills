@@ -1,6 +1,6 @@
 ---
 name: Supporting Senior Living Communities
-description: Vertical pack for senior-living, assisted-living, and skilled-nursing clients — EHR/eMAR platforms (PointClickCare, MatrixCare-class) and the med-pass clock, nurse-call and life-safety adjacency, resident wifi vs clinical network separation, HIPAA, and night-shift coverage realities. Load when the client is a senior-living community or the ticket names an eMAR, nurse call, or resident network.
+description: Senior living and skilled-nursing pack covering PointClickCare and MatrixCare EHR/eMAR, nurse-call systems, resident wifi split, and HIPAA.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

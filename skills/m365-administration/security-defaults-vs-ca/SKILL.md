@@ -1,6 +1,6 @@
 ---
 name: Security Defaults vs Conditional Access
-description: Decide whether a tenant should stay on security defaults or move to Conditional Access — and when migrating, sequence it so there is never an unprotected gap. Use for "should <client> turn off security defaults", small-tenant posture questions, or any request that requires a CA exception on a defaults tenant.
+description: Decide whether a tenant should stay on Entra security defaults or migrate to Conditional Access, sequenced so there is never an unprotected gap.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, schedule_ticket, web_search]
 connectors: [IT Glue, Hudu]

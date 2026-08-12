@@ -1,6 +1,6 @@
 ---
 name: M365 Tenant Health Report
-description: Produce an advisory digest of a client tenant's Microsoft 365 Service Health incidents and Message Center posts — what's degraded now and what change is coming — as a plain-language brief, not an action. Use when someone asks "is anything wrong with <client>'s M365," "what Microsoft changes are coming," or wants a periodic tenant health/roadmap digest.
+description: Produce an advisory digest of Microsoft 365 Service Health incidents and Message Center posts for a client tenant as a plain-language brief.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

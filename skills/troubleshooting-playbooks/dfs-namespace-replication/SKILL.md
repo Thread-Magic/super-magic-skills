@@ -1,6 +1,6 @@
 ---
 name: DFS Namespace and Replication
-description: Diagnose DFS problems — DFS-N referral failures and users hitting the wrong target, DFS-R replication backlog and conflicts, and staging-quota bottlenecks — from referral order, backlog counts, and DFSR event/health evidence, never by reinitializing replication blindly.
+description: Fix DFS-N referral failures and DFS-R replication backlog, conflicts, and staging-quota issues using health reports and backlog counts, not blind reinit.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, Liongard, NinjaOne]

@@ -1,6 +1,6 @@
 ---
 name: OneDrive Restore Guide
-description: Draft reply-ready instructions for an end user to recover a deleted file or roll back to a previous version themselves in OneDrive/SharePoint — "send the user steps to restore their file."
+description: Draft reply-ready instructions for an end user to recover a deleted file or roll back a previous version themselves in OneDrive or SharePoint.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

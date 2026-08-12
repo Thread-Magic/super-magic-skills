@@ -1,6 +1,6 @@
 ---
 name: VPN Troubleshooting
-description: Diagnose VPN problems — won't connect, authenticates then no traffic, drops while working from home, or can't reach internal resources by name — via a client/auth/transport/DNS matrix.
+description: Diagnose VPN issues: won't connect, authenticates then no traffic, drops while remote, or can't reach resources by name via a client and DNS matrix.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

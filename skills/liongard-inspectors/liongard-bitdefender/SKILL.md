@@ -1,6 +1,6 @@
 ---
 name: Liongard Bitdefender Read
-description: Interrogate a client's Bitdefender GravityZone tenant through the Liongard Bitdefender inspector — protected endpoints, agent/module status, threat detections, policy assignment, admins. Use for "are their Bitdefender endpoints protected?", coverage-gap checks, or AV/EDR posture questions during triage.
+description: Interrogate a client's Bitdefender GravityZone tenant via Liongard: protected endpoints, agent/module status, threat detections, policies, admins.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline, liongard_alert]
 connectors: [Liongard]

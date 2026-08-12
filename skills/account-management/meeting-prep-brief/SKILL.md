@@ -1,6 +1,6 @@
 ---
 name: Meeting Prep Brief
-description: Rapid pre-meeting brief on a client — open items, recent wins and misses, sentiment, likely topics, and landmines — for "I'm meeting <client> in 30 minutes, prep me."
+description: Rapid pre-meeting brief on a client — open items, recent wins and misses, sentiment, likely topics, and landmines — for meetings starting in 30 minutes.
 category: Account Management
 tools: [search_tickets, search_clients, search_contacts]
 connectors: []

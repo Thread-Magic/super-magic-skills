@@ -1,6 +1,6 @@
 ---
 name: Arctic Wolf MDR
-description: An Arctic Wolf escalation or ticket arrived — respect what their SOC already triaged, pick up exactly where their investigation ended, and work the response-authority split between what Arctic Wolf does and what the MSP must do.
+description: Work Arctic Wolf MDR escalations: pick up where their SOC investigation ended and split response authority between Arctic Wolf and the MSP correctly.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

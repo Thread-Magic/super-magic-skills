@@ -1,6 +1,6 @@
 ---
 name: Autotask Queue Management
-description: For desks synced to Autotask — apply the queue (not board) mental model: queues are work pools, not workflow containers; route and escalate by moving tickets between queues with the right ownership semantics.
+description: Autotask queue model: queues are work pools, not workflow containers — route by moving tickets between queues with correct ownership semantics.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, update_ticket, add_ticket_note, search_members]
 connectors: []

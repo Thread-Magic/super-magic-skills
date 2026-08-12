@@ -1,6 +1,6 @@
 ---
 name: Liongard FortiGate Read
-description: Interrogate a client's FortiGate through the Liongard Fortinet inspector — firmware/FortiOS version, policy count and changes, VPN tunnel inventory, admin accounts, license/support state. Use for firewall config questions during triage, VPN incident context, or security-posture checks.
+description: Interrogate a client's FortiGate via the Liongard Fortinet inspector: FortiOS firmware, policy changes, VPN tunnels, admin accounts, license state.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

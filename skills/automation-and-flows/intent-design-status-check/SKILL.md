@@ -1,6 +1,6 @@
 ---
 name: Status Check Intent Design
-description: Build the "any update on my ticket?" intent — answer from the ticket's real status and last client-visible update instead of interrupting the tech, and only escalate when the trail has genuinely gone cold. Use when asked to "build a status update intent", "stop status-check pings", or when update-requests rank high in Intent Mining.
+description: Design the "any update on my ticket?" intent: answer from real ticket status and last client-visible update, escalating only when the trail has gone cold.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets]
 connectors: []

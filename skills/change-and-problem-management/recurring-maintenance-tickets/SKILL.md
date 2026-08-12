@@ -1,6 +1,6 @@
 ---
 name: Recurring Maintenance Tickets
-description: Scheduled maintenance tickets (backup checks, patch cycles, monthly server reviews) rot into checkbox theater — verify each cycle carries real completion evidence and flag skipped cycles before "monthly maintenance" quietly becomes quarterly.
+description: Verify scheduled maintenance tickets (backup checks, patch cycles, monthly server reviews) carry real completion evidence and flag skipped cycles fast.
 category: Change & Problem Management
 tools: [search_tickets, add_ticket_note, update_ticket, get_ninjaone_device_activities]
 connectors: [NinjaOne]

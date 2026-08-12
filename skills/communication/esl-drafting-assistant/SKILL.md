@@ -1,6 +1,6 @@
 ---
 name: ESL Drafting Assistant
-description: Grammar and idiom cleanup for technicians writing in non-native English — "fix my English," "mejorar ingles," or any draft that needs natural-sounding English with the technical content untouched.
+description: Grammar and idiom cleanup for technicians writing in non-native English — "fix my English" or "mejorar ingles," technical content untouched.
 category: Communication
 tools: []
 connectors: []

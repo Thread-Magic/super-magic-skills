@@ -1,6 +1,6 @@
 ---
 name: Guest Access Audit
-description: Inventory a tenant's B2B guest accounts, find the stale and never-redeemed ones, and put access reviews and expiration in place — cleanup gated behind approval. Use for "who are all these external users", periodic guest hygiene, or audit/insurance questions about external access.
+description: Inventory Entra B2B guest accounts, find stale and never-redeemed ones, and enable access reviews and expiration with approval-gated cleanup.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, create_ticket, schedule_ticket, send_approval, web_search]
 connectors: [IT Glue, Hudu]

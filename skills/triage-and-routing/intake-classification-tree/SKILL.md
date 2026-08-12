@@ -1,6 +1,6 @@
 ---
 name: Intake Classification Tree
-description: Walk a new ticket through the Incident / Request / Problem decision tree and recommend the matching type, subtype, and item so intake classification stays consistent.
+description: Walk a new ticket through the Incident, Request, or Problem decision tree and recommend a matching type, subtype, and item for consistent classification.
 category: Triage & Routing
 tools: [search_tickets, list_boards, update_ticket]
 connectors: []

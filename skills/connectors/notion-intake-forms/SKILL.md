@@ -1,6 +1,6 @@
 ---
 name: Notion Intake Forms
-description: Build a Notion form view for structured requests (new hires, access requests, project intake) and convert submitted rows into tickets — structured intake without another form vendor. Use when asked to "make a request form", "set up new-hire intake in Notion", or "turn form submissions into tickets".
+description: Build a Notion form view for structured requests (new hires, access, project intake) and convert submitted rows into tickets without another vendor.
 category: Connectors
 tools: [create_ticket, search_clients, search_contacts]
 connectors: [Notion]

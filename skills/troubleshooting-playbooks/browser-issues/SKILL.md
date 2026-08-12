@@ -1,6 +1,6 @@
 ---
 name: Browser Issues
-description: Diagnose browser problems — one site broken, SSO loops, crashes, "works in Chrome but not Edge", extension chaos — via profile isolation and extension bisect instead of the clear-everything reflex.
+description: Diagnose browser problems — one broken site, SSO loops, crashes, extension conflicts — using profile isolation and extension bisect, not clear-everything.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Change Calendar Management
-description: Check a proposed change window against freeze windows, client business calendars, and other scheduled changes on the same systems — catch the collision before the maintenance email goes out, not during the outage.
+description: Check a proposed change window against freeze windows, client calendars, and other scheduled changes so collisions surface before the maintenance email.
 category: Change & Problem Management
 tools: [search_tickets, search_knowledge_base, search_clients, schedule_ticket, update_schedule_entry, add_ticket_note]
 connectors: []

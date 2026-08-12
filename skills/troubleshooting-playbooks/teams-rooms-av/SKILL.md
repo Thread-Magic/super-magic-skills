@@ -1,6 +1,6 @@
 ---
 name: Teams Rooms AV
-description: Diagnose Microsoft Teams Rooms device problems — the room account sign-in, peripheral health (camera/mic/display/touch console), calendar/meeting-join failures, and the restart discipline that fixes many of them — from the device's own state and the room account, never from the user's phone-side symptom. General Teams call quality is teams-call-quality.
+description: Fix Microsoft Teams Rooms devices: room account sign-in, camera, mic, display, touch console health, calendar join failures, and restart discipline.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

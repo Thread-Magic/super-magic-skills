@@ -1,6 +1,6 @@
 ---
 name: Exec Weekly Ritual
-description: An owner/exec's weekly 20-minute runbook — exec scorecard, resolve one decision ask, and check what's been escalated to me — run when an exec says "run my weekly", "how's the desk", or on a scheduled Monday flow.
+description: An owner or exec's 20-minute weekly runbook: exec scorecard, resolve one decision ask, and review what has been escalated to me across the service desk.
 category: Role Rituals
 tools: [search_tickets, list_boards]
 connectors: []

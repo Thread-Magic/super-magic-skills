@@ -1,6 +1,6 @@
 ---
 name: Supporting Architecture and Engineering Firms
-description: Vertical pack for architecture, engineering, and surveying clients — CAD/BIM stacks (AutoCAD, Revit, Civil 3D-class), network license servers, workshared central models and file locking, the GPU workstation fleet with certified drivers, and submittal-deadline urgency. Load when the client is an AEC firm or the ticket names CAD/BIM software, a license server, plotters, or drawing files.
+description: AEC firm pack for AutoCAD, Revit, and Civil 3D support, network license servers, GPU workstations, and submittal-deadline urgency.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

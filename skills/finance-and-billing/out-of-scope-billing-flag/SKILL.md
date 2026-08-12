@@ -1,6 +1,6 @@
 ---
 name: Out-of-Scope Billing Flag
-description: When a ticket looks like work outside the client's agreement (projects, new installs, non-covered users or sites) and it should be flagged before hours pile up — with a quote path instead of silent free work.
+description: Flag a ticket that looks like work outside the client's agreement — projects, installs, non-covered users — with a quote path, not silent free work.
 category: Finance & Billing
 tools: [search_tickets, search_clients, add_ticket_note, update_ticket]
 connectors: []

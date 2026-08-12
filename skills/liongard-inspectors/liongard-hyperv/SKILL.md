@@ -1,6 +1,6 @@
 ---
 name: Liongard Hyper-V Read
-description: Interrogate a client's Hyper-V hosts through Liongard — host and VM inventory, checkpoint sprawl, replica health, VM placement and state. Use for "what runs on their Hyper-V", checkpoint hygiene, replication-status checks, or virtual-estate context during triage.
+description: Interrogate a client's Hyper-V hosts via Liongard: host and VM inventory, checkpoint sprawl, replica health, and VM placement and power state.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

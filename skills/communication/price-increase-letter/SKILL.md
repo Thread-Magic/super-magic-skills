@@ -1,6 +1,6 @@
 ---
 name: Price Increase Letter
-description: Draft the client notice for an agreement price change — value-first framing, a clear effective date, and an honest one-line rationale — gated behind account-manager approval before anything leaves the desk.
+description: Draft the client notice for an agreement price change — value-first framing, effective date, honest rationale — gated behind account-manager approval.
 category: Communication
 tools: [search_clients, search_tickets, view_openDraft]
 connectors: []

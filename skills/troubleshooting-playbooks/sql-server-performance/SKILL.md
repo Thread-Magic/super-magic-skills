@@ -1,6 +1,6 @@
 ---
 name: SQL Server Performance
-description: Diagnose Microsoft SQL Server slowness — blocking and deadlocks, missing or bloated indexes, stale statistics, tempdb contention, plan-cache/parameter-sniffing problems — from live wait stats and the actual query, never from "the database is slow" alone.
+description: Diagnose SQL Server slowness: blocking, deadlocks, missing indexes, stale statistics, tempdb contention, and parameter sniffing via live wait stats.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

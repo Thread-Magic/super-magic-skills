@@ -1,6 +1,6 @@
 ---
 name: Phishing-triage
-description: En bruker har meldt en mistenkelig e-post, eller et phishing-meldingssak har landet på sikkerhetstavla — vurder den uten å røre nyttelasten, sjekk spredningsradiusen, inneslutt hvis skadelig, og svar melderen med en konklusjon. (Norwegian version of Phishing Triage — assess without touching the payload, check blast radius, contain, reply to the reporter.)
+description: Phishing-triage av en mistenkelig e-post: vurder uten å røre nyttelasten, sjekk spredningsradius, inneslutt hvis skadelig, svar melderen med konklusjon.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

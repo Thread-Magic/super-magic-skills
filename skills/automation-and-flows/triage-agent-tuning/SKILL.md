@@ -1,6 +1,6 @@
 ---
 name: Triage Agent Tuning
-description: Tune the Triage Agent's custom rules from observed misses — wrong boards, wrong priorities, tickets that should have been left alone — including analysis of how often techs use the bypass word. Use when asked "the triage agent keeps misrouting X", "tune our triage rules", or "review triage agent performance".
+description: Tune Triage Agent custom rules from observed misses — wrong boards, wrong priorities, tickets it should have left alone — plus bypass-word usage analysis.
 category: Automation & Flows
 tools: [search_tickets, list_boards, list_ticket_priorities, list_ticket_statuses]
 connectors: []

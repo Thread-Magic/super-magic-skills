@@ -1,6 +1,6 @@
 ---
 name: Liongard Mimecast Read
-description: Interrogate a client's Mimecast tenant through the Liongard Mimecast inspector — managed domains, users/licenses, policies, connectors/routing, admins. Use for "what's their Mimecast config?", mail-security posture checks, or domain-coverage questions during triage.
+description: Interrogate a client's Mimecast tenant via Liongard: managed domains, users and licenses, policies, connectors and routing, and admin accounts.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

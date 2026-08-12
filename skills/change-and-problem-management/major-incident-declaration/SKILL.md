@@ -1,6 +1,6 @@
 ---
 name: Major Incident Declaration
-description: Something big is breaking — run the criteria check, declare (or explicitly don't), assign the incident roles, and start the comms clock. The declaration checklist that turns "everyone panicking in chat" into a managed major incident.
+description: Run the criteria check, declare or explicitly decline a major incident, assign incident roles, and start the comms clock from one declaration checklist.
 category: Change & Problem Management
 tools: [search_tickets, update_ticket, add_ticket_note, create_ticket, list_ticket_priorities, search_members]
 connectors: []

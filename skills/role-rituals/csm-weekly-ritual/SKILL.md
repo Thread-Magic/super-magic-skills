@@ -1,6 +1,6 @@
 ---
 name: CSM Weekly Ritual
-description: A CSM/vCIO's weekly account runbook — proactive outreach pass, sentiment-decline watch, meeting prep for the week's calls, and an expansion-scan skim — run when a CSM says "run my weekly", "prep my account week", or "what do my accounts need".
+description: A CSM or vCIO weekly account runbook: proactive outreach, sentiment-decline watch, meeting prep for the week's calls, and an expansion-scan skim.
 category: Role Rituals
 tools: [search_tickets, search_clients, search_contacts]
 connectors: []

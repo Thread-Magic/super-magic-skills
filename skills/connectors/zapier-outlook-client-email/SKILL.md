@@ -1,6 +1,6 @@
 ---
 name: Zapier Outlook Client Email
-description: Send or draft email from shared mailboxes via Outlook, and pull a requester's recent emails into ticket context. Use for "email the client from the support mailbox", "draft a reply in Outlook", or "what has <user> emailed us recently".
+description: Send or draft email from shared mailboxes via Outlook and pull a requester's recent emails into ticket context for support conversations.
 category: Connectors
 tools: [search_tickets, search_contacts, add_ticket_note]
 connectors: [Zapier: Microsoft Outlook]

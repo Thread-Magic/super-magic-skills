@@ -1,6 +1,6 @@
 ---
 name: Automation ROI Report
-description: Someone asks whether the automations already live are earning their keep — tickets touched by each flow/intent, estimated time saved, noise created — ending in a keep / kill / tune verdict per automation.
+description: Judge whether live automations earn their keep with tickets touched per flow, estimated time saved, noise created, and a keep, kill, or tune verdict each.
 category: Reporting & Analytics
 tools: [search_tickets, list_flows, list_intents, get_flow, get_intent, list_boards]
 connectors: []

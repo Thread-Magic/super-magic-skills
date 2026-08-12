@@ -1,6 +1,6 @@
 ---
 name: Technician Availability Check
-description: Answer "who is the next available technician?" — combine today's schedules, priority-weighted open load, and shift/PTO context into a ranked availability answer.
+description: Answer who is the next available technician by combining today's schedules, priority-weighted open load, and shift or PTO context into a ranked answer.
 category: Scheduling & Dispatch
 tools: [search_members, search_tickets]
 connectors: []

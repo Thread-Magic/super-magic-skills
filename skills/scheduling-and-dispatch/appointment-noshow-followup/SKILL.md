@@ -1,6 +1,6 @@
 ---
 name: Appointment No-Show Follow-Up
-description: A client missed a scheduled appointment — log the no-show on the ticket, draft a courteous rebooking email, and apply the desk's repeat-no-show policy note when it's the third miss.
+description: A client missed a scheduled appointment: log the no-show on the ticket, draft a courteous rebooking email, and apply the repeat-no-show policy on miss #3.
 category: Scheduling & Dispatch
 tools: [search_tickets, add_ticket_note, update_ticket, schedule_ticket, create_timezest_scheduling_request, get_timezest_scheduling_requests]
 connectors: [TimeZest]

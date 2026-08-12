@@ -1,6 +1,6 @@
 ---
 name: Security Questionnaire Vendor DDQ
-description: An inbound vendor security questionnaire or due-diligence questionnaire (DDQ) needs answering — draft responses from documented facts only, cite the evidence for each, and flag every unknown for human review rather than guessing.
+description: Draft responses to an inbound vendor security questionnaire or DDQ from documented facts only, cite evidence for each, and flag every unknown for review.
 category: Compliance & Audit
 tools: [search_tickets, search_itglue, search_hudu, search_knowledge_base, add_ticket_note, update_ticket]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: M365 License Optimization
-description: Right-size a client's Microsoft 365 licensing from evidence — reclaim unused/unassigned licenses, downgrade over-provisioned users, and rationalize add-ons — as a proposal the client approves before anything is removed. Use when a client asks to cut M365 cost, review license usage, or "are we paying for licenses we don't use."
+description: Right-size Microsoft 365 licensing from usage evidence: reclaim unused licenses, downgrade over-provisioned users, and rationalize add-ons.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

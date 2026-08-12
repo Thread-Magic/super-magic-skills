@@ -1,6 +1,6 @@
 ---
 name: Firewall Rule Change Request
-description: Shepherd a firewall change request from vague ask to change-management-ready spec — business justification, exact source/destination/port/protocol, expiry for temporary rules, and routing to the approver. Use when a ticket asks to "open a port", "allow access to X", or "whitelist this vendor".
+description: Shepherd a firewall change from vague ask to change-ready spec — justification, source/destination/port/protocol, expiry, and routing to the approver.
 category: Devices & Infrastructure
 tools: [search_tickets, search_itglue, search_hudu, search_knowledge_base, update_ticket, add_ticket_note, send_approval, create_ticket, schedule_ticket]
 connectors: [IT Glue, Hudu]

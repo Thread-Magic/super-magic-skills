@@ -1,6 +1,6 @@
 ---
 name: Liongard Exchange On-Prem Read
-description: Interrogate a client's on-premises Microsoft Exchange through the Liongard Exchange inspector — server version/CU/build, databases, mailbox inventory, connectors, and admin access. Use for "what's their Exchange config?", CU/patch-currency checks, database/mailbox inventory, or mail-flow triage context.
+description: Interrogate on-premises Microsoft Exchange via Liongard: server version/CU/build, databases, mailbox inventory, connectors, and admin access review.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

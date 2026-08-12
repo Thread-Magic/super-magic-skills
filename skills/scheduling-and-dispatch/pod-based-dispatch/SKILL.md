@@ -1,6 +1,6 @@
 ---
 name: Pod-Based Dispatch
-description: Route a ticket to the least-loaded technician in the client's assigned service pod — read the pod from the company record, load-balance within that team, then assign, advance status, and note it.
+description: Route a ticket to the least-loaded technician in the client's assigned service pod: read the pod from company record, load-balance, assign, and note it.
 category: Scheduling & Dispatch
 tools: [search_clients, search_tickets, search_members, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

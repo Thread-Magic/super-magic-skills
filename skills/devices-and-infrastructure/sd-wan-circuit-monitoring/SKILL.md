@@ -1,6 +1,6 @@
 ---
 name: SD-WAN / Multi-Circuit Monitoring
-description: Review a multi-circuit or SD-WAN site's connectivity — confirm each circuit is up, failover actually works, and open the right ISP escalation when a circuit is down or degraded. Use when a site has multiple WAN links, someone reports one circuit down, or you're verifying failover posture.
+description: Review a multi-circuit or SD-WAN site — confirm each circuit is up, failover works, and open the right ISP escalation when a link is down or degraded.
 category: Devices & Infrastructure
 tools: [liongard_launchpoint, liongard_metric, liongard_timeline, search_ninjaone_devices, search_itglue, web_search, create_ticket, add_ticket_note]
 connectors: [Liongard, NinjaOne, IT Glue]

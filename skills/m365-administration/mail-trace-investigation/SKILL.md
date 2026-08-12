@@ -1,6 +1,6 @@
 ---
 name: Mail Trace Investigation
-description: Run a disciplined Exchange Online message trace — tight timeframe, sender/recipient pair, verdict reading, and the extended (historical) trace path for anything older than 10 days. Use when a ticket needs proof of what happened to a specific message or mail between two parties.
+description: Run disciplined Exchange Online message traces with tight timeframes, sender/recipient pairs, verdict reading, and historical traces beyond 10 days.
 category: M365 Administration
 tools: [search_tickets, search_contacts, add_ticket_note, log_time_entry, web_search]
 connectors: []

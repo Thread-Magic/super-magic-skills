@@ -1,6 +1,6 @@
 ---
 name: Printer Troubleshooting
-description: Work a printing problem — nothing prints, stuck queue, garbled output, wrong printer, or scan-to-email failure — through a spooler/driver/network diagnostic matrix.
+description: Diagnose printing problems — nothing prints, stuck queues, garbled output, wrong printer, scan-to-email fails — via a spooler, driver, and network matrix.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Zapier Slack Approval Request
-description: Use Slack "Request Approval" as the human-in-the-loop gate before privileged or irreversible actions when the desk lives in Slack rather than Teams — named approver, explicit approve/reject, silence means no. Use when a workflow needs real sign-off delivered in Slack.
+description: Use Slack "Request Approval" as the human-in-the-loop gate before privileged or irreversible actions when the desk lives in Slack, not Teams.
 category: Connectors
 tools: [search_tickets, add_ticket_note, update_ticket, send_approval]
 connectors: [Zapier: Slack]

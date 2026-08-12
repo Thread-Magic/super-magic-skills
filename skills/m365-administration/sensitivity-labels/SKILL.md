@@ -1,6 +1,6 @@
 ---
 name: Sensitivity Labels
-description: Roll out Microsoft Purview sensitivity labels deliberately — a small taxonomy first, auto-labeling in simulation before it goes live, and the encryption consequences understood before anyone clicks apply. Use when a client asks for document classification, "Confidential/Internal labels," data classification for compliance, or auto-labeling of sensitive files.
+description: Roll out Microsoft Purview sensitivity labels with a small taxonomy, auto-labeling in simulation, and encryption consequences understood upfront.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

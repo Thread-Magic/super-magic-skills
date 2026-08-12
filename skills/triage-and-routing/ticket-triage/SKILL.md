@@ -1,6 +1,6 @@
 ---
 name: Ticket Triage
-description: Classify a new or unassigned ticket, gauge severity, catch duplicates, and route it to the right board, status, and priority.
+description: Classify a new or unassigned ticket, gauge severity, catch duplicates, and route it to the right board, status, and priority for the queue.
 category: Triage & Routing
 tools: [search_tickets, list_boards, list_ticket_statuses, list_ticket_priorities, search_clients, update_ticket]
 connectors: []

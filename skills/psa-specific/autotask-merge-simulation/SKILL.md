@@ -1,6 +1,6 @@
 ---
 name: Autotask Merge Simulation
-description: For desks synced to Autotask — Autotask has no native merge API, so duplicate tickets are merged manually via a strict 5-step sequence: verify, pick survivor, cross-note both tickets, carry history, complete the source last.
+description: Autotask has no merge API: dedupe tickets via a 5-step manual sequence — verify, pick survivor, cross-note, carry history, complete the source last.
 category: PSA-Specific
 tools: [search_tickets, add_ticket_note, update_ticket]
 connectors: []

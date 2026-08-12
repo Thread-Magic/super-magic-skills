@@ -1,6 +1,6 @@
 ---
 name: Security Alert Response
-description: A security alert ticket arrived (SOC detection, sign-in anomaly, breached credential, dark web, user-created alert) — extract the facts, route it to the right client, tier the severity, and contain or close with documented reasoning.
+description: Work an inbound security alert ticket: extract the facts, route to the right client, tier severity, and contain or close with documented reasoning.
 category: Security
 tools: [search_tickets, search_clients, search_contacts, add_ticket_note, update_ticket, search_itglue]
 connectors: [IT Glue]

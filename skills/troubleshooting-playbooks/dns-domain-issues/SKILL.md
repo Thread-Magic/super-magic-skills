@@ -1,6 +1,6 @@
 ---
 name: DNS & Domain Issues
-description: Diagnose name-resolution and domain problems — "can't reach <site> by name", intranet names failing, records not updating, or a whole domain dark — by laddering client → resolver → authoritative, including domain-expiry checks.
+description: Diagnose DNS resolution and domain-expiry problems by laddering client to resolver to authoritative — stale records, intranet failing, whole domain dark.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search, liongard_domain]
 connectors: [IT Glue, Hudu, Liongard]

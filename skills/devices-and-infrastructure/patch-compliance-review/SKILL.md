@@ -1,6 +1,6 @@
 ---
 name: Patch Compliance Review
-description: Report patch status for a device or a client's whole fleet — missing, failed, and pending patches — using ConnectWise RMM patch reads or Liongard metrics when enabled, degrading to NinjaOne alerts and activities otherwise. Use for "are <client>'s machines patched" or a compliance evidence pull.
+description: Report patch status for one device or a whole fleet — missing, failed, and pending patches — via ConnectWise RMM, Liongard, or NinjaOne alerts as fallback.
 category: Devices & Infrastructure
 tools: [connectwise_rmm_search_devices, connectwise_rmm_get_device, liongard_metric, search_ninjaone_devices, get_ninjaone_device, list_ninjaone_alerts, get_ninjaone_device_activities, add_ticket_note]
 connectors: [ConnectWise RMM, Liongard, NinjaOne]

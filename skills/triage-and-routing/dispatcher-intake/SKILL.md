@@ -1,6 +1,6 @@
 ---
 name: Dispatcher Intake
-description: Attended chat intake for dispatchers — describe the issue conversationally and get back a properly created ticket: KB/docs/history checked, board/type/priority set, summary written, first-touch note attached.
+description: Attended chat intake for dispatchers: describe the issue and get back a ticket with board, type, priority, summary, and first-touch note attached.
 category: Triage & Routing
 tools: [search_knowledge_base, search_itglue, search_hudu, search_tickets, search_clients, search_contacts, list_boards, list_ticket_statuses, list_ticket_priorities, create_ticket, add_ticket_note]
 connectors: [IT Glue, Hudu]

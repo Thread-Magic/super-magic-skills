@@ -1,6 +1,6 @@
 ---
 name: Flow Builder
-description: Design and create an automation flow from a plain-English ask — trigger, filters, actions, notification channels — with a dry-run description before anything is created. Use when asked to "build a flow", "automate X when Y happens", "notify the channel when a P1 comes in", or "set up an automation".
+description: Design an automation flow from a plain-English ask — trigger, filters, actions, notification channels — with a dry-run description before it is created.
 category: Automation & Flows
 tools: [list_flows, get_flow, create_flow, update_flow, list_flow_actions, list_flow_filter_attributes, list_flow_filter_attribute_values, list_boards, list_ticket_statuses, list_ticket_priorities]
 connectors: []

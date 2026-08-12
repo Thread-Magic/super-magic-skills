@@ -1,6 +1,6 @@
 ---
 name: Auvik Network Monitoring
-description: An Auvik network-monitoring alert landed — separate a device-down from an interface-down from a config-change, use the topology map to see cascades before chasing symptoms, and feed chronic noise into an alert-tuning loop. Verify against Auvik's current documentation.
+description: Triage Auvik network alerts: separate device-down, interface-down, and config-change events, and use the topology map to spot cascades early.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

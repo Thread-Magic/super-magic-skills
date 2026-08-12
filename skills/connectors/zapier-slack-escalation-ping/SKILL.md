@@ -1,6 +1,6 @@
 ---
 name: Zapier Slack Escalation Ping
-description: Ping the right engineer in Slack — DM or channel — with a one-line brief and ticket link when a ticket needs eyes now, with anti-nag dedupe so nobody gets the same ping twice. Use for "ping <member> about this ticket", "let the escalations channel know", or SLA-jeopardy nudges.
+description: Ping the right engineer in Slack — DM or channel — with a one-line brief and ticket link when a ticket needs eyes now, with anti-nag dedupe.
 category: Connectors
 tools: [search_tickets, search_members, add_ticket_note]
 connectors: [Zapier: Slack]

@@ -1,6 +1,6 @@
 ---
 name: Change Request Intake
-description: A change ask arrived as prose ("can we upgrade the firewall this weekend?") — normalize it into a structured change request (what/why/scope/when/rollback/risk) and route it to the right approval track before anyone touches anything.
+description: Normalize a prose change request into a structured record (what, why, scope, when, rollback, risk) and route it to the right approval track before work.
 category: Change & Problem Management
 tools: [search_tickets, search_knowledge_base, create_ticket, update_ticket, add_ticket_note, list_boards, list_ticket_statuses]
 connectors: []

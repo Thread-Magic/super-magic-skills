@@ -1,6 +1,6 @@
 ---
 name: Kaseya Dark Web Monitoring
-description: A Dark Web ID (Kaseya) compromise alert arrived — parse the vendor's alert anatomy (source, date, data classes), then run the dark-web-alert-lifecycle age/notify logic. Same hard no-cracking policy.
+description: Work Kaseya Dark Web ID compromise alerts: parse alert anatomy (source, date, data classes) and run the age-and-notify lifecycle with a no-crack policy.
 category: Vendor Runbooks
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

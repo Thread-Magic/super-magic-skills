@@ -1,6 +1,6 @@
 ---
 name: Daily Digest
-description: A technician asks for a summary of their open tickets — what needs a reply, what's urgent, what's scheduled today — skimmable in under a minute, with a 3-line ultra-short option.
+description: Summarize a technician's open tickets in under a minute with what needs a reply, what's urgent, what's scheduled today, plus a 3-line ultra-short option.
 category: Personal Productivity
 tools: [search_tickets, search_members]
 connectors: []

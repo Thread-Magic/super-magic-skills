@@ -1,6 +1,6 @@
 ---
 name: Smart Dispatch
-description: The composite dispatcher partners keep asking for — classify a new ticket, consult a routing matrix (tech specialties plus client familiarity from resolved-ticket history), then assign and schedule it in one pass.
+description: Composite dispatcher skill: classify a new ticket, consult a routing matrix of tech specialties and client familiarity, then assign and schedule.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_members, search_clients, list_boards, list_ticket_priorities, list_ticket_statuses, update_ticket, schedule_ticket, add_ticket_note]
 connectors: []

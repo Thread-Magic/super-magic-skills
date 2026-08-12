@@ -1,6 +1,6 @@
 ---
 name: M365 Sign-in Issues
-description: Diagnose Microsoft 365 / Entra sign-in failures — blocked sign-ins, MFA loops, "keeps asking for password", device-trust errors — starting from the sign-in log error code, never from guesswork.
+description: Diagnose Microsoft 365 and Entra sign-in failures — blocked sign-ins, MFA loops, repeated password prompts, device-trust errors — from the sign-in log.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

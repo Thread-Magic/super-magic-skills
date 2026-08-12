@@ -1,6 +1,6 @@
 ---
 name: Breached Credential Response
-description: A user's credential is confirmed exposed and likely current — notify the user, drive rotation everywhere the password was reused, and verify MFA before standing down.
+description: Handle exposed user credentials: notify the user, drive password rotation across reused sites, and verify MFA is enabled before standing down.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

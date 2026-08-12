@@ -1,6 +1,6 @@
 ---
 name: Closure Recategorization
-description: When a ticket enters a resolution status, re-read the whole thread and correct its type/subtype/item and category to match what the work actually was — using only values valid on that board. Answers the "fix the classification at close so reporting is right" workflow.
+description: At resolution, re-read the thread and correct the ticket's type/subtype/item and category to match the actual work, using only configured board values.
 category: Automation & Flows
 tools: [search_tickets, list_boards, update_ticket, add_ticket_note]
 connectors: []

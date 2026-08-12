@@ -1,6 +1,6 @@
 ---
 name: Liongard Azure Read
-description: Answer Azure subscription questions from the Liongard Azure/Microsoft Cloud inspector — resource inventory, spend signals, NSG rule changes, public exposure, and unattached resources — without portal access.
+description: Answer Azure subscription questions via Liongard Azure inspector: resource inventory, spend signals, NSG changes, public exposure, unattached resources.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_metric, liongard_detection, liongard_timeline, liongard_query]
 connectors: [Liongard]

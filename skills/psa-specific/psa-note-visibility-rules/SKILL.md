@@ -1,6 +1,6 @@
 ---
 name: PSA Note Visibility Rules
-description: For any PSA-synced desk (ConnectWise, Autotask, HaloPSA) — apply each PSA's internal-vs-external note semantics correctly and run the leak-prevention checklist before writing any note, since a wrong-visibility note goes straight to the client.
+description: PSA internal-vs-external note semantics (ConnectWise, Autotask, HaloPSA) with a leak-prevention checklist — a wrong-visibility note goes to the client.
 category: PSA-Specific
 tools: [search_tickets, add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Autotask Contract Categories
-description: For desks synced to Autotask — read the client's Autotask contract type (recurring, block hours, retainer, T&M, fixed price) at triage, label covered vs billable, and leave burn-down notes for hour-based contracts.
+description: Read Autotask contract type at triage (recurring, block, retainer, T&M, fixed) to label covered vs billable and add burn-down notes on hourly deals.
 category: PSA-Specific
 tools: [search_tickets, search_clients, update_ticket, add_ticket_note]
 connectors: []

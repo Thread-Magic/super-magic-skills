@@ -1,6 +1,6 @@
 ---
 name: DHCP Server Issues
-description: Diagnose DHCP problems — machines getting APIPA 169.254 addresses, wrong-subnet leases, scope exhaustion, failover pairs stuck, a rogue device answering — starting from what address the client actually received and which server gave it.
+description: Diagnose DHCP problems — APIPA 169.254 addresses, wrong-subnet leases, scope exhaustion, stuck failover pairs, and rogue DHCP servers on the LAN.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, liongard_launchpoint, liongard_metric, liongard_timeline, web_search]
 connectors: [IT Glue, Hudu, Liongard]

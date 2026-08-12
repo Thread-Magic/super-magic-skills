@@ -1,6 +1,6 @@
 ---
 name: Problem Record Lifecycle
-description: Drive a problem record through its states — opened from an incident cluster, under investigation, known error, and finally fixed or accepted-risk closure — so problems either get solved or get a deliberate decision, never a quiet death in the backlog.
+description: Drive a problem record through its states — opened from an incident cluster, investigating, known error, then fixed or accepted-risk closure.
 category: Change & Problem Management
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses, create_ticket]
 connectors: []

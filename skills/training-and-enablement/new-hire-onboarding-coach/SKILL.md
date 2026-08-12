@@ -1,6 +1,6 @@
 ---
 name: New Hire Onboarding Coach
-description: A new technician (or their trainer) wants interactive onboarding practice — walk the trainee through real historical tickets, have them propose responses, and score each against a rubric with tracked progress.
+description: Interactive onboarding practice for new techs: walk trainees through real historical tickets, have them propose responses, and score against a rubric.
 category: Training & Enablement
 tools: [search_tickets, search_members, search_knowledge_base, notion-search, notion-fetch, notion-update-page, notion-create-pages]
 connectors: [Notion]

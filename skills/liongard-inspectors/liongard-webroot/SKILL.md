@@ -1,6 +1,6 @@
 ---
 name: Liongard Webroot Read
-description: Interrogate a client's Webroot (GSM) console through the Liongard Webroot inspector — protected endpoints, agent status, infection/threat state, policy assignment, sites. Use for "are their Webroot endpoints protected?", coverage-gap checks, or AV posture questions during triage.
+description: Interrogate a client's Webroot GSM console via the Liongard Webroot inspector: protected endpoints, agent status, threat state, policy, and sites.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline, liongard_alert]
 connectors: [Liongard]

@@ -1,6 +1,6 @@
 ---
 name: Sophos Endpoint Alerts
-description: A Sophos Central endpoint alert needs triage — read the health status and cleanup result, handle tamper protection correctly, and verify cleanup actually completed before closing.
+description: Triage Sophos Central endpoint alerts: read health status and cleanup result, handle tamper protection correctly, and verify cleanup before closing.
 category: Vendor Runbooks
 tools: [search_tickets, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

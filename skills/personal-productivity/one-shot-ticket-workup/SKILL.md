@@ -1,6 +1,6 @@
 ---
 name: One-Shot Ticket Workup
-description: Chain the assistive AI on an in-flight ticket — recap, suggested next step, drafted reply, and a drafted time entry — all as previews, nothing posted without confirmation. Answers the commonly requested "get me fully caught up and ready to act on this ticket" workflow; runs manually on demand.
+description: Get fully caught up on an in-flight ticket with a recap, suggested next step, drafted reply, and drafted time entry, previewed before anything is posted.
 category: Personal Productivity
 tools: [run_assistive_ai, search_tickets, list_recap_templates]
 connectors: []

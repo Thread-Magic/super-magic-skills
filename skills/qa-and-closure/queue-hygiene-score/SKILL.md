@@ -1,6 +1,6 @@
 ---
 name: Queue Hygiene Score
-description: Scan a queue or board for hygiene defects — missing contacts, stale or wrong statuses, tickets with no notes, unassigned owners, blank classifications — and return a hygiene score with a concrete fix list.
+description: Scan a queue for hygiene defects — missing contacts, stale statuses, empty notes, unassigned owners, blank classifications — with score and fix list.
 category: QA & Closure
 tools: [search_tickets, list_boards, list_ticket_statuses, search_contacts, update_ticket, add_ticket_note]
 connectors: []

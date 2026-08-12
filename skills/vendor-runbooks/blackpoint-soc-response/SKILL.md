@@ -1,6 +1,6 @@
 ---
 name: Blackpoint SOC Response
-description: A Blackpoint MDR SOC call or alert arrived — their analysts often contained already (host isolated, account disabled). Confirm what was done, work what remains, and merge the companion ticket storm.
+description: Work Blackpoint MDR SOC calls: confirm what analysts contained (host isolation, account disable), finish the response, and merge companion ticket storms.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, merge_ticket, add_ticket_note, update_ticket]
 connectors: []

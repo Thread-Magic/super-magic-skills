@@ -1,6 +1,6 @@
 ---
 name: Lead Daily Ritual
-description: A service manager's daily runbook — leadership digest, escalation queue pass, silent-ticket sweep, and one coaching observation captured — run when a lead says "run my daily", "what needs me today", or on a scheduled weekday flow.
+description: A service manager's daily runbook: leadership digest, escalation queue pass, silent-ticket sweep, and one coaching observation captured for the team.
 category: Role Rituals
 tools: [search_tickets, search_members, list_boards]
 connectors: []

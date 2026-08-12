@@ -1,6 +1,6 @@
 ---
 name: DKIM Enablement
-description: Enable DKIM signing for a custom domain in Exchange Online — publish the two selector CNAMEs, flip signing on, verify, and plan key rotation. Use when a ticket asks to "set up DKIM," a deliverability or DMARC project needs signing enabled, or keys need rotating.
+description: Enable DKIM signing for a custom domain in Exchange Online: publish selector CNAMEs, activate signing, verify records, and plan key rotation.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

@@ -1,6 +1,6 @@
 ---
 name: Intune Compliance Policies
-description: Handle requests to create or change Intune device compliance policies — what will mark devices noncompliant, grace periods, and the Conditional Access blast radius — piloted before broad enforcement. Use for "require encryption/min OS on devices", "why is this device noncompliant", or any compliance-rule change request.
+description: Create or change Intune device compliance policies with grace periods and Conditional Access blast radius, piloted before broad enforcement.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, schedule_ticket, web_search]
 connectors: [IT Glue, Hudu]

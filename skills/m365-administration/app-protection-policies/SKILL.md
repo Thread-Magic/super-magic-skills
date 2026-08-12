@@ -1,6 +1,6 @@
 ---
 name: App Protection Policies
-description: Set up MAM-without-enrollment for BYOD — what app protection actually protects (org data in managed apps) and doesn't (the device), with the user-experience honesty that makes BYOD adoption work. Use for "protect company mail on personal phones", MAM policy requests, or "can we wipe company data without touching their photos".
+description: Configure Intune MAM-without-enrollment app protection for BYOD to protect org data in managed apps without managing the personal device.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, schedule_ticket, web_search]
 connectors: [IT Glue, Hudu]

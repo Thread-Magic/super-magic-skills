@@ -1,6 +1,6 @@
 ---
 name: Audit Prep Review
-description: An audit is coming — run the pre-audit sweep for unresolved prior findings, documentation gaps, and stale evidence, and return a ranked readiness report before the auditor finds it first.
+description: Run a pre-audit sweep for unresolved prior findings, doc gaps, and stale evidence, and return a ranked readiness report before the auditor arrives.
 category: Compliance & Audit
 tools: [search_tickets, search_itglue, search_knowledge_base, add_ticket_note]
 connectors: [IT Glue]

@@ -1,6 +1,6 @@
 ---
 name: Alert Title Normalization
-description: Classify a monitoring or security alert ticket and rewrite its title into the desk's standard format using a controlled vocabulary, posting an internal note with what changed.
+description: Classify a monitoring or security alert ticket and rewrite its title into the desk's standard format using a controlled vocabulary, with an internal note.
 category: Triage & Routing
 tools: [search_tickets, update_ticket, add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Management Escalation Brief
-description: When a client threatens or requests escalation to management, prep the leader taking the call — full timeline, an honest account of our misses, and a concrete recovery plan.
+description: When a client requests escalation to management, prep the leader taking the call with a timeline, an honest account of our misses, and a recovery plan.
 category: Escalation
 tools: [search_tickets, add_ticket_note, run_assistive_ai, search_contacts, search_members]
 connectors: []

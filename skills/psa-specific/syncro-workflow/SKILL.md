@@ -1,6 +1,6 @@
 ---
 name: Syncro Workflow
-description: For desks synced to Syncro — combined PSA-RMM idioms: tenant-configured ticket statuses, worksheets as embedded checklists, the ever-running timer culture, and awareness that RMM alerts and assets live in the same product.
+description: Syncro PSA-RMM idioms: tenant-configured ticket statuses, worksheets as embedded checklists, ever-running timer culture, and RMM alerts inside the desk.
 category: PSA-Specific
 tools: [search_tickets, list_ticket_statuses, list_boards, update_ticket, add_ticket_note, log_time_entry, search_clients]
 connectors: []

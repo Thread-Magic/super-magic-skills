@@ -1,6 +1,6 @@
 ---
 name: Liongard Cross-Client Census
-description: Answer "which clients run <system>?" across the whole book of business via Liongard's launchpoint inventory — install-base census for zero-day response, EOL waves, vendor-risk events, and standardization planning.
+description: Answer "which clients run <system>?" across the book via Liongard launchpoint inventory: install-base census for zero-days, EOL waves, vendor risk.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query]
 connectors: [Liongard]

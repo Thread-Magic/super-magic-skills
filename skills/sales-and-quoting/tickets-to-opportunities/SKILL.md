@@ -1,6 +1,6 @@
 ---
 name: Tickets to Opportunities
-description: When you want to mine recent service tickets for expansion signals — work that became, or should become, a sales opportunity — and get a per-client opportunity report.
+description: Mine recent service tickets for expansion signals, surfacing work that became or should become a sales opportunity, in a per-client opportunity report.
 category: Sales & Quoting
 tools: [search_tickets, search_clients, search_members, add_ticket_note]
 connectors: []

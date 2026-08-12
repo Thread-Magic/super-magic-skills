@@ -1,6 +1,6 @@
 ---
 name: RE/FW Reopen Detection
-description: When a new ticket's subject starts with RE:/FW: on a recently closed ticket's subject, find that closed parent and flag it as a reopen instead of working it as new.
+description: When a new ticket subject starts with RE: or FW: on a recently closed subject, find the closed parent and flag it as a reopen instead of working new.
 category: Triage & Routing
 tools: [search_tickets, update_ticket, add_ticket_note, merge_ticket, list_ticket_statuses]
 connectors: []

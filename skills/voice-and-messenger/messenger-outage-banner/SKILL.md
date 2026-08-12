@@ -1,6 +1,6 @@
 ---
 name: Messenger Outage Banner
-description: Draft, update, and retire the Messenger banner clients see during an incident — factual wording without cause speculation, and hard expiry discipline so stale banners don't outlive the outage. Use when an incident needs (or no longer needs) a banner.
+description: Draft, update, and retire the Messenger client-facing incident banner with factual wording, no cause speculation, and hard expiry for stale text.
 category: Voice & Messenger
 tools: [search_tickets, add_ticket_note, schedule_ticket]
 connectors: []

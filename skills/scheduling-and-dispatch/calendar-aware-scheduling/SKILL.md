@@ -1,6 +1,6 @@
 ---
 name: Calendar-Aware Scheduling
-description: Put ticket work on a technician's schedule around their real calendar — check busy periods before proposing a slot, then book it.
+description: Put ticket work on a technician's schedule around their real calendar — check busy periods before proposing a slot, then book it onto the calendar.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_members, schedule_ticket, update_schedule_entry]
 connectors: [Microsoft 365, Zapier: Google Calendar]

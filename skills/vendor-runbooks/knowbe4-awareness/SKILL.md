@@ -1,6 +1,6 @@
 ---
 name: KnowBe4 Awareness & PhishER
-description: Coordinate a KnowBe4 program — security-awareness training campaigns and phishing simulations — and triage user-reported emails flowing in through PhishER / the Phish Alert Button, keeping simulation reports from colliding with real-phish investigation. Verify against KnowBe4's current documentation.
+description: Run a KnowBe4 program: awareness training, phishing simulations, and triage user reports through PhishER and the Phish Alert Button without collisions.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_knowledge_base, add_ticket_note, create_ticket, schedule_ticket]
 connectors: []

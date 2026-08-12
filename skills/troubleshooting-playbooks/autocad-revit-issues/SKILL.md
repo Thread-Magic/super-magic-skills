@@ -1,6 +1,6 @@
 ---
 name: AutoCAD / Revit Issues
-description: Diagnose Autodesk AutoCAD and Revit problems — network-license (FlexNet) checkout failures, drawing/model file corruption, and large-file / BIM worksharing (central model) sync issues — from the license-server log and the file's own recovery tools, never by deleting the central model.
+description: Troubleshoot Autodesk AutoCAD and Revit — FlexNet network license checkout failures, drawing corruption, and BIM central-model worksharing sync.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, Liongard, NinjaOne]

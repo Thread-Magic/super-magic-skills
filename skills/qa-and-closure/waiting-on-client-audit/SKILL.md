@@ -1,6 +1,6 @@
 ---
 name: Waiting-on-Client Audit
-description: Audit every ticket parked in a waiting status — how long it has waited, whether a follow-up was actually sent (not just the status set), and the correct next action for each: nudge, reschedule, unpark, or route to closure.
+description: Audit every ticket parked in a waiting status: how long, whether a follow-up was sent, and the correct next action — nudge, reschedule, unpark, close.
 category: QA & Closure
 tools: [search_tickets, list_ticket_statuses, add_ticket_note, update_ticket, schedule_ticket]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Approval Request Email
-description: Draft an email to an approver requesting authorization — password reset, software install, purchase, access change — with what/why/risk/expiry stated so they can decide in one read.
+description: Draft an email to an approver requesting authorization for a password reset, install, purchase, or access change — what/why/risk/expiry in one read.
 category: Communication
 tools: [search_tickets, search_contacts, send_approval, view_openDraft]
 connectors: []

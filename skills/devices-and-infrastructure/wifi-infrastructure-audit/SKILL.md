@@ -1,6 +1,6 @@
 ---
 name: WiFi Infrastructure Audit
-description: Audit a client's wireless estate — AP inventory per site, coverage-complaint mapping from ticket history, firmware posture, and a guest-network isolation check. Use for "audit the WiFi", recurring "WiFi is slow in <area>" complaints, or pre-refresh assessment of the wireless network.
+description: Audit a wireless estate — AP inventory per site, coverage complaints from ticket history, firmware posture, and a guest-network isolation check per client.
 category: Devices & Infrastructure
 tools: [search_itglue, search_hudu, liongard_launchpoint, liongard_device, liongard_metric, liongard_timeline, search_tickets, search_ninjaone_devices, add_ticket_note, create_ticket]
 connectors: [IT Glue, Hudu, Liongard, NinjaOne]

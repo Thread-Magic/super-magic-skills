@@ -1,6 +1,6 @@
 ---
 name: Shared Mailbox Delegation
-description: Set up or change shared-mailbox access — Full Access, Send As, or Send on Behalf — with owner approval and an audit note. Use when a ticket asks to add someone to a shared mailbox or let them send from another address.
+description: Set up or change shared mailbox access (Full Access, Send As, Send on Behalf) with owner approval and an audit note recorded on the delegation ticket.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, send_approval, log_time_entry]
 connectors: []

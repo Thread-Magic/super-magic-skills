@@ -1,6 +1,6 @@
 ---
 name: SSL Certificate Renewal
-description: Handle certificate-expiry warnings and renewals — browser warnings, service cert expiry, "the cert expires next week" — including issuer-specific renewal paths and the service restarts a swap requires.
+description: Handle SSL and TLS certificate renewals: browser warnings, service certificate expiry, issuer-specific renewal paths, and required service restarts.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

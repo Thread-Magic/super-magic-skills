@@ -1,6 +1,6 @@
 ---
 name: Delegate Access Forensics
-description: Answer "who sent/deleted/read what as whom" from the mailbox audit log — Send As vs Send on Behalf vs owner actions distinguished, logon types read correctly, findings reported neutrally. Use for delegation disputes, "I never sent that email," or "someone deleted messages from my mailbox."
+description: Investigate mailbox audit logs to identify Send As, Send on Behalf, and owner actions in delegation disputes and unauthorized-email claims.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, add_ticket_note, update_ticket, log_time_entry, web_search]
 connectors: []

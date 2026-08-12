@@ -1,6 +1,6 @@
 ---
 name: Intune App Deployment
-description: Process requests to deploy, update, or remove applications via Intune — packaging choice, required vs available intent, pilot-to-broad rings — with approval before any forced install or uninstall. Use for "push <app> to all machines", "make <app> available in Company Portal", or "remove <app> from the fleet".
+description: Deploy, update, or remove Intune apps with packaging choice, required vs available intent, pilot-to-broad rings, and approval before forced installs.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, schedule_ticket, web_search]
 connectors: [IT Glue, Hudu]

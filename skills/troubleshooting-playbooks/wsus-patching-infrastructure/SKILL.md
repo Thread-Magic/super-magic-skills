@@ -1,6 +1,6 @@
 ---
 name: WSUS Patching Infrastructure
-description: Diagnose WSUS server-side problems — clients not checking in or stuck at 0% download, console crashes/timeouts, updates approved but never arriving, database bloat — treating fleet-wide patch failure as a server problem, not five hundred client problems.
+description: Diagnose WSUS server-side issues: clients not checking in, 0% downloads, console crashes, unapproved-but-never-arriving updates, and database bloat.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

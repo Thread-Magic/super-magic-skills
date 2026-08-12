@@ -1,6 +1,6 @@
 ---
 name: Liongard SonicWall Read
-description: Interrogate a client's SonicWall through the Liongard inspector — SonicOS firmware, security-services licensing and expiry, access rules, VPN policies, admin accounts. Use for firewall triage context, the classic "security services just expired" check, or posture review.
+description: Interrogate a client's SonicWall via Liongard: SonicOS firmware, security-services licensing and expiry, access rules, VPN policies, admin accounts.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

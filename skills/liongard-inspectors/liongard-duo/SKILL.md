@@ -1,6 +1,6 @@
 ---
 name: Liongard Duo Read
-description: Answer Duo MFA posture questions from the Liongard Duo inspector — enrollment coverage, bypass users, admin list, and protected-integration inventory — for coverage audits and QBR evidence.
+description: Answer Duo MFA posture questions via the Liongard Duo inspector: enrollment coverage, bypass users, admin list, and protected-integration inventory.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_metric, liongard_detection, liongard_timeline, liongard_query]
 connectors: [Liongard]

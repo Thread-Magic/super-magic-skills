@@ -1,6 +1,6 @@
 ---
 name: Webroot Legacy AV
-description: A Webroot (or similar legacy signature-AV) detection needs handling — work it with honest acknowledgment of the thin telemetry, and frame the modern-EDR migration conversation on facts, not fear.
+description: Work Webroot or other legacy signature-AV detections with thin telemetry, and frame the modern-EDR migration conversation on facts, not fear.
 category: Vendor Runbooks
 tools: [search_tickets, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

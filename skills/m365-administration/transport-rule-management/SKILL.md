@@ -1,6 +1,6 @@
 ---
 name: Transport Rule Management
-description: Inspect, add, or change Exchange Online mail flow (transport) rules safely — document the current state, test mode before enforce, respect rule order, disable instead of delete. Use when a ticket asks to add a disclaimer, block/allow a pattern, redirect mail, or asks "why is this rule doing that."
+description: Inspect, add, or change Exchange Online transport rules safely: document current state, test mode before enforce, and disable instead of delete.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

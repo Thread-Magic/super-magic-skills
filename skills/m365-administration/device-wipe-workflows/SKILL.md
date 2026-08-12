@@ -1,6 +1,6 @@
 ---
 name: Device Wipe Workflows
-description: Choose the right Intune remote action — retire, wipe, fresh start, Autopilot reset, or delete — with explicit data-loss warnings and an approval gate before anything destructive runs. Use whenever a ticket asks to "wipe", "reset", "clean up", or "remove company data from" a device.
+description: Choose the right Intune remote action - retire, wipe, fresh start, Autopilot reset, or delete - with data-loss warnings and approval gate.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

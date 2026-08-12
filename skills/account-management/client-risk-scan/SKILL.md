@@ -1,6 +1,6 @@
 ---
 name: Client Risk Scan
-description: Scan the whole client portfolio for at-risk accounts using four signals — declining sentiment, aging tickets with no response, recurring issues without root-cause fixes, and unresolved high-priority incidents — and rank the top candidates.
+description: Scan the client portfolio for at-risk accounts using declining sentiment, aging tickets, recurring issues, and unresolved high-priority incidents; ranked.
 category: Account Management
 tools: [search_tickets, search_clients]
 connectors: []

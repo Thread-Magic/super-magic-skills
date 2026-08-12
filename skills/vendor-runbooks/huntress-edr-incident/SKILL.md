@@ -1,6 +1,6 @@
 ---
 name: Huntress EDR Incident
-description: A Huntress EDR incident report arrived — foothold, persistence, or active threat on an endpoint. Read what Huntress already did (isolation, remediation steps), execute what remains, and verify before closing.
+description: Work Huntress EDR incident reports: foothold, persistence, or active endpoint threats. Read what Huntress isolated, finish remediation, and verify closure.
 category: Vendor Runbooks
 tools: [search_tickets, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

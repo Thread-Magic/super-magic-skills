@@ -1,6 +1,6 @@
 ---
 name: Out-of-Office on Behalf
-description: Set an automatic reply on an absent user's mailbox at someone else's request — authorization from manager/HR verified first, message content kept minimal and neutral, end date always set. Use when a ticket asks to "turn on OOO for" someone who is out sick, on leave, or departed.
+description: Set automatic replies on an absent user's mailbox by request: manager or HR authorization verified, message kept minimal, and an end date set.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: []

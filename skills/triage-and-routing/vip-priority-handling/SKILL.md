@@ -1,6 +1,6 @@
 ---
 name: VIP Priority Handling
-description: Detect VIP contacts and VIP clients at ticket intake, apply the configured priority bump, and fire the desk's notify rules — without letting VIP status distort classification.
+description: Detect VIP contacts and VIP clients at ticket intake, apply the configured priority bump, and fire notify rules without letting VIP status skew triage.
 category: Triage & Routing
 tools: [search_tickets, search_contacts, search_clients, update_ticket, add_ticket_note, list_ticket_priorities]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Halo Actions & Workflows
-description: For HaloPSA desks — the deeper action/workflow layer beyond a single status change: approval actions, multi-step workflows, and knowing which action is valid at the ticket's current workflow step.
+description: HaloPSA actions and workflows beyond status changes: approval actions, multi-step workflows, and which action is valid at the ticket's current step.
 category: PSA-Specific
 tools: [search_tickets, list_ticket_statuses, update_ticket, add_ticket_note, send_approval]
 connectors: []

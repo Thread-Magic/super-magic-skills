@@ -1,6 +1,6 @@
 ---
 name: EDR Detection Runbook
-description: An EDR suspicious-process or malware detection alert landed — pull device context from the RMM, check what the EDR already contained, confirm with the device user, and escalate or close with evidence.
+description: Work an EDR malware or suspicious-process alert: pull RMM device context, check EDR containment, confirm with the user, then escalate or close.
 category: Security
 tools: [search_tickets, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

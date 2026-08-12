@@ -1,6 +1,6 @@
 ---
 name: PSA Migration Hygiene
-description: For any desk mid-migration between PSAs (ConnectWise, Autotask, HaloPSA, or others) — enforce dual-running discipline: one master system per phase, no orphaned tickets, no double work, clean cutover evidence.
+description: PSA migrations (ConnectWise, Autotask, HaloPSA): enforce dual-running discipline — one master per phase, no orphaned tickets, clean cutover evidence.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: SharePoint Site Provisioning
-description: Stand up a new SharePoint site or document library the right way — site type, permission model, and sharing defaults decided deliberately instead of inherited by accident. Use when a client asks for "a new SharePoint site," "a place to store X," "a document library for the team," or a shared file area.
+description: Provision new SharePoint sites and document libraries with site type, permission model, and sharing defaults chosen deliberately not inherited.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

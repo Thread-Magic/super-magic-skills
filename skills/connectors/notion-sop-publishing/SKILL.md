@@ -1,6 +1,6 @@
 ---
 name: Notion SOP Publishing
-description: Turn a resolved ticket into an SOP page in the team's Notion runbooks teamspace, tagged by client, product, and category — with a link posted back to the ticket. Use when asked to "write this up as an SOP", "publish this fix to Notion", or "document this resolution in the runbooks".
+description: Turn a resolved ticket into an SOP page in the team's Notion runbooks teamspace, tagged by client, product, and category, with link back to ticket.
 category: Connectors
 tools: [search_tickets, add_ticket_note]
 connectors: [Notion]

@@ -1,6 +1,6 @@
 ---
 name: Agreement Profitability
-description: When someone wants the effective hourly rate on an all-you-can-eat (fixed-fee) agreement — agreement revenue divided by logged hours — or a scan for loss-making clients.
+description: Compute the effective hourly rate on an all-you-can-eat fixed-fee agreement — agreement revenue divided by logged hours — or scan for loss-making clients.
 category: Finance & Billing
 tools: [search_tickets, search_clients]
 connectors: []

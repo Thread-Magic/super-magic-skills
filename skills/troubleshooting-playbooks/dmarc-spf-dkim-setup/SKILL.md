@@ -1,6 +1,6 @@
 ---
 name: DMARC / SPF / DKIM Setup
-description: Diagnose email authentication failures and produce correct SPF, DKIM, and DMARC record guidance — including new sending sources, alignment problems, and honest propagation expectations.
+description: Diagnose email authentication failures and build correct SPF, DKIM, and DMARC DNS records — new sending sources, alignment, and propagation expectations.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

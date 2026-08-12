@@ -1,6 +1,6 @@
 ---
 name: Security Incident Postmortem
-description: A security incident is resolved and needs a postmortem — build the executive summary, timeline, impact, root cause, and action items from ticket evidence, in defensible language.
+description: Build a security incident postmortem: executive summary, timeline, impact, root cause, and action items drawn from ticket evidence in defensible language.
 category: Security
 tools: [search_tickets, search_knowledge_base, add_ticket_note]
 connectors: []

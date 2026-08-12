@@ -1,6 +1,6 @@
 ---
 name: Approver Self-Skip
-description: Before firing an approval, check whether the ticket submitter IS the designated approver for that client — if so, skip send_approval and advance the ticket with an audit note instead of making an approver approve their own request. Answers the "don't ask the approver to approve themselves" workflow.
+description: Before firing an approval, check if the ticket submitter is the client's designated approver — if so, skip send_approval and advance with an audit note.
 category: Automation & Flows
 tools: [search_contacts, send_approval, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []

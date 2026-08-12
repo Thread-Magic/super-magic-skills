@@ -1,6 +1,6 @@
 ---
 name: Notion QBR Page
-description: Assemble a QBR pre-read for a client as a Notion page — ticket volume vs prior period, top issues, SLA picture, and recommendations, with data views where a database backs them. Use when asked to "prep my QBR in Notion", "build the pre-read for <client>'s business review", or "QBR page for next week".
+description: Assemble a client QBR pre-read as a Notion page — ticket volume vs prior period, top issues, SLA picture, and recommendations with data views.
 category: Connectors
 tools: [search_tickets, search_clients, add_ticket_note]
 connectors: [Notion]

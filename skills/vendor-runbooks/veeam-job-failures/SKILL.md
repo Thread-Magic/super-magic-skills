@@ -1,6 +1,6 @@
 ---
 name: Veeam Job Failures
-description: A Veeam backup job failed or warned — classify the failure into the Veeam taxonomy (VSS, credentials, repository, network), apply retry discipline instead of blind reruns, and state the client's real exposure via the last successful restore point.
+description: Diagnose Veeam backup job failures: classify by taxonomy (VSS, credentials, repository, network), apply retry discipline, and state the last restore point.
 category: Vendor Runbooks
 tools: [search_tickets, search_itglue, get_ninjaone_device, get_ninjaone_device_activities, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

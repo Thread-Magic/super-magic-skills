@@ -1,6 +1,6 @@
 ---
 name: Liongard Google Workspace Read
-description: Answer Google Workspace tenant questions from the Liongard inspector — super admin roles, 2SV coverage, license usage, and Drive-sharing posture — for clients living in Google instead of Microsoft.
+description: Answer Google Workspace tenant questions via Liongard: super admin roles, 2SV coverage, license usage, and Drive-sharing posture for Google clients.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_metric, liongard_identity, liongard_detection, liongard_timeline, liongard_query]
 connectors: [Liongard]

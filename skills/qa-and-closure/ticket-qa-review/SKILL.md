@@ -1,6 +1,6 @@
 ---
 name: Ticket QA Review
-description: Grade a completed or ready-to-close ticket against the closure rubric — genuine resolution, classification, owner, time logged, title accuracy, client-facing closure message — then let it close or bounce it back with an itemized note.
+description: Grade a completed ticket against the closure rubric — resolution, classification, owner, time logged, title, client message — pass or bounce it back.
 category: QA & Closure
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses, run_assistive_ai]
 connectors: []

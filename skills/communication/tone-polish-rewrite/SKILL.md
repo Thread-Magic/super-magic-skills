@@ -1,6 +1,6 @@
 ---
 name: Tone Polish Rewrite
-description: Rewrite rough technician text into a polished, client-ready version — "write this nicely," "make this better," "clean this up" — preserving every fact exactly.
+description: Rewrite rough technician text into a polished, client-ready version — "write this nicely," "clean this up" — preserving every fact exactly.
 category: Communication
 tools: []
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Maintenance Window Notice
-description: Draft a planned-work notice for clients — what's happening, when, expected impact, duration, and the rollback promise — for patching, upgrades, migrations, or scheduled downtime.
+description: Draft a planned-work client notice — what's happening, when, expected impact, duration, and rollback promise — for patching, upgrades, or migrations.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: File Share Permissions
-description: Diagnose "access denied" and wrong-access tickets on file shares — laddering effective permissions through share vs NTFS vs inheritance vs group membership — and fixing with least privilege, never with Everyone.
+description: Diagnose access-denied file share tickets by laddering effective permissions across share vs NTFS vs inheritance and group membership, at least privilege.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: NAS / File Share Provisioning
-description: Plan and document a new network share — folder structure, permission model, quota, and backup inclusion — with an approval gate on the access model before it's created. Use when someone asks to create a new share, set up a department folder, or provision NAS storage.
+description: Plan and document a new network share — folder structure, permission model, quota, backup inclusion — with an approval gate on the access model first.
 category: Devices & Infrastructure
 tools: [search_itglue, search_knowledge_base, search_ninjaone_devices, create_ticket, add_ticket_note, send_approval]
 connectors: [IT Glue, NinjaOne]

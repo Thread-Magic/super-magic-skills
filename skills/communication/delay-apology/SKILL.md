@@ -1,6 +1,6 @@
 ---
 name: Delay Apology
-description: Draft an honest acknowledgment that a ticket has taken too long or a commitment slipped — apology without excuses, and a new commitment only if the technician confirms one.
+description: Draft an honest acknowledgment that a ticket has taken too long or a commitment slipped — apology without excuses, new commitment only if confirmed.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []

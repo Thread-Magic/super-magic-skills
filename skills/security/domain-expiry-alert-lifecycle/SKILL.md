@@ -1,6 +1,6 @@
 ---
 name: Domain Expiry Alert Lifecycle
-description: A registrar expiry, renewal, or "your domain is about to lapse" notice arrived as a ticket — verify the sender is the real registrar FIRST (renewal-invoice scams are a classic BEC lure), confirm the actual expiry date independently, identify who owns the renewal, and route with a timeline.
+description: Handle registrar expiry and renewal notices safely: verify the sender is the real registrar, confirm the expiry date, and route to the renewal owner.
 category: Security
 tools: [search_tickets, search_clients, search_contacts, liongard_domain, web_search, update_ticket, add_ticket_note]
 connectors: [Liongard]

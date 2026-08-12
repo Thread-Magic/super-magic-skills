@@ -1,6 +1,6 @@
 ---
 name: Rehire Reactivation
-description: Safely restore a disabled account for a returning employee — authorization verified, old group memberships reviewed against the new role, credentials reset fresh. Use when a ticket asks to re-enable, reactivate, or restore a former employee's account.
+description: Safely restore a disabled account for a returning employee with authorization verified, old group memberships reviewed, and credentials reset fresh.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, send_approval, log_time_entry]
 connectors: []

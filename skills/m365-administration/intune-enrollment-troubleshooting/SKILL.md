@@ -1,6 +1,6 @@
 ---
 name: Intune Enrollment Troubleshooting
-description: Diagnose why a device won't enroll in Intune by walking a fixed ladder — user licensing, MDM user scope, device state, AAD join type — before touching the device. Use when a ticket says a Windows device "won't enroll", "isn't showing in Intune", or auto-enrollment silently never happened.
+description: Diagnose Windows Intune enrollment failures via a fixed ladder: user licensing, MDM scope, device state, and Entra join type checks.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

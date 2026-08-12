@@ -1,6 +1,6 @@
 ---
 name: ESET PROTECT
-description: An ESET PROTECT detection or protection-status alert landed — triage by detection engine, interpret LiveGuard sandbox verdicts (including files held pending analysis), and recognize when a "protection disabled" alarm is really a policy conflict.
+description: Triage ESET PROTECT detections by engine, interpret LiveGuard sandbox verdicts, and recognize when a protection-disabled alert is really a policy conflict.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

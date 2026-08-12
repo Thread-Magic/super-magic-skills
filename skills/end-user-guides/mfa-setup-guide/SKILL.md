@@ -1,6 +1,6 @@
 ---
 name: MFA Setup Guide
-description: Draft reply-ready instructions for an end user to enroll in multi-factor authentication with the client's actual MFA product — "send the user MFA setup steps."
+description: Draft reply-ready instructions for an end user to enroll in multi-factor authentication using the client's actual MFA product for account sign-in.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

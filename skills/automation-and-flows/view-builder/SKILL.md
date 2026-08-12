@@ -1,6 +1,6 @@
 ---
 name: View Builder
-description: Create or duplicate an inbox view from a plain-English spec — "a view of my open P1s", "duplicate the dispatch view but filtered to <client>". Use when a member asks for a new view, a saved filter, or a variant of an existing view.
+description: Create or duplicate an inbox view from a plain-English spec — "open P1s", "the dispatch view filtered to a client" — saved filters and view variants.
 category: Automation & Flows
 tools: [view_list, view_save, view_duplicate, view_getCurrent, view_listFilterAttributes, view_searchFilterValues]
 connectors: []

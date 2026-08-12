@@ -1,6 +1,6 @@
 ---
 name: SaaS Alerts MDR
-description: A SaaS Alerts event landed — a login anomaly, mail-rule creation, file-activity spike, or privilege change in a client's M365/Google tenant. Triage it as identity-plane EDR: verify, contain, scope — and check what the Respond automation already did.
+description: Triage SaaS Alerts events in M365 and Google tenants: login anomalies, mail-rule creation, file-activity spikes, privilege changes as identity-plane EDR.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

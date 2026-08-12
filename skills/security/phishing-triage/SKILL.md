@@ -1,6 +1,6 @@
 ---
 name: Phishing Triage
-description: A user reported a suspicious email or a phishing-report ticket landed on the security board — assess it without touching the payload, check blast radius, contain if malicious, and reply to the reporter with a verdict.
+description: Triage a reported phishing email without touching the payload: check blast radius, contain if malicious, and reply to the reporter with a verdict.
 category: Security
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

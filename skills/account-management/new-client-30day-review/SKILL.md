@@ -1,6 +1,6 @@
 ---
 name: New Client 30-Day Review
-description: Friction check on a client's first 30 days — early recurring issues, expectation mismatches, and onboarding gaps — so problems get fixed while the relationship is still forming.
+description: Friction check on a new client's first 30 days — early recurring issues, expectation mismatches, and onboarding gaps — fixed while the relationship forms.
 category: Account Management
 tools: [search_tickets, search_clients, search_contacts]
 connectors: []

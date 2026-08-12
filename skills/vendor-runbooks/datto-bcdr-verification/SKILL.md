@@ -1,6 +1,6 @@
 ---
 name: Datto BCDR Verification
-description: A Datto BCDR alert needs working — screenshot-verification failure, local backup vs off-site (cloud) sync lag, or virtualization-test cadence questions. Separate "backup ran" from "backup boots" and state the real recovery position.
+description: Work Datto BCDR alerts: screenshot-verification failures, local vs cloud sync lag, virtualization tests. Separate backup-ran from backup-boots and verify.
 category: Vendor Runbooks
 tools: [search_tickets, search_itglue, get_ninjaone_device, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

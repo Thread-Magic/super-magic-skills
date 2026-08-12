@@ -1,6 +1,6 @@
 ---
 name: Report Phishing Guide
-description: Draft reply-ready instructions telling an end user what to do with a suspicious email — the client's report-button path, never forwarding it around — "tell the user how to report a phish."
+description: Draft reply-ready instructions telling an end user what to do with a suspicious email — the client's report-button path, never forwarding around.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

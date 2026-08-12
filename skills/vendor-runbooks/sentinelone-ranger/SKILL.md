@@ -1,6 +1,6 @@
 ---
 name: SentinelOne Ranger
-description: A SentinelOne Ranger network-discovery finding landed — read the rogue/unmanaged-device signal, tell a genuinely unknown asset from known-but-unmanaged infrastructure, and drive it to identify-then-manage without blind network action.
+description: Work SentinelOne Ranger network-discovery findings: read the rogue or unmanaged-device signal and drive to identify-then-manage without blind action.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

@@ -1,6 +1,6 @@
 ---
 name: Mailbox Permissions Audit
-description: Inventory who can access what across mailboxes — Full Access, Send As, Send on Behalf, and folder-level grants — and flag unexpected grants. Use when a ticket asks "who has access to this mailbox," a security review needs a delegation inventory, or offboarding needs a permission sweep.
+description: Inventory Exchange mailbox access grants: Full Access, Send As, Send on Behalf, and folder-level permissions, flagging unexpected delegations.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, add_ticket_note, update_ticket, log_time_entry, web_search]
 connectors: [IT Glue]

@@ -1,6 +1,6 @@
 ---
 name: Variation Author
-description: Interview the admin about how troubleshooting differs per client (printers, VPN, LOB apps…), then encode those differences as intent variations — arguments and replies per variation, with a test plan before activation. Answers the "the bot should answer differently for each client" workflow.
+description: Interview the admin on client-specific troubleshooting differences (printers, VPN, LOB apps), then encode them as intent variations with a test plan.
 category: Automation & Flows
 tools: [create_intent, update_intent, get_intent, list_intents, update_variation, set_variation_arguments, set_variation_replies]
 connectors: []

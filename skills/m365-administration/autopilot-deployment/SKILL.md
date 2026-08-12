@@ -1,6 +1,6 @@
 ---
 name: Autopilot Deployment
-description: Work Windows Autopilot requests end-to-end — hardware hash registration, profile assignment, ESP behavior — and make the reset-vs-re-enroll call when a deployment goes sideways. Use for "set this device up with Autopilot", "Autopilot is stuck", or "white glove / ESP hanging" tickets.
+description: Run Windows Autopilot deployments end-to-end: hardware hash registration, profile assignment, ESP behavior, and reset-vs-re-enroll decisions.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, web_search]
 connectors: [IT Glue, Hudu]

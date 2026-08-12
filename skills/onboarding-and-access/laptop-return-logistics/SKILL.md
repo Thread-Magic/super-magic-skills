@@ -1,6 +1,6 @@
 ---
 name: Laptop Return Logistics
-description: Get a company device back from a departing or remote user — coordinate the return box and prepaid label, send the templated return email with a deadline, confirm receipt, verify the wipe, update the asset record, then close. Includes the escalation path when the user goes silent.
+description: Get a company laptop back from a departing or remote user with prepaid return label, templated email, deadline tracking, wipe verification, and escalation.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_itglue, search_hudu, add_ticket_note, update_ticket, schedule_ticket, view_openDraft]
 connectors: []

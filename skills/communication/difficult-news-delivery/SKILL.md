@@ -1,6 +1,6 @@
 ---
 name: Difficult News Delivery
-description: Draft the message no one wants to send — data loss, an unrecoverable state, a security exposure — factual, empathetic, and pointed at the path forward, under strict defensive-writing rules.
+description: Draft the message no one wants to send — data loss, unrecoverable state, security exposure — factual, empathetic, and pointed at the path forward.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []

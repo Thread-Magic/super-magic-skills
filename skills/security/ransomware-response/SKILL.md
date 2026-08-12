@@ -1,6 +1,6 @@
 ---
 name: Ransomware Response
-description: Ransomware is suspected or confirmed at a client — encrypted files, ransom notes, mass file renames, or an EDR ransomware verdict. Run the defensive IR sequence: isolate, verify backups BEFORE touching them, engage IR/insurance per policy, and sequence recovery.
+description: Respond to suspected or confirmed ransomware: isolate hosts, verify backups before touching them, engage IR and insurance, and sequence recovery.
 category: Security
 tools: [search_tickets, search_clients, search_contacts, add_ticket_note, update_ticket, search_itglue, search_ninjaone_devices, set_ninjaone_device_maintenance, get_ninjaone_device_link]
 connectors: [IT Glue, NinjaOne]

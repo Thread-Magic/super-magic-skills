@@ -1,6 +1,6 @@
 ---
 name: New Workstation Imaging Checklist
-description: Run the standard build-and-deploy checklist for a new or re-imaged workstation — naming, OS baseline, enrollment, apps, profile, verification, and handoff. Use when someone asks to image a machine, prep a new laptop, or "get this workstation ready for <user>".
+description: Run the standard build-and-deploy checklist for a new or re-imaged workstation — naming, OS baseline, enrollment, apps, profile, verification, and handoff.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_link, search_itglue, search_knowledge_base, create_ticket, add_ticket_note]
 connectors: [NinjaOne, IT Glue]

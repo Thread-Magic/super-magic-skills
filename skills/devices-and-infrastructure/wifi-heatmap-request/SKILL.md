@@ -1,6 +1,6 @@
 ---
 name: WiFi Heatmap / Site Survey Request
-description: Decide whether a wireless problem warrants a heatmap/site survey, and capture the complete site information needed to commission one so the surveyor isn't sent back for missing details. Use when someone asks for a WiFi survey, reports chronic coverage/roaming issues, or is planning a new-site wireless deployment.
+description: Decide when a wireless problem warrants a heatmap or site survey, and capture the site information needed to commission one without a return visit.
 category: Devices & Infrastructure
 tools: [search_itglue, search_knowledge_base, search_ninjaone_devices, create_ticket, add_ticket_note, create_timezest_scheduling_request]
 connectors: [IT Glue, NinjaOne, TimeZest]

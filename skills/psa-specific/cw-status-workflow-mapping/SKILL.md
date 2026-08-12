@@ -1,6 +1,6 @@
 ---
 name: CW Status Workflow Mapping
-description: For desks synced to ConnectWise Manage — map Thread statuses to CW board statuses, make only safe status transitions, and reconcile closed-in-CW-but-open-in-Thread drift.
+description: ConnectWise Manage status mapping: align Thread statuses with CW board statuses, take safe transitions, reconcile closed-in-CW-but-open-in-Thread drift.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

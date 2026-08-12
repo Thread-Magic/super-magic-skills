@@ -1,6 +1,6 @@
 ---
 name: Ticket Summary & Closure Note
-description: Produce a clean summary of what happened on a ticket — resolution note, closure note, or a templated P1/P2 handoff summary — in the requested format and point of view.
+description: Produce a clean ticket summary as a resolution note, closure note, or templated P1/P2 handoff — in the requested format and point of view.
 category: Documentation
 tools: [search_tickets, add_ticket_note]
 connectors: []

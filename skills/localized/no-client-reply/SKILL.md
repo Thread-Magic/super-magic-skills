@@ -1,6 +1,6 @@
 ---
 name: Kundesvar
-description: Utkast til et eksternt kundesvar i husets stemme og format — løsningsoppdateringer, statusmeldinger, avslutningsmeldinger eller enhver kunderettet e-post på en sak. (Norwegian version of Client Reply — drafts on-brand client-facing ticket replies.)
+description: Utkast til eksternt kundesvar i husets stemme og format: løsningsoppdateringer, statusmeldinger, avslutninger eller enhver kunderettet e-post på en sak.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []

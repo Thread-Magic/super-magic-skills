@@ -1,6 +1,6 @@
 ---
 name: Autotask Service Call Scheduling
-description: For desks synced to Autotask — know when work is a Service Call (a scheduled visit/appointment object) versus just a ticket, and follow Autotask scheduling conventions so dispatch calendars stay true.
+description: Autotask Service Calls: know when work is a scheduled visit object vs a plain ticket, and follow dispatch scheduling conventions so calendars stay right.
 category: PSA-Specific
 tools: [search_tickets, schedule_ticket, update_schedule_entry, add_ticket_note, search_members, search_contacts]
 connectors: []

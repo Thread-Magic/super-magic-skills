@@ -1,6 +1,6 @@
 ---
 name: Windows 11 Migration Issues
-description: Work post-upgrade tickets after a Windows 11 migration — driver regressions, default apps reset, printers vanished, features moved — with the rollback window checked first and treated as a deadline.
+description: Handle post-upgrade Windows 11 migration tickets: driver regressions, reset default apps, missing printers, moved features, with rollback window checked.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

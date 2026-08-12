@@ -1,6 +1,6 @@
 ---
 name: Keeper Password Manager
-description: A Keeper Security rollout or admin ticket arrived — vault/record and shared-folder structure, role-enforced sharing discipline, break-glass access, and offboarding vault transfer via Account Transfer. Verify against Keeper's current documentation.
+description: Run Keeper Security admin work: vault and shared-folder structure, role-enforced sharing, break-glass access, and offboarding via Account Transfer.
 category: Vendor Runbooks
 tools: [search_tickets, search_contacts, search_itglue, search_hudu, search_knowledge_base, add_ticket_note, create_ticket, update_ticket]
 connectors: []

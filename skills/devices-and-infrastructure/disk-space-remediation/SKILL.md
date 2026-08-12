@@ -1,6 +1,6 @@
 ---
 name: Disk Space Remediation
-description: Work a disk-pressure alert or "drive is full" ticket — establish likely consumers from RMM signals, give the tech a safe-cleanup sequence, and hand off via device deep link. Use when a low-disk alert fires or a user reports a full drive.
+description: Work a disk-pressure alert or full-drive ticket — identify likely consumers from RMM signals and give the tech a safe cleanup sequence with a device link.
 category: Devices & Infrastructure
 tools: [get_ninjaone_device, search_ninjaone_devices, list_ninjaone_alerts, get_ninjaone_device_activities, get_ninjaone_device_link, search_knowledge_base, add_ticket_note]
 connectors: [NinjaOne]

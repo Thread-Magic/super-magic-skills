@@ -1,6 +1,6 @@
 ---
 name: SOW Drafting
-description: When project-shaped work needs a brief scope-of-work drafted from ticket or project context — deliverables, assumptions, exclusions, and a T&M vs fixed recommendation.
+description: Draft a brief scope-of-work from ticket or project context with deliverables, assumptions, exclusions, and a T&M vs fixed pricing recommendation attached.
 category: Sales & Quoting
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Zapier PagerDuty On-Call
-description: Page the on-call engineer for a P1 via PagerDuty, tell the requester who's on call and that they've been paged, and mirror the ack/resolve loop back to the ticket. Use for "page on-call", "who is on call right now", or wiring P1 paging into an after-hours flow.
+description: Page the on-call engineer for a P1 via PagerDuty, tell the requester who was paged, and mirror the ack/resolve loop back to the ticket.
 category: Connectors
 tools: [search_tickets, update_ticket, add_ticket_note]
 connectors: [Zapier: PagerDuty]

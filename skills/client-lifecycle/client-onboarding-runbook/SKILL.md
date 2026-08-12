@@ -1,6 +1,6 @@
 ---
 name: Client Onboarding Runbook
-description: Take a newly signed client from MSA to service-desk readiness — boards and routing, contacts loaded, documentation intake, monitoring confirmed, and welcome communications — as a tracked checklist with tickets.
+description: Take a newly signed client from MSA to service-desk readiness: boards, routing, contacts, docs intake, monitoring, and welcome comms as tracked tickets.
 category: Client Lifecycle
 tools: [search_clients, search_contacts, create_ticket, update_ticket, list_boards, search_knowledge_base, search_itglue, search_hudu]
 connectors: [IT Glue, Hudu]

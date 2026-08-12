@@ -1,6 +1,6 @@
 ---
 name: Zapier QuickBooks Time & Billing
-description: Push ticket time entries into QuickBooks as Time Activities and draft (never send) an invoice for out-of-contract work, gated by approval. Use for "get this ticket's time into QuickBooks", "bill the out-of-scope work on ticket <number>", or a periodic time-to-billing reconciliation pass.
+description: Push ticket time entries into QuickBooks as Time Activities and draft (never send) an invoice for out-of-contract work, gated by approval.
 category: Connectors
 tools: [search_tickets, send_approval, add_ticket_note]
 connectors: [Zapier: QuickBooks Online]

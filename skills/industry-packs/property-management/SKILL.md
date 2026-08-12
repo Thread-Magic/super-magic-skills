@@ -1,6 +1,6 @@
 ---
 name: Supporting Property Management Clients
-description: Vertical pack for property-management clients — PM platforms (Yardi, AppFolio, Buildium-class), tenant-portal and rent-day sensitivity, owner-vs-tenant data separation and the support-scope boundary, maintenance-request integrations, and trust-accounting caution. Load when the client is a property manager or the ticket names a PM platform, tenant portal, rent payments, or maintenance workflows.
+description: Property management pack covering Yardi, AppFolio, and Buildium platforms, tenant portals, owner-tenant data separation, and trust accounting.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

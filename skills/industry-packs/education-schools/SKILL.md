@@ -1,6 +1,6 @@
 ---
 name: Supporting Schools and Education
-description: Vertical pack for K-12 school and district clients — SIS/LMS stack (PowerSchool, Canvas-class), FERPA and student-data hygiene, 1:1 device programs and summer refresh, CIPA filtering, E-Rate awareness, and the school-calendar rhythm. Load when the client is a school/district or the ticket names an SIS, LMS, student devices, or classroom tech.
+description: K-12 school and district pack covering PowerSchool SIS, Canvas LMS, FERPA data hygiene, CIPA filtering, E-Rate, and 1:1 device programs.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

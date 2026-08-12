@@ -1,6 +1,6 @@
 ---
 name: Liongard QBR Evidence Pack
-description: Assemble QBR-grade posture evidence for one client from multiple Liongard inspectors — identity risks, EOL exposure, cert and domain hygiene, and config drift — as a dated, sourced evidence pack the QBR deck can stand on.
+description: Assemble QBR-grade posture evidence for one client from Liongard inspectors: identity risk, EOL exposure, cert/domain hygiene, and config drift.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_identity, liongard_domain, liongard_metric, liongard_detection, liongard_timeline, liongard_cyber_risk_dashboard, liongard_query]
 connectors: [Liongard]

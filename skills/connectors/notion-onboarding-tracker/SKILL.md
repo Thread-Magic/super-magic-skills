@@ -1,6 +1,6 @@
 ---
 name: Notion Onboarding Tracker
-description: Run a new-hire progress tracker in Notion — read where the trainee is, update checklist items and quiz results, and answer "how is <new hire> doing". Notion holds state across sessions. Use for "set up an onboarding tracker", "mark <trainee>'s phase 2 complete", or "how far along is our new tech".
+description: Run a new-hire progress tracker in Notion — read trainee status, update checklist items and quiz results, and answer "how is <new hire> doing".
 category: Connectors
 tools: []
 connectors: [Notion]

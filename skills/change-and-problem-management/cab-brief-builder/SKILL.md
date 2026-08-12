@@ -1,6 +1,6 @@
 ---
 name: CAB Brief Builder
-description: Build the weekly change-board pack — pending changes ranked by risk, collision flags, and last week's change outcomes — so the CAB meeting is 20 minutes of decisions instead of an hour of reading tickets aloud.
+description: Build the weekly change advisory board pack: pending changes ranked by risk, collision flags, and last week's change outcomes for 20-minute CAB decisions.
 category: Change & Problem Management
 tools: [search_tickets, search_knowledge_base, add_ticket_note, list_boards, list_ticket_statuses]
 connectors: []

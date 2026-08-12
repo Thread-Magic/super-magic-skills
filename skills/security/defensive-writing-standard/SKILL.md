@@ -1,6 +1,6 @@
 ---
 name: Defensive Writing Standard
-description: Base language standard for anything security-related a client might read — load it whenever drafting security notifications, incident updates, postmortems, or alert closures so the wording never overstates what is confirmed.
+description: Language standard for security writing: use when drafting client notifications, incident updates, postmortems, and alert closures to avoid overstatement.
 category: Security
 tools: []
 connectors: []

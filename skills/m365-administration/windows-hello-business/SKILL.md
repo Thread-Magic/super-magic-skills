@@ -1,6 +1,6 @@
 ---
 name: Windows Hello for Business
-description: Roll out or troubleshoot Windows Hello for Business — prerequisites by join type, tenant-wide vs targeted enablement, and the "a PIN is stronger than a password" user conversation. Use for "enable Hello/PIN sign-in", "provisioning never launches", or hybrid users who can't reach on-prem resources after WHfB sign-in.
+description: Deploy or troubleshoot Windows Hello for Business: prerequisites by join type, tenant-wide vs targeted enablement, and hybrid on-prem access issues.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, schedule_ticket, web_search]
 connectors: [IT Glue, Hudu]

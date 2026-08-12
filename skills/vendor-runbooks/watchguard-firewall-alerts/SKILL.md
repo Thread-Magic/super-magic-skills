@@ -1,6 +1,6 @@
 ---
 name: WatchGuard Firewall Alerts
-description: A WatchGuard event needs triage — a Firebox offline in WatchGuard Cloud, AuthPoint MFA push/token trouble, or mobile-VPN authentication failures. Separate connectivity from compromise and keep the AuthPoint identity discipline.
+description: Triage WatchGuard events: Firebox offline in WatchGuard Cloud, AuthPoint MFA push and token trouble, and mobile VPN authentication failures on the desk.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

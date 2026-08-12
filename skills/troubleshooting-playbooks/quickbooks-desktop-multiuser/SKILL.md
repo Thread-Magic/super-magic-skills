@@ -1,6 +1,6 @@
 ---
 name: QuickBooks Desktop Multi-User
-description: Work QuickBooks Desktop multi-user problems — H202/H505 hosting errors, -6000-series company-file errors, "someone else is in single-user mode", stuck locks — through the hosting-mode / Database Server Manager / file-integrity matrix.
+description: Fix QuickBooks Desktop multi-user errors: H202/H505 hosting, -6000 series company file, stuck locks, via hosting mode and Database Server Manager checks.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

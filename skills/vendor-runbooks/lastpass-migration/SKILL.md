@@ -1,6 +1,6 @@
 ---
 name: LastPass Migration
-description: A client conversation or ticket about LastPass in the post-breach era — run the migration-away runbook (export, import, rotate everything, decommission) and handle the breach-history discussion with facts only, dates verified against the vendor's own disclosures. Verify all breach details against current public records.
+description: Run a LastPass migration-away: export, import to a new vault, rotate every secret, decommission the account, and handle the breach-history talk with facts.
 category: Vendor Runbooks
 tools: [search_tickets, search_contacts, search_itglue, search_hudu, search_knowledge_base, add_ticket_note, create_ticket, update_ticket]
 connectors: []

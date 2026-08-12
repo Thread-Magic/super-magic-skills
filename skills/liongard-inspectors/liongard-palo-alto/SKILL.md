@@ -1,6 +1,6 @@
 ---
 name: Liongard Palo Alto Read
-description: Interrogate a client's Palo Alto firewall through Liongard — PAN-OS version, config changes and commit history, admin accounts/activity, HA state, policy posture. Use for change-window questions on PAN gear, admin-access review, or HA sanity checks during incidents.
+description: Interrogate a client's Palo Alto firewall via Liongard: PAN-OS version, config changes and commit history, admin activity, HA state, policy posture.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

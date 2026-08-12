@@ -1,6 +1,6 @@
 ---
 name: Site-Aware Approval Routing
-description: Resolve a ticket's site, look up the per-site approver from a documented mapping, and send the approval request to that specific contact — instead of a single hardcoded approver for the whole client. Answers the "route approvals to the right site manager" workflow.
+description: Resolve a ticket's site, look up the per-site approver from a documented mapping, and send the approval request to that contact — not one hardcoded name.
 category: Automation & Flows
 tools: [search_tickets, search_contacts, send_approval, add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Access Request Handling
-description: Work a request for access to a folder, calendar, distribution list, or shared mailbox — approval checked, least privilege applied, expiry set on anything temporary. Use when a ticket asks to "give <user> access to" a resource.
+description: Work an access request for a folder, calendar, DL, or shared mailbox with approval checked, least privilege applied, and expiry on temporary grants.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, update_ticket, send_approval, log_time_entry]
 connectors: []

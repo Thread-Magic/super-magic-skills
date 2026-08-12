@@ -1,6 +1,6 @@
 ---
 name: CW Configurations Assets
-description: For desks synced to ConnectWise Manage — configuration (asset) discipline: link tickets to the config they concern, respect the desk's config-type taxonomy, and flag stale or duplicate configs instead of trusting them.
+description: ConnectWise Manage configurations (assets): link tickets to the right config, follow the desk's config-type taxonomy, and flag stale or duplicate configs.
 category: PSA-Specific
 tools: [search_tickets, update_ticket, add_ticket_note, search_clients, search_itglue, search_hudu]
 connectors: [IT Glue, Hudu]

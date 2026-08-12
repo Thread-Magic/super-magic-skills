@@ -1,6 +1,6 @@
 ---
 name: Liongard Active Directory Read
-description: Answer on-prem Active Directory questions from the Liongard AD inspector — privileged group membership, stale accounts, password-policy posture, GPO changes, FSMO roles, and DC health — without a domain login.
+description: Answer on-prem Active Directory questions via Liongard AD inspector: privileged groups, stale accounts, password policy, GPOs, FSMO, and DC health.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_metric, liongard_identity, liongard_detection, liongard_timeline, liongard_query]
 connectors: [Liongard]

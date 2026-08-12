@@ -1,6 +1,6 @@
 ---
 name: Supporting Legal Firms
-description: Vertical pack for law-firm clients — the DMS and practice stack (iManage, NetDocuments, Clio-class), matter confidentiality and ethical walls, litigation-hold interplay, court-deadline and billable-hour urgency. Load when the client is a law firm or the ticket names a document management system, time-and-billing platform, or e-filing.
+description: Law firm pack covering iManage and NetDocuments DMS, Clio practice management, ethical walls, litigation holds, and court-deadline urgency.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

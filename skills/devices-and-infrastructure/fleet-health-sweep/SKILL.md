@@ -1,6 +1,6 @@
 ---
 name: Fleet Health Sweep
-description: Sweep an entire client's device fleet through the RMM — offline devices, alert clusters, disk pressure, missing patches — and rank the top issues that need attention. Use for "which devices at <client> need attention" or a proactive per-client health pass.
+description: Sweep a client fleet through the RMM — offline devices, alert clusters, disk pressure, and missing patches — ranked into the top issues needing attention.
 category: Devices & Infrastructure
 tools: [list_ninjaone_organizations, search_ninjaone_devices, get_ninjaone_device, list_ninjaone_alerts, add_ticket_note]
 connectors: [NinjaOne]

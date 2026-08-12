@@ -1,6 +1,6 @@
 ---
 name: Power Automate Governance
-description: Bring Power Automate under control — find orphaned flows owned by leavers, reassign ownership before it breaks, and govern which connectors staff can use. Use when a client asks who owns their flows, reports an automation that "just stopped," offboards a power user, or wants to restrict Power Platform connectors.
+description: Bring Power Automate under control: find orphaned flows from leavers, reassign ownership before breakage, and restrict Power Platform connectors.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

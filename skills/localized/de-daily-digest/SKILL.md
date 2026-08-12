@@ -1,6 +1,6 @@
 ---
 name: Tagesübersicht
-description: Ein Techniker bittet um eine Zusammenfassung seiner offenen Tickets — was auf Antwort wartet, was dringend ist, was heute geplant ist — in unter einer Minute überfliegbar, mit einer ultrakurzen 3-Zeilen-Variante. (German daily digest of a technician's open tickets — replies due, urgent items, today's schedule.)
+description: Tagesübersicht offener Tickets eines Technikers: was auf Antwort wartet, was dringend ist, was heute geplant ist — inklusive 3-Zeilen-Variante.
 category: Localized
 tools: [search_tickets, search_members]
 connectors: []

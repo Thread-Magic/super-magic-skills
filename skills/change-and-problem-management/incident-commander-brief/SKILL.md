@@ -1,6 +1,6 @@
 ---
 name: Incident Commander Brief
-description: An incident commander is taking over a running major incident — assemble everything they need in one read: timeline so far, workstream states, comms state, and the next decision point. Takeover without the 20-minute "so what happened?" retelling.
+description: Assemble a handoff brief for an incoming incident commander: timeline, workstream states, comms state, and the next decision point in a single read.
 category: Change & Problem Management
 tools: [search_tickets, add_ticket_note, search_members]
 connectors: []

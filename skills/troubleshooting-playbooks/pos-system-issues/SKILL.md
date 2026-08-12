@@ -1,6 +1,6 @@
 ---
 name: POS System Issues
-description: Work point-of-sale tickets — terminal frozen, "card payments not going through", back-office not syncing — by splitting terminal vs payment-gateway vs back-office, with a hard PCI boundary: no touching cardholder data flows without the processor.
+description: Work POS tickets — frozen terminals, failed card payments, back-office sync — by splitting terminal, payment gateway, and back-office with a PCI boundary.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

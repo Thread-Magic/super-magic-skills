@@ -1,6 +1,6 @@
 ---
 name: Calendar Permissions
-description: Grant, change, or review calendar sharing and delegation with scope discipline — the minimum folder role that satisfies the ask, owner consent, and private-items handling stated. Use when a ticket asks for calendar access, an assistant managing a calendar, or "why can't I see their calendar."
+description: Grant or review Exchange calendar sharing and delegation with least-privilege folder roles, owner consent, and private-items handling.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue]

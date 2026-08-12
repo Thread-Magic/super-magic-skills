@@ -1,6 +1,6 @@
 ---
 name: Change Risk Assessment
-description: Classify a change request as standard, normal, or emergency by scoring blast radius and rollback confidence — so approval effort matches actual risk instead of everything getting the same rubber stamp.
+description: Classify a change request as standard, normal, or emergency by scoring blast radius and rollback confidence so approval effort matches actual risk.
 category: Change & Problem Management
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket]
 connectors: []

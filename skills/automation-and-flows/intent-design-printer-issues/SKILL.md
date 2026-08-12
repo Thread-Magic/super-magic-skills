@@ -1,6 +1,6 @@
 ---
 name: Printer Issues Intent Design
-description: Build the printer-problems intent — the top three self-help fixes first, then a ticket that already carries the diagnostics. Use when asked to "build a printer intent", "deflect printer tickets", or when printing ranks high in Intent Mining.
+description: Design the printer-problems intent: three top self-help fixes first, then an escalated ticket that already carries the diagnostics collected from the user.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets, search_knowledge_base]
 connectors: []

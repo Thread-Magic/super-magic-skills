@@ -1,6 +1,6 @@
 ---
 name: SOC2 Evidence Collection
-description: An auditor sent an evidence request list (SOC 2 or similar) — map each request to ticket, change, and access evidence, and package it with citations and honestly flagged gaps.
+description: Map an auditor's SOC 2 evidence request list to ticket, change, and access evidence, packaging it with citations and honestly flagged gaps.
 category: Compliance & Audit
 tools: [search_tickets, search_itglue, search_knowledge_base, add_ticket_note]
 connectors: [IT Glue]

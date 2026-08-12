@@ -1,6 +1,6 @@
 ---
 name: Voice Transcript Intake
-description: Turn a pasted or piped call transcript into ticket action — extract caller, client, issue, and any commitments made, then create or update the ticket with a time entry. Use when a call transcript, Voice AI recap, or reception-line recording text lands in chat or on a ticket.
+description: Turn a pasted call transcript into ticket action — extract caller, client, issue, and commitments, then create or update the ticket with a time entry.
 category: Voice & Messenger
 tools: [search_tickets, search_clients, search_contacts, create_ticket, update_ticket, assign_contact, add_ticket_note, log_time_entry, list_ticket_priorities]
 connectors: []

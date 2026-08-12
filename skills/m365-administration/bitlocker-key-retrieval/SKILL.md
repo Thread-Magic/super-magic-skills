@@ -1,6 +1,6 @@
 ---
 name: BitLocker Key Retrieval
-description: Handle "I need my BitLocker recovery key" requests — identity verification FIRST, device-ownership match, key delivered over a verified channel, key rotated after use, audit note without the key. Use whenever anyone asks for a BitLocker recovery key or a device is stuck at the blue recovery screen.
+description: Handle BitLocker recovery key requests with identity verification, device-ownership match, secure delivery, key rotation, and audit note.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

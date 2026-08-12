@@ -1,6 +1,6 @@
 ---
 name: Mobile Device & MDM
-description: Work mobile device tickets — enrollment failures, mail profiles not arriving, compliance blocks, and lost/stolen device response — with all destructive device actions gated behind explicit approval.
+description: Work mobile MDM tickets — enrollment failures, missing mail profiles, compliance blocks, lost/stolen device response — destructive actions need approval.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, send_approval, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

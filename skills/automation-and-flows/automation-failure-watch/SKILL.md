@@ -1,6 +1,6 @@
 ---
 name: Automation Failure Watch
-description: Detect automation-error signatures in ticket notes (4xx/5xx response bodies, Jinja/template rendering errors, webhook failures), flag the ticket, and ping the right Teams channel so a broken flow gets noticed. Answers the "tell us when our automations are silently failing" workflow.
+description: Detect automation-error signatures in notes — 4xx/5xx bodies, Jinja errors, webhook failures — flag the ticket and ping Teams so broken flows get noticed.
 category: Automation & Flows
 tools: [search_tickets, add_ticket_note]
 connectors: [Zapier: Microsoft Teams]

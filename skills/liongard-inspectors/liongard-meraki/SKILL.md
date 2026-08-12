@@ -1,6 +1,6 @@
 ---
 name: Liongard Meraki Read
-description: Interrogate a client's Cisco Meraki org through the Liongard Meraki inspector — SSIDs, VLANs, firmware, admin list, device inventory, license state. Use for "what's on their Meraki", wireless/VLAN config questions during triage, or license-expiry checks.
+description: Interrogate a client's Cisco Meraki org via the Liongard Meraki inspector: SSIDs, VLANs, firmware, admin list, device inventory, and license state.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

@@ -1,6 +1,6 @@
 ---
 name: Default Contact Autofill
-description: When a ticket comes in with no contact, look up the company's documented default contact, confirm it with a search, and assign it under a confidence gate — so contactless tickets don't stall.
+description: When a ticket arrives with no contact, look up the company's documented default contact, confirm with a search, and assign under a confidence gate.
 category: Triage & Routing
 tools: [search_tickets, search_clients, search_contacts, assign_contact, add_ticket_note]
 connectors: []

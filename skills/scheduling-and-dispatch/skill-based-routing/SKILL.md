@@ -1,6 +1,6 @@
 ---
 name: Skill-Based Routing
-description: Route a ticket to the technician with demonstrated expertise — who actually resolved similar issues for this client or this stack before — not just whoever is free.
+description: Route a ticket to the technician with demonstrated expertise — who resolved similar issues for this client or this stack — not just whoever is free.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_members, update_ticket, add_ticket_note]
 connectors: []

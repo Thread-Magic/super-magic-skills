@@ -1,6 +1,6 @@
 ---
 name: Proofpoint Email Security
-description: A Proofpoint event needs working — a TAP click or attachment-sandbox alert, a quarantine-digest release request, or VAP-driven prioritization. Read permitted-vs-blocked clicks correctly and keep release discipline.
+description: Work Proofpoint email security events: TAP click alerts, attachment-sandbox verdicts, quarantine-digest release requests, and VAP-driven priority triage.
 category: Vendor Runbooks
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket]
 connectors: []

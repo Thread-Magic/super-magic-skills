@@ -1,6 +1,6 @@
 ---
 name: Liongard Cisco Network Read
-description: Interrogate a client's Cisco switches/routers (IOS/IOS-XE) through Liongard — IOS versions across the fleet, running-config change detections, port/interface inventory, VLAN layout. Use for "what changed on the switch", IOS-currency sweeps, or port/VLAN facts during connectivity triage.
+description: Interrogate Cisco IOS/IOS-XE switches and routers via Liongard: IOS versions, running-config change detection, port/interface inventory, VLAN layout.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

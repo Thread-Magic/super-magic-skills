@@ -1,6 +1,6 @@
 ---
 name: RD Gateway Issues
-description: Diagnose Remote Desktop Gateway / RD Web Access problems — external RDP connections failing through the gateway, certificate errors, CAP/RAP connection- and resource-authorization-policy mismatches, and 2FA/MFA integration failures — from the RD Gateway operational logs and the exact client error, never by opening RDP to the internet.
+description: Fix Remote Desktop Gateway and RD Web Access problems: external RDP failures, certificate errors, CAP/RAP policy mismatches, and MFA integration failures.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, Liongard]

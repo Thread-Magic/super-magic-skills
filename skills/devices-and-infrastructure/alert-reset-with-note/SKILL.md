@@ -1,6 +1,6 @@
 ---
 name: Alert Reset With Note
-description: Reset a NinjaOne alert only after verifying the condition is genuinely healthy again, with an explanation note posted first. Use for "reset this alert" or "clear the disk alert on <device>", attended or embedded in a Flow.
+description: Reset a NinjaOne alert only after the condition is genuinely healthy, posting an explanation note first. Attended or embedded in a recovery Flow.
 category: Devices & Infrastructure
 tools: [list_ninjaone_alerts, get_ninjaone_device, reset_ninjaone_alert, add_ticket_note]
 connectors: [NinjaOne]

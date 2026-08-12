@@ -1,6 +1,6 @@
 ---
 name: Conditional Access Exception
-description: Exclude a user, app, or location from a conditional-access policy with a written risk note, approval, expiry, and revert plan. Use when a ticket asks to bypass, exclude from, or "make an exception to" a sign-in or CA policy.
+description: Exclude a user, app, or location from a conditional access policy with written risk note, approval, expiry date, and revert plan documented up front.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, update_ticket, schedule_ticket, send_approval, log_time_entry]
 connectors: []

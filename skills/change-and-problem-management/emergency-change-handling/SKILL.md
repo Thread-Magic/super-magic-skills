@@ -1,6 +1,6 @@
 ---
 name: Emergency Change Handling
-description: A change had to happen NOW to restore or protect service — run the break-glass discipline: minimal in-flight record, act-then-document is allowed, but the full retro-documentation is mandatory within 24 hours and this skill chases it to done.
+description: Run break-glass discipline for an emergency change: minimal in-flight record, act-then-document, then chase full retro documentation to done in 24 hours.
 category: Change & Problem Management
 tools: [search_tickets, create_ticket, update_ticket, add_ticket_note, send_approval, list_boards]
 connectors: []

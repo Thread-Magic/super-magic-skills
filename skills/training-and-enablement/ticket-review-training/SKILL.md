@@ -1,6 +1,6 @@
 ---
 name: Ticket Review Training
-description: Turn a real resolved ticket into a sanitized teaching case — what was done well, what could improve, and the transferable lesson — for team training or self-review.
+description: Turn a real resolved ticket into a sanitized teaching case with what was done well, what could improve, and the transferable lesson for team review.
 category: Training & Enablement
 tools: [search_tickets, search_knowledge_base]
 connectors: []

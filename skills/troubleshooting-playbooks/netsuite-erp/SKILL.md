@@ -1,6 +1,6 @@
 ---
 name: NetSuite ERP
-description: Support NetSuite tickets safely as an MSP — a cloud ERP where the fixes are roles/permissions, saved-search/report visibility, and integration (SuiteScript/REST/CSV) errors, and where the account is the client's system of record — from the exact error and role context, never by editing financial config. Escalate customization to the NetSuite admin/partner.
+description: Support NetSuite ERP tickets as an MSP — roles and permissions, saved-search visibility, SuiteScript/REST/CSV integration errors — no financial edits.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

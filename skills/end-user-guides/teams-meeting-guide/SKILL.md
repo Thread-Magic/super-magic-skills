@@ -1,6 +1,6 @@
 ---
 name: Teams Meeting Guide
-description: Draft reply-ready instructions for an end user to join and run a Teams meeting — audio/camera checks, screen sharing, recording basics — "send the user steps for their Teams meeting."
+description: Draft reply-ready instructions for an end user to join and run a Teams meeting — audio and camera checks, screen sharing, recording basics.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

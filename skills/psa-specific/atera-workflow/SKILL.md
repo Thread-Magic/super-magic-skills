@@ -1,6 +1,6 @@
 ---
 name: Atera Workflow
-description: For desks synced to Atera — ticket lifecycle idioms (simple status set, resolved-vs-closed), contract types (retainer, block hours, monitoring, project), and the per-technician-pricing culture that shapes how Atera desks think about labor.
+description: Atera-synced desk playbook: ticket lifecycle, resolved-vs-closed nuance, contract types (retainer, block hours, monitoring, project), labor pricing.
 category: PSA-Specific
 tools: [search_tickets, list_ticket_statuses, update_ticket, add_ticket_note, log_time_entry, search_clients]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Change Approval Sender
-description: Flow-fired when a ticket enters the "Change Approval" status — find the client's designated Change Approver contact and fire send_approval with the change summary; if the approver can't be resolved, note-and-stop, never guess. Answers the "auto-send change approvals to the right client contact" workflow.
+description: Flow that fires on Change Approval status: resolve the client's Change Approver and send_approval with the change summary — note-and-stop if unresolved.
 category: Automation & Flows
 tools: [search_contacts, send_approval, add_ticket_note, search_tickets]
 connectors: []

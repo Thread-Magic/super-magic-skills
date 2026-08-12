@@ -1,6 +1,6 @@
 ---
 name: Internal IT Onboarding
-description: Onboard the MSP's own new hire — technician, dispatcher, or back-office — with accounts, PSA/RMM/docs tool licenses, role-scoped client access, and a shadowing schedule. Use when the new starter works FOR the MSP, not for a client.
+description: Onboard the MSP's own new hire, technician, dispatcher, or back-office, with accounts, PSA/RMM/docs licenses, role-scoped client access, and shadowing.
 category: MSP Business Operations
 tools: [search_tickets, search_members, search_knowledge_base, search_itglue, search_hudu, create_ticket, update_ticket, add_ticket_note, send_approval, schedule_ticket, log_time_entry]
 connectors: [IT Glue, Hudu]

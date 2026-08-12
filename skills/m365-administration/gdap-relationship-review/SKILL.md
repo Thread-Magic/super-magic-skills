@@ -1,6 +1,6 @@
 ---
 name: GDAP Relationship Review
-description: Audit the MSP's delegated-admin (GDAP) relationships across client tenants — least-privilege roles, security-group mapping, expiring relationships, and unused access — before an expiry locks the MSP out mid-support. Use for periodic GDAP reviews, "what access do we have to <client>'s tenant", or a GDAP expiry warning.
+description: Audit MSP GDAP delegated-admin relationships across client tenants for least-privilege roles, security-group mapping, expiries, and unused access.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, update_ticket, create_ticket, schedule_ticket, send_approval, web_search]
 connectors: [IT Glue, Hudu]

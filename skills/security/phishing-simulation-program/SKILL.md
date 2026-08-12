@@ -1,6 +1,6 @@
 ---
 name: Phishing Simulation Program
-description: Plan or coordinate a phishing-awareness simulation campaign for a client — scope, cadence, lure difficulty, a no-shame reporting culture, and keeping the desk's triage from colliding with the simulation.
+description: Plan a client phishing-awareness simulation: scope, cadence, lure difficulty, a no-shame reporting culture, and desk triage that doesn't collide.
 category: Security
 tools: [search_tickets, search_clients, search_contacts, search_knowledge_base, add_ticket_note, create_ticket, schedule_ticket]
 connectors: []

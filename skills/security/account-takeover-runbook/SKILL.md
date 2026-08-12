@@ -1,6 +1,6 @@
 ---
 name: Account Takeover Runbook
-description: An account is confirmed or strongly suspected compromised — run the full response: disable sign-in, revoke sessions, reset MFA, sweep inbox rules and consents, assess blast radius, and notify.
+description: Respond to a confirmed account takeover: disable sign-in, revoke sessions, reset MFA, sweep inbox rules and OAuth consents, and notify users.
 category: Security
 tools: [search_tickets, search_contacts, search_itglue, add_ticket_note, update_ticket, view_openDraft]
 connectors: [IT Glue]

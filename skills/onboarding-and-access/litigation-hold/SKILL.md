@@ -1,6 +1,6 @@
 ---
 name: Litigation Hold
-description: Place or manage a legal hold on a user's mailbox and data — scope confirmed by an authorized requester, no user notification unless counsel approves. Use when a ticket asks for a litigation hold, legal hold, or data preservation for a legal matter.
+description: Place or manage a legal hold on a user mailbox and data with scope confirmed by an authorized requester and no user notification unless counsel approves.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_knowledge_base, search_itglue, add_ticket_note, send_approval, log_time_entry]
 connectors: []

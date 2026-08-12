@@ -1,6 +1,6 @@
 ---
 name: Credential Stuffing Response
-description: A pattern of failed/anomalous logins across many accounts points to password spraying or credential stuffing — scope the attack, lock down, and rotate the accounts that actually fell.
+description: Investigate password spraying and credential stuffing patterns: scope the attack across tenants, lock down accounts, and rotate the ones that fell.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

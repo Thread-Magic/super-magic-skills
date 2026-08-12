@@ -1,6 +1,6 @@
 ---
 name: Supporting Real Estate Clients
-description: Vertical pack for real-estate brokerage and title/escrow clients — transaction platforms (Dotloop, SkySlope-class), MLS and lockbox systems, the heightened wire-fraud/BEC threat model (this is the #1 targeted vertical), and agent BYOD sprawl. Load when the client is a brokerage, team, or title company, or the ticket mentions closings, wires, MLS, or agent devices.
+description: Real estate brokerage and title pack covering Dotloop, SkySlope, MLS and lockboxes, wire-fraud and BEC defense, and agent BYOD sprawl.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

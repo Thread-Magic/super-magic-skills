@@ -1,6 +1,6 @@
 ---
 name: Quarantine Release Request
-description: Someone asked to release a quarantined email — verify the requester, assess why the filter caught it, and recommend release or refusal with the reasoning documented.
+description: Handle a quarantined email release request: verify the requester, assess why the filter caught it, and recommend release or refusal with reasoning.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket]
 connectors: []

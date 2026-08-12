@@ -1,6 +1,6 @@
 ---
 name: Closure Note Completeness
-description: Check a ticket's closure note against the house standard before the close sticks — issue, cause, actions, outcome, confirmation reference — and draft the compliant version when it falls short.
+description: Check a ticket's closure note against the house standard — issue, cause, actions, outcome, confirmation — and draft the compliant version when it's short.
 category: QA & Closure
 tools: [search_tickets, add_ticket_note, update_ticket, run_assistive_ai]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Supporting Logistics and Trucking Clients
-description: Vertical pack for trucking, freight, and logistics clients — TMS platforms (McLeod, Trimble/TMW-class), ELD/telematics fleets (Samsara, Motive-class) and DOT/HOS compliance adjacency, driver devices in the field, EDI with shippers and brokers, and the 24/7 dispatch-desk rhythm. Load when the client is a carrier, broker, or 3PL, or the ticket names a TMS, ELDs, dispatch, or driver tablets.
+description: Trucking and 3PL pack covering McLeod and Trimble TMS, Samsara and Motive ELDs, DOT/HOS compliance, EDI, and 24/7 dispatch operations.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

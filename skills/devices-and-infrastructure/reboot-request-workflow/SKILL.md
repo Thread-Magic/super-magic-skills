@@ -1,6 +1,6 @@
 ---
 name: Reboot Request Workflow
-description: Reboot a device through the RMM with user approval — confirm the user is logged off or has saved work, choose normal vs forced deliberately, and verify the device comes back. Use for "reboot <device>", pending-reboot remediation, or "this needs a restart to finish patching".
+description: Reboot a device via the RMM with user approval — confirm logoff or saved work, choose normal vs forced deliberately, and verify the device comes back up.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, reboot_ninjaone_device, add_ticket_note]
 connectors: [NinjaOne]

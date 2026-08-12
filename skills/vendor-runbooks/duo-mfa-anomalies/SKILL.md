@@ -1,6 +1,6 @@
 ---
 name: Duo MFA Anomalies
-description: A Duo event needs working — a user-reported fraudulent push, a push-fatigue pattern, a device re-enrollment, or a bypass-code request. Identity verification first; bypass codes are time-boxed, logged, and never casual.
+description: Work Duo MFA events: fraudulent pushes, push-fatigue patterns, device re-enrollment, bypass codes. Verify identity and time-box every bypass grant.
 category: Vendor Runbooks
 tools: [search_tickets, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

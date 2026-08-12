@@ -1,6 +1,6 @@
 ---
 name: Autotask Ticket Categories
-description: For desks synced to Autotask — classify tickets with Autotask's Issue Type → Sub-Issue Type pairs (plus ticket category/type) using only configured values; never invent classification values.
+description: Classify Autotask tickets with configured Issue Type + Sub-Issue Type pairs and ticket category/type — never invent classification values not in the board.
 category: PSA-Specific
 tools: [search_tickets, update_ticket, add_ticket_note]
 connectors: []

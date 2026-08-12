@@ -1,6 +1,6 @@
 ---
 name: Bitwarden Business
-description: A Bitwarden (Teams/Enterprise) rollout or admin ticket arrived — organization/collection structure, group-based sharing, account recovery (admin reset / trusted-device), and offboarding. Covers self-hosted caveats. Verify against Bitwarden's current documentation.
+description: Run Bitwarden Teams/Enterprise admin work: organization and collection structure, group-based sharing, account recovery, and offboarding vault handover.
 category: Vendor Runbooks
 tools: [search_tickets, search_contacts, search_itglue, search_hudu, search_knowledge_base, add_ticket_note, create_ticket, update_ticket]
 connectors: []

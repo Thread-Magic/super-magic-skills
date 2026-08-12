@@ -1,6 +1,6 @@
 ---
 name: SSPR Rollout
-description: Plan and execute self-service password reset enablement for a tenant — method choices, registration campaign, hybrid writeback checks — framed around the helpdesk-ticket impact it is meant to deliver. Use when a client asks to "let users reset their own passwords" or an SSPR rollout is proposed to cut password tickets.
+description: Plan and execute Entra self-service password reset: method choices, registration campaign, hybrid writeback checks, and helpdesk-ticket impact.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, send_approval, schedule_ticket, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

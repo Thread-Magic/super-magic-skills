@@ -1,6 +1,6 @@
 ---
 name: Employee Offboarding
-description: Securely disable a departing employee in the right order — sign-in and sessions first, mailbox before licenses — and reclaim access and assets. Use when a ticket asks to offboard, terminate, disable, or "remove access for" a user.
+description: Securely disable a departing employee in the right order: sign-in and sessions first, mailbox before licenses, then reclaim access, assets, and MFA.
 category: Onboarding & Access
 tools: [search_tickets, search_contacts, search_clients, search_itglue, search_knowledge_base, add_ticket_note, update_ticket, send_approval, log_time_entry]
 connectors: []

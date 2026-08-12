@@ -1,6 +1,6 @@
 ---
 name: Vendor Escalation Package
-description: Assemble everything a third-party vendor's support team needs to work a case — environment, reproduction steps, timeline, diagnostics, and the contract or entitlement reference — with credentials stripped.
+description: Assemble a third-party vendor support package — environment, repro steps, timeline, diagnostics, contract or entitlement reference — credentials stripped.
 category: Escalation
 tools: [search_tickets, add_ticket_note, search_knowledge_base, search_itglue, search_hudu, web_search]
 connectors: [IT Glue, Hudu]

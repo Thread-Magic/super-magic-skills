@@ -1,6 +1,6 @@
 ---
 name: OAuth Consent Grant Abuse
-description: A malicious or over-privileged third-party app has an OAuth grant into a client's tenant (illicit consent / consent phishing) — identify the grant, revoke it, and tighten tenant consent policy so it can't recur.
+description: Remove a malicious or over-privileged OAuth consent grant from a client tenant: identify the grant, revoke it, and tighten tenant consent policy.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

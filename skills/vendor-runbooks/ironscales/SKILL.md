@@ -1,6 +1,6 @@
 ---
 name: IRONSCALES Phishing
-description: An IRONSCALES incident or user banner-report landed — read the mailbox-level detection and classification, act on the automated remediation across affected mailboxes, and triage employee reports without training the model wrong.
+description: Work IRONSCALES phishing incidents and user banner reports: mailbox-level detection, automated remediation, and correct model-training feedback.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

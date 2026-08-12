@@ -1,6 +1,6 @@
 ---
 name: AD Replication Issues
-description: Diagnose Active Directory replication failures — password changes not propagating, GPO version mismatches, logon oddities on one site, repadmin errors — by reading repadmin output first and treating destructive fixes as escalations.
+description: Fix Active Directory replication failures using repadmin — GPO version mismatches, password changes not propagating, and event IDs 1311/1388/1988.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, liongard_launchpoint, liongard_metric, liongard_timeline, web_search]
 connectors: [IT Glue, Hudu, Liongard]

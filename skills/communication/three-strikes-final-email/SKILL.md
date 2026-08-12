@@ -1,6 +1,6 @@
 ---
 name: Three Strikes Final Email
-description: Draft the final "we're closing this ticket" email after three documented contact attempts with no client response — only when the evidence of prior attempts actually exists.
+description: Draft the final "we're closing this ticket" email after three documented contact attempts with no client response — only when evidence exists.
 category: Communication
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []

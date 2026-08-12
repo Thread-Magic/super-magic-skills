@@ -1,6 +1,6 @@
 ---
 name: PaperCut / PrinterLogic
-description: Diagnose print-management platform problems — PaperCut and PrinterLogic (and similar) release stations, driver/printer deployment failures, and quota/account issues — from the platform's own logs and deployment state, not the raw print spooler alone. For plain spooler/driver faults use printer-troubleshooting.
+description: Diagnose PaperCut and PrinterLogic print-management issues: release stations, driver deployment failures, and quota/account problems from platform logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

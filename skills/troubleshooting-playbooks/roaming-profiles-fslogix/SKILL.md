@@ -1,6 +1,6 @@
 ---
 name: Roaming Profiles & FSLogix
-description: Diagnose profile-load failures on shared/session-host environments — FSLogix "cannot attach VHD", temporary profiles, sign-in hangs, settings lost between hosts — reading the FSLogix log status code and finding the lock before touching any container. Local single-PC profile corruption belongs to windows-profile-corruption.
+description: Fix FSLogix and roaming-profile failures on session hosts: cannot attach VHD, temp profiles, sign-in hangs, and settings loss via FSLogix log codes.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

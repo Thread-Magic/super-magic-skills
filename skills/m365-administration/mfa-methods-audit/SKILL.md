@@ -1,6 +1,6 @@
 ---
 name: MFA Methods Audit
-description: Audit WHICH authentication methods users have registered — phone-only risk, push without number matching, missing phishing-resistant methods for admins — and plan the upgrade path. Use for "how good is <client>'s MFA really", SMS-deprecation planning, or FIDO2/passkey upgrade requests.
+description: Audit Entra MFA authentication methods per user: phone-only risk, push without number matching, and missing phishing-resistant methods for admins.
 category: M365 Administration
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket, create_ticket, schedule_ticket, send_approval, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: QuickBooks Online Issues
-description: Diagnose QuickBooks Online (the web/browser product) problems — distinguishing QBO from Desktop first, then bank-feed failures, multi-user access/role errors, and browser-layer issues (cache, extensions, third-party cookies) — from the actual error and the browser, not by assuming Desktop. For QB Desktop multi-user use quickbooks-desktop-multiuser.
+description: Fix QuickBooks Online browser problems: bank-feed failures, multi-user role errors, cache and extension issues; distinguish QBO from Desktop before acting.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Huntress ITDR Alerts
-description: A Huntress managed-identity (ITDR) report landed — unwanted access, rogue app, or mail-rule anomaly. Parse the Huntress report anatomy, work the verify-with-user ladder, and drive the Huntress remediation-approval flow to a documented outcome.
+description: Work Huntress ITDR identity reports: unwanted access, rogue apps, mail-rule anomalies. Verify with the user and drive the remediation-approval flow closed.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

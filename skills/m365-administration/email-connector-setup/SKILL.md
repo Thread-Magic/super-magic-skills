@@ -1,6 +1,6 @@
 ---
 name: Email Connector Setup
-description: Get LOB apps, scanners, and printers sending mail through Exchange Online the least-privileged way — pick between SMTP AUTH submission, direct send, and an IP/certificate-scoped relay connector, and never build an open relay. Use when a device or application "needs to send email" or scan-to-email broke.
+description: Route LOB apps, scanners, and printers through Exchange Online using SMTP AUTH, direct send, or an IP/certificate-scoped relay connector.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

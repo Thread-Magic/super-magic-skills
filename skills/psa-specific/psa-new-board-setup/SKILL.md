@@ -1,6 +1,6 @@
 ---
 name: PSA New Board Setup
-description: Designing a new board/queue on a PSA-synced desk — a checklist for statuses, ticket types, SLA mapping, and the Thread View + Flow implications, so the board is coherent and syncs cleanly from day one.
+description: New PSA board or queue setup checklist: statuses, ticket types, SLA mapping, and Thread View plus Flow implications so it syncs cleanly from day one.
 category: PSA-Specific
 tools: [list_boards, list_ticket_statuses, list_ticket_priorities, list_flows, create_flow]
 connectors: []

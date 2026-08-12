@@ -1,6 +1,6 @@
 ---
 name: SharePoint On-Prem
-description: Diagnose on-premises SharePoint Server problems — search crawl failures and stale results, content-database health and mounting, and permission-inheritance confusion — from ULS logs, crawl-log evidence, and the actual permission chain, never by breaking inheritance blindly. For OneDrive/SharePoint Online sync use onedrive-sharepoint-sync.
+description: Diagnose on-premises SharePoint Server: search crawl failures, stale results, content-database mounting, and permission inheritance via ULS crawl logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: OneDrive Known Folder Move
-description: Work the ticket wave from a Known Folder Move rollout — "where did my desktop go", sync conflicts, path-length and invalid-character legacy files, duplicate Desktop confusion — without ever "fixing" a machine by unhooking KFM.
+description: Work OneDrive Known Folder Move rollout tickets — missing Desktop, sync conflicts, path-length and invalid-character legacy files — without unhooking KFM.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

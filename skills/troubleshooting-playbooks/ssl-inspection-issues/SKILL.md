@@ -1,6 +1,6 @@
 ---
 name: SSL Inspection Issues
-description: Diagnose breakage caused by TLS/SSL inspection — pinned apps failing with vague network errors, certificate warnings naming the firewall, one app broken only on the corporate network — and route bypass requests as the security decisions they are.
+description: Diagnose TLS/SSL inspection breakage: pinned apps failing, firewall certificate warnings, apps broken only on corporate networks, and bypass routing.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Synology NAS Alerts
-description: A Synology NAS alert needs working — degraded RAID/storage pool, disk health warnings, volume nearly full, or DSM update decisions. Treat a degraded array as one failure from data loss and keep disk-replacement discipline.
+description: Work Synology NAS alerts: degraded RAID or storage pool, disk-health warnings, full volumes, DSM updates. Treat a degraded array as near data loss.
 category: Vendor Runbooks
 tools: [search_tickets, search_itglue, add_ticket_note, update_ticket]
 connectors: []

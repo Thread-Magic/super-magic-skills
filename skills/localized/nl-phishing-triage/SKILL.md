@@ -1,6 +1,6 @@
 ---
 name: Phishingtriage
-description: Een gebruiker meldde een verdachte e-mail of er landde een phishingmelding op het securityboard — beoordeel zonder de payload aan te raken, controleer de verspreiding, isoleer bij kwaadaardigheid en geef de melder een oordeel terug. (Phishing triage — assess without touching the payload, check blast radius, contain, reply to the reporter — in Dutch.)
+description: Phishingtriage van een verdachte e-mail: beoordelen zonder payload aan te raken, verspreiding controleren, isoleren bij kwaadaardigheid, oordeel geven.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

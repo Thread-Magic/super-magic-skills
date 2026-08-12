@@ -1,6 +1,6 @@
 ---
 name: Mobile Mail Setup Guide
-description: Draft reply-ready instructions for an end user to get work email on their phone — Outlook mobile app path first, matched to the client's mobile policy — "send the user steps for email on their phone."
+description: Draft reply-ready instructions for an end user to get work email on their phone — Outlook mobile app first, matched to the client's mobile policy.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

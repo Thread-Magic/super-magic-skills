@@ -1,6 +1,6 @@
 ---
 name: Cyber Insurance Form Prep
-description: A cyber-insurance application or renewal questionnaire needs filling — draft answers from ticket, RMM, and posture evidence, cite the source for each, and mark every unverifiable answer for human review.
+description: Draft cyber-insurance application answers from ticket, RMM, and posture evidence, cite each source, and mark every unverifiable answer for human review.
 category: Compliance & Audit
 tools: [search_tickets, liongard_identity, liongard_cyber_risk_dashboard, search_ninjaone_devices, search_itglue, add_ticket_note]
 connectors: [Liongard, NinjaOne, IT Glue]

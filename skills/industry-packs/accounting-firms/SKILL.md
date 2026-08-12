@@ -1,6 +1,6 @@
 ---
 name: Supporting Accounting Firms
-description: Vertical pack for CPA and accounting-firm clients — the tax and engagement stack (Lacerte, ProSeries, Drake, UltraTax, CCH-class), the tax-season freeze-and-urgency regime, IRS Pub 4557 / FTC Safeguards WISP obligations, and client-portal sensitivity. Load when the client is an accounting/CPA firm or the ticket names tax software or a tax deadline.
+description: CPA and accounting firm pack covering Lacerte, ProSeries, and UltraTax software, tax-season freeze windows, and IRS Pub 4557 WISP safeguards.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

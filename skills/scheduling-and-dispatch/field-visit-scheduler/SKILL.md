@@ -1,6 +1,6 @@
 ---
 name: Field Visit Scheduler
-description: Schedule an onsite visit and make the trip count — sweep for other open onsite-worthy tickets at the same site, group travel sensibly, book the visit, and draft the client confirmation.
+description: Schedule an onsite visit and make the trip count: sweep other open onsite-worthy tickets at the same site, group travel, book, confirm the client.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_clients, search_contacts, search_members, schedule_ticket, add_ticket_note]
 connectors: []

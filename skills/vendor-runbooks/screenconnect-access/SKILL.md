@@ -1,6 +1,6 @@
 ---
 name: ScreenConnect Access
-description: A ScreenConnect / ConnectWise Control access problem landed — troubleshoot unattended-agent health and session connectivity from the symptom and docs, and hand the technician into the console. It is a remote-access tool, not a script-execution surface.
+description: Troubleshoot ScreenConnect / ConnectWise Control access: unattended-agent health, session connectivity, and console handoff for the technician on duty.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_itglue, add_ticket_note, update_ticket]
 connectors: []

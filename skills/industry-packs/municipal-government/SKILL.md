@@ -1,6 +1,6 @@
 ---
 name: Supporting Municipal Government
-description: Vertical pack for city/town/county and special-district clients — public-records retention (email is a public record), CJIS awareness for anything PD-adjacent, procurement and budget-cycle realities, and public-meeting AV. Load when the client is a municipality, utility district, or public agency, or the ticket touches records requests, police systems, or council meetings.
+description: City, county, and special-district pack covering public-records email retention, CJIS for PD systems, procurement cycles, and council AV.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

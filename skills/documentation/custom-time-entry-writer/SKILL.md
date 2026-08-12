@@ -1,6 +1,6 @@
 ---
 name: Custom Time Entry Writer
-description: Pick a recap template or saved prompt and output language, summarize the thread scoped to the active timer window since the last entry, preview it, then log on confirm — including catching up multiple retroactive entries. Runs manually on demand.
+description: Summarize thread activity within the active timer window using a recap template, preview the draft, then log the time entry on confirm.
 category: Documentation
 tools: [list_recap_templates, run_assistive_ai, log_time_entry, search_tickets]
 connectors: []

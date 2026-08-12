@@ -1,6 +1,6 @@
 ---
 name: Dark Web Alert Lifecycle
-description: A dark-web or credential-exposure monitoring alert arrived — age it, close stale exposures with a documented note, and notify affected users with rotation guidance on fresh ones.
+description: Work dark-web and credential-exposure alerts: age stale exposures, document closure notes, and notify affected users with rotation guidance.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket, view_openDraft]
 connectors: []

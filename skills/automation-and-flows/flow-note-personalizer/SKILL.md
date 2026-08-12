@@ -1,6 +1,6 @@
 ---
 name: Flow Note Personalizer
-description: Replace a Flow's static "add note" text with an AI step that resolves the real owner and ticket context and composes a note with actual names and specifics. Answers the "make our flow notes say something useful instead of the same canned line" workflow.
+description: Replace a Flow's static "add note" text with an AI step that resolves the real owner and ticket context to compose a note with actual names and specifics.
 category: Automation & Flows
 tools: [search_tickets, search_members, add_ticket_note]
 connectors: []

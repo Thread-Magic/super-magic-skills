@@ -1,6 +1,6 @@
 ---
 name: Workaround Documentation
-description: A workaround living in one tech's head is a liability — document it in the standard format (steps, hold time, cost, expiry review), label the ticket "workaround-only," and make sure nobody mistakes it for a fix.
+description: Document a workaround in the standard format (steps, hold time, cost, expiry review) and label the ticket workaround-only so nobody mistakes it for a fix.
 category: Change & Problem Management
 tools: [search_tickets, search_knowledge_base, add_ticket_note, update_ticket]
 connectors: []

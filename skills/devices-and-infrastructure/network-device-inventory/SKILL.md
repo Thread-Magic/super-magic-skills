@@ -1,6 +1,6 @@
 ---
 name: Network Device Inventory
-description: Build or refresh the living inventory of a client's network devices — switches, access points, firewalls, routers — per site, by combining documentation with what monitoring actually sees. Use for "what network gear does <client> have", site audits, or when docs and reality have drifted.
+description: Refresh a client network device inventory — switches, APs, firewalls, routers per site — by combining documentation with what monitoring actually sees.
 category: Devices & Infrastructure
 tools: [search_itglue, search_hudu, liongard_environment, liongard_device, liongard_launchpoint, liongard_metric, liongard_timeline, search_ninjaone_devices, get_ninjaone_device, add_ticket_note, create_ticket]
 connectors: [IT Glue, Hudu, Liongard, NinjaOne]

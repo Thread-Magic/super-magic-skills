@@ -1,6 +1,6 @@
 ---
 name: Linear Spec Lookup
-description: Answer "is this behavior intended?" by pulling the PRD/spec from Linear documents before escalating a suspected bug — cite the spec or confirm there isn't one. Use for "is this a bug or by design", "check the spec before I escalate", or "what does the PRD say about <feature>".
+description: Pull the PRD or spec from Linear documents to answer "is this a bug or by design" before escalating a suspected defect. Cite spec or confirm none.
 category: Connectors
 tools: [search_tickets, add_ticket_note]
 connectors: [Linear]

@@ -1,6 +1,6 @@
 ---
 name: Endpoint Encryption Audit
-description: Audit disk-encryption coverage across a client's endpoints — BitLocker on Windows, FileVault on Macs — flag unencrypted devices, and verify recovery keys are actually escrowed somewhere retrievable. Use for "are all their laptops encrypted", compliance evidence, or after a lost laptop raises the question.
+description: Audit disk-encryption coverage on Windows BitLocker and Mac FileVault, flag unencrypted endpoints, and verify recovery keys are escrowed and retrievable.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, liongard_launchpoint, liongard_metric, liongard_query, search_itglue, search_hudu, search_tickets, add_ticket_note, create_ticket]
 connectors: [NinjaOne, Liongard, IT Glue, Hudu]

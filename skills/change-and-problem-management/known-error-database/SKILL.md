@@ -1,6 +1,6 @@
 ---
 name: Known Error Database
-description: Maintain the KEDB — every known error in one findable format (symptom / root cause / workaround), deduplicated on arrival, and retired when the fix ships — so techs stop re-diagnosing solved mysteries at 2am.
+description: Maintain the KEDB with every known error in one findable symptom, cause, and workaround format — deduplicated on arrival and retired when the fix ships.
 category: Change & Problem Management
 tools: [search_knowledge_base, search_tickets, add_ticket_note, update_ticket]
 connectors: []

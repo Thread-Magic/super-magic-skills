@@ -1,6 +1,6 @@
 ---
 name: ImmyBot Environment Review
-description: Review an ImmyBot tenant's computers and maintenance-session history — what ran, what failed, and which machines keep failing — read-only. Use for "did last night's ImmyBot maintenance succeed", "why didn't <software> deploy to <device>", or an ImmyBot coverage check.
+description: Review an ImmyBot tenant read-only — computers and maintenance-session history, what ran, what failed, and which machines keep failing on deployments.
 category: Devices & Infrastructure
 tools: [list_immybot_tenants, search_immybot_computers, get_immybot_computer, list_immybot_maintenance_sessions, add_ticket_note]
 connectors: [ImmyBot]

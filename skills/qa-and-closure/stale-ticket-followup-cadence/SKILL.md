@@ -1,6 +1,6 @@
 ---
 name: Stale Ticket Follow-Up Cadence
-description: Drive a configurable follow-up cadence (for example 24/48/72 hours, three attempts) on tickets waiting for a client reply — draft each friendly nudge, count documented attempts, and skip tickets in legitimate waits.
+description: Drive a configurable 24/48/72 follow-up cadence on tickets awaiting client reply: draft each friendly nudge, count attempts, skip legitimate waits.
 category: QA & Closure
 tools: [search_tickets, add_ticket_note, update_ticket, schedule_ticket]
 connectors: []

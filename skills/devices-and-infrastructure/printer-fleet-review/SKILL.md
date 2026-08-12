@@ -1,6 +1,6 @@
 ---
 name: Printer Fleet Review
-description: Cluster a client's printer-related tickets to find the chronic devices, quantify the time they burn, and recommend replace vs repair per device. Use for "why do we get so many printer tickets from <client>" or a print-environment health pass.
+description: Cluster a client printer-related tickets to find chronic devices, quantify the time they burn, and recommend replace-vs-repair per problem printer.
 category: Devices & Infrastructure
 tools: [search_tickets, search_itglue, search_ninjaone_devices, add_ticket_note]
 connectors: [NinjaOne, IT Glue]

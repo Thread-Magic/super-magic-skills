@@ -1,6 +1,6 @@
 ---
 name: Hardware Diagnostics
-description: Work suspected hardware faults on desktops and laptops — no-boot, random shutdowns, disk noises, battery/thermal complaints — through the POST/boot-stage ladder, storage and battery health reads, and warranty routing.
+description: Work desktop and laptop hardware faults — no-boot, random shutdowns, disk noises, battery and thermal — through POST stages, SMART, and warranty routing.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, NinjaOne]

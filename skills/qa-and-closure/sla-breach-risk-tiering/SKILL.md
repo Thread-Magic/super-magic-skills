@@ -1,6 +1,6 @@
 ---
 name: SLA Breach Risk Tiering
-description: Tier every open ticket by SLA exposure — Breached / Critical / High / Watch — based on remaining time to the SLA target, adjusted by escalating and mitigating factors, with a recommended move per tier.
+description: Tier every open ticket by SLA exposure — Breached, Critical, High, Watch — from remaining time to target with escalation factors and a next move.
 category: QA & Closure
 tools: [search_tickets, list_boards, list_ticket_priorities, add_ticket_note, update_ticket]
 connectors: []

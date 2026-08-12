@@ -1,6 +1,6 @@
 ---
 name: Kaseya BMS Workflow
-description: For desks synced to Kaseya BMS — navigate the BMS status/queue/location model, respect the service-desk vs projects module split, and audit Thread↔BMS drift the same way as the CW/Halo sync audits.
+description: Kaseya BMS-synced desks: navigate the status/queue/location model, respect the service-desk vs projects split, and audit Thread ↔ BMS drift regularly.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, update_ticket, add_ticket_note, search_clients]
 connectors: []

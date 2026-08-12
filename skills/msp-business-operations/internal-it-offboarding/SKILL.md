@@ -1,6 +1,6 @@
 ---
 name: Internal IT Offboarding
-description: Offboard departing MSP staff — client-credential rotation first (they had keys to every environment), then tool deprovisioning, ticket reassignment, and client-facing transition notes. Use when the leaver works FOR the MSP, not for a client.
+description: Offboard departing MSP staff with client-credential rotation first, then tool deprovisioning, ticket reassignment, and client-facing transition notes.
 category: MSP Business Operations
 tools: [search_tickets, search_members, search_clients, search_knowledge_base, search_itglue, search_hudu, create_ticket, update_ticket, add_ticket_note, send_approval, log_time_entry]
 connectors: [IT Glue, Hudu]

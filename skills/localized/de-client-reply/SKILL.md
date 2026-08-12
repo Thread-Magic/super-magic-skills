@@ -1,6 +1,6 @@
 ---
 name: Kundenantwort
-description: Eine kundengerichtete Antwort in der Hausstimme und im Hausformat verfassen — Statusmeldung, Zwischenstand, Abschlussnachricht oder jede Kunden-E-Mail zu einem Ticket. (Draft a client-facing reply in the house voice — status updates, closing messages, any client email on a ticket, in German.)
+description: Kundengerichtete Ticket-Antwort in der Hausstimme entwerfen: Statusupdates, Zwischenstand, Abschlussnachricht oder jede E-Mail an den Kunden.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []

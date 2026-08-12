@@ -1,6 +1,6 @@
 ---
 name: Liongard M365 Tenant Read
-description: Answer tenant-level Microsoft 365 questions from the Liongard M365 inspector's dataprint — license inventory and assignment, mailbox statistics, admin roles, secure-score inputs, and sharing settings — without touching the tenant.
+description: Answer tenant-level Microsoft 365 questions via the Liongard M365 inspector: license assignment, mailbox stats, admin roles, secure score, sharing.
 category: Liongard Inspectors
 tools: [liongard_launchpoint, liongard_metric, liongard_identity, liongard_detection, liongard_timeline, liongard_query]
 connectors: [Liongard]

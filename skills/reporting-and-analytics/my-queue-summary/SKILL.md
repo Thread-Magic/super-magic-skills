@@ -1,6 +1,6 @@
 ---
 name: My Queue Summary
-description: A technician asks what is on their plate, what needs replies, what is urgent, or what to work next — summarize their assigned tickets with a clear next step for each.
+description: Summarize a technician's assigned tickets showing what needs replies, what is urgent, and what to work next, with a clear next step attached to each item.
 category: Reporting & Analytics
 tools: [search_tickets, search_members]
 connectors: []

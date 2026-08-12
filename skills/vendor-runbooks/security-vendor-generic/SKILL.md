@@ -1,6 +1,6 @@
 ---
 name: Security Vendor Generic
-description: A security alert arrived from a product with no dedicated vendor runbook — extract the alert anatomy, map its severity to the desk's tiers, separate containment-already-done from containment-needed, and build a vendor escalation package.
+description: Handle security alerts from any vendor without a dedicated runbook: extract alert anatomy, map severity to desk tiers, build a vendor escalation package.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

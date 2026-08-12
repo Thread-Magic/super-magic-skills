@@ -1,6 +1,6 @@
 ---
 name: Morning Dispatch Report
-description: The dispatcher's start-of-day briefing — overnight arrivals, P1/P2 status, unassigned aging, today's scheduled work, and a top-10 priority work list. Runs manually or from an external scheduler.
+description: The dispatcher's start-of-day briefing: overnight arrivals, P1/P2 status, unassigned aging, today's scheduled work, and a top-10 priority work list.
 category: Scheduling & Dispatch
 tools: [search_tickets, list_boards, list_ticket_priorities, search_members]
 connectors: []

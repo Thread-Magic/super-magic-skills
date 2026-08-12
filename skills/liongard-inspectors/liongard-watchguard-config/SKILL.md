@@ -1,6 +1,6 @@
 ---
 name: Liongard WatchGuard Config Read
-description: Interrogate a client's WatchGuard Firebox posture through Liongard — Fireware version, subscription/licensing state, policy inventory, VPN config, admin accounts. Use for config/state questions on WatchGuard gear; for responding to live WatchGuard ALERTS use vendor-runbooks/watchguard-firewall-alerts instead.
+description: Interrogate a client's WatchGuard Firebox posture via Liongard: Fireware version, subscription/licensing, policy inventory, VPN config, admin accounts.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

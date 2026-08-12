@@ -1,6 +1,6 @@
 ---
 name: Intent Bulk Variation Update
-description: Apply a shared argument or reply block across all of an intent's client variations at once, with a per-variation diff preview and explicit confirmation before any write. Answers the "change this everywhere without editing each client by hand" workflow; runs manually on demand.
+description: Apply a shared argument or reply block across every client variation of an intent at once, with per-variation diff preview and explicit write confirmation.
 category: Automation & Flows
 tools: [get_intent, set_variation_arguments, set_variation_replies, update_variation]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Citrix Basics
-description: First-line ladder for Citrix (Virtual Apps and Desktops / DaaS) tickets on desks without a Citrix specialist — VDA registration, StoreFront vs Workspace confusion, sessions hanging or apps not launching — knowing exactly what a generalist can check and when to hand to the Citrix admin.
+description: First-line playbook for Citrix Virtual Apps and Desktops (CVAD/DaaS) — VDA registration, StoreFront vs Workspace, hung sessions — before escalating.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

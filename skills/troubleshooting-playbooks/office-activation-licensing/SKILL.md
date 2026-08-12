@@ -1,6 +1,6 @@
 ---
 name: Office Activation & Licensing
-description: Diagnose Office/Microsoft 365 Apps activation failures — "Product deactivated" banners, unlicensed product mode, repeated sign-in prompts for activation, shared-computer/RDS activation errors — by detecting which license type the install actually uses before touching anything.
+description: Fix Office / Microsoft 365 Apps activation — Product Deactivated, unlicensed mode, repeated prompts, shared-computer/RDS errors — detect the license type.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]

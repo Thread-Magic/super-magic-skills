@@ -1,6 +1,6 @@
 ---
 name: Liongard Change Review
-description: Answer "what changed in this client's environment recently" from Liongard detections and timelines, and correlate those changes with new tickets. Use when something broke after a change, before/after an incident window, or for a periodic change-awareness pass.
+description: Answer "what changed recently" from Liongard detections and timelines, correlating environment changes with new tickets after breakage or incidents.
 category: Devices & Infrastructure
 tools: [liongard_environment, liongard_detection, liongard_timeline, liongard_events, liongard_alert, search_tickets, add_ticket_note]
 connectors: [Liongard]

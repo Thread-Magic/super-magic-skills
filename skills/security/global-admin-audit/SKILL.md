@@ -1,6 +1,6 @@
 ---
 name: Global Admin Audit
-description: Audit a client's global/company administrator accounts and recent admin-role changes — flag unexpected admins, missing MFA, and grants with no authorizing ticket.
+description: Audit a client tenant's global administrator accounts and recent admin-role changes, flagging unexpected admins, missing MFA, and unauthorized grants.
 category: Security
 tools: [liongard_identity, liongard_detection, liongard_timeline, search_tickets, add_ticket_note]
 connectors: [Liongard]

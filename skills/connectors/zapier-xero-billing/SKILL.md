@@ -1,6 +1,6 @@
 ---
 name: Zapier Xero Billing
-description: For Xero-shop MSPs — draft (never send) invoices from ticket time entries, and check a client's overdue-invoice standing before dispatching billable work. Approval-gated, draft-only. Use for "invoice the out-of-contract work on ticket <number>", "are they overdue before we do this", or ticket-time-to-Xero reconciliation.
+description: For Xero-shop MSPs — draft (never send) invoices from ticket time entries and check a client's overdue-invoice standing before billable work.
 category: Connectors
 tools: [search_tickets, send_approval, add_ticket_note]
 connectors: [Zapier: Xero]

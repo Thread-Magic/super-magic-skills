@@ -1,6 +1,6 @@
 ---
 name: Compromised Account Containment
-description: An account needs containing NOW — run the rapid checklist (block sign-in, revoke sessions, reset password, sweep MFA and rules) and timestamp every step in the ticket note.
+description: Rapid containment checklist for a compromised account: block sign-in, revoke sessions, reset password, sweep MFA and inbox rules, timestamp steps.
 category: Security
 tools: [search_contacts, add_ticket_note, update_ticket]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: ThreatLocker Allowlisting
-description: A ThreatLocker approval request, elevation request, or mode question arrived — triage the daily allowlisting approvals safely (the core workload), keep Learning vs Secured mode straight, and handle Elevation Control and Storage Control requests without eroding zero-trust. Verify against ThreatLocker's current documentation.
+description: Work ThreatLocker approval and elevation requests: triage daily allowlisting safely, keep Learning vs Secured mode straight, protect zero-trust posture.
 category: Vendor Runbooks
 tools: [search_tickets, search_clients, search_contacts, search_itglue, add_ticket_note, update_ticket]
 connectors: []

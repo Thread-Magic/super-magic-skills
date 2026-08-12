@@ -1,6 +1,6 @@
 ---
 name: Monthly Security Report
-description: Produce a client's monthly security digest — incident and alert counts by type, notable events, posture trend, and recommendations — ready for the client edition or the internal review.
+description: Produce a client's monthly security digest: incident and alert counts, notable events, posture trend, and recommendations for client or internal review.
 category: Security
 tools: [search_tickets, liongard_cyber_risk_dashboard, add_ticket_note]
 connectors: [Liongard]

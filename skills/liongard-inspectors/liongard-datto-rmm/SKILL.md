@@ -1,6 +1,6 @@
 ---
 name: Liongard Datto RMM Read
-description: Interrogate a client's Datto RMM footprint through the Liongard Datto RMM inspector — managed device inventory, agent/online status, patch state, monitored alerts, sites. Use for "what devices does RMM manage for them?", agent-coverage gaps, or patch-currency checks during triage.
+description: Interrogate a client's Datto RMM footprint via Liongard: managed device inventory, agent online status, patch state, monitored alerts, and sites.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_detection, liongard_timeline]
 connectors: [Liongard]

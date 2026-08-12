@@ -1,6 +1,6 @@
 ---
 name: Unattended Output Discipline
-description: BASE skill — the output contract for any prompt or skill that runs unattended inside a flow, where the agent's entire reply is posted verbatim as the artifact. Load whenever writing or reviewing a flow-embedded agent prompt, or when a skill has an "Unattended (Flows)" claim.
+description: Base skill defining the output contract for any prompt or skill that runs unattended inside a flow, where the agent's entire reply is posted verbatim.
 category: Automation & Flows
 tools: []
 connectors: []

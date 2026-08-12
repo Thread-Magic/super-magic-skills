@@ -1,6 +1,6 @@
 ---
 name: Scope Pushback
-description: Draft the reply when a client asks for something outside their agreement — a helpful no that shows the path to yes (quote or agreement change) and loops in the account manager.
+description: Draft the reply when a client requests something outside their agreement — a helpful no showing the path to yes (quote or agreement change) with AM loop.
 category: Communication
 tools: [search_tickets, search_members, view_openDraft, add_ticket_note]
 connectors: []

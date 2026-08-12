@@ -1,6 +1,6 @@
 ---
 name: Certificate Inventory
-description: Build the expiry calendar of every certificate a client depends on — public web, RDS/gateway, LOB apps, internal CA, device certs — with ownership and renewal runbook per cert. Use for "what certs does <client> have", "when does anything expire", or after an expired-cert outage.
+description: Build an expiry calendar of every certificate a client depends on — public web, RDS, LOB, internal CA, device certs — with owner and renewal steps.
 category: Devices & Infrastructure
 tools: [search_itglue, search_hudu, liongard_launchpoint, liongard_metric, liongard_timeline, liongard_query, search_tickets, search_knowledge_base, add_ticket_note, create_ticket, schedule_ticket]
 connectors: [Liongard, IT Glue, Hudu]

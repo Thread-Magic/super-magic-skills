@@ -1,6 +1,6 @@
 ---
 name: Incident Comms Cadence
-description: During a major incident, updates go out on a clock — internal and client — even when the update is "no change." Draft each update from ticket evidence, track the next-due time, and never let the cadence silently lapse.
+description: Draft internal and client updates on a fixed clock during a major incident from ticket evidence, tracking the next-due time so the cadence never lapses.
 category: Change & Problem Management
 tools: [search_tickets, add_ticket_note, search_contacts, search_clients]
 connectors: []

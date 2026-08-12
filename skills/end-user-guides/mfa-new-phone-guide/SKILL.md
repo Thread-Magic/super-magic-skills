@@ -1,6 +1,6 @@
 ---
 name: MFA New Phone Guide
-description: Draft reply-ready instructions for an end user who got a new phone and needs to move or re-enroll their MFA safely — "user has a new phone and can't approve sign-ins."
+description: Draft reply-ready instructions for an end user who got a new phone and needs to move or re-enroll their MFA safely to approve sign-ins again.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

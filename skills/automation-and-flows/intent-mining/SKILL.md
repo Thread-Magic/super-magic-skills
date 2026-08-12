@@ -1,6 +1,6 @@
 ---
 name: Intent Mining
-description: Analyze recent tickets to find the top customer-facing intents worth building, ranked by volume and automatability, with draft trigger phrases — use when asked to "mine tickets for intents", "what intents should we build", or "analyze trends and create intents".
+description: Analyze recent tickets to find top customer-facing intents worth building, ranked by volume and automatability, with draft trigger phrases for each pick.
 category: Automation & Flows
 tools: [search_tickets, list_intents, list_boards, get_intent]
 connectors: []

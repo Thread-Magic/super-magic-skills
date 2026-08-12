@@ -1,6 +1,6 @@
 ---
 name: Supporting Financial Services Clients
-description: Vertical pack for advisory, broker-dealer, banking, and insurance clients — FINRA/SEC retention and archiving obligations (never break the journal), heightened change control, the advisory/wealth stack (Orion, Redtail-class), and market-hours urgency. Load when the client is an RIA, broker-dealer, bank, credit union, or insurance agency, or the ticket touches email archiving, retention, or trading systems.
+description: RIA, broker-dealer, and bank pack covering FINRA/SEC email archiving retention, Orion and Redtail advisory tools, and market-hours urgency.
 category: Industry Packs
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, update_ticket, web_search]
 connectors: [IT Glue, Hudu]

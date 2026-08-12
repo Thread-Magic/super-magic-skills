@@ -1,6 +1,6 @@
 ---
 name: Safe Attachments and Links Policy
-description: Tune Defender for Office 365 Safe Attachments and Safe Links policies from evidence — dynamic delivery, detonation action, URL rewriting/scanning, and scoped exceptions — without breaking legitimate mail flow. Use when a client reports attachment delivery delays, blocked links, or asks to strengthen (or loosen) Defender for O365 protection.
+description: Tune Defender for Office 365 Safe Attachments and Safe Links policies with dynamic delivery, URL rewriting, and scoped exceptions from evidence.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, send_approval, log_time_entry, web_search]
 connectors: [IT Glue, Hudu]

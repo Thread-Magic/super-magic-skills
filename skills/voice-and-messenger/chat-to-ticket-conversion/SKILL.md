@@ -1,6 +1,6 @@
 ---
 name: Chat-to-Ticket Conversion
-description: A live Messenger chat turned into a real issue — capture the chat's full context into a proper ticket (title, description, contact, priority, steps already tried) so the user never has to repeat themselves. Use when a chat outgrows quick-answer territory.
+description: Capture a live Messenger chat's context into a real ticket with title, description, contact, priority, and steps tried — no repeating for the user.
 category: Voice & Messenger
 tools: [search_tickets, update_ticket, create_ticket, assign_contact, add_ticket_note, log_time_entry, list_ticket_priorities]
 connectors: []

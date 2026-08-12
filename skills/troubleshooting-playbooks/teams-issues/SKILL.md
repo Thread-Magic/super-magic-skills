@@ -1,6 +1,6 @@
 ---
 name: Teams Issues
-description: Diagnose Microsoft Teams problems — can't join meetings, no audio/video, stuck presence, guest access failures, sign-in loops — with cache reset reserved for defined criteria.
+description: Diagnose Microsoft Teams sign-in loops, meeting join failures, no audio or video, stuck presence, and guest access, with cache reset used sparingly.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
