@@ -4,13 +4,8 @@ Thanks for adding to the library. The bar here is **value that works** — a sma
 strong, runnable skills beats a long tail of near-copies or prompts that can't actually
 execute. Every skill is a copy-paste prompt an MSP service desk runs in Super Magic.
 
-**Two ways to contribute:**
-
-- **No code — just an idea.** Open a [**Suggest a skill idea**](../../issues/new?template=skill-idea.yml)
-  issue and describe the workflow in plain English. A maintainer (or the formatting agent in
-  [`SKILL-FORMATTING-AGENT.md`](SKILL-FORMATTING-AGENT.md)) turns it into a `SKILL.md`. Great for
-  "I wish Super Magic could…" when you don't want to write the prompt yourself.
-- **Write or fix one yourself** — fork, add/edit a `SKILL.md`, open a PR. That's the 4 steps below.
+Contributions come in through the repo: fork it, add or edit a `SKILL.md`, and open a pull
+request — the 4 steps below.
 
 ## Add or update a skill in 4 steps
 

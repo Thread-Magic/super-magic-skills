@@ -4,7 +4,7 @@ A library of ready-to-use Skills for Super Magic and Super Magic Agents. Each Sk
 
 These are drawn from how partners actually use the agent plus verified capability research on every connector. Nothing here contains partner names, client data, or environment-specific detail. Read a Skill, adapt the specifics to your stack, and load it.
 
-Browse them all — searchable by category, connector, role, and outcome — on the [Thread docs site](https://docs.getthread.com/skill-library/overview). **This repo is where they're crowdsourced: [suggest an idea](../../issues/new?template=skill-idea.yml) or [contribute a skill](CONTRIBUTING.md), and it goes live on the docs site.**
+Browse them all — searchable by category, connector, role, and outcome — on the [Thread docs site](https://docs.getthread.com/skill-library/overview). **This repo is where they're crowdsourced: [contribute a skill](CONTRIBUTING.md) and it goes live on the docs site.**
 
 ## How a Skill works
 
@@ -43,12 +43,9 @@ Open a `SKILL.md`, copy the **Prompt** block, and paste it into Super Magic (or 
 
 ## Contribute (crowdsource)
 
-This library grows from the community. Two ways in — pick your comfort level:
+This library grows from the community, through the repo. Copy [`TEMPLATE.md`](TEMPLATE.md) into `skills/<category>/<slug>/SKILL.md`, validate your tools against [`research/tool-catalog.md`](research/tool-catalog.md), tag `role`/`outcome` from [`research/taxonomy.md`](research/taxonomy.md), test the prompt in Super Magic, run `python3 tools/gen_catalog.py`, and open a pull request.
 
-- **💡 Just have an idea?** No code, no prompt-writing. Open the [**Suggest a skill idea**](../../issues/new?template=skill-idea.yml) issue and describe the workflow in plain English — a maintainer (or our formatting agent) shapes it into a skill.
-- **🛠️ Want to write or fix one yourself?** Copy [`TEMPLATE.md`](TEMPLATE.md) into `skills/<category>/<slug>/SKILL.md`, validate your tools against [`research/tool-catalog.md`](research/tool-catalog.md), tag `role`/`outcome` from [`research/taxonomy.md`](research/taxonomy.md), test the prompt in Super Magic, run `python3 tools/gen_catalog.py`, and open a pull request.
-
-Full rules are in [`CONTRIBUTING.md`](CONTRIBUTING.md); the exact structure/format spec (also usable as an AI prompt) is [`SKILL-FORMATTING-AGENT.md`](SKILL-FORMATTING-AGENT.md). The bar for both paths: it solves one real MSP workflow, its tools exist, and it carries its own guardrails. **Merges to `main` publish automatically** to the [Skill Library on docs.getthread.com](https://docs.getthread.com/skill-library/overview).
+Full rules are in [`CONTRIBUTING.md`](CONTRIBUTING.md); the exact structure/format spec (also usable as an AI prompt) is [`SKILL-FORMATTING-AGENT.md`](SKILL-FORMATTING-AGENT.md). The bar: it solves one real MSP workflow, its tools exist, and it carries its own guardrails. **Merges to `main` publish automatically** to the [Skill Library on docs.getthread.com](https://docs.getthread.com/skill-library/overview).
 
 ## Catalog
 
