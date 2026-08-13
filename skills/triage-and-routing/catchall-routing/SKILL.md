@@ -23,8 +23,9 @@ Route a ticket that arrived with no company (or on a catchall contact) to the re
 client and contact using an explicit evidence ladder — or leave it alone when the
 evidence isn't there.
 
-1. Read the ticket: title, description, earliest message, and full headers/quoted text if
-   present.
+1. Read the ticket: title, description, earliest message, full headers/quoted text if
+   present, and any internal notes. For phone-sourced tickets, a post-call note often states
+   the caller's name and company outright — treat that as a high-confidence identity source.
 
 2. Spam pre-check: if the message is clearly unsolicited marketing or automated junk with
    no client-identifying content and no sign a human forwarded it in for a reason, stop
@@ -44,9 +45,15 @@ evidence isn't there.
    organization, device, tenant) from the alert body and use those as the company clue.
 
 6. Resolve the company by searching clients on the domain or extracted name; then find the
-   contact by searching contacts scoped to that company. If the sender has no contact
-   record, propose the closest match or note that one needs creating — never attach to a
-   lookalike.
+   contact by searching contacts scoped to that company.
+   - Confident contact match (email match, or a full name within that company) → use it.
+   - No confident contact match, but the company is confidently resolved at domain or
+     explicit-name strength → fall back to the company's admin/primary contact so the ticket
+     still lands on the right client, and if there's no admin contact, a basic contact at that
+     company. Call out in your note that a fallback contact was used, so a human can correct it.
+   - The company resolved but has no contacts at all → note that and leave for manual handling.
+   Never attach to a lookalike contact at a different company, and never fall back to a contact
+   until the company itself is confidently resolved.
 
 7. If the current wrong assignment must be cleared before the correct one can apply on
    this tenant, unassign first (set back to no-company/catchall), then set the correct
