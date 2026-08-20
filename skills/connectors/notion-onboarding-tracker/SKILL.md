@@ -7,7 +7,7 @@ connectors: [Notion]
 scope: global
 flow: no
 role: [Service & Ops Manager]
-outcome: [Time & Cost Savings (Capacity)]
+outcome: [Staff Enablement, Time & Cost Savings (Capacity)]
 ---
 
 # Notion Onboarding Tracker

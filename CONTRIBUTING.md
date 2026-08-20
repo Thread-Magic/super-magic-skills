@@ -61,7 +61,10 @@ just its category); tag two when both genuinely apply.
   Security & Compliance Owner · Sales & Business Development · MSP Owner / Leadership
 - **Outcomes:** Faster Resolution & Response · Fewer Escalations & Less Noise ·
   Time & Cost Savings (Capacity) · Always-On Coverage · Risk & Compliance ·
-  Retention & Growth (CSAT/Expansion)
+  Retention & Growth (CSAT/Expansion) · Staff Enablement
+  <br>*Staff Enablement is for skills whose value is making your **own people** better or faster
+  at the job — training, coaching, ramp. Not client or end-user onboarding: provisioning a
+  customer's new starter belongs in `onboarding-and-access`.*
 - **Connectors** (list any the prompt needs; `[]` if native): NinjaOne · Liongard · IT Glue ·
   Hudu · TimeZest · Notion · Linear · Zapier (written `"Zapier: <App>"`) · ConnectWise RMM ·
   ImmyBot · Microsoft 365. Make the prompt **degrade gracefully** when a connector is absent.
