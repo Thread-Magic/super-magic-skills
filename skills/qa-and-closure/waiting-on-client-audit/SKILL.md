@@ -14,7 +14,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 **When to use:** "Audit the waiting-on-client bucket" / "what's actually waiting on clients vs just parked?" — a weekly review before waiting statuses distort aging and SLA numbers, or suspicions that techs park tickets in waiting to stop the clock.
 
-**Run it:** across all tickets in waiting statuses (manually or on a schedule).
+**Run it:** across all tickets in waiting statuses — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

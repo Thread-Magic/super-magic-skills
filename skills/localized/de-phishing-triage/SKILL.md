@@ -1,5 +1,5 @@
 ---
-name: Phishing-Triage
+name: Phishing-Triage (German)
 description: Phishing-Triage einer verdächtigen E-Mail: Bewertung ohne Nutzlast, Streuradius prüfen, bei Böserkennung eindämmen, Melder mit Urteil antworten.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
@@ -10,7 +10,7 @@ role: [Security & Compliance Owner]
 outcome: [Risk & Compliance]
 ---
 
-# Phishing-Triage
+# Phishing-Triage (German)
 
 **Wann einsetzen:** Ein Nutzer hat etwas Verdächtiges weitergeleitet („ist das Phishing?"), ein Phishing-Meldeticket landet auf dem Sicherheits-Board, oder ein Techniker will eine Zweitmeinung, bevor er eine Nachricht freigibt oder löscht.
 

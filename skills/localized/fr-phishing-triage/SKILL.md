@@ -1,5 +1,5 @@
 ---
-name: Triage d'hameçonnage
+name: Triage d'hameçonnage (French)
 description: Triage d'hameçonnage d'un e-mail suspect: évaluer sans toucher la charge, mesurer le rayon d'exposition, contenir si malveillant, répondre au déclarant.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
@@ -10,7 +10,7 @@ role: [Security & Compliance Owner]
 outcome: [Risk & Compliance]
 ---
 
-# Triage d'hameçonnage
+# Triage d'hameçonnage (French)
 
 **Quand l'utiliser :** un utilisateur a transféré quelque chose de louche (« est-ce de l'hameçonnage ? »), un ticket de signalement arrive sur le tableau sécurité, ou un technicien veut un second avis avant de libérer ou supprimer un message.
 

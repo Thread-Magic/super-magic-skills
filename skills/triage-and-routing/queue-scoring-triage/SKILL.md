@@ -14,7 +14,7 @@ outcome: [Time & Cost Savings (Capacity), Faster Resolution & Response]
 
 **When to use:** "What order should we work the queue in?" / "what's next for the team?" — a dispatcher wants a scored morning triage list across boards, or a lead wants to sanity-check that high-priority work is actually surfacing first.
 
-**Run it:** across all open tickets (manually or on a schedule).
+**Run it:** across all open tickets — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

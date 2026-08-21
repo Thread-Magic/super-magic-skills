@@ -1,5 +1,5 @@
 ---
-name: Tagesübersicht
+name: Tagesübersicht (German)
 description: Tagesübersicht offener Tickets eines Technikers: was auf Antwort wartet, was dringend ist, was heute geplant ist — inklusive 3-Zeilen-Variante.
 category: Localized
 tools: [search_tickets, search_members]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Tagesübersicht
+# Tagesübersicht (German)
 
 **Wann einsetzen:** Ein Techniker will die Morgenlektüre — alles, was auf dem Tisch liegt, sortiert danach, was jetzt Aufmerksamkeit braucht, in unter einer Minute überfliegbar. „Gib mir eine Übersicht über meine offenen Tickets", „Morgenübersicht", „Kurzfassung".
 

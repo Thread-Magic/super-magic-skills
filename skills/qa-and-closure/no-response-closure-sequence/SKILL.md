@@ -14,7 +14,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 **When to use:** A ticket completed the follow-up cadence (three attempts) with no client reply and needs to be closed properly, "close out the no-response tickets" after a cadence sweep, or a tech asks to close a quiet ticket — this sequence proves it's safe to.
 
-**Run it:** across all no-response tickets that finished the cadence (manually or on a schedule).
+**Run it:** across all no-response tickets that finished the cadence — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 
