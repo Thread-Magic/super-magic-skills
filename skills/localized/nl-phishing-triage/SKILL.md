@@ -1,5 +1,5 @@
 ---
-name: Phishingtriage
+name: Phishingtriage (Dutch)
 description: Phishingtriage van een verdachte e-mail: beoordelen zonder payload aan te raken, verspreiding controleren, isoleren bij kwaadaardigheid, oordeel geven.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
@@ -10,7 +10,7 @@ role: [Security & Compliance Owner]
 outcome: [Risk & Compliance]
 ---
 
-# Phishingtriage
+# Phishingtriage (Dutch)
 
 **Wanneer gebruiken:** een gebruiker stuurde iets verdachts door ("is dit phishing?"), een phishingmeldingsticket landt op het securityboard, of een technicus wil een second opinion voordat een bericht wordt vrijgegeven of verwijderd.
 

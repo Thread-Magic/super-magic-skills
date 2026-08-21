@@ -14,7 +14,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 **When to use:** "Why are our tickets reopening?" / "analyze reopens for the last 90 days" — a lead investigating a rising reopen rate or a specific tech's reopen cluster, feeding root-cause input into the QA rubric, or "which clients keep coming back about the same thing?"
 
-**Run it:** across all reopened tickets in a window (manually or on a schedule).
+**Run it:** across all reopened tickets in a window — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

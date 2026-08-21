@@ -14,7 +14,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 **When to use:** "What's at risk of breaching?" / "tier the queue by SLA risk" / "anything breached overnight?" — the dispatcher's morning and pre-EOD passes, or feeding an escalation huddle a defensible priority order.
 
-**Run it:** across all open tickets (manually or on a schedule).
+**Run it:** across all open tickets — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

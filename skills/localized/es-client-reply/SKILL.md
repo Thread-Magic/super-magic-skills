@@ -1,5 +1,5 @@
 ---
-name: Respuesta al cliente
+name: Respuesta al cliente (Spanish)
 description: Redactar una respuesta externa al cliente con voz y formato de la casa: actualizaciones, notas de estado, cierre o cualquier correo del ticket.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Respuesta al cliente
+# Respuesta al cliente (Spanish)
 
 **Cuándo usar:** un técnico necesita enviar un mensaje de cara al cliente y lo quiere alineado con la marca y listo para enviar — una actualización, nota de estado o mensaje de cierre.
 

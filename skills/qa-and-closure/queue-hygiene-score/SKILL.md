@@ -14,7 +14,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 **When to use:** "How clean is the <board> queue?" / "give me a hygiene score for the service board" — before dispatch automation or SLA reporting goes live, a recurring weekly check comparing to last week, or after an alert storm or migration likely left malformed tickets behind.
 
-**Run it:** across all open tickets on a board (manually or on a schedule).
+**Run it:** across all open tickets on a board — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

@@ -1,5 +1,5 @@
 ---
-name: Resumen diario
+name: Resumen diario (Spanish)
 description: Resumen diario de los tickets abiertos de un técnico: qué espera respuesta, qué es urgente, qué está agendado hoy, con variante ultracorta.
 category: Localized
 tools: [search_tickets, search_members]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Resumen diario
+# Resumen diario (Spanish)
 
 **Cuándo usar:** un técnico quiere la lectura de la mañana — todo lo que tiene sobre la mesa, ordenado según lo que le necesita ahora mismo, legible en menos de un minuto. "Dame un resumen de mis tickets abiertos", "resumen de la mañana", "la versión corta".
 

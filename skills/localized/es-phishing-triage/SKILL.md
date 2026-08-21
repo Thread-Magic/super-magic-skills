@@ -1,5 +1,5 @@
 ---
-name: Triaje de phishing
+name: Triaje de phishing (Spanish)
 description: Triaje de phishing de un correo sospechoso: evaluar sin tocar la carga, medir radio de impacto, contener si es malicioso y responder al reportante.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
@@ -10,7 +10,7 @@ role: [Security & Compliance Owner]
 outcome: [Risk & Compliance]
 ---
 
-# Triaje de phishing
+# Triaje de phishing (Spanish)
 
 **Cuándo usar:** un usuario reenvió algo sospechoso ("¿esto es phishing?"), un ticket de reporte cae en el tablero de seguridad, o un técnico quiere una segunda opinión antes de liberar o borrar un mensaje.
 

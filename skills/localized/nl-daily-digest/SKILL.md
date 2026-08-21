@@ -1,5 +1,5 @@
 ---
-name: Dagelijkse samenvatting
+name: Dagelijkse samenvatting (Dutch)
 description: Dagelijkse samenvatting van openstaande tickets van een technicus: wat wacht op antwoord, wat is urgent, wat staat vandaag gepland, met 3-regelvariant.
 category: Localized
 tools: [search_tickets, search_members]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Dagelijkse samenvatting
+# Dagelijkse samenvatting (Dutch)
 
 **Wanneer gebruiken:** een technicus wil de ochtendleesbeurt — alles wat op zijn of haar bord ligt, gesorteerd op wat nú aandacht nodig heeft, in minder dan een minuut te scannen. "Geef me een overzicht van mijn open tickets", "ochtendoverzicht", "korte versie".
 

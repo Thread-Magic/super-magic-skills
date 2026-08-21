@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** Weekly — "build the QA digest" / "summarize this week's QA failures" / "what should I coach on this week?", prepping the team meeting or a one-on-one with quality talking points backed by tickets, or delivering the digest on a schedule to email or a team channel.
 
-**Run it:** across all of the week's QA results (manually or on a schedule).
+**Run it:** across all of the week's QA results — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 
