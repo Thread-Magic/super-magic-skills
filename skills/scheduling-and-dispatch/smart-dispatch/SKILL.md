@@ -72,5 +72,7 @@ score. Never assign to the requester, an inactive/excluded member, or reassign a
 that already has an owner. Per-candidate searches can cap — report familiarity as minimums
 when capped. When in doubt, do nothing beyond the diagnostic note. If clients are aligned to
 dedicated service pods, use Pod-Based Dispatch to scope the candidate pool to the client's
-team before scoring.
+team before scoring. If the desk runs support tiers rather than specialty scoring,
+use Tier Dispatcher — it picks from a fixed per-tier pool and checks today's schedule
+before booking.
 ```
