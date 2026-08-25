@@ -1,6 +1,6 @@
 ---
-name: SLA Breach Risk Tiering
-description: Tier every open ticket by SLA exposure — Breached, Critical, High, Watch — from remaining time to target with escalation factors and a next move.
+name: XLA Breach Risk Tiering
+description: Tier every open ticket by XLA exposure — Breached, Critical, High, Watch — from remaining time to target with escalation factors and a next move.
 category: QA & Closure
 tools: [search_tickets, list_boards, list_ticket_priorities, add_ticket_note, update_ticket]
 connectors: []
@@ -10,9 +10,9 @@ role: [Service & Ops Manager]
 outcome: [Fewer Escalations & Less Noise]
 ---
 
-# SLA Breach Risk Tiering
+# XLA Breach Risk Tiering
 
-**When to use:** "What's at risk of breaching?" / "tier the queue by SLA risk" / "anything breached overnight?" — the dispatcher's morning and pre-EOD passes, or feeding an escalation huddle a defensible priority order.
+**When to use:** "What's at risk of breaching?" / "tier the queue by XLA risk" / "anything breached overnight?" — the dispatcher's morning and pre-EOD passes, or feeding an escalation huddle a defensible priority order.
 
 **Run it:** across all open tickets (manually or on a schedule).
 

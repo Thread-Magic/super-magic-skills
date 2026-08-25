@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 # Waiting-on-Client Audit
 
-**When to use:** "Audit the waiting-on-client bucket" / "what's actually waiting on clients vs just parked?" — a weekly review before waiting statuses distort aging and SLA numbers, or suspicions that techs park tickets in waiting to stop the clock.
+**When to use:** "Audit the waiting-on-client bucket" / "what's actually waiting on clients vs just parked?" — a weekly review before waiting statuses distort aging and XLA numbers, or suspicions that techs park tickets in waiting to stop the clock.
 
 **Run it:** across all tickets in waiting statuses (manually or on a schedule).
 
