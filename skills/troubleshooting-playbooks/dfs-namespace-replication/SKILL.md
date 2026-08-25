@@ -19,21 +19,48 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are diagnosing a DFS problem. Two different systems share the name "DFS" and fail differently. DFS-N (namespaces) is about referrals — which target a user is sent to. DFS-R (replication) is about content getting between targets. Separate them first, then work from referral order or backlog evidence — a reckless DFS-R reinitialize can lose recent changes on the losing side.
+You are diagnosing a DFS problem. DFS-N (namespaces) decides which target a user is referred
+to; DFS-R (replication) gets content between targets — separate them first. Nothing here
+executes: these are steps for a tech with the right access.
 
-Layout and version first. Check the client's documentation and knowledge base for the DFS design: the namespace(s) and folder targets (which servers back each path), whether targets are referral-ordered by site/cost, the replication groups and their topology (hub-spoke vs full-mesh), the replicated-folder paths, staging-quota sizes, and Windows Server version. Establish whether the complaint is a referral problem or a replication problem — they're separate. If a Liongard AD/Windows inspector runs, corroborate from its inspector data and note the dataprint age. Documentation and Liongard coverage varies per tenant — note what you couldn't check.
+Climb the Troubleshooting Ladder base skill first: this client's past tickets for DFS and file
+shares (a server added or renamed, a bulk migration, a disk-full event, or a dirty shutdown),
+then their documentation for the design — namespaces and folder targets, replication groups
+and topology, staging-quota sizes, and Windows Server version.
 
-History first. Search this client's past tickets for DFS/file shares: a recent server add/remove/rename, a large data migration (DFSR backlogs balloon after bulk changes), a disk-full or staging event, or an unexpected reboot (a dirty shutdown can force a DFSR recovery). Sudden onset after a change names the cause.
-
-Get the evidence before acting. DFS-N: dfsutil referral output / the management console — which targets exist for the path, their referral order and enabled/online state, and whether targets are actually reachable. DFS-R: the backlog count between the specific sending/receiving members (dfsrdiag Backlog), the DFSR health report, and the DFSR event log for state (recovery, error, staging-full events). Read the actual backlog/state — not "replication is broken". dfsutil/dfsrdiag and console steps are guidance for a tech with the right access, not remote execution; if the RMM is connected, open a member server in it (a deep link for the tech, not script execution) for the hands-on handoff, otherwise have the tech work at the server directly.
+Then get the evidence. DFS-N: the referral list for the path — targets, their order,
+enabled/online state, reachability. DFS-R: the backlog count between the specific sending and
+receiving members, the health report, and DFSR event-log state (recovery, error,
+staging-full).
 
 Branch:
-1. DFS-N referral problems — users hit the wrong/slow target or none: check target priority/ordering (should honor site cost so users use the local target), whether a target is disabled or its server offline, and client-site awareness (a client in the wrong AD site gets wrong referrals). Fix the referral order/target state; a "no target" often means every target for that folder is offline or the folder target was removed.
-2. DFS-R backlog — content is stale because changes are queued: read whether the backlog is draining (a big migration replicating out — patience, and possibly a staging-quota bump) vs stuck (an error state, a member unreachable, or content-freshness expired). A member down longer than the MaxOfflineTimeInDays becomes stale and needs deliberate recovery — don't just re-enable it. Escalate when a member has been offline past the content-freshness limit — reconnecting it wrong can resurrect deleted files or lose changes.
-3. Conflicts / losses — simultaneous edits on two members create a conflict; DFSR keeps the last-writer and moves the loser to ConflictAndDeleted (recoverable for a time, not forever). This is expected behaviour for multi-master editing, not a bug — the durable answer is often a namespace/locking design change (single writable target, or per-site folders), not "fixing" DFSR. Never treat DFSR as a two-way sync for actively co-edited files — if the real problem is concurrent editing, fix the design (single-writer / SharePoint-OneDrive), don't blame replication.
-4. Staging quota bottleneck — replication crawls or errors under heavy change because the staging area is too small (staging must fit the largest files/churn) or the staging disk is full. Read staging events; enlarging the quota is the tuning lever, but confirm disk space and the churn source first.
 
-Never reinitialize / re-create replication or delete the DFSR database as a first move — an authoritative/non-authoritative sync resets one side to the other and can lose recent changes on the losing member; understand which member is authoritative and get sign-off first. This is a data-integrity decision. Do not reconnect a long-offline member that's past content-freshness without deliberate recovery. Do not invent dfsrdiag/dfsutil syntax, event IDs, or offline-limit values — check Microsoft's docs on the web and cite (defaults change by version).
+1. DFS-N referral — users hit the wrong, slow, or no target. Check target priority and ordering
+   (site cost sends users to their local target), whether a target is disabled or
+   offline, and the client's AD site — a client in the wrong site gets wrong referrals. "No
+   target" means every target is offline or the folder target was removed.
 
-Verify and note. Success is a real test: a file created on one member appears on the other within expectations, the backlog is at/near zero (or draining as expected), referrals send a test client to the correct local target. Leave a plain-text internal note (raw URLs, not markdown, no emojis): DFS-N vs DFS-R, the evidence (referral order / backlog / events), branch, action or handoff, verification, and what you couldn't check plus dataprint age.
+2. DFS-R backlog — content is stale because changes are queued. Decide draining vs stuck: a
+   large migration needs patience and maybe a staging-quota bump; an error state, unreachable
+   member, or expired content freshness is stuck. A member offline longer than
+   MaxOfflineTimeInDays is stale and needs deliberate recovery — escalate rather than
+   re-enabling it, because reconnecting it wrong resurrects deleted files or loses changes.
+
+3. Conflicts — simultaneous edits on two members keep the last writer and move the loser to
+   ConflictAndDeleted, recoverable for a time, not forever. Never treat DFSR as two-way sync for actively co-edited files: if the real problem is
+   concurrent editing, fix the design (single writable target, per-site folders,
+   SharePoint/OneDrive) rather than blaming replication.
+
+4. Staging bottleneck — replication crawls or errors under heavy change because staging is too
+   small for the largest files and churn, or its disk is full. Raising the quota is the lever;
+   confirm disk space and the churn source first.
+
+Never reinitialize replication or delete the DFSR database as a first move: an authoritative
+sync resets one side to the other and loses recent changes on the losing member. Establish
+which member is authoritative and get the client's sign-off first. Don't invent command syntax,
+event IDs, or offline-limit defaults; check Microsoft's docs and cite.
+
+Verify with a real test: a file created on one member appears on the other, backlog near zero,
+a test client referred to its local target. Then note it (apply the PSA Note Discipline base
+skill): DFS-N vs DFS-R, evidence, branch, action or handoff, and verification.
 ```

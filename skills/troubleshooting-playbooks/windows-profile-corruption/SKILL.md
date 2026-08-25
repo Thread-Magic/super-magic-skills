@@ -19,25 +19,49 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are handling a Windows profile-corruption ticket. The temp-profile login is loud, but the wrong reflex — delete the profile and start over — destroys user data that was never backed up. Confirm the state from the event log, try repair before rebuild, and make data preservation a mandatory gate, not an afterthought. You run no scripts and no remote commands; hands-on work is the tech's — open the device in the RMM (a deep link for the tech, not script execution) when it's connected, otherwise hand the steps to a tech with console access.
+You are handling a Windows profile-corruption ticket. The reflex — delete the profile and
+start over — destroys user data nobody backed up. Confirm the state from the event log,
+repair before rebuild, gate on data preservation. The tech works the device, via the RMM
+where connected.
 
-1. History first. Search this user/device's past tickets. A recurring temp-profile ticket means the prior "fix" didn't hold — find the cause (failing disk, security agent locking the hive, roaming-profile problems) instead of repeating the ritual.
+Climb the Troubleshooting Ladder base skill first: this device's past tickets, then the
+documented profile architecture. A container profile (FSLogix and similar) follows that
+product's playbook — route it; the local fix loses data there.
 
-2. Docs second. Check the client's documentation and knowledge base for the profile architecture: local-only, roaming, folder redirection, or profile-container tech (FSLogix/VDI). A container-based profile follows that product's playbook, not the local-profile one — flag and route it rather than improvising; misapplying the local fix there loses data. Documentation coverage varies per tenant — note what you couldn't check.
+Read the Application log's User Profile Service events first: 1511 temporary profile, 1515
+backup profile, 1521 or 1522 cannot load or locate, 1530 hive in use — often a scanner or
+agent holding it. The ID separates a corrupt profile from one merely locked at logon, which
+needs no rebuild.
 
-3. Confirm the state from the event log before theorizing. Guide the tech to the Application log, User Profile Service events — 1511 (logged on with a temporary profile), 1515 (backup profile in use), 1521/1522 (cannot load/locate), 1530 (hive in use — often a scanner/agent holding it). The specific ID separates "profile is corrupt" from "profile was merely locked at logon", which needs no rebuild at all. A temp-profile login without the event evidence gets diagnosis, not surgery.
+Tell the user their original data is intact, but anything saved during the temp session will
+vanish — save current work elsewhere now.
 
-4. Reassure and freeze. Tell the user their data is almost certainly intact in the original profile folder — and that anything saved DURING the temp session lives in the temp profile and will vanish; have them save current work to a share/cloud location now.
+1. Locked, not corrupt (the 1530 pattern, intermittent temp logins that clear on reboot).
+   Find the locker — AV or EDR at logon, backup agents, indexing — and fix its schedule; do
+   not rebuild. If it's a managed security tool, coordinate with its owner rather than
+   excluding profile paths.
 
-5. Branch:
-   a. Locked, not corrupt (1530-pattern, intermittent temp logins that self-resolve on reboot) — find the locker: AV/EDR scans at logon, backup agents, search indexing. Fix the interfering process schedule; do not rebuild. Escalate when the locking agent is a managed security tool — coordinate with its owner rather than excluding profile paths unilaterally (that's a security decision).
-   b. Repair (single event, hive intact) — guide the tech through the documented registry ProfileList repair: locate the user's SID entry, the .bak duplicate pattern, correct the ProfileImagePath/state per Microsoft's current guidance (verify steps on the web — do this from documentation, not memory). Precede it with a registry/system restore point. Reboot, verify a normal login. Registry work is tech-only, never end-user guidance.
-   c. Rebuild — criteria: repair failed, the hive itself is corrupt (1521/1522 persist), malware history in the profile, or the disk checks out but corruption recurs. Rebuild = new profile + data migration, executed only after step 6.
-   d. Underlying-cause check — profile corruption is often a symptom: check disk health (SMART) before trusting any rebuild to a failing disk, and unexpected shutdown history (power loss corrupts hives). A rebuild on a dying disk is wasted work — pair with hardware-diagnostics and say so.
+2. Repair (single event, hive intact). Guide the tech through the registry ProfileList
+   repair: the SID entry, the .bak duplicate pattern, ProfileImagePath and state per
+   Microsoft's guidance — from documentation, not memory, and take a restore point first.
+   Then reboot and verify a normal login. Registry work is tech-only.
 
-6. Data-preservation checklist — mandatory before any rebuild/deletion. Nothing gets deleted before this checklist is complete and verified — no exceptions, and say so to the tech in those words. Inventory and copy out, from the OLD profile path: Desktop, Documents, Downloads, Pictures; browser profiles (favorites, saved passwords — export properly, not by folder copy alone); mail data files (local PSTs; note OST re-syncs but signatures/autocomplete live in the profile); app-specific data per the client's LOB list from the documentation; anything the user names. Confirm the copy is complete and readable BEFORE the old profile is touched. Cloud-synced folders reduce risk but verify sync was healthy — a broken profile often had broken sync.
+3. Rebuild — repair failed, the hive is corrupt (1521 or 1522 persist), malware history, or
+   corruption recurs. Check disk health and unexpected shutdowns first — a rebuild onto a
+   dying disk is wasted work. Rebuild is a new profile plus data migration, only after the
+   checklist below.
 
-7. Rebuild and restore. New profile via a fresh first login (after removing the broken ProfileList entry per documentation), then migrate the preserved data in, reconnect mail/OneDrive/printers per the client's standard-setup doc. Never bulk-copy the old profile wholesale over the new one — that re-imports the corruption.
+Data preservation is mandatory before any rebuild or deletion: nothing gets deleted before
+this checklist is complete and verified — tell the tech so in those words. From the OLD
+profile path, inventory and copy out Desktop, Documents, Downloads and Pictures; browser
+profiles, exporting favourites and passwords properly rather than by folder copy; mail data
+files — an OST re-syncs, but signatures and autocomplete live in the profile; app data per
+the client's LOB list; and anything the user names. Confirm the copy is complete and
+readable BEFORE the old profile is touched. Then create the new profile at a fresh first
+login, migrate the data in, and reconnect mail, OneDrive and printers per the client's setup
+doc. Never bulk-copy the old profile over the new one — that re-imports the corruption.
 
-8. Verify and note. Two clean logins (including a reboot between) and user confirmation their data and mail are present. Leave a plain-text internal note (PSA-safe: no markdown or emojis): event IDs observed, branch, preservation inventory, underlying cause if found, verification.
+Verify with two clean logins including a reboot, and the user confirming data and mail are
+present. Then note it (apply the PSA Note Discipline base skill): event IDs, branch,
+inventory, cause, and verification.
 ```
