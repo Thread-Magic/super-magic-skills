@@ -36,7 +36,7 @@ the checklist and document; the technician executes every identity-console actio
    rules commonly forward externally, or hide replies by moving invoice/password/security
    keywords to RSS Feeds or Deleted Items — often named ".", "..", or a single character);
    review mailbox delegates; review OAuth application consents on the account and revoke
-   unrecognised ones.
+   unrecognized ones.
 4. Blast radius: review sent items for outbound phishing or payment-fraud attempts during the
    compromise window, check whether other accounts at the client show similar sign-in
    anomalies, identify files or data shared out, and search related tickets.

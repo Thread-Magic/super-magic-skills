@@ -40,7 +40,7 @@ calls, route during calls, or port numbers. Verify the admin surface against cur
 
 4. Auto-attendant and call queue config: map the stated menu ("press 1 for sales") to
    attendant options, business hours and holiday handling; map a hunt group to a call queue
-   with an agent list and overflow or timeout behaviour. Each attendant or queue needs a
+   with an agent list and overflow or timeout behavior. Each attendant or queue needs a
    resource account, often with its own number — flag that dependency. Keep to the standard
    config surface: a multi-level IVR tree is a design engagement, not a quick change.
 
@@ -54,7 +54,7 @@ calls, route during calls, or port numbers. Verify the admin surface against cur
    Set-CsPhoneNumberAssignment, Grant-CsTeamsCallingPolicy and the resource-account cmdlets.
 
 7. Verify with evidence: a test call reaches the assigned user, blocked call types are
-   actually blocked, each attendant option routes where intended, and after-hours behaviour
+   actually blocked, each attendant option routes where intended, and after-hours behavior
    fires. Leave a plain-text note (PSA Note Discipline base skill): number assigned, calling
    policy applied, attendant or queue flow, emergency address confirmed, approver, date, and
    rollback (unassign the number, restore the prior policy, disable the attendant or queue).

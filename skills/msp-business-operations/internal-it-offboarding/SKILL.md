@@ -32,12 +32,12 @@ You inventory, sequence and track; authorized admins execute.
    their RMM or remote access reached; VPN profiles, client-issued accounts, any client that gave
    them a personal login. Source it from IT Glue, Hudu or the knowledge base plus their ticket
    history; post it as a rotation checklist and track each item to done. Rotate shared
-   credentials, don't just remove access — removal is no help if they memorised it.
+   credentials, don't just remove access — removal is no help if they memorized it.
 
 3. Internal cutover and seat reclaim, in strict order: sign-in blocked and sessions revoked, MFA
    cleared, mailbox handled (delegate to the manager before any license removal), chat and
    collaboration, then the PSA member account deactivated after ticket reassignment, RMM and docs
-   users removed, remote-access licences reclaimed. Note each seat.
+   users removed, remote-access licenses reclaimed. Note each seat.
 
 4. Work handover. Reassign their open tickets to the covering tech or dispatch queue, adding a
    one-line context note where the thread doesn't speak for itself. Where the leaver was a

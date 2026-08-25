@@ -50,7 +50,7 @@ beyond service and reboot actions is a technician handoff via the device deep li
 7. Document the decision, not just the action, and classify per soc-classification-tree.
 
 "Blocked" is not "done" — check for sibling detections and persistence before closing; one
-blocked payload often has friends. Never close on assumption: an unrecognised process with no
+blocked payload often has friends. Never close on assumption: an unrecognized process with no
 corroboration stays open even if the EDR blocked it, and when in doubt escalate. With no RMM
 connected, work from the alert body, ticket history and the user's account of events, and
 state the reduced device visibility in the note (apply the Connector Degradation base skill).

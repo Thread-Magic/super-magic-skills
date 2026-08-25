@@ -56,5 +56,5 @@ narration, no questions. Two autonomous outcomes only: stale path (date parsed, 
 days) → write the closure note and set the pre-closure status; fresh path → write a triage
 note stating the exposure facts and that user notification is required, leaving the ticket
 open for a human. Never send client email autonomously. Missing or ambiguous date,
-unrecognised identity, or any parsing doubt → do nothing, leave the ticket untouched.
+unrecognized identity, or any parsing doubt → do nothing, leave the ticket untouched.
 ```

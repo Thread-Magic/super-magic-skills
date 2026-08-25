@@ -44,7 +44,7 @@ Draft invoice from ticket time (approval-gated):
    assumed; each line carries the ticket reference. Send the approval request (or use the Teams/Slack
    gate) to whoever owns billing, with full detail and total. Approved → create the invoice as a
    DRAFT; note the draft's number on the ticket. Not approved/timeout → nothing created; note why.
-   Sending or authorising the invoice stays a human action in Xero.
+   Sending or authorizing the invoice stays a human action in Xero.
 6. Reconciliation mode: for a stated window, list billable ticket time with no matching Xero line, and
    lines referencing tickets with no billable time; output both with amounts, no writes without steps
    4–5. Financial figures in chat come only from tool results.

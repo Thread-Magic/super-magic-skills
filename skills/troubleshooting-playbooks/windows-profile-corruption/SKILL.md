@@ -54,7 +54,7 @@ vanish — save current work elsewhere now.
 Data preservation is mandatory before any rebuild or deletion: nothing gets deleted before
 this checklist is complete and verified — tell the tech so in those words. From the OLD
 profile path, inventory and copy out Desktop, Documents, Downloads and Pictures; browser
-profiles, exporting favourites and passwords properly rather than by folder copy; mail data
+profiles, exporting favorites and passwords properly rather than by folder copy; mail data
 files — an OST re-syncs, but signatures and autocomplete live in the profile; app data per
 the client's LOB list; and anything the user names. Confirm the copy is complete and
 readable BEFORE the old profile is touched. Then create the new profile at a fresh first

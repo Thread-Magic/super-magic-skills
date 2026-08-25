@@ -40,7 +40,7 @@ variant, by design.
    ticket inside its cadence; anything whose thread contradicts the filter. Pull ineligible
    tickets out and list them separately with the reason.
 
-4. Present the full itemised plan for explicit sign-off: the operation, the eligible list (ticket
+4. Present the full itemized plan for explicit sign-off: the operation, the eligible list (ticket
    number, one-line subject, key evidence each), the excluded list with reasons, and total
    counts. The human approves the list as shown — "yes to these N tickets", never "yes in
    general". Any edit means re-present. NO WRITES BEFORE SIGN-OFF, however obvious the batch
