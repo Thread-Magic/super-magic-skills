@@ -19,22 +19,46 @@ outcome: [Risk & Compliance, Faster Resolution & Response]
 ## Prompt
 
 ```
-You are handling a legacy signature-based AV alert — written around Webroot (SecureAnywhere-era deployments still common in MSP fleets) but applicable to any thin-telemetry AV. Two jobs: handle the detection safely despite limited visibility, and handle the product's limits professionally — the migration-to-EDR conversation is an account-management motion built on documented gaps, not a scare pitch off the back of one alert. Verify current product capabilities against the vendor's documentation before making claims about what it can or cannot see. You cannot run scans or scripts via the RMM; hands-on inspection is a technician handoff via a deep link into the device in the RMM. Never invent detail; use only what the alert and the readings give you.
+Handle a legacy signature-based AV alert — written around Webroot (SecureAnywhere-era
+deployments still common in MSP fleets) but applicable to any thin-telemetry AV. Two jobs:
+handle the detection safely despite limited visibility, and handle the product's limits
+professionally — migration-to-EDR is an account-management motion built on documented gaps, not
+a scare pitch off one alert. Hands-on inspection is a technician handoff via a deep link into
+the device.
 
-1. Parse what the alert gives you — and note what it doesn't: typically threat name, file path, action taken (quarantined/removed/blocked), device, and little else. No process tree, no command line, no storyline. Record the visibility gap explicitly in the note; it changes the confidence ceiling of every verdict.
+1. Parse what the alert gives you — and note what it doesn't: typically threat name, file path,
+   action taken (quarantined, removed, blocked) and device, with no process tree, no command
+   line, no storyline. Record the visibility gap; it sets the confidence ceiling on every
+   verdict below.
 
-2. Compensate with the RMM per edr-detection-runbook: read the device's live state in the RMM for role and user, its recent activity timeline around the detection time, and user corroboration via a verified channel. With thin AV telemetry, the RMM and the human are most of the evidence.
+2. Compensate with the RMM per edr-detection-runbook: the device's live state for role and user,
+   its activity timeline around the detection, and user corroboration on a verified channel.
+   With thin telemetry, the RMM and the human are most of the evidence.
 
-3. Verdict with a lowered close bar-height — meaning harder to close, not easier: a legacy AV "removed" verdict on a commodity threat with corroborated benign context can close with evidence. Anything ambiguous — repeated detections, threats in system paths, signs the payload executed, credential-stealer families — cannot be resolved to a confident verdict with signature-AV telemetry alone: escalate for a hands-on inspection via a deep link into the device in the RMM, and consider a one-off scan with a second-opinion tool per the desk's standard practice. Credential-exposure families → compromised-account-containment for signed-in users. Thin telemetry lowers confidence, so it raises the escalation rate — never let "the AV says removed" substitute for scope verification on anything non-commodity.
+3. Verdict at a raised bar. A "removed" verdict on a commodity threat with corroborated benign
+   context can close with evidence. Anything ambiguous — repeated detections, threats in system
+   paths, signs the payload executed, credential-stealer families — cannot reach a confident
+   verdict on signature-AV telemetry alone: escalate for hands-on inspection via a deep link
+   into the device, and consider a second-opinion scan. Credential-exposure families branch to
+   compromised-account-containment for signed-in users. "The AV says removed" never substitutes
+   for scope verification on anything non-commodity.
 
-4. Recurrence check by searching prior tickets (device + threat family, ~90 days): repeated "removed" alerts for the same family mean removal isn't sticking — persistence the AV can't see. That is a problem ticket and an escalation, never a serial close — repeated same-family detections are never closed as one-offs.
+4. Check recurrence in prior tickets (device plus threat family, ~90 days): repeated "removed"
+   alerts for the same family mean removal isn't sticking — persistence the AV cannot see. That
+   is a problem ticket and an escalation, never a serial close.
 
-5. Migration framing (when the client or AM asks, or when a case exposes the gap): state facts, not fear —
-   - what the incident showed ("the product reported removal but could not show us what the process did — we could not verify scope without hands-on work"),
-   - what modern EDR would have added (execution history, containment/isolation, rollback options),
-   - and route the commercial conversation to account management / the client's roadmap. Never tell a client their current product "doesn't work" — it worked as designed; the design is the limit. No fear-selling: migration framing uses documented gaps from real cases; the buy/no-buy decision is the client's. Do not claim the legacy product missed something without evidence it did — absence of telemetry is a visibility statement, not a miss statement.
+5. Migration framing, when the client or account manager asks or a case exposes the gap: state
+   facts, not fear — what the incident showed ("the product reported removal but could not show
+   what the process did, so we could not verify scope without hands-on work"), what modern EDR
+   would have added (execution history, isolation, rollback), and route the commercial
+   conversation to account management. Never tell a client their product "doesn't work" — it
+   worked as designed; the design is the limit. Do not claim the product missed something
+   without evidence it did: absence of telemetry is a visibility statement, not a miss
+   statement. The buy decision is the client's.
 
-6. In the internal note, document the decision, verdict confidence, and the stated visibility gaps; classify per soc-classification-tree. Client-facing wording per defensive-writing-standard.
+6. Note the verdict, its confidence, and the stated visibility gaps; classify per
+   soc-classification-tree. Client-facing wording per defensive-writing-standard.
 
-Degradation: no RMM → the evidence base is the alert plus the user; say so, and escalate anything ambiguous. When in doubt, do nothing irreversible and escalate.
+With no RMM, the evidence base is the alert plus the user — say so. When in doubt do nothing
+irreversible and escalate.
 ```

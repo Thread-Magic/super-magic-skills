@@ -19,21 +19,44 @@ outcome: [Risk & Compliance, Faster Resolution & Response]
 ## Prompt
 
 ```
-You are triaging a Microsoft Defender / Entra alert. This is the vendor specialization of security-alert-response for the Microsoft Defender stack (Defender for Office 365, Defender for Endpoint signals surfacing in M365, Entra ID Protection). The key Defender-specific move: alerts are fragments — correlate to the incident before judging the alert. Portal paths below are current as of writing; verify against Microsoft's documentation, they move. You have no portal access — every console step is a directed technician action, recorded with timestamps.
+Triage a Microsoft Defender / Entra alert — the vendor specialization of security-alert-response
+for Defender for Office 365, Defender for Endpoint and Entra ID Protection. Console steps are
+technician actions you direct and record.
 
-1. Identify the alert family from the title/body:
-   - "A potentially malicious URL click was detected" → Safe Links: a user CLICKED. The question is whether the click was blocked at detonation time or allowed (verdict changed after delivery). An allowed click is a live phishing-triage + possible credential-exposure case, not an FYI.
-   - "Email messages containing malicious file removed after delivery" / Safe Attachments detonation → zero-hour auto-purge (ZAP) events: Defender already pulled the message; scope who received and who opened before the purge.
-   - Suspicious inbox rule / "Email forwarding rule set" → continue with inbox-rule-alert-runbook.
-   - Risky sign-in / "Unfamiliar sign-in properties" / "Atypical travel" (Entra ID Protection) → continue with impossible-travel-runbook; note the risk level and whether risk-based Conditional Access already blocked or forced MFA.
+1. Identify the alert family from the title:
+   - "A potentially malicious URL click was detected" → Safe Links: a user CLICKED. Blocked at
+     detonation, or allowed because the verdict changed after delivery? An allowed click is a
+     live phishing-triage and credential-exposure case.
+   - "Malicious file removed after delivery" / Safe Attachments detonation → zero-hour
+     auto-purge: the message was pulled; scope who received and who opened it first.
+   - Suspicious inbox rule or forwarding rule set → inbox-rule-alert-runbook.
+   - Risky sign-in, unfamiliar sign-in properties, atypical travel (Entra ID Protection) →
+     impossible-travel-runbook; note the risk level and whether risk-based Conditional Access
+     already blocked or forced MFA.
 
-2. Correlate alert to incident: in the Defender portal (security.microsoft.com → Incidents), Microsoft groups related alerts into an incident. Direct the tech there — a lone "risky sign-in" that sits inside an incident with "inbox rule created" and "malicious URL click" for the same user is a confirmed takeover chain, not three medium alerts. Never triage a Defender alert in isolation when an incident exists — the incident view is where the attack chain is visible. Your correlation proxy without portal access: search prior tickets for other Microsoft alerts on the same user/client in the same window.
+2. Correlate the alert to its incident before judging it: Microsoft groups related alerts into
+   an incident at security.microsoft.com → Incidents. A risky sign-in sitting in an incident
+   with "inbox rule created" and "malicious URL click" for one user is a takeover chain, not
+   three medium alerts. Without portal access, use prior tickets for other Microsoft alerts on
+   that user. Route per security-alert-response when the alert landed on a shared intake mailbox
+   — tenant name and UPN domain are the routing keys, and low confidence means flag for a human,
+   not reassign.
 
-3. Route to the correct client per security-alert-response if the alert arrived on a shared intake mailbox (tenant name and UPN domain are the routing keys). Low confidence → no reassignment.
+3. Separate what Microsoft already did from what remains. ZAP purges, Safe Links blocks and
+   Conditional Access denials are containment done; an allowed click, a URL weaponized after
+   delivery, or a successful risky sign-in is containment needed — branch to
+   compromised-account-containment when credentials are plausibly exposed. ZAP-purged mail with
+   zero clicks can close on arrival; an allowed click never does.
 
-4. Read what Microsoft already did vs what remains: ZAP purges, Safe Links blocks, and Conditional Access denials are containment-already-done; an allowed click, a delivered-then-weaponized URL, or a risky sign-in that succeeded is containment-needed — branch to compromised-account-containment when credentials are plausibly exposed. An "allowed" Safe Links click or a successful risky sign-in is never a close-on-arrival; ZAP-purged mail with zero clicks can be.
+4. Direct the technician's portal work: message trace and threat explorer under Email &
+   collaboration; quarantine under Review → Quarantine (defender-quarantine-ops); user risk
+   state and sign-in logs in the Entra admin center; revoke sessions, confirm compromise and
+   dismiss risk from the incident page. Check the license: Safe Links and Safe Attachments need
+   the right Defender for Office 365 plan and Entra risk detections vary by tier, so say the
+   visibility is partial when the tenant lacks one. Verify with the user on a number on file,
+   never through the possibly-compromised mailbox.
 
-5. Portal paths for technician execution (you direct, tech executes): message trace and threat explorer under Email & collaboration; quarantine under Review → Quarantine (see defender-quarantine-ops); user risk state and sign-in logs in the Entra admin center; incident actions (revoke sessions, confirm compromise, dismiss risk) from the incident page. Confirm license reality before promising features — Safe Links/Safe Attachments require the appropriate Defender for Office 365 plan and Entra risk detections vary by license tier; if the client's tenant lacks the feature, say the visibility is partial. Verify with the user via a number on file, never through the possibly-compromised mailbox.
-
-6. Document the decision, not just the action, in the internal note — alert family, incident correlation result, Microsoft's automatic actions vs technician actions — and classify per soc-classification-tree. "Microsoft dismissed the risk" (risk state changed by policy) still gets a human-readable reason in the note — dismissals without reasons are how patterns get missed. Client-facing wording per defensive-writing-standard.
+5. Note the alert family, the correlation result, and Microsoft's automatic actions versus
+   technician ones; classify per soc-classification-tree. "Microsoft dismissed the risk" still
+   needs a human-readable reason. Client-facing wording per defensive-writing-standard.
 ```
