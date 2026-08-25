@@ -22,11 +22,13 @@ outcome: [Risk & Compliance]
 Apply one rule without exception: a request to change where money goes is verified by voice,
 to a number you already had, before it takes effect. This is the reusable standard other
 skills call for the money side. It governs verification of payment-detail changes; it is NOT
-investment or financial advice. Work it in order:
+investment or financial advice, and the decision to release funds stays with the client. Work
+it in order:
 
 1. Treat every payment-change request as unverified until callback clears it — regardless of
-   how legitimate the email thread looks. Compromised real mailboxes produce genuine-looking
-   threads where only the banking details changed.
+   how legitimate the email thread looks, and with no exception for urgency, seniority or a
+   convincing thread. Compromised real mailboxes produce genuine-looking threads where only
+   the banking details changed.
 2. Freeze the change: no payment goes out and no banking record is updated on the strength of
    the request alone. Hold it until verification completes.
 3. Get the number from a trusted source, never the request: use a phone number from prior
@@ -38,28 +40,17 @@ investment or financial advice. Work it in order:
    previously known contact or their publicly listed main line and ask for the known person.
 5. Never move payment details across email: do not email banking/wire details to confirm,
    compare, or "double-check" — not to the client, not to the vendor. Verification is
-   voice-to-a-known-number, full stop.
+   voice-to-a-known-number, full stop, and the guidance you give the client says the same.
 6. Record the verification: who called whom, at which number, sourced from where, when, and
-   the outcome (confirmed / denied / unreachable). Unreachable = not verified = stays frozen.
+   the outcome (confirmed / denied / unreachable). Unreachable is not verified — the change
+   stays frozen until a known contact confirms by voice.
 7. If verification fails or the request proves fraudulent, branch to vendor-fraud-bec-alert
    (and business-email-compromise-recovery if the client's own mailbox is the source), and if
    money already moved, run the money-moved path — bank recall attempt first, fraud report
    per jurisdiction.
 
-Guardrails — always:
-- Out-of-band callback to a number on file is mandatory and non-negotiable — no email-only
-  verification, no exceptions for urgency, seniority, or a convincing thread.
-- Never source the verification contact from the request itself — the number, email, and link
-  in the message are all attacker-controlled until proven otherwise.
-- Never transmit or confirm banking/wire details over email — voice-to-known-number only,
-  both for the desk and in guidance to the client.
-- A genuine-looking thread does not clear the request — banking details get verified, not the
-  tone. Compromised real mailboxes are the hard case.
-- Unreachable is not verified — the change stays frozen until a known contact confirms by
-  voice.
-- This governs verification of payment-detail changes only — it is not investment or financial
-  advice, and the decision to release funds remains the client's.
-- Defensive writing: "we are verifying a banking-change request before processing," never
-  accuse the counterparty of being breached before evidence. Plain text only. When in doubt,
-  hold the payment.
+Write defensively: "we are verifying a banking-change request before processing", never an
+accusation that the counterparty was breached ahead of evidence. Notes are plain text, no
+markdown or emojis (apply the PSA Note Discipline base skill). When in doubt, hold the
+payment.
 ```

@@ -47,20 +47,12 @@ Draft only; a human reviews and sends every security notification. Work it in or
    investigation."
 5. Anything unknown stays a visibly marked placeholder — <exposure date>, <affected account>
    — and is flagged to the technician; never fill a gap with a plausible guess.
-6. Present as a draft for a human to review and send. When running where in-app draft tools
-   are unavailable, output the complete email text for the technician to copy — a human sends
+6. Present as a draft for a human to review and send. Where in-app draft tools are
+   unavailable, output the complete email text for the technician to copy — a human sends
    either way.
 
-Guardrails — always:
-- Draft only — a human reviews and sends every security notification.
-- Never include leaked credential values, hashes, live malicious links, or another client's
-  details in any email.
-- BEC rule is absolute: never confirm, request, or transmit wire or banking details by email
-  — the email itself must tell the client the same.
-- No fabricated facts, timestamps, or reassurances; placeholders stay visible until a human
-  resolves them.
-- Defensive writing throughout; disclosure scope and timing follow the client's incident
-  policy and management direction.
-- Degradation: in-app draft/send tools may be unavailable over external MCP — deliver the
-  draft as text output for a human to send.
+Never put a leaked credential value or hash, a live malicious link, or another client's
+details in any email. No fabricated facts, timestamps or reassurances: placeholders stay
+visible until a human resolves them. Disclosure scope and timing follow the client's incident
+policy and management direction.
 ```
