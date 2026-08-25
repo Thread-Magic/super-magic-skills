@@ -19,25 +19,47 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-Every hybrid ticket starts with the same question: which side owns this mailbox? Half of all hybrid "bugs" are a mailbox that lives (or half-lives) on the side nobody thinks it does. General mail-delivery problems without a hybrid boundary belong to the mail-flow-delivery playbook; this one is for the seam itself.
+Which side owns this mailbox? Half of hybrid "bugs" are a mailbox half-living where nobody
+expects.
 
-Work it in this order:
+Climb the Troubleshooting Ladder base skill first: documentation, history, verbatim error.
+Design facts: on-prem Exchange version/CU (flag out-of-support), full vs minimal/modern
+hybrid, centralized transport or direct, the connectors HCW built. Cert renewals kill
+hybrid mail flow and OAuth alike, so sudden onset on a date is a cert until proven
+otherwise. Evidence: the NDR's enhanced status code and generating server, connector queue
+state, Get-MigrationUserStatistics text, Remote Connectivity Analyzer output. Then pin
+ownership: each user is exactly one of mailbox-on-prem plus MailUser-in-cloud or
+RemoteMailbox-on-prem plus mailbox-in-cloud; both or neither is the cause.
 
-1. Version identification first. Check the client's documentation and knowledge base for the hybrid design: on-prem Exchange version/CU, full vs minimal/modern hybrid, centralized mail transport or direct, which connectors HCW built, Entra Connect in the path. An out-of-support CU changes what's advisable — note it. Then establish mailbox ownership for every user in the ticket: on-prem Get-Mailbox vs Get-RemoteMailbox, cloud Get-Mailbox — a user must be exactly one of mailbox-on-prem+MailUser-in-cloud or RemoteMailbox-on-prem+mailbox-in-cloud. Both or neither = your root-cause candidate. Documentation coverage varies per tenant — note anything you could not check.
+1. Mail flow broken across the seam — the on-prem transport cert and whether the connector
+   still references it after renewal, the HCW-built connectors, TLS negotiation in the
+   SMTP logs, then a changed firewall or NAT. Escalate when the fix is firewall or cert
+   infra.
 
-2. History first. Search this client's past tickets: recent migrations, certificate renewals (hybrid mail flow and OAuth both die on cert expiry — sudden onset on a date is a cert until proven otherwise), HCW runs, firewall changes, and whether this user was recently moved.
+2. Free/busy or sharing blank — OAuth or the organization relationship, and direction
+   matters, so test both ways: Test-OAuthConnectivity, IntraOrganizationConnector state,
+   and on-prem Autodiscover resolving externally with a valid cert.
 
-3. Get the error before theorizing. Verbatim NDRs (the enhanced status code and the generating server tell you which side rejected), queue viewer state for the hybrid connectors, migration batch/user statistics with the actual error text (Get-MigrationUser | Get-MigrationUserStatistics), and for free/busy the Remote Connectivity Analyzer result — not "free/busy doesn't work". Never invent error codes.
+3. Migration stalled or failed — read per-user statistics, not the percentage. Large item
+   counts are throttling; stuck at 95% is finalization, often a mailbox lock or indexing;
+   TooManyLargeItems means those items never migrate and the client picks export or lose.
+   Never raise BadItemLimit or LargeItemLimit until the client has explicitly acknowledged
+   in the ticket that skipped items are lost.
 
-4. Branch:
-   - Hybrid mail flow broken (one or both directions) — check in order: certificate validity on the on-prem transport (and that the connector still references the right cert after a renewal), the receive/send connectors HCW created (someone "cleaning up" connectors is a classic), TLS negotiation in the SMTP logs, and whether cloud->on-prem mail is being routed via a changed firewall/NAT. Do not hand-edit HCW-managed connectors (see the HCW rule). Escalate when the fix is firewall/certificate infrastructure owned elsewhere.
-   - Free/busy / cross-boundary sharing blank — almost always OAuth or the organization relationship. Test with the user identities involved (direction matters: cloud-seeing-on-prem vs reverse fail differently). Check Test-OAuthConnectivity, the organization relationship / IntraOrganizationConnector state, and whether Autodiscover for the on-prem side still resolves and presents a valid cert externally. Fix by repairing the named broken piece — or by HCW re-run (below) — not by rebuilding sharing objects freehand.
-   - Migration stalls/failures — read the per-user statistics, don't watch the percentage. Distinguish: slow (large item counts, throttling — patience, not surgery), stalled with bad items (raise the reality with the client: BadItemLimit is data-loss consent, get explicit sign-off in the ticket before increasing), failed on TooManyLargeItems (items over the size cap will not migrate — the user chooses: export or lose), and stuck at 95% (finalization waiting; often on-prem mailbox lock or content indexing). A completed-but-broken user is usually attribute mismatch — verify targetAddress/ExchangeGuid on the on-prem remote mailbox match the cloud object; pair with entra-connect-sync-errors when the sync layer caused it.
-   - "Recipient not found" / two mailboxes / can't open shared mailbox after a move — attribute or ownership drift: missing targetAddress, mail user vs remote mailbox type wrong, or the user was mailbox-enabled on-prem after getting a cloud mailbox (both-sides case — recovery requires deciding which mailbox's content wins; that is a data decision for the client, escalate before touching). Cross-premises shared-mailbox access and some delegation types simply don't work across the boundary — verify against Microsoft's current supportability docs before promising a fix; sometimes the honest answer is "migrate them together".
+4. Completed but broken — recipient not found, two mailboxes, shared mailbox unopenable.
+   Check targetAddress and ExchangeGuid on the on-prem remote mailbox vs the cloud object;
+   cross-premises shared-mailbox access isn't supported. When a user has both mailboxes,
+   which content survives is the client's decision: escalate, delete neither.
 
-5. HCW re-run discipline. The Hybrid Configuration Wizard is idempotent for the objects it owns, and re-running it is the supported repair for HCW-managed connectors, org relationships, and OAuth — but treat a re-run as a change: know what it will touch, run it with the same options as the original design (centralized transport toggled differently reroutes the client's mail), and never re-run mid-migration-batch or to "see if it helps" without the client's infra owner aware. Record that it was run and with which selections.
+HCW re-run discipline: the wizard is the supported repair for the connectors, org
+relationships and OAuth it owns — never hand-edit or delete those objects. Treat a re-run
+as a change: reuse the original design's options (flipping centralized transport reroutes
+the client's mail), never re-run mid-batch or on a hunch without the client's infra owner
+aware, and record the selections. Never reroute or disable hybrid connectors to get mail
+moving — bypassing the seam loses internal trust and can loop. If Entra Connect caused the
+attribute state, fix it there (pair with entra-connect-sync-errors).
 
-Guardrails to hold throughout: never increase BadItemLimit/LargeItemLimit without the client explicitly acknowledging in the ticket that skipped items are lost. Never hand-edit or delete HCW-created connectors and org relationships; repair via HCW re-run with the correct original options, announced as a change. Never delete either object when a user has both an on-prem and cloud mailbox — which content survives is the client's decision; escalate with the evidence. Do not disable or reroute the hybrid connectors to "get mail moving" — mail that bypasses the boundary loses internal trust properties (headers/attribution) and can create loops; fix the boundary or escalate. Quote NDR codes and migration errors verbatim; verify meanings against Microsoft's current docs on the web (Microsoft Learn) rather than memory — hybrid behavior shifts by CU. If sync (Entra Connect) created the attribute state, fix it at the sync layer — pair with entra-connect-sync-errors, don't hand-edit cloud objects that sync will overwrite. All Exchange shell/console work is guidance for the tech; you never execute it.
-
-Verify and note. Success is the failing artifact passing: a test message each direction with clean headers, free/busy visibly populated both directions, migration user Completed and the user signed in. Leave a plain-text internal note (no markdown, no emojis, raw URLs not markdown links): mailbox ownership findings, verbatim errors/NDR codes, branch, actions (incl. any HCW run + options), verification and time.
+Success: a test message each direction, free/busy both ways, the migration user Completed
+and signed in. Note it (apply the PSA Note Discipline base skill): ownership, verbatim
+errors, branch, any HCW run and its options, verification.
 ```

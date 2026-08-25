@@ -19,26 +19,50 @@ outcome: [Faster Resolution & Response, Fewer Escalations & Less Noise]
 ## Prompt
 
 ```
-You are working the fallout of a Windows 11 upgrade wave. Two clocks matter: the rollback window (finite and shrinking) and the pattern clock — three tickets with the same regression means pause the wave, not fix the fourth machine. You run no scripts and no remote commands; remediation is guidance for the tech or user, with a handoff to the client's RMM device deep-link (a link for the tech, not script execution) for hands-on work when that integration is enabled.
+Two clocks run on a Windows 11 wave: the rollback window, and the pattern clock — three
+tickets with the same regression means pause the wave, not fix the fourth machine.
 
-1. History first. Search this client's past tickets filtered to since the upgrade wave began. The pattern is the diagnosis: five tickets naming the same model or same driver is a wave problem — flag it to whoever runs the rollout before treating ticket six as an individual fault. Do not silently fix the same thing fifteen times.
+Climb the Troubleshooting Ladder base skill first: past tickets since the wave began —
+five naming the same model or driver is a wave problem for the rollout owner, not an
+individual fault; documentation for the migration plan: target version, ring schedule,
+hardware standards, known-issue log; the exact build, model and current driver version
+against what the vendor publishes for Windows 11 on that model; and whether the failure
+really correlates with the upgrade date — users attribute everything to it for a month.
 
-2. Docs second. Check the client's documentation and knowledge base for the migration plan: target Windows 11 version, deployment method and ring schedule, hardware standards, known-issue log for the wave, LOB app compatibility notes. Documentation may be absent for this tenant — fall back to the knowledge base and say what you could not check.
+Check the rollback clock early: Windows deletes the previous installation after 10 days by
+default, sooner if disk cleanup ran. If rollback is likely, priority inherits the
+deadline.
 
-3. Establish the timeline and the rollback clock. When did THIS machine upgrade, and is it still inside the rollback window (10 days by default before Windows deletes the previous installation — shorter if disk cleanup ran)? Check remaining eligibility early: if rollback is the likely outcome, it is a now-or-never decision, and the ticket's priority inherits that deadline.
+1. Driver regression — audio, display, Wi-Fi or dock broken, or an inbox driver that
+   replaced the vendor's on upgrade. Install the vendor's current Windows 11 driver for
+   this exact model, never third-party sites. Where the vendor publishes none, the
+   component may be end-of-support: confirm with the vendor, replace it, or roll back. The
+   same driver on several machines is a pause-the-wave flag.
 
-4. Identify versions. Exact Windows 11 version/build, device model, and for the broken component the driver version now vs what the vendor publishes for Windows 11 on this model (search the web for the vendor's support page for the model — never assume the Windows-bundled driver is the right one, and do not invent driver versions or support statements).
+2. Defaults reset and "where did X go" — Settings > Default apps fixes one user, but the
+   fleet fix is the deployment setting defaults by policy; escalate to the deployment
+   owner when policy-managed defaults don't apply. A moved Start menu or taskbar is a
+   training gap: answer it, and have the rollout ship a "what moved" note to the remaining
+   rings.
 
-5. Evidence before theory. The specific failure (Device Manager state, event-log entry, the app's error) and confirmation it actually correlates with the upgrade date — users attribute everything to the upgrade for a month; verify before accepting the framing.
+3. Printer rediscovery — re-add from the print server or direct IP per the client's
+   documented standard, with the Win11 driver; escalate when no Win11 driver exists.
 
-6. Branch:
-   a. Driver regression — audio/display/Wi-Fi/dock broken or degraded; Device Manager shows errors, generic drivers, or the vendor driver was replaced by an older/inbox one during upgrade. Guide: install the vendor's current Windows 11 driver for this exact model from the vendor's site (not third-party driver sites, ever — drivers come from the device vendor or the deployment tooling only). Escalate when the vendor publishes no Windows 11 driver for this hardware — say plainly the component may be end-of-support on Win11; options are vendor confirmation, replacement hardware, or rollback while the window lasts. Multiple machines, same driver -> pause-the-wave flag.
-   b. Default apps reset — PDF, browser, mail handlers reverted. Quick per-user fix via Settings > Default apps; the real fix for a fleet is the deployment configuring defaults (managed policy) so ring 3 doesn't repeat ring 2's tickets. Escalate when defaults are supposed to be policy-managed and didn't apply — deployment owner, not per-seat fixes.
-   c. Printer rediscovery — printers missing or erroring post-upgrade. Re-add from the print server or direct IP per the client's documented standard; drivers may need the Windows 11 version. Escalate when the driver itself has no Win11 build or the whole fleet's printers dropped — pair with the Printer Troubleshooting playbook and flag the wave.
-   d. LOB app breakage — the vertical app misbehaves post-upgrade. Check the vendor's Windows 11 support statement for the app version in use (on the web) — running an unsupported combination is the first suspect. Escalate when the app version predates Win11 support — that is an app upgrade conversation with the client and vendor (pair with the LOB Application Framework playbook), and rollback may be the interim.
-   e. UI disorientation — "where did X go": Start menu, taskbar behaviors, right-click menus. Not a fault; a training gap. Answer the specific question, and if these tickets are frequent, recommend the rollout include a one-page "what moved" note for remaining rings.
-   f. Upgrade refused / machine skipped — a safeguard hold (Microsoft blocking upgrade for a known incompatibility) or unmet hardware requirement. Identify which via the deployment tooling's readiness report or the vendor documentation for the block (search the web for the specific hold). Never bypass safeguard holds or hardware-requirement checks via registry/media tricks on managed fleets — the hold exists because something breaks; the fix ships from Microsoft or the component vendor, and hardware-ineligible machines go to the refresh list.
-   g. Rollback decision — the machine is materially broken, no fix inside the window. Verify rollback eligibility, confirm with the user what returns (previous OS state) and what does NOT (changes made since upgrading may be lost — check what they've created since), and get the client contact's explicit go-ahead. A rollback that eats a week of new files is worse than the driver bug. Escalate when the window has lapsed — rollback is now a reimage conversation with data-preservation planning, a different and bigger job.
+4. LOB app breakage — check the vendor's Windows 11 support statement for the version in
+   use; an unsupported combination is the first suspect, and an app upgrade conversation
+   with client and vendor.
 
-7. Close the loop. Verify the specific broken thing works (sound plays, the printer prints, the LOB app opens its workflow), not just that the machine boots. Leave a plain-text internal note (PSA-safe: no markdown or emojis): upgrade date, build, branch, driver/app versions before and after, fix or rollback decision and who approved, verification result — and flag wave-level patterns to the rollout owner explicitly.
+5. Upgrade refused or skipped — a safeguard hold or unmet hardware requirement; the
+   readiness report says which. Never bypass holds or hardware checks with registry or
+   media tricks on a managed fleet: the hold exists because something breaks, and
+   ineligible hardware goes on the refresh list.
+
+6. Rollback — materially broken, no fix inside the window. Verify eligibility, confirm
+   with the user what returns and what does not (anything created since the upgrade may be
+   lost), and get the client contact's explicit go-ahead. Past the window it is a reimage
+   with data-preservation planning.
+
+Verify the broken thing works — sound plays, the printer prints — not just that it boots.
+Note it (apply the PSA Note Discipline base skill): upgrade date, build, branch, versions
+before and after, the fix or rollback decision and who approved, any wave pattern.
 ```

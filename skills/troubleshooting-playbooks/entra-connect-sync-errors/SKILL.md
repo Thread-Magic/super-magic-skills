@@ -19,26 +19,49 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-Sync errors are precise — each carries an error type and the exact attribute in conflict. The rule: read the actual error from Synchronization Service Manager or the Entra portal's provisioning-errors view before proposing anything, and treat every scope or sync-rule change as a change with a preview, because the sync engine happily deletes at scale.
+Sync errors are precise: each names an error type and the conflicting attribute. Read the
+actual error first, and treat every scope or rule change as a change.
 
-Work it in this order:
+Climb the Troubleshooting Ladder base skill first: documentation for the sync design —
+Entra Connect or Cloud Sync (different products, different fixes), the source anchor
+(ms-DS-ConsistencyGuid or objectGUID), OU and domain filtering, custom rules — and the
+installed version against Microsoft's supported list; retired builds stop syncing
+silently. History: AD cleanups, OU moves, consolidations and bulk imports just before the
+symptom are usually the story. Then take the error verbatim from Synchronization Service
+Manager's Operations tab or the provisioning-error report: type, attribute, conflicting
+pair, failing step.
 
-1. Version identification first. Check the client's documentation and knowledge base for the sync design: Entra Connect vs Cloud Sync (different products, different fixes), server name, staging server present?, the source anchor in use (ms-DS-ConsistencyGuid vs legacy objectGUID), OU/domain filtering scope, and any custom sync rules. Also check the installed version against Microsoft's minimum-supported list — retired builds silently stop syncing. Documentation coverage varies per tenant — note anything you could not check.
+Preview before any sync that follows a config change: read the queued adds, updates and
+deletes first, because a scope mistake plus a forced full sync is mass deletion. When
+pending deletes exceed the export deletion threshold the engine stops on purpose; never
+disable it — escalate to the identity owner with the pending-delete list.
 
-2. History first. Search this client's past tickets: recent AD cleanups, OU moves/renames, domain consolidations, server migrations, bulk user imports. Bulk on-prem changes immediately preceding the symptom usually are the story — especially pending deletions from an OU move out of scope.
+1. Duplicate attribute (AttributeValueMustBeUnique, proxyAddresses or UPN conflicts) — two
+   objects claim the same value, often a forgotten cloud-only user or contact. The client
+   decides which keeps it; fix it on-prem and the next cycle heals it.
 
-3. Get the error before theorizing. Guide the tech to Synchronization Service Manager -> Operations (per-run, per-object errors) and the Entra admin center's provisioning error report. Capture verbatim: error type, attribute named, the conflicting object pair if given, and which step failed (import/sync/export). "Sync is broken" is not evidence — never invent it.
+2. InvalidSoftMatch or wrong-object match — a soft match joined the user to the wrong
+   cloud object, or a hard match conflicts on the anchor. Never edit ms-DS-ConsistencyGuid
+   or immutableId by hand to force a match: a wrong hard match rebinds someone's mailbox
+   to someone else. Escalate to the identity owner with both anchors.
 
-4. The cardinal rule — preview before any sync that follows a config change. If filtering, OUs, rules, or the server changed, run Start-ADSyncSyncCycle ONLY after checking pending exports (Get-ADSyncCSObject counts / the "staging" preview, or a full import+sync in a staging-mode server) and reading how many adds/updates/deletes are queued. A scope mistake plus a forced full sync = mass deletion in the tenant. If pending deletes exceed the deletion threshold, the engine stops on purpose (ExportDeletionThreshold) — do NOT disable the threshold to push through; that guard is the last line. Escalate to the identity owner with the pending-delete list.
+3. Object not syncing, no error — it is filtered: out-of-scope OU, cloudFiltered by a
+   rule, or a default exclusion. The sync rule preview against that object names the rule.
 
-5. Branch on the error family:
-   - Duplicate attribute (AttributeValueMustBeUnique, ProxyAddresses/UPN conflicts) — two objects claim the same proxyAddress or UPN. Identify both objects (one is often a forgotten cloud-only user or a contact), decide with the client which keeps the value, fix on-prem (sync will overwrite cloud edits on synced objects). Duplicate-attribute resiliency may have quarantined just the attribute — clearing the conflict lets the next cycle heal it.
-   - InvalidSoftMatch / wrong-object match — soft match (SMTP/UPN) joined an on-prem user to the wrong cloud object, or a hard-match conflict on the source anchor. Source-anchor caution: never edit ms-DS-ConsistencyGuid / immutableId by hand to force a match unless you can state exactly which object should own which cloud identity and why — a wrong hard-match rebinds someone's mailbox to someone else. Escalate to the identity owner with both objects' anchors documented.
-   - Object not syncing at all (no error) — it's filtered: out-of-scope OU, cloudFiltered by a rule, or hit by the default "AdminSDHolder/CriticalSystemObjects" style exclusions. Trace with the sync rule preview against that one object rather than guessing; the preview names the rule that excluded it.
-   - Connector/run-level failures (stopped-server-down, quarantine, password hash sync heartbeat lost) — service account lockout/expiry, TLS 1.2 enforcement after a hardening pass, permissions removed from the connector account, or the connector quarantined after repeated failures. Fix the cause, then let the scheduler run; forcing repeated Initial (full) syncs is not a repair and multiplies load.
-   - Staging mode surprises — nothing exports and no errors: check whether the server is in staging mode (someone built a replacement and never cut over, or a cutover left two active). Exactly one active (non-staging) server per tenant; two active servers fight, zero export nothing. When swapping servers, the new one goes staging -> verify pending exports -> old to staging -> new to active, in that order. Never run two active (non-staging) sync servers against one tenant.
+4. Connector or run-level failure — stopped-server-down, quarantine, lost
+   password-hash-sync heartbeat. Look for service account lockout or expiry, TLS 1.2
+   enforcement after hardening, or lost connector permissions. Fix the cause; repeated
+   forced full syncs are not a repair.
 
-Guardrails to hold throughout: never run a full/initial sync — or any sync after a scope/rule/server change — without previewing pending exports first, and never disable the export deletion threshold to force one through. Never edit source anchors to force a match without documented justification and the identity owner's sign-off. Fix synced-object attributes on-prem, not in the cloud — cloud edits on synced objects are overwritten or refused. Deleting the Entra Connect server or uninstalling to "start fresh" converts every synced user to cloud-managed with consequences — that is a designed migration, not a troubleshooting step. All sync console/PowerShell work is guidance for the tech; you never execute it. Verify error meanings and supported-version status against Microsoft's current docs on the web — the product renames and rewires often; don't recite from memory.
+5. Staging surprises — nothing exports and no errors means staging mode. Exactly one
+   active server per tenant, so two fight and zero export nothing; swapping goes
+   new-to-staging, verify exports, old to staging, new to active.
 
-Verify and note. Success = the affected objects clean in the next delta cycle (Operations shows no errors for them) and correct in the cloud, plus the portal's provisioning-error count back at baseline. Leave a plain-text internal note (no markdown, no emojis, raw URLs not markdown links): error verbatim, objects involved (sanitized), branch, on-prem fix applied or escalated, whether any sync cycle was run and what the preview showed, verification time.
+Fix synced-object attributes on-prem, never in the cloud; cloud edits are overwritten.
+Uninstalling the server to "start fresh" converts every synced user to cloud-managed — a
+designed migration, not a troubleshooting step.
+
+Success is the affected objects clean in the next delta cycle and the error count back at
+baseline. Note it (apply the PSA Note Discipline base skill): error verbatim, objects,
+branch, fix or escalation, whether a cycle ran and what the preview showed.
 ```
