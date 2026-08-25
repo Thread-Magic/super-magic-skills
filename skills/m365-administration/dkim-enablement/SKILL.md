@@ -19,26 +19,50 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are enabling (or rotating) DKIM for a custom domain in Exchange Online. You prepare and verify; the technician runs the admin portal or PowerShell and the DNS owner publishes records. Never report signing as enabled on intention — never invent data.
+You are enabling or rotating DKIM for a custom domain in Exchange Online. You prepare and
+verify; the tech runs the portal or PowerShell and the DNS owner publishes the records.
+Never report signing as enabled on intention.
 
-1. Confirm the domain is a verified accepted domain in the tenant, and find who controls its DNS (check the client's documentation for documented DNS ownership; skip gracefully if not connected) — the CNAMEs are the long pole; the Exchange side is two clicks.
+1. Confirm the domain is a verified accepted domain, and find who controls its DNS — the
+   long pole; the Exchange side is two clicks. Documented ownership is in the client's
+   documentation; continue without it if that integration is off (Connector Degradation
+   base skill).
 
-2. Get the exact CNAME targets from THIS tenant, not from a template. Have the tech pull them (PowerShell labeled: verify against current module versions):
+2. Take the CNAME targets from THIS tenant, never a template or another client — they embed
+   the tenant's own onmicrosoft domain, so copied values fail silently. Have the tech run
+   (verify against current module versions):
    Get-DkimSigningConfig -Identity <domain> | Format-List Selector1CNAME, Selector2CNAME
-   (or create the config first with New-DkimSigningConfig if none exists). The records to publish are always:
+   creating the config first with New-DkimSigningConfig if none exists. Publish:
    - selector1._domainkey.<domain> CNAME → the Selector1CNAME value
    - selector2._domainkey.<domain> CNAME → the Selector2CNAME value
-   The targets embed the tenant's initial onmicrosoft domain — this is why copy-pasting from another client's setup silently fails. CNAME targets come from THIS tenant's DkimSigningConfig; never reuse another tenant's values.
 
-3. Have the DNS owner publish both CNAMEs. Both — rotation depends on the second selector existing; one selector "working" today blocks rotation tomorrow. Verify resolution externally (nslookup -type=cname selector1._domainkey.<domain>) before enabling; enabling before DNS resolves is the classic "DKIM broke our mail reputation" self-inflicted wound (Exchange signs with a selector the world can't look up, so signatures fail validation). Never enable signing before both selector CNAMEs externally resolve.
+3. The DNS owner publishes both: rotation depends on the second selector existing, so one
+   working selector today blocks rotation tomorrow. Verify externally with
+   nslookup -type=cname selector1._domainkey.<domain>. Never enable signing before both
+   selector CNAMEs resolve externally — Exchange would sign with a selector the world cannot
+   look up, so every signature fails validation and the domain's mail reputation takes the
+   hit.
 
-4. Enable signing: Defender portal (Email authentication settings > DKIM) or Set-DkimSigningConfig -Identity <domain> -Enabled $true. This changes how all outbound mail from the domain is stamped — low risk when DNS is right, but tell the client the change window anyway (send an approval request / inform the client contact for a domain-wide mail-stamping change).
+4. Enable signing — Defender portal, Email authentication settings > DKIM, or
+   Set-DkimSigningConfig -Identity <domain> -Enabled $true. This restamps all outbound mail
+   from the domain, so send an approval request to the client contact with the change window.
 
-5. Verify via evidence: send a test to an external mailbox the tech controls and read the headers — dkim=pass with d=<domain> and s=selector1 (or 2). If DMARC is in play, confirm alignment (the d= domain matches the From domain). Paste the authentication-results header into the ticket.
+5. Verify with evidence: send a test to an external mailbox the tech controls and read the
+   headers for dkim=pass with d=<domain> and s=selector1 or 2. Where DMARC is in play,
+   confirm d= matches the From domain. Paste the authentication-results header into the
+   ticket.
 
-6. Rotation: for scheduled hygiene or after suspected key exposure, run Rotate-DkimSigningConfig -Identity <domain>. Rotation is seamless because Exchange flips to the other selector while DNS CNAMEs stay put — no DNS change needed, which is the point of the CNAME indirection. Note the rotation date; recommend an annual cadence in the client's documentation. The default onmicrosoft.com domain is signed automatically — don't burn time "fixing" it; custom domains are the work.
+6. Rotation, for hygiene or suspected key exposure: Rotate-DkimSigningConfig
+   -Identity <domain>. Exchange flips to the other selector while the DNS CNAMEs stay put,
+   so no DNS change is needed — that indirection is the point. Record the rotation date and
+   recommend an annual cadence. The default onmicrosoft.com domain signs automatically;
+   custom domains are the work.
 
-7. Document what/why/when/rollback in a plain-text note: domain, both CNAME records published (names and targets), enable/rotation date, verification header evidence, approver/client contact informed, and rollback (Set-DkimSigningConfig -Enabled $false — mail then falls back to the default onmicrosoft signing; SPF and DMARC posture unaffected but alignment may change). Log time.
+7. Leave a plain-text note (PSA Note Discipline base skill): domain, both CNAMEs published,
+   enable or rotation date, the header evidence, who approved, and rollback —
+   Set-DkimSigningConfig -Enabled $false drops back to default onmicrosoft signing, leaving
+   SPF and DMARC posture intact but possibly changing alignment. Log time.
 
-Diagnosis of failing SPF/DKIM/DMARC on mail already in flight belongs to dmarc-spf-dkim-setup — keep this skill to enablement and rotation. When in doubt, do nothing and escalate.
+Diagnosing SPF, DKIM or DMARC failures on mail in flight belongs to dmarc-spf-dkim-setup.
+When in doubt, do nothing and escalate.
 ```

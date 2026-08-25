@@ -19,29 +19,51 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are producing a complete, honest map of mailbox access for one mailbox or a whole tenant. The agent prepares the collection block and classifies what the tech pastes back; every removal is a separate approved change, never done inside the audit. Never invent data; report what was NOT checked as clearly as what was.
+You produce a complete, honest map of mailbox access for one mailbox or a whole tenant. You
+prepare the collection block and classify what the tech pastes back. Inventory, classify and
+recommend — never revoke inside the audit; every removal is a separate approved change with
+its own rollback.
 
-1. Scope with the requester: one mailbox, a department, or tenant-wide. Tenant-wide takes longer and produces a report, not a quick answer — say so.
+1. Scope it with the requester: one mailbox, a department, or tenant-wide — tenant-wide
+   produces a report, not a quick answer.
 
-2. Prepare the collection block for the tech (verify against current module versions). All three grant types must be collected — auditing only Full Access misses the impersonation-grade grants:
-   - Full Access: `Get-MailboxPermission <mbx> | Where {$_.User -notlike "NT AUTHORITY\SELF"}`
-   - Send As: `Get-RecipientPermission <mbx>`
-   - Send on Behalf: `Get-Mailbox <mbx> | Select GrantSendOnBehalfTo`
-   - If the ticket concerns calendar/folder access, add `Get-MailboxFolderPermission <mbx>:\Calendar` (see calendar-permissions).
-   For tenant-wide, the same cmdlets piped over `Get-Mailbox -ResultSize Unlimited`, exported to CSV.
+2. Prepare the collection block for the tech (verify against current module versions). All
+   three grant types must be collected — auditing only Full Access misses the
+   impersonation-grade grants:
+   - Full Access: Get-MailboxPermission <mbx> | Where {$_.User -notlike "NT AUTHORITY\SELF"}
+   - Send As: Get-RecipientPermission <mbx>
+   - Send on Behalf: Get-Mailbox <mbx> | Select GrantSendOnBehalfTo
+   - Folder or calendar access, when the ticket concerns it:
+     Get-MailboxFolderPermission <mbx>:\Calendar (see calendar-permissions).
+   Tenant-wide is the same cmdlets piped over Get-Mailbox -ResultSize Unlimited, to CSV.
 
-3. Classify every grant against documentation (check the client's documentation — skip gracefully if IT Glue isn't connected — the knowledge base, and prior tickets). Expected = traceable to a ticket, a documented role, or a shared-mailbox design. Flag as unexpected:
+3. Classify every grant against the client's documentation, the knowledge base and prior
+   tickets — continue without those integrations if off (Connector Degradation base
+   skill). Expected means traceable to a ticket, a documented role, or a shared-mailbox
+   design. Flag as unexpected:
    - Any grant with no ticket or documentation trail.
-   - Full Access or Send As on a personal mailbox held by a peer (not an assistant/manager arrangement on record).
+   - Full Access or Send As on a personal mailbox held by a peer, absent an assistant or
+     manager arrangement on record.
    - Grants held by disabled or departed accounts.
-   - Send As granted where the documented need was read-only.
-   - Broad grants (groups with FullAccess on individual mailboxes).
+   - Send As where the documented need was read-only.
+   - Broad grants, such as a group with Full Access on individual mailboxes.
+   Departed-user grants and Send As anomalies get flagged even when the requester only asked
+   about Full Access.
 
-4. Do not remediate inside the audit. Unexpected grants get listed with a recommended action (revoke / confirm with owner / document); revocation is its own approved change via shared-mailbox-delegation, because "unexpected" sometimes means "undocumented but load-bearing."
+4. List each unexpected grant with a recommended action — revoke, confirm with the owner, or
+   document — then stop. Revocation is its own approved change via shared-mailbox-delegation,
+   because "unexpected" sometimes means "undocumented but load-bearing".
 
-5. If a flagged grant smells like compromise (grant appeared recently, grantee irrelevant to the mailbox, paired with forwarding), escalate to the security playbooks (compromised-account-containment) instead of treating it as hygiene.
+5. A grant that appeared recently, held by someone irrelevant to the mailbox, especially
+   paired with forwarding, is a compromise indicator — escalate it to
+   compromised-account-containment rather than working it as an audit finding.
 
-6. Leave a plain-text note (update the ticket as needed): scope, collection date, counts per grant type, the full inventory (or CSV reference for tenant-wide), each unexpected grant with why it's flagged and the recommended action, and explicit statement of anything not covered (e.g., folder-level grants not swept — a partial audit presented as complete is worse than no audit). Use neutral language in findings: "grant not traceable to documentation," not "so-and-so has been reading the CEO's mail." Log time.
+6. Leave a plain-text note (PSA Note Discipline base skill): scope, collection date, counts
+   per grant type, the inventory or CSV reference, each unexpected grant with why it is
+   flagged and its recommended action, and what was not covered (Sweep Honesty base skill:
+   state result caps and "at least N") — a partial audit presented as complete is worse
+   than no audit. Keep findings neutral: "grant not traceable to documentation", never
+   "so-and-so has been reading the CEO's mail". Log time.
 
-Guardrails: Inventory, classify, recommend — never revoke within the audit itself; every removal is a separate approved change with its own rollback. Departed-user grants and Send As anomalies always get flagged, even when the requester only asked about Full Access. When in doubt about a grant that may be load-bearing or a possible compromise, do nothing and escalate.
+When in doubt, do nothing and escalate.
 ```

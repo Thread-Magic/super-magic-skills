@@ -19,27 +19,50 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You set an auto-reply on a mailbox the requester doesn't own — with the authorization question answered BEFORE the content question. You prepare and verify; the tech drives the module. Never invent data.
+You set an auto-reply on a mailbox the requester does not own, so the authorization question
+comes BEFORE the content question. You prepare and verify; the tech drives the module.
+Never invent data.
 
-1. Authorization first. The requester is not the mailbox owner, so verify (read the ticket for context):
-   - The absent user themselves asked (email/message on record), OR
-   - Their manager or HR requested it (look up the contact to confirm the reporting relationship where documented; otherwise get the client's authorized contact to confirm via an approval request), OR
-   - It's a departed employee and offboarding policy covers it (employee-offboarding owns the wider process; this skill executes the reply).
-   A peer or "the team" asking is not sufficient — escalate to the manager.
+1. Authorization first. Read the ticket and establish one of these, on record:
+   - The absent user asked themselves, by email or message; or
+   - Their manager or HR requested it — confirm the reporting relationship where
+     documented, otherwise send an approval request to the client's authorized contact; or
+   - It is a departed employee and offboarding policy covers it (employee-offboarding owns
+     the wider process; this skill executes the reply).
+   A peer or "the team" asking is not sufficient — escalate to the manager. Without that
+   authorization on record, do nothing.
 
-2. Content discipline — draft the message and get the authorizer to approve the exact text. Rules:
-   - No reason for absence. "Out of the office" — never "on medical leave," "having surgery," "on maternity leave," or anything personal. Even sympathetic details are the user's to disclose, not the desk's.
-   - No return date unless the authorizer confirms one is safe to share; "until further notice" is fine.
-   - Alternate contact named ONLY with that person's agreement on record — you are signing someone up for the absent user's inbox load.
-   - Internal and external replies are separate messages: external stays terser (external replies also leak org structure to strangers and confirm live addresses to spammers — keep the external one minimal, and confirm the tenant/mailbox external-reply setting is appropriate).
+2. Content discipline. Draft the message and have the authorizer approve the exact text:
+   - No reason for absence. "Out of the office" — never "on medical leave", "having
+     surgery", "on maternity leave", or anything personal. Even sympathetic details are the
+     user's to disclose, not the desk's.
+   - No return date unless the authorizer confirms one is safe to share; "until further
+     notice" is fine.
+   - Name an alternate contact ONLY with that person's agreement on record — you are signing
+     them up for the absent user's inbox load.
+   - Internal and external replies are separate messages. Keep the external one minimal: it
+     leaks org structure to strangers and confirms a live address to spammers. Check the
+     mailbox's external-reply setting.
 
-3. Prepare execution for the tech (PowerShell labeled: verify against current module versions): `Set-MailboxAutoReplyConfiguration -Identity <user> -AutoReplyState Scheduled -StartTime <t1> -EndTime <t2> -InternalMessage "<text>" -ExternalMessage "<text>"` — prefer `Scheduled` with an end date over `Enabled` (which runs until someone remembers). For no-known-return cases, set a review date in the ticket instead and calendar the follow-up.
+3. Capture any existing auto-reply configuration before overwriting it — that text is the
+   rollback, and it may be the user's own wording. Then prepare execution for the tech
+   (verify against current module versions):
+   Set-MailboxAutoReplyConfiguration -Identity <user> -AutoReplyState Scheduled -StartTime
+   <t1> -EndTime <t2> -InternalMessage "<text>" -ExternalMessage "<text>"
+   Prefer Scheduled with an end date over Enabled, which runs until someone remembers. Where
+   there is no known return date, set a review date in the ticket and calendar the follow-up
+   — no immortal auto-replies.
 
-4. Consider the pairing: if mail must be WORKED during the absence, an OOO alone doesn't do that — that's a delegation conversation (shared-mailbox-delegation) with its own consent rules. Offer it; don't bundle it.
+4. If mail must be WORKED during the absence, an auto-reply does not do that — that is a
+   delegation conversation with its own consent rules (shared-mailbox-delegation). Offer
+   it, don't bundle it.
 
-5. Verify via evidence: send a test message and confirm the auto-reply arrives with the approved text (note: Exchange sends one auto-reply per sender per OOO session — test from a fresh sender or toggle state).
+5. Verify with evidence: send a test message and confirm the approved text arrives. Exchange
+   sends one auto-reply per sender per session, so test from a fresh sender or toggle the
+   state.
 
-6. Document what/why/when/rollback — leave a plain-text note: mailbox, who authorized (name and role), exact message text set (internal and external), start/end times, alternate contact's consent reference, date set, and rollback (`-AutoReplyState Disabled`; prior configuration captured before change if one existed). Log time.
-
-Guardrails: No OOO on another person's mailbox without manager/HR/owner authorization on record — when in doubt, do nothing and escalate. Never state or imply the reason for absence in the message. Alternate contacts are named only with their documented agreement. Always an end date or a calendared review — no immortal auto-replies. Capture any existing auto-reply configuration before overwriting it; that text is the rollback and may be the user's own wording.
+6. Leave a plain-text note (PSA Note Discipline base skill): mailbox, who authorized by name
+   and role, the exact internal and external text set, start and end times, the alternate
+   contact's consent reference, the date, and rollback (-AutoReplyState Disabled, plus the
+   prior configuration you captured). Log time.
 ```

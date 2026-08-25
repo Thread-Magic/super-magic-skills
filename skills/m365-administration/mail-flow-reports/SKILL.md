@@ -19,29 +19,48 @@ outcome: [Fewer Escalations & Less Noise, Faster Resolution & Response]
 ## Prompt
 
 ```
-You are producing a periodic mail flow health summary for a client. Read-only exercise: this skill never changes policy — findings route to the owning skill (anti-spam-policy-tuning, mail-forwarding-audit, email-connector-setup) as recommendations. The agent frames what to pull and reads what the tech pastes back. Never invent numbers; every figure carries its source report and period.
+You produce a periodic mail flow health summary for a client. Read-only: this skill never
+changes policy — findings route to the owning skill (anti-spam-policy-tuning,
+mail-forwarding-audit, email-connector-setup) as recommendations. You frame what to pull and
+read what the tech pastes back. Never invent numbers: every figure carries its source report
+and period.
 
-1. Define period and comparison baseline (this month vs last, or vs the same period prior). A number without a baseline is decoration; pull the prior report from the ticket history or state that this run establishes the baseline. Pull documented client context from the client's documentation (skip gracefully if IT Glue isn't connected) and the knowledge base.
+1. Define the period and a comparison baseline — this month against last, or the same period
+   a year prior. Pull the prior report from ticket history, or say plainly that this run
+   establishes the baseline. Add documented context from the client's documentation and the
+   knowledge base, continuing without them if off (Connector Degradation base skill).
 
-2. Have the tech pull from the EAC / Defender reporting pages (portal names and locations shift — verify current report names against Microsoft's current docs):
-   - Mailflow status: total inbound/outbound volume, and the split across good mail / spam / malware / phishing verdicts.
+2. Have the tech pull from the Exchange admin center and Defender reporting pages (names and
+   locations shift — verify against Microsoft's current docs):
+   - Mailflow status: inbound and outbound volume, split across good mail, spam, malware and
+     phishing verdicts.
    - Threat protection status: catch counts by detection technology.
-   - Top senders and recipients (and top spam recipients — repeat targets are a finding).
-   - Connector report: volume per connector, TLS status, delivery failures (feeds email-connector-setup if a connector looks sick).
-   - Auto-forwarded messages report (feeds mail-forwarding-audit if new external forwards appeared).
-   - Queues / delayed delivery if the period had delivery complaints.
-   PowerShell equivalents (`Get-MailTrafficATPReport`, `Get-MailFlowStatusReport` etc.) where the tech prefers export — verify against current module versions; some historical reporting cmdlets have been retired.
+   - Top senders and recipients, including top spam recipients — repeat targets are a
+     finding.
+   - Connector report: volume per connector, TLS status, delivery failures.
+   - Auto-forwarded messages report.
+   - Queues and delayed delivery, if the period had complaints.
+   Get-MailTrafficATPReport and Get-MailFlowStatusReport give a CSV export; verify against
+   current module versions, since some reporting cmdlets are retired.
 
-3. Compute the readable metrics: total volume and week-over-week trend; spam catch rate (filtered spam / (filtered spam + user-reported misses if tracked)); malware/phish counts; percentage of outbound from connectors vs mailboxes; count of external auto-forwards.
+3. Compute the readable metrics: total volume and week-over-week trend; spam catch rate
+   (filtered spam over filtered spam plus user-reported misses); malware and phishing counts;
+   share of outbound from connectors versus mailboxes; count of external auto-forwards.
 
-4. Flag anomalies against the baseline — each flag gets a recommended action, not just a highlight:
-   - Volume spike (inbound: campaign or attack; outbound: possible compromised account or runaway app — check the top-sender identity; a single mailbox dominating outbound is a security check, not a footnote — treat as a possible compromise indicator and escalate).
-   - Catch-rate drop or user-reported-spam rise → anti-spam-policy-tuning review.
-   - New top sender that is a device/app → confirm it's a known connector (email-connector-setup), not an abuse path.
+4. Flag anomalies against the baseline, each with a recommended action:
+   - Inbound volume spike — a campaign or attack. Outbound spike — a compromised account or
+     runaway app; one mailbox dominating outbound is a compromise indicator, escalate it.
+   - Catch-rate drop or a rise in user-reported spam → anti-spam-policy-tuning.
+   - A new top sender that is a device or app → confirm it is a known connector, not an
+     abuse path.
    - New external auto-forwards since last period → mail-forwarding-audit.
-   - Connector failures/TLS downgrades → investigate before the LOB app owner notices.
+   - Connector failures or TLS downgrades → investigate before the app owner notices.
 
-5. Output two artifacts: (a) a plain-text ticket note with the metrics table, period comparison, flags and recommended actions, and where each number came from; (b) if the client gets a formatted report, keep the note as the source of record anyway. State any report caps or lookback limits (most portal reports cover ~90 days) rather than presenting a truncated window as the full period — if the portal only shows 90 days, don't report "the quarter" from 90 days minus a week. No client-to-client comparisons in the deliverable; each report stands on its own tenant's data. Log time.
+5. Leave a plain-text note (PSA Note Discipline base skill) with the metrics table, the
+   period comparison, the flags and their actions, and where each number came from. Apply
+   the Sweep Honesty base skill: state report caps and lookback limits — most portal reports
+   cover about 90 days, so don't report "the quarter" from 90 days minus a week. No
+   client-to-client comparisons. Log time.
 
-When in doubt about a security-flavored anomaly, escalate rather than just charting it.
+When in doubt about a security-flavoured anomaly, escalate rather than charting it.
 ```

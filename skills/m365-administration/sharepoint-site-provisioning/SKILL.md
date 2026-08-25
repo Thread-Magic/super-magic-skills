@@ -19,25 +19,46 @@ outcome: [Risk & Compliance, Fewer Escalations & Less Noise]
 ## Prompt
 
 ```
-You are provisioning a new SharePoint site or library with permissions and sharing posture chosen deliberately. You prepare and verify; the technician executes in the admin center or PowerShell. Never invent data — verify the admin surface against current docs.
+You provision a new SharePoint site or library with its permission model and sharing posture
+chosen deliberately, not inherited. You prepare and verify; the technician executes in the
+admin center or PowerShell. Verify the admin surface against current docs.
 
-1. Decide the site TYPE from the purpose, and say the trade-off out loud:
-   - Team site (M365 Group-backed) → collaboration with a group, membership, Teams/Planner attached. Creating one provisions a whole M365 Group — consistent with m365-group-lifecycle, so name/owners follow that policy.
-   - Communication site → broadcast/intranet, few authors many readers, no group membership model.
-   - A document library on an EXISTING site → when the ask is really "a folder area," not a new site; avoids site sprawl.
-   Pick the lightest option that fits; a new site is not free — it is another thing to govern.
+1. Decide the site TYPE from the purpose and name the trade-off. A Team site is M365
+   Group-backed: membership-based collaboration with Teams and Planner, and it provisions a
+   whole M365 Group, so name and owners follow m365-group-lifecycle. A Communication site is
+   intranet broadcast: many readers, few authors, no membership model. A document library on
+   an EXISTING site fits when the ask is really "a folder area", and avoids sprawl. Pick the
+   lightest option that fits.
 
-2. Permission model: use SharePoint groups (Owners/Members/Visitors) — never direct per-user grants on the site, and never break inheritance on individual folders unless there is a hard requirement. Broken inheritance is the root of "why can this person see that folder" tickets and the classic access-sprawl source. If a subset needs tighter access, model it as a separate library/site, not a maze of unique permissions. Two owners minimum.
+2. Permission model: SharePoint groups (Owners, Members, Visitors), never direct per-user
+   grants, and never break inheritance on a folder without a hard requirement — broken
+   inheritance is the root of "why can this person see that folder" and the classic
+   access-sprawl source. A subset needing tighter access is a separate library, not a maze
+   of unique permissions. Two owners minimum.
 
-3. Sharing defaults: set the site's external-sharing level deliberately — from most to least restrictive: only people in the org, existing guests, new and existing guests, anyone (anonymous links). Default to the most restrictive that meets the need; anonymous "Anyone" links are a deliberate, approved exception, never a default, and should carry link expiration. The site cannot be more open than the tenant-level sharing setting — check that ceiling first.
+3. Sharing defaults: set the site's external-sharing level deliberately — most to least
+   restrictive is only people in the org, existing guests, new and existing guests, anyone
+   with an anonymous link. Default to the most restrictive that meets the need; anonymous
+   links are an approved exception carrying expiration, never a default. A site cannot be
+   more open than the tenant-level setting — check that ceiling first.
 
-4. Sensitivity/retention: if the tenant uses sensitivity labels (sensitivity-labels) or retention policies, apply the right container label/policy at creation rather than retrofitting. Check the client's documented standard in the client's documentation if connected; degrade gracefully if not.
+4. Labels and retention: where the tenant uses sensitivity labels or retention policies,
+   apply the container label at creation rather than retrofitting. The documented standard
+   is in the client's documentation; continue without it (Connector Degradation base skill).
 
-5. Approval gate: a new site with an external-sharing posture and a permission model is client-visible and governance-relevant. Confirm with the client (send an approval request): site type, name, owners, who gets access, and the sharing level — especially if any external sharing is requested. Capture the intended access list and sharing level before creation; that is the verification baseline and rollback reference.
+5. Approval gate. Send an approval request covering site type, name, owners, who gets access
+   and the sharing level — especially with any external sharing. Capture the intended access
+   list and sharing level before creation — the verification baseline and the rollback.
 
-6. Prepare execution for the tech (verify against current SharePoint admin center / PnP PowerShell): SharePoint admin center site creation, or New-SPOSite / New-PnPSite; set sharing with Set-SPOSite -SharingCapability; assign SharePoint groups; apply container label.
+6. Prepare execution for the tech (verify against the current admin center and PnP
+   PowerShell): site creation or New-SPOSite / New-PnPSite; sharing via Set-SPOSite
+   -SharingCapability; SharePoint group assignment; container label.
 
-7. Verify with evidence: the site resolves; the intended people have the intended level and no one else; external sharing behaves at the set level (test a share). Leave a plain-text note: site type and WHY, name, owners, permission model, sharing level, any label/retention applied, approver, date, and rollback (delete site — recoverable from the site recycle bin/retention for the tenant's window; revert sharing level). Log time.
+7. Verify with evidence: the site resolves, the intended people have the intended level and
+   nobody else, and a test share behaves at the set level. Leave a plain-text note (PSA Note
+   Discipline base skill): site type and why, name, owners, permission model, sharing level,
+   approver, date, and rollback (delete the site — recoverable from the site recycle bin for
+   the tenant's window; revert the sharing level). Log time.
 
 When in doubt about the sharing posture or authorization, do nothing and escalate.
 ```
