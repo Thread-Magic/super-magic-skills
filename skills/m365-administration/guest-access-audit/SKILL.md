@@ -19,26 +19,21 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are auditing a tenant's B2B guest accounts and putting a self-maintaining mechanism in place, with cleanup gated behind approval. The technician exports from Entra and executes removals; the agent compiles the dated table and prepares approvals. Never report a removal as done on intention — never invent data. Counts and activity windows are point-in-time console exports — date them and label them as such; do not present the inventory as continuously true.
+You audit a tenant's B2B guest accounts and put a self-maintaining mechanism in place, cleanup gated behind approval. The tech exports from Entra and executes removals; you compile the table and prepare approvals. Apply the Write Guardrails base skill — never report a removal as done on intention; when in doubt about a guest's purpose or your authority to remove, do nothing and escalate. Apply Sweep Honesty too: exports are point-in-time — date them, and note what you couldn't check.
 
-1. Inventory. The tech exports all users with userType Guest from Entra, with: display name, home domain, creation date, invite state (accepted vs pending), last sign-in date, and sponsor/inviter if recorded. The agent compiles the dated table. Note honestly where data is missing — last sign-in is blank for guests who authenticate only into SharePoint sharing links, so absence of sign-in is evidence, not proof, of staleness.
+1. Inventory. The tech exports every user with userType Guest from Entra: home domain, creation date, invite state (accepted vs pending), last sign-in, and sponsor. Last sign-in is blank for guests who only authenticate into SharePoint sharing links, so a blank is evidence, not proof, of staleness — corroborate with creation date, group memberships and a sponsor check before listing anyone.
 
 2. Classify:
-   - Never redeemed — invited, never accepted (30+ days): near-free removals; the access was never used.
-   - Stale — no sign-in activity past the client's threshold (default 90 days; use the client's documented standard if one exists in the client's documentation or the knowledge base, skipping gracefully if not connected).
-   - Unknown-purpose — active but no one can say why: route to the client contact for a keep/remove verdict, listing what each guest can reach (group and Teams memberships).
-   - Active and sponsored — keep; record the sponsor.
-   Blank sign-in data is not a staleness verdict on its own — corroborate (creation date, group memberships, sponsor check) before listing a guest for removal.
+   - Never redeemed — invited, never accepted, 30+ days: near-free removals, the access was never used.
+   - Stale — no sign-in past the client's threshold (default 90 days; use their documented standard where the documentation integration is connected — Connector Degradation base skill).
+   - Unknown purpose — active but nobody can say why: send to the client contact for a keep/remove verdict, listing what each guest can reach (groups and Teams).
+   - Active and sponsored — keep, and record the sponsor.
 
-3. Check what guests can reach. Flag guests holding privileged roles (critical finding — cross-reference global-admin-audit; a guest with a privileged role is an immediate escalation, not a cleanup line item), guests in broad-access groups, and tenant settings that over-permit (guest invite settings set to "anyone can invite", guest access to all groups). These are findings even if every individual guest is legitimate.
+3. Check what guests can reach. A guest holding a privileged role is an immediate escalation, not a cleanup line item (global-admin-audit). Flag guests in broad-access groups, and tenant settings that over-permit — guest invite set to "anyone can invite", guest access to all groups. These are findings even when every guest is legitimate.
 
-4. Cleanup with a soft-delete pattern. For approved removals: disable (block sign-in) first, wait an agreed window (e.g., 14–30 days) for breakage reports — a guest wired into a Teams workflow or shared library breaks visibly — then delete. Removing a guest removes their access to Teams, shared files, and apps at once; say so in the approval. No guest deletion without approval and the disable-first wait window; deletion severs sharing links and Teams membership irreversibly.
+4. Clean up disable-first, behind approval. Send an approval request to the client's documented authority with the removal list (name, home domain, last activity, what they lose) and the disable-then-delete schedule. On approval block sign-in, wait the agreed window (14–30 days) for breakage reports — a guest wired into a Teams workflow or shared library breaks visibly — then delete. Removal cuts access to Teams, shared files and apps at once. Rollback is re-enabling during the wait window; after deletion, re-inviting loses prior permissions, so that part is one-way.
 
-5. Approval gate. Send an approval request to the client's documented authority with the removal list (name + home domain + last activity + what they lose), the disable-then-delete schedule, and the rollback (re-enable during the wait window; re-invite after deletion loses prior permissions — that part is one-way).
+5. Make it self-maintaining. Propose Entra access reviews for guests with auto-removal on non-response — these need Entra ID P2/Governance licensing, so state the dependency; if unlicensed, schedule a manual re-audit instead. Pair with invite-restriction settings.
 
-6. Make it self-maintaining. Propose Entra access reviews for guests (requires Entra ID P2/Governance licensing — state the dependency; if unlicensed, schedule the manual re-audit instead) with auto-removal on non-response, and sensible invite-restriction settings.
-
-7. Document what/why/when/rollback in a plain-text note: counts per class (dated, labeled as point-in-time), actions taken with approver, the recurring mechanism now in place, and follow-up tickets raised for tenant-setting findings. Full guest lists with names and domains go in the client's documentation system, not in PSA-synced notes — the note carries counts and the storage reference.
-
-When in doubt about a guest's purpose or authorization to remove, do nothing and escalate.
+6. Leave a plain-text note: counts per class, dated as point-in-time, actions taken with approver, the recurring mechanism now in place, and follow-up tickets for tenant-setting findings. Full guest lists go in the client's documentation, not in PSA-synced notes — the note carries counts and a pointer.
 ```

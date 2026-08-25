@@ -19,31 +19,30 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You ship a resource mailbox whose booking behavior is a deliberate policy: who can book, whether a human approves, how far out and how long bookings can run — all confirmed with the client and written down. You prepare and verify; the tech drives PowerShell or the admin center. Never invent data.
+A resource mailbox's booking behavior is a deliberate policy — who can book, whether a human approves, how far out and how long. You confirm and prepare it; the tech drives PowerShell or the admin center. Apply the Write Guardrails base skill: never invent data, and when in doubt do nothing and escalate.
 
-1. Confirm type and booking policy with the client before creation — these are the questions the defaults silently answer wrong (read the ticket for context):
-   - Room or Equipment? (Rooms get locations in Room Finder; equipment doesn't.)
-   - Auto-accept, or delegate approval? Fully automatic is fine for ordinary rooms; anything contended or expensive usually wants a human approver.
-   - Who may book: everyone, or a restricted group?
+1. Confirm with the client before creation — the defaults silently answer these wrong:
+   - Room or Equipment? Rooms get locations in Room Finder; equipment doesn't.
+   - Auto-accept, or delegate approval? Automatic suits ordinary rooms; anything contended or expensive wants a human approver.
+   - Who may book — everyone, or a restricted group?
    - Recurring meetings allowed? Standing bookings are how rooms get squatted.
    - Booking window (how far ahead) and maximum duration?
 
-2. Prepare creation for the tech (PowerShell labeled: verify against current module versions):
-   - `New-Mailbox -Room -Name "<room>"` or `New-Mailbox -Equipment -Name "<item>"` — no license needed under 50 GB; sign-in on the account stays blocked, same rule as shared mailboxes.
+2. Prepare creation: `New-Mailbox -Room -Name "<room>"` or `New-Mailbox -Equipment -Name "<item>"`. No license needed under 50 GB, and sign-in on the account stays blocked — nobody logs in as the room.
 
-3. Prepare the booking policy via `Set-CalendarProcessing` per the answers:
-   - Auto-accept: `-AutomateProcessing AutoAccept` (this is what prevents double-booking — AutoAccept declines conflicts).
-   - Delegate approval: `-AllBookInPolicy $false -AllRequestInPolicy $true -ResourceDelegates <approvers>` — requests go to the delegates to accept/decline. Confirm the delegates actually agreed to the job; an approval queue nobody watches is the "requests just sit there" ticket.
-   - Restricted booking: `-BookInPolicy <group>` with `-AllBookInPolicy $false` (maintain the group, not a person list).
-   - Limits: `-AllowRecurringMeetings`, `-BookingWindowInDays`, `-MaximumDurationInMinutes` per the client's answers.
-   - Consider `-AddOrganizerToSubject`/`-DeleteSubject` defaults: hiding subjects protects privacy, showing them helps front-desk staff — ask.
-   (Check the client's documentation for documented room/resource standards — skip gracefully if not connected.)
+3. Prepare the booking policy with `Set-CalendarProcessing`:
+   - Auto-accept: `-AutomateProcessing AutoAccept` — this is what declines conflicts and prevents double-booking.
+   - Delegate approval: `-AllBookInPolicy $false -AllRequestInPolicy $true -ResourceDelegates <approvers>`. Verify the delegates exist, are active and agreed to the job; a single-person or unwatched queue is the "requests just sit there" ticket.
+   - Restricted booking: `-BookInPolicy <group>` with `-AllBookInPolicy $false` — maintain a group, not a person list.
+   - Limits: `-AllowRecurringMeetings`, `-BookingWindowInDays`, `-MaximumDurationInMinutes`.
+   - Ask about `-AddOrganizerToSubject`/`-DeleteSubject`: hiding subjects protects privacy, showing them helps front-desk staff.
+   Check the client's documentation for a room standard; if that integration isn't connected, say so and work from the ticket (Connector Degradation base skill).
 
-4. For "room misbehaves" tickets, pull the current `Get-CalendarProcessing` output first and diff it against intended behavior — double-booking is almost always `AutomateProcessing` not set to AutoAccept, and silent requests are almost always delegates missing or gone (departed user as sole ResourceDelegate is a classic).
+4. For "room misbehaves" tickets, pull `Get-CalendarProcessing` first and diff it against intended behavior. Double-booking is almost always `AutomateProcessing` not set to AutoAccept; silent requests are almost always missing delegates, a departed user as sole ResourceDelegate being the classic. Capture that output — it is the rollback.
 
-5. Get client sign-off (send an approval request) on the policy summary — booking rules are user-visible behavior for everyone who schedules meetings.
+5. Send the policy summary to the client for sign-off. Booking rules are visible behavior for everyone who schedules meetings.
 
-6. Verify via evidence: a test booking auto-accepts (or routes to the delegate), a conflicting booking declines, and an over-limit booking declines with the policy reason. Document what/why/when/rollback — leave a plain-text note: resource name and address, type, full policy (approval mode, who can book, window, duration, recurrence), delegates, approver, date, and rollback (prior CalendarProcessing values captured in step 4, or defaults for new). Log time.
+6. Verify with evidence: a test booking auto-accepts (or routes to the delegate), a conflicting booking declines, and an over-limit booking declines with the policy reason. Leave a plain-text note — resource name and address, type, approval mode, who can book, window, duration, recurrence, delegates, approver, date, and rollback. Log time.
 
-Guardrails: Never leave a contended resource on silent defaults — the booking policy is confirmed with the client, not assumed. Delegate-approval mode requires named, willing delegates; verify they exist and are active before enabling it, and flag single-person approval queues as fragile. Sign-in on resource accounts stays blocked; nobody logs in as the room. Capture prior CalendarProcessing settings before changing an existing resource — that is the rollback. PowerShell labeled: verify against current module versions. When in doubt, do nothing and escalate.
+Never leave a contended resource on silent defaults. PowerShell here is labeled: verify it against current module versions.
 ```
