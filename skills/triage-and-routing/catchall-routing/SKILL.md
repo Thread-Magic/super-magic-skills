@@ -19,68 +19,47 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-Route a ticket that arrived with no company (or on a catchall contact) to the real
-client and contact using an explicit evidence ladder — or leave it alone when the
-evidence isn't there.
+Route a ticket that arrived with no company, or on a catchall contact, to its real client and
+contact — on evidence, or not at all.
 
-1. Read the ticket: title, description, earliest message, full headers/quoted text if
-   present, and any internal notes. For phone-sourced tickets, a post-call note often states
-   the caller's name and company outright — treat that as a high-confidence identity source.
+1. Read the whole ticket: the earliest message, headers, quoted text and internal notes. On a
+   phone-sourced ticket, a post-call note often names the caller and their company outright —
+   treat it as high-confidence identity.
 
-2. Spam pre-check: if the message is clearly unsolicited marketing or automated junk with
-   no client-identifying content and no sign a human forwarded it in for a reason, stop
-   and flag it as spam for review instead of routing it. Do not close spam unattended —
-   flag with a note only.
+2. Spam pre-check: unsolicited marketing or automated junk with no client-identifying content,
+   and no sign a human forwarded it in for a reason, gets a spam flag and a note — never a close.
 
-3. Extract identity clues in this order of strength (the evidence ladder):
-   a. Email domain of the true sender (strongest),
-   b. An explicit company name stated in the body or alert fields,
-   c. A person's name alone (weakest — never sufficient by itself).
+3. Rank identity clues by strength (the evidence ladder): the true sender's email domain,
+   strongest; then an explicit company name in the body or alert fields; then a person's name
+   alone, never sufficient. On "FW:" or a quoted original, parse the original "From:" line
+   and use that sender, not the forwarder. On a vendor or monitoring alert, use its structured
+   fields — site, organization, device, tenant — as the company clue.
 
-4. If the subject starts with "FW:" or the body contains a quoted original message, parse
-   the original "From:" line and use that sender — not the forwarder — as the identity
-   source.
+4. Search clients on the domain or extracted name to resolve the company, then contacts scoped to
+   it. Take the first that fits: a confident contact match (email, or a full name at that
+   company); else, only once the company itself is confidently resolved, its admin/primary
+   contact — or any basic contact there if it has no admin — noting that a fallback was used so a
+   human can correct it; else a company with no contacts at all: note that and leave it for
+   manual handling. Never attach a lookalike contact at another company.
 
-5. If the ticket is a vendor/monitoring alert, extract the structured fields (site name,
-   organization, device, tenant) from the alert body and use those as the company clue.
+5. Commit company and contact ONLY when exactly one candidate fits at domain or explicit-name
+   strength — never on name similarity alone. Two or more plausible: change nothing, list them
+   and ask. If this tenant needs the wrong assignment cleared first, unassign to no-company, then
+   set the correct pair.
 
-6. Resolve the company by searching clients on the domain or extracted name; then find the
-   contact by searching contacts scoped to that company.
-   - Confident contact match (email match, or a full name within that company) → use it.
-   - No confident contact match, but the company is confidently resolved at domain or
-     explicit-name strength → fall back to the company's admin/primary contact so the ticket
-     still lands on the right client, and if there's no admin contact, a basic contact at that
-     company. Call out in your note that a fallback contact was used, so a human can correct it.
-   - The company resolved but has no contacts at all → note that and leave for manual handling.
-   Never attach to a lookalike contact at a different company, and never fall back to a contact
-   until the company itself is confidently resolved.
+6. If the PSA sync rejects a company change on an existing ticket, close-and-recreate: a new
+   ticket under the correct company with the original text and a note cross-referencing both
+   numbers, then close the original — only with my confirmation, never unattended.
 
-7. If the current wrong assignment must be cleared before the correct one can apply on
-   this tenant, unassign first (set back to no-company/catchall), then set the correct
-   company and contact.
+7. Note it: plain text, no markdown or emojis — what matched, which evidence rung, what changed.
 
-8. Set the company and contact ONLY when exactly one company candidate fits at domain or
-   explicit-name strength. Ambiguity (two or more plausible companies) → make no change;
-   list candidates and ask. Never assign on name similarity alone.
+A PSA-bound ticket must always have a company: with no match possible, route it to the desk's
+designated internal/catchall client and flag it, never leave it companyless. Never invent
+companies, contacts, or ticket numbers; say if a search may have capped.
 
-9. If the tenant's PSA sync rejects company changes on an existing ticket, use the
-   close-and-recreate path: open a new ticket under the correct company with the original
-   text and a plain-text note cross-referencing both ticket numbers, then close the
-   original — but only with my confirmation (this is destructive-adjacent), never
-   unattended.
-
-10. Leave a plain-text internal note stating what was matched, which evidence rung was
-    used, and what changed.
-
-A PSA-bound ticket must always have a company — if no match is possible, route it to the
-designated internal/catchall client per desk policy and flag it; never leave it
-companyless. Notes destined for the PSA are plain text — no markdown, no emojis. Do not
-invent companies, contacts, or ticket numbers; if searches may have capped, say so.
-
-Running as a Flow: act only at domain-match or explicit-company strength; on anything
-weaker, make no change and leave one plain-text internal note: "CATCHALL ROUTING: no
-confident match. Evidence found: <clues>. Left unassigned for human review." Never use
-close-and-recreate unattended. One remap per ticket per run; if the ticket already
-carries a routing note from this skill, stop. Your entire reply is the internal note —
-no narration, no questions.
+As a Flow: act only at domain-match or explicit-company strength; on anything weaker change
+nothing and leave one plain-text note: "CATCHALL ROUTING: no confident match. Evidence found:
+<clues>. Left unassigned for human review." Never close-and-recreate unattended. If the ticket
+already carries a routing note from this skill, stop — one remap per ticket. Your entire reply is
+the note: no narration, no questions.
 ```

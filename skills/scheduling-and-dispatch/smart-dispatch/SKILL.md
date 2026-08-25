@@ -19,60 +19,47 @@ outcome: [Faster Resolution & Response, Time & Cost Savings (Capacity)]
 ## Prompt
 
 ```
-You are doing end-to-end dispatch in a single pass: classify the ticket, score candidate
-technicians against a routing matrix (who knows the stack/client AND who has capacity),
-assign the winner, and put the work on their schedule — with the reasoning written down.
+Do end-to-end dispatch in one pass: classify the ticket, score candidates against a routing
+matrix, assign the winner, schedule the work, and write the reasoning down.
 
-1. Classify. Apply intake-classification logic to the ticket's summary and description:
-   type (Incident/Request/Problem), affected technology, and a priority sanity-check
-   against the desk's priority names. If the ticket is unclassifiable (empty body, pure
-   noise), stop — dispatch needs a classification.
+1. Classify from the summary and description: type (Incident/Request/Problem), affected
+   technology, and a priority sanity-check against the desk's priority names. If it is
+   unclassifiable (empty body, noise), stop — dispatch needs a classification.
 
-2. Build the routing matrix. For each candidate from the board's team (minus inactive
-   members and stated exclusions), score two signals:
-   - Specialty fit: does the tech's stated specialty (from the desk's configured list)
-     match the classified technology?
-   - Client familiarity: search each candidate's resolved tickets for this client — recent
-     closes score higher. If the search caps out, report familiarity as "at least N"
-     rather than exact.
+2. Build the routing matrix. For each candidate on the board's team, minus inactive and excluded
+   members, score specialty fit (does their stated specialty match the classified technology?)
+   and client familiarity (their resolved tickets for this client, recent closes scoring higher).
+   If that search caps out, report familiarity as "at least N" rather than exact.
 
-3. Weigh capacity. Apply the workload formula (base capacity − priority-weighted open
-   tickets) to the top specialty/familiarity candidates, so a perfect-fit tech who is
-   drowning doesn't automatically win.
+3. Weigh capacity across the top candidates with the workload formula: base capacity minus
+   priority-weighted open tickets, so a perfect-fit tech who is drowning doesn't win.
 
-4. Decide. Pick the highest combined scorer. If the top two are effectively tied, or no
-   candidate has both a plausible fit and capacity, do not guess — leave unassigned and
-   post the score table for a human dispatcher.
+4. Pick the highest combined scorer. If the top two are effectively tied, or no candidate has
+   both a plausible fit and capacity, leave the ticket unassigned and post the score table for a
+   dispatcher.
 
-5. Assign and schedule. Set the owner, then put a work block on their schedule sized to the
-   classification (small default block unless the desk configured durations per ticket
-   type).
+5. Set the owner, then put a work block on their schedule sized to the classification — a small
+   default unless the desk configured per-type durations.
 
-6. Advance the status — only because the assignment succeeded. If the desk uses an
-   "Assigned" status for dispatched work, move the ticket to it; if no such status exists,
-   leave status alone. Never change priority.
+6. Advance the status only because the assignment succeeded: if the desk uses an "Assigned"
+   status, move it there; otherwise leave status alone. Never change priority.
 
-7. Record. Post a plain-text internal note: the classification, the score table (winner,
-   runner-up, formula inputs), and the scheduled block. No markdown, no emojis — this note
-   may sync to a PSA.
+7. Post a plain-text internal note — no markdown or emojis, it may sync to a PSA — with the
+   classification, the score table (winner, runner-up, formula inputs), and the scheduled block.
 
-Running as an agent in a Flow (unattended): your entire reply is posted verbatim as the
-note — plain text, no narration, no questions. Complete the full path (classify → route →
-assign → schedule → status → note) only on a clear winner (single top scorer after
-exclusions, confident classification, client rule respected); otherwise make no writes and
-post "Smart dispatch: no unambiguous assignment (reason). Left for dispatcher." with the
-score table. Advance status only on a successful assignment; on any hand-off, leave status
-alone. If the ticket already has an owner or a schedule entry, do nothing and post nothing.
+Guardrails: show the math — every assignment carries its score breakdown. Client-specific routing
+rules beat every score. Never assign to the requester, an inactive or excluded member, or
+reassign a ticket that already has an owner. When in doubt, do nothing beyond the diagnostic
+note. This reads Thread schedule entries only — not Planner or Outlook — so pair it with
+Calendar-Aware Scheduling in attended mode when exact timing matters. If clients are aligned to
+service pods, use Pod-Based Dispatch to scope candidates to the client's team first. If the desk
+runs tiers rather than specialty scoring, use Tier Dispatcher — a fixed per-tier pool, checked
+against today's schedule before booking.
 
-Guardrails: honesty about calendars — this is NOT capacity-calendar-aware (no Planner/
-Outlook read on the tool surface); it schedules against Thread schedule entries only. When
-exact timing matters, pair with Calendar-Aware Scheduling in attended mode. Show the math
-— every assignment carries its score breakdown. Client-specific routing rules beat every
-score. Never assign to the requester, an inactive/excluded member, or reassign a ticket
-that already has an owner. Per-candidate searches can cap — report familiarity as minimums
-when capped. When in doubt, do nothing beyond the diagnostic note. If clients are aligned to
-dedicated service pods, use Pod-Based Dispatch to scope the candidate pool to the client's
-team before scoring. If the desk runs support tiers rather than specialty scoring,
-use Tier Dispatcher — it picks from a fixed per-tier pool and checks today's schedule
-before booking.
+As a Flow (unattended): your entire reply is posted verbatim as the note — plain text, no
+narration, no questions. Complete the full path only on a clear winner: one top scorer after
+exclusions, a confident classification, client rules respected. Otherwise make no writes and post
+"Smart dispatch: no unambiguous assignment (reason). Left for dispatcher." with the score table.
+On any hand-off, leave status alone. If the ticket already has an owner or a schedule entry, do
+nothing and post nothing.
 ```

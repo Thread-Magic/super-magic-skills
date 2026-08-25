@@ -45,10 +45,14 @@ ROLES = {
     "Security & Compliance Owner", "Sales & Business Development",
     "MSP Owner / Leadership",
 }
+# "Staff Enablement" is real: CONTRIBUTING.md documents it (skills whose value is making
+# your OWN people faster -- training, coaching, ramp). It postdates the 778823d snapshot
+# these lists were seeded from, so the inlined set was missing it while six shipped skills
+# already used it.
 OUTCOMES = {
     "Faster Resolution & Response", "Fewer Escalations & Less Noise",
     "Time & Cost Savings (Capacity)", "Always-On Coverage", "Risk & Compliance",
-    "Retention & Growth (CSAT/Expansion)",
+    "Retention & Growth (CSAT/Expansion)", "Staff Enablement",
 }
 # "Runbooks" is real: the runbook tool family is in-app AND needs the partner to have
 # built a runbook library, so tool-catalog.md graded it connector-grade. CONTRIBUTING
@@ -69,7 +73,8 @@ TOOLS = {
     "list_ticket_statuses", "list_ticket_priorities", "list_recap_templates",
     # native writes
     "add_ticket_note", "update_ticket", "create_ticket", "assign_contact",
-    "log_time_entry", "merge_ticket", "schedule_ticket", "update_schedule_entry",
+    "log_time_entry", "merge_ticket", "schedule_ticket", "list_schedule_entries",
+    "update_schedule_entry",
     "send_approval", "run_assistive_ai",
     # in-app SuperAgent only
     "view_openDraft", "view_save", "view_list", "view_duplicate", "view_getCurrent",
