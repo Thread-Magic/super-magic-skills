@@ -19,22 +19,49 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-Turn a raw backup-failure alert into a classified failure mode with a recurrence verdict and a clear handle-here vs escalate-to-vendor call.
+Turn a raw backup-failure alert into a classified failure mode, with a recurrence verdict
+and a clear handle-here-or-escalate call.
 
-1. Read the alert text carefully — backup products embed the failure reason. Resolve the source device in the RMM without stopping to ask mid-lookup, then pull its current state and recent device activity. Don't trust a class filter — confirm the class in the device details.
-2. Classify the failure mode from alert text + device state:
-   - Device offline/unreachable at job time -> scheduling/availability, not a backup problem.
-   - Destination full or quota exceeded -> capacity; check disk/storage on the device.
-   - VSS/snapshot/writer errors -> OS-level; often follows a pending reboot or recent patch (check the activity history).
-   - Credential/auth failures -> recently rotated passwords or service-account changes.
-   - Network/timeout to target -> path/bandwidth; check whether other devices at the site also failed.
-   - Agent/version errors -> recent agent update in the activity history.
-3. Recurrence: check ticket history for the same device, same class, over the past 30-90 days. One failure with a later success is noise; three of the same class is a problem ticket. State the verdict explicitly; if the history search may have capped, say "at least N".
-4. Check the documentation for the client's backup product, retention design, and documented known issues / vendor support contacts (degrade gracefully if the documentation platform is absent).
-5. Decide the path: handle here (offline-at-job-time, pending-reboot VSS, obvious destination-full — local remediations exist); escalate to vendor (repeated same-class failures after local remediation, corruption/integrity errors, failures across many clients at once, or anything the vendor's docs mark support-required). Name the vendor generically from docs — do not guess the product.
-6. Output: classification, evidence, recurrence verdict, recommended action, and — critically — the last known good backup date (the client's real exposure). Offer to leave a plain-text note (no markdown/emojis).
+1. Read the alert text closely — backup products embed the failure reason in it. Resolve the
+   source device in the RMM without stopping to ask mid-lookup, then pull its state and
+   recent activity. Confirm the class in the device details, not from a filter.
 
-Guardrails: never state data is safe or that a restore will work — report only the last successful job on record; restore verification is a human task. Do not clear/reset backup alerts — the alert is the evidence trail. A recurring failure is never closed as a one-off. If the backup product is not visible through the RMM (many run their own consoles), say the view is partial and name what to check in the console. Degrade gracefully if the RMM is absent.
+2. Classify the failure mode from the alert text plus device state:
+   - Offline or unreachable at job time — scheduling and availability, not backup.
+   - Destination full or quota exceeded — capacity; check storage on the device.
+   - VSS, snapshot or writer errors — OS-level, usually downstream of a pending reboot or a
+     recent patch. Check the activity history.
+   - Credential or auth failures — rotated passwords or service-account changes.
+   - Network or timeout to target — path and bandwidth; did other devices at the site fail?
+   - Agent or version errors — look for a recent agent update in the activity history.
 
-Unattended (Flow) mode: entire reply is the plain-text triage note posted verbatim (classification, evidence, recurrence verdict, last known good date, handle-here vs escalate). Input is the alert/ticket id. If the device cannot be resolved, classify from alert text alone and mark "DEVICE UNRESOLVED - alert-text classification only"; if the text yields no classification, output nothing. Permitted write: the note only — never reset alerts, close tickets, or touch the device.
+3. Recurrence. Check ticket history for the same device and failure class over the last 30
+   to 90 days. One failure with a later success is noise; three of a class is a problem
+   ticket. State the verdict explicitly, and apply the Sweep Honesty base skill if the
+   search may have capped — "at least N", not a bare count.
+
+4. Check the documentation for the client's backup product, retention design, known issues
+   and vendor support contacts.
+
+5. Decide the path. Handle here: offline-at-job-time, pending-reboot VSS, obvious
+   destination-full — local remediations exist. Escalate to the vendor: repeated same-class
+   failures after local remediation, corruption or integrity errors, failures across many
+   clients at once, or anything the vendor's docs mark support-required. Name the vendor
+   from the documentation — never guess the product.
+
+6. Output the classification, evidence, recurrence verdict, recommended action, and — the
+   number that actually matters — the last known good backup date, which is the client's
+   real exposure. Offer to leave it as a note (PSA Note Discipline base skill).
+
+Never state that data is safe or that a restore will work — report the last successful job
+on record and nothing more; restore verification is a human task. Don't clear or reset
+backup alerts, which are the evidence trail, and never close a recurring failure as a
+one-off. Many backup products run their own console and aren't fully visible through the
+RMM: say the view is partial and name what to check there.
+
+As a Flow: your entire reply is the triage note — classification, evidence, recurrence
+verdict, last known good date, handle-or-escalate. Input is the alert or ticket id. If the
+device won't resolve, classify from alert text alone and mark "DEVICE UNRESOLVED - alert-text
+classification only"; if the text yields no classification, output nothing. The note is the
+only permitted write — never reset alerts, close tickets, or touch the device.
 ```

@@ -19,20 +19,43 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-Rule out the big causes first (site outage, maintenance, decommission), reconstruct what happened from the device activity, then give the tech precise on-site guidance or an escalation call. This needs the RMM connected; if absent, degrade to ticket history + documentation and say the RMM view is unavailable.
+Rule out the big causes first — site outage, maintenance, decommission — then reconstruct
+what happened from the device activity and give the tech precise on-site guidance or an
+escalation. Needs the RMM connected; without it, fall back to ticket history and
+documentation and say the RMM view was unavailable (Connector Degradation base skill).
 
-1. Resolve the device: organization first, then look it up in the RMM. Rank candidates by organization match then most recent last-contact; state your pick. Verify device class in the details — don't trust a class filter.
-2. Site-wide check FIRST: pull the organization's other devices. If several at the same site dropped around the same time, this is a network/site outage, not a device problem — switch to Network Outage Triage and say so.
-3. Check maintenance: is the device in a maintenance window, or was maintenance recently set? Offline inside planned maintenance is not an incident — note it and stop unless the window expired.
-4. Establish the timeline: read the device details for exact last-contact; read the recent activity for what happened just before it dropped (shutdown, reboot initiated, agent update, user logoff, patch install).
-5. Alert history: pull the device's alerts — is this a flapper (repeated offline/online pairs)? Flapping suggests NIC/power/Wi-Fi, not hard failure.
-6. Classify the likely cause: clean shutdown before drop -> powered off; patch/reboot activity before drop -> hung during restart; no preceding activity -> power loss, network path, or hardware; last contact weeks ago -> possibly retired.
-7. Cross-check documentation (IT Glue) and recent tickets: was this scheduled for replacement, reimage, or decommission?
-8. Check whether another tech is already on it — recent remote-session/manual activity means coordinate, don't duplicate.
-9. If it looks local/power: give concrete physical checks (power/LED, network cable/Wi-Fi association, whether the machine responds locally, power-cycle guidance). The agent cannot see a powered-off machine — say what only on-site eyes can verify.
-10. Escalate when: it is a server or shared infrastructure; it hosts services others depend on; it has been offline past the client's tolerance with no on-site explanation; or physical checks fail. Escalation output: timeline, evidence, checks done, next-tier steps. Offer to leave the diagnostic as a plain-text note (no markdown/emojis).
+1. Resolve the device: organization first, then look it up. Rank candidates by organization
+   match, then most recent last-contact, and state your pick. Confirm the device class in
+   the details rather than trusting a class filter.
+2. Site-wide check FIRST. Pull the organization's other devices. Several at one site
+   dropping around the same time is a network or site outage, not a device problem — say so
+   and switch to Network Outage Triage.
+3. Maintenance next. In a window, or one recently set? Offline inside planned maintenance is
+   not an incident — note it and stop, unless the window has expired.
+4. Build the timeline: exact last-contact from the device details, then recent activity for
+   what happened just before it dropped — shutdown, reboot, agent update, logoff, patch.
+   Repeated offline/online pairs in the alert history mean a flapper, pointing at NIC, power
+   or Wi-Fi rather than hard failure.
+5. Classify: clean shutdown before the drop means powered off; patch or reboot activity means
+   hung during restart; nothing preceding means power, network path or hardware; last contact
+   weeks ago means possibly retired.
+6. Cross-check documentation and recent tickets — scheduled for replacement, reimage or
+   decommission? Recent remote-session activity means another tech is on it: coordinate.
+7. If it looks local or power-related, give concrete physical checks: power and LEDs, cable
+   or Wi-Fi association, whether the machine responds locally, power-cycle guidance. You
+   cannot see a powered-off machine — say what only on-site eyes can confirm.
+8. Escalate when it is a server or shared infrastructure, hosts services others depend on,
+   has been offline past the client's tolerance with no explanation, or the checks fail.
+   Hand over the timeline, evidence, checks done, and next-tier steps.
 
-Guardrails: never mark an offline alert resolved just because the device came back — confirm stability before closing, and closing is the requester's call. Do not claim a cause you cannot evidence; distinguish "confirmed" from "likely". Long-offline devices are flagged "verify still in service", not treated as incidents.
+Never mark an offline alert resolved just because the device came back — confirm stability
+first, and closing is the requester's call. Distinguish "confirmed" from "likely" and claim
+no cause you can't evidence. A long-offline device is flagged "verify still in service", not
+worked as an incident. Offer the diagnostic as a note (PSA Note Discipline base skill).
 
-Unattended (Flow) mode: entire reply is the plain-text diagnostic note posted verbatim. Input is the device id from the triggering alert (never name-guessed unattended); device unresolvable or the RMM not enabled -> output nothing. Branches inside the note: multiple devices at the site dropped together -> lead with "PROBABLE SITE OUTAGE - not a device issue" and skip per-device diagnostic; device in an active maintenance window -> the note is exactly "IN MAINTENANCE WINDOW - NO INCIDENT." Permitted write: the note only — never resolve or close the alert/ticket.
+As a Flow: your entire reply is the note. Input is the device id from the triggering alert —
+never guess by name unattended; unresolvable device or no RMM means output nothing. Lead with
+"PROBABLE SITE OUTAGE - not a device issue" and skip the per-device work when the site
+dropped together; emit exactly "IN MAINTENANCE WINDOW - NO INCIDENT" inside a window. The
+note is the only permitted write — never resolve or close the alert or ticket.
 ```
