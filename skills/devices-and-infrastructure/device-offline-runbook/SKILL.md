@@ -25,13 +25,13 @@ escalation. Needs the RMM connected; without it, fall back to ticket history and
 documentation and say the RMM view was unavailable (Connector Degradation base skill).
 
 1. Resolve the device: organization first, then look it up. Rank candidates by organization
-   match, then most recent last-contact, and state your pick. Confirm the device class in
-   the details rather than trusting a class filter.
+   match, then most recent last-contact, and state your pick. Confirm the class in the
+   device details, not from a filter.
 2. Site-wide check FIRST. Pull the organization's other devices. Several at one site
    dropping around the same time is a network or site outage, not a device problem — say so
    and switch to Network Outage Triage.
-3. Maintenance next. In a window, or one recently set? Offline inside planned maintenance is
-   not an incident — note it and stop, unless the window has expired.
+3. Maintenance next. In a window, or one recently set? Offline inside planned maintenance
+   is not an incident — note it and stop, unless the window has expired.
 4. Build the timeline: exact last-contact from the device details, then recent activity for
    what happened just before it dropped — shutdown, reboot, agent update, logoff, patch.
    Repeated offline/online pairs in the alert history mean a flapper, pointing at NIC, power

@@ -37,8 +37,8 @@ and a clear handle-here-or-escalate call.
 
 3. Recurrence. Check ticket history for the same device and failure class over the last 30
    to 90 days. One failure with a later success is noise; three of a class is a problem
-   ticket. State the verdict explicitly, and apply the Sweep Honesty base skill if the
-   search may have capped — "at least N", not a bare count.
+   ticket. State the verdict, and apply the Sweep Honesty base skill if the search may have
+   capped — "at least N", not a bare count.
 
 4. Check the documentation for the client's backup product, retention design, known issues
    and vendor support contacts.
@@ -46,8 +46,8 @@ and a clear handle-here-or-escalate call.
 5. Decide the path. Handle here: offline-at-job-time, pending-reboot VSS, obvious
    destination-full — local remediations exist. Escalate to the vendor: repeated same-class
    failures after local remediation, corruption or integrity errors, failures across many
-   clients at once, or anything the vendor's docs mark support-required. Name the vendor
-   from the documentation — never guess the product.
+   clients, or anything the vendor's docs mark support-required. Name the vendor from the
+   documentation — never guess the product.
 
 6. Output the classification, evidence, recurrence verdict, recommended action, and — the
    number that actually matters — the last known good backup date, which is the client's
