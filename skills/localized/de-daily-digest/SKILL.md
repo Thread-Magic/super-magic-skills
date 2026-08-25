@@ -19,24 +19,24 @@ outcome: [Time & Cost Savings (Capacity)]
 ## Prompt
 
 ```
-Erstelle die Tagesübersicht der offenen Tickets des anfragenden Mitglieds.
+Erstelle die Tagesübersicht der offenen Tickets des anfragenden Mitglieds. Beschränke dich strikt auf dessen eigene Tickets — nie fremde Warteschlangen, außer es wird ausdrücklich verlangt.
 
-1. Rufe alle offenen Tickets des anfragenden Mitglieds ab (ermittle das Mitglied bei Bedarf zuvor). Falls eine Ergebnisobergrenze die Liste gekappt haben könnte, das vorab sagen („50 angezeigt — es können mehr sein"), statt die Übersicht als vollständig auszugeben.
-2. Sortiere jedes Ticket in genau eine Rubrik, in dieser Prioritätsreihenfolge (ein Ticket landet in der ersten Rubrik, für die es sich qualifiziert):
+1. Rufe alle offenen Tickets des Mitglieds ab (ermittle es bei Bedarf). Könnte eine Ergebnisobergrenze die Liste gekappt haben, sage das vorab („50 angezeigt — es können mehr sein"), statt sie als vollständig auszugeben.
+2. Sortiere jedes Ticket in genau eine Rubrik, in dieser Reihenfolge (die erste passende gewinnt):
    - Wartet auf Ihre Antwort — der Kunde hat zuletzt geantwortet und wartet. Nach Wartedauer sortieren.
-   - Dringend / gefährdet — hohe Priorität, SLA am oder nahe am Bruch, oder Threads mit negativer Stimmung. Nach Schwere sortieren.
-   - Heute geplant — Tickets mit Termineintrag oder zugesagter Nachverfolgung heute, in zeitlicher Reihenfolge.
-   - Wartet auf Dritte — Kunde, Hersteller oder Eskalation ist am Zug. Alles markieren, was 3+ Tage still ist, ohne dass diese Rubrik den Seitenkopf verdrängt.
-   - Alles Übrige — nur Anzahl und eine Charakterisierung in einer Zeile; keine Einzelzeilen pro Ticket.
-3. Jede Ticketzeile ist eine einzige Zeile: Nummer, Kunde (kurz), Zustand in 5–8 Wörtern und die nächste Aktion („#1234 <Kunde> — Drucker seit 2 T offline, Kunde hat gestern geantwortet → prüfen, ob der Fix greift").
+   - Dringend / gefährdet — hohe Priorität, SLA am oder nahe am Bruch, oder negative Stimmung. Nach Schwere sortieren.
+   - Heute geplant — Termineintrag oder zugesagte Nachverfolgung heute, in Zeitfolge.
+   - Wartet auf Dritte — Kunde, Hersteller oder Eskalation ist am Zug. Alles markieren, was 3+ Tage still ist, ohne dass diese Rubrik den Kopf verdrängt.
+   - Alles Übrige — nur Anzahl und eine Charakterisierung in einer Zeile.
+3. Jedes Ticket: eine einzige, handlungsfähige Zeile — Nummer, Kunde (kurz), Zustand in 5–8 Wörtern und die nächste Aktion („#1234 <Kunde> — Drucker seit 2 T offline, Kunde hat gestern geantwortet → prüfen, ob der Fix greift").
 4. Eröffne mit „Hier anfangen:" dem wichtigsten Ticket und einem Satz, warum (die am längsten wartende Kundenantwort schlägt vage Dringlichkeit; ein harter SLA-Bruch schlägt alles).
 5. Schließe mit der Tagesform: Summen je Rubrik und ein Satz.
-6. Wird die Kurzfassung verlangt („3 Zeilen"), genau drei Zeilen ausgeben: (1) Hier anfangen + warum, (2) die Zähler — X warten auf Antwort / Y dringend / Z geplant, (3) das eine Thema, das heute wehtut, wenn es ignoriert wird. Keine Überschriften, keine Vorrede.
-7. Biete die natürliche Fortsetzung an: „Sollen Antwortentwürfe für die Tickets erstellt werden, die auf Sie warten?"
+6. Wird die Kurzfassung verlangt („3 Zeilen"), gib genau drei Zeilen aus, ohne Überschriften und Vorrede: (1) Hier anfangen + warum, (2) die Zähler — X warten auf Antwort / Y dringend / Z geplant, (3) das eine Thema, das heute wehtut, wenn es ignoriert wird.
+7. Biete die Fortsetzung an: „Sollen Antwortentwürfe für die wartenden Tickets erstellt werden?"
 
-Deutsche Konvention: Datum als TT.MM.JJJJ („15.07.2026"); Uhrzeit im 24-Stunden-Format mit „Uhr" („10:00 Uhr"). Die Übersicht ist ein internes Dokument: Unter Kollegen ist das Du auf vielen deutschen Desks üblich — dem Hausbrauch folgen; interne Abkürzungen („ggf.", „z. B.", „i. O.") sind in internen Zeilen zulässig, nie in Kundentext.
+Nur lesend: nichts ändern — keine Statusänderungen, Notizen, Erinnerungen —, außer das Mitglied bittet danach darum. Erfinde nie Ticketnummern, SLA-Zeiten oder Kundenantworten; ist die letzte Aktivität mehrdeutig, nimm die vorsichtigere Rubrik (Wartet auf Ihre Antwort).
 
-Leitplanken: Strikt auf die eigenen Tickets des anfragenden Mitglieds beschränken; niemals die Warteschlangen anderer Techniker einbeziehen, außer es wird ausdrücklich verlangt. Nur lesend — die Übersicht ändert nichts (keine Statusänderungen, Notizen, Erinnerungen), außer das Mitglied bittet anschließend darum. Niemals Ticketnummern, SLA-Zeiten oder Kundenantworten erfinden; ist die letzte Aktivität mehrdeutig, das Ticket in die vorsichtigere Rubrik einsortieren (Wartet auf Ihre Antwort). Jede Rubrikzeile muss handlungsfähig sein. Im Zweifel nichts tun.
+Deutsche Konvention: Datum TT.MM.JJJJ („15.07.2026"), Uhrzeit im 24-Stunden-Format mit „Uhr" („10:00 Uhr"). Die Übersicht ist intern: Das Du unter Kollegen ist auf vielen deutschen Desks üblich — folge dem Hausbrauch; interne Abkürzungen („ggf.", „z. B.", „i. O.") sind hier zulässig, nie in Kundentext.
 
-Unbeaufsichtigte Variante (Flows — über Run Skill bei einem Ticket-Ereignis, niemals geplant): Deine gesamte Antwort wird wortwörtlich als Morgenbriefing ausgeliefert, keine Erzählstimme oder Fragen; immer die Zeile Hier anfangen und die Zähler, ohne Anschlussangebot. Leere Warteschlange → exakt: „Keine offenen Tickets für Sie. Genießen Sie den freien Schreibtisch." Fehlgeschlagene Suche → eine einzige Zeile, dass die Übersicht nicht erstellt werden konnte, niemals eine erfundene Übersicht.
+Unbeaufsichtigte Variante (Flows — über Run Skill bei einem Ticket-Ereignis, nie geplant): Deine gesamte Antwort ist das Briefing, ohne Erzählstimme oder Fragen, immer mit der Zeile Hier anfangen und den Zählern, ohne Anschlussangebot. Leere Warteschlange → exakt: „Keine offenen Tickets für Sie. Genießen Sie den freien Schreibtisch." Fehlgeschlagene Suche → eine Zeile, dass die Übersicht nicht erstellt werden konnte, nie eine erfundene.
 ```
