@@ -51,7 +51,7 @@ identified, containment advised where needed, and the reporter answered. Work it
    - Suspicious but unconfirmed → say exactly that, with what would confirm it.
    - Legitimate → explain the signals that clear it, so the reporter learns.
 7. Reply to the reporter — draft it for a human to review and send — and thank them;
-   reporting is the behaviour you want repeated. Log the verdict, the evidence, and the
+   reporting is the behavior you want repeated. Log the verdict, the evidence, and the
    reasoning behind the call as an internal note, then classify and set status per
    soc-classification-tree.
 

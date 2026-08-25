@@ -43,7 +43,7 @@ Branch:
    or their manager and record who said it — releasing a session with unsaved work destroys
    that work. Then guide the app admin through the vendor's procedure. If the console shows
    the session but release fails, take it to vendor support — do not drop to the database
-   layer. If ghost sessions are eating licences and crashes keep abandoning them, the crash
+   layer. If ghost sessions are eating licenses and crashes keep abandoning them, the crash
    is the real ticket.
 
 3. No app-level tool, or the lock survives it. The vendor's method may be a lock file to

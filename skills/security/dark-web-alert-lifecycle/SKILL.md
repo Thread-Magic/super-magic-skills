@@ -35,7 +35,7 @@ batch I point you at, in order:
 4. Fresh path (90 days or newer): look up the contact, confirm they are a current employee,
    and draft a notification for a human to review and send with rotation guidance — change
    the exposed password on the affected service AND everywhere it was reused, move to a
-   password manager and unique passwords, verify MFA is on with methods the user recognises.
+   password manager and unique passwords, verify MFA is on with methods the user recognizes.
    A departed employee's exposure goes to the client contact rather than the individual; flag
    any still-active accounts. Branch to breached-credential-response for a confirmed-current
    credential, and to compromised-account-containment if there is any sign the credential was

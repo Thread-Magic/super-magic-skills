@@ -32,7 +32,7 @@ drowning the desk in per-account tickets. Work it in order:
    account-takeover-runbook (rotate password, revoke sessions and tokens, sweep rules and
    consents). Successful stuffing means that password was valid and is now known.
 3. For the targeted-but-failed population: the passwords weren't guessed, but the accounts
-   are now known targets. Prioritise MFA coverage on any that lack it and flag legacy-auth
+   are now known targets. Prioritize MFA coverage on any that lack it and flag legacy-auth
    and non-MFA sign-in paths, which spraying hunts for.
 4. Harden the front door at the tenant level: enforce MFA on all accounts, disable
    legacy/basic authentication, enable smart lockout and anomalous-sign-in protection, and

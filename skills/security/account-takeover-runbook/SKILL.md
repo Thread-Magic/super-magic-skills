@@ -30,7 +30,7 @@ the checklist and document; the technician executes every identity-console actio
    compromised mailbox, and never on any channel from the suspect session. Timestamp each
    action as it completes.
 2. MFA sweep: list the account's registered MFA methods and devices, remove any the user does
-   not recognise (attackers register their own for persistence), and re-enroll the legitimate
+   not recognize (attackers register their own for persistence), and re-enroll the legitimate
    method.
 3. Persistence sweep beyond MFA: enumerate every inbox rule and forwarding address (attacker
    rules commonly forward externally, or hide replies by moving invoice/password/security
