@@ -32,7 +32,7 @@ You inventory, sequence and track; authorized admins execute.
    their RMM or remote access reached; VPN profiles, client-issued accounts, any client that gave
    them a personal login. Source it from IT Glue, Hudu or the knowledge base plus their ticket
    history; post it as a rotation checklist and track each item to done. Rotate shared
-   credentials, don't just remove access — removal doesn't help if they memorised it.
+   credentials, don't just remove access — removal is no help if they memorised it.
 
 3. Internal cutover and seat reclaim, in strict order: sign-in blocked and sessions revoked, MFA
    cleared, mailbox handled (delegate to the manager before any license removal), chat and
@@ -47,7 +47,7 @@ You inventory, sequence and track; authorized admins execute.
 
 5. Close with an audit note — plain text, no markdown or emojis (PSA Note Discipline base skill):
    rotation checklist done, accounts disabled with timestamps, seats reclaimed, tickets
-   reassigned, clients notified.
+   reassigned, clients notified. Log time.
 
 Apply the Write Guardrails base skill: confirm before any write, never present a recommendation
 as done, never invent data, when in doubt do nothing. For an immediate exit, block identity,
