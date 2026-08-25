@@ -19,16 +19,46 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-One sick host is every guest's bad day. Read the alert, separate host-level causes from VM-level ones, and hand the tech a specific, ordered remediation. This needs the RMM connected; if the host is not RMM-managed (common for ESXi), say monitoring visibility is limited to docs + guest symptoms and route to the hypervisor console.
+Separate host-level causes from VM-level ones and hand over an ordered remediation.
 
-1. Confirm you are looking at a host: read the device details in the RMM and the documentation (IT Glue / Hudu) — hostname prefixes (HV/ESX/VMH) are hints, not facts (don't trust a class filter). From documentation, map the host's guests and storage (local, SAN/NAS, cluster shared volume); the guest map is the blast radius of everything that follows.
-2. Read the alert family from the host's active alerts and its recent activity, then run the host-vs-VM split — the core judgment: all/most guests affected or host-level metrics (CPU ready/queueing, memory pressure, datastore latency) elevated -> host-level; one guest misbehaving while the host is comfortable -> VM-level, route as a normal server ticket for that guest (device-health-check / server-diagnostics) and say the host is exonerated with evidence.
-3. Datastore/volume capacity — find what is consuming, usual suspects in order: snapshot/checkpoint sprawl (long-running snapshots grow unbounded — top emergency cause), orphaned VM disks from deleted VMs, thin-provisioned disks growing into overcommitted space, ISO/backup files parked on the datastore. A datastore at genuine risk of filling is an emergency (guests pause/crash at zero) — escalate priority on the ticket.
-4. Snapshot sprawl: inventory snapshots/checkpoints by age and size (via the hypervisor console — a hands-on step to hand off with a deep link into the device in the RMM). Deleting/consolidating a large old snapshot generates heavy I/O and can take hours — it belongs in a window, not a business-hours panic click, unless the datastore is critically full and the risk trade flips; spell out that trade. Check ticket history for why the snapshot exists — a backup product's stuck snapshot points at the backup chain (backup-failure-triage), not manual cleanup.
-5. Host resource pressure: check consolidation history (recent activity, ticket history) for recently added/resized guests; identify the noisy neighbor where guest metrics allow. Remediation ladder: rebalance/migrate guests, right-size overallocated VMs, then hardware. Host reboots are last-resort choreography — every guest gracefully handled first; never propose a host reboot with workstation-reboot casualness.
-6. Output: host-vs-VM verdict with evidence, ranked cause hypothesis, remediation steps in order with window requirements, and the deep link. Reset the alert in the RMM only after a real action or verified condition change, with a plain-text note (no markdown/emojis) saying what was found and done. Chronic alerts get a root-cause ticket, not a weekly reset.
+1. Confirm it is a host from device details plus documentation (IT Glue / Hudu);
+   HV/ESX/VMH prefixes and class filters are hints, not evidence. Not RMM-managed (common
+   for ESXi) -> visibility is docs plus guest symptoms; route to the hypervisor console.
+   Map its guests and storage (local, SAN/NAS, cluster shared volume) — the blast radius.
 
-Guardrails: never recommend deleting snapshots, disks, or files without stating what they are and confirming the backup product is not mid-chain — deleting a backup's working snapshot corrupts the chain. Host reboots and storage migrations are change-window work with the full guest map; this integration cannot orchestrate them — hands-on handoff only. Do not reset a host alert to clear the board; resets without remediation are recorded as "reset, unresolved, recurrence expected". For "when does it fill", route to storage-capacity-planning.
+2. Read the alert family from active alerts and activity, then split host vs VM. Most
+   guests affected, or host metrics elevated (CPU ready/queueing, memory pressure,
+   datastore latency) -> host-level. One guest sick while the host is comfortable ->
+   VM-level: route it as a normal server ticket (device-health-check), host exonerated.
 
-Unattended (Flow) mode: entire reply posted verbatim as the plain-text note. Do the host-vs-VM split and cause ranking from tool evidence only; if evidence does not distinguish, state both possibilities and stop. Never reset alerts, never change priority beyond board rules, never recommend deletions unattended — findings and a recommended next assignment only. If the device cannot be confirmed as a hypervisor host, output that single line and nothing else.
+3. Datastore capacity — find the consumer, in order: snapshot/checkpoint sprawl (grows
+   unbounded; top emergency cause), orphaned disks from deleted VMs, thin-provisioned
+   disks growing into overcommitted space, ISOs or backups parked there. Guests crash at
+   zero free: a datastore at real risk of filling is an emergency — raise the priority.
+   Inventory snapshots by age and size in the hypervisor console (hand off with a deep
+   link into the device in the RMM): consolidating a large old snapshot drives heavy I/O
+   for hours — window work, unless the datastore is critically full and the trade flips;
+   spell that out. A stuck backup snapshot points at the backup chain
+   (backup-failure-triage), not manual cleanup.
+
+4. Host pressure: check activity and ticket history for guests recently added or resized,
+   and name the noisy neighbour where metrics allow. Ladder: rebalance or migrate guests,
+   right-size overallocated VMs, then hardware.
+
+5. Output: verdict, ranked cause, ordered remediation with window requirements, and a note
+   of what was found and done (apply the PSA Note Discipline base skill — plain text, no
+   markdown or emojis). Reset the alert only after a real action or verified change;
+   without one it reads "reset, unresolved, recurrence expected". A chronic alert gets a
+   root-cause ticket, not a weekly reset.
+
+Guardrails: never recommend deleting snapshots, disks, or files without saying what they
+are and confirming the backup product is not mid-chain — deleting its working snapshot
+corrupts the chain. Host reboots and storage migrations are change-window work needing the
+full guest map and every guest handled gracefully; this integration cannot orchestrate
+them — hands-on handoff only.
+
+As a Flow: your entire reply posts verbatim as the note. Rank from tool evidence alone;
+where it does not distinguish, state both and stop. Never reset alerts, never change
+priority beyond board rules, never recommend deletions — findings and a next assignment
+only. If the device is not confirmed a hypervisor host, output that line alone.
 ```

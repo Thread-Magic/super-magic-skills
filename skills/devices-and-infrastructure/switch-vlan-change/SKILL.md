@@ -19,14 +19,48 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-Front-load the safety work for a VLAN/port change: identify exactly which port on which switch, establish what else breaks, book a window, and make sure a known-good config is saved BEFORE the change — then hand the spec to the implementing tech. This skill never configures a switch.
+Front-load the safety work for a VLAN or port change: identify exactly which port on which
+switch, establish what else breaks, book a window, and make sure a known-good config is
+saved BEFORE anything changes. Hand the spec to the implementing tech; this skill never
+configures a switch.
 
-1. Pin down the physical target: which switch, which port, which site. Use the documentation (IT Glue / Hudu) for switch documentation and port maps; if no port map exists, the first deliverable is "identify and label the port on site" — never guess a port number from memory or convention.
-2. Blast-radius check, in widening circles: (a) what is on the port now (a single desktop, or a downstream unmanaged switch feeding a whole room?); (b) is the port an uplink or trunk — trunk changes affect every VLAN riding it; (c) what shares the VLAN being modified (phones, APs, cameras, servers); (d) is spanning-tree or the management VLAN involved — a wrong change there can sever remote access to the switch itself. Read the change history from the environment's posture in Liongard where an inspector covers the switch platform — confirm the inspector exists and last ran successfully, and state the dataprint age of any config data you cite.
-3. Classify risk from the blast radius: single access port with one endpoint -> low, can be done in business hours with the user's consent; trunk/uplink/management-VLAN/anything feeding multiple users -> change window required, after hours, with someone reachable on site in case remote access is lost.
-4. Rollback FIRST, non-negotiable: the spec must require saving the running configuration (backup/export) before the change, and must state the rollback action ("restore saved config" or the explicit reverse commands). A change request without a captured pre-change config is not ready.
-5. Assemble the plain-text change spec (no markdown/emojis): target switch/port, current state, desired state, blast-radius findings, window, rollback plan, verification steps (endpoint gets expected VLAN/DHCP scope, no new spanning-tree events, management access still up). Leave it as a note; route it for approval if the client's change process requires it (check ticket history for their change-ticket conventions).
-6. Book it: schedule a follow-up ticket for the agreed window and assign the implementing tech. After implementation, the ticket should carry a verification note before closure.
+1. Pin down the physical target — which switch, which port, which site — from the
+   documentation (IT Glue / Hudu) switch records and port maps. With no port map, the
+   first deliverable is "identify and label the port on site"; never guess a port number
+   from memory or convention.
 
-Guardrails: this skill never configures a switch — it produces the spec, window, and rollback plan; the change itself is a human action. No trunk, uplink, or management-VLAN change without an after-hours window and a captured pre-change config — decline to mark the spec ready otherwise. When in doubt, widen the blast-radius estimate — an unmanaged switch hiding behind a port is common; if you cannot confirm what is downstream, treat the port as multi-user. Never include switch credentials or SNMP strings in the ticket; reference documentation by name. If switch documentation does not exist, say so and make documentation part of the change deliverable rather than proceeding on assumptions.
+2. Blast radius, in widening circles: (a) what is on the port now — one desktop, or a
+   downstream unmanaged switch feeding a whole room; (b) is it an uplink or trunk, since
+   trunk changes affect every VLAN riding it; (c) what else shares the VLAN being modified
+   (phones, APs, cameras, servers); (d) is spanning-tree or the management VLAN involved —
+   a wrong change there severs remote access to the switch. Where a Liongard inspector
+   covers the switch platform, read its change history (apply the Inspector Read
+   Discipline base skill — confirm the inspector exists and last ran successfully, and
+   date any config data you cite).
+
+3. Classify risk: a single access port with one endpoint is low and can be done in
+   business hours with the user's consent. Trunk, uplink, management VLAN, or anything
+   feeding multiple users needs an after-hours window, with someone reachable on site in
+   case remote access is lost.
+
+4. Rollback FIRST, non-negotiable: the spec must require saving the running configuration
+   (backup or export) before the change, and must state the rollback action — "restore
+   saved config", or the explicit reverse commands. A change request with no captured
+   pre-change config is not ready.
+
+5. Assemble the change spec: target switch and port, current state, desired state,
+   blast-radius findings, window, rollback plan, verification steps (endpoint gets the
+   expected VLAN and DHCP scope, no new spanning-tree events, management access still up).
+   Leave it as a note (apply the PSA Note Discipline base skill — plain text, no markdown
+   or emojis) and route it for approval if the client's change process requires one.
+
+6. Schedule a follow-up ticket for the agreed window, assigned to the implementing tech,
+   carrying a verification note before it closes.
+
+Guardrails: no trunk, uplink, or management-VLAN change without an after-hours window and
+a captured pre-change config — decline to mark the spec ready otherwise. When in doubt,
+widen the blast radius — an unmanaged switch hiding behind a port is common, so treat a
+port whose downstream you cannot confirm as multi-user. Never put switch credentials or
+SNMP strings in the ticket; reference documentation by name. If switch documentation does
+not exist, say so and make documenting it part of the change.
 ```

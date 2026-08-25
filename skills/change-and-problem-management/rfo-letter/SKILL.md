@@ -19,57 +19,47 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-Draft the client-facing formal account of what happened. It outlives the incident — it
-gets forwarded to the client's board, their insurer, sometimes their lawyers. Draft from
-ticket evidence under defensive-writing rules: complete enough to rebuild trust, careful
-enough to never claim more than the record supports.
+Draft the client-facing account of the outage. It outlives the incident — it gets
+forwarded to the client's board, their insurer, sometimes their lawyers. Draft from ticket
+evidence, under defensive-writing rules.
 
-1. Gather the record: master incident ticket and workstream tickets ,
-   the comms trail (what the client was told and when — the RFO must not contradict it),
-   and the internal post-mortem if one exists.
+1. Gather the record: the master incident ticket and its workstream tickets, the comms
+   trail (what the client was told and when), and the internal post-mortem if one exists.
+   The letter must not contradict the comms trail: where an in-incident update said
+   something the investigation later disproved, it corrects that rather than silently
+   contradicting it.
 
-2. Draft in the fixed structure:
-   - Summary: one paragraph, plain language — what service was affected, when, how long,
-     and that it is resolved.
+2. Draft this structure:
+   - Summary: one paragraph, plain language — service affected, when, how long, resolved.
    - Facts / timeline: dated, timestamped events from the ticket record only — detection,
-     response milestones, restoration. Client-relevant granularity. Reconstructed times
-     marked "approximately."
-   - Impact: what the client experienced, concretely and only as evidenced. No
-     speculative business-loss quantification — that's the client's number, not the MSP's.
-   - Cause: the confirmed causal account. If root cause is not fully confirmed, say "the
+     response milestones, restoration — at client-relevant granularity. Reconstructed
+     times marked "approximately".
+   - Impact: what the client experienced, only as evidenced. No speculative business-loss
+     figures — that number is the client's.
+   - Cause: the confirmed causal account. Where it is not confirmed, write "the
      investigation identified <X> as the most probable cause" — never dress a hypothesis
-     as a finding. Distinguish trigger from root cause where the post-mortem does.
-   - Remediation: what was done to restore service and what has been done since.
-   - Prevention: specific measures being taken, each real and tracked (map to
-     post-incident-action-tracking items). Only commit in writing to actions that have
-     owners; vague "we will review our processes" reads as evasion and specific false
-     promises read worse later.
+     as a finding. Keep trigger and root cause distinct.
+   - Remediation: what restored service, and what has been done since.
+   - Prevention: specific measures, each tracked as a post-incident-action-tracking item.
+     Commit in writing only to actions with owners — "we will review our processes" reads
+     as evasion, a false specific promise reads worse later.
 
-3. Apply the defensive-writing rules: facts you can cite, in plain past tense — no
-   admissions of negligence, no "we should have." No blame of named individuals; vendors
-   named only where the fact is established and necessary. For security-related incidents,
-   never "breach," "hack," or "compromise" unless confirmed and the desk has decided to
-   state it; regulatory notification language is a legal decision. Every sentence passes:
-   "are we prepared to stand behind this in a dispute?"
+3. Defensive writing: cite facts, in plain past tense. No admissions of negligence, no "we
+   should have", no blame of named individuals; name a vendor only where the fact is
+   established and necessary. On security incidents, never "breach", "hack", or
+   "compromise" unless it is confirmed and the desk has decided to state it — regulatory
+   notification language is a legal decision. Every sentence passes: would we stand behind
+   this in a dispute?
 
-4. Reconcile against the comms trail: if an in-incident update said something the
-   investigation later disproved, the RFO addresses the correction gracefully rather than
-   silently contradicting it.
+4. Deliver the draft in chat, flagged: it needs management sign-off before sending, and
+   counsel's review where there is legal or insurance exposure. You never send it. Once a
+   human has, record the sent version and date in a note on the master ticket (apply the
+   PSA Note Discipline base skill — plain text, no markdown or emojis).
 
-5. Deliver the draft in chat for human review — flag explicitly: this letter requires
-   management sign-off before sending, and for incidents with legal/insurance exposure,
-   review by counsel. The agent never sends it.
-
-6. Once approved and sent by a human, record the sent version and date in a plain-text
-   note on the master ticket.
-
-Guardrails: draft only — a human with authority signs and sends it, always. Nothing in the
-letter that isn't in the record: no invented timestamps, no smoothed-over gaps, no
-prevention promises without tracked actions behind them. Where the record is embarrassing
-(slow detection, failed first fix), be honest at the level of fact without self-
-incriminating editorializing — state the timeline, skip the adjectives. Do not include
-internal tooling detail, other clients' names, staff names (roles only), or anything from
-another tenant's incidents. If the requester wants the RFO before root cause is confirmed,
-offer the "most probable cause" framing or a preliminary RFO labeled as such — never a
-confident cause the evidence doesn't support.
+Guardrails: nothing goes in the letter that is not in the record — no invented timestamps,
+no smoothed-over gaps. Where the record is embarrassing (slow detection, a failed first
+fix), be honest at the level of fact and skip the adjectives. Never include internal
+tooling detail, other clients' names, staff names (roles only), or another tenant's
+incidents. Asked for the RFO before root cause is confirmed, offer a preliminary RFO
+labelled as such — never a confident cause the evidence does not support.
 ```

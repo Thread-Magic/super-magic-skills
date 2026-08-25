@@ -19,48 +19,48 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-A freeze window is a client saying "nothing changes during this period unless we personally
-accept the risk." Keep those windows recorded where intake can find them, enforce them when
-changes are proposed, and run the exception path when something genuinely can't wait.
+A freeze window is a client saying "nothing changes during this period unless we
+personally accept the risk". Keep those windows recorded where intake can find them,
+enforce them when changes are proposed, and run the exception path when something
+genuinely cannot wait.
 
-RECORDING A FREEZE:
-1. Capture the freeze as structured facts: client, start/end dates (explicit dates, not
-   "tax season" — resolve the phrase to dates with the client), what is frozen (all changes
-   vs. specific systems), what is exempt (typically security-critical patches and
-   break-fix — get this stated, not assumed), the client-side authority who can grant
-   exceptions, and who requested the freeze.
-2. Store it where the desk's calendar checks read from — the client's KB/wiki record — and
-   confirm it's findable in the client's documentation by the client's name. A freeze nobody
-   can find protects nobody.
-3. Freezes expire: every record carries its end date, and open-ended freezes are recorded
-   with a review date instead. Flag freezes past their end date for confirmation-or-removal
-   rather than deleting them unilaterally.
+RECORDING A FREEZE
+1. Capture it as structured facts: client, explicit start and end dates (resolve "tax
+   season" to dates with the client), what is frozen (all changes vs. specific systems),
+   what is exempt (typically security-critical patches and break-fix — get this stated,
+   not assumed), the client-side authority who can grant exceptions, and who requested it.
+2. Store it where the desk's calendar checks read from — the client's KB or wiki record —
+   and confirm it is findable there by the client's name. A freeze nobody can find
+   protects nobody.
+3. Freezes expire: every record carries its end date, open-ended ones a review date
+   instead. Flag freezes past their end date for confirmation-or-removal rather than
+   deleting them unilaterally.
 
-ENFORCEMENT (at intake / scheduling):
-4. When a proposed change window is checked, match affected clients against active freeze
-   records. Overlap → the change is blocked from scheduling: post a plain-text note citing
-   the specific freeze (client, dates, scope, source record) and set the change back to the
-   requester.
-5. Distinguish frozen from exempt: if the change matches the freeze's stated exemptions
-   (e.g. critical security patch), say so explicitly and route it onward as normal — but
-   cite the exemption clause, don't infer one.
+ENFORCEMENT (at intake / scheduling)
+4. Match the affected clients of a proposed change window against active freeze records.
+   Overlap -> the change is blocked from scheduling: leave a note citing the freeze
+   (client, dates, scope, source record) and send the change back to the requester.
+5. Distinguish frozen from exempt: where the change matches the freeze's stated exemptions
+   (a critical security patch, say), route it onward as normal — citing the exemption
+   clause, never inferring one.
 
-EXCEPTION PATH:
-6. An exception requires all of: a written business case for why it cannot wait until the
-   freeze ends, the risk assessment (change-risk-assessment) attached, and explicit
-   approval from the client-side authority named in the freeze record. Route it for approval through the system where available; otherwise document the client's written approval verbatim
-   in a note. Client silence, or approval from someone other than the named authority, is
-   not an exception.
+EXCEPTION PATH
+6. An exception requires all three: a written business case for why it cannot wait until
+   the freeze ends, the risk assessment (change-risk-assessment) attached, and explicit
+   approval from the client-side authority named in the freeze record. Route it for
+   approval through the system where that exists, otherwise record the client's written
+   approval verbatim in a note. Client silence, or approval from anyone other than the
+   named authority, is not an exception.
 7. Record granted exceptions on both the change ticket and the freeze record's history — a
-   freeze that leaks exceptions every week is really a calendar problem, and the pattern
+   freeze that leaks exceptions weekly is really a calendar problem, and that pattern
    should be visible.
 
-Guardrails: the default answer during a freeze is no. The agent never grants exceptions —
-it assembles the case and routes it to the named human authority. Never treat an emergency
-change as an automatic freeze exception: break-glass work during a freeze still notifies the
-client's named authority immediately, because the freeze is their risk posture, not the
-MSP's. Resolve vague freeze phrases to explicit dates at recording time. If freeze records
-may be incomplete or stale (no review in >6 months), say so when clearing a window rather
-than asserting "no freeze exists." Plain-text notes; freeze citations name the source
-record so the block is verifiable.
+Guardrails: the default answer during a freeze is no. You never grant an exception — you
+assemble the case and route it to the named human authority. An emergency change is not an
+automatic freeze exception: break-glass work during a freeze still notifies the client's
+named authority immediately, because the freeze is their risk posture, not the MSP's. If
+freeze records may be incomplete or stale (no review in over 6 months), say so when
+clearing a window rather than asserting "no freeze exists". Notes are plain text, no
+markdown or emojis (apply the PSA Note Discipline base skill), and a freeze citation names
+the source record so the block is verifiable.
 ```

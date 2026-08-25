@@ -19,16 +19,52 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-Read the offline pattern across a client's fleet to call site-down vs single-device, point at ISP vs internal, and set up the right phone calls and a communication rhythm. This needs the RMM connected; if absent, triage from ticket volume + documentation and say the live fleet view is missing.
+Read the offline pattern across a client's fleet: site-down vs single-device, ISP vs
+internal, then the right calls and a comms rhythm. With no RMM, triage from ticket volume
+plus documentation and say the live fleet view is missing.
 
-1. Establish the pattern first: pull the client's devices and current alerts from the RMM. All/most devices at a site dropping within minutes = site event. A subset sharing a closet/switch/VLAN (infer from naming and IP ranges) = internal segment. One device = not an outage; route back to Device Offline Runbook. Flag result caps — an undercounted fleet can make a full outage look partial.
-2. Note the drop time from last-contact timestamps — a tight cluster is a hard cut (power, circuit, core switch); a stagger suggests something degrading (DHCP exhaustion, spanning-tree, failing hardware).
-3. ISP vs internal, from outside evidence: if the firewall/router/edge device is unreachable but devices with independent connectivity (LTE, other site) are fine, the cut is at or upstream of the edge. If the edge answers but everything behind it is dark, it is internal (switch, closet power, DHCP). Say which evidence supports the call — from the RMM's outside view this is inference; on-site confirmation beats it.
-4. Pull the who-to-call sheet from documentation (IT Glue): ISP name, account/circuit numbers, support line; on-site contact; the site's network gear inventory. If docs are missing these, say so — that is a finding, not a footnote.
-5. Check scope beyond this client: are other clients on the same ISP/region also dropping (scan alerts across organizations)? A regional ISP event changes the message and the fix.
-6. Consolidate ticket noise: identify the offline-alert tickets this event spawned, designate one master incident ticket, and offer to merge the duplicates into it — with the requester's confirmation.
-7. Set the comms cadence and write the first update: who has been called (ISP with circuit ID / on-site contact walking to the closet), what is confirmed vs suspected, next update time. Recommended rhythm: first client update immediately, then every 30 minutes for a full outage (hourly for partial) until restored, plus a closing summary. Leave updates as plain-text notes (no markdown/emojis).
-8. On restoration: verify devices actually re-report online (spot-check last-contact), note the outage window and cause as confirmed/unconfirmed, and recommend a follow-up if cause is unknown — unexplained outages repeat.
+1. Establish the pattern: pull the client's devices and current alerts from the RMM. All
+   or most devices at a site dropping within minutes = site event. A subset sharing a
+   closet, switch or VLAN (inferred from naming and IP ranges) = internal segment. One
+   device = not an outage; route back to Device Offline Runbook. Apply the Sweep Honesty
+   base skill and flag result caps: an undercounted fleet makes a full outage look
+   partial.
 
-Guardrails: never declare ISP fault to the client without ISP confirmation or edge-unreachable evidence — "we are investigating with the carrier" until confirmed; no speculation in client-visible updates. Merges only with confirmation, and only tickets verifiably from this event (same client, same window, offline-type) — never merge on title similarity. The RMM sees the site from outside; every internal-topology conclusion is labeled as inference until on-site confirms. Do not reset offline alerts during the event — they are the telemetry.
+2. Drop time, from last-contact timestamps: a tight cluster is a hard cut (power, circuit,
+   core switch); a stagger means something degrading (DHCP exhaustion, spanning-tree,
+   failing hardware).
+
+3. ISP vs internal, from outside evidence: edge device (firewall/router) unreachable while
+   devices with independent connectivity (LTE, another site) are fine -> the cut is at or
+   upstream of the edge. Edge answers but everything behind it is dark -> internal
+   (switch, closet power, DHCP).
+
+4. Pull the who-to-call sheet from documentation (IT Glue): ISP, account/circuit numbers,
+   support line; the on-site contact; the network gear inventory. Missing any of these is
+   a finding, not a footnote.
+
+5. Scope beyond this client: are other clients on the same ISP or region dropping too
+   (scan alerts across organizations)? A regional ISP event changes the message and the
+   fix.
+
+6. Consolidate ticket noise: designate a master incident ticket among the tickets this
+   event spawned, and offer to merge the duplicates into it on the requester's
+   confirmation.
+
+7. Set the comms cadence and write the first update: who has been called (ISP with circuit
+   ID, on-site contact heading to the closet), what is confirmed vs suspected, next update
+   time. Rhythm: first client update immediately, then every 30 min for a full outage
+   (hourly for partial) until restored, plus a closing summary. Updates go out as notes
+   (apply the PSA Note Discipline base skill — plain text, no markdown or emojis).
+
+8. On restoration: verify devices re-report online (spot-check last-contact), note the
+   outage window and whether the cause is confirmed, and recommend a follow-up if not.
+
+Guardrails: never declare ISP fault to the client without ISP confirmation or
+edge-unreachable evidence — "we are investigating with the carrier" until then, and no
+speculation in client-visible updates. Merge only on confirmation, and only tickets
+verifiably from this event (same client, same window, offline-type) — never on title
+similarity. The RMM sees the site from outside: every internal-topology conclusion is
+inference until on-site confirms. Never reset offline alerts during the event; they are
+the telemetry.
 ```

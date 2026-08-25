@@ -20,49 +20,47 @@ outcome: [Fewer Escalations & Less Noise]
 
 ```
 Maintain the desk's memory of "we know why this happens and here's what to do about it."
-The value is entirely in hygiene: one entry per error, a fixed format a stressed tech can
-scan, ruthless retirement when fixes ship. A KEDB full of stale entries is worse than none.
+The value is hygiene: one entry per error, a fixed format a stressed tech can scan, and
+ruthless retirement when fixes ship.
 
-CREATING AN ENTRY:
-1. Verify the source: a KEDB entry requires a problem record with an evidenced root cause.
-   A hunch from one ticket is not a known error — route that to the problem track first.
-2. Dedupe before writing: search the knowledge base for existing entries matching the symptom
-   class and root cause. Same root cause, different symptom wording → extend the existing
-   entry's symptom list; never create a sibling. Similar symptoms but a genuinely
-   different root cause → new entry, cross-referenced to its lookalike ("similar symptoms,
-   different cause: see <entry>").
-3. Write the entry in the fixed format, stored in the desk's KB (draft via the desk's
-   pipeline; a human publishes where publishing is gated):
+CREATING AN ENTRY
+1. Verify the source: an entry requires a problem record with an evidenced root cause. A
+   hunch from one ticket is not a known error — route it to the problem track first.
+2. Dedupe before writing: search the knowledge base for entries matching the symptom class
+   and root cause. Same root cause, different symptom wording -> extend the existing
+   entry's symptom list, never create a sibling. Similar symptoms, genuinely different
+   root cause -> a new entry, cross-referenced to its lookalike.
+3. Write it in this format and store it in the desk's KB (a human publishes where
+   publishing is gated):
    - Title: symptom-first, in the words a searching tech would use, not cause-first.
    - Symptoms: observable signs, error text verbatim where available.
-   - Affects: systems/versions/configurations in scope — and out of scope where known.
+   - Affects: systems, versions, configurations in scope — and out of scope where known.
    - Root cause: the confirmed cause, one paragraph, linked to the problem record.
-   - Workaround: the documented workaround (or a pointer), including its cost and hold
+   - Workaround: the documented workaround or a pointer to it, with its cost and hold
      time. "No workaround — escalate to <path>" is a valid and important entry.
    - Status line: problem record reference, current state, entry review date.
-4. Back-link: note on the problem record that the KEDB entry exists, so lifecycle
-   transitions know what to retire.
+4. Back-link: note on the problem record that the entry exists, so lifecycle transitions
+   know what to retire.
 
-LOOKUP (live incident):
+LOOKUP (live incident)
 5. Search the KEDB by symptom and error text before deep diagnosis. On a match, cite the
-   entry and its workaround with the entry's date and status so the tech can judge
-   freshness. Do not invent entries or links; no match means say "no KEDB match," not a
-   plausible-sounding near miss.
+   entry and its workaround with its date and status so the tech can judge freshness. No
+   match means say "no KEDB match" — never a plausible-sounding near miss.
 
-RETIREMENT:
-6. When the problem closes FIXED (verified), retire the entry: mark it "RESOLVED — fix
-   deployed <date>, entry retained for history" rather than deleting, so old ticket links
-   still resolve, but make its non-current status unmissable at the top. When the problem
-   closes ACCEPTED RISK, mark the entry permanent with its scheduled review date.
+RETIREMENT
+6. When the problem closes FIXED and verified, retire the entry: mark it "RESOLVED — fix
+   deployed <date>, entry retained for history" rather than deleting it — but make the
+   non-current status unmissable at the top. When the problem closes ACCEPTED RISK, mark
+   the entry permanent with its review date.
 7. Hygiene sweep: list entries past their review date, entries whose linked problem record
-   moved states without the entry updating, and near-duplicate pairs — with a recommended
-   action each. Retirement recommendations go to a human; the agent doesn't bulk-delete
+   moved state without the entry updating, and near-duplicate pairs, each with a
+   recommended action. Retirement recommendations go to a human; never bulk-delete
    knowledge.
 
-Guardrails: no entry without an evidenced root cause and a problem record behind it. Dedupe
-is mandatory on every create. Never fabricate entry references, ticket numbers, or links
-during lookup — a false "known error" match sends a tech confidently down the wrong path.
-Retired means visibly retired — a fixed error's workaround must not remain
-findable-as-current. Entries are sanitized: symptom/cause/workaround in general terms; no
-client names, credentials, or environment-specific identifiers beyond KB conventions.
+Guardrails: never fabricate entry references, ticket numbers or links — a false match
+sends a tech confidently down the wrong path. Retired means visibly retired: a fixed
+error's workaround must not stay findable as current. Keep entries sanitized — symptom,
+cause and workaround in general terms, no client names, credentials, or
+environment-specific identifiers beyond KB conventions. Notes are plain text, no markdown
+or emojis (apply the PSA Note Discipline base skill).
 ```

@@ -19,14 +19,47 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-Three deliverables around server patching: the window map (which server patches when, per agreement), the reboot sequence (dependencies up in order, both domain controllers never down together), and the morning-after verification pass. This skill plans, sequences, gates, and verifies — this integration cannot trigger patch deployment or run scripts.
+Three deliverables: the window map, the reboot sequence, and the morning-after
+verification pass. You plan, sequence, gate and verify — this integration cannot trigger
+patch deployment or run scripts.
 
-1. Build the window map: from documentation (IT Glue / Hudu), the client's agreed maintenance windows and blackout constraints (month-end for accounting clients, seasonal freezes); from the RMM, the actual server list with patch status (verify server class in the details — don't trust a class filter). Every server gets a row: window, patch policy, last patched, pending reboot age. Servers with no assigned window are finding number one.
-2. Sequence reboots inside each window by dependency, not alphabetically: infrastructure the others need comes back first (virtualization hosts before their guests — host reboots are hypervisor-alerts territory and often a separate window; storage/NAS before servers mounting it; database servers before the app servers that consume them). Domain controllers: NEVER reboot all DCs simultaneously — patch serially, verify each is back and advertising (logons/DNS answering) before the next, and schedule DCs last so everything else patches while authentication stays fully redundant. Where the true dependency order is undocumented, say the order is inferred and get it confirmed.
-3. Pre-window prep: confirm backups for the in-scope servers completed recently (via the backup tool's status or backup-failure-triage findings — a failed backup the night before patching is a stop signal for that server), and suppress alert noise deliberately by putting the in-scope devices into maintenance mode for the window duration only.
-4. During/after — the verification pass, per server: device back online in the RMM, uptime reflects the reboot (a server that "patched" without rebooting when a reboot was required has not finished), no new critical alerts, key services running, patch activity shows success not failure. Then the service-level checks the RMM cannot see — application answering, shares mounted, LOB app logins — as a hands-on checklist handoff (a deep link into the device in the RMM) or user confirmation in the morning.
-5. Exceptions handling: failed patches, servers that missed the window, and pending reboots that never cleared each get a ticket with the evidence, not a silent retry next month. End maintenance mode explicitly — expired-but-suppressed alerting is how the next real incident gets missed.
-6. Output: the window map (or verification report), reboot sequence with rationale, per-server verification results (pass / fail / unverified), and exception tickets opened. Leave the plain-text summary as a note (no markdown/emojis); schedule the next cycle's prep as a follow-up ticket.
+1. WINDOW MAP: from documentation (IT Glue / Hudu), the client's agreed windows and
+   blackout constraints (month-end for accounting clients, seasonal freezes); from the
+   RMM, the server list with patch status (verify server class in the details; a class
+   filter is not evidence). Every server gets a row: window, policy, last patched,
+   pending-reboot age. Servers with no assigned window are finding number one.
 
-Guardrails: both/all domain controllers down at once is never acceptable — serial DC patching with verification between is non-negotiable in every sequence. No patching a server whose latest backup failed or is stale unless the client explicitly accepts the risk in writing. Maintenance mode is set for the window and lifted after verification — never left open-ended. "Patched" claims come from patch activity evidence, not from the schedule elapsing — report unverified servers as unverified. Dependency order without documentation backing is labeled inferred. If the RMM integration is absent, produce the window map + sequence from documentation and hand execution to the patching tool's operator; do not fabricate patch status.
+2. REBOOT SEQUENCE inside each window, by dependency, not alphabetically — infrastructure
+   the others need comes back first: virtualization hosts before their guests (host
+   reboots are hypervisor-alerts work, usually a separate window), storage/NAS before the
+   servers mounting it, databases before the app servers consuming them. Domain
+   controllers: NEVER reboot all DCs at once. Patch them serially, verify each is back and
+   advertising (logons and DNS answering) before the next, and schedule DCs last so the
+   rest patches while authentication stays redundant. Undocumented dependency order is
+   labelled inferred and confirmed with a human.
+
+3. PRE-WINDOW PREP: confirm the in-scope servers' backups completed recently (backup tool
+   status, or backup-failure-triage) — a failed backup the night before patching is a stop
+   signal for that server: no patching unless the client accepts that risk in writing. Put
+   the in-scope devices into maintenance mode for the window duration only.
+
+4. VERIFICATION PASS, per server: back online; uptime reflects the reboot (a server that
+   "patched" without rebooting when one was required has not finished); no new critical
+   alerts; key services running; patch activity shows success, not failure. Then what the
+   RMM cannot see — app answering, shares mounted, LOB logins — as a hands-on checklist
+   with a deep link into the device, or user confirmation in the morning.
+
+5. EXCEPTIONS: failed patches, missed windows, and pending reboots that never cleared each
+   get a ticket with the evidence, not a silent retry next month. End maintenance mode
+   explicitly — expired-but-suppressed alerting is how the next incident gets missed.
+
+6. Output the window map or verification report, the sequence with rationale, per-server
+   results (pass / fail / unverified) and exception tickets, as a note (apply the PSA Note
+   Discipline base skill — plain text, no markdown or emojis). Schedule next cycle's prep
+   as a follow-up ticket.
+
+Guardrails: "patched" comes from patch-activity evidence, not the schedule elapsing —
+report unverified servers as unverified. With no RMM, produce the map and sequence from
+documentation and hand execution to the patching tool's operator; never fabricate patch
+status.
 ```

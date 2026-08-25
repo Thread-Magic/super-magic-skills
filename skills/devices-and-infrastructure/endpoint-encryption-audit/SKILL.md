@@ -19,14 +19,47 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-Two mandatory questions: is every endpoint's disk encrypted, and if a device died tomorrow could the desk retrieve its recovery key? Coverage without escrow is a lockout; escrow without coverage is a breach.
+Two questions: is every endpoint's disk encrypted, and if a device died tomorrow could the
+desk retrieve its recovery key? Coverage without escrow is a lockout; escrow without
+coverage is a breach.
 
-1. Build the endpoint population from the RMM (pull the device list, verify workstation/laptop class in the details — don't trust a class filter) — this is the denominator. If listings may have capped, the denominator is "at least N" and the audit says so.
-2. Gather encryption state per device, best source first: RMM device details where they expose encryption/volume status; the environment's posture in Liongard via its Windows and M365/Entra inspectors (confirm the inspector exists and last ran successfully, then read BitLocker status and escrowed-key presence — state dataprint age); documentation (IT Glue / Hudu) last, with staleness named. Devices with no encryption evidence go in an "unknown" bucket — unknown is not unencrypted, and it is definitely not encrypted.
-3. Bucket the fleet: encrypted with key escrowed, encrypted with NO escrow evidence (one dead motherboard from permanent data loss), not encrypted, and unknown. Macs: FileVault status typically needs MDM data (a Liongard/Intune path or MDM export); if no Mac source exists, the Mac fleet is "unknown", stated plainly.
-4. Escrow verification — evidence, not assumption: identify where keys should live (Entra/AD, MDM, doc-platform flagged fields, per client policy from docs) and verify presence for audited devices. Presence of a key object is the pass bar; confirming a key unlocks its volume is a hands-on test — recommend it for a sample, never claim it.
-5. Flag and route: unencrypted -> remediation ticket (enabling encryption is policy/hands-on, and old hardware without TPM needs per-device assessment); encrypted-without-escrow -> "capture key before anything else" ticket flagged urgent-quiet (no reboots, no firmware updates on that device until the key is escrowed); unknowns -> a verification pass. Check ticket history for an existing encryption project before opening duplicates.
-6. Output: coverage summary (encrypted+escrowed / encrypted-no-escrow / unencrypted / unknown, with percentages against the stated denominator), per-bucket device lists, evidence source and freshness per claim, tickets opened. Leave the plain-text summary as a note (no markdown/emojis). For compliance requests, state clearly this is a point-in-time technical audit, not a compliance certification.
+1. Build the endpoint population from the RMM (verify workstation/laptop class in the
+   details; a class filter is not evidence) — that is the denominator. Apply the Sweep
+   Honesty base skill: if listings may have capped it is "at least N", and say so.
 
-Guardrails: recovery keys are NEVER reproduced in any output, note, or ticket — location and existence only (a key pasted into a ticket is itself a security incident). "Unknown" is its own honest bucket — never fold it into either side. Encrypted-without-escrow devices must not be rebooted, firmware-updated, or have TPM changes until the key is captured. Every encryption claim carries its evidence source and age; Liongard data is used only when the inspector shows a successful recent run. This skill enables nothing and rotates nothing. If neither the RMM nor Liongard is available, degrade to docs + ticket history and label it "unverified — evidence-gathering pass required".
+2. Gather encryption state per device, best source first: RMM device details where they
+   expose encryption or volume status; the environment's posture in Liongard via its
+   Windows and M365/Entra inspectors (apply the Inspector Read Discipline base skill —
+   confirm the inspector exists and last ran successfully, read BitLocker and escrowed-key
+   status, state the dataprint age); documentation (IT Glue / Hudu) last, with staleness
+   named. Devices with no encryption evidence go in an "unknown" bucket — not unencrypted,
+   and definitely not encrypted.
+
+3. Bucket the fleet: encrypted with key escrowed, encrypted with NO escrow evidence (one
+   dead motherboard from permanent data loss), not encrypted, unknown. Macs: FileVault
+   status usually needs MDM data (Liongard, Intune, or an MDM export); with no Mac source
+   the Mac fleet is "unknown", stated plainly.
+
+4. Verify escrow on evidence, not assumption: identify where keys should live (Entra/AD,
+   MDM, doc-platform flagged fields, per client policy) and check presence for audited
+   devices. A key object present is the pass bar; confirming a key actually unlocks its
+   volume is a hands-on test — recommend it for a sample, never claim it.
+
+5. Flag and route: unencrypted -> a remediation ticket (enabling encryption is hands-on
+   policy work; old hardware without TPM needs per-device assessment);
+   encrypted-without-escrow -> a "capture key before anything else" ticket, urgent-quiet:
+   no reboots, no firmware updates on that device until the key is escrowed; unknowns -> a
+   verification pass. Check ticket history for an existing encryption project.
+
+6. Output the coverage summary (the four buckets, percentages against the stated
+   denominator), per-bucket device lists, evidence source and freshness per claim, and
+   tickets opened, as a note (apply the PSA Note Discipline base skill — plain text, no
+   markdown or emojis). For compliance requests, state that this is a point-in-time
+   technical audit, not a compliance certification.
+
+Guardrails: recovery keys are NEVER reproduced in any output, note, or ticket — location
+and existence only; a pasted key is itself a security incident. "Unknown" is its own
+honest bucket, never folded into either side. It enables nothing and rotates nothing. With
+neither the RMM nor Liongard, degrade to documentation plus ticket history and label the
+result "unverified — evidence-gathering pass required".
 ```

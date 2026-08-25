@@ -19,18 +19,49 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-Turn a low-disk alert into an actionable brief: severity, likely consumers, a safe-cleanup order of operations, and a deep link — because the agent cannot run cleanup scripts itself. This needs the RMM connected; if absent, degrade to generic guidance + ticket history and say the live disk view is unavailable.
+Turn a low-disk alert into a brief: severity, likely consumers, a safe-cleanup order, and
+a deep link. With no RMM connected, degrade to generic guidance plus ticket history and
+say the live disk view is unavailable.
 
-1. Resolve the device in the RMM (organization first, rank candidates by org match then last-contact — don't stop to ask mid-lookup, don't trust a class filter) and read its details for current volume numbers. Severity: under 5% or under 5 GB free on a system volume is act-now (services/updates start failing); under 15% is soon.
-2. Read evidence without touching the machine: which volume is full (system vs data changes the playbook), the device's alerts for how long pressure has built (creep vs spike), the recent device activity for correlating events (failed patch run, backup writing locally, recent app install).
-3. Check whether another tech is already on the device before proposing anything.
-4. Infer likely consumers by device role (as hypotheses ranked by evidence, not findings): workstations — user profiles, downloads, OneDrive/cache bloat, shadow copies, Windows Update leftovers; servers — log growth (IIS/SQL/app), backup staging, WSUS/update caches, database files, shadow copies; sudden spikes — a runaway log or dump file.
-5. Give the safe-cleanup sequence, decreasing safety: (a) empty recycle bins and temp/update caches via Disk Cleanup/Storage Sense; (b) clear stale user profiles per policy; (c) prune/archive app logs after confirming nothing needs them; (d) shrink shadow-copy allocation only with restore-point-impact understanding; (e) anything touching databases, backup chains, or app data is change-controlled — not cleanup. Never delete files you cannot identify; moving data beats deleting it.
-6. Check the knowledge base for a client- or device-specific cleanup SOP and link it if one exists.
-7. Hand the tech a deep link into the device in the RMM — remediation is hands-on tech work; this integration cannot execute scripts or deploy cleanup tools. Offer to leave the brief as a plain-text note (no markdown/emojis).
-8. Close the loop: after the tech confirms cleanup, re-check the device details and report before/after free space. If pressure returns within days, recommend a root-cause/capacity ticket rather than repeat cleanup.
+1. Resolve the device in the RMM (organization first, ranking by org match then
+   last-contact; don't stop to ask mid-lookup) and read its details for volume numbers.
+   Severity: under 5% or under 5 GB free on a system volume is act-now (services and
+   updates start failing); under 15% is soon.
 
-Guardrails: NO script execution, NO automated deletion — every destructive step is performed by the tech by hand, with the sequence above as guidance. Consumers are inferred, not observed (the RMM does not expose per-folder usage) — say so. On servers, anything beyond temp/log hygiene needs a maintenance window and user-impact confirmation. Recurring pressure is a capacity problem; do not present the third cleanup as a fix.
+2. Read evidence without touching the machine: which volume is full (system vs data
+   changes the playbook), alerts for how long pressure has built (creep vs spike), recent
+   activity for correlating events (failed patch run, backup writing locally, recent app
+   install). Check whether another tech is already on the device.
 
-Unattended (Flow) mode: entire reply is the plain-text brief posted verbatim (severity, hypotheses labeled as hypotheses, safe-cleanup sequence, deep link). Device unresolvable or volume data unreadable -> output nothing. Another tech recently active -> lead with "TECH ALREADY ENGAGED - coordinate before acting". Repeat pressure in the lookback -> recommend a root-cause/capacity ticket. Permitted write: the note only — no script exec, no deletion, no device actions.
+3. Infer likely consumers by device role — hypotheses ranked by evidence, not findings.
+   Workstations: user profiles, downloads, OneDrive cache bloat, shadow copies, Windows
+   Update leftovers. Servers: log growth (IIS/SQL/app), backup staging, WSUS and update
+   caches, database files, shadow copies. A sudden spike: runaway log or dump file.
+
+4. Safe-cleanup sequence, decreasing safety: (a) empty recycle bins and temp/update caches
+   via Disk Cleanup or Storage Sense; (b) clear stale user profiles per policy; (c) prune
+   or archive app logs after confirming nothing needs them; (d) shrink shadow-copy
+   allocation only with the restore-point impact understood; (e) anything touching
+   databases, backup chains, or app data is change-controlled, not cleanup. Never delete a
+   file you cannot identify — moving data beats deleting it.
+
+5. Link any client- or device-specific cleanup SOP from the knowledge base, and hand the
+   tech a deep link into the device in the RMM; remediation is hands-on. Offer the brief
+   as a note (apply the PSA Note Discipline base skill — plain text, no markdown or
+   emojis).
+
+6. After the tech confirms cleanup, re-read the details and report before/after free
+   space. Pressure returning within days is a root-cause/capacity ticket, not a repeat
+   cleanup.
+
+Guardrails: no script execution, no automated deletion — every destructive step is the
+tech's, by hand. Consumers are inferred, not observed (the RMM does not expose per-folder
+usage): say so. On servers, anything beyond temp and log hygiene needs a maintenance
+window and user-impact confirmation. Never present the third cleanup as a fix.
+
+As a Flow: your entire reply is the brief, posted verbatim — severity, hypotheses labelled
+as such, safe-cleanup sequence, deep link. Device unresolvable or volume data unreadable
+-> output nothing. Another tech recently active -> lead with "TECH ALREADY ENGAGED -
+coordinate before acting". The note is the only permitted write: no script execution, no
+deletion, no device actions.
 ```
