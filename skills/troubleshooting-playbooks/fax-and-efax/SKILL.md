@@ -19,27 +19,47 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 ## Prompt
 
 ```
-Fax is not dead — in healthcare, legal, and finance it is a compliance-anchored workflow with hard reliability expectations. Modern fax fails at one of three layers: the line itself (analog or its VoIP replacement), the ATA that bridges a physical fax machine onto VoIP, or the eFax service that replaced the machine entirely. Identify the layer before anyone re-sends the same document a sixth time.
+Fax is compliance-anchored in healthcare, legal and finance, and fails at one of three
+layers: the line (analog or its VoIP replacement), the ATA bridging the machine onto VoIP,
+or the eFax service that replaced it. Identify the layer first. For healthcare clients, ask
+what the fax carries and whether an interim path exists; the workflow may need a bridge
+before the fix.
 
-Work it in this order:
+Climb the Troubleshooting Ladder base skill first: past fax tickets, then the documented
+architecture, the carrier or eFax vendor, the numbers and where they terminate, ATA
+make/model/firmware. POTS is being retired widely, so a "line" that used to work may not be
+analog any more; check too for a phone-system replacement or eFax vendor change.
 
-1. History first. Search this client's past tickets for fax. Fax setups are bespoke; the prior ticket usually documents which architecture this client actually has, which is half the diagnosis.
+Evidence: failing direction, error code or transmission report, total versus partial failure
+(mid-page, long documents), one failed fax — number, time, page count.
 
-2. Docs second. Check the client's documentation and knowledge base for the fax architecture: true analog line (POTS), fax-over-VoIP through an ATA, or a cloud eFax service — plus the carrier or eFax vendor, the fax number(s), and where they terminate. Documentation may be absent for this tenant — fall back to the knowledge base and say what you could not check.
+Branch:
+- Analog line — total failure on a POTS machine. Plug a handset into the wall jack: dial
+  tone or not is the fork. No dial tone is a carrier ticket (line fault, or a quiet POTS
+  retirement) — nobody on the desk fixes copper. Dial tone but no fax is the machine or its
+  settings: test against a known-good number.
+- ATA / fax over VoIP — partial pages, garbled output, long-document failures: fax on a
+  compressed voice path. Check the ATA's fax handling per its documentation — T.38 relay
+  versus G.711 pass-through, and ECM on the machine; a mismatch with what the carrier's
+  platform supports is the usual cause. Stepping baud down to 9600 is a legitimate
+  stabiliser. If settings match vendor guidance and it still fails, only the carrier can
+  confirm T.38 end to end: hand over the failed-call examples.
+- eFax service — check the vendor's status page, then the boring causes: inbound
+  notifications in spam or quarantine, a changed password breaking portal login, a sender
+  not on the authorized list, attachments outside the vendor's format or size limits. A
+  failing platform or a misrouted ported number is a vendor case with fax IDs and
+  timestamps.
+- Receive-only — sends fine, nothing arrives: a recent port, carrier migration or forwarding
+  change can silently route inbound faxes elsewhere. Send from a known source and trace
+  where it lands; wrong routing is the carrier's.
 
-3. Set expectations by vertical. For healthcare and similar clients, ask what the fax carries (referrals, orders, prescriptions) and whether there is an interim path (the eFax portal, a second line) — the workflow may need a bridge before the fix.
+Never read, transcribe or attach fax content to a ticket: for healthcare and legal clients
+it is regulated. Reference metadata (time, page count, destination) only. Don't promise
+reliability on a voice-optimized path: healthcare-grade fax means T.38 end to end or a cloud
+eFax service — a recommendation, not an action taken.
 
-4. Identify the architecture and versions. Which of the three layers exists here, ATA make/model/firmware if present, and whether anything changed: carrier migration (POTS lines are being retired and migrated to VoIP widely — a "line" that used to work may not be analog anymore), phone-system replacement, or an eFax vendor change.
-
-5. Evidence before theory. The failing direction (send, receive, both), the machine's error code or transmission report, whether failures are total or partial (fails mid-page, long documents only), and one concrete failed fax: destination number, time, page count.
-
-6. Branch:
-   - Analog line — total failure on a POTS-connected machine. Guide on-site: plug a handset into the wall jack — dial tone or not is the fork. No dial tone -> carrier ticket (line fault or, increasingly, a quiet POTS retirement); the desk's role is opening it with the carrier and tracking. Dial tone but no fax -> the machine or its settings; test with a known-good fax number. Nobody on the desk can fix copper — when the line is dead it's carrier only.
-   - ATA / fax-over-VoIP — partial pages, garbled output, long-document failures, intermittent success. This is the signature of fax on a compressed voice path. Check the ATA's fax handling per its docs: T.38 fax relay vs G.711 pass-through, and error correction (ECM) settings on the machine; a mismatch between ATA config and what the carrier's platform supports is the usual cause. Baud step-down (9600) is a legitimate stabilizer. Escalate when settings match vendor guidance and failures persist — the carrier must confirm T.38 support end-to-end; this is a carrier/VoIP-vendor conversation with the failed-call examples attached.
-   - eFax service — portal or fax-to-email failing. Check the vendor's status page first (on the web). Then the boring causes: inbound notification emails landing in spam/quarantine, a changed user password breaking the portal login, sender not on the account's authorized list, attachment format/size outside the vendor's limits. Escalate when the vendor's platform is failing or a number was ported/misrouted — vendor case with fax IDs and timestamps from the portal's own log.
-   - Receive-only failure — sends fine, nothing arrives. Verify the number still routes correctly: a recent port, carrier migration, or forwarding change can silently send inbound faxes elsewhere. Test by sending to the number from a known source and tracing where it lands. Escalate when routing is wrong at the carrier level — carrier ticket; number routing is theirs.
-
-Guardrails to hold throughout: no script or remote execution — remediation is guidance for on-site staff, ATA admin-panel guidance for the tech, or a carrier/vendor case. Never read, transcribe, or attach fax content into ticket notes — for healthcare and legal clients the content is regulated; reference metadata (time, page count, destination) only. Do not promise fax reliability on a voice-optimized VoIP path — if the client needs healthcare-grade reliability, say plainly that T.38 end-to-end or a cloud eFax service is the defensible architecture, and treat that as a recommendation, not an action taken. Carrier and number-routing faults are vendor-only — open the case, attach evidence, track it; do not improvise around it. Do not invent vendor limits, status-page results, or ATA settings — look up the exact model/vendor on the web and cite.
-
-Close the loop. A successful test fax in the failing direction — with a transmission confirmation or portal delivery record — is the only verification that counts here; for compliance-sensitive clients, note the confirmation artifact in the ticket. Leave a plain-text internal note (no markdown, no emojis, raw URLs not markdown links): architecture, direction, branch, evidence, fix or carrier/vendor case reference, verification result.
+Verify with a test fax in the failing direction, evidenced by a transmission confirmation or
+portal record; for compliance-sensitive clients, name that artifact. Note it (PSA Note
+Discipline base skill): architecture, direction, branch, evidence, vendor case,
+verification.
 ```

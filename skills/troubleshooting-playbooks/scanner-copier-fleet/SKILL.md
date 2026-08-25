@@ -19,26 +19,44 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are working an MFP/copier ticket beyond basic printing. Copiers are embedded computers that age in place: they hold service-account passwords that someone eventually rotates, speak SMB dialects that servers eventually deprecate, and run firmware nobody updates until scanning breaks. This covers the scan/fleet side; for print-path and scan-to-email symptoms, pair with the Printer Troubleshooting playbook. Nothing here executes on the device — remediation is admin-panel guidance for the tech or a lease-vendor handoff; never claim to run scripts or remote commands.
+Copiers hold a service-account password someone eventually rotates, speak SMB dialects
+servers deprecate, and run firmware nobody updates until scanning breaks. For the print path
+and scan-to-email, use the Printer Troubleshooting playbook instead.
 
-Start with history: search this client's past tickets for the copier/MFP. Scan-to-folder tickets cluster after identifiable events — a password rotation, an SMB1 disablement, a file-server migration — and the ticket history usually names the event.
+Name the boundary early: hardware, consumables, jams and usually firmware are the lease
+vendor's; network, credentials, shares and DNS are the desk's.
 
-Then docs: check the client's documentation and knowledge base for the fleet profile — copier models and firmware, the scan service account, destination share paths, the lease/service vendor and what their contract covers, and where admin-panel access details are stored (never the credentials themselves in notes). Documentation may be absent for this tenant; fall back to the knowledge base and say what you could not check.
+Climb the Troubleshooting Ladder base skill first: past tickets for this copier, since
+scan-to-folder failures cluster after a password rotation, an SMB1 disablement or a server
+migration; then the documented fleet profile — models and firmware, the scan service
+account, destination share paths, the lease vendor's contract scope, panel access details.
+Get the copier's own error (panel message, send log, or a code looked up for the exact
+model), the scope — one destination, all, or all copiers — and the SMB dialect the server
+accepts.
 
-Establish the boundary early: hardware faults, consumables, feed/jam mechanisms, and often firmware updates belong to the lease vendor's service contract. Network, credentials, shares, and DNS belong to the desk. Say which side a ticket falls on before deep-diving.
+Branch:
+1. Authentication — every destination dies at once after a credential change. The copier's
+   embedded SMB service account was rotated or disabled in a cleanup: confirm its state,
+   then update the stored credential in the panel. The durable fix is a documented
+   least-privilege account policy won't silently expire; flag collisions to whoever owns
+   identity. Scanning as individual users is a design change, not a fix: escalate.
+2. SMB version — scans fail after server hardening or a migration, credentials good.
+   Firmware capped at SMB1 leaves two honest options: a vendor firmware update (the lease
+   vendor's job) or an intermediary path the client accepts. Never re-enable SMB1 as the fix
+   — it reopens a known attack surface, and that is the security owner's call, in writing.
+3. Destination path — one fails, others work: the share moved, was renamed, or its
+   permissions changed. Verify the path exists and the scan account can write, then correct
+   the copier's entry. Permission problems underneath go to the File Share Permissions
+   playbook.
+4. Address book — wrong, missing, or bulk changes. Small edits in the panel; for bulk, use
+   the vendor's export/import procedure for the model and save the export to the client's
+   documentation first. Directory sync is vendor-specific — the lease vendor rules on it.
+5. Firmware quirks and panel errors — reboots, codes, vanished features. Match the code to
+   the vendor's published meaning. One mapping to a hardware subsystem goes to the lease
+   vendor with model and code; firmware updates on leased devices are theirs.
 
-Identify versions: copier model and firmware version, and — critical — the SMB dialect the destination server accepts. Older copier firmware speaks only SMB1; servers hardened to SMB2+ silently orphan them. Never assume; check the documentation or ask what changed server-side.
-
-Evidence before theory: the copier's own error (panel message, send-log entry, error code — look up the code with the model on the web, do not guess), plus scope: one destination failing vs all destinations vs all copiers.
-
-Then branch:
-1. Authentication — scans fail everywhere after a credential change. The copier embeds a service account for SMB writes; if that account's password rotated or the account was disabled in a cleanup, every destination dies at once. Guide: confirm the account's state, then update the copier's stored credential via the admin panel. The durable fix is a documented, non-expiring-by-accident service account with least privilege on the scan shares — flag any password-policy collision to whoever owns identity. Escalate when the client wants scans authenticated as individual users — that is a design change, not a fix.
-2. SMB version / protocol — scans fail after server hardening or migration; credentials verified good. If the firmware maxes out at SMB1, the honest options are a vendor firmware update (lease vendor's job — never re-enable SMB1 on the server as the "fix"; that reopens a known attack surface and is a security decision, not a convenience) or an intermediary path the client accepts. Escalate when a firmware update is needed (lease vendor) or an SMB1 re-enable is requested (security-owner sign-off required, in writing).
-3. Destination path — one destination fails, others work. The share moved, was renamed, or its permissions changed. Verify the path exists and the scan account has write access; fix the copier's destination entry to match reality. Escalate when the underlying share permissions are the problem — ladder them with the File Share Permissions playbook.
-4. Address book — wrong/missing entries, or bulk changes requested. Small edits via admin-panel guidance; for bulk changes, most vendors support export/import — get the vendor's procedure on the web for the model. Keep a copy of the export in client documentation before importing. Escalate when the address book should sync from a directory — vendor-specific feature; lease vendor or vendor docs decide feasibility.
-5. Firmware quirks / panel errors — reboots, panel error codes, features that vanished. Match the code to the vendor's published meaning. Firmware updates on leased devices are almost always the lease vendor's to perform. Escalate when any panel error code maps to a hardware subsystem — straight to the lease vendor with the code and model.
-
-Guardrails to hold throughout: never re-enable SMB1 or weaken server security to accommodate old firmware without explicit, recorded sign-off from the security owner — offer the vendor-firmware path first and say why. Never place credentials in ticket notes; reference where they are stored, not what they are. Respect the lease boundary: touching hardware or vendor-controlled firmware can void the service contract — route it and say so. Do not invent error-code meanings or vendor procedures — search the web with the exact model and cite. When in doubt, do nothing that risks the environment and escalate.
-
-Close the loop: have the user run a real scan to the affected destination before resolving. Leave a plain-text internal note (no markdown or emojis): model/firmware, error/code, branch, what changed, who owns any remaining work (lease-vendor items explicitly), and the verification result.
+Never put credentials in a note; reference where they are stored. Touching hardware or
+vendor firmware can void the contract. Verify with a real scan to the affected destination,
+then note it (PSA Note Discipline base skill): model and firmware, code, branch, what
+changed, who owns what's left, verification.
 ```

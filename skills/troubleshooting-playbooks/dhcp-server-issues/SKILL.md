@@ -19,22 +19,43 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are diagnosing a DHCP problem. The rule: ipconfig /all on an affected machine first — the address, lease times, and "DHCP Server" field tell you whether the problem is no answer, the wrong answerer, or the wrong answer. Never restart the DHCP service as step one.
+ipconfig /all on an affected machine is the first evidence: address, lease times and the
+"DHCP Server" field say whether this is no answer, the wrong answerer or the wrong answer.
 
-History first. Search the client/site's past tickets on DHCP or "no network" symptoms and recent changes: a new AP or ISP router installed (rogue-DHCP classic), VLAN work, server maintenance, or a "cleanup" of leases or reservations. Whole-site sudden failure after equipment install points at a rogue or a helper-address change.
-
-Docs second. Check the client's documentation and knowledge base for the network design: which server(s) run DHCP, scope ranges per VLAN, failover configuration, where IP helper / DHCP relay lives, and the client's reservation conventions. If Liongard inspectors cover the DHCP server or network gear, use its inspector data for scope/lease config and its change timeline for recent changes — state the dataprint age. Documentation and Liongard coverage vary per tenant — note anything you could not check.
-
-Get the evidence before theorizing. Guide the tech on an affected machine: ipconfig /all (capture address, subnet, gateway, DNS, lease obtained/expires, and the DHCP Server field), then ipconfig /release + /renew and watch what answers. On the server: scope statistics (percent in use), the event log for events 1020/1046/failover events, and the lease list for the affected subnet. ipconfig/release/renew and server console reads are guidance for the tech to run; there is no remote execution from here.
+Climb the Troubleshooting Ladder base skill first: past DHCP or "no network" tickets and
+what changed (new AP or ISP router, VLAN work, a lease cleanup), then the documented design
+— DHCP servers, scope ranges, failover, IP helper/relay location, reservation conventions.
+Where Liongard covers it, use its inspector data and timeline (Inspector Read Discipline
+base skill). Then release and renew and watch what answers; read scope stats, the event log
+(1020, 1046, failover) and the lease list.
 
 Branch:
-1. APIPA / no answer at one site or VLAN — either the DHCP service/scope is down, the scope is deactivated, or the relay path is broken (IP helper missing/wrong after switch or firewall changes — DHCP broadcasts don't cross VLANs without it). If machines on the server's own VLAN lease fine but a remote VLAN doesn't, it's the relay, not the server. Escalate when the helper/relay lives on network gear managed by another party.
-2. Scope exhaustion (new devices fail, stats near 100%) — check lease duration vs device churn (8-day default leases on a guest/BYOD VLAN exhaust fast), and whether a chunk of the range is consumed by stale leases from an event/outage. Remedies in order of preference: shorten lease on high-churn scopes, widen the range, or clean genuinely expired/bad leases. Deleting active leases forces conflicts — don't. Escalate when re-addressing/subnet redesign is the real fix.
-3. Wrong answer (unexpected range, wrong gateway/DNS) — read the ipconfig "DHCP Server" field. If it's not a sanctioned server, you have a rogue DHCP — typically a consumer router or an AP in router mode someone plugged in. Locate it via the switch MAC table for that server's MAC and remove/repatch it; where the switching supports it, recommend DHCP snooping so this can't recur. If the server IS sanctioned but options are wrong: fix the scope options (wrong DNS handed out pairs with internal-dns-server-issues). Escalate when you can't trace the rogue — network owner with the MAC evidence.
-4. Failover pair unhealthy — read the failover state on both partners before acting. Communication-interrupted with both servers up = connectivity/time between them; partner-down = one is actually gone. Understand the mode (load balance vs hot standby) and MCLT implications: in partner-down, the surviving server only takes full control after the MCLT elapses or an operator confirms partner-down. Do not deconfigure/rebuild failover as a quick fix, and never run two independent overlapping scopes as a workaround — that's a self-inflicted rogue. Escalate when the failed partner needs rebuild/restore.
-5. Reservation vs exclusion confusion — device "randomly changes IP" or a static-needed device conflicts. A reservation hands a specific IP to a specific MAC (device stays on DHCP); an exclusion just stops the server from handing that range out (something else is expected to use it statically). Symptoms: reservation created but device still gets a lease elsewhere → wrong MAC or device is inside another scope; conflicts on "static" gear → someone excluded nothing and the static IP sits inside the pool. Fix per the client's documented convention; update the documentation when you correct one.
+1. APIPA or no answer at a site or VLAN — service down, scope deactivated, or a broken
+   relay. Broadcasts don't cross VLANs without an IP helper: if the server's own VLAN leases
+   fine and a remote one doesn't, it's the relay — the network owner's if they manage it.
+2. Exhaustion (new devices fail, stats near 100%) — compare lease duration to churn; an
+   8-day default on a guest or BYOD VLAN exhausts fast, and outages leave stale leases. In
+   order: shorten the lease, widen the range, clear expired leases — never active ones,
+   which forces conflicts. Re-addressing escalates.
+3. Wrong answer (unexpected range, wrong gateway/DNS) — read the "DHCP Server" field.
+   Unsanctioned means a rogue, usually a consumer router or an AP in router mode: trace its
+   MAC in the switch table, repatch it, recommend DHCP snooping. An untraceable rogue is the
+   network owner's, with the MAC evidence. If sanctioned, fix the scope options — wrong DNS
+   pairs with the internal DNS playbook.
+4. Failover unhealthy — read both partners' state. Communication-interrupted with both up is
+   connectivity or time between them; partner-down means one is truly gone, and the survivor
+   takes full control only after the MCLT elapses or an operator confirms. Never rebuild or
+   deconfigure failover as a quick fix, and never add an overlapping scope — a
+   self-inflicted rogue.
+5. Reservation vs exclusion — a reservation pins one IP to one MAC (device stays on DHCP);
+   an exclusion just stops the server handing that range out. Still leasing elsewhere after
+   a reservation: wrong MAC or another scope. Conflicts on "static" gear: the address sits
+   in the pool unexcluded. Fix per the documented convention.
 
-Never delete active leases, deactivate a scope, or deconfigure failover as a diagnostic step — each one takes clients down. Never stand up a second overlapping scope or an ad-hoc DHCP source as a workaround. Confirm with the client's network owner before changing scope options that affect every device (gateway, DNS) — a typo there is a site outage. AD authorization guards against rogue Windows DHCP servers only — do not treat "server is authorized" as proof no rogue exists; consumer gear doesn't ask AD.
-
-Verify and note. Success = the affected machine completing release/renew with the correct address, options, and DHCP Server field from a sanctioned server; for exhaustion, scope stats back at healthy headroom. Leave a plain-text internal note (raw URLs, not markdown): symptom, ipconfig evidence (server field, address), branch, change made or handed off, verification and time, and what you couldn't check.
+Never restart the DHCP service or deactivate a scope to test a theory, and let the network
+owner approve scope-option changes; a typo in gateway or DNS is a site outage. AD
+authorization guards only against rogue Windows DHCP servers — consumer gear never asks AD.
+Verify: the machine renews the right address and options from a sanctioned server, or scope
+stats show headroom. Note it (PSA Note Discipline base skill): symptom, evidence, branch,
+action or handoff, verification.
 ```

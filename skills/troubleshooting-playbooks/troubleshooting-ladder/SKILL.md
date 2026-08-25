@@ -46,7 +46,7 @@ every time, before you branch on the specific technology.
    from the panel, the log, or the tool output. "It's not working" is not evidence, and a
    paraphrased error is not searchable. Never invent an error code, KB number, or vendor
    link; when a code drives your recommendation, verify its current meaning on the web
-   rather than from memory — vendor behaviour shifts between releases.
+   rather than from memory — vendor behavior shifts between releases.
 
 6. Only now, branch. Pick the branch the evidence supports, and say which piece of
    evidence sent you there. If two branches are live, test the cheap discriminator first

@@ -19,27 +19,44 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are diagnosing a browser problem. "Clear your cache" is the desk's coin-flip — replace it with two cheap isolations (a clean profile and a different browser) which between them locate almost every browser ticket in one of four branches: the profile, an extension, the SSO/cookie path, or the site itself.
+"Clear your cache" is the desk's coin-flip. Two cheap isolations place almost every browser
+ticket in one of four branches: the profile, an extension, the SSO/cookie path, or the site.
 
-History first. Search this client's past tickets for this site/app — a broken web app for many users is the app's ticket (or its vendor's), not a per-browser hunt. Multiple users, same site, same day → stop; check the app/vendor status first.
+Climb the Troubleshooting Ladder base skill first: past tickets for this site (many users,
+same site, same day is the app's or vendor's ticket — check their status first), then the
+documented standard: managed policies, required extensions, SSO architecture, filtering. Get
+the exact browser version — managed fleets pin old builds, so a known-fixed rendering bug is
+a policy fix, not an endpoint one — and whether it is managed. For a web app, read the
+developer console (F12) red lines: a CSP violation, blocked third-party cookie or failed
+request names the branch.
 
-Docs second. Check the client's documentation and knowledge base for the browser standard: managed browser policies, required extensions, SSO architecture (IdP, seamless SSO expectations), and any documented trusted-site or filtering configuration. Documentation coverage varies per tenant — note what you could not check.
-
-Identify versions — never assume. Browser and exact version (managed fleets sometimes pin old versions — a known-fixed rendering bug in a pinned build is a policy fix, not an endpoint fix), OS, and whether the browser is enterprise-managed.
-
-Get the evidence before theorizing. Exact behavior and error text; for web-app failures, what the developer console shows (guide the user/tech to F12 → Console and read the red lines — a CSP violation, blocked third-party cookie, or failed request names the branch immediately). All steps here are guidance for the tech or user; there is no remote execution from this playbook.
-
-The two isolations — run them before any remediation:
-- Clean profile: open the site in a fresh browser profile (or InPrivate/Incognito as the quick proxy — note extensions are usually off there too, so it tests profile and extensions at once). Works clean → the profile or an extension; go to branch 1/2. Still broken → branch 3/4.
-- Different browser: still broken in a second browser → the site, the network path (filtering/proxy), or the OS — go to branch 4; per-site config in one browser otherwise.
+Both isolations first. A clean profile (or a private window, which usually disables
+extensions too) tests both at once: clean sends you to branch 1 or 2, still broken to 3 or
+4. Still broken in a second browser points at the site, the path or the OS — branch 4.
 
 Branch:
-1. Profile — clean profile works, and disabling extensions in the old profile doesn't fix it: corrupted profile state (cookies/site data/service workers for that site). Surgical first: clear site data for that one site only — never the whole history/cookie store as an opening move (it logs the user out of everything and destroys saved state); state what any clearing step will log the user out of before doing it. If profile-wide corruption persists (crashes, settings resetting), a new profile with sync-based migration is the fix; check what's sync-backed (passwords, favorites) and what isn't before switching — say what will be lost. Never export or handle a user's saved passwords in a ticket.
-2. Extension bisect — clean profile works and the old profile has extensions: disable all, confirm fixed, re-enable in halves until the culprit surfaces. If the culprit is a security/filtering extension the client mandates, the finding routes to that tool's owner (its exclusion or update), not to "leave it off" — managed/mandated extensions are changed by their owners, not disabled at the endpoint. A surprise unmanaged extension doing content injection is a security flag — pair with the security playbooks rather than quietly removing it.
-3. SSO / cookie path — login loops, "works in incognito", or auth that dies at a redirect: this is the cookie/identity branch, not cache. Checks: third-party cookie blocking versus what the SSO redirect chain needs (browsers' third-party-cookie phase-outs break older SSO flows — check the app vendor's current guidance on the web); time skew on the device (breaks token validation); conditional-access or device-trust requirements only satisfied in a managed browser/profile (pair with the M365 sign-in playbook — the sign-in log tells the truth); corporate TLS inspection breaking the app (console shows certificate errors → the filtering/proxy owner, not the endpoint). Never advise disabling security features (certificate warnings, SafeBrowsing, cookie protections, the web filter) to make a site work — the fix belongs to the site, the filter policy, or the SSO configuration.
-4. Per-site / site-side failures — broken in every browser and profile: the site, the path, or a filter. Check the client's web filter/proxy logs for blocks (a category block is working-as-designed — route the unblock request to the policy owner), DNS for the site (pair with the DNS playbook), and the site's own status. If the site's code is at fault, only the site's owner/vendor can fix it — capture the console evidence, report it to them, and say so to the user.
+1. Profile — a clean profile works and disabling extensions doesn't fix the old one:
+   corrupted profile state (cookies, site data, service workers). Clear site data for that
+   one site only, never the whole history or cookie store as an opening move, and say what
+   any clearing logs the user out of first. For profile-wide corruption, a new profile with
+   sync migration is the fix — name what isn't sync-backed and will be lost. Never handle
+   saved passwords.
+2. Extension bisect — disable all, confirm fixed, re-enable in halves until the culprit
+   surfaces. A mandated security or filtering extension is changed by its owner (exclusion
+   or update), never left off at the endpoint. An unmanaged extension injecting content is a
+   security flag: pair with the security playbooks rather than removing it.
+3. SSO and cookies — login loops, "works in incognito", auth dying at a redirect. Check
+   third-party cookie blocking against what the SSO chain needs (phase-outs break older
+   flows; read the vendor's guidance), device time skew, conditional-access or device-trust
+   rules only met in a managed browser, and TLS inspection (console certificate errors point
+   at the filtering owner). Never disable certificate warnings, SafeBrowsing, cookie
+   protections or the web filter to make a site work; the fix belongs to the site, the
+   filter policy or the SSO config.
+4. Site-side — broken in every browser and profile. Check the filter or proxy logs for
+   blocks (a category block works as designed: the unblock goes to the policy owner), DNS,
+   and the site's status. If the site's code is at fault only its vendor can fix it: capture
+   the console evidence and say so.
 
-No wholesale "clear cache and cookies" or browser resets as a first move — isolate first, then clear at the narrowest scope that fixes it.
-
-Verify and note. The user performs the failing action in their normal (fixed) profile — not in the test profile. Leave a plain-text internal note (raw URLs, not markdown): isolations run and results, branch, culprit (extension/site/setting), action or handoff, verification, and what you couldn't check.
+Verify with the user doing the failing action in their own profile, not the test one. Note
+it (PSA Note Discipline base skill): isolations, branch, culprit, action, verification.
 ```
