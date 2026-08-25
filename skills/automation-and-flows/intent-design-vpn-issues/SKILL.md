@@ -19,53 +19,43 @@ outcome: [Time & Cost Savings (Capacity)]
 ## Prompt
 
 ```
-Build a VPN intent that rules out the cheap causes (local internet, stale client, simple
-reconnect) and captures the environment — VPN client, user location, exact error — so the
-ticket a tech receives is immediately diagnosable. Building intents is admin-only; if you
-can't, output the complete written spec for an admin to apply.
+Build a VPN intent that rules out the cheap causes — local internet, stale client, a simple
+reconnect — and captures the environment so the ticket a tech receives is diagnosable at once.
+Building intents is admin-only; if you can't, output the spec for an admin to apply.
 
-Design the intent to this spec:
-- Trigger phrases (adapt to real ticket language): "VPN not working", "can't connect to VPN",
-  "vpn wont connect", "VPN keeps disconnecting", "VPN error", "can't reach the server from
-  home", "remote access not working", "VPN stuck on connecting", "vpn down", "can't get on
-  the VPN". Near-miss watch: "can't reach <website>" without VPN context is general
-  connectivity; "need VPN access" (never had it) is an access request, not a fault.
-- Arguments (environment capture): which VPN client/app (<application>, pin per client in
-  variations); where they are (home / travel / office / public wifi — office + VPN is its own
-  smell); exact error/behavior (stuck connecting, authenticates then drops, connects but can't
-  reach resources); does regular internet work right now (rules out the ISP); when it last
-  worked and what changed (new laptop, password change, new router).
-- Reply flow (self-help ladder): (1) confirm local internet works — open any external site;
-  if not, it's their connection/ISP: give "restart router, contact ISP" guidance and stop;
-  (2) full reconnect — quit the VPN client completely, relaunch, reconnect; complete any MFA
-  prompt fresh; (3) reboot the computer — clears stuck adapters/tunnels, retry once. After
-  each rung: "connected now?" — stop and close as deflected on success. (4) if the ladder
-  fails, or the error is authentication-related after a recent password change, or several
-  users report it -> create a ticket carrying the full environment capture and rungs
-  attempted. Multiple users affected = probable concentrator/tunnel issue, skip self-help.
-- Handoff rule: never walk a user through changing VPN client settings, certificates, or
-  credentials in self-help. Authentication failures route to the human path (may need the
-  password-reset intent's verified flow — never resolve credentials in chat).
-- Variation hooks (per client): VPN product name and reconnect steps, whether MFA is in the
-  path, known-good status page/head-end to mention, office-network exceptions.
-- Success metric: deflection rate on VPN conversations plus diagnostics completeness (client +
-  location + error text on escalated tickets).
+Follow automation-and-flows/intent-builder: update an overlapping intent rather than duplicate it;
+ground triggers in real tickets; show the full spec and a test plan (5 matches, 3-5 near-misses
+from the watch-outs below) and write only on explicit confirmation; do NOT activate — the admin
+does that once the tests pass. Confirm from recent tickets' resolution notes which
+rungs actually resolve here, harvest real error strings for the prompts, and link the knowledge
+base's VPN articles.
 
-Steps:
-1. List the existing intents — check for an existing VPN/remote-access intent; prefer updating.
-2. Search recent VPN tickets; confirm from resolution notes which rungs actually
-   resolve on this desk, and harvest real error strings for the capture prompts.
-3. Search the knowledge base for VPN setup/troubleshooting articles; link where they exist.
-4. Draft the full spec (triggers, environment-capture arguments, ladder with stop conditions,
-   escalation block, variations) plus a test plan (5 should-match, 3–5 should-not: new-access
-   request and generic-internet near-misses). Show before any write.
-5. On explicit confirmation: create the intent, then set its variations.
-6. Report what was created, restate the test plan, recommend activation after tests pass. Do
-   NOT activate.
+Spec:
+- Triggers: "VPN not working", "can't connect to VPN", "vpn wont connect", "VPN keeps
+  disconnecting", "can't reach the server from home", "remote access not working",
+  "VPN stuck on connecting", "can't get on the VPN". Watch-outs: "can't reach
+  <website>" with no VPN context is general connectivity; "need VPN access" from someone who never
+  had it is an access request, not a fault.
+- Arguments, the environment capture: which VPN client (<application>); where they are — home,
+  travel, office, public wifi (office plus VPN is its own smell); the exact error or behavior
+  (stuck connecting, authenticates then drops, connects but reaches nothing); whether
+  ordinary internet works now, ruling out the ISP; when it last worked and what changed (new
+  laptop, password change, new router).
+- Reply flow, the self-help ladder: (1) confirm local internet works — open any external site. If
+  not, the fault is their connection or ISP: restart the router, contact the ISP, stop. (2)
+  Full reconnect — quit the VPN client, relaunch, reconnect, completing any MFA prompt fresh. (3)
+  Reboot to clear stuck adapters and tunnels, then retry once. Ask "connected now?" after each
+  rung and close as deflected on success. (4) If the ladder fails, open a
+  ticket carrying the environment capture and rungs tried.
+- Handoff rule: never change VPN client settings, certificates or credentials in self-help.
+  Authentication failures, especially after a recent password change, route to the human path:
+  credentials are never resolved in chat, and the password-reset intent's verified flow may apply.
+  Several users at once is a probable concentrator or tunnel issue — skip self-help, escalate
+  immediately.
+- Variations per client: VPN product name and reconnect steps, whether MFA is in the path, the
+  status page or head-end to name, office-network exceptions.
+- Success metric: deflection rate plus diagnostics completeness on escalated tickets.
 
-Guardrails: no credential, certificate, or client-settings changes in self-help —
-authentication problems hand off to the verified human path. Multiple users affected always
-escalates immediately; do not loop a probable outage through self-help. Do not invent the
-client's VPN product, status page, or MFA setup; placeholder and flag before activation.
-Confirm before any write; environment capture in plain text on the ticket.
+Guardrails: do not invent the client's VPN product, status page or MFA setup; placeholder and flag
+before activation. Environment capture on the ticket in plain text.
 ```

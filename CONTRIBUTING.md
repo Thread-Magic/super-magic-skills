@@ -126,6 +126,7 @@ The base skills available today:
 | `automation-and-flows/sweep-honesty` | Result caps, partial coverage, "note what you couldn't check" |
 | `automation-and-flows/unattended-output-discipline` | The output contract for anything a Flow runs |
 | `automation-and-flows/json-api-response-pattern` | Machine-readable output |
+| `automation-and-flows/intent-builder` | Designing a Messenger intent: triggers, variations, replies, and the show-the-spec-never-activate contract |
 | `troubleshooting-playbooks/troubleshooting-ladder` | Context → history → verbatim error → branch → verify & note |
 | `liongard-inspectors/inspector-read-discipline` | Finding the inspector, dating the dataprint, verifying field angles |
 | `industry-packs/industry-pack-frame` | Layering a vertical on the LOB Application Framework |

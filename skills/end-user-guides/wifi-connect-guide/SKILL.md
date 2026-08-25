@@ -20,39 +20,39 @@ outcome: [Time & Cost Savings (Capacity)]
 
 ```
 Draft a client-ready instruction block for getting a work device online — the correct office
-network by name, the home-wifi case, and the hotel/café captive-portal trap. Include only the
-branches the ticket needs. Verify the wireless setup before you write; when unsure, ask. Draft only — show me the reply as a draft to review first, and don't send it.
+network by name, the home-wifi case, and the hotel captive-portal trap. Include only the branches
+the ticket needs; an unrequested three-part guide dilutes the one answer the user wanted. Draft
+only: show it first, send nothing.
 
-1. Verify the client's wireless setup FIRST by checking the client's documentation and past tickets: the office network's exact name (SSID) users should join, how it authenticates
-   (certificate/auto-join on managed devices, sign-in with work credentials, or a password), and
-   whether a guest network exists that users should NOT put work devices on. If the network name or
-   auth style is unknown, ask the technician ONE question. NEVER put a wifi password in the draft —
-   if the office network is password-based, say where to get it per the client's documented practice
-   or have the tech deliver it out-of-band. Never invent an SSID.
+1. Verify the client's wireless setup FIRST, from their documentation and past tickets: the office
+   network's exact name (SSID) users should join, how it authenticates (certificate or auto-join on
+   managed devices, work credentials, or a password), and whether a guest network exists that users
+   should NOT put work devices on. If the name or auth style is unknown, ask the tech ONE
+   question. NEVER put a wifi password in the draft — if the office network is
+   password-based, say where to get it per documented practice, or have the tech deliver it out of
+   band. Never invent an SSID.
 2. Office branch, to end-user rules, one action per step with what-you'll-see cues:
-   - Open the wifi list (cue per platform in plain words), pick the exact documented name —
-     "spelling matters; if you see two similar names, the right one is exactly <documented SSID>."
+   - Open the wifi list (cue it per platform in plain words) and pick the exact documented name:
+     "if you see two similar names, the right one is exactly <documented SSID>."
    - The auth cue that applies: "it may just connect — that's our setup working" (certificate), or
      "a sign-in box appears; use your normal work login" (credentials).
-   - The guest-network warning where one exists: "the network called <guest SSID> is for visitors'
-     phones — work laptops don't belong on it; printers and shared drives won't work there." (Only
-     include this when docs confirm a guest SSID exists; never speculate one into being.)
-   - Off-ramp: "If it asks for anything these steps don't mention, or refuses your work login twice,
-     stop and reply — retrying can lock your account."
-3. Home branch (if needed): join their own network normally (their router password, which the desk
-   never needs or wants — say so), then the one work-specific note per docs (e.g., "once online, the
-   VPN handles the rest").
-4. Captive-portal awareness (travel, if needed): "hotel and café wifi shows a welcome/agree page
-   before the internet works; your laptop may look connected but nothing loads until you accept it."
-   Steps: connect, open the browser, try any plain website to trigger the page, accept, then connect
-   the VPN. Honest caveat: "some public networks block work tools entirely — if the VPN won't
-   connect after the welcome page, use your phone's hotspot instead" — include the hotspot line only
-   if the client permits it per docs; otherwise "reply and we'll advise."
+   - The guest-network warning where the documentation confirms one exists — never speculate one
+     into being: "<guest SSID> is for visitors' phones — work laptops don't belong on it, and
+     printers and shared drives won't work there."
+   - Off-ramp, always included: "If it asks for anything these steps don't mention, or refuses your
+     work login twice, stop and reply — retrying can lock your account."
+3. Home branch, if needed: join their own network with their router password, which the desk
+   never needs or wants — say so. Then the one work-specific note from the documentation ("once
+   online, the VPN handles the rest").
+4. Captive-portal awareness for travel, if needed: "hotel and café wifi shows a welcome page
+   before the internet works; your laptop may look connected but nothing loads until you accept
+   it." Steps: connect, open the browser, try any plain website to trigger the page, accept, then
+   connect the VPN. Honest caveat: "some public networks block work tools entirely — if the VPN
+   won't connect after the welcome page, use your phone's hotspot instead" — include the hotspot
+   line only where the documentation permits it; otherwise "reply and we'll advise."
 5. Assemble per the Email Baseline Standard.
 
 Guardrails: never transmit a wifi password in the draft and never invent an SSID — both come from
-docs or the tech, or the draft doesn't ship. An unrequested three-part guide dilutes the one answer
-the user wanted. Work credentials on wifi sign-in can lock the account when mistyped repeatedly —
-the stop-after-two off-ramp stays in. No admin steps (access-point config, RADIUS, PSK rotation) in
-the user block. Localizable. The client's documentation is available only when those integrations are enabled.
+the documentation or the tech, or the draft doesn't ship. No admin steps (access-point config,
+RADIUS, PSK rotation) in the user block. Localizable. Docs tools exist only when enabled.
 ```

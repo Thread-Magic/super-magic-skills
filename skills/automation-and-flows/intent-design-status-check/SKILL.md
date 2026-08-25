@@ -19,58 +19,41 @@ outcome: [Time & Cost Savings (Capacity), Fewer Escalations & Less Noise]
 ## Prompt
 
 ```
-Build a status-check intent that turns "any update?" into a self-served answer: identify which
-ticket, read its real status and the last client-visible update, and reply with that — pinging
-a human only when the ticket is genuinely stale or the user rejects the answer. Building
-intents is admin-only; if you can't, output the complete written spec for an admin to apply.
+Build a status-check intent that turns "any update?" into a self-served answer: identify the
+ticket, read its real status and last client-visible update, reply with that, and ping a human only
+when the ticket is genuinely stale or the user rejects the answer. Building intents is admin-only;
+if you can't, output the spec for an admin.
 
-Design the intent to this spec:
-- Trigger phrases (adapt to real ticket language): "any update on my ticket", "status of my
-  ticket", "any news on", "has anyone looked at my request", "is my ticket being worked on",
-  "following up on my ticket", "checking in on the issue I reported", "when will my ticket be
-  fixed", "still waiting on", "ticket number <ticket> update". Near-miss watch: "any update?"
-  inside an active ticket thread is conversation, not a new intent match; a follow-up that
-  adds new symptoms should append to the ticket, not just report status.
-- Arguments (identification): ticket number if they have it, otherwise enough to find it
-  (roughly what it was about and when reported); if the requester has multiple open tickets
-  and gave no number -> list their open tickets briefly and ask which; only the requester's
-  own tickets (or their client's, per the client's visibility policy) — never resolve a status
-  request against another contact's ticket.
-- Reply flow (answer from the record): (1) locate the ticket by reading the requester's or
-  their company's own tickets, strictly scoped; (2) reply with current status (translated
-  to plain language — "Scheduled", not an internal code), the last client-visible update and
-  its date, and the next expected step if recorded; (3) client-visible ONLY — never surface
-  internal notes, tech names in blame-able contexts, or internal discussions; (4) if the
-  ticket is waiting on the user, say so plainly and restate what is needed; (5) staleness
-  branch — if there has been no client-visible activity beyond the desk's freshness threshold
-  (admin-set, e.g. several business days), add a note to the ticket flagging the client asked
-  for an update and the ticket appears stale, and tell the user the desk has been nudged; (6)
-  if the user pushes back or expresses escalation-level frustration -> route to the human
-  escalation path with the conversation attached; never argue the status.
-- Handoff rule: the intent reports and nudges; it never changes priority, promises resolution
-  dates, or reopens/closes tickets. Frustrated users get a human.
-- Variation hooks (per client): status-name translations, freshness threshold, whether
-  contacts may see all their company's tickets or only their own, escalation contact/path.
-- Success metric: deflection rate on status conversations and reduction in tech interruptions;
-  counter-metric: escalations that started as status checks.
+Follow automation-and-flows/intent-builder: update an overlapping intent rather than duplicate it;
+ground triggers in real tickets; show the full spec and a test plan (5 matches, 3-5 near-misses
+from the watch-outs below) and write only on explicit confirmation; do NOT activate — the admin
+does that once the tests pass. Two decisions define the behavior and are agreed
+with the admin first: the freshness threshold — calibrate it from how often a recent "any update"
+ticket was really "waiting on you" rather than stale — and the visibility policy.
 
-Steps:
-1. List the existing intents — check for an existing status/update intent; prefer updating.
-2. Search recent "any update"-type notes and tickets; mine phrasing for triggers
-   and measure how often the honest answer would be "waiting on you" vs "genuinely stale"
-   (calibrates the freshness threshold with real data).
-3. Agree the freshness threshold and visibility policy with the admin — these two decisions
-   define the intent's behavior.
-4. Draft the full spec (triggers, identification arguments, answer template, staleness branch,
-   escalation branch, variations) plus a test plan (5 should-match, 3–5 should-not: in-thread
-   follow-up and new-symptom near-misses). Show before any write.
-5. On explicit confirmation: create the intent, then set its variations.
-6. Report what was created, restate the test plan, recommend activation after tests pass. Do
-   NOT activate.
+Spec:
+- Triggers: "any update on my ticket", "status of my ticket", "any news on", "has anyone looked at
+  my request", "when will my ticket be fixed", "still waiting on", "ticket number <ticket> update".
+  Watch-outs: "any update?" inside an active ticket thread is conversation, not a new match; a
+  follow-up adding new symptoms should append to the ticket, not just report status.
+- Arguments, identification: the ticket number, or enough to find it — what it was about and
+  roughly when. Several open tickets and no number: list theirs briefly and ask which.
+- Reply flow, from the record: (1) locate the ticket among the requester's or their company's own
+  tickets; (2) reply with the status in plain language ("Scheduled", not an internal code), the
+  last client-visible update with its date, and the next expected step if recorded; (3)
+  client-visible material ONLY — never internal notes or tech names in blame-able contexts; (4)
+  waiting on the user: say so, restate what is needed; (5) staleness branch — no client-visible
+  activity beyond the admin-set freshness threshold: note on the ticket that the client asked and
+  it looks stale, and tell the user the desk was nudged; (6) pushback or escalation-level
+  frustration routes to a human with the conversation attached; never argue.
+- Handoff rule: the intent reports and nudges. It never changes priority, promises a resolution
+  date, or reopens or closes tickets.
+- Variations per client: status-name translations, the freshness threshold, whether contacts see
+  their company's tickets or only their own, the escalation path.
+- Success metric: deflection rate on status conversations; counter-metric, escalations that began
+  as status checks.
 
-Guardrails: client-visible information only — internal notes, private discussions, and status
-jargon never appear in replies. Strict requester scoping: never return status for tickets the
-asking contact is not entitled to see; when identification is ambiguous, ask, don't guess. No
-promises: no resolution dates, no "shortly", no priority changes — the staleness nudge is a
-plain-text note on the ticket, not a priority escalation. Confirm before any write.
+Guardrails: strict requester scoping — never return status for a ticket the asking contact is not
+entitled to see, and when identification is ambiguous, ask rather than guess. No promises: no
+resolution dates, no "shortly", no priority changes. The staleness nudge is a plain-text note.
 ```
