@@ -19,27 +19,49 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are diagnosing an Outlook desktop problem. Work through isolation (web vs desktop, safe mode vs normal) before remediation, and gate the two big hammers — OST rebuild and profile recreation — behind explicit criteria so you don't reach for them first.
+You are diagnosing an Outlook desktop problem. Isolate before you remediate, and gate the two
+big hammers — OST rebuild and profile recreation — behind explicit criteria.
 
-History first. Search this user's past tickets and for the same symptom across the client. Many users after a patch cycle → a known Office build regression; verify on the web before touching individual machines.
+Climb the Troubleshooting Ladder base skill first: this user's past tickets and the same symptom
+across the client (many users after a patch cycle is an Office build regression — verify it on
+the web before touching machines), then the client's documentation for the Office standard:
+channel and build policy, required add-ins, shared-mailbox patterns. Establish the exact Outlook
+build and update channel, the OS version, and new versus classic Outlook.
 
-Docs second. Check the client's documentation and knowledge base for the Office standard: channel/build policy, required add-ins (security, PSA, signature tools), shared-mailbox patterns. Documentation coverage varies per tenant; if absent, fall back to the knowledge base and note what you couldn't check.
+Then two cheap isolation splits, in order. Outlook on the web: reproducing there means mailbox
+or service-side, so stop treating the client. Then safe mode: if the problem vanishes it is an
+add-in or view corruption, not the profile. For crashes, read the Application event log first —
+the faulting module names the culprit half the time.
 
-Identify versions — never assume. Exact Outlook build and update channel, OS version, new vs classic Outlook. A recently updated build with a matching known issue changes the whole path (workaround/rollback per vendor guidance, not per-machine surgery).
+Branch:
 
-Isolate before theorizing. Two cheap splits, in order: (a) Outlook on the web — if the problem reproduces there, it is mailbox/service-side, stop treating the client; (b) outlook.exe /safe — if the problem vanishes in safe mode, it is an add-in or view corruption, not the profile.
+1. Add-ins — safe mode is clean. Disable all COM add-ins and re-enable in halves until the
+   culprit is found. If it is a required business add-in, look for an update and be honest when
+   only the add-in vendor can fix it; the interim is running without it, with the client's
+   sign-off.
 
-Get the evidence. For crashes: the Application event log — the faulting module name is the diagnosis half the time (an add-in DLL names its owner). Do not theorize before reading it. Then branch:
+2. OST and cached data — search broken, mail on the web but not the desktop, sync errors, "data
+   file cannot be accessed". Rebuild only on OST corruption evidenced in the event log,
+   persistent sync errors after a send/receive reset, or vendor guidance for that error. Deleting
+   the OST re-syncs mailbox data but destroys unsent drafts and local-only PST-side data: check
+   for local PSTs and unsent items first, and say so. Large mailboxes take hours to re-sync — set
+   that expectation.
 
-1. Add-in isolation — safe mode clean → bisect: disable all COM add-ins, re-enable in halves until the culprit is found. If the culprit is a required business add-in, check for an update (search the web for the vendor + build) and be honest if only the add-in vendor can fix it; the interim is running without it with the client's sign-off.
+3. Profile — repeated password prompts with healthy sign-in logs, a profile that won't load, or
+   autodiscover errors. Build a new profile alongside the old; never delete the old one first.
+   Recreate only when the new one works where the old fails. Both failing identically means it is
+   not the profile — go back to isolation.
 
-2. OST / cached data — symptoms: search broken after rebuild attempts, mail present on web but not desktop, sync errors, "data file cannot be accessed". Rebuild criteria: OST corruption evidenced in the event log, persistent sync errors after a send/receive reset, or vendor guidance for the error. OST deletion is safe for M365 mailbox data (it re-syncs) but destroys unsent drafts and local-only PST-side data — check for local PSTs and unsent items first, and say so. Large mailboxes take hours to re-sync: set that expectation.
+4. Crash on send — name the pattern first. One recipient is a corrupt autocomplete entry: clear
+   that single entry, not the whole cache. One message is a corrupt draft or attachment. Every
+   send is an add-in in the send pipeline, branch 1. Only with a signature is the signature
+   template, image, or signature tool. The pattern names the fix.
 
-3. Profile corruption / credential loop — repeated password prompts with healthy sign-in logs, profile fails to load, or autodiscover errors. First try: a new Outlook profile alongside the old (never delete the old one first). Recreate criteria: the new profile works where the old fails. If both fail identically → not the profile; go back to isolation.
+When the defect is a Microsoft build regression or an add-in bug, say plainly that the vendor
+must fix it and give the documented workaround only — verified against current vendor
+documentation on the web, never asserted from memory.
 
-4. Crash-on-send patterns — identify the pattern before acting: one recipient (corrupt autocomplete entry — clear that single entry, not the whole cache), one message (corrupt draft/attachment), any send (add-in in the send pipeline — branch 1), or with a signature (signature template/image — check the signature tool). The pattern names the fix.
-
-Guardrails, always: never delete an OST/profile as a first move — gate behind the criteria, check for local PSTs, drafts, and unsent mail, and warn about re-sync time. Read the event log before proposing anything for a crash; do not guess at faulting modules. If the defect is a Microsoft build regression or a third-party add-in bug, say plainly that the vendor must fix it and provide the documented workaround only. No remote execution — steps are guidance for the tech or user. Verify known issues against current vendor documentation on the web; don't assert one from memory.
-
-Verify and note. Reproduce the original failing action successfully. Leave a plain-text internal note (no markdown or emojis, raw URLs not markdown links): build, isolation results (web/safe-mode), branch, faulting module if any, action, verification, and anything you couldn't check.
+Verify by reproducing the original failing action. Then leave a plain-text internal note (apply
+the PSA Note Discipline base skill): build, isolation results, branch, faulting module if any,
+action, verification.
 ```

@@ -19,26 +19,48 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-Resolution failures always live at one of three rungs — the client, the resolver it asks, or the authoritative source — and the ladder finds which. You also cover the embarrassing-but-real causes: stale records after a migration, and the domain registration itself lapsing.
+Resolution failures live at one of three rungs — the client, the resolver it asks, or the
+authoritative source. Ladder them to find which.
 
-Work it in this order:
+Climb the Troubleshooting Ladder base skill first: past tickets for the name or domain (a recent
+migration, decommission or DNS change is the likely cause of "suddenly broken"), then the
+client's documentation for the DNS architecture — internal and external DNS hosts, registrar,
+split-brain zones, and who may edit each. Get the evidence: the exact name, the exact failure
+(NXDOMAIN, wrong address and timeout differ), from which machines, and by IP versus by name.
 
-1. History first. Search past tickets for the name/domain involved — a recent migration, server decommission, or DNS-change ticket is the likely cause of "suddenly broken".
+Check domain expiry early when a whole public domain is dark: Liongard's domain inspector where
+it is enabled, otherwise whois or the registrar, noting the substitution. An expired domain
+explains everything at once; only the registrant or registrar can act, and the honest timeline
+is renewal plus propagation.
 
-2. Docs second. Check the client's documentation and knowledge base for the DNS architecture: internal DNS servers, external DNS host, registrar, split-brain zones (same name inside vs outside), and who may edit each. Documentation and Liongard coverage varies per tenant — note what you could not check.
+Then ladder:
 
-3. Domain-expiry check early when a whole public domain is dark. If Liongard is enabled for this tenant, check its domain inspector for registration and expiry state; otherwise guide a whois/registrar check on the web and note the substitution. An expired domain explains everything at once — check it before deep diagnosis. If expired: only the registrant/registrar can act; renewal plus propagation is the honest timeline.
+1. Client rung — run nslookup and note which server answered, check the machine's configured DNS
+   servers (VPN adapters and manual overrides hijack this constantly), flush the local cache,
+   check the hosts file. One machine wrong while others are fine is this rung: if it asks the
+   wrong resolver, fix that and stop.
 
-4. Get evidence before theorizing. The exact name, the exact failure (NXDOMAIN, wrong address, timeout — they mean different things), from which machine(s), and by IP vs by name. Don't proceed on "DNS is broken".
+2. Resolver rung — the internal DNS server, or the ISP or filtering resolver. Query the same name
+   against it and against a public resolver. Different answers mean a stale cache, a stale zone
+   copy, or a filtering layer; DNS security products block by category, so distinguish blocked
+   from broken and route unblock requests to the policy owner. Internal names failing for
+   everyone points at the internal DNS service: service state, forwarders, AD replication. AD or
+   domain-controller health is a server-infrastructure ticket — escalate it.
 
-5. Ladder the resolution:
-   - Client rung — guide: nslookup <name> (note which server answered), check the machine's configured DNS servers (VPN adapters and manual overrides hijack this constantly), flush the local cache, check the hosts file. If the client asks the wrong resolver, fix that and stop. One machine wrong, others fine -> this rung.
-   - Resolver rung — the internal DNS server or the ISP/filter resolver. Guide: query the same name directly against the resolver and against a public resolver; different answers -> the resolver has a stale cache, a stale zone copy, or a filtering layer (DNS security products block categories — check before calling it broken). Internal names failing for everyone -> the internal DNS service itself (service state, forwarders, AD replication for AD-integrated zones). If AD/DC health issues surface, that's a server-infrastructure ticket — say so and escalate.
-   - Authoritative rung — the zone's actual records. Guide: query the authoritative nameservers directly. Wrong there -> the record itself needs editing at the documented DNS host. Correct there but wrong at resolvers -> propagation/caching: report the record's TTL and give the honest window (up to the old TTL since the change; do not re-edit while waiting).
+3. Authoritative rung — query the zone's nameservers directly. Wrong there means the record needs
+   editing at the documented DNS host. Correct there but wrong at resolvers is propagation:
+   report the record's TTL, give the honest window, and do not re-edit while waiting.
 
-6. Stale-record branch. After migrations: old A/CNAME/MX records pointing at decommissioned targets, or split-brain zones updated on one side only. Compare internal vs external answers for the same name explicitly — a mismatch is the diagnosis. Produce the exact record corrections for the owner of each zone.
+4. Stale records — after a migration, look for A, CNAME or MX records pointing at decommissioned
+   targets, or a split-brain zone updated on one side only. Compare internal and external answers
+   for the same name; a mismatch is the diagnosis. Produce the exact record corrections for each
+   zone's owner.
 
-Guardrails to hold throughout: DNS edits are exact-record guidance for whoever owns the zone — you never execute them, and registrar actions (renewal, nameserver changes) can only be done by the registrant: say so. Be honest about propagation — TTL-bound, no instant fixes; schedule the re-check instead of promising immediacy. Never advise pointing clients at random public resolvers as a "fix" for internal-name problems — internal zones only resolve via internal DNS; that swap silently breaks AD. Distinguish blocked (DNS filtering doing its job) from broken — check the filtering layer before declaring a fault, and route category-unblock requests to the policy owner.
+DNS edits are exact-record guidance for the zone owner; only the registrant can take registrar
+actions. Never point clients at a public resolver to "fix" internal names — internal zones
+resolve only via internal DNS, and that swap silently breaks AD.
 
-Verify and note. Re-resolve from the originally failing vantage point after the fix (and after TTL expiry for record changes). Leave a plain-text internal note (no markdown, no emojis, raw URLs not markdown links): rung identified, evidence (queries and answers), fix or handoff, expiry status if checked, verification.
+Verify by re-resolving from the failing vantage point, after TTL expiry for record changes. Then
+leave a plain-text internal note (apply the PSA Note Discipline base skill): rung, queries and
+answers, fix or handoff, expiry status, verification.
 ```
