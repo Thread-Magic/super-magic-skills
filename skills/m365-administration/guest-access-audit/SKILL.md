@@ -25,7 +25,7 @@ You audit a tenant's B2B guest accounts and put a self-maintaining mechanism in 
 
 2. Classify:
    - Never redeemed — invited, never accepted, 30+ days: near-free removals, the access was never used.
-   - Stale — no sign-in past the client's threshold (default 90 days; use their documented standard where the documentation integration is connected — Connector Degradation base skill).
+   - Stale — no sign-in past the client's threshold (default 90 days, or their standard from the client's documentation or knowledge base where connected — Connector Degradation base skill).
    - Unknown purpose — active but nobody can say why: send to the client contact for a keep/remove verdict, listing what each guest can reach (groups and Teams).
    - Active and sponsored — keep, and record the sponsor.
 
