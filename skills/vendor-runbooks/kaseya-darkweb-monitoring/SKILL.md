@@ -19,22 +19,48 @@ outcome: [Risk & Compliance, Always-On Coverage]
 ## Prompt
 
 ```
-You are working a Kaseya Dark Web ID compromise alert (and its BullPhish-adjacent reporting) — a vendor specialization of dark-web-alert-lifecycle. The lifecycle logic — age it, close stale with a note, notify fresh with rotation guidance — lives in the generic skill; this adds how Dark Web ID structures its compromise records and the fields that decide the stale-vs-fresh branch. Never invent data; verify field names against the vendor's current report format.
+Work a Kaseya Dark Web ID compromise alert. dark-web-alert-lifecycle owns the lifecycle — age
+it, close stale with a note, notify fresh with rotation guidance; you add how Dark Web ID
+structures its records and which fields decide stale versus fresh.
 
-POLICY (identical to dark-web-alert-lifecycle, no vendor exception, no exception ever): never attempt to crack, decode, or look up leaked passwords or hashes on external sites or tools; never test a leaked credential by signing in; treat any exposed hash as a compromised password and rotate. Never include the exposed password/hash value in client-facing messages — identify by service and date.
+POLICY, no exception ever: never attempt to crack, decode or look up a leaked password or
+hash on any external site or tool; never test a leaked credential by signing in; treat any
+exposed hash as a compromised password and rotate it. Never put the exposed password or hash
+value in a client-facing message — identify it by service and date.
 
-1. Parse the Dark Web ID record anatomy: the monitored identity (email address under the client's watched domain), the compromise source (named breach, or generic labels like "ID theft forum" / "botnet" — botnet/infostealer sources are the hot ones), the date found vs the breach date (use the older, breach-origin date for aging; "date found" is when the feed saw it, not when it leaked — aging on the wrong field auto-closes fresh botnet finds), password visibility (visible plaintext, partially masked, hash, or blank), and any PII classes attached.
+1. Parse the record: the monitored identity (an address on the watched domain), the
+   compromise source (a named breach, or a generic label like "ID theft forum" or "botnet"),
+   the date found versus the breach date, password visibility (visible plaintext, partially
+   masked, hash, or blank), and any PII classes. Age on the older, breach-origin date — "date
+   found" is when the feed saw it, not when it leaked, and aging on the wrong field
+   auto-closes fresh botnet finds.
 
-2. Run dark-web-alert-lifecycle on those fields: parseable origin date older than 90 days → stale-path closure with the documented note (source, date, data classes, rationale, prior-ticket reference from searching earlier tickets). No parseable date → no auto-close; treat as fresh or leave for a human. Stale-path closure requires a parseable origin date — no date, no auto-close.
+2. Run dark-web-alert-lifecycle on those fields. A parseable origin date older than 90 days
+   takes the stale path: close with the documented note (source, date, data classes,
+   rationale, prior-ticket reference). No parseable date, no auto-close — treat it as fresh
+   or leave it for a human.
 
-3. Vendor-specific escalators on the fresh path:
-   - Source labeled botnet/infostealer → the credential likely came off a currently- or recently-infected device, not an old third-party breach: in addition to rotation, the user's devices need an EDR/AV review (edr-detection-runbook on their device) before or alongside the reset — otherwise the stealer re-harvests the new password. When only "date found" exists and the source is botnet/infostealer, treat as fresh.
-   - Visible plaintext password that matches the client's current password pattern or the user confirms is current → breached-credential-response immediately; any sign of use → compromised-account-containment.
-   - Findings for departed employees → route to the client contact per the generic skill; flag still-active accounts.
+3. Vendor escalators on the fresh path:
+   - Source labeled botnet or infostealer → the credential likely came off a currently or
+     recently infected device, not an old third-party breach: alongside rotation, the user's
+     devices need an EDR review (edr-detection-runbook) or the stealer re-harvests the new
+     password. When only "date found" exists and the source is botnet or infostealer, treat
+     it as fresh.
+   - A visible plaintext password matching the client's current pattern, or confirmed current
+     by the user → breached-credential-response immediately; any sign of use →
+     compromised-account-containment.
+   - Departed employees → route to the client contact per the generic skill; flag any account
+     still active.
 
-4. Batch reports: work per-identity, not per-report — one report row per exposed identity gets its own verdict; do not close a whole report because most rows are stale. State result caps honestly if the report was truncated.
+4. Work batch reports per identity: each gets its own verdict, and a report is never closed
+   wholesale because most rows are stale. State caps honestly if it was truncated.
 
-5. Document per the generic skill, in the internal note: verdict, age math, source class, data classes, what was sent to whom. Classify per soc-classification-tree. Defensive writing: this is a "credential exposure notification," not a breach of the client's systems — say so explicitly. (A client-facing notification can be prepared as a draft for review.)
+5. Document the verdict, age math, source class, data classes, and what was sent to whom.
+   Classify per soc-classification-tree. This is a credential exposure
+   notification, not a breach of the client's systems — say that explicitly. A client-facing
+   notification can be drafted for review.
 
-Unattended (Flows) variant: inherits the dark-web-alert-lifecycle variant verbatim — the entire reply is the plain-text internal note; only stale-close and fresh-triage-note outcomes are autonomous; never send client email autonomously; botnet/infostealer source, missing date, or any parsing doubt → do nothing and leave for a human.
+Unattended (Flows) variant: the whole reply is the plain-text internal note; only stale-close
+and fresh-triage-note outcomes are autonomous; never send client email autonomously; a botnet or infostealer source, a
+missing date, or any parsing doubt means do nothing and leave it for a human.
 ```

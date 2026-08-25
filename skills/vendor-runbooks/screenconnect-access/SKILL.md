@@ -19,21 +19,47 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are troubleshooting a ScreenConnect (ConnectWise Control) remote-access problem. There is no native Super Magic integration today, so this is a diagnostic-and-handoff skill: work the access symptom from the ticket, agent behavior, and documentation, then direct the technician into the ScreenConnect console. ScreenConnect is a remote-access tool — you triage connectivity and unattended-agent health; you never run commands, scripts, or Backstage sessions on endpoints, and all on-endpoint work is a technician step you direct and record. Verify feature names (Access agent, Backstage, guest/host client) against ConnectWise's current documentation, and treat security advisories seriously — ScreenConnect has been a targeted product, and a compromised instance is an incident, not a support ticket.
+Troubleshoot a ScreenConnect (ConnectWise Control) remote-access problem. There is no native
+Super Magic integration, so this is a diagnostic-and-handoff skill: work the symptom from the
+ticket, agent behavior and documentation, then direct the technician into the ScreenConnect
+console. You never run commands, scripts or Backstage sessions on an endpoint — on-endpoint
+work is a technician step you direct and record.
 
-1. Classify the problem: unattended-agent-offline (the Access agent isn't checking in) vs session-connectivity (agent is online but the session fails) vs client-install (the guest/host client won't deploy). Copy the exact symptom and any error wording.
+1. Classify the problem: unattended-agent-offline (the Access agent isn't checking in),
+   session-connectivity (agent online, session fails), or client-install (the guest or host
+   client won't deploy). Copy the exact symptom and any error wording.
 
-2. For agent-offline, run the standard reachability ladder per device-offline-runbook: is the endpoint itself online (other monitoring), is the ScreenConnect service running, is outbound to the relay/server reachable (firewall/proxy/DNS), and is the agent version current. Distinguish "the whole machine is down" from "only the ScreenConnect agent is down" — different tickets, and reinstalling the agent on a powered-off machine helps no one.
+2. For agent-offline, climb the reachability ladder per device-offline-runbook: is the
+   endpoint itself online (other monitoring), is the ScreenConnect service running, is
+   outbound to the relay or server reachable (firewall, proxy, DNS), is the agent version
+   current. Separate "the whole machine is down" from "only the ScreenConnect agent is down" —
+   different tickets, and reinstalling the agent on a powered-off machine helps no one.
 
-3. For session-connectivity, check relay/port reachability, host-vs-guest client version compatibility, session-group/permission scope, and whether the server itself (self-hosted instance) is healthy. For client-install, check OS/permission blockers and endpoint-protection interference.
+3. For session-connectivity, check relay and port reachability, host-versus-guest client
+   version compatibility, session-group and permission scope, and — on a self-hosted instance
+   — whether the server itself is healthy. For client-install, check OS and permission
+   blockers and endpoint-protection interference.
 
-4. Use context sources you do have: ticket history (search prior tickets for the same device/instance, recent window) for recurrence, the client's documentation for the instance URL, version, and access-policy, and — if a Liongard inspector covers the endpoint — corroborating state (verify last run, note age; degrade if absent). There is no native ScreenConnect read integration, so state is inferred from ticket/docs/Liongard — give the source and freshness, and never present it as a live console read.
+4. Use the context you do have: prior tickets for the same device or instance for recurrence,
+   the client's documentation for the instance URL, version and access policy, and a Liongard
+   inspector covering the endpoint for corroborating state (verify its last run, note the age,
+   degrade if absent). Give the source and its freshness; never present inferred state as a
+   live console read.
 
-5. Security check — do not skip: unexpected sessions, unknown access agents, or an alert about the ScreenConnect instance itself are potential compromise (this product has been actively exploited). Treat as a security incident per security-alert-response, not a connectivity ticket, and involve the security path; when in doubt, escalate.
+5. Run the security check; do not skip it. Unexpected sessions, unknown access agents, or an
+   alert about the instance itself are potential compromise of an actively exploited product.
+   Treat that as a security incident per security-alert-response, not a connectivity ticket,
+   and involve the security path.
 
-6. Hand off for action: reinstalling/repairing the Access agent, changing session/permission config, patching the instance, or any on-endpoint work is a technician action in ScreenConnect (or on the device). Never widen session permissions or access scope to "make it work" — access scope is a security decision: narrowest scope, named approver, review date. Write the handoff with the classified cause and steps; direct and record.
+6. Hand off for action: reinstalling or repairing the Access agent, changing session or
+   permission config, patching the instance, and any on-endpoint work are technician actions.
+   Never widen session permissions or access scope to make something work — access scope is a
+   security decision with the narrowest scope, a named approver and a review date. Write the
+   handoff with the classified cause and the steps.
 
-7. In the internal note, document the classification, ladder results, security check outcome, and handoff. Client-facing wording per defensive-writing-standard.
+7. Note the classification, the ladder results, the security-check outcome and the handoff.
+   Client-facing wording per defensive-writing-standard.
 
-Degradation: without documentation, the instance URL, version, and access policy may be unknown — say so. When in doubt, do nothing irreversible and escalate.
+Without documentation the instance URL, version and access policy may be unknown — say so.
+When in doubt do nothing irreversible and escalate.
 ```

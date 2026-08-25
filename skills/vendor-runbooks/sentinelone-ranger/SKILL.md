@@ -19,22 +19,47 @@ outcome: [Risk & Compliance, Fewer Escalations & Less Noise]
 ## Prompt
 
 ```
-You are triaging a SentinelOne Ranger finding — the network-discovery / device-inventory capability, as distinct from endpoint threat detection. Ranger uses already-deployed S1 agents to passively map the network and surface devices that have no S1 agent — rogue or unmanaged assets. The parent skill sentinelone-threat-verdict owns S1 detection-engine reading, mitigation, and exclusion discipline; read it first and do not duplicate its threat-verdict steps — for an actual endpoint threat verdict, use that skill; this one is the network-discovery layer. The triage discipline is identification before action: a "rogue device" is usually a known printer, IoT sensor, switch, or an EDR-coverage gap on a real workstation — not an intruder. Verify Ranger feature names against SentinelOne's current documentation. You have no S1/Ranger or network-device console access — agent installs, network-block decisions, and switch/DHCP investigation are technician actions you direct and record, never assume completion. Never invent discovery detail.
+Triage a SentinelOne Ranger finding — Ranger is the network-discovery layer, using already
+deployed S1 agents to passively map the network and surface devices with no agent on them.
+sentinelone-threat-verdict owns S1 detection reading, mitigation and exclusion discipline —
+use it for an actual threat verdict. Identify before acting: a "rogue device" is usually a
+known printer, IoT sensor, switch or an EDR coverage gap on a real workstation. You have no S1, Ranger or
+network-device console — agent installs, network blocks and switch/DHCP investigation are
+technician actions you direct and record. Never invent discovery detail.
 
-1. Parse the Ranger finding: discovered device's IP/MAC, hostname if resolved, OS/fingerprint guess, the network/subnet and the S1 agent that observed it, first-seen time, and whether Ranger classifies it managed/unmanaged/unknown. Copy Ranger's exact wording. Route to the client per security-alert-response using the observing site/tenant; low confidence → flag for a human.
+1. Parse the finding: the discovered device's IP and MAC, hostname if resolved, OS
+   fingerprint guess, the network or subnet and the S1 agent that observed it, first-seen
+   time, and whether Ranger calls it managed, unmanaged or unknown. Copy Ranger's exact
+   wording. Route to the client per security-alert-response on the observing site or tenant;
+   low confidence means flag for a human, not reassign.
 
-2. Identify before alarming — most "rogue" devices are mundane. Cross-reference the RMM inventory (look up the device in the RMM by hostname/MAC/IP; read its details for a match) and documentation to answer: is this a known asset that simply lacks an S1 agent (coverage gap), a known non-endpoint device that can't run S1 (printer, switch, IoT, phone), or a genuinely unrecognized device? The MAC OUI (vendor prefix) is a strong first clue to device type.
+2. Cross-reference the RMM inventory by hostname, MAC or IP, and the client's documentation,
+   to answer: is this a known asset that simply lacks an
+   S1 agent, a known non-endpoint device that cannot run S1, or genuinely unrecognized? The
+   MAC OUI (vendor prefix) is a strong first clue to device type.
 
-3. Classify the finding into the right lane — don't collapse a coverage gap and an unknown device into one:
-   - Known asset, no S1 agent → EDR coverage gap: an install/deployment task (technician action), not an incident. Note it for coverage remediation.
-   - Known non-endpoint device → expected; record and, if recurring, suppress via scoped tuning so it stops surfacing as "rogue" — scoped suppression, never blanket disabling of discovery.
-   - Genuinely unidentified device on a trusted segment → treat as a security question per security-alert-response: who plugged in what, when; correlate with any access-control/DHCP/switch logs (technician-gathered) before concluding.
+3. Put the finding in the right lane — a coverage gap is not an unknown device:
+   - Known asset, no S1 agent → an EDR coverage gap: a deployment task for the technician,
+     not an incident. Note it for coverage remediation.
+   - Known non-endpoint device (printer, switch, IoT, phone) → expected. Record it and, if it
+     recurs, suppress it with scoped tuning so it stops surfacing as rogue — scoped
+     suppression only, never disabling discovery.
+   - Genuinely unidentified device on a trusted segment → a security question per
+     security-alert-response: who plugged in what, when. Correlate with access-control, DHCP
+     or switch logs the technician gathers before concluding.
 
-4. Do not take blind network action: Ranger can, with configuration, help block/quarantine unknown devices at the network layer — but blocking an unidentified device that turns out to be a critical printer or medical/OT device causes its own outage. Identify first; any network-level containment is a deliberate, documented, technician-executed decision.
+4. Take no blind network action. Ranger can be configured to block or quarantine unknown
+   devices at the network layer, and blocking one that turns out to be a critical printer or
+   a medical or OT device causes its own outage. Identify first; any network-level
+   containment is a deliberate, documented, technician-executed decision.
 
-5. Hand off: agent installs, network-block decisions, and switch/DHCP investigation are technician actions — hand the tech a deep link into the device in the RMM for a matched managed device, and a clear handoff for the rest. Direct and record.
+5. Hand off: a deep link into the device in the RMM where you matched a managed device, and
+   a written handoff for the rest.
 
-6. In the internal note, document the identification result, the lane, coverage-gap items, and any containment decision with its owner. Client-facing wording per defensive-writing-standard.
+6. Note the identification result, the lane, any coverage-gap items, and any containment
+   decision with its owner. Client-facing wording per defensive-writing-standard.
 
-Degradation: without RMM lookup or documentation, identification is limited to IP/MAC/OUI — say so and lean on technician-gathered network evidence. When in doubt, do nothing irreversible and escalate.
+Without RMM lookup or documentation, identification is limited to IP, MAC and OUI — say so
+and lean on technician-gathered evidence. When in doubt do nothing irreversible and
+escalate.
 ```
