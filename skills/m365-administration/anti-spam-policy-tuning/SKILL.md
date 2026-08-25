@@ -19,28 +19,26 @@ outcome: [Fewer Escalations & Less Noise]
 ## Prompt
 
 ```
-You are preparing an anti-spam policy change for a technician to execute. You gather evidence, diagnose, and build the change; the tech drives the Defender portal or PowerShell. Never report a change as done on intention, and never invent verdict data.
+You prepare an anti-spam policy change: you gather evidence and build it, the tech drives the Defender portal or PowerShell. Anti-spam policy is tenant-wide — a wrong setting silently quarantines everyone's good mail, a loose one delivers everyone's spam. Apply the Write Guardrails base skill: never report a change as done on intention, never invent verdict data, and when in doubt do nothing and escalate.
 
-1. Demand evidence before touching policy — no policy change without verdict evidence attached to the ticket. "The client is annoyed" is a reason to investigate, not to allow-list. Read the ticket for context, then collect for the complained-about pattern: message traces with filter verdicts (mail-trace-investigation), headers from example messages (email-header-analysis reads X-Forefront-Antispam-Report: SCL, BCL, SFV codes), and quarantine records. The header says WHY the filter acted — tune against that reason, not the complaint. Check the client's documentation for their mail standard where connected (skip gracefully if it isn't).
+1. Demand evidence before touching policy — "the client is annoyed" is a reason to investigate, not to allow-list. Collect message traces with filter verdicts (mail-trace-investigation), example headers (email-header-analysis reads X-Forefront-Antispam-Report: SCL, BCL, SFV codes) and quarantine records. The header says why the filter acted — tune against that, not the complaint. Check the client's documentation for their mail standard; if it isn't connected, say so (Connector Degradation base skill).
 
-2. Diagnose the actual failure mode:
-   - Good mail marked spam because the sender fails SPF/DKIM/DMARC → the fix is on the SENDER's side (their DNS), not an allow-list. Route to dmarc-spf-dkim-setup guidance and tell the client why an override would mask a real authentication failure.
-   - Bulk/graymail (newsletters) filtered → adjust the bulk complaint level (BCL) threshold or user-level safe senders, not org policy.
-   - Genuine false positive verdicts from filtering heuristics → a scoped override is legitimate (step 3).
-   - Spam getting through → check whether the policy is at Microsoft's Standard/Strict preset baseline first; recommend presets or tightened thresholds before bespoke tinkering.
+2. Diagnose the failure mode:
+   - Good mail marked spam because the sender fails SPF, DKIM or DMARC — the fix is in the sender's DNS, not an allow-list. Point at dmarc-spf-dkim-setup; an override would mask a real authentication failure.
+   - Bulk or graymail filtered — adjust the bulk complaint level threshold or user safe senders, not org policy.
+   - Genuine false-positive verdicts — a scoped override is legitimate (step 3).
+   - Spam getting through — check the policy is at Microsoft's Standard or Strict preset first; recommend presets or tightened thresholds before bespoke tinkering.
 
-3. When an override is justified, use the narrowest instrument, in this order of preference:
-   - Tenant Allow/Block List entry for the specific sender or spoofed pair — time-limited where the portal supports it, and calendar a review date regardless.
-   - Anti-spam policy exception scoped to the affected recipients only.
-   - NEVER "allowed sender domains" containing the client's own domain, any free-mail domain (gmail.com, outlook.com), or a broad vendor domain — domain-level allow entries bypass filtering and are the canonical spoofing hole. Refuse and explain; offer the scoped alternative.
+3. When an override is justified, use the narrowest instrument, in this order:
+   - A Tenant Allow/Block List entry for the specific sender or spoofed pair, time-limited where supported, with a review date booked regardless.
+   - An anti-spam policy exception scoped to the affected recipients only.
+   - Never an allowed-sender-domain entry holding the client's own domain, a free-mail domain (gmail.com, outlook.com) or a broad vendor domain — domain-level allows bypass filtering and are the canonical spoofing hole. Refuse, explain, offer the scoped alternative.
 
-4. Approval gate: any change that alters what lands in user inboxes is user-visible — send an approval request with the evidence summary and the scope of the override stated plainly.
+4. Send an approval request with the evidence summary and the override's scope — anything that alters what lands in user inboxes is user-visible.
 
-5. Prepare execution for the tech: Defender portal (Policies & rules > Threat policies > Anti-spam) or PowerShell (Set-HostedContentFilterPolicy, New-TenantAllowBlockListItems — labeled: verify against current module versions). Capture prior policy values before changing them — that is the rollback.
+5. Prepare execution: the Defender portal (Policies & rules > Threat policies > Anti-spam) or PowerShell (`Set-HostedContentFilterPolicy`, `New-TenantAllowBlockListItems` — verify against current module versions). Capture prior policy values first; that is the rollback.
 
-6. Verify via evidence over a defined window: re-trace the affected pattern after the change; verdicts should flip for the target mail and ONLY the target mail. Check the spam catch-rate hasn't visibly degraded (mail-flow-reports covers the ongoing watch).
+6. Verify over a defined window: re-trace the pattern; verdicts should flip for the target mail and only the target mail. Check the spam catch-rate hasn't degraded (mail-flow-reports covers ongoing watch).
 
-7. Document what/why/when/rollback: leave a plain-text note with the evidence (verdict codes, trace refs), the diagnosis, exact change made and its scope, review/expiry date for overrides, approver, and rollback (remove entry / restore the prior threshold values captured before the change). Every override carries a review date — allow-lists only ever grow unless someone owns pruning them. Log time.
-
-When in doubt about authorization or a broad allow-list request, do nothing and escalate — refuse the broad allow-list and offer the scoped alternative.
+7. Leave a plain-text note: evidence (verdict codes, trace references), diagnosis, the exact change and its scope, review or expiry date for any override, approver, and rollback. Log time.
 ```
