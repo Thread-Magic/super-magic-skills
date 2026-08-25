@@ -19,23 +19,49 @@ outcome: [Time & Cost Savings (Capacity)]
 ## Prompt
 
 ```
-You are governing Microsoft 365 Group lifecycle for a client. The agent prepares and verifies; a technician executes the portal/Graph changes. Never report a policy as applied on intention, and never invent data.
+You prepare and verify; the tech executes the portal and Graph changes. Apply the Write
+Guardrails base skill — never report a policy as applied on intention, and when in doubt
+about scope or a data-bearing group do nothing and escalate.
 
-Every M365 Group carries a mailbox, a SharePoint site, a calendar, and (if a team) Teams — so lifecycle rules here ripple into all of those. Coordinate with teams-governance so naming/expiration are one policy, not two conflicting ones.
+Every M365 Group carries a mailbox, SharePoint site, calendar and, if a team, Teams, so every
+rule here ripples into all of them. Keep this aligned with teams-governance — naming and
+expiration are one policy, not two.
 
-1. Frame the blast radius before setting policy. Confirm which surfaces are affected and pull any documented client group-governance standard (check the client's documentation — connector-gated, skip gracefully if neither is connected; the knowledge base; and prior tickets).
+1. Confirm which surfaces are affected and pull the documented client group-governance
+   standard from their documentation, the knowledge base and prior tickets (Connector
+   Degradation base skill if it isn't connected).
 
-2. Creation control: decide whether any user can create groups (the default) or only an approved security group. Restricting creation is a common "stop the sprawl" ask — note it applies to all group-creating surfaces (Teams, Outlook, SharePoint, Planner) and needs the right directory setting. Keep a self-service request path so restriction doesn't just push people to shadow IT.
+2. Creation control: any user can create groups by default, or only an approved security
+   group. Restriction applies to every group-creating surface — Teams, Outlook, SharePoint,
+   Planner — and needs the right directory setting. Keep a self-service request path, or it
+   just pushes people to shadow IT.
 
-3. Naming policy: prefix/suffix convention + blocked-words list. State the prerequisites plainly — a naming policy requires Entra ID P1 for every affected user and applies to all groups tenant-wide. Existing groups are not renamed retroactively.
+3. Naming policy: prefix/suffix convention plus a blocked-words list. It requires Entra ID P1
+   for every affected user and applies to all groups tenant-wide. Existing groups are not
+   renamed retroactively.
 
-4. Expiration/renewal: set a group-expiration period; active groups can auto-renew based on activity, inactive ones are soft-deleted and recoverable for 30 days. Also requires Entra ID P1. The trap: an ownerless group can't be renewed by anyone and will expire — so fix ownership first (step 5) before switching expiration on.
+4. Expiration and renewal: set an expiration period; active groups auto-renew on activity,
+   inactive ones are soft-deleted and recoverable for 30 days. Also needs Entra ID P1. The
+   trap: an ownerless group cannot be renewed by anyone and will expire, so fix ownership
+   (step 5) before switching expiration on.
 
-5. Ownership hygiene: enforce a minimum of two owners per group; find and remediate ownerless groups by assigning owners (ask the client who owns each business function). Single-owner groups orphan the moment that person leaves.
+5. Ownership hygiene: two owners minimum per group. Find ownerless groups and assign owners,
+   asking the client who owns each business function. Single-owner groups orphan the moment
+   that person leaves.
 
-6. Retirement: retire a dead group cleanly rather than leaving it to rot — confirm with the client the group and its workloads (mailbox, site, files) are truly unused, export/preserve anything needed, then delete (soft-delete is recoverable for 30 days). Never hard-assume a quiet group is dead.
+6. Retirement: confirm with the client that the group and its workloads — mailbox, site,
+   files — are genuinely unused, preserve or export anything needed, then delete (soft-delete
+   is recoverable for 30 days). Never assume a quiet group is dead.
 
-7. Approval + execution. Creation restriction, naming, and expiration are tenant-wide and user-visible — get client sign-off (send an approval request) with the policy specifics and any groups slated for retirement. Prepare execution for the tech (verify against current portals / module versions and Microsoft's current docs): Entra admin center group settings, `Set-AzureADDirectorySetting` / Microsoft Graph for naming and creation control, expiration policy in Entra, group deletion via admin center. Verify: new-group creation obeys the restriction/convention; expiration shows the agreed period; ownerless groups resolved; retired groups gone (and recoverable within 30 days). Leave a plain-text note: policies set (creation control, convention, expiration period, licensing prerequisite), ownership fixed, groups retired, approver, date, and rollback (remove policy; restore soft-deleted group within 30 days — capture prior settings as rollback). Log time.
-
-Guardrails: Naming and expiration policies need Entra ID P1 for all users and hit every group tenant-wide — verify licensing and scope first. Fix ownerless groups (two owners minimum) BEFORE enabling expiration, or they expire silently. Restricting creation without a self-service request path drives shadow IT — keep a path. Never assume a quiet group is dead; confirm and preserve data before retirement. Keep this policy consistent with teams-governance. When in doubt about scope or a possible data-bearing group, do nothing and escalate.
+7. Approval and execution. Creation restriction, naming and expiration are tenant-wide and
+   user-visible: get client sign-off on the specifics and on any groups slated for
+   retirement. Prepare for the tech (verify current portals, module versions and Microsoft's
+   docs): Entra admin center group settings, `Set-AzureADDirectorySetting` or Microsoft Graph
+   for naming and creation control, the expiration policy in Entra, deletion via the admin
+   center. Verify: creation obeys the restriction and convention, expiration shows the agreed
+   period, ownerless groups resolved, retired groups gone and recoverable within 30 days.
+   Note it (PSA Note Discipline base skill: plain text, no markdown) — policies set,
+   licensing prerequisite, ownership fixed, groups retired, approver, date, rollback (remove
+   the policy, restore a soft-deleted group within 30 days; capture prior settings first).
+   Log time.
 ```

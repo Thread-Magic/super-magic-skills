@@ -19,25 +19,48 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are making the stay-or-migrate call on security defaults vs Conditional Access, and sequencing any migration so protection never has a gap. You prepare and verify; the technician executes tenant changes. Never invent data — verify against current behavior.
+You make the stay-or-migrate call and sequence any migration so protection never has a gap;
+the tech executes every tenant change. Apply the Write Guardrails base skill — never invent
+data, and when in doubt about tenant state do nothing and escalate.
 
-1. Establish current state. The tech confirms whether security defaults are on and what CA policies (if any) exist. A tenant with defaults OFF and no enforced CA policies is an active incident-grade finding — flag it immediately and treat restoring protection as the priority, whatever the original ticket asked. Escalate this as a security finding, not something quietly fixed within an unrelated ticket.
+1. Current state. The tech confirms whether defaults are on and what CA policies exist.
+   Defaults OFF with no enforced CA is incident-grade: escalate it as a security finding at
+   once, and treat restoring protection as the priority whatever the ticket asked.
 
-2. Know what defaults actually give (verify current behavior — the feature has evolved): MFA registration required for all users, MFA enforced for admins and challenged for users, legacy authentication blocked, and protection of privileged actions. No exclusions, no conditions, no per-app logic — that rigidity is a feature for tenants with nobody to maintain policy.
+2. What defaults give (verify, the feature has evolved): MFA registration for all users,
+   MFA enforced for admins and challenged for users, legacy auth blocked, privileged actions
+   protected. No exclusions, conditions or per-app logic — that rigidity is a feature for a
+   tenant with nobody to maintain policy.
 
-3. The STAY case — recommend defaults when: the tenant lacks Entra ID P1 licensing (CA requires it — check actual licenses, not assumptions); no real exception needs exist; and there is no ongoing capacity to review CA policies (an unmaintained CA set rots — see conditional-access-review; defaults never rot). "We might want exceptions someday" is a stay, not a migrate. A rotting CA set is worse than rigid defaults — say so in the recommendation.
+3. STAY when the tenant lacks Entra ID P1 (CA needs it — check actual licenses), has no
+   real exception needs, and no capacity to review CA policies. An unmaintained CA set rots
+   (conditional-access-review); defaults never do — say so. "We might want exceptions one
+   day" is a stay.
 
-4. The MIGRATE case — recommend CA when there is a concrete, current need defaults cannot express: documented exceptions (service accounts, conference rooms), named/trusted-location conditions, device-compliance or app-protection grants (see intune-compliance-policies, app-protection-policies), per-app policies, or phishing-resistant requirements for admins. The trigger is a real requirement in hand, PLUS P1 licensing, PLUS a maintenance commitment (a scheduled periodic CA review). Verify P1 licensing before proposing CA; a migration plan the licenses can't support is fiction.
+4. MIGRATE only on a concrete need defaults cannot express: documented exceptions
+   (service accounts, conference rooms), trusted-location conditions,
+   device-compliance or app-protection grants (intune-compliance-policies,
+   app-protection-policies), per-app policies, phishing-resistant admin needs. The
+   trigger is a real requirement in hand, PLUS verified P1 licensing, PLUS a maintenance
+   commitment — a plan the licenses can't support is fiction.
 
-5. Migration sequence — the no-gap rule (this is the whole skill; never turn defaults off before replacement CA is built, soaked, and enabled):
+5. Migration sequence — the no-gap rule. Never turn defaults off before replacement CA is
+   built, soaked and enabled:
    1. Break-glass accounts verified first (break-glass-account-audit).
-   2. Build CA policies replicating at minimum everything defaults provided: MFA for all users, MFA for admins, block legacy auth — plus the new requirements that justified migrating.
-   3. Report-only soak with real sign-in data reviewed (days, not minutes).
+   2. Build CA replicating everything defaults gave — MFA for all users, MFA for admins,
+      block legacy auth — plus the new requirements that justified migrating.
+   3. Report-only soak, real sign-in data reviewed, days not minutes.
    4. Enable the CA policies.
-   5. Only then turn security defaults off — defaults and CA cannot coexist, so this is the last step, never the first. The wrong order (defaults off, then start building) is the classic gap that gets tenants compromised mid-migration.
-   6. Post-migration verification: spot-check sign-in logs that policies apply; confirm legacy auth is still blocked.
+   5. Only then turn defaults off — they cannot coexist with CA, so this is the last step,
+      never the first. The wrong order is the gap that gets tenants compromised
+      mid-migration.
+   6. Verify: sign-in logs show policies applying, legacy auth still blocked.
 
-6. Approval and documentation. Send an approval request to the client authority for the migration plan — or for the stay recommendation, if the ticket asked to migrate and the answer is no (pushback is a deliverable). Pull the tenant's documented posture/licensing from the client's documentation if connected; degrade gracefully if not. Leave a plain-text note: decision, rationale, licensing facts, sequence executed with dates, approver, and rollback (re-enable security defaults if the CA set must be torn down — crude but instant protection). This stay/migrate decision is the tenant's foundational access-control decision and must be auditable (see tenant-onboarding-checklist). Schedule the first periodic CA review as part of migration completion.
-
-When in doubt about authorization or current tenant state, do nothing and escalate.
+6. Approval and record. Get client sign-off on the migration plan — or on the stay
+   recommendation if the ticket asked to migrate and the answer is no; pushback is a
+   deliverable. Pull documented posture and licensing from client documentation (Connector
+   Degradation base skill if it isn't on). Note it (PSA Note Discipline base
+   skill: plain text, no markdown): decision, rationale, licensing facts, sequence
+   and dates, approver, and rollback — re-enabling defaults is crude but instant protection
+   if the CA set must be torn down. Schedule the first periodic CA review.
 ```

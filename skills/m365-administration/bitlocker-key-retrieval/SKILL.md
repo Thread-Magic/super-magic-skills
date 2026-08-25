@@ -19,21 +19,45 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are preparing a BitLocker key retrieval for a technician to execute. You verify identity, match device to owner, and build the audit trail; the tech does the Entra/Intune lookup and delivers the key over a verified channel. Never treat any request as verified on intention, never invent audit facts, and the recovery key never appears in tickets, notes, chat, or email.
+You verify identity and build the audit trail; the tech does the Entra/Intune lookup and
+delivers the key over a verified channel. Apply the Write Guardrails base skill — never treat
+a request as verified on intention, and when in doubt about identity, ownership or the
+trigger do nothing and escalate per the client's security process. The key never appears in
+tickets, notes, chat or email.
 
-1. Verify identity FIRST — before any lookup. This specializes the password/MFA recovery ladder: callback to a phone number already on file (look up the contact — never a number provided in the ticket itself), or the client's documented verification procedure (check the client's documentation and the knowledge base — skip gracefully if absent). Heightened scrutiny applies: a BitLocker key request is a known social-engineering play because the recovery screen "urgency" story writes itself. VIP pressure is the attack's costume — no verification, no key, regardless of seniority, urgency, or how stuck the machine is. Requests from a third party "on behalf of" the user, or for a device belonging to someone else, verify with the device's owner or the client's IT authority, not the requester.
+1. Verify identity FIRST, before any lookup. Call back a number already on file (look the
+   contact up — never a number supplied in the ticket), or follow the client's documented
+   verification procedure (Connector Degradation base skill if their documentation isn't on).
+   A key request is a known social-engineering play and VIP pressure is the costume: no
+   verification, no key, whatever the seniority or urgency. A third party asking "on behalf
+   of" the user, or about someone else's device, is verified with the device's owner or the
+   client's IT authority, not the requester.
 
-2. Match requester to device. Confirm the device (by the recovery key ID shown on the recovery screen — have the user read the key ID, not guess at device names) maps to a device record whose registered owner is the verified requester, or that the client authority has approved access for a repair scenario. Key ID matching also guarantees the tech pulls the right key when a user has several devices.
+2. Match requester to device. Have the user read out the recovery key ID from the recovery
+   screen — not a guessed device name — and confirm it maps to a device whose registered
+   owner is the verified requester, or that the client authority approved a repair. The key ID also ensures the right key when the user has several devices.
 
-3. Understand why recovery triggered. Firmware/BIOS update, TPM change, hardware swap, or boot-order change are benign classics. No plausible trigger — or recovery prompts appearing across multiple devices at once — is a security signal: pause and escalate per the client's security process before unlocking anything. A recovery prompt with no plausible hardware/firmware trigger is treated as a potential security event before it is treated as a support task.
+3. Why did recovery trigger? Firmware or BIOS update, TPM change, hardware swap and
+   boot-order change are the benign classics. No plausible trigger — or prompts across
+   several devices at once — is a security event before a support task: escalate per the
+   client's security process before unlocking anything.
 
-4. Retrieve. Tech looks up the key in Entra (device object → BitLocker keys) or Intune by the key ID. If the key is absent (device never escrowed), say so honestly — do not improvise recovery promises; escalate to data-recovery options and flag the escrow gap as a finding (and check whether the device fell to stale-device-cleanup deletion — a process lesson worth recording). Never imply the data is recoverable when the key does not exist.
+4. Retrieve. The tech looks the key up by key ID in Entra (device object, BitLocker keys) or
+   Intune. If the device never escrowed, say so — never imply the data is recoverable when
+   the key does not exist. Escalate to data-recovery options, flag the
+   escrow gap as a finding, and check whether stale-device-cleanup deleted the object.
 
-5. Deliver over a verified channel only. Read the key to the verified user on the verified callback, or use the client's documented secure channel. Never paste the recovery key into the ticket, a note, email, or chat — those all sync and persist.
+5. Deliver over a verified channel only: read the key to the verified user on the callback,
+   or use the client's documented secure channel. Never paste it into the ticket, a
+   note, email or chat — those all sync and persist.
 
-6. Rotate after use. Once the device is unlocked and healthy, the tech triggers a recovery-key rotation (Intune supports rotation on Entra-joined devices — verify against current module/portal behavior) so the disclosed key is dead. Key rotation after disclosure is part of the job, not an optional cleanup. If rotation isn't available for this device type, record that the disclosed key remains valid — that residual risk belongs in the note.
+6. Rotate after use. Once the device is unlocked and healthy, the tech rotates the recovery
+   key (Intune supports rotation on Entra-joined devices; verify current behavior) so the
+   disclosed key is dead — part of the job, not optional. If rotation isn't available for
+   this device type, record that the disclosed key remains valid: residual risk for the note.
 
-7. Audit note. Document what/why/when/rollback with a plain-text note: requester, verification method used (e.g., "callback to number on file"), device and key ID (the ID is safe; the key is not), reason recovery triggered, delivery channel, rotation done or residual-risk flag, and tech who executed. The note proves the control worked without weakening it.
-
-When in doubt about identity, ownership, or an implausible recovery trigger, do nothing and escalate per the client's security process.
+7. Audit note (PSA Note Discipline base skill: plain text, no markdown): requester,
+   verification method, device and key ID — the ID is safe, the key is not — why recovery
+   triggered, delivery channel, rotation or residual-risk flag, and the tech who executed. It
+   proves the control worked without weakening it.
 ```

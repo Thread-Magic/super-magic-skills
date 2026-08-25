@@ -19,26 +19,46 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are preparing a Conditional Access review for a technician to execute. The tech exports policies and runs changes; you compile the inventory, rank findings, and build remediation tickets. This review changes nothing by itself — it produces findings and remediation tickets, each carrying its own approval and report-only cycle. Never mark a policy as changed on intention, and never invent policy contents or sign-in counts.
+You compile and rank; the tech exports policies and runs every change. Apply the Write
+Guardrails base skill — never invent policy contents or sign-in counts; when in doubt about
+a policy's effect leave it in report-only and say so.
 
-1. Inventory. Tech exports every CA policy (including disabled and report-only). For each, record: state, users/groups in and excluded, apps covered, conditions (locations, platforms, client apps, risk), grant/session controls, and last-modified date. The agent compiles this into a single dated table — this is the review artifact. Check the client's documentation and the knowledge base for the client's documented CA standard (skip gracefully if absent).
+1. Inventory. Tech exports every CA policy, disabled and report-only included: state, users
+   and groups in and out, apps, conditions (locations, platforms, client apps, risk),
+   grants, session controls and last-modified date in one dated table — the artefact. Pull the client's documented CA standard from their documentation and the
+   knowledge base (Connector Degradation base skill if neither is on).
 
-2. Check the non-negotiables first:
-   - Legacy authentication blocked for all users (the single highest-value policy; verify with sign-in logs filtered to legacy client apps — if legacy auth still has real traffic, blocking it needs its own remediation ticket, not a silent enable).
-   - MFA required for all users, and phishing-resistant or at minimum MFA on every administrator role.
-   - Break-glass accounts excluded from every policy — cross-check against the break-glass-account-audit skill; missing exclusions are a critical finding in both directions (no exclusion = lockout risk; excluded daily-driver accounts = bypass risk). Verify break-glass exclusions before ANY policy enablement from this review.
+2. Non-negotiables first:
+   - Legacy authentication blocked for all users — the highest-value policy there is. Verify
+     against sign-in logs filtered to legacy client apps; real traffic means blocking gets
+     its own remediation ticket, not a silent enable.
+   - MFA for all users; phishing-resistant MFA — plain MFA at minimum — on every admin role.
+   - Break-glass accounts excluded from every policy (cross-check break-glass-account-audit).
+     Critical both ways: no exclusion is a lockout risk, an excluded daily-driver account is
+     a bypass. Verify these exclusions before ANY enablement from this review.
 
 3. Find the rot:
-   - Stale exceptions: every excluded user/group/app must have a written justification and expiry (see conditional-access-exception). Exclusions nobody can explain are findings.
-   - Overlaps and conflicts: policies targeting the same users/apps with different grants — determine the effective result (block wins; grants combine) and flag pairs whose combined effect nobody intended.
-   - Coverage gaps: apps or user populations no policy touches ("All apps" vs named-app policies), new admin roles not in the admin policy, guest users unhandled.
-   - Report-only orphans: policies parked in report-only for months — either graduate them or delete them; they are decisions nobody made.
+   - Stale exceptions. Every exclusion needs a written justification and expiry
+     (conditional-access-exception); any nobody can explain is a finding.
+   - Overlaps. Same users or apps, different grants: work out the effective result (block
+     wins, grants combine) and flag pairs nobody intended.
+   - Coverage gaps. Apps or populations no policy touches, "All apps" versus named-app
+     policies, admin roles missing from the admin policy, guests unhandled.
+   - Report-only orphans. Months in report-only is a decision nobody made: graduate, or
+     delete.
+   Rank worst-first, a remediation each: step 2 failures critical, unjustified exclusions
+   and sensitive-app gaps high, overlaps and naming medium. Sign-in-log evidence may be
+   capped — apply Sweep Honesty: state the window, label counts observed-in-window, and say
+   what you couldn't check.
 
-4. Rank findings worst-first (critical: no legacy-auth block, admins without MFA, break-glass problems; high: unjustified exclusions, coverage gaps on sensitive apps; medium: overlaps, naming/hygiene) with a concrete remediation for each. Sign-in-log evidence is point-in-time and may be capped — state the window and label counts as observed-in-window, not absolutes.
+4. Report-only discipline on every change: create in report-only, collect real sign-in data
+   over days not minutes, have the tech review it for legitimate traffic that would have been
+   blocked, then enable, with client approval for anything that can block users. What-if spot
+   checks supplement report-only data, never replace it. Never enable a blocking policy the
+   day it was written.
 
-5. Report-only discipline for every change. Any new or modified policy from this review: create in report-only → let it accumulate real sign-in data (days, not minutes) → tech reviews the report-only results for would-have-blocked legitimate traffic → only then enable, with client approval (send an approval request) for anything that can block users. What-if tool spot checks supplement, never replace, report-only data. Never enable a blocking policy the same day it was written; when in doubt, leave it in report-only and say so.
-
-6. Output. Leave a plain-text note — the dated review (or client-facing summary if requested): inventory table, findings ranked with evidence, remediation list. Raise follow-up tickets for remediations rather than burying them in the note, and schedule the next periodic review. Do not paste tenant identifiers, full policy JSON exports, or user lists into notes destined for PSA sync — summarize, and store the export in the client's documentation system.
-
-When in doubt about a policy's effect or whether a change is safe to enable, do nothing, leave it in report-only, and say so.
+5. Output a note (PSA Note Discipline base skill: plain text, no markdown or emojis): dated
+   table, ranked findings with evidence, remediation list. Raise a ticket per remediation,
+   and schedule the next review. Keep tenant identifiers, full policy JSON and user lists
+   out of PSA-synced notes; summarize, and store the export in the docs system.
 ```

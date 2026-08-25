@@ -19,23 +19,47 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are choosing the least-privileged mail-sending method for a device or application and scoping any connector so only the intended source can use it. You prepare and verify; the technician executes in EAC/PowerShell and on the device. Never report a connector as live on intention — never invent data.
+Choose the least-privileged sending method for a device or app, and scope any connector so
+only the intended source can use it. The tech executes in EAC/PowerShell and on the device.
+Apply the Write Guardrails base skill — never report a connector live on intention; when in
+doubt do nothing and escalate.
 
-1. Gather the decision inputs (read the ticket for context): does it send only to internal recipients or external too? What From address? Daily volume? Can the device do modern TLS and authentication, or is it a legacy appliance? Does it have a static public IP? (Check the client's documentation for the device's documented specs; skip gracefully if neither is connected.)
+1. Decision inputs: internal recipients only or external? From address? Daily volume?
+   Modern TLS and authentication, or a legacy appliance? Static public IP? Pull its
+   documented specs from client documentation (Connector Degradation base skill if off).
 
-2. Pick the method — least privilege first:
-   - SMTP AUTH client submission (smtp.office365.com:587): sends anywhere, needs a licensed mailbox for the sending account. Caveats: SMTP AUTH is legacy-auth surface — keep it disabled tenant-wide and enable it only on the single sending account; basic auth for SMTP is on Microsoft's deprecation path, so verify current status against Microsoft's current docs and prefer OAuth-capable devices. Use a dedicated service mailbox, never a human's account.
-   - Direct send (via the tenant's MX endpoint): internal recipients only, no authentication, no mailbox needed. Mail is subject to spam filtering and the From can't be trusted externally. Fine for scan-to-email that only goes to staff.
-   - SMTP relay with an inbound connector: sends external, no per-message auth — the connector trusts by static public IP or TLS certificate subject. Requires the static IP in the client's SPF record. This is the one that can become an open relay if scoped sloppily; it gets the most scrutiny.
-   - High-volume/app-generated mail at scale: flag Azure Communication Services Email or Exchange's high-volume mail offering as the right tool instead of abusing relay — verify current offerings against Microsoft's current docs.
+2. Pick the method, least privilege first:
+   - SMTP AUTH client submission (smtp.office365.com:587): sends anywhere, needs a licensed
+     mailbox. Legacy-auth surface — keep SMTP AUTH off tenant-wide and enable it only on
+     that one account: a dedicated service mailbox, strong credential, no other roles, never
+     a human's. Basic auth for SMTP is on Microsoft's deprecation path — check current
+     status and prefer OAuth-capable devices.
+   - Direct send (the tenant's MX endpoint): internal recipients only, no auth, no mailbox;
+     subject to spam filtering, and the From can't be trusted externally. Fine for
+     scan-to-email that only reaches staff.
+   - SMTP relay with an inbound connector: sends external, no per-message auth — it trusts by
+     static public IP or TLS certificate subject, and that IP must be in the client's SPF
+     record. This one gets the most scrutiny.
+   - High-volume app mail: flag Azure Communication Services Email or Exchange's high-volume
+     offering rather than abusing relay; verify offerings.
 
-3. Least-scope rules for a relay connector: restrict to the exact source IP(s) — never a broad CIDR, never "any"; certificate-scoped where the device supports it; document every IP's owner. If the client's firewall can also restrict outbound 25/587 to the devices in question, recommend it. Never widen a connector's IP scope to "make it work" — a connector scoped to a range you don't control is an open relay with your client's domain on it.
+3. Relay connector scope: exact source IPs — never a broad CIDR, never "any" —
+   certificate-scoped where supported, every IP's owner documented. Recommend a firewall rule
+   restricting outbound 25/587 to those devices. Never widen a scope to make it work: a
+   range you don't control is an open relay carrying your client's domain. A new
+   sending path on their domain is spoofing surface — get client approval for the method,
+   address and scope.
 
-4. Approval: new sending paths on the client's domain are spoofing surface — send an approval request for the method, sending address, and scope.
+4. Execution (verify module versions): EAC > Mail flow > Connectors for relay
+   (New-InboundConnector), device-side SMTP settings, and the SPF update for relay IPs —
+   coordinate with dmarc-spf-dkim-setup so it keeps alignment, and check the 10-DNS-lookup
+   limit.
 
-5. Prepare execution for the tech (PowerShell labeled: verify against current module versions): EAC > Mail flow > Connectors for relay (New-InboundConnector), device-side SMTP settings per method, SPF update for relay IPs (coordinate with dmarc-spf-dkim-setup guidance so the SPF edit doesn't break alignment or blow the 10-lookup limit). Relay IPs go into SPF deliberately; check the 10-DNS-lookup limit before adding.
-
-6. Verify via evidence: test message from the device to an internal and (if in scope) external recipient, delivered with headers showing the intended path; a message trace (mail-trace-investigation) confirming it. Document what/why/when/rollback in a plain-text note: device/app, method chosen and why, sending address, connector name and its exact IP/certificate scope, SPF change if any, approver, date, and rollback (disable connector <name>; revert SPF). Log time.
-
-SMTP AUTH stays disabled tenant-wide; per-account enablement only, on a dedicated service account with a strong credential and no other roles. Legacy devices that can't do TLS get flagged as a risk in the note, not silently accommodated with weakened settings. When in doubt, do nothing and escalate.
+5. Verify: a test message from the device to an internal and, if in scope, external
+   recipient, headers showing the intended path, confirmed by a message trace
+   (mail-trace-investigation). Note it (PSA Note Discipline base skill: plain text, no
+   markdown) — device, method and why, sending address, connector name and its exact IP or
+   certificate scope, SPF change, approver, date, rollback (disable connector, revert SPF).
+   Log time. A legacy device that can't do TLS is flagged as a risk, never quietly
+   accommodated with weakened settings.
 ```

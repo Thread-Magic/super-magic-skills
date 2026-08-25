@@ -19,23 +19,46 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You give a user extra addresses the cheapest correct way and explain the sending reality before it becomes a complaint. You prepare and verify; the tech drives the module. Never invent data.
+Give the user extra addresses the cheapest correct way, before the sending behavior
+becomes a complaint. The tech drives the module. Apply the Write Guardrails base
+skill — never invent data; when in doubt do nothing and escalate.
 
-1. Triage the actual need (read the ticket for context):
-   - Tagging/filtering inbound mail the user controls themselves → plus addressing. `user+anything@domain` already delivers to `user@domain` in Exchange Online (on by default tenant-wide since 2022 — verify the tenant hasn't disabled it: `Get-OrganizationConfig | Select DisablePlusAddressInRecipients`). No admin change, no ticket beyond the explanation; show the user how to create inbox rules on the +tag. Caveats to state: some external websites reject + in address forms, and anyone can strip the tag to reach the base address — it's a filing tool, not privacy.
-   - A real alternate address others will use → proxy alias (step 2).
-   - A separately-worked identity (support@, sales@) → that's a shared mailbox or group conversation (shared-mailbox-creation / distribution-vs-m365-groups), not an alias.
+1. Triage the actual need:
+   - Tagging inbound mail the user filters themselves — plus addressing.
+     `user+anything@domain` already delivers to `user@domain`, on by default tenant-wide
+     since 2022; verify with `Get-OrganizationConfig | Select
+     DisablePlusAddressInRecipients`. No admin change: show them inbox rules on the +tag.
+     Caveats — some external sites reject "+" in address forms, and anyone can strip the
+     tag. Neither a +tag nor an alias is a privacy or security boundary; say so when the
+     request is about hiding the real address.
+   - A real alternate address others will use — proxy alias, step 2.
+   - A separately-worked identity (support@, sales@) — a shared mailbox or group
+     conversation (shared-mailbox-creation, distribution-vs-m365-groups), not an alias.
 
-2. For a proxy alias: confirm the address is unused (not an existing mailbox, alias, DL, or group — check the client's documentation for documented addresses, skip gracefully if not connected), get client approval for a new receivable address on their domain (send an approval request), then prepare for the tech (PowerShell labeled: verify against current module versions): `Set-Mailbox <user> -EmailAddresses @{add="smtp:<alias>@<domain>"}` — lowercase `smtp:` adds an alias; uppercase `SMTP:` changes the PRIMARY address, which changes what everyone sees on outbound mail — never flip primary unless that was the explicit, approved request.
+2. Proxy alias: confirm the address is unused — no existing mailbox, alias, DL or group; check the client's documentation (Connector Degradation base skill if IT Glue is
+   off). A collision errors on write. Get client approval for a
+   new receivable address on their domain, then for the tech (verify module versions):
+   `Set-Mailbox <user> -EmailAddresses @{add="smtp:<alias>@<domain>"}`. Lowercase `smtp:`
+   adds an alias; uppercase `SMTP:` changes the PRIMARY — what everyone sees on outbound
+   mail. Never flip primary unless that was the explicit, approved request.
 
-3. State the sending reality before closing: aliases RECEIVE by default; replies go out from the primary address unless send-from-alias is enabled tenant-wide (`Set-OrganizationConfig -SendFromAliasEnabled $true`) and the client (Outlook on the web, newer Outlook builds) supports choosing the From address. Caveats:
-   - The setting is tenant-wide — enabling it for one user enables the capability for everyone; that's an approval-worthy scope statement (send an approval request at that scope or decline).
-   - Client support is uneven (older Outlook, mobile clients) — verify current client behavior against Microsoft docs before promising a specific user experience.
-   - If the user must reliably SEND as the address and the tenant won't enable send-from-alias, the honest alternative is a shared mailbox with Send As (shared-mailbox-delegation).
+3. State the sending reality up front. Aliases RECEIVE by default; replies leave from the
+   primary unless send-from-alias is enabled tenant-wide (`Set-OrganizationConfig
+   -SendFromAliasEnabled $true`) and the client app supports picking the From address.
+   - Tenant-wide: enabling it for one user enables it for everyone. Approve at that scope
+     or decline.
+   - Client support is uneven (older Outlook, mobile) — verify against Microsoft's current
+     docs before promising one.
+   - If the user must reliably SEND as the address and the tenant won't enable it, the
+     honest answer is a shared mailbox with Send As (shared-mailbox-delegation).
 
-4. Name-change flavor: add the new address, wait for verification, then swap primary (uppercase SMTP:) keeping the old as an alias so nothing bounces; note that the sign-in UPN is a separate change with its own blast radius (re-auth on devices) — flag it, don't bundle it silently.
+4. Name change: add the new address, verify, swap primary (uppercase `SMTP:`), keep the old
+   as an alias so nothing bounces. The sign-in UPN is a separate change with its own blast
+   radius (device re-auth) — flag it, never bundle it silently.
 
-5. Verify via evidence: test mail to the new alias/plus address arrives; if send-from-alias was enabled, a test send shows the alias in the recipient's copy. Document what/why/when/rollback — leave a plain-text note: user, addresses added, primary changed or not, tenant settings touched (send-from-alias, plus-addressing state), approver, caveats communicated, and rollback (remove alias / restore prior primary). Log time.
-
-Guardrails: Never change the primary SMTP or the UPN as a side effect of an alias request; each is its own approved change. Send-from-alias is a tenant-wide switch — present it as such, get approval at that scope or decline. Aliases are not a security or privacy boundary; say so when the request is motivated by hiding the real address. Check address collisions before promising an alias; a colliding address errors on write and wastes the approval loop. When in doubt, do nothing and escalate.
+5. Verify: mail to the new alias or plus address arrives; if send-from-alias was enabled, a
+   test send shows the alias in the recipient's copy. Note it (PSA Note Discipline base
+   skill: plain text, no markdown) — addresses added, primary changed or not, tenant
+   settings touched, approver, caveats communicated, rollback (remove alias, restore prior
+   primary). Log time.
 ```
