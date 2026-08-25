@@ -111,10 +111,24 @@ restating it, name it:
 
 > Notes are plain text — no markdown or emojis (apply the **PSA Note Discipline** skill).
 
-Roughly eight words replace sixty. Inside Super Magic the named skill resolves and brings its
-full contract; the short gloss means the prompt still does the right thing on a cold paste,
-before anyone has saved the base skill. **Always keep the gloss** — a bare "apply the PSA Note
-Discipline skill" is useless to someone pasting the prompt for the first time.
+Roughly eight words replace sixty.
+
+**Where the name actually resolves — this decides how much the gloss has to carry.** In Super
+Magic, a member working conversationally, the agent can reach your other saved skills, so
+naming one pulls in its full contract. A **Super Magic Agent** is different: a Flow fires a
+*prompt*, and that prompt is all the agent gets. There is no skill lookup in a Flow, so a
+named base skill there is just words on the page.
+
+That makes the gloss the whole contract for anything a Flow runs. **Always keep it** — a bare
+"apply the PSA Note Discipline skill" does nothing in a Flow and nothing for a person pasting
+the prompt for the first time. Write the reference so the sentence still stands on its own
+with the name deleted:
+
+> ✅ `Notes are plain text — no markdown or emojis (apply the PSA Note Discipline skill).`
+> ❌ `Apply the PSA Note Discipline skill.`
+
+If a skill is `flow: yes` and a guardrail is genuinely load-bearing for the unattended path,
+spell it out inline rather than delegating it to a name.
 
 The base skills available today:
 

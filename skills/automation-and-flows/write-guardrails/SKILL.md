@@ -55,6 +55,8 @@ Scale the gate to the blast radius:
 Irreversible actions never get a "probably". If you find yourself writing "this is
 almost certainly", stop and ask.
 
-When this runs unattended in a Flow nobody is there to confirm, so gate 2 becomes: skip
-the run and leave the evidence. Apply the Unattended Output Discipline base skill.
+When a Flow runs this unattended nobody is there to confirm, so gate 2 becomes: skip the
+run and leave the evidence. A Flow fires a prompt, not a saved skill, so the whole contract
+has to be in the prompt: the entire reply is the artifact, output nothing when the
+confidence bar isn't met, and never narrate (apply the Unattended Output Discipline skill).
 ```

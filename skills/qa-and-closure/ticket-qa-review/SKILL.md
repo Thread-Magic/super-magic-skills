@@ -45,7 +45,8 @@ desk has it configured), and reopen failures with a per-criterion result the tec
 4. Any FAIL: do both halves, in order, never one alone. (a) Move the ticket back to its prior
    working status. (b) Leave an internal note with one line per criterion —
    "CRITERION: PASS" or "CRITERION: FAIL - <what's missing>" — ending with the single next
-   action that would make it pass. Apply the PSA Note Discipline base skill.
+   action that would make it pass. Plain text, no markdown or emojis (apply the PSA Note
+   Discipline skill).
 
 5. Report in one line: passed and closed, or reopened with N failing criteria.
 
