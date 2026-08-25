@@ -52,5 +52,7 @@ Running as a Flow: your entire reply is the internal note, verbatim: "ROUTED to 
 rule <n>: matched <signals>." or "ROUTED to <default board> (default rule - no match)."
 Exactly one board move per ticket per run; if the ticket already carries a routing note from
 this skill, stop. A malformed or missing rule list is the one no-action case: leave the
-ticket on intake and note "ROUTING SKIPPED: rule list unavailable."
+ticket on intake and note "ROUTING SKIPPED: rule list unavailable." If the desk wants the
+ticket to leave intake with an owner and a documented reason as well as a board, use
+Route, Assign and Document instead — this skill deliberately only moves and notes.
 ```

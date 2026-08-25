@@ -14,7 +14,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 **When to use:** End of day — "audit today's closed tickets" / "how did today's closures look?", a lead running a daily quality pulse on the desk or one tech, or catching up after a busy day when the per-ticket QA gate wasn't running.
 
-**Run it:** across all tickets closed today (manually or on a schedule).
+**Run it:** across all tickets closed today — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

@@ -1,5 +1,5 @@
 ---
-name: Daglig oversikt
+name: Daglig oversikt (Norwegian)
 description: Daglig oversikt over en teknikers åpne saker: hva som trenger svar, hva som haster, hva som er planlagt i dag, med ultrakort 3-linjers variant.
 category: Localized
 tools: [search_tickets, search_members]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Daglig oversikt
+# Daglig oversikt (Norwegian)
 
 **Når skal den brukes:** en tekniker vil ha morgenlesningen — alt som ligger på bordet, sortert etter hva som trenger ham eller henne nå, lesbar på under ett minutt. «Gi meg en oppsummering av mine åpne saker», «morgenoversikt», «kortversjonen».
 

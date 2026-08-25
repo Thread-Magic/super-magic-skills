@@ -1,5 +1,5 @@
 ---
-name: Klantantwoord
+name: Klantantwoord (Dutch)
 description: Extern klantantwoord opstellen in de huisstijl: oplossingsupdates, statusberichten, afsluitende berichten of elke klantgerichte e-mail op een ticket.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Klantantwoord
+# Klantantwoord (Dutch)
 
 **Wanneer gebruiken:** een technicus moet een klantgericht bericht versturen en wil het on-brand en verzendklaar — een statusupdate, tussenstand of afsluitend bericht.
 

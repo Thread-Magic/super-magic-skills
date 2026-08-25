@@ -14,7 +14,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 **When to use:** Run on a cadence (daily/weekly) to catch tickets going quiet or drifting toward SLA trouble — "what's aging in the queue?" / "clean up the stale tickets" / "which tickets have we dropped?", or clearing the backlog honestly before a service review.
 
-**Run it:** across all open tickets (manually or on a schedule).
+**Run it:** across all open tickets — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

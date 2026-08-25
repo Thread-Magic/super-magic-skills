@@ -14,7 +14,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 **When to use:** "Follow up on my waiting tickets" / "who hasn't replied to us?" — running the desk's standard cadence (24/48/72h, or the house variant) across a queue, or drafting the next nudge for one specific quiet ticket.
 
-**Run it:** across all waiting-on-client tickets (manually or on a schedule).
+**Run it:** across all waiting-on-client tickets — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

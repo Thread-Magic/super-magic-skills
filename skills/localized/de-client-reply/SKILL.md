@@ -1,5 +1,5 @@
 ---
-name: Kundenantwort
+name: Kundenantwort (German)
 description: Kundengerichtete Ticket-Antwort in der Hausstimme entwerfen: Statusupdates, Zwischenstand, Abschlussnachricht oder jede E-Mail an den Kunden.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Kundenantwort
+# Kundenantwort (German)
 
 **Wann einsetzen:** Ein Techniker muss dem Kunden eine Nachricht schicken und will sie markenkonform und versandfertig — eine Statusmeldung, einen Zwischenstand oder eine Abschlussnachricht.
 

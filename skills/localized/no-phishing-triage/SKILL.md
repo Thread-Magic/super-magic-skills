@@ -1,5 +1,5 @@
 ---
-name: Phishing-triage
+name: Phishing-triage (Norwegian)
 description: Phishing-triage av en mistenkelig e-post: vurder uten å røre nyttelasten, sjekk spredningsradius, inneslutt hvis skadelig, svar melderen med konklusjon.
 category: Localized
 tools: [search_tickets, search_contacts, search_knowledge_base, add_ticket_note, update_ticket, view_openDraft]
@@ -10,7 +10,7 @@ role: [Security & Compliance Owner]
 outcome: [Risk & Compliance]
 ---
 
-# Phishing-triage
+# Phishing-triage (Norwegian)
 
 **Når skal den brukes:** en bruker har videresendt noe mistenkelig («er dette phishing?»), et phishing-meldingssak lander på sikkerhetstavla, eller en tekniker vil ha en ny vurdering før en melding slippes ut eller slettes.
 

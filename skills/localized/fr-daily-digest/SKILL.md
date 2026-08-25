@@ -1,5 +1,5 @@
 ---
-name: Synthèse quotidienne
+name: Synthèse quotidienne (French)
 description: Synthèse quotidienne des tickets ouverts d'un technicien: qui attend réponse, ce qui est urgent, ce qui est planifié aujourd'hui, variante 3 lignes.
 category: Localized
 tools: [search_tickets, search_members]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Synthèse quotidienne
+# Synthèse quotidienne (French)
 
 **Quand l'utiliser :** un technicien veut la lecture du matin — tout ce qu'il a sur le feu, trié selon ce qui a besoin de lui maintenant, parcourable en moins d'une minute. « Fais-moi un récap de mes tickets ouverts », « synthèse du matin », « version courte ».
 

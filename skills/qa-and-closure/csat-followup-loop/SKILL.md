@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "Did the CSAT go out on this ticket?" / "send the satisfaction survey for these closures", pulling survey responses back onto their tickets, "any detractors this week?", or the delivery step after Ticket QA Review passes a ticket to close.
 
-**Run it:** across all recently closed tickets (manually or on a schedule).
+**Run it:** across all recently closed tickets — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

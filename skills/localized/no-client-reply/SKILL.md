@@ -1,5 +1,5 @@
 ---
-name: Kundesvar
+name: Kundesvar (Norwegian)
 description: Utkast til eksternt kundesvar i husets stemme og format: løsningsoppdateringer, statusmeldinger, avslutninger eller enhver kunderettet e-post på en sak.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Kundesvar
+# Kundesvar (Norwegian)
 
 **Når skal den brukes:** en tekniker skal sende en kunderettet melding og vil ha den i tråd med husets profil og klar til å sendes — en oppdatering, statusmelding eller avslutningsmelding.
 

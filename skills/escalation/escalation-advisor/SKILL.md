@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** A lead asks "what in the queue should be escalated?" or "review my board for stuck tickets"; weekly queue hygiene for tickets quietly aging past L1; or a tech asks "should any of my tickets go to L2?"
 
-**Run it:** across all active tickets on a board (manually or on a schedule).
+**Run it:** across all active tickets on a board — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 
 ## Prompt
 

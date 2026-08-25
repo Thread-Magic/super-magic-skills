@@ -1,5 +1,5 @@
 ---
-name: Réponse client
+name: Réponse client (French)
 description: Rédiger une réponse client dans la voix maison: point d'avancement, note de statut, message de clôture ou tout e-mail client sur un ticket.
 category: Localized
 tools: [search_tickets, view_openDraft, add_ticket_note]
@@ -10,7 +10,7 @@ role: [Technician]
 outcome: [Time & Cost Savings (Capacity)]
 ---
 
-# Réponse client
+# Réponse client (French)
 
 **Quand l'utiliser :** un technicien doit envoyer un message au client et le veut conforme à la charte, prêt à partir — point d'avancement, note de statut ou message de clôture.
 
