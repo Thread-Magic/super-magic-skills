@@ -19,25 +19,47 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are diagnosing an Intune enrollment failure for a technician to fix in one pass. The agent prepares the diagnosis and checklist; a technician executes all console changes. Never present a recommended change as a completed one, and never invent data (no fabricated error codes, device records, or dates).
+Diagnose an Intune enrollment failure for a technician to fix in one pass. You prepare the
+diagnosis; the tech makes every console change. Never present a recommendation as a completed
+change.
 
-Enrollment failures are almost always one of four things, and they fail in a predictable order: the user's licensing, the tenant's MDM scope, the device's existing state, or the join type the device actually has versus the one auto-enrollment needs. Walk the ladder top-down; do not reimage first.
+Climb the Troubleshooting Ladder base skill first: prior tickets for this device, user and
+client — several failing since the same date is one tenant-side cause (MDM scope change,
+licensing lapse, expired enrollment cert) — then the client's documentation for the enrollment
+standard: Autopilot or manual, hybrid or cloud-only, expected join type, restrictions in force.
+Note it if IT Glue or Hudu isn't connected (Connector Degradation base skill).
 
-1. History first. Read prior tickets for this device, this user, and enrollment failures across the client. Many devices failing since the same date points tenant-side (MDM scope change, licensing lapse, expired enrollment certificate) — treat as one root cause, not per-device tickets.
+1. Capture the exact error: the device's Access work or school account Info pane, Event Viewer
+   under DeviceManagement-Enterprise-Diagnostics-Provider, or the Intune enrollment failures
+   report. Look the code up against Microsoft's current list, don't paraphrase.
 
-2. Docs second. Check the client's documentation (connector-gated — skip gracefully if neither is connected) and the knowledge base for the client's enrollment standard: Autopilot vs manual, hybrid vs cloud-only, expected join type, and any enrollment restrictions in force.
+2. Rung 1, licensing. Verify the user holds an Intune-inclusive license (Intune Plan 1, EMS,
+   Business Premium), assigned and not merely purchased. Classic symptom: 0x80180018.
 
-3. Capture the exact error before theorizing. Get the error code from the device (Settings → Accounts → Access work or school → the account → Info, or Event Viewer → DeviceManagement-Enterprise-Diagnostics-Provider) or from the Intune enrollment failures report. Look the exact code up (against Microsoft's documented list — verify against Microsoft's current docs) — do not paraphrase codes from memory.
+3. Rung 2, MDM user scope. In Entra, Mobility, Microsoft Intune, confirm MDM user scope covers
+   this user (Some: check group membership; None breaks everyone). MAM user scope taking
+   precedence over MDM scope for the same user is a classic silent failure: the device
+   registers but never enrolls.
 
-4. Rung 1 — user licensing. Verify the enrolling user holds an Intune-inclusive license (Intune Plan 1 standalone, EMS, or Business Premium) and it is actually assigned, not just purchased. License errors classically surface as 0x80180018.
+4. Rung 3, device state. Check for a stale or duplicate record for the same hardware (often
+   deleted before re-enrolling), device-limit restrictions and the Entra device cap
+   (0x801c0003), and enrollment restrictions blocking the platform or personal ownership
+   (0x80180014); route a firing restriction to the restrictions workflow, don't work around it.
+   Before deleting a stale record the tech confirms by serial that it maps to the device in
+   hand, and notes what was deleted.
 
-5. Rung 2 — MDM user scope. In Entra → Mobility → Microsoft Intune, confirm the MDM user scope covers this user (Some → check group membership; None breaks everyone). For Windows auto-enrollment, MAM user scope taking precedence over MDM scope for the same user is a classic silent failure — the device registers but never enrolls.
+5. Rung 4, join type. Run dsregcmd /status. Auto-enrollment needs Entra joined or hybrid
+   joined; Entra registered is not enough. Hybrid join failures trace to Entra Connect sync
+   scope, the SCP, or the auto-enrollment GPO ("Enable automatic MDM enrollment using default
+   Azure AD credentials", set to user credential). Fix the join before retrying.
 
-6. Rung 3 — device state. Check for a stale or duplicate device record for the same hardware (a previous enrollment must often be deleted before re-enrolling), the user's device-limit restrictions in Intune and the Entra device cap (0x801c0003 "user reached device limit"), and enrollment restrictions blocking the platform or personal ownership (0x80180014) — if a restriction fires, route to the enrollment-restrictions skill rather than working around it. Deleting a stale device record is a tech-executed console action: have the tech confirm the record maps to the physical device in hand (serial match) before deletion, and note what was deleted for rollback context.
+6. Verify and note. Success is the device visible in Intune, checking in, with profiles
+   delivered. Leave a plain-text note, no markdown or emojis (PSA Note Discipline base skill):
+   error code, rung that failed, evidence, what the tech changed, verification, plus other
+   devices to retry if the cause was tenant-side.
 
-7. Rung 4 — AAD join type. Run `dsregcmd /status` on the device (verify against current module/OS versions). Windows auto-enrollment needs Entra joined or hybrid joined — Entra *registered* is not enough. Hybrid join failures trace to Entra Connect sync scope, the SCP, or the GPO enabling auto-enrollment ("Enable automatic MDM enrollment using default Azure AD credentials" set to *user* credential). Fix the join before retrying enrollment; enrolling a mis-joined device just creates a record to clean up later.
-
-8. Verify and note. Success = device visible in Intune, checking in, with assigned profiles delivered. Leave a plain-text note: error code, which rung failed, evidence, what the tech changed, and verification. If a tenant-side cause was found, list the other affected devices/users so they get retried. Update the ticket as needed.
-
-Guardrails: No wipe, reset, or reimage as an enrollment troubleshooting step — that is a data-destroying guess; device resets go through the device-wipe-workflows skill with its approval gate. Never widen the MDM user scope or lift an enrollment restriction to make one device work — scope changes affect the whole tenant and need the client's documented change approval. When in doubt about a tenant-wide change, do nothing and escalate.
+No wipe, reset or reimage as a troubleshooting step; resets go through the device-wipe workflow
+and its approval gate. Never widen MDM user scope or lift an enrollment restriction to make one
+device work — both change the whole tenant and need the client's documented change approval.
+When in doubt, do nothing and escalate.
 ```

@@ -19,25 +19,46 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are mapping a "wipe it" request to the least destructive Intune remote action that achieves the intent, stating the data loss in plain language and gating execution behind recorded approval. You prepare and verify; the technician triggers the action in the console. Never report a wipe as done on intention — never invent data.
+Map a "wipe it" request to the least destructive Intune action that meets the intent. You
+prepare and verify; a technician triggers the action.
 
-1. Establish intent, ownership, and data reality before naming an action (read the ticket for context). What outcome does the requester actually want? Corporate or personal (BYOD) device? Does the device hold data that exists nowhere else (local files, un-synced folders — ask explicitly; "everything's in OneDrive" is a claim to verify, not an assumption)? Who is the authorized requester — for offboarding wipes, that is the client authority, never the departing user's word alone. Check the client's documentation for the device standard and ownership records (skip gracefully if neither is connected).
+1. Intent, ownership, data. What outcome does the requester want, on a corporate or BYOD
+   device? Does it hold data that exists nowhere else — local files, un-synced folders? Verify
+   it; don't take "it's all in OneDrive". For offboarding the authorized requester is the
+   client authority, never the departing user. Check the client's documentation for the device
+   standard and ownership, noting if IT Glue or Hudu isn't connected (Connector Degradation
+   base skill).
 
-2. Map to the decision tree, least destructive first:
-   - Retire — removes company data, apps, and management; personal data untouched. The default for BYOD offboarding (the selective wipe app-protection-policies promises) and for devices leaving management but staying with their owner.
-   - Autopilot Reset / Wipe with reprovision intent — rebuilds the OS and re-enrolls for the same tenant; user data on the device is destroyed. For handing a corporate device to a new user or recovering from a broken deployment.
-   - Fresh Start — reinstalls Windows removing manufacturer bloat; the keep-user-data option exists but removes apps. Narrow use: cleaning up OEM images.
-   - Wipe (factory reset) — everything on the device is destroyed. For device disposal, return-to-lessor, or confirmed-loss scenarios.
-   - Delete (record only) — removes the Intune/Entra record and touches the device not at all. Never the answer to "wipe it"; pairs with stale-device-cleanup rules (BitLocker keys die with the object — preserve first).
-   Verify current action behavior per platform against Microsoft's current docs — remote-action semantics differ by platform and change.
+2. Choose from the tree, least destructive first:
+   - Retire — removes company data, apps and management; personal data untouched. Default for
+     BYOD offboarding and devices leaving management with their owner.
+   - Autopilot Reset / reprovision wipe — rebuilds the OS and re-enrolls in the same tenant;
+     on-device user data is destroyed. For reassigning a corporate device or a broken
+     deployment.
+   - Fresh Start — reinstalls Windows and strips OEM bloat; keep-user-data still removes apps.
+   - Wipe (factory reset) — everything on the device is destroyed. Disposal, lease return,
+     confirmed loss.
+   - Delete (record only) — removes the Intune/Entra record, touches the device not at all.
+     Never the answer to "wipe it", and BitLocker keys die with the object — preserve first.
+   Semantics differ by platform and change — verify against Microsoft's docs.
 
-3. Pre-wipe salvage. For any OS-destroying action: confirm data backup state (sync health, local-only data recovered), retrieve and preserve the BitLocker recovery key BEFORE the action (see bitlocker-key-retrieval — post-wipe recovery needs it if anything goes sideways), and note license or app deactivations that need doing while the OS still boots.
+3. Salvage, then gate. Before any OS-destroying action: confirm sync state, recover local-only
+   data, preserve the BitLocker recovery key, and do license or app deactivations while the OS
+   still boots. Then send an approval request to the authorized client contact naming the
+   device, the exact action, what is destroyed ("all data on the device, unrecoverable" vs
+   "company data only; personal files untouched"), and the point of no return. Tell a BYOD
+   owner before their device is retired. Nothing destructive runs without the recorded
+   approval; urgency does not waive it (Write Guardrails base skill — no irreversible action
+   without a confirmed go).
 
-4. Approval gate — always, with consequences stated plainly. Send an approval request to the authorized client contact naming: the device, the exact action, what is destroyed ("all data on the device, unrecoverable" vs "company data only; personal files untouched"), what survives, and the point of no return. For BYOD retires, the device owner is informed before execution — company data vanishing from a personal phone without warning reads as an attack. No destructive action executes without the recorded approval; when in doubt about authorization, do nothing and escalate. Urgency does not waive the gate.
+4. Execute, verify, document. An offline device executes the wipe whenever it next checks in,
+   so record a pending wipe prominently and cancel it explicitly if the request is dropped.
+   Verify completion in the console and that reprovisioning succeeded. Leave a plain-text note,
+   no markdown or emojis (PSA Note Discipline base skill): device, action and why gentler
+   options failed, salvage steps, approver, verification, and follow-ups (record deletion,
+   asset disposal, license reclaim). Log the time.
 
-5. Execute and verify. The tech triggers the action; note that an offline device executes the wipe whenever it next checks in — a pending wipe is a live grenade, so record it prominently and reconcile if the request is later cancelled (cancel the pending action explicitly; do not assume it expired). Verify completion in the console (action status; update the ticket) and, where relevant, that re-enrollment/reprovisioning succeeded. "The user said it's all backed up" is verified (sync status, spot check), not trusted — the wipe is unrecoverable and the claim is free.
-
-6. Document what/why/when/rollback: leave a plain-text note with device, action chosen and why the less destructive options were insufficient, data-salvage steps done, approver and approval reference, execution time, verification, and follow-ups (record deletion, asset disposal, license reclaim). Log time.
-
-Always propose the least destructive action that meets the intent and record why anything stronger was chosen. BitLocker key preservation precedes every OS-destroying action on an encrypted device. Track pending wipes on offline devices to completion or explicit cancellation — an orphaned pending wipe firing weeks later is a self-inflicted incident. Never use record deletion as a substitute for a device action, and never wipe to troubleshoot enrollment (see intune-enrollment-troubleshooting).
+Record why anything stronger than the minimum was chosen. Never substitute record deletion for
+a device action, never wipe to troubleshoot enrollment, and escalate rather than guess at
+authorization.
 ```

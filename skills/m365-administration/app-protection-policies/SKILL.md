@@ -19,24 +19,48 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are preparing an app-protection (MAM-WE) rollout for a technician to execute. You scope, design the policy, and write the comms and rollback; the tech drives the Intune console. Never mark a policy as applied on intention, and never invent platform behavior — verify current platform behavior against vendor docs rather than asserting from memory.
+Prepare an app-protection (MAM-WE) rollout. You scope, design the policy and write the comms
+and rollback; the tech drives the Intune console. Verify current platform behaviour against
+vendor docs, not memory.
 
-1. Scope and licensing. Confirm Intune licensing covers the target users and identify the BYOD population (which users, which platforms). Docs first: check the client's documentation and the knowledge base for the client's BYOD stance and any existing MAM policy to extend rather than duplicate (skip gracefully if those connectors aren't available).
+1. Scope and licensing. Confirm Intune licensing covers the target users and identify the BYOD
+   population and platforms. Check the client's documentation and the knowledge base for their
+   BYOD stance and any existing MAM policy to extend; note it if IT Glue or Hudu isn't
+   connected (Connector Degradation base skill).
 
-2. Be precise about what it protects — and put it in every artifact:
-   - Protects: org data inside policy-managed apps (Outlook, Teams, OneDrive, Office...) — PIN/biometric to open work apps, encryption of org data, cut/copy/paste and save-as restrictions to unmanaged apps, and selective wipe of org data only.
-   - Does not: manage the device, see personal apps/photos/texts/browsing/location, patch the OS, or protect data in apps outside the policy. It also does not make a compromised device safe — pair with conditional launch checks (min OS, jailbreak/root block) for a floor.
-   Never describe MAM as "managing" or "securing the phone." Plans or client comms that blur this line get corrected before they ship.
+2. Be precise in every artifact. It protects org data inside policy-managed apps (Outlook,
+   Teams, OneDrive, Office): PIN or biometric to open them, encryption, cut/copy/paste and
+   save-as limits to unmanaged apps, selective wipe of org data only. It does not manage the
+   device, see personal apps, photos, texts, browsing or location, patch the OS, protect apps
+   outside the policy, or make a compromised device safe. Never describe MAM as "managing" or
+   "securing the phone".
 
-3. Design the policy: target the managed-app set (start with the Microsoft core apps in use), data-transfer rules (org data to policy-managed apps only; decide contact-sync and backup exceptions deliberately — over-tight paste/save rules are the #1 usability complaint), access requirements (app PIN, biometric allowed), and conditional launch (minimum OS, jailbreak/root block, offline grace period, wipe-on conditions). Do not tighten data-transfer rules past what the pilot proves usable; a policy users route around protects nothing.
+3. Design the policy: the managed-app set (start with the Microsoft core apps in use), data
+   transfer (org data to policy-managed apps only; decide contact-sync and backup exceptions
+   deliberately), access requirements (app PIN, biometric allowed), and conditional launch —
+   minimum OS, jailbreak/root block, offline grace period, wipe-on conditions.
 
-4. Enforce the gate or it's optional. MAM without a Conditional Access policy granting mail/app access only to protected apps is opt-in security — users on unprotected native mail clients bypass it entirely. Plan the CA "require app protection policy" grant alongside the MAM policy, with report-only soak per the conditional-access-review discipline, and state the user-visible effect: native/unsupported mail apps will stop working; Outlook (etc.) becomes the path. MAM without CA enforcement is labeled "optional protection" in the plan — the client must choose enforcement (or its absence) knowingly.
+4. Enforce the gate or it's optional. Without a Conditional Access policy granting mail and app
+   access only to protected apps, users on native mail clients bypass MAM entirely. Plan the
+   "require app protection policy" grant alongside, with a report-only soak first, and state
+   the effect: native and unsupported mail apps stop working, Outlook becomes the path. Label
+   MAM without CA enforcement "optional protection" so the client chooses knowingly.
 
-5. User experience honesty in the comms: what changes (app PIN prompt, work data stays in work apps, native mail stops if CA enforces), what the company can do (wipe org data from work apps), and what it cannot see or touch (personal content, location). This is the adoption make-or-break — BYOD users who suspect surveillance refuse, escalate, or quietly stop reading mail off-hours. Personal-device privacy claims must be accurate for the platforms in question — verify current platform behavior rather than asserting from memory.
+5. Comms: the app PIN prompt, work data staying in work apps, native mail stopping if CA
+   enforces, and step 2's can/cannot list in plain words, accurate for the platforms in
+   question.
 
-6. Approval and pilot. Send an approval request to the client authority: policy settings, the CA enforcement decision and its user-visible effects, comms, pilot group, and rollback (unassign policy; relax the CA grant — both reversible without touching devices). No selective wipe without the standard destructive-action approval; even "org data only" is user-visible and occasionally catches unsaved work. Pilot on real personal devices across platforms; verify the block behaviors AND that legitimate daily flows survive before broadening (schedule the rings as follow-ups).
+6. Approval and pilot. Send an approval request to the client authority covering policy
+   settings, the CA enforcement decision and its effects, comms, pilot group, and rollback
+   (unassign the policy, relax the CA grant — both reversible without touching devices). No
+   selective wipe without a destructive-action approval (Write Guardrails base skill). Pilot on
+   real personal devices across platforms; verify the blocks and that daily flows survive
+   before broadening.
 
-7. Offboarding tie-in. Record in the client's documentation (leave a note, update the ticket, and update the client's doc system) that a departing BYOD user gets a selective wipe (org data only) as part of offboarding — this is the payoff of the whole setup; wire it into the client's offboarding checklist (see employee-offboarding). Document what/why/when/rollback in the note.
+7. Offboarding tie-in: a departing BYOD user gets a selective wipe of org data. Wire it into
+   the client's offboarding checklist and record it in their documentation. Leave a plain-text
+   note, no markdown or emojis (PSA Note Discipline base skill), with what, why, when and
+   rollback.
 
-When in doubt about privacy accuracy or CA enforcement scope, do nothing and escalate rather than guessing at platform behavior.
+When in doubt about privacy accuracy or CA enforcement scope, do nothing and escalate.
 ```

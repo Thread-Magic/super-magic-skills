@@ -19,23 +19,46 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are preparing an Autopilot diagnosis and plan for a technician to execute. You diagnose by phase and make the reset/re-enroll decision; the technician executes all Intune console actions. Never mark registration or reset as done on intention, and never invent device or profile status.
+Prepare an Autopilot diagnosis and plan. You diagnose by phase and make the reset-or-re-enroll
+call; the tech runs every Intune console action. Never invent device or profile status.
 
-1. Context. Check the client's documentation and the knowledge base (skip gracefully if absent) for the client's Autopilot standard: profile settings (user-driven vs self-deploying, join type), device group logic, ESP configuration, and who supplies hashes (OEM/distributor registration vs manual capture). Read prior tickets for deployment history on the device.
+1. Context. Check the client's documentation for their Autopilot standard: profile settings
+   (user-driven or self-deploying, join type), device group logic, ESP config, hash source.
+   Note it if IT Glue or Hudu isn't connected (Connector Degradation base skill). Read prior
+   tickets.
 
-2. Registration phase. For new devices: prefer OEM/partner registration at purchase. For manual capture, the tech collects the hardware hash (Get-WindowsAutopilotInfo or the HWID CSV path documented for the client — verify against current module versions) and imports it in Intune → Devices → Enrollment → Windows Autopilot. After import, confirm the device appears and — critically — reaches profile status "Assigned" before shipping/handoff. Import and assignment are not instant; do not declare a device ready while status is "Pending."
+2. Registration. Prefer OEM or partner registration. For manual capture the tech collects the
+   hash (Get-WindowsAutopilotInfo or the client's documented HWID CSV path — verify current
+   module versions) and imports it under Devices, Enrollment, Windows Autopilot. Confirm
+   profile status reaches Assigned before shipping; never call a device ready at Pending.
 
-3. Targeting phase. If a device skips the Autopilot experience: verify the hash is registered (serial lookup), the device landed in the Autopilot device group (dynamic membership on the ZTDId tag takes time to evaluate), and exactly one deployment profile wins for that group. Overlapping profiles with different join types produce "worked for one batch, not the next."
+3. Targeting. If a device skips the Autopilot experience: is the hash registered (serial
+   lookup), did the device land in the Autopilot group (ZTDId-tag dynamic membership takes time
+   to evaluate), and does exactly one deployment profile win for that group? Overlapping
+   profiles with different join types are the usual cause.
 
-4. ESP phase. Set expectations honestly: the ESP runs device setup then account setup, and it blocks on the apps and policies it is told to block on. If ESP hangs: identify which phase and which app from the device (ESP details) or Intune troubleshooting pane. Usual causes: a required app that fails or is very large, a Win32 app + line-of-business app mix issue, or ESP timeout set shorter than the real install time. Fix the blocking app or trim the ESP's blocking-app list via the client's change process — do not tell the user to "just click continue anyway." Do not lower ESP blocking requirements tenant-wide to fix one device — that changes the provisioning guarantee for every future deployment and needs client sign-off.
+4. ESP. The Enrollment Status Page runs device setup then account setup, blocking on the apps
+   and policies it is told to. If it hangs, identify the phase and app from ESP details or the
+   Intune troubleshooting pane. Usual causes: a required app failing or very large, a Win32 and
+   line-of-business app mix, or an ESP timeout shorter than the real install. Fix the blocking
+   app or trim the blocking-app list via the client's change process. Never lower ESP blocking
+   tenant-wide for one device; that needs client sign-off.
 
-5. Reset vs re-enroll decision. When a deployment is broken:
-   - Config/app issue, device otherwise healthy → fix targeting, then sync or re-run; no reset.
-   - Provisioning half-completed, no user data on device → Wipe with "re-provision" intent (Autopilot Reset for a device staying with the same tenant/user) — fastest clean redo.
-   - Device previously used, user data present → data-loss warning applies: route through the device-wipe-workflows skill and its approval gate. Any reset or wipe of a device that may hold user data goes through an approval request with the data-loss consequence stated plainly — an Autopilot redo is not exempt from the destructive-action gate.
-   - Hash never registered or registered to the wrong tenant → re-enrollment alone will not fix it; correct the registration first (deregister/import). Never deregister an Autopilot hash as cleanup without confirming the device is not about to be redeployed — deregistration plus device deletion is how machines fall out of management permanently.
+5. Reset or re-enroll:
+   - Config or app issue, device healthy: fix targeting, then sync or re-run.
+   - Provisioning half-completed, no user data: wipe with reprovision intent (Autopilot Reset
+     if it stays with the same tenant and user).
+   - Device previously used, user data present: route through the device-wipe workflow and its
+     approval gate, data-loss consequence stated plainly. An Autopilot redo is not exempt.
+   - Hash never registered, or registered to the wrong tenant: correct the registration first,
+     re-enrollment alone won't fix it. Never deregister a hash as cleanup without confirming
+     the device isn't about to be redeployed — deregistration plus device deletion drops a
+     machine out of management permanently.
 
-6. Verify and note. Success = device completes ESP, user signs in, required apps present, device compliant. Document what/why/when/rollback: leave a plain-text note with phase diagnosed, evidence, actions, hash/serial handled, and verification. Hardware hashes and CSV exports are sensitive device identity material — keep them out of ticket notes and email; reference by serial number only, never post the full hash blob.
+6. Verify and note. Success: ESP completes, the user signs in, required apps present, device
+   compliant. Leave a plain-text note, no markdown or emojis (PSA Note Discipline base skill):
+   phase diagnosed, evidence, actions, serial, verification. Hashes and CSV exports are
+   sensitive — reference by serial, never paste the hash blob.
 
-When in doubt about whether a device holds user data or is about to be redeployed, do nothing destructive and escalate.
+When in doubt whether a device holds user data, do nothing destructive and escalate.
 ```

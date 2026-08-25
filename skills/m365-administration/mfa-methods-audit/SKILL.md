@@ -19,25 +19,48 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-"Everyone has MFA" hides a quality spectrum: SMS-only at the bottom, phishing-resistant passkeys at the top. You grade the tenant's registered methods per user, find the weakest tiers, and plan upgrades without ever stranding a user methodless. The tech pulls exports and executes policy changes; you prepare, grade, and verify. Never invent data.
+"Everyone has MFA" hides a quality spectrum. Grade the tenant's registered methods per user and
+plan upgrades without stranding anyone methodless. The tech pulls exports and executes policy
+changes; you prepare, grade and verify.
 
-1. Pull the registration data. Tech exports the authentication-methods registration report from Entra: per user, which methods are registered (SMS, voice, Authenticator push, TOTP, FIDO2/passkey, Windows Hello, certificate) and default method. Date the export; label all counts as point-in-time.
+1. Pull the registration data. The tech exports Entra's authentication-methods registration
+   report: per user, the methods registered (SMS, voice, Authenticator push, TOTP, FIDO2 or
+   passkey, Windows Hello, certificate) and the default. Date the export and label counts
+   point-in-time (Sweep Honesty base skill — say "at least N" where a list may be capped).
 
-2. Grade into tiers, worst-first:
-   - Tier 0 — phone-only (SMS/voice as the only method): weakest — SIM-swap and phone-forward attacks apply, and one lost phone means a helpdesk reset. Always the first finding.
-   - Tier 1 — Authenticator push without number matching: vulnerable to MFA-fatigue prompt bombing. Verify tenant enforcement of number matching (Microsoft now enforces it by default — confirm rather than assume, checking current behavior).
-   - Tier 2 — Authenticator with number matching / TOTP: solid baseline for general users.
-   - Tier 3 — phishing-resistant (FIDO2 security keys, passkeys, Windows Hello for Business, certificates): required posture for privileged accounts; see windows-hello-business for the WHfB path.
+2. Grade into tiers, worst first:
+   - Tier 0, phone-only (SMS or voice the only method): SIM-swap and phone-forward attacks
+     apply; always the first finding.
+   - Tier 1, Authenticator push without number matching: open to MFA-fatigue prompt bombing.
+     Microsoft now enforces number matching by default — confirm the tenant, don't assume.
+   - Tier 2, Authenticator with number matching, or TOTP: baseline for general users.
+   - Tier 3, phishing-resistant (FIDO2 keys, passkeys, Windows Hello for Business,
+     certificates): required for privileged accounts.
 
-3. Overlay privilege. Cross-reference admin-role holders (from global-admin-audit if current): any privileged account below Tier 3 is a high finding; a privileged account at Tier 0 is critical. Also flag users with a single registered method of any tier — one lost device from a lockout.
+3. Overlay privilege. Any privileged account below Tier 3 is a high finding, one at Tier 0
+   critical. Flag single-method users of any tier — one lost device from a lockout.
 
-4. Check the policy side. Registered methods only matter if policy allows them: review the tenant's Authentication Methods policy — are SMS/voice still enabled tenant-wide, is Authenticator configured with number matching and app context, are passkeys/FIDO2 enabled for the groups that need them? Policy allowing weak methods is a finding independent of who registered what.
+4. Check the policy side. In the Authentication Methods policy: are SMS and voice still enabled
+   tenant-wide, is Authenticator set for number matching and app context, are FIDO2 and
+   passkeys enabled for the groups that need them? Policy allowing weak methods is its own
+   finding.
 
-5. Plan the upgrade as register-then-remove. For each downgrade target (e.g., retire SMS): users register the stronger method FIRST, verify it works with a real sign-in, then the weak method is disabled by policy for their group. Never disable a method class while anyone still depends on it as their only method — cross-check step 1 data. Roll by group, with user comms and a registration campaign, mirroring the sspr-rollout discipline; combined registration means this audit and SSPR share the campaign.
+5. Plan every upgrade as register-then-remove. Users register the stronger method FIRST, verify
+   it with a real sign-in, and only then is the weak one disabled by policy for their group.
+   Never disable a method class while anyone depends on it as their only method. Roll by group
+   with comms and a registration campaign, shared with SSPR.
 
-6. Approval gate. Disabling a method class or enforcing stronger methods changes every affected user's sign-in experience: send an approval request to the client's authority with the affected count, the schedule, the comms plan, and rollback (re-enable the method in policy).
+6. Approval gate. Disabling a method class changes every affected user's sign-in: send an
+   approval request to the client authority with the affected count, schedule, comms plan, and
+   rollback (re-enable the method in policy).
 
-7. Output. Document what/why/when/rollback in a dated plain-text summary note: tier counts, privileged-account findings, single-method users, policy findings, and the upgrade plan as follow-up tickets raised per phase. Full per-user lists go to the client's documentation, not PSA-synced notes (check the client's documentation for existing client identity docs — skip gracefully if not connected). Schedule the re-audit.
+7. Leave a dated plain-text summary note, no markdown or emojis (PSA Note Discipline base
+   skill): tier counts, privileged findings, single-method users, policy findings, and the
+   upgrade plan as one ticket per phase. Full per-user lists go to the client's documentation,
+   not a PSA-synced note; note it if IT Glue or Hudu isn't connected (Connector Degradation
+   base skill). Schedule the re-audit.
 
-Guardrails: Never remove or disable a user's only working method — the register-first, verify, then-remove order is non-negotiable; violating it manufactures lockouts at scale. Privileged accounts below phishing-resistant are findings even if the client "has MFA everywhere" — say it plainly, ranked by privilege. All counts are point-in-time exports; date them and re-pull before executing a phase planned weeks earlier. Method changes are user-visible: no policy disablement without approval and user comms. PowerShell/portal steps: verify against current module versions and Microsoft's current docs. When in doubt, do nothing and escalate.
+Never remove or disable a user's only working method: register first, verify, then remove.
+Re-pull counts before executing a phase planned weeks earlier, and verify portal and PowerShell
+steps against Microsoft's current docs. When in doubt, do nothing and escalate.
 ```

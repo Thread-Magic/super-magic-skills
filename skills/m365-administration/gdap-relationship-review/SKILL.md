@@ -19,19 +19,46 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-You are auditing the MSP's GDAP relationships across client tenants for least privilege, correct group mapping, and expiry tracking. The technician exports from Partner Center and executes changes; the agent compiles the dated artifact and prepares remediation. Never report a change as done on intention — never invent data. All access data is point-in-time: date the export, and re-pull before executing changes planned more than two weeks earlier.
+Audit the MSP's GDAP relationships across client tenants. The tech exports from Partner Center
+and executes changes; you compile and prepare remediation. Access data is point-in-time: date
+every export and re-pull before executing a plan older than two weeks (Sweep Honesty base skill
+— say "at least N" when a list may be capped).
 
-1. Inventory every relationship. The tech exports the GDAP relationship list from Partner Center: client tenant, roles granted, duration and expiry date, auto-extend status, and the MSP security groups mapped to each role. The agent compiles the dated master table — this is the review artifact, and it lives in the MSP's own documentation (check the knowledge base and the client's documentation for where the standard says it goes; skip gracefully if not connected). Cross-check against the client list: active clients with no relationship (access debt about to surprise someone) and relationships to tenants that are no longer clients (remove — offboarded clients retaining MSP access is a serious finding in both directions).
+1. Inventory. The tech exports the GDAP list from Partner Center: client tenant, roles granted,
+   duration and expiry, auto-extend status, and the security groups mapped to each role.
+   Compile the dated master table into the MSP's documentation; note it if IT Glue or Hudu
+   isn't connected (Connector Degradation base skill). Cross-check the client list both ways:
+   active clients with no relationship, and relationships to tenants that are no longer
+   clients.
 
-2. Grade roles against least privilege. For each relationship, compare granted roles to what the MSP actually does for that client. Flag: Global Administrator in a GDAP relationship (should be rare-to-absent; day-to-day work maps to scoped roles — verify current Microsoft least-privilege guidance, as recommended role sets evolve); roles granted but unused since the last review; and "every role in the list" relationships created by early-days defaults. Draft the trimmed role set per client. Global Administrator in a GDAP relationship requires a written, client-approved justification or it is a finding — no grandfathering.
+2. Grade roles against least privilege — granted roles versus what the MSP actually does there.
+   Flag roles unused since the last review and "every role in the list" relationships left by
+   early-days defaults; verify current Microsoft least-privilege guidance. Draft the trimmed
+   role set per client. Global Administrator in a relationship needs a written, client-approved
+   justification or it is a finding — no grandfathering.
 
-3. Audit the people side — group mapping. Roles are only as scoped as the security groups holding them: verify each role-to-group mapping, and that group membership is current MSP staff with a need (tie-in: staff offboarding must remove these memberships — if the MSP's own offboarding checklist lacks that step, file the process fix). Everyone-in-one-group granting all roles to all techs defeats GDAP's point; propose tiered groups (helpdesk vs escalation vs project) where absent.
+3. Audit the people side: roles are only as scoped as the groups holding them. Verify each
+   role-to-group mapping and that membership is current MSP staff with a need. If the MSP's
+   staff-offboarding checklist doesn't remove these memberships, file the process fix. Propose
+   tiered groups (helpdesk, escalation, project) where one group grants all roles to all techs.
 
-4. Handle expiries deliberately. GDAP relationships are time-boxed by design (max two years). For each: decide renew vs auto-extend vs lapse (lapse is correct for departed clients). Schedule renewals comfortably before expiry — renewing requires client approval flow, so "week of expiry" is too late; an expired relationship during a client incident is the nightmare this review exists to prevent. Flag anything expiring within 90 days as this review's action list. Never let a needed relationship lapse for process reasons; an unplanned expiry discovered during this review is handled before the review continues.
+4. Handle expiries. Relationships are time-boxed, two years maximum. For each: renew,
+   auto-extend, or lapse (correct for departed clients). Renewal runs through the client's
+   approval flow, so schedule it well before expiry. Anything expiring within 90 days is this
+   review's action list; an unplanned expiry found here is handled first.
 
-5. Change with client consent. Trimming roles or re-scoping a relationship is a change to the client's tenant access: send an approval request to the client authority for role reductions and removals (clients approve GDAP changes on their side regardless — align the paperwork), and to MSP leadership for internal group restructures. Sequence trims so active support work isn't cut mid-ticket: verify the trimmed role set against the last 90 days of work types for that client before removing. Rollback = re-request the roles, which needs client approval again; say so in the plan.
+5. Change with client consent. Trimming roles changes the client's tenant access: send an
+   approval request to the client authority for reductions and removals, and to MSP leadership
+   for group restructures. Check the trimmed set against the last 90 days of work types so
+   support isn't cut mid-ticket. Rollback means re-requesting the roles, which needs client
+   approval again.
 
-6. Document and recur. Leave a plain-text summary note documenting what/why/when/rollback: relationship count, findings by class (over-broad roles, unused relationships, expiring soon, group-mapping issues, offboarded-client access), remediation tickets raised (one per client needing change), and the next review scheduled. The full per-client table goes in the MSP's documentation system, not a PSA-synced note.
+6. Leave a plain-text summary note, no markdown or emojis (PSA Note Discipline base skill):
+   relationship count, findings by class, one remediation ticket per client needing change, and
+   the next review date. The per-client table goes in the MSP's documentation, not a PSA-synced
+   note.
 
-Relationships to offboarded clients are removed with the client notified — retained access to a former client's tenant is indefensible in any audit; the finding is escalated, not batched. This review covers the MSP's cross-tenant access; per-tenant admin hygiene inside a client tenant is global-admin-audit's job — run both, confuse neither. When in doubt, do nothing and escalate.
+Access retained to a former client's tenant is removed and the client notified — escalate that
+finding, don't batch it. This review covers cross-tenant access only; per-tenant admin hygiene
+is a separate job. When in doubt, do nothing and escalate.
 ```

@@ -19,31 +19,45 @@ outcome: [Fewer Escalations & Less Noise, Time & Cost Savings (Capacity)]
 ## Prompt
 
 ```
-You are building the pre-migration checklist before anyone touches a migration batch. The agent prepares the checklist and inventory; a technician executes exports and the move. Never claim something was checked without the evidence — the inventory is attached to the ticket, not asserted. Never invent data.
+Build the pre-migration checklist before anyone touches a batch. You prepare it; a technician
+runs the exports and the move. Never invent data or claim an unevidenced check.
 
-1. Inventory the source — this is the rebuild manifest. Have the tech export and attach (verify against current module versions); pull documented client context from the client's documentation (connector-gated — skip gracefully if neither is connected), the knowledge base, and prior tickets:
-   - Mailboxes with sizes and item counts (`Get-Mailbox` + `Get-MailboxStatistics`) — sizes drive batch planning and flag anything near target-side quotas.
-   - Mailbox types: shared, room/equipment (with their CalendarProcessing policies — see resource-mailbox-setup), and which shared mailboxes are over 50 GB (they'll need licenses on the target).
-   - All permission grants: Full Access, Send As, Send on Behalf, calendar grants (mailbox-permissions-audit is the collection playbook).
-   - All forwarding, all three layers (mail-forwarding-audit).
-   - Aliases/proxy addresses per mailbox, DLs and M365 Groups with membership and owners, transport rules, connectors, and DKIM/SPF/DMARC state.
-   - Litigation/eDiscovery holds and retention policies — mailboxes under hold do NOT move without legal sign-off; migration can disturb preservation and that is a lawyer conversation, not a tech one (litigation-hold).
+1. Inventory the source — the rebuild manifest. The tech exports and attaches it; add context
+   from the knowledge base, prior tickets and the client's documentation — note it plainly if
+   IT Glue or Hudu isn't connected (Connector Degradation base skill). Capture: sizes and item
+   counts (Get-Mailbox + Get-MailboxStatistics) for batching and quota risk; types, including
+   room/equipment CalendarProcessing settings and shared mailboxes over 50 GB, which need
+   licenses on the target; every Full Access, Send As, Send on Behalf and calendar grant;
+   forwarding at all three layers; aliases and proxy addresses; distribution lists and M365
+   Groups with members and owners; transport rules, connectors, SPF/DKIM/DMARC state;
+   litigation and eDiscovery holds plus retention policies. A held mailbox does NOT enter a
+   batch without documented legal sign-off — preservation is a lawyer's call, not a tech's.
 
-2. Write the "what breaks" list into the ticket — tenant-to-tenant breaks more than clients expect; state each with its mitigation:
-   - Cross-mailbox permissions and calendar delegations: usually NOT migrated by tools — plan to re-grant from the step-1 inventory.
-   - Outlook autocomplete / X500: replies to old cached entries bounce unless legacyExchangeDN values are stamped as X500 proxy addresses on target — put this in the plan explicitly; it is the number-one post-migration ticket generator.
-   - Outlook profiles and mobile accounts: typically need recreation on cutover — that is desk workload; schedule for it.
-   - Inbox rules referencing old addresses, mailbox-level forwards, and shared-mailbox mappings: re-verify post-move.
-   - In-place archives (and especially auto-expanded archives — they migrate badly or not in one piece; see archive-mailbox-enablement) get their own line in the plan.
-   - Teams/SharePoint/OneDrive content is NOT covered by a mailbox migration — scope it separately and say so, or the client will assume.
+2. Write the "what breaks" list into the ticket, each with its mitigation:
+   - Cross-mailbox permissions and calendar delegations are usually NOT carried — re-grant them
+     from step 1.
+   - Outlook autocomplete: replies to cached entries bounce unless legacyExchangeDN values are
+     stamped as X500 proxy addresses on the target.
+   - Outlook profiles and mobile accounts need recreating at cutover.
+   - Inbox rules citing old addresses, mailbox forwards and shared-mailbox mappings: re-verify.
+   - In-place archives, auto-expanded especially, migrate badly or in pieces.
+   - Teams, SharePoint and OneDrive are NOT part of a mailbox migration. Say so.
 
-3. DNS and identity cutover plan: MX, autodiscover, SPF/DKIM/DMARC records for the moving domain (dkim-enablement on the target BEFORE cutover so outbound authentication never lapses); domain removal from the source tenant sequencing (a domain can only live in one tenant at a time — cutover order matters and drives the downtime window).
+3. Cutover: MX, autodiscover, SPF/DKIM/DMARC for the moving domain — enable DKIM on the target
+   BEFORE cutover so outbound authentication never lapses. A domain lives in one tenant at a
+   time, so source-removal sequencing sets the downtime window.
 
-4. Comms plan — approval-gated because it is maximally user-visible: who is told what and when (dates, expected downtime, what users must do: re-add accounts, re-check signatures, expect autocomplete quirks), a freeze window for mailbox changes before cutover, and day-one hypercare staffing. Send an approval request for client sign-off on the schedule.
+4. Comms and batches. Comms are approval-gated: dates, downtime, what users must redo
+   (accounts, signatures, autocomplete), a change freeze before cutover, day-one hypercare.
+   Pilot one of every mailbox type with validation criteria, then waves sized to bandwidth and
+   desk capacity. Set go/no-go and the rollback point: cheap before MX cutover, a second
+   migration after it. Send an approval request for client sign-off.
 
-5. Batch strategy: pilot group first (include one of every mailbox type), validation criteria for the pilot, then waves sized to bandwidth and desk capacity. Define the go/no-go and the rollback point (before MX cutover, rollback is cheap; after, it is a second migration — write that down).
+5. Leave the checklist as a plain-text note, no markdown or emojis (PSA Note Discipline base
+   skill): steps 1-4 plus holds, target license gaps, and what blocks a migration date. Log the
+   time.
 
-6. Output: the prep checklist as a plain-text ticket note — inventory attached/referenced, what-breaks list with mitigations, DNS sequence, comms schedule, batch plan, holds flagged, license gaps on target — and the explicit list of open questions blocking a migration date. Log time.
-
-Guardrails: Held mailboxes do not enter a batch without documented legal sign-off. Never promise permissions, delegations, or autocomplete will "just work" post-migration — plan their re-creation from the inventory. Scope honesty: mailbox migration ≠ tenant migration; name what is out of scope (SharePoint, OneDrive, Teams) in the note. Migration tooling capabilities change — verify current tool behavior (what it does and does not carry) against vendor docs / Microsoft's current docs for the chosen tool rather than asserting from memory. When in doubt about a held mailbox or a cutover risk, do nothing and escalate.
+Never promise permissions, delegations or autocomplete will just work after the move; verify
+what your migration tool carries and drops against current vendor docs. When in doubt about a
+held mailbox or a cutover risk, do nothing and escalate.
 ```
