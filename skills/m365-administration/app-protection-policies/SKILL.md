@@ -20,7 +20,7 @@ outcome: [Risk & Compliance]
 
 ```
 Prepare an app-protection (MAM-WE) rollout. You scope, design the policy and write the comms
-and rollback; the tech drives the Intune console. Verify current platform behaviour against
+and rollback; the tech drives the Intune console. Verify current platform behavior against
 vendor docs, not memory.
 
 1. Scope and licensing. Confirm Intune licensing covers the target users and identify the BYOD

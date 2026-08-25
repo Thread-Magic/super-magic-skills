@@ -34,7 +34,7 @@ Never report a restriction as live on intention.
    Intune considers personal, and corporate status comes from Autopilot registration, Apple
    Business Manager or other automated enrollment, pre-registered corporate device identifiers
    (serial, IMEI), or enrollment by a device enrollment manager. With no identification
-   pipeline the restriction is theatre. Never promise "personal devices are blocked" without
+   pipeline the restriction is theater. Never promise "personal devices are blocked" without
    naming the working identification method in the note.
 
 3. Design the restriction set:
@@ -46,7 +46,7 @@ Never report a restriction as live on intention.
      doesn't mean unprotected mail on personal phones.
    - Device limits: the per-user enrollment cap; the separate Entra device cap also applies and
      the lower wins.
-   Verify current platform behaviour against Microsoft's docs.
+   Verify current platform behavior against Microsoft's docs.
 
 4. Predict the bounce: from recent enrollments by platform and ownership, who enrolls today in
    a way the new rule would reject? Fix the scope before it goes live, not after a new hire's

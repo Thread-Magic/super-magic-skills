@@ -37,7 +37,7 @@ search returned.
    -EndDate <t2> -RecordType ExchangeItem with -ObjectIds or -FreeText, or Purview Audit scoped
    to the mailbox. Filter to the operations that answer it:
    - Sending: SendAs and SendOnBehalf are delegate sends; Send is the owner.
-   - Deleting: SoftDelete, HardDelete and MoveToDeletedItems are three different behaviours —
+   - Deleting: SoftDelete, HardDelete and MoveToDeletedItems are three different behaviors —
      report which occurred.
    - Reading/moving: MailItemsAccessed (license-dependent), Move, Update, FolderBind.
 
