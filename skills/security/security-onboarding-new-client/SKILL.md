@@ -19,56 +19,42 @@ outcome: [Risk & Compliance]
 ## Prompt
 
 ```
-Every new client arrives with an inherited security posture nobody has honestly assessed.
-Run the structured intake across the four load-bearing controls — MFA, admin access,
-backups, endpoint protection — and output a day-one risk list: what could hurt this client
-this week, ranked, with owners. Work it in order:
+Run the day-one security intake across four load-bearing controls — MFA, admin access,
+backups, endpoint protection — and produce a ranked risk list of what could hurt this client
+this week, with owners. Record an as-of date and source for every fact; inherited
+documentation is routinely stale, so verify against a live read.
 
-1. Establish sources: what the previous provider or client handed over (documentation
-   exports, admin credentials via secure handoff), what tooling is connectable now (RMM
-   agents, Liongard where deployed), and what must be answered by the client's staff. Record
-   the as-of date and source for every fact — inherited documentation is routinely stale, so
-   verify rather than transcribe (read the live environment and identity posture in Liongard
-   where available).
-2. MFA coverage: percentage of user accounts with MFA enrolled and enforced (not just
-   "capable"), the enforcement mechanism, and the exception list — service accounts,
-   legacy-auth dependencies, "the owner doesn't like prompts" exemptions. Every exception is
-   a risk-list candidate. Feed detailed follow-up to identity-mfa-health-check.
-3. Admin inventory: every privileged account across identity platform, devices, firewall,
-   backup console, and line-of-business admin panels. Flag: admin accounts used for daily
-   work, shared admin credentials, ex-employee or previous-provider access still live, vendor
-   accounts with standing access. Previous-provider access gets a dated transition plan. Feed
-   to global-admin-audit for the deep pass.
-4. Backup posture: what is backed up (and — the real question — what ISN'T: cloud mailboxes
-   and file shares are commonly assumed-covered and aren't), where copies live (any
-   offsite/immutable copy?), and the last successful restore TEST, not the last successful
-   backup job. "Never tested" goes on the risk list at high rank.
-5. EDR/endpoint protection presence: what product, on what percentage of the fleet (reconcile
-   agent count against the RMM inventory — result-cap honesty on counts), who watches its
-   alerts today, and unprotected classes (servers, Macs, that machine in the warehouse).
-6. Quick environmental sweep for the classics: end-of-life OS in production, exposed
-   remote-access (RDP/VPN with no MFA), credential spreadsheets (flag location, never
-   contents), and email-security basics (route the SPF/DMARC read to dmarc-spf-failure-triage
-   territory).
-7. Produce the day-one risk list — the deliverable: each entry as risk / evidence / exposure
-   in plain terms / recommended action / suggested owner, ranked by exploitability-now rather
-   than audit-category. Cap it at the ten that matter. Open remediation tickets for the top
-   items the client approves, and hand the list to the account manager for the roadmap
-   conversation (cyber-risk-posture-review for the ongoing cadence).
+1. Establish sources: what the previous provider handed over, what tooling is connectable
+   now (RMM agents, Liongard), and what only their staff can answer.
+2. MFA coverage: the share of accounts enrolled AND enforced, not merely "capable"; the
+   enforcement mechanism, and the exception list — service accounts, legacy-auth
+   dependencies, "the owner doesn't like prompts". Every exception is a risk-list candidate;
+   detailed pass to identity-mfa-health-check.
+3. Admin inventory: every privileged account across identity, devices, firewall, backup
+   console and line-of-business admin panels. Flag admin accounts used for daily work, shared
+   credentials, live ex-employee or vendor standing access, and previous-provider access,
+   which gets a dated transition plan. Deep pass: global-admin-audit.
+4. Backup posture: what is backed up and, more to the point, what isn't — cloud mailboxes
+   and file shares are routinely assumed-covered and aren't. Where copies live, whether any is
+   offsite or immutable, and the last successful restore TEST, not the last successful job.
+   "Never tested" ranks high on the list.
+5. Endpoint protection: which product, on what share of the fleet — reconcile agent count
+   against the RMM inventory and say "at least N" where a search may have capped (Sweep
+   Honesty base skill). Who watches its alerts, and which classes are unprotected: servers,
+   Macs, the warehouse machine.
+6. Sweep the classics: end-of-life OS in production, RDP/VPN without MFA, credential
+   spreadsheets (flag the location, never the contents), and email-security basics — route
+   SPF/DMARC to dmarc-spf-failure-triage.
+7. Produce the risk list, capped at the ten that matter. Each entry: risk / evidence /
+   exposure in plain terms / recommended action / owner, ranked by what is exploitable now,
+   not by audit category. Open tickets for the top items the client approves and hand the
+   list to the account manager (cyber-risk-posture-review sets the cadence).
 
-Guardrails — always:
-- Verify, don't transcribe: inherited docs and previous-provider claims get checked against
-  live reads or client confirmation; every finding carries its source and as-of date.
-- Never present partial visibility as a clean bill — "no EDR gaps found among the 60% of
-  devices reporting" is the honest sentence.
-- Findings are stated neutrally (this is an intake, not an indictment of the previous
-  provider) and factually per the defensive-writing-standard; the client may share this
-  document.
-- Credentials received in handoff go straight into the desk's credential store — never into
-  tickets or intake notes; credential spreadsheets found are flagged by location only.
-- The risk list recommends; the client decides — remediation beyond the agreed onboarding
-  scope is quoted work, flagged to the account manager, never silently absorbed or skipped.
-- Degradation: without RMM/Liongard connectivity, the intake runs on exports and client
-  interviews — mark every unverified item as unverified, and re-run the checks once tooling
-  lands.
+Never present partial visibility as a clean bill. State findings neutrally per the
+defensive-writing-standard skill: this is an intake, not an indictment of the previous
+provider, and the client may read it. Handoff credentials go straight to the desk's
+credential store, never into a ticket or note. Remediation beyond the agreed onboarding scope is
+quoted work for the account manager, never silently absorbed; the list recommends, the client
+decides. Without RMM or Liongard, run on exports and interviews: mark unverified items
+unverified and re-run once tooling lands.
 ```

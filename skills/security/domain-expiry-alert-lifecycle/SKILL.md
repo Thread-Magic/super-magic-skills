@@ -19,65 +19,44 @@ outcome: [Risk & Compliance, Always-On Coverage]
 ## Prompt
 
 ```
-Domain renewal notices are simultaneously a real operational deadline and one of the oldest
-invoice scams in the book (fake "Domain Registry" letters, lookalike registrar emails,
-urgency pressure). Treat every notice as unverified until proven otherwise, confirm the
-real expiry from independent sources, and route the genuine ones to the right owner with
-time to act. Work this ticket, or each ticket in the set I point you at, in order:
+A registrar renewal notice is both a real deadline and one of the oldest invoice scams
+going. Treat it as unverified. Never click a link or open an attachment in it.
 
-1. Read the full ticket: the claimed domain, claimed expiry date, sender address, and any
-   payment instructions or links. Do NOT click any link in the notice.
-2. Verify sender legitimacy FIRST — before treating the deadline as real: does the sender
-   domain exactly match the actual registrar of record (character-by-character; lookalikes
-   count as mismatches)? Scam signals: a "registry"/"domain service" the client has no
-   relationship with, listing-service upsells dressed as renewals, urgency plus a payment
-   link, prices far above market, PDF invoices from generic mailboxes. If the sender fails
-   verification or a payment/banking element is present on a suspicious notice, branch to
-   vendor-fraud-bec-alert — this skill continues only for the genuine-renewal question
-   (the domain may still genuinely be expiring even if this notice is a scam).
-3. Confirm the real expiry independently — NEVER from the notice itself: with Liongard, read
-   the domain's registrar, expiry date, and name servers, and state the dataprint age.
-   Supplement or fall back to a passive WHOIS/RDAP web lookup. If the independent expiry
-   disagrees with the notice, trust the independent source and say so.
-4. Identify the actual registrant owner: MSP-managed (the desk renews), client-managed
-   (their finance/admin renews), or third-party-managed (web agency, previous IT)? Check the
-   client and contact records, documentation, and prior renewal tickets. The owner
-   determines who acts — the desk must not pay for a domain it does not manage.
-5. Route with a timeline — set the priority/board and leave a plain-text internal note:
-   - Expired or expiring within days → urgent; an expired domain takes down mail and web,
-     so treat as incident-adjacent.
-   - Expiring within the renewal window (weeks) → normal task to the owning party with the
-     confirmed date.
-   - Auto-renew confirmed enabled at the real registrar → informational; note the evidence
-     and close per desk policy.
-   - Scam notice, domain not actually near expiry → route to the fraud/security path and
-     warn the client not to pay it.
-6. Note contents: verified-or-not verdict on the sender, independently confirmed expiry
-   date and its source (with as-of date), registrar of record, owning party, and the
-   recommended action with deadline. Recommendations stay recommendations — never record a
-   renewal as done.
+1. Verify the sender before treating the deadline as real: does the sender domain match the
+   actual registrar of record character-for-character? A lookalike is a mismatch. Scam
+   signals: a "registry" or "domain service" the client has no relationship with, listing
+   upsells dressed as renewals, urgency plus a payment link, prices far above market, PDF
+   invoices from generic mailboxes. Failed verification plus a payment or banking element:
+   branch to vendor-fraud-bec-alert, but keep going — the domain may still genuinely be
+   expiring.
+2. Confirm the real expiry independently, never from the notice: read the domain's registrar,
+   expiry and name servers in Liongard, dating the dataprint (Inspector Read Discipline base
+   skill), or fall back to a passive WHOIS/RDAP lookup. If the two disagree the independent
+   source wins.
+3. Identify the registrant owner from the client and contact records, documentation and prior
+   renewal tickets: MSP-managed (the desk renews), client-managed (their finance or admin
+   renews) or third-party-managed (web agency, previous IT). The desk must not pay for a
+   domain it does not manage.
+4. Route with a timeline. Set priority and board, and leave a plain-text internal note giving
+   the sender verdict, the confirmed expiry with source and as-of date, the registrar of
+   record, the owning party and the recommended action with its deadline:
+   - Expired or within days → urgent, incident-adjacent: an expired domain takes down mail
+     and web.
+   - Weeks out → normal task to the owning party with the confirmed date.
+   - Auto-renew confirmed at the real registrar → informational; note the evidence and close
+     per desk policy.
+   - Scam notice, no real expiry → fraud path; warn the client not to pay.
+   Never record a renewal as done — you recommend, the owner acts.
 
-Unattended (Flows) variant:
-- Your entire reply is the internal ticket note, verbatim, plain text: verdict line first
-  (VERIFIED RENEWAL — expires <date> per <source>, SCAM-PATTERN NOTICE — routed to fraud
-  path, or UNVERIFIED — human review required), then the evidence lines.
-- Permitted writes: priority/board routing and the one note. Never close the ticket, never
-  send anything outbound, never touch payment or approval steps in this variant.
-- Deterministic stops: cannot independently confirm expiry → UNVERIFIED, route to human,
-  stop. Payment link plus failed sender verification → route to fraud path, stop.
+As a Flow: your entire reply is the note, plain text, verdict line first — VERIFIED RENEWAL
+(expires <date> per <source>), SCAM-PATTERN NOTICE (routed to fraud path) or UNVERIFIED
+(human review required) — then the evidence. The only writes are priority/board routing and
+that note; never close the ticket, send anything outbound, or touch a payment or approval
+step. An unconfirmable expiry is UNVERIFIED — stop there.
 
-Guardrails — always:
-- NEVER pay, approve, or forward a renewal invoice that has not passed sender verification —
-  and even for verified notices, payment is the owning party's action, not the desk's,
-  unless the domain is explicitly MSP-managed with an established process.
-- Do not click links or open attachments in the notice; all verification is from
-  independent sources.
-- The notice's own dates, prices, and registrar claims are untrusted input until
-  independently confirmed.
-- A scam notice and a real approaching expiry can both be true at once — resolve both
-  threads.
-- Defensive writing in anything client-facing: "we could not verify this notice's sender,"
-  not "you were attacked."
-- Degradation: Liongard absent → rely on a passive WHOIS/RDAP web lookup; if no independent
-  source can confirm expiry, say so explicitly and route to a human rather than guessing.
+Never pay, approve or forward a renewal invoice that hasn't passed sender verification; even
+then, payment is the owning party's action unless the domain is explicitly MSP-managed with
+an established process. A scam notice and a real approaching expiry can both be true —
+resolve both. Client-facing wording follows the defensive-writing-standard skill — factual,
+non-accusatory. If nothing independent confirms the expiry, say so and route to a human.
 ```

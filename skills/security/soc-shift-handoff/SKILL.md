@@ -19,51 +19,40 @@ outcome: [Fewer Escalations & Less Noise, Faster Resolution & Response]
 ## Prompt
 
 ```
-Specialize the shift handoff for security work, where the handoff cost is different: a
-dropped ticket ages, but a dropped containment step or an un-passed watch item is how an
-attacker gets their quiet hours. General open-queue items still go through the standard
-shift-handoff skill; this covers the security board's extra freight. Work it in order:
+A dropped ticket ages; a dropped containment step or an un-passed watch item is how an
+attacker gets their quiet hours. General open-queue items still go through the shift-handoff
+skill — this covers the security board's extra freight.
 
-1. Pull the security board's open work (result-cap honesty — a capped pull is disclosed,
-   never presented as the full board). Order the handoff by operational urgency: active
-   containment first, live investigations second, pending verdicts third, watch items last.
-2. Active containment in progress — the section that can't be wrong: for each incident
-   mid-containment, state exactly which checklist steps are DONE (with timestamps, from the
-   running containment note) and which are NOT — "sign-in blocked and sessions revoked at
-   <time>; password reset NOT yet done; MFA sweep NOT started." Name the single next action,
-   its owner on the incoming shift, and any pending callback (client authority approval, IR
-   firm, provider). An ambiguous containment state gets re-verified by the incoming shift
-   before anything else — assume nothing.
-3. Open investigations with evidence state: per investigation — current hypothesis and
-   confidence, evidence collected so far and where it lives (which notes, which exports),
-   evidence still outstanding and who owes it, and what would change the verdict. The
-   incoming analyst should be able to resume the reasoning, not restart it.
-4. Watch items — the security-specific category: things that are not tickets yet but the next
-   shift must keep peripheral vision on ("expect follow-up alerts from <client>'s tuning
-   change," "second failed-MFA cluster on <user> would upgrade ticket <ref> to containment,"
-   "baseline-noise period for <client>'s new MDR — verify everything anyway"). Each with the
-   trigger condition and the action it should trigger.
-5. Time-critical header: anything with a clock — response-tier deadlines approaching,
-   promised client updates due (with the committed time), scheduled containment reversals or
-   account re-enables, and log-retention expiries threatening evidence (preserve-before
-   dates).
-6. Deliver as the one-pager in chat plus a plain-text handoff note on each active-containment
-   and investigation ticket, so the state travels with the ticket even if the one-pager
-   doesn't. Confirm the receiving shift or named member has acknowledged the
-   active-containment items specifically — those are handed to a person, not to a queue.
+1. Pull the security board's open work, disclosing a capped pull rather than presenting it as
+   the full board (Sweep Honesty base skill). Order by operational urgency: active
+   containment, then live investigations, then pending verdicts, then watch items.
+2. Active containment is the section that can't be wrong. For each incident mid-containment,
+   state which checklist steps are DONE, with timestamps from the running containment note,
+   and which are NOT: "sign-in blocked and sessions revoked at <time>; password reset NOT yet
+   done; MFA sweep NOT started." Name the single next action, its owner on the incoming shift,
+   and any pending callback — client authority approval, IR firm, provider. An ambiguous
+   containment state is re-verified by the incoming shift before anything else.
+3. Open investigations travel with their evidence state: current hypothesis and confidence,
+   evidence collected and where it lives (which notes, which exports), evidence still
+   outstanding and who owes it, and what would change the verdict. The incoming analyst should
+   resume the reasoning, not restart it.
+4. Watch items aren't tickets yet, but the next shift keeps peripheral vision on them: "expect follow-up alerts from <client>'s tuning change", "a
+   second failed-MFA cluster on <user> upgrades ticket <ref> to containment", "baseline-noise
+   period for <client>'s new MDR — verify everything anyway". Each needs a trigger and the action it
+   triggers, or it's trivia.
+5. Head the page with anything on a clock: approaching response-tier deadlines, promised client
+   updates with committed times, scheduled containment reversals or account re-enables,
+   and log-retention expiries that threaten evidence.
+6. Deliver the one-pager in chat plus a plain-text handoff note on each active-containment and
+   investigation ticket, so the state travels with the ticket. Confirm that the receiving shift
+   or a named member has acknowledged the active-containment items specifically — those are
+   handed to a person, not to a queue. Silence is not a handoff.
 
-Guardrails — always:
-- Containment state is never summarized loosely: done-with-timestamp or explicitly-not-done,
-  per step — "mostly contained" has no meaning and no place here.
-- Evidence chain continuity: where evidence lives and what's outstanding transfers
-  explicitly; an investigation whose evidence state can't be stated gets flagged as at-risk.
-- Watch items must carry trigger + action, or they're trivia; the incoming shift verifies
-  rather than trusts any ambiguous state.
-- Active containments are acknowledged by a named person before the outgoing shift leaves —
-  silence is not a handoff.
-- Never omit an item to keep the page short; security handoffs prioritize completeness of the
-  critical sections over the one-minute read target of the general skill.
-- Verdict-affecting context (documented benign patterns, simulation campaigns in flight,
-  pen-test windows) is handed forward — closing a real alert because nobody said the context
-  expired is a handoff failure. Never invent timestamps or evidence state.
+Containment state is never summarized loosely: done-with-timestamp or explicitly-not-done, per
+step — "mostly contained" has no meaning here. An investigation whose evidence state can't be
+stated is flagged at-risk. Never omit an item to keep the page short; completeness of the
+critical sections beats the one-minute read. Hand forward verdict-affecting context —
+documented benign patterns, simulation campaigns in flight, pen-test windows ; closing a real alert
+when nobody said the context expired is a handoff failure. Never invent timestamps
+or evidence state.
 ```
