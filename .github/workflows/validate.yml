@@ -1,0 +1,31 @@
+# Every skill must parse and fit. The load-bearing check is the 3,000-character cap on
+# the prompt block: Super Magic refuses to save a longer skill, so an over-limit entry
+# here is one a partner cannot actually use.
+#
+# The rest of the checks catch failures that are *silent* on the docs site -- an
+# out-of-list role just drops the skill from that filter, a multi-line YAML list parses
+# as empty. Nothing errors; the skill simply goes missing.
+
+name: Validate skills
+
+on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - "tools/validate.py"
+      - ".github/workflows/validate.yml"
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "tools/validate.py"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 tools/validate.py

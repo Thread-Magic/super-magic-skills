@@ -12,16 +12,18 @@ request — the four steps below.
 1. **Copy the template.** Start from [`TEMPLATE.md`](TEMPLATE.md) into
    `skills/<category>/<slug>/SKILL.md` — a kebab-case slug under one of the existing category
    folders in [`skills/`](skills).
-2. **Write the prompt in plain language.** One workflow, guardrails baked in (see below).
-   Super Magic is native-English — say "change the status", "add an internal note", "draft a
-   reply", not tool names. Test it by pasting it into Super Magic against a real tenant.
+2. **Write the prompt in plain language, under 3,000 characters.** One workflow, guardrails
+   baked in (see below). Super Magic is native-English — say "change the status", "add an
+   internal note", "draft a reply", not tool names. Test it by pasting it into Super Magic
+   against a real tenant.
 3. **Fill in the frontmatter.** Set `name`, `description` (the *trigger* — when to use this),
    `category`, `tools`, `connectors`, `scope`, `flow`, `role`, and `outcome`. Use real Super
    Magic tools and supported connectors — a maintainer validates these in review — and pick
    `role`/`outcome` from the fixed lists below.
-4. **Open a PR.** A maintainer checks the trigger wording, the tools/connectors, the
-   guardrails, and that nothing private slipped in. Merges to `main` sync to the docs site
-   automatically.
+4. **Open a PR.** Run `python3 tools/validate.py` first — it checks the length limit, the
+   frontmatter, and the fixed lists, and CI runs it on every PR. A maintainer then checks the
+   trigger wording, the tools/connectors, the guardrails, and that nothing private slipped in.
+   Merges to `main` sync to the docs site automatically.
 
 ## The format (required)
 
@@ -63,8 +65,9 @@ just its category); tag two when both genuinely apply.
   Time & Cost Savings (Capacity) · Always-On Coverage · Risk & Compliance ·
   Retention & Growth (CSAT/Expansion)
 - **Connectors** (list any the prompt needs; `[]` if native): NinjaOne · Liongard · IT Glue ·
-  Hudu · TimeZest · Notion · Linear · Zapier (written `"Zapier: <App>"`) · ConnectWise RMM ·
-  ImmyBot · Microsoft 365. Make the prompt **degrade gracefully** when a connector is absent.
+  Hudu · TimeZest · Notion · Linear · Zapier (written `"Zapier: <App>"`, or bare `Zapier` for
+  an app-agnostic skill) · ConnectWise RMM · ImmyBot · Microsoft 365 · Runbooks. Make the
+  prompt **degrade gracefully** when a connector is absent.
 
 ## Write prompts in natural language
 
@@ -74,6 +77,62 @@ metadata; they are never named in the prompt. **One prompt may take several acti
 → set priority → note). Guardrails live **inside** the prompt: confidence gates before writes,
 "show me before you send/close", "when in doubt, do nothing", result-cap honesty, "never invent
 data".
+
+## The 3,000-character limit
+
+**A prompt block may not exceed 3,000 characters.** Super Magic caps skill instructions and
+Flow agent prompts at 3,000; a longer skill still runs if it was saved before the cap, but it
+**cannot be saved again** until it is shortened. A skill over the limit here is a skill nobody
+can actually install, so `tools/validate.py` fails the PR.
+
+Only the **prompt block** counts — the fenced block under `## Prompt`, which is what a person
+pastes into the skill editor. Frontmatter and the "When to use" / "Run it" lines never leave
+the repo and are not measured.
+
+**Aim for ~2,900** so a partner has room to adapt it to their desk without immediately hitting
+the ceiling.
+
+Three ways to fit, in order of preference:
+
+1. **Cut hedging and restated rationale.** Most over-limit prompts explain *why* a step matters
+   three times. Say it once, in the imperative.
+2. **Compose with a base skill** (below) instead of restating a shared guardrail longhand.
+3. **Split it.** If it needs "and" twice to describe, it was always two skills.
+
+Never buy space by deleting a guardrail that has no base-skill equivalent — a confirmation
+gate before a destructive write, a data-loss consent step, an escalation trigger. If a skill
+cannot fit without losing one of those, split it instead.
+
+## Base skills
+
+A **base skill** carries one shared contract that many skills need — how a PSA-bound note is
+written, what an unattended Flow may output, how to behave when a connector is off. Instead of
+restating it, name it:
+
+> Notes are plain text — no markdown or emojis (apply the **PSA Note Discipline** skill).
+
+Roughly eight words replace sixty. Inside Super Magic the named skill resolves and brings its
+full contract; the short gloss means the prompt still does the right thing on a cold paste,
+before anyone has saved the base skill. **Always keep the gloss** — a bare "apply the PSA Note
+Discipline skill" is useless to someone pasting the prompt for the first time.
+
+The base skills available today:
+
+| Base skill | Carries |
+|---|---|
+| `automation-and-flows/psa-note-discipline` | Plain-text notes: no markdown, no emojis, raw URLs, internal vs client |
+| `automation-and-flows/write-guardrails` | Confidence gate · show-me-before-send · when-in-doubt-do-nothing · never invent |
+| `automation-and-flows/connector-degradation` | What to do when an integration isn't on |
+| `automation-and-flows/sweep-honesty` | Result caps, partial coverage, "note what you couldn't check" |
+| `automation-and-flows/unattended-output-discipline` | The output contract for anything a Flow runs |
+| `automation-and-flows/json-api-response-pattern` | Machine-readable output |
+| `troubleshooting-playbooks/troubleshooting-ladder` | Context → history → verbatim error → branch → verify & note |
+| `liongard-inspectors/inspector-read-discipline` | Finding the inspector, dating the dataprint, verifying field angles |
+| `industry-packs/industry-pack-frame` | Layering a vertical on the LOB Application Framework |
+
+Write a cross-reference as `<category>/<slug>` when you want it verified — `validate.py`
+checks those resolve. A bare slug in prose is fine and common, but can't be checked (it's
+indistinguishable from ordinary hyphenated English).
 
 ## Scope & Flow
 

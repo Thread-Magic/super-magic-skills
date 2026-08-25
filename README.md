@@ -38,6 +38,7 @@ outcome: [Faster Resolution & Response]
 - **tools** are the tools the prompt uses — metadata only, never named in the prompt.
 - **connectors** lists any integration the skill needs (NinjaOne, Liongard, IT Glue, Hudu, TimeZest, Notion, Linear, Zapier, and more). `[]` means native — runs on any tenant.
 - The **Prompt** is the whole artifact: paste it into Super Magic and it runs. Guardrails live inside the prompt, not in a separate list.
+- The prompt is capped at **3,000 characters** — Super Magic won't save a longer skill. Where several skills share a contract (how a PSA note is written, what an unattended Flow may output), they name a **base skill** rather than restating it. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Using a skill
 
@@ -47,7 +48,7 @@ Open a `SKILL.md`, copy the **Prompt** block, and paste it into Super Magic (or 
 
 This library is **crowdsourced** — built by and for the community. Have a skill your peers would love, or a fix for an existing one? Fork the repo, add or edit a `SKILL.md`, and open a pull request; once it's merged it goes live on the docs site.
 
-See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the four steps and the format. The bar: a skill solves one real MSP workflow, carries its own guardrails, and contains no client or partner data.
+See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the four steps and the format. The bar: a skill solves one real MSP workflow, carries its own guardrails, fits in 3,000 characters, and contains no client or partner data. Run `python3 tools/validate.py` before you open the PR — CI runs it too.
 
 ## Community
 

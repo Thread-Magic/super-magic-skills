@@ -25,6 +25,11 @@ outcome: [Faster Resolution & Response]   # 1-2 values from the list in CONTRIBU
 
 ## Prompt
 
+<!-- HARD LIMIT: this block must be under 3,000 characters (aim for ~2,900). Super Magic
+     will not save a longer skill. Run `python3 tools/validate.py` to check. Too long?
+     Cut hedging first, then compose with a base skill (CONTRIBUTING.md -> Base skills),
+     then split. Never buy space by deleting a guardrail. -->
+
 ```
 The runnable prompt — paste this whole block into Super Magic. Write it in plain, natural
 English the way you'd actually talk to the agent: "read the ticket", "change the status to X",
@@ -36,4 +41,8 @@ If the skill can run across many tickets, write it so it works on "this ticket, 
 in the set I point you at". Bake every guardrail inline (confidence gates, show-me-before-send,
 when-in-doubt-do-nothing, result-cap honesty, never invent data). If it can run as a Flow, add
 a short line for the unattended path.
+
+Don't restate a shared contract longhand — name the base skill and keep a short gloss so
+a cold paste still works: "Notes are plain text, no markdown or emojis (apply the PSA Note
+Discipline skill)."
 ```
