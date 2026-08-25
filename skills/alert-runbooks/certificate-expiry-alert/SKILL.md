@@ -19,48 +19,47 @@ outcome: [Faster Resolution & Response, Always-On Coverage]
 ## Prompt
 
 ```
-You are triaging a certificate-expiry alert. Cert alerts are pure countdowns: the only questions
-are how many days remain, what breaks at zero, and who renews it. Answer those three and route.
-Leave a plain-text note only; change nothing else.
+Triage a certificate-expiry alert. Cert alerts are pure countdowns: how many days remain, what
+breaks at zero, and who renews it.
 
-1. Parse the alert: subject/common name (and SANs if given), expiry date, issuer, and the system
-   that raised it. Compute days remaining YOURSELF from the expiry date — do not trust a stale
-   "N days" in the alert text; state the date, not just the countdown.
-2. Dedupe: search recent tickets for the same CN in 30 days. Expiry monitors re-fire on a
-   schedule; if an open renewal ticket exists, add this alert as a note on it rather than opening
-   parallel work.
-3. Verify current state — the cert may already be renewed and the monitor is reading a cached
-   endpoint. Where a Liongard inspector covers the system (web server, firewall, load balancer),
-   read the currently-served cert from the inspector's data and confirm expiry; verify the
-   inspector last ran and state its dataprint age. No inspector → rely on documentation and flag
-   that live verification needs a tech.
-4. Identify what it secures and who owns renewal: check the documentation in IT Glue / Hudu and
-   the knowledge base for the CN — public website, VPN endpoint, mail, RADIUS/Wi-Fi, internal
-   CA, code-signing. Client-purchased and vendor-managed certs are needs-client/vendor;
-   MSP-managed certs are needs-tech. Short-lived ACME-style auto-renewing certs that alert anyway
-   are usually monitor noise — but verify the renewal actually happened before saying so.
-5. Tier by days remaining: expired or ≤7 days → act-now (users see trust errors at zero; route to
-   renewal immediately; flag services that hard-fail on expiry — VPN, RADIUS, federation — as
-   outage-class); 8–30 → schedule-now planned renewal with ownership; 31–60 → plan, note CSR/
-   validation lead times (EV/OV validation can take days); >60 → early warning, usually threshold
-   noise, note and close unless long procurement lead time.
-6. Classify: self-healed (renewed cert verified in place) → close with evidence; needs-tech
-   (MSP-owned) → route into renewal with the tier; needs-client (client/vendor-owned) → route to
-   account owner with the deadline; noise (auto-renew verified working, duplicate alert) → close
-   with the verification evidence.
-7. Leave a plain-text note: CN, days remaining, what it secures, owner, tier, route.
+1. Parse the alert: common name and SANs, expiry date, issuer, raising system. Compute days
+   remaining YOURSELF from the expiry date — the alert's "N days" may be stale — and state the
+   date, not just the countdown.
 
-Guardrails: never close on "someone probably renewed it" — close only on verified current-cert
-evidence (dataprint or explicit confirmation). Wildcard and multi-SAN certs multiply blast radius
-— list every documented system using the cert before tiering, and tier by the most critical one.
-Liongard data is only as fresh as the last inspector run; always state dataprint age and degrade
-to documentation when the inspector is absent or stale. Plain-text notes only; do not invent
-issuer portals or renewal links.
+2. Search recent tickets for the same CN, 30 days. Expiry monitors re-fire, so if an open renewal
+   ticket exists, note this alert there instead of opening parallel work.
 
-If run unattended via a Flow: your entire reply is posted verbatim as the note — plain text, no
-narration. Close ONLY when the currently-served cert is verified renewed (new expiry beyond alert
-horizon) via fresh inspector data, or the alert duplicates an open renewal ticket (then note-and-
-merge). Expired or ≤7 days → escalate to the urgent queue. 8–30 → route to renewal queue with
-ownership. >30 → route as planned work, do not close. No inspector coverage or stale dataprint →
-route to a human; never close on assumption.
+3. Verify current state — the cert may already be renewed, with the monitor reading a cached
+   endpoint. Where a Liongard inspector covers the system, read the served cert and confirm
+   expiry, checking the inspector ran and giving the dataprint age. Without one, rely on
+   documentation and flag that live verification needs a tech.
+
+4. Identify what it secures and who renews it, from IT Glue or Hudu and the knowledge base:
+   public website, VPN, mail, RADIUS or Wi-Fi, internal CA, code-signing. ACME-style
+   auto-renewing certs that alert anyway are usually monitor noise — verify the renewal happened
+   before saying so.
+
+5. Tier by days remaining. Expired or 7 or fewer: act-now — users see trust errors at zero, so
+   route to renewal now and flag services that hard-fail on expiry (VPN, RADIUS, federation) as
+   outage-class. 8 to 30: planned renewal now, with ownership. 31 to 60: plan it, noting CSR and
+   validation lead times — EV and OV validation can take days. Over 60: early warning, usually
+   threshold noise; note and close unless procurement is slow.
+
+6. Classify by ownership and note it — plain text, no markdown or emojis (PSA Note Discipline
+   base skill): CN, days remaining, what it secures, owner, tier, route. Renewed cert verified in
+   place: close with the evidence. MSP-owned: into renewal at its tier. Client or vendor owned:
+   account owner, with the deadline. Auto-renew verified working, or a duplicate: close with the
+   verification.
+
+Never close on "someone probably renewed it" — only verified current-cert evidence closes this.
+Wildcard and multi-SAN certs multiply blast radius: list every documented system using the cert,
+and tier by the most critical. Inspector data is only as fresh as the last run: give the
+dataprint age, and fall back to documentation when it is absent or stale (Connector Degradation
+base skill). Don't invent issuer portals or renewal links.
+
+As a Flow: your entire reply is the note. Close ONLY when the served cert is verified renewed (a
+new expiry beyond the alert horizon, in fresh inspector data), or the alert duplicates an open
+renewal ticket — then note and merge. Expired or 7 days or fewer: urgent queue. 8 to 30: renewal
+queue with ownership. Over 30: planned work, do not close. No inspector coverage or a stale
+dataprint: route to a human, never close.
 ```

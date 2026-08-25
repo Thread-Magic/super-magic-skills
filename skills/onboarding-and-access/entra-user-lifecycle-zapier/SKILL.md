@@ -19,55 +19,46 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-Execute Entra ID account writes from this ticket via Zapier — with the one hard
-constraint designed in: Zapier's Entra integration can write users but cannot SEARCH
-them, so identity must be fully resolved on the PSA/ticket side before any write.
+Execute Entra ID writes from this ticket via Zapier, around one hard constraint: the integration
+can write users but cannot SEARCH them, so identity must be resolved PSA-side before any write.
 
-1. Confirm the connector: the acting member must have the Zapier connector with the
-   Microsoft Entra ID app authorized for this client's tenant. If unavailable, degrade
-   to producing the exact change specification as a plain-text note for a tech to
-   execute manually — never pretend the write happened.
+1. Confirm the connector: the acting member needs Zapier with the Microsoft Entra ID app
+   authorized for this client's tenant. Without it, apply the Connector Degradation base skill —
+   produce the change specification as a plain-text note for a tech to run, and never imply the
+   write happened.
 
-2. Resolve identity from the PSA side FIRST. There is no user search in Entra via
-   Zapier. Build the full identity by looking up the contact and client, reading the
-   ticket, and checking client documentation (IT Glue / knowledge base): exact
-   UPN/email, display name, and for updates/disables the unambiguous existing user
-   identifier. If the UPN cannot be established with certainty, STOP and ask — a write
-   against a guessed UPN can hit the wrong person or create a duplicate.
+2. Resolve identity PSA-side FIRST, from the contact and client records, the ticket, and IT Glue
+   or the knowledge base: exact UPN and email, display name, and for updates or disables the
+   unambiguous existing identifier. If the UPN isn't certain, STOP and ask — a write against a
+   guessed UPN can hit the wrong person or create a duplicate.
 
-3. For creates, also resolve: naming convention (from client docs), department, title,
-   manager, usage location (required before licensing), and the role-based groups per
-   New Hire Onboarding. Check for collisions using PSA contact records and
-   documentation (Entra can't be searched) — state in the note that collision checking
-   was PSA-side only.
+3. For creates, also resolve the naming convention from client documentation, plus department,
+   title, manager, usage location (required before licensing) and role-based groups. Check
+   collisions against PSA contact records and documentation, and say in the note that collision
+   checking was PSA-side only.
 
-4. Approval gate before EVERY write, no exceptions: post the exact intended change
-   (action, target UPN, fields/values or groups) and get sign-off (send an approval
-   request, or use the client's documented channel). One approval may cover one
-   ticket's coherent change set, but never carries over to a second user or a later
-   ticket.
+4. Approval gate before EVERY write: post the exact intended change — action, target UPN, fields
+   and values or groups — and get sign-off via an approval request or the client's documented
+   channel. One approval may cover a ticket's coherent change set; it never carries to a second
+   user or a later ticket.
 
-5. Execute via the corresponding Zapier action — `Zapier: Microsoft Entra ID
-   "Create User"`, `"Update User"`, `"Disable User"`, or the group-membership actions —
-   one logical change at a time. Sequencing rules from the sibling skills still bind:
-   for offboarding, mailbox handling precedes license removal; for hybrid tenants,
-   on-prem AD is the source of authority — do not write cloud-side against a synced
-   object; make the change in AD and run an AD Connect delta sync instead.
+5. Execute the matching Zapier action — Microsoft Entra ID "Create User", "Update User", "Disable
+   User" or a group-membership action — one logical change at a time. Sequencing still binds: for
+   offboarding, mailbox handling precedes license removal; on hybrid tenants on-prem AD is the
+   source of authority, so make the change in AD and run an AD Connect delta sync instead of
+   writing cloud-side against a synced object.
 
-6. Verify by EFFECT, not by search (there is none): confirm through an observable
-   outcome — user appears in the licensing/billing view, sign-in behaves as expected,
-   or a tech eyeballs the portal. Then post a plain-text note: action, target, approver,
-   Zapier action used, verification method, outcome. Log time.
+6. Verify by EFFECT, since there is no search: the user appears in the licensing or billing view,
+   sign-in behaves as expected, or a tech eyeballs the portal. Then note it — plain text, no
+   markdown or emojis (PSA Note Discipline base skill): action, target, approver, Zapier action,
+   verification, outcome. Log time.
 
-Guardrails: no Entra write without the approval gate — including "small" updates. Never
-guess a UPN; unresolvable identity = no write. Never Delete User as part of routine
-offboarding — Disable is the offboarding action; deletion only on explicit documented
-client instruction after retention windows. Passwords set at creation follow the canon:
-secure transfer only, change forced at next sign-in, never in the ticket or email. On
-any Zapier error or ambiguous result, do not retry blind — report the exact state as
-unknown and have it verified before a second attempt (a retried create makes
-duplicates). Do not write cloud-side attributes on objects mastered in on-prem AD.
-Never eligible for unattended writes: if this is somehow invoked from a Flow, produce
-only the proposed change specification as a plain-text note ending "PENDING APPROVAL —
-no changes made," and let a human approve and trigger execution.
+No Entra write without the approval gate, including "small" updates. Never Delete User in routine
+offboarding: Disable is the action; deletion happens only on explicit documented client
+instruction after retention windows. Passwords set at creation: secure transfer only, forced
+change at next sign-in, never in the ticket or an email. On a Zapier error or ambiguous result,
+don't retry blind — report the state as unknown and have it verified; a retried create makes
+duplicates. Never eligible for unattended writes: from a Flow, produce only the proposed change
+specification as a note ending "PENDING APPROVAL - no changes made", for a human to approve and
+trigger.
 ```

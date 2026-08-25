@@ -20,50 +20,49 @@ outcome: [Fewer Escalations & Less Noise]
 
 ```
 A queue's data quality decays quietly: contacts missing, statuses lying, notes empty. Measure the
-decay as a single hygiene score and hand back the ranked fix list — so "clean up the board"
-becomes a checklist instead of a vibe.
+decay as one hygiene score and hand back a ranked fix list, so "clean up the board" becomes a
+checklist instead of a vibe.
 
-1. Scope the scan: which board(s) and which statuses count as open. Enumerate open tickets,
-   splitting searches per defect signal per board so result caps don't hide defects; disclose any
-   capped search.
+1. Scope the scan — which boards, and which statuses count as open. Enumerate open tickets,
+   splitting searches per defect signal per board so caps don't hide defects. Sweep Honesty base
+   skill: label any capped count "at least N".
 
 2. Check each hygiene signal as its own pass:
-   - Missing contact — no contact, or a catchall/placeholder contact.
-   - Missing or implausible company — unassigned company on a board that requires one.
-   - Stale status — status contradicts the thread ("scheduled" with no schedule entry; "waiting on
-     client" where the last message is inbound; "new" but worked for days). Map the board's status
-     semantics from the available statuses.
-   - No notes — open beyond a grace window (default 2 business days) with zero notes beyond intake.
-   - No owner — unassigned beyond the same grace window.
-   - Blank classification — type/subtype or priority unset.
-   - Ancient never-touched — so old and untouched they're probably noise candidates.
+   - Missing contact: none set, or a catchall or placeholder contact.
+   - Missing company: unassigned on a board that requires one.
+   - Stale status: the status contradicts the thread — "scheduled" with no schedule entry,
+     "waiting on client" where the last message is inbound, "new" but worked for days. Map status
+     semantics from the board's available statuses.
+   - No notes: open beyond a grace window (two business days by default) with nothing beyond
+     intake.
+   - No owner: unassigned beyond that same grace window.
+   - Blank classification: type, subtype or priority unset.
+   - Ancient and never touched: old enough to be noise candidates.
 
-3. Compute the hygiene score: percentage of open tickets with zero defects, plus a per-signal
-   defect count. Simple and repeatable beats clever — the value is week-over-week comparison, so
-   state the formula in the output.
+3. Compute the score: percentage of open tickets with zero defects, plus a per-signal defect
+   count. Simple and repeatable beats clever, since the value is week-over-week comparison — so
+   state the formula.
 
-4. Build the fix list, ranked by effort-to-impact: quick wins first (set owner, set
-   classification), then judgment fixes (correct stale statuses — link each to what the thread
-   implies), then candidates for other skills (stale follow-ups → Stale Ticket Follow-Up Cadence;
-   missing companies → catchall routing; noise → closure with sign-off).
+4. Build the fix list ranked by effort to impact: quick wins first (set owner, set
+   classification), then judgment fixes (stale statuses, each linked to what the thread implies),
+   then work for other skills — stale follow-ups to Stale Ticket Follow-Up Cadence, missing
+   companies to catchall routing, noise to closure with sign-off.
 
-5. Apply fixes only on explicit approval, ticket by ticket or as an approved batch: change
-   owner/status/classification, resolve and set contacts for resolvable missing contacts (assign
-   only on an unambiguous match — name similarity is never enough; low confidence means flag, not
-   fix), and leave a plain-text note where a correction needs context. Never fix silently — a bulk
-   status "correction" applied wrong is a worse mess than the dirt it replaced.
+5. Apply fixes only on explicit approval, ticket by ticket or as an approved batch: change owner,
+   status or classification, set contacts that resolve unambiguously — name similarity is never
+   enough, low confidence means flag not fix — and note anything needing context. Never fix
+   silently: a bulk status "correction" applied wrong is a worse mess than the dirt it replaced.
 
-6. Output: score headline, per-signal table, top fix list, and — when a previous score is provided
-   — the trend.
+6. Output the score headline, per-signal table, top fix list, and the trend where a previous
+   score is supplied.
 
-Any capped count is labeled "at least N". The score measures data hygiene, not tech performance —
-don't present it as a people metric. If write tools are disabled, deliver score and fix list in
-chat only.
+The score measures data hygiene, not tech performance — never present it as a people metric.
+Notes are plain text, no markdown or emojis (PSA Note Discipline base skill). If write tools are
+off, deliver score and fix list in chat.
 
-Running unattended (from a scheduler): the entire reply is the artifact — score headline,
-per-signal defect table, and top fix list in plain text. No narration. Board not supplied or not
-found → output nothing. Permitted writes: none — every fix requires the attended sign-off path; a
-scheduled score run never repairs data. The score formula is stated inside the artifact so runs
-stay comparable; capped searches labeled "at least N" per signal. Zero open tickets in scope →
-reply exactly "NO OPEN TICKETS IN SCOPE."
+Run unattended from an external scheduler: the entire reply is the artifact — score headline,
+per-signal defect table and top fix list, plain text, no narration. If the board isn't supplied
+or found, output nothing. No writes: every fix goes through the attended sign-off path, and a
+scheduled run never repairs data. State the formula inside the artifact so runs stay comparable.
+Zero open tickets in scope, reply exactly "NO OPEN TICKETS IN SCOPE."
 ```

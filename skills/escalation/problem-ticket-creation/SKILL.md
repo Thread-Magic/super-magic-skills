@@ -19,52 +19,49 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-ITIL problem management, minus the ceremony: once the same incident has recurred enough,
-open one problem ticket that owns the root-cause work, wire every incident to it, and
-write down the workaround techs are currently using.
+ITIL problem management minus the ceremony: once the same incident has recurred enough, open one
+problem ticket that owns the root-cause work, wire every incident to it, and write down the
+workaround techs currently use.
 
-1. Establish the incident signature: same symptom class, same client or same
-   infrastructure component. Verify recurrence over the window — match on documented
-   symptoms and error text, not title wording alone. List the matching incidents with
-   dates. Threshold default: 3+ matching incidents in 30 days; tenant SOP wins if it
-   defines one.
+1. Establish the incident signature — same symptom class, same client or infrastructure
+   component. Verify recurrence over the window by matching documented symptoms and error text,
+   not title wording, and list the matching incidents with dates. Threshold defaults to 3 or more
+   in 30 days; a tenant SOP wins where it defines one.
 
-2. Check for an existing problem ticket for this signature (search the problem
-   board/type). If one exists, link the new incidents to it instead of creating a
-   duplicate.
+2. Search the problem board or type for an existing ticket on this signature; if one exists, link
+   the new incidents to it rather than creating a duplicate.
 
-3. Open the problem ticket on the agreed board: title "PROBLEM: <symptom> — <client or
-   component>"; body containing the incident list with references and dates, the
-   recurrence rate, common factors across incidents (and differences worth noting), and
-   business impact per occurrence.
+3. Open the problem ticket on the agreed board, titled "PROBLEM: <symptom> - <client or
+   component>", its body carrying the incident list with references and dates, the recurrence
+   rate, common factors across incidents (and differences worth noting), and business impact per
+   occurrence.
 
-4. Document the CURRENT WORKAROUND verbatim from what techs actually did in the incident
-   tickets: steps, how long it holds, cost per occurrence. If no consistent workaround
-   exists, state "no reliable workaround" explicitly — that raises the problem's urgency.
+4. Document the CURRENT WORKAROUND verbatim from what techs actually did: the steps, how long it
+   holds, the cost per occurrence. If no consistent workaround exists, state "no reliable
+   workaround" explicitly — that raises the problem's urgency.
 
-5. Link both ways: a plain-text note on each incident ticket referencing the problem
-   ticket ("Linked to problem ticket <ref> — apply the documented workaround; root cause
-   tracked there"), and the problem ticket lists every incident.
+5. Link both ways: a note on each incident referencing the problem ticket — "Linked to problem
+   ticket <ref>: apply the documented workaround, root cause tracked there" — and the problem
+   ticket listing every incident. Notes and bodies are plain text (PSA Note Discipline base
+   skill).
 
-6. Frame the RCA ask: what needs investigating, what data the next occurrence should
-   capture, and a recommended owner tier. Assign only with confirmation.
+6. Frame the RCA ask: what needs investigating, what the next occurrence should capture, a
+   recommended owner tier. Assign only with confirmation.
 
-7. Output: problem ticket reference, incidents linked, workaround status, next step.
+7. Report the problem ticket reference, incidents linked, workaround status and next step.
 
-Running as a Flow (trigger: the incident-close event incrementing a known signature —
-Flows are event-driven only, so there is no scheduled/periodic Flow variant; run the
-recurring sweep manually or from an external scheduler instead): create only when the
-threshold is met by strict signature match — same
-client-or-component AND same symptom class; fuzzy matches don't count. If an existing
-problem ticket is found, add the linking note to the new incident(s) only — never create a
-second. Writes limited to one new problem ticket and plain-text linking notes: no
-assignment, no priority changes, no incident-status changes. Your entire reply is the
-problem-ticket body / note content, no narration. If signature matching is ambiguous or
-searches hit caps that make the count unreliable, do nothing.
+One problem per signature. Recurrence must be evidenced by the listed incidents, so don't pad the
+count with loosely similar tickets. The workaround is transcribed from documented fixes, never
+invented; where different fixes worked, record them all. Creating a problem ticket doesn't close
+or alter the incidents' own lifecycles.
 
-Guardrails: one problem per signature — search before create. Recurrence must be
-evidenced by the listed incidents; don't pad the count with loosely similar tickets. The
-workaround is transcribed from documented fixes, never invented; if different fixes
-worked, record them all. Creating a problem ticket does not close or alter the incident
-tickets' own lifecycles. Notes and ticket bodies plain text.
+As a Flow, triggered by the incident-close event incrementing a known signature: Flows are
+event-driven only, so there is no scheduled variant — run the recurring sweep manually or from an
+external scheduler. Create only when the threshold is met by strict signature match — same client
+or component AND same symptom class; fuzzy matches don't count. Where an existing problem ticket
+is found, add the linking note to the new incidents only; never create a second. Writes are
+limited to one new problem ticket and the linking notes: no assignment, no priority or
+incident-status changes. Your entire reply is the problem-ticket body or note content. If
+signature matching is ambiguous, or searches hit caps that make the count unreliable (Sweep
+Honesty base skill), do nothing.
 ```
