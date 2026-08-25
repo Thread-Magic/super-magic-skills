@@ -19,24 +19,51 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are diagnosing a VPN problem by separating it into the four places these failures actually live — client, authentication, transport, and name resolution — and giving branch-specific remediation guidance plus escalate-when lines. Remediation is guidance for the tech or user; nothing executes remotely.
+VPN failures live in four places: client, authentication, transport, and name
+resolution.
 
-1. History first. Search this user's and this client's past tickets for the VPN. Same user recurring -> local environment (home router/ISP). Many users at once -> head-end, certificate, or identity outage; treat as an incident.
+Climb the Troubleshooting Ladder base skill first: past VPN tickets for this user and
+client (one user recurring points at their home router or ISP; many users at once is a
+head-end, certificate, or identity outage — an incident), then the documented VPN
+standard: vendor, client, gateway, auth method (SAML/MFA, certificate, PSK), split vs
+full tunnel, DNS suffix. Get the client and OS versions — a mismatch against the
+head-end is a top cause after a firmware upgrade. Then the exact client error and its
+log: pin which stage fails — connect, authenticate, tunnel up, or traffic.
 
-2. Docs second. Check the client's documentation and knowledge base for the VPN standard: vendor, client software, gateway address, auth method (SAML/MFA, certificate, PSK), split vs full tunnel, DNS suffix. Documentation coverage varies per tenant — fall back to the knowledge base and say what you could not check.
+a. Authentication (SAML, MFA, certificate). Can the user sign in to other SSO apps? That
+   isolates identity from VPN. An MFA loop is usually a stale cached token or a
+   conditional-access change — pair with the M365 sign-in playbook when the IdP is
+   Entra. For certificate auth, check cert expiry on the device. Escalate to whoever
+   owns the IdP when a policy change broke all VPN users; a fault inside the vendor's
+   SAML implementation is only theirs to fix.
 
-3. Identify versions — never assume. VPN client name and version, OS version, and whether the client was recently updated. Version mismatch against the head-end is a top cause after firmware upgrades.
+b. Transport and NAT-T — times out, or dies at the same point every time. IPsec from
+   home needs NAT traversal on UDP 4500 and IKE on UDP 500, and some routers and ISPs
+   mangle them. Try a phone hotspot: if that works, the home router or ISP is the cause
+   — disable SIP ALG or enable IPsec passthrough, or move to a TLS transport if the
+   platform supports one. Escalate when the head-end firewall started dropping NAT-T
+   after a firmware change.
 
-4. Get the error before theorizing. Exact client error text/code and the client's own log. "Doesn't work" has at least four meanings — pin down which stage fails: connect, authenticate, tunnel up, or traffic/name resolution.
+c. Drops while working from home. Ladder: Wi-Fi signal, then the router (SIP ALG,
+   session timeouts), then the ISP (CGNAT). Also power settings suspending the NIC, and
+   DTLS or keepalive intervals. Change one thing at a time. Multiple remote users
+   dropping at the same clock interval is a head-end idle timeout or license limit, not
+   their homes.
 
-5. Branch:
-   a. Authentication (SAML/MFA/certificate) — fails at sign-in or loops. Check whether the user can sign in to other SSO apps (isolates identity vs VPN). MFA loop -> often a stale cached token or an identity conditional-access change; pair with the M365 sign-in playbook if the IdP is Entra. Certificate auth -> check cert expiry on the device. Escalate when an identity policy change broke all VPN users — route to whoever owns the IdP; if the failure is inside the vendor's SAML implementation, only the vendor can fix it — say so.
-   b. Transport / NAT-T — client times out, or connects then dies at the same point every time. From home networks, IPsec needs NAT traversal (UDP 4500) and IKE (UDP 500); some routers or ISPs mangle these. Guide: try a phone hotspot — if that works, the home router/ISP path is the culprit; disable SIP ALG / enable IPsec passthrough on the router, or move the client to a TLS-based transport if the platform supports it. Escalate when the head-end firewall drops NAT-T after a firmware change — network resource, and possibly a vendor case.
-   c. "Drops while working from home" — connects fine, dies intermittently. Ladder: Wi-Fi signal -> router (SIP ALG, session timeouts) -> ISP (CGNAT). Also check the laptop's power settings suspending the NIC, and DTLS/keepalive intervals. Guide one change at a time so cause is identifiable. Escalate when multiple remote users drop at the same clock interval -> head-end session/idle timeout or license limit, not the homes.
-   d. Split tunnel routing — VPN is up, some resources unreachable. Determine what's supposed to be in the tunnel (the documentation). A resource outside the split-tunnel routes will never work by design — say so rather than chasing it. Escalate when the route/ACL push from the head-end is wrong for everyone — config change request, not a per-user fix.
-   e. DNS suffix / name resolution — reachable by IP but not by name. Check the tunnel adapter got the internal DNS servers and search suffix. Guide: nslookup <server> <internal-dns-ip> to prove the resolver works over the tunnel; if it does, the client's adapter DNS config or suffix list is wrong. Escalate when internal DNS itself is unhealthy — switch to the DNS playbook.
+d. Split-tunnel routing — tunnel up, some resources unreachable. Check what the
+   documentation says belongs in the tunnel; a resource outside those routes will never
+   work by design. Escalate when the route or ACL push is wrong for everyone — a config
+   change request, not a per-user fix.
 
-   Firewall/head-end changes are never "just do it" guidance — flag them for the resource who owns the device, with the evidence attached. If the defect is in the VPN vendor's client or firmware, state that only the vendor can fix it and offer the documented workaround. Never guess gateway addresses, transport ports, or auth methods — pull from client documentation or ask; do not invent vendor KB articles, verify on the web.
+e. Name resolution — reachable by IP, not by name. Check the tunnel adapter picked up
+   the internal DNS servers and search suffix, then nslookup <server> <internal-dns-ip>:
+   if the resolver answers over the tunnel, the adapter's DNS or suffix list is wrong.
+   Switch to the DNS playbook when internal DNS itself is unhealthy.
 
-6. Verify and note. Have the user reach the actual resource that failed, not just get a green icon. Leave a plain-text internal note (PSA-safe: no markdown or emojis): stage that failed, error code, branch, fix or handoff, verification.
+Firewall and head-end changes are never "just do it" guidance — flag them for whoever
+owns the device, with the evidence.
+
+Verify by having the user reach the resource that failed, not just a green icon. Note it
+(apply the PSA Note Discipline base skill): stage, error code, branch, fix or handoff,
+verification.
 ```

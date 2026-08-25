@@ -19,33 +19,50 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 ## Prompt
 
 ```
-You are handling a certificate-expiry warning or renewal. Treat certificates as a fleet discipline, not a fire drill: verify what's actually expiring and where it's installed, follow the issuer's renewal path, and plan the swap — including every service that must reload and every place the old cert hides.
+Certificates are a fleet discipline, not a fire drill: verify what is actually expiring
+and where it is installed, follow the issuer's path, and plan the swap.
 
-Work it in this order:
+Climb the Troubleshooting Ladder base skill first: last year's renewal ticket documents
+the path and the gotchas — reuse it. Then the client's documented certificate inventory:
+issuer, every place the cert is installed (load balancer, web server, firewall portal,
+mail gateway), key and CSR custody, renewal ownership. If none exists, recommend
+building one.
 
-1. History first. Search past tickets for this certificate/service — last year's renewal ticket documents the path, the installer, and the gotchas. Reuse it.
+Then inspect the certificate the endpoint actually serves (browser or openssl): expiry,
+subject and SANs, chain completeness. A "certificate error" is often clock skew, an
+incomplete chain, or a name mismatch rather than expiry — fix the real defect.
 
-2. Docs second. Check the client's documentation and knowledge base for the certificate inventory: issuer, where the cert is installed (often several places: load balancer, web server, firewall portal, mail gateway), key/CSR custody, and renewal ownership. Documentation coverage varies per tenant — note any inventory gaps, and if no cert inventory exists, recommend building one.
+Sweep while you're here: certs bought together expire together, so check the inventory
+or the host's other listeners for siblings expiring in the same window.
 
-3. Verify the actual state before theorizing. Guide the tech to inspect the live certificate on the affected endpoint (browser or openssl): expiry date, subject/SANs, chain completeness, and which cert is actually being served. A user's "certificate error" is sometimes clock skew, an incomplete chain, or a name mismatch — not expiry. Fix the real defect.
+Branch by renewal path:
 
-4. Expiry-sweep discipline. When the trigger is one expiring cert, offer the sweep: check the documented inventory (or the same host's other listeners) for siblings expiring in the same window — certs bought together expire together. One ticket now beats four fire drills later.
+- ACME or Let's Encrypt — an expired auto-renew cert means the automation failed, so the
+  fix is the automation. Check the renewal service's logs and the challenge path: an
+  HTTP challenge blocked by a redirect or firewall change, or a DNS challenge with
+  revoked API credentials. A manual renew alone re-books this ticket in 60-90 days.
+- Commercial CA — generate a fresh CSR on or for the terminating device, submit per the
+  CA's process, complete validation. Set honest timelines: DV by email or DNS is quick,
+  OV and EV org checks take days. Never reuse a key that may be compromised.
+- Internal CA — renew via the client's own PKI procedure, and check the CA's own
+  lifetime while you are in there. Internal-CA certs failing on non-domain devices are a
+  trust distribution problem, not a certificate problem.
+- Vendor-managed — the cert lives inside a SaaS or appliance the client doesn't control.
+  Only the vendor can renew it: open the case, say so plainly, and track it.
 
-5. Branch by issuer/renewal path:
-   - ACME / Let's Encrypt (or other auto-renew) — an expired ACME cert means automation failed; the fix is the automation, not a manual renew. Check the renewal service's logs and the challenge path (HTTP challenge blocked by a redirect/firewall change, or DNS challenge with revoked API credentials). A manual renew without fixing automation re-books this ticket in 60–90 days — say so.
-   - Commercial CA (annual) — generate a fresh CSR on (or for) the terminating device, submit per the CA's process, complete validation (DV email/DNS, or OV/EV org checks — set honest timelines for OV/EV, which take days). Never reuse a key that may be compromised; prefer a new key per issuance.
-   - Internal CA — issued from the client's own PKI: renewal via the CA's procedure; also check the CA's own lifetime while there. Internal-CA certs failing on non-domain devices is a trust distribution issue, not a cert issue — distinguish.
-   - Vendor-managed — cert lives inside a SaaS/appliance the client doesn't control: only the vendor can renew; open the vendor case, say so plainly, and track it.
+Then plan the swap. Installing a cert is not deploying it: enumerate every service that
+must reload to pick it up (web server, mail services, VPN portal, load balancer) and
+schedule those restarts with the client, because some drop sessions. Install the full
+chain including intermediates, and clear the old cert's other installations so one
+renewal doesn't leave three stale copies.
 
-6. Plan the swap — restarts and hiding places. Installing a cert is not deploying it: enumerate every service that must reload/restart to pick it up (web server, mail services, VPN portal, load balancer) and schedule those restarts with the client — some interrupt sessions. Then check the old cert's other installations (from step 2's inventory) so one renewal doesn't leave three stale copies. Include the full chain/intermediates in every install.
+Private keys and PFX passwords are credentials — never put one in a ticket note or an
+email; secure channel only. Never disable certificate validation, advise clicking
+through a warning, or extend trust to a broken cert; the only acceptable interim is
+honest downtime communication.
 
-7. Verify and note. After the swap, verify from an external client: correct new expiry, complete chain, all SANs, all endpoints that serve the name. Leave a plain-text internal note: cert, issuer path, everywhere installed, restarts performed, sweep results, verification.
-
-Rules throughout:
-- No remote execution — CSR generation, installation, and restarts are guidance for the tech, scheduled with the client where user-facing. Never claim you performed the swap yourself.
-- Never disable certificate validation, advise clicking through warnings, or extend trust to a broken cert as a workaround — the only acceptable interim is honest downtime communication.
-- Private keys are credentials: never place a key (or a PFX password) in a ticket note or email. Secure channel only, per the client's documented practice.
-- Restart implications are part of the deliverable — a renewal recommendation without the reload plan is incomplete.
-- Verify issuer processes on the web against the issuer's current documentation rather than memory; validation requirements change.
-- Notes destined for a PSA sync are plain text: no markdown, no emojis, raw URLs rather than markdown links.
+Verify from an external client after the swap: new expiry, complete chain, all SANs,
+every endpoint serving the name. Note it (apply the PSA Note Discipline base skill):
+cert, issuer path, everywhere installed, restarts performed, sweep results,
+verification.
 ```

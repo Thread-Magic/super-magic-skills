@@ -19,21 +19,48 @@ outcome: [Faster Resolution & Response]
 ## Prompt
 
 ```
-You are diagnosing an Adobe Creative Cloud licensing / sign-in problem. Most Creative Cloud "it won't open" tickets are licensing, not the app. The truth lives in the Adobe Admin Console: whether the user has the right identity type, is assigned the product, and whether this machine should be named-user or shared-device licensed. Check entitlement first and reinstall last — reinstalling rarely fixes a licensing/identity problem and costs the user hours.
+Most Creative Cloud "it won't open" tickets are licensing, not the app. The truth is in
+the Adobe Admin Console: the right identity type, the product actually assigned, and
+whether this machine should be named-user or shared-device licensed. Check entitlement
+first, reinstall last.
 
-Licensing model and identity first. Check the client's documentation and knowledge base for the Adobe setup: the plan type (Creative Cloud for teams vs enterprise/VIP/ETLA), the identity model (Adobe ID vs Business/Enterprise ID vs Federated SSO), whether any devices are shared-device licensed (labs, shared workstations) vs named-user, and who administers the Admin Console. Named-user vs shared-device is the fork that decides everything — establish it before touching the client. Documentation coverage varies per tenant — note what you couldn't check.
+Establish the licensing model and identity first, from the client's documentation: plan
+type (teams vs enterprise, VIP or ETLA), identity model (Adobe ID vs Business or
+Enterprise ID vs Federated SSO), which devices are shared-device licensed (labs, shared
+workstations) rather than named-user, and who administers the Console. That last fork
+decides everything else.
 
-History first. Search this client's past tickets for Adobe work: a recent license reassignment, an SSO/directory change, a plan renewal/expiry, or a device re-image. A user who "suddenly" lost access often had a license reclaimed or a plan lapse.
+Then climb the Troubleshooting Ladder base skill: past Adobe tickets — a license
+reassignment, an SSO or directory change, a plan lapse, a re-image; a "suddenly" lost
+app usually means a seat reclaimed or a plan lapse. Then check entitlement with the
+admin: is the user present, with the correct identity type and the specific product
+profile assigned, on an active plan with seats free? Then take the exact sign-in error
+and whether Creative Cloud desktop signs in at all.
 
-Check entitlement before theorizing. In the Adobe Admin Console (guide the admin): is the user present, with the correct identity type, and assigned the specific product/product profile? Is the plan active with seats available (not over-allocated)? For the app itself, get the exact sign-in error and whether Creative Cloud desktop signs in at all. Read the entitlement — don't reinstall on a hunch. Admin Console, packaging, and client steps are guidance for the Adobe admin / a tech, not remote execution; if the RMM is connected, open the workstation in it (a deep link for the tech, not script execution) for the hands-on handoff, otherwise have the tech work at the machine directly.
+1. Sign-in loop or repeated prompts. Usually the identity the user enters isn't the one
+   Adobe expects (a personal Adobe ID against the org's Federated or Business ID), a
+   Federated SSO fault (the IdP isn't returning the user, or the domain isn't claimed
+   and linked to the directory), or stale local credentials. Pair with the identity/SSO
+   playbooks rather than toggling Adobe settings blindly. Clearing the local Adobe
+   credential and OOBE state is clean — but confirm the identity mismatch first.
 
-Branch:
-1. Sign-in loop / repeated prompts — auth never sticks: usually a mismatch between the identity the user enters and the identity type Adobe expects (personal Adobe ID vs the org's Federated/Business ID), a Federated SSO problem (the IdP isn't returning the user, or the domain isn't claimed/linked), or stale local credentials. For SSO, test the federation and confirm the user's domain is linked to the directory; pair with the identity/SSO playbooks rather than toggling Adobe settings blindly. Clearing the local Adobe credential/OOBE state is a clean step, but confirm the identity mismatch first.
-2. "No access" / expired for a licensed user — the user isn't assigned the product (or was unassigned), the plan has no free seats, or they're signed in with the wrong identity. Fix by assigning the correct product profile to the correct identity in the Console. Seat allocation is the client's licensing (and cost) decision — confirm with the account owner before consuming a seat; don't buy or allocate seats on your own authority.
-3. Named-user vs shared-device mismatch — a shared/lab machine was licensed named-user (so it demands each person sign in and burns seats) or a personal workstation got the shared-device package. The fix is deploying the correct package for the use case (shared-device license package for labs, named-user for personal machines) — a packaging/deployment decision, not an end-user fix.
-4. Provisioning / reclamation — a new hire needs access or a leaver's seat must be reclaimed: assign/unassign in the Console (pair with onboarding-and-access / employee-offboarding). Reclaiming a departed user's seat frees the license; confirm no shared assets are stranded first.
+2. "No access" or expired for a licensed user — not assigned the product, unassigned, no
+   free seats, or signed in with the wrong identity. Fix by assigning the correct
+   product profile to the correct identity. Seat allocation is the client's licensing
+   and cost decision: confirm with the account owner before consuming a seat; never buy
+   or allocate seats on your own authority.
 
-Adobe accounts and assets tie to people — refer to users by placeholder and keep identity details out of PSA notes. Do not invent Console menu paths, package types, or plan behaviours — check Adobe's current admin docs on the web and cite (Adobe changes these often).
+3. Named-user vs shared-device mismatch — a lab or shared machine licensed named-user
+   (so it demands each sign-in and burns seats), or a personal workstation given the
+   shared-device package. The fix is deploying the correct package — a packaging
+   decision, not an end-user fix.
 
-Verify and note. Success is the user opening the actual licensed app signed in with the correct identity, with the seat showing assigned in the Console. Leave a plain-text internal note (raw URLs, not markdown, no emojis): licensing model, identity type, entitlement finding, branch, action or handoff, verification, and what you couldn't check.
+4. Provisioning or reclamation — assign or unassign in the Console; pair with
+   onboarding-and-access or employee-offboarding. Reclaiming a leaver's seat frees the
+   license — confirm no shared assets are stranded first.
+
+Adobe accounts tie to people: refer to users by placeholder and keep identity details
+out of notes. Success is the user opening the licensed app on the correct identity, seat
+assigned in the Console. Note it (apply the PSA Note Discipline base skill): licensing
+model, identity type, entitlement finding, branch, action, verification.
 ```
