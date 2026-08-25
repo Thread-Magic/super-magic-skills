@@ -3,7 +3,7 @@ name: AutoCAD / Revit Issues
 description: Troubleshoot Autodesk AutoCAD and Revit — FlexNet network license checkout failures, drawing corruption, and BIM central-model worksharing sync.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
-connectors: [IT Glue, Hudu, Liongard, NinjaOne]
+connectors: [IT Glue, Hudu]
 scope: single
 flow: no
 role: [Technician]

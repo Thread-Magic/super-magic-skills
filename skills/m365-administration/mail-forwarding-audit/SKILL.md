@@ -3,7 +3,7 @@ name: Mail Forwarding Audit
 description: Inventory every mail forwarding path in a tenant or mailbox: mailbox forwarding, inbox rules, and transport rules, treating external forwarding as risk.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, add_ticket_note, update_ticket, log_time_entry, web_search]
-connectors: [IT Glue]
+connectors: []
 scope: both
 flow: no
 role: [Technician, Security & Compliance Owner]

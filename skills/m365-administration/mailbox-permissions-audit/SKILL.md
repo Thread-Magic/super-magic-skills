@@ -3,7 +3,7 @@ name: Mailbox Permissions Audit
 description: Inventory Exchange mailbox access grants: Full Access, Send As, Send on Behalf, and folder-level permissions, flagging unexpected delegations.
 category: M365 Administration
 tools: [search_tickets, search_contacts, search_clients, add_ticket_note, update_ticket, log_time_entry, web_search]
-connectors: [IT Glue]
+connectors: []
 scope: both
 flow: no
 role: [Technician, Security & Compliance Owner]

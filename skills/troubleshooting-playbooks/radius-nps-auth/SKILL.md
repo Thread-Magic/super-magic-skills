@@ -3,7 +3,7 @@ name: RADIUS / NPS Authentication
 description: Diagnose 802.1X and RADIUS authentication failures on Windows NPS: Wi-Fi, wired, VPN rejects, certificates, and shared-secret issues via NPS event logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
-connectors: [IT Glue, Hudu, Liongard]
+connectors: [IT Glue, Hudu]
 scope: single
 flow: no
 role: [Technician]

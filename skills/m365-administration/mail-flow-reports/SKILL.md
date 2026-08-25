@@ -3,7 +3,7 @@ name: Mail Flow Reports
 description: Produce periodic Exchange Online mail flow health summaries: volume trends, spam/malware catch rates, top senders, connector health, forwarding.
 category: M365 Administration
 tools: [search_tickets, search_clients, search_knowledge_base, add_ticket_note, log_time_entry, web_search]
-connectors: [IT Glue]
+connectors: []
 scope: global
 flow: no
 role: [Technician]

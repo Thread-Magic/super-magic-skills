@@ -3,7 +3,7 @@ name: Adobe Creative Cloud Licensing
 description: Fix Adobe Creative Cloud sign-in loops, access-denied errors, and Admin Console entitlement gaps between named-user and shared-device licensing.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
-connectors: [IT Glue, Hudu, NinjaOne]
+connectors: [IT Glue, Hudu]
 scope: single
 flow: no
 role: [Technician]

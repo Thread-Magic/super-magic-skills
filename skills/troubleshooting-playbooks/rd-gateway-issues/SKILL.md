@@ -3,7 +3,7 @@ name: RD Gateway Issues
 description: Fix Remote Desktop Gateway and RD Web Access problems: external RDP failures, certificate errors, CAP/RAP policy mismatches, and MFA integration failures.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
-connectors: [IT Glue, Hudu, Liongard]
+connectors: [IT Glue, Hudu]
 scope: single
 flow: no
 role: [Technician]

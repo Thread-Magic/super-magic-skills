@@ -3,7 +3,7 @@ name: AD CS / Internal PKI Issues
 description: Troubleshoot AD CS internal PKI issues — enrollment and template failures, CRL revocation-check errors, and certificate expiry cascades before reissuing.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
-connectors: [IT Glue, Hudu, Liongard, NinjaOne]
+connectors: [IT Glue, Hudu]
 scope: single
 flow: no
 role: [Technician]

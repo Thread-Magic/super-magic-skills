@@ -3,7 +3,7 @@ name: Hyper-V Clustering
 description: Troubleshoot Hyper-V failover clusters — quorum loss, CSV redirected or offline, failed live migrations, stuck node drains — from cluster and event logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
-connectors: [IT Glue, Hudu, Liongard, NinjaOne]
+connectors: [IT Glue, Hudu]
 scope: single
 flow: no
 role: [Technician]

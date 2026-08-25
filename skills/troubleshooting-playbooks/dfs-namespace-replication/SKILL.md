@@ -3,7 +3,7 @@ name: DFS Namespace and Replication
 description: Fix DFS-N referral failures and DFS-R replication backlog, conflicts, and staging-quota issues using health reports and backlog counts, not blind reinit.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
-connectors: [IT Glue, Hudu, Liongard, NinjaOne]
+connectors: [IT Glue, Hudu]
 scope: single
 flow: no
 role: [Technician]
