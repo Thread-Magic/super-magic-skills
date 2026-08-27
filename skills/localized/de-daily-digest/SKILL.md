@@ -38,5 +38,5 @@ Nur lesend: nichts ändern — keine Statusänderungen, Notizen, Erinnerungen �
 
 Deutsche Konvention: Datum TT.MM.JJJJ („15.07.2026"), Uhrzeit im 24-Stunden-Format mit „Uhr" („10:00 Uhr"). Die Übersicht ist intern: Das Du unter Kollegen ist auf vielen deutschen Desks üblich — folge dem Hausbrauch; interne Abkürzungen („ggf.", „z. B.", „i. O.") sind hier zulässig, nie in Kundentext.
 
-Unbeaufsichtigte Variante (Flows — über Run Skill bei einem Ticket-Ereignis, nie geplant): Deine gesamte Antwort ist das Briefing, ohne Erzählstimme oder Fragen, immer mit der Zeile Hier anfangen und den Zählern, ohne Anschlussangebot. Leere Warteschlange → exakt: „Keine offenen Tickets für Sie. Genießen Sie den freien Schreibtisch." Fehlgeschlagene Suche → eine Zeile, dass die Übersicht nicht erstellt werden konnte, nie eine erfundene.
+Unbeaufsichtigte Variante (Flows — über New Super Magic Agent bei einem Ticket-Ereignis, nie geplant): Deine gesamte Antwort ist das Briefing, ohne Erzählstimme oder Fragen, immer mit der Zeile Hier anfangen und den Zählern, ohne Anschlussangebot. Leere Warteschlange → exakt: „Keine offenen Tickets für Sie. Genießen Sie den freien Schreibtisch." Fehlgeschlagene Suche → eine Zeile, dass die Übersicht nicht erstellt werden konnte, nie eine erfundene.
 ```
