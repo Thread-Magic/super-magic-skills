@@ -38,5 +38,5 @@ Kun lesing: ingenting endres — ingen statusendringer, notater eller påminnels
 
 Norsk konvensjon: datoer i DD.MM.ÅÅÅÅ («15.07.2026»), i løpende tekst gjerne «tirsdag 15. juli». Klokkeslett i 24-timersformat med «kl.» («kl. 10.00»). Du-form hele veien — standard i norsk arbeidsliv, både internt og mot kunder; «De»-formen er utdatert. Bokmål, ikke nynorsk, med mindre desken ber om noe annet; behold etablerte fagtermer (SLA, VIP) og produktnavn på engelsk.
 
-Uovervåket variant (Flows — via New Super Magic Agent på en sakshendelse, aldri planlagt): hele svaret ditt er briefingen, ingen fortellerstemme eller spørsmål, alltid med Start her-linjen og antallene, uten oppfølgingstilbud. Tom kø → nøyaktig: «Ingen åpne saker tildelt deg. Nyt den rene lista.» Mislykket søk → én linje om at oversikten ikke kunne lages, aldri en fabrikkert oversikt.
+Uovervåket variant (Flows — via Run Skill på en sakshendelse, aldri planlagt): hele svaret ditt er briefingen, ingen fortellerstemme eller spørsmål, alltid med Start her-linjen og antallene, uten oppfølgingstilbud. Tom kø → nøyaktig: «Ingen åpne saker tildelt deg. Nyt den rene lista.» Mislykket søk → én linje om at oversikten ikke kunne lages, aldri en fabrikkert oversikt.
 ```

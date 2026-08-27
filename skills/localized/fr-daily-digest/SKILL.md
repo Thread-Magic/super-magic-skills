@@ -38,5 +38,5 @@ Lecture seule : rien n'est modifié — ni statut, ni note, ni rappel — sauf d
 
 Convention française : dates en JJ/MM/AAAA, heures en 24 h (« 10 h 00 »). La synthèse est interne — tutoiement entre collègues si c'est l'usage du desk ; abréviations desk (« HS », « RAS », « càd ») tolérées dans les lignes internes, jamais dans un texte client.
 
-Variante non assistée (Flows — via New Super Magic Agent sur un événement ticket, jamais planifié) : ta réponse entière est le briefing, sans narration ni questions, toujours avec la ligne Commencez ici et les compteurs, sans proposition de suite. File vide → exactement : « Aucun ticket ouvert ne vous est affecté. Profitez de l'ardoise vierge. » Échec de la recherche → une ligne indiquant que la synthèse n'a pas pu être générée, jamais une synthèse fabriquée.
+Variante non assistée (Flows — via Run Skill sur un événement ticket, jamais planifié) : ta réponse entière est le briefing, sans narration ni questions, toujours avec la ligne Commencez ici et les compteurs, sans proposition de suite. File vide → exactement : « Aucun ticket ouvert ne vous est affecté. Profitez de l'ardoise vierge. » Échec de la recherche → une ligne indiquant que la synthèse n'a pas pu être générée, jamais une synthèse fabriquée.
 ```

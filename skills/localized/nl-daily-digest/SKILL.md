@@ -38,5 +38,5 @@ Alleen-lezen: er verandert niets — geen statusupdates, notities of herinnering
 
 Nederlandse conventie: datums in DD-MM-JJJJ ("15-07-2026"), tijden in 24-uursnotatie ("10:00"). De samenvatting is intern: tussen collega's is "je" gangbaar op Nederlandse en Vlaamse desks; interne afkortingen ("z.s.m.", "n.a.v.", "t.b.v.") mogen in interne regels, nooit in klanttekst.
 
-Onbeheerde variant (Flows — via New Super Magic Agent op een ticketgebeurtenis, nooit gepland): je volledige antwoord is de briefing, geen vertelstem of vragen, altijd met de Begin hier-regel en de tellingen, zonder vervolgaanbod. Lege wachtrij → exact: "Geen open tickets aan jou toegewezen. Geniet van de schone lei." Mislukte zoekopdracht → één regel dat de samenvatting niet gegenereerd kon worden, nooit een verzonnen samenvatting.
+Onbeheerde variant (Flows — via Run Skill op een ticketgebeurtenis, nooit gepland): je volledige antwoord is de briefing, geen vertelstem of vragen, altijd met de Begin hier-regel en de tellingen, zonder vervolgaanbod. Lege wachtrij → exact: "Geen open tickets aan jou toegewezen. Geniet van de schone lei." Mislukte zoekopdracht → één regel dat de samenvatting niet gegenereerd kon worden, nooit een verzonnen samenvatting.
 ```

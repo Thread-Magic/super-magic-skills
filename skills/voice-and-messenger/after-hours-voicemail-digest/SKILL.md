@@ -60,7 +60,7 @@ such. Keep client/caller references to what recipients need (name + client); no 
 transcripts.
 
 Running it unattended: run it manually on demand or from an external scheduler that invokes
-Super Magic; a Flow can only reach it by carrying this prompt in a New Super Magic Agent action on a qualifying ticket event. When it runs
+Super Magic; a Flow can only reach it via Run Skill on a qualifying ticket event. When it runs
 unattended, output deterministic sections in the order above, plain text, every line with a
 ticket number; empty sections stated as "none" rather than omitted. If zero real items: post
 the one-line "No after-hours voice activity in window. <n> junk calls filtered." — never stay

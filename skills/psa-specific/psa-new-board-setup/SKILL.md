@@ -51,9 +51,9 @@ PSA-side, and create nothing Thread-side until the design is confirmed.
 
 7. Flows. Flows are triggered by ticket events against conditions (board, status, priority,
    type). They are NOT scheduled and CANNOT trigger on ticket age or time in status, so "route
-   incoming here" and "run a prompt when status enters X" are valid designs and "escalate after
+   incoming here" and "run a skill when status enters X" are valid designs and "escalate after
    4 hours idle" is not — that stays a manual sweep. A Flow's own actions are limited; email,
-   ticket creation and time logging only happen when it calls New Super Magic
+   ticket creation and time logging only happen when it calls Run Skill or New Super Magic
    Agent. Check existing Flows for overlap, and state the limit rather than designing a Flow
    that cannot exist.
 

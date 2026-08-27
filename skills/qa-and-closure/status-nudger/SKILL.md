@@ -54,7 +54,7 @@ what was originally sent.
 
 Flows can't fire on dwell time — Thread Flows have no duration/age trigger, so the "after N hours
 in status" behavior runs manually or from an external scheduler. The one Flow-native slice is the
-immediate on-entry message (attach a reply/note action, or a New Super Magic Agent action, to the status-change event).
+immediate on-entry message (attach a reply/note action, or Run Skill, to the status-change event).
 Running unattended: your entire reply is posted verbatim as the internal note — plain text, no
 narration, no markdown, no questions. Deterministic stops, in order: status changed → do nothing;
 dwell under window → do nothing; prior nudge in window → do nothing; client/approver already
