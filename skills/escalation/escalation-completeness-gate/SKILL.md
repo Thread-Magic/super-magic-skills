@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # Escalation Completeness Gate
 
-**When to use:** A lead wants the escalation queue graded for completeness; senior tiers complain escalations arrive thin and you want the gate run over the current queue; or as a New Super Magic Agent action on a Flow that fires when a ticket moves to "Escalation Requested."
+**When to use:** A lead wants the escalation queue graded for completeness; senior tiers complain escalations arrive thin and you want the gate run over the current queue; or as a Run Skill action on a Flow that fires when a ticket moves to "Escalation Requested."
 
 **Run it:** on one ticket · across the escalation queue · or as a Flow (when a ticket moves to "Escalation Requested").
 

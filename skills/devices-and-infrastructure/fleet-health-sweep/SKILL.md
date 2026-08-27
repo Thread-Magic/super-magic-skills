@@ -14,7 +14,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 **When to use:** "Which devices at <client> need attention?", a proactive weekly/monthly health pass, or prepping for an on-site visit / QBR.
 
-**Run it:** across a client's whole fleet, on demand (not a Flow — a cadence sweep has no ticket event to fire on; a Flow can only reach it by carrying this prompt in a New Super Magic Agent action on a qualifying ticket).
+**Run it:** across a client's whole fleet, on demand (not a Flow — a cadence sweep has no ticket event to fire on; a Flow can only reach it via Run Skill on a qualifying ticket).
 
 ## Prompt
 
@@ -30,7 +30,7 @@ Whole-client RMM sweep rolled up into a ranked top-N list of issues worth a tech
 
 Guardrails: read-only — never reset alerts, reboot, or change anything during a sweep; propose actions, do not take them. Result-cap honesty is mandatory — a possibly-truncated fleet number is a floor, never exact. Long-offline devices may be retired hardware still enrolled — flag "verify still in service", not incidents. Use <client> in any templated example output — no real client names.
 
-Note: Flows cannot schedule or time-trigger this — Flows fire on ticket events only. Run it manually on demand, or from an external scheduler; a Flow can only reach it by carrying this prompt in a New Super Magic Agent action on a qualifying ticket event.
+Note: Flows cannot schedule or time-trigger this — Flows fire on ticket events only. Run it manually on demand, or from an external scheduler; a Flow can only reach it via Run Skill on a qualifying ticket event.
 
-Unattended mode (if reached via a New Super Magic Agent action on a ticket): entire reply is the plain-text fleet digest posted verbatim (summary counts, then ranked issue list with device, problem, next action). Input is the RMM organization id (never a name to resolve unattended); id missing or not found -> output nothing. Capped listings make every affected count "at least N" and the summary line gains "SWEEP PARTIAL". Permitted write: the note to the designated destination only — no resets, reboots, or maintenance changes. RMM not enabled -> output nothing.
+Unattended mode (if reached via Run Skill on a ticket): entire reply is the plain-text fleet digest posted verbatim (summary counts, then ranked issue list with device, problem, next action). Input is the RMM organization id (never a name to resolve unattended); id missing or not found -> output nothing. Capped listings make every affected count "at least N" and the summary line gains "SWEEP PARTIAL". Permitted write: the note to the designated destination only — no resets, reboots, or maintenance changes. RMM not enabled -> output nothing.
 ```
