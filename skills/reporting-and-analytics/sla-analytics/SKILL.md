@@ -1,6 +1,6 @@
 ---
 name: SLA Analytics
-description: Someone asks how the desk is doing against SLA — first-response and resolution performance versus targets, and which tickets breached and why.
+description: Someone asks how the desk is doing against SLA: first-response and resolution performance versus targets, and which tickets breached and why.
 category: Reporting & Analytics
 tools: [search_tickets, list_boards, list_ticket_priorities, list_ticket_statuses]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Intent Builder
-description: Build or update a customer-facing intent — trigger phrases, arguments, replies, and per-client variations — with a test plan before anything goes live.
+description: Build or update a customer-facing intent (trigger phrases, arguments, replies, and per-client variations), with a test plan before anything goes live.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets]
 connectors: []

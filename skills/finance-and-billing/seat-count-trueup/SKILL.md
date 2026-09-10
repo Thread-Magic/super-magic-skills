@@ -1,6 +1,6 @@
 ---
 name: Seat Count True-Up
-description: Monthly true-up for per-seat and per-device agreements — compare actual counts from RMM and onboarding tickets against billing, and produce evidence.
+description: Monthly true-up for per-seat and per-device agreements: compare actual counts from RMM and onboarding tickets against billing, and produce evidence.
 category: Finance & Billing
 tools: [search_tickets, search_clients, search_ninjaone_devices]
 connectors: [NinjaOne, ConnectWise RMM]

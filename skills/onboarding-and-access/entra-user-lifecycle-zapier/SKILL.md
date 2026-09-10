@@ -12,9 +12,9 @@ outcome: [Faster Resolution & Response]
 
 # Entra User Lifecycle (Zapier)
 
-**When to use:** "Create the Entra account for <user> per the onboarding ticket" / "disable <user> in Entra now — offboarding effective today" / "update <user>'s title/department/manager in Entra" — an onboarding, offboarding, or user-update ticket where the desk executes Entra changes itself via the Zapier connector.
+**When to use:** "Create the Entra account for <user> per the onboarding ticket" / "disable <user> in Entra now (offboarding effective today" / "update <user>'s title/department/manager in Entra") an onboarding, offboarding, or user-update ticket where the desk executes Entra changes itself via the Zapier connector.
 
-**Run it:** on one ticket — every write is approval-gated; not eligible for unattended Flow writes.
+**Run it:** on one ticket, every write is approval-gated; not eligible for unattended Flow writes.
 
 ## Prompt
 

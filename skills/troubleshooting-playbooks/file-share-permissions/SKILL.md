@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 **When to use:** A user gets Access Denied on a share or folder (or suddenly lost access); a user can see a folder they shouldn't (over-permission report); a new hire can't reach what their role should reach; or after a migration/reorg a team's access is inconsistent.
 
-**Run it:** on the one ticket you're working — a tech ladders the permissions hands-on and confirms authorization; not unattended.
+**Run it:** on the one ticket you're working, a tech ladders the permissions hands-on and confirms authorization; not unattended.
 
 ## Prompt
 

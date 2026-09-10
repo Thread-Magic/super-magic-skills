@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # Shared Mailbox Delegation
 
-**When to use:** "Add <user> to the support shared mailbox" / "<user> needs to send as accounting@<client-domain>" / "give the assistant access to the manager's mailbox" — setting up, changing, or reviewing a delegation.
+**When to use:** "Add <user> to the support shared mailbox" / "<user> needs to send as accounting@<client-domain>" / "give the assistant access to the manager's mailbox", setting up, changing, or reviewing a delegation.
 
 **Run it:** on one ticket — approval-gated, so a human confirms the delegation.
 

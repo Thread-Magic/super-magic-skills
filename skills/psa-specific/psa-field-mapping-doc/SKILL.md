@@ -1,6 +1,6 @@
 ---
 name: PSA Field Mapping Doc
-description: Build and maintain a Thread ↔ PSA field-mapping cheat sheet — statuses, boards, priorities, classification values — from observed tickets, not assumptions.
+description: Build and maintain a Thread ↔ PSA field-mapping cheat sheet (statuses, boards, priorities, classification values) from observed tickets, not assumptions.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, list_ticket_priorities, search_knowledge_base, add_ticket_note]
 connectors: []

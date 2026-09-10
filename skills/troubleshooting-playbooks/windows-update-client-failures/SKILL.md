@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** One machine (or a handful) erroring on updates with an 0x8024xxxx / 0x800Fxxxx / 0xC1900xxx code; an update that installs, reboots, then rolls back ("We couldn't complete the updates"); "checking for updates" hanging, or a machine compliant in one console but stale in another; or RMM patch reports flagging a device repeatedly failing the same KB.
 
-**Run it:** on the one device ticket you're working — a tech works it hands-on; not unattended.
+**Run it:** on the one device ticket you're working, a tech works it hands-on; not unattended.
 
 ## Prompt
 

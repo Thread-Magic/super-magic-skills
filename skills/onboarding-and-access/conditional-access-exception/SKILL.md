@@ -14,7 +14,7 @@ outcome: [Risk & Compliance]
 
 **When to use:** "Exclude <user> from the MFA policy — their app can't handle it" / "this service account keeps getting blocked by conditional access" / "add an exception for <application>/<location> to the sign-in policy" / a recurring sign-in failure whose requested fix is a policy carve-out.
 
-**Run it:** on one ticket — a security-posture change, so approval- and human-gated.
+**Run it:** on one ticket, a security-posture change, so approval- and human-gated.
 
 ## Prompt
 

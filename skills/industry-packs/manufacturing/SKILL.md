@@ -12,7 +12,7 @@ outcome: [Risk & Compliance, Faster Resolution & Response]
 
 # Supporting Manufacturing Clients
 
-**When to use:** A manufacturer, machine shop, processor, or industrial operation, or a ticket naming an ERP/MES (Epicor, SYSPRO, Global Shop, JobBOSS), shop-floor terminals, label printers, or "the machine's computer" — anything that might touch production equipment, controllers, or their network segment; line-down tickets; or scoping a patch cycle, discovery scan, or agent rollout at a plant.
+**When to use:** A manufacturer, machine shop, processor, or industrial operation, or a ticket naming an ERP/MES (Epicor, SYSPRO, Global Shop, JobBOSS), shop-floor terminals, label printers, or "the machine's computer", anything that might touch production equipment, controllers, or their network segment; line-down tickets; or scoping a patch cycle, discovery scan, or agent rollout at a plant.
 
 **Run it:** on one ticket · or across all of this client's tickets.
 

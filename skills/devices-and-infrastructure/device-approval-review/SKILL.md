@@ -1,6 +1,6 @@
 ---
 name: Device Approval Review
-description: Work the RMM pending-device approval queue — sort expected onboarding or replacement agents from unexpected ones, approving or rejecting with rationale.
+description: Work the RMM pending-device approval queue: sort expected onboarding or replacement agents from unexpected ones, approving or rejecting with rationale.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, set_ninjaone_device_approval, search_tickets, search_contacts, add_ticket_note]
 connectors: [NinjaOne]

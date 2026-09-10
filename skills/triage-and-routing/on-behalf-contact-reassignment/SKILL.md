@@ -1,6 +1,6 @@
 ---
 name: Reassign Contact Submitted On Behalf Of
-description: Catch tickets one person opened for a colleague ("submitting this on behalf of Jane") and move the ticket's contact to the person the request is actually for — so it's attributed, notified, and reported against the right end user.
+description: Catch tickets one person opened for a colleague ("submitting this on behalf of Jane") and move the ticket's contact to the person the request is actually for, so it's attributed, notified, and reported against the right end user.
 category: Triage & Routing
 tools: [search_tickets, search_contacts, assign_contact, add_ticket_note]
 connectors: []

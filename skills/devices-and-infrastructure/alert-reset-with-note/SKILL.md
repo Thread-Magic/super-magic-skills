@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # Alert Reset With Note
 
-**When to use:** "Clear/reset the alert on <device>, it's fine now" — or a stale alert whose condition has visibly recovered.
+**When to use:** "Clear/reset the alert on <device>, it's fine now", or a stale alert whose condition has visibly recovered.
 
 **Run it:** on one alert/device · or as a Flow triggered when a recovery/alert-clear event lands on the ticket.
 

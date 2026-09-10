@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 **When to use:** A confirmed Veeam restore needs executing and you're choosing/executing the method — "get back this file/folder" (file-level), "this mailbox / SharePoint item" (application-item), "this whole VM", a server down that the business needs running fast (Instant Recovery), or restoring a system to a known-good point after a failed change or a ransomware-clean confirmation.
 
-**Run it:** on the one restore ticket you're working — a tech drives Veeam hands-on with approvals; not unattended.
+**Run it:** on the one restore ticket you're working, a tech drives Veeam hands-on with approvals; not unattended.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Merge Duplicate Tickets
-description: Find duplicate tickets — a client who wrote in twice, a re-forwarded alert, the same issue split across threads — confirm they're really the same, and merge them into one so the desk works a single thread.
+description: Find duplicate tickets (a client who wrote in twice, a re-forwarded alert, the same issue split across threads) confirm they're really the same, and merge them into one so the desk works a single thread.
 category: QA & Closure
 tools: [search_tickets, merge_ticket, add_ticket_note, update_ticket, list_boards]
 connectors: []

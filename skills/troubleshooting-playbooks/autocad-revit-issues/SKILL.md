@@ -1,6 +1,6 @@
 ---
 name: AutoCAD / Revit Issues
-description: Troubleshoot Autodesk AutoCAD and Revit — FlexNet network license checkout failures, drawing corruption, and BIM central-model worksharing sync.
+description: Troubleshoot Autodesk AutoCAD and Revit: FlexNet network license checkout failures, drawing corruption, and BIM central-model worksharing sync.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "No license available" / AutoCAD or Revit won't check out a network license or licensing dropped for a site; a .dwg or .rvt won't open, crashes on open, or shows corruption; Revit "Synchronize with Central" fails, hangs, or throws conflicts; or very large drawings/models are slow or worksharing/central-file access broke.
 
-**Run it:** on the one ticket you're working — a tech drives this hands-on with the user and the BIM manager, not unattended.
+**Run it:** on the one ticket you're working, a tech drives this hands-on with the user and the BIM manager, not unattended.
 
 ## Prompt
 

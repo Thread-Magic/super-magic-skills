@@ -1,6 +1,6 @@
 ---
 name: CEO Service Desk Brief
-description: An owner or CEO asks for a review of the service desk — a business-level readout with trends, risks, and a decision to make, no ticket IDs.
+description: An owner or CEO asks for a review of the service desk, a business-level readout with trends, risks, and a decision to make, no ticket IDs.
 category: Reporting & Analytics
 tools: [search_tickets, search_clients, list_boards]
 connectors: []

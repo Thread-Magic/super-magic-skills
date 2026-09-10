@@ -1,6 +1,6 @@
 ---
 name: Outage Notification
-description: Draft a major-incident or mass-outage client notice — known impact, what we're doing, when the next update comes — without speculating on cause.
+description: Draft a major-incident or mass-outage client notice (known impact, what we're doing, when the next update comes), without speculating on cause.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise, Retention & Growth (CSAT/Expansion)]
 
 # Outage Notification
 
-**When to use:** "Draft an outage notification for <service> being down" / "notify all affected clients about this incident" — a major incident ticket needs its first client-facing notice or an interim update.
+**When to use:** "Draft an outage notification for <service> being down" / "notify all affected clients about this incident", a major incident ticket needs its first client-facing notice or an interim update.
 
 **Run it:** on one incident ticket.
 

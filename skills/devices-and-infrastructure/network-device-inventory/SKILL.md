@@ -1,6 +1,6 @@
 ---
 name: Network Device Inventory
-description: Refresh a client network device inventory — switches, APs, firewalls, routers per site — by combining documentation with what monitoring actually sees.
+description: Refresh a client network device inventory (switches, APs, firewalls, routers per site) by combining documentation with what monitoring actually sees.
 category: Devices & Infrastructure
 tools: [search_itglue, search_hudu, liongard_environment, liongard_device, liongard_launchpoint, liongard_metric, liongard_timeline, search_ninjaone_devices, get_ninjaone_device, add_ticket_note, create_ticket]
 connectors: [IT Glue, Hudu, Liongard, NinjaOne]

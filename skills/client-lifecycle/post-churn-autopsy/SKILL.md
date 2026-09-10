@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "<client> churned — run the autopsy"; "what can we learn from losing <client>?"; or "which signals did we miss before <former client> left?"
 
-**Run it:** on one churned client's full history — a manual blameless post-mortem, not a Flow.
+**Run it:** on one churned client's full history, a manual blameless post-mortem, not a Flow.
 
 ## Prompt
 

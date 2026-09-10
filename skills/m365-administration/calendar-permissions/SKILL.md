@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # Calendar Permissions
 
-**When to use:** A ticket asks for one user to see another's calendar, to make an assistant a delegate for a manager's calendar, for "everyone should see full details on the ops calendar," or to review/remove existing calendar grants. NOT for whole-mailbox access — that is shared-mailbox-delegation. This skill delivers calendar access at exactly the level requested — free/busy, details, edit, or full delegate — with the calendar owner's consent and a note that records who can see and do what.
+**When to use:** A ticket asks for one user to see another's calendar, to make an assistant a delegate for a manager's calendar, for "everyone should see full details on the ops calendar," or to review/remove existing calendar grants. NOT for whole-mailbox access — that is shared-mailbox-delegation. This skill delivers calendar access at exactly the level requested (free/busy, details, edit, or full delegate), with the calendar owner's consent and a note that records who can see and do what.
 
 **Run it:** on one client's request — you translate the ask into the minimum role and capture consent, a technician runs the PowerShell or Outlook delegate flow (not a Flow: it needs a human at the console).
 

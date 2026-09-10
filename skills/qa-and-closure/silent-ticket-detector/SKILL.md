@@ -1,6 +1,6 @@
 ---
 name: Silent Ticket Detector
-description: Find tickets where the client replied but no technician responded within threshold — surface each with wait time, @mention the tech, and draft a reply.
+description: Find tickets where the client replied but no technician responded within threshold: surface each with wait time, @mention the tech, and draft a reply.
 category: QA & Closure
 tools: [search_tickets, search_members, add_ticket_note]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 # Silent Ticket Detector
 
-**When to use:** "Any tickets where the client is waiting on us?" / "who's been left on read?" — a dispatcher's mid-day sweep, a lead measuring response discipline, or embedded in a Flow on a timer or customer-responded status.
+**When to use:** "Any tickets where the client is waiting on us?" / "who's been left on read?", a dispatcher's mid-day sweep, a lead measuring response discipline, or embedded in a Flow on a timer or customer-responded status.
 
 **Run it:** on one ticket · across all open tickets · or as a Flow (when a ticket flips to a customer-responded status).
 

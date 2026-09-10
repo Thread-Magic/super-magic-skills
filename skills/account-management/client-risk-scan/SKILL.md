@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "Which of my clients are at risk right now?"; "run a churn-risk scan across the portfolio"; or "any accounts I should worry about before renewals season?"
 
-**Run it:** across the whole portfolio — a manual internal scan, not a Flow.
+**Run it:** across the whole portfolio, a manual internal scan, not a Flow.
 
 ## Prompt
 

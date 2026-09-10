@@ -1,6 +1,6 @@
 ---
 name: Automation Completion Auto-Close
-description: When note evidence shows an intent or external automation finished the work, verify and auto-close the ticket — abort if any human message arrives after.
+description: When note evidence shows an intent or external automation finished the work, verify and auto-close the ticket: abort if any human message arrives after.
 category: Automation & Flows
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Automation Completion Auto-Close
 
-**When to use:** An intent or automation resolves a request end-to-end (password reset, provisioning step) and the ticket lingers open; "close the ones the automation already finished"; a flow should sweep automation-handled tickets closed once the completion note lands. Fires on the NOTE-ADDED event (the completion note landing) — not a timer or "N minutes after".
+**When to use:** An intent or automation resolves a request end-to-end (password reset, provisioning step) and the ticket lingers open; "close the ones the automation already finished"; a flow should sweep automation-handled tickets closed once the completion note lands. Fires on the NOTE-ADDED event (the completion note landing), not a timer or "N minutes after".
 
 **Run it:** on one ticket · or as a Flow (triggered when a completion note is added).
 

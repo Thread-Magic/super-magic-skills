@@ -1,6 +1,6 @@
 ---
 name: License Billing Reconciliation
-description: Reconcile a client's billing against reality — RMM devices, license export, onboarding tickets — to find missed adds, missed removals, and discrepancies.
+description: Reconcile a client's billing against reality (RMM devices, license export, onboarding tickets) to find missed adds, missed removals, and discrepancies.
 category: Finance & Billing
 tools: [search_tickets, search_clients, add_ticket_note, search_ninjaone_devices]
 connectors: [NinjaOne, ConnectWise RMM]

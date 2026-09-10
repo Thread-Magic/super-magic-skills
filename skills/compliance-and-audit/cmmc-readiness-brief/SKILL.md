@@ -1,6 +1,6 @@
 ---
 name: CMMC Readiness Brief
-description: Produce a CMMC level-readiness snapshot for a defense-adjacent client with likely standing and obvious gaps — never a certification or formal assessment.
+description: Produce a CMMC level-readiness snapshot for a defense-adjacent client with likely standing and obvious gaps, never a certification or formal assessment.
 category: Compliance & Audit
 tools: [search_tickets, search_itglue, search_hudu, add_ticket_note]
 connectors: [IT Glue, Hudu]

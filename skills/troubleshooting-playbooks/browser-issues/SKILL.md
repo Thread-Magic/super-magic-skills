@@ -1,6 +1,6 @@
 ---
 name: Browser Issues
-description: Diagnose browser problems — one broken site, SSO loops, crashes, extension conflicts — using profile isolation and extension bisect, not clear-everything.
+description: Diagnose browser problems (one broken site, SSO loops, crashes, extension conflicts) using profile isolation and extension bisect, not clear-everything.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** One website misbehaves for a user (won't load, renders broken, buttons dead); sign-in loops on a web app ("keeps asking me to log in"); the browser crashes, eats memory, or shows a "managed by your organization" surprise; or "it works in <browser A> but not <browser B>".
 
-**Run it:** on the one ticket you're working — a tech drives the isolations hands-on with the user, not unattended.
+**Run it:** on the one ticket you're working, a tech drives the isolations hands-on with the user, not unattended.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Mobile Fleet Review
-description: Review phones and tablets under MDM — enrollment, OS version spread, compliance flags, and readiness to lock or wipe a lost or stolen device.
+description: Review phones and tablets under MDM: enrollment, OS version spread, compliance flags, and readiness to lock or wipe a lost or stolen device.
 category: Devices & Infrastructure
 tools: [liongard_launchpoint, liongard_query, liongard_metric, search_ninjaone_devices, search_itglue, search_hudu, add_ticket_note, create_ticket, send_approval]
 connectors: [Liongard, NinjaOne, IT Glue, Hudu]

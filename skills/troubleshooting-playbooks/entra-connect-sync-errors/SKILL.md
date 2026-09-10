@@ -1,6 +1,6 @@
 ---
 name: Entra Connect Sync Errors
-description: Fix Entra Connect (Azure AD Connect) sync errors — export failures, duplicate attributes, quarantined objects, users missing in the cloud — no blind runs.
+description: Fix Entra Connect (Azure AD Connect) sync errors (export failures, duplicate attributes, quarantined objects, users missing in the cloud) no blind runs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** New or changed on-prem users/groups aren't appearing or updating in Entra ID / M365; the portal shows provisioning errors (duplicate attribute, InvalidSoftMatch, AttributeValueMustBeUnique); sync-health alerts fire (export errors, a connector quarantined, password hash sync stopped); or after a migration/consolidation objects matched to the wrong cloud user or a server swap is planned.
 
-**Run it:** on the one ticket you're working — a tech drives the sync console hands-on with the identity owner; not unattended.
+**Run it:** on the one ticket you're working, a tech drives the sync console hands-on with the identity owner; not unattended.
 
 ## Prompt
 

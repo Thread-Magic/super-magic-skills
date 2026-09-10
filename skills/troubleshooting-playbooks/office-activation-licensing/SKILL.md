@@ -1,6 +1,6 @@
 ---
 name: Office Activation & Licensing
-description: Fix Office / Microsoft 365 Apps activation — Product Deactivated, unlicensed mode, repeated prompts, shared-computer/RDS errors — detect the license type.
+description: Fix Office / Microsoft 365 Apps activation (Product Deactivated, unlicensed mode, repeated prompts, shared-computer/RDS errors) detect the license type.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "Product Deactivated" / "We couldn't verify your subscription" banners or red title-bar warnings; Office dropping into reduced-functionality/unlicensed mode after working fine; activation errors on RDS/AVD/shared PCs or after a reimage/rename; or "account already has the maximum number of installs" complaints. Sign-in problems beyond activation (MFA, Conditional Access) belong to m365-signin-issues.
 
-**Run it:** on the one ticket you're working — a tech drives detection and repair hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech drives detection and repair hands-on; not unattended.
 
 ## Prompt
 

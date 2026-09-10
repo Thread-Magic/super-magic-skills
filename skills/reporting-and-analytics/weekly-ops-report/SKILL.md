@@ -1,6 +1,6 @@
 ---
 name: Weekly Ops Report
-description: A service manager wants the weekly service-desk report — team volume, closures, sentiment, aging, and anything anomalous versus the prior week.
+description: A service manager wants the weekly service-desk report: team volume, closures, sentiment, aging, and anything anomalous versus the prior week.
 category: Reporting & Analytics
 tools: [search_tickets, search_members, list_boards, list_ticket_statuses]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response, Fewer Escalations & Less Noise]
 
 # Weekly Ops Report
 
-**When to use:** "Run the weekly ops report" / "how did the desk do last week?" — a recurring Monday-morning summary for a lead or director, or "compare last week to the week before, anything off?"
+**When to use:** "Run the weekly ops report" / "how did the desk do last week?", a recurring Monday-morning summary for a lead or director, or "compare last week to the week before, anything off?"
 
 **Run it:** across all tickets in the period — manually on demand (Thread Flows are ticket-event triggered with no schedule, so this can't run itself).
 

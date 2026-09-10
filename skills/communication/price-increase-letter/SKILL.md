@@ -1,6 +1,6 @@
 ---
 name: Price Increase Letter
-description: Draft the client notice for an agreement price change — value-first framing, effective date, honest rationale — gated behind account-manager approval.
+description: Draft the client notice for an agreement price change (value-first framing, effective date, honest rationale) gated behind account-manager approval.
 category: Communication
 tools: [search_clients, search_tickets, view_openDraft]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 # Price Increase Letter
 
-**When to use:** "Draft the price increase letter for <client>" / "our rates go up <date> — help me write the notice" — an agreement renewal or rate change needs formal written notice.
+**When to use:** "Draft the price increase letter for <client>" / "our rates go up <date> (help me write the notice") an agreement renewal or rate change needs formal written notice.
 
 **Run it:** on one client's notice.
 

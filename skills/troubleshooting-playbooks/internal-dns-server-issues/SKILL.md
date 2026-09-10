@@ -1,6 +1,6 @@
 ---
 name: Internal DNS Server Issues
-description: Fix AD-integrated internal DNS — stale records, external dead while internal works (or reverse), records vanishing — distinct from public DNS/domain.
+description: Fix AD-integrated internal DNS (stale records, external dead while internal works (or reverse), records vanishing) distinct from public DNS/domain.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, liongard_launchpoint, liongard_metric, liongard_timeline, web_search]
 connectors: [IT Glue, Hudu, Liongard]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Internal names resolve to wrong/old IPs or stop resolving after a weekend, internal resolution works but the internet fails from domain machines (or only at one site), records for live machines keep disappearing, or the client's internal domain overlaps a public one and some names go to the wrong place. (Public records, registrars, SPF/MX belong to the dns-domain-issues and dmarc-spf-dkim-setup playbooks, not this one.)
 
-**Run it:** on the one ticket you're working — a tech drives the lookups hands-on and makes changes with the infra owner's approval; not unattended.
+**Run it:** on the one ticket you're working, a tech drives the lookups hands-on and makes changes with the infra owner's approval; not unattended.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Expectation-Setting Acknowledgment
-description: Draft the first-touch acknowledgment on a new ticket — what we understood, how seriously we're treating it, next steps, and when the client hears back.
+description: Draft the first-touch acknowledgment on a new ticket: what we understood, how seriously we're treating it, next steps, and when the client hears back.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response, Retention & Growth (CSAT/Expansion)]
 
 # Expectation-Setting Acknowledgment
 
-**When to use:** "Acknowledge this new ticket for the client" — a fresh ticket needs a first response that's more than an auto-reply and proves the request was actually read.
+**When to use:** "Acknowledge this new ticket for the client", a fresh ticket needs a first response that's more than an auto-reply and proves the request was actually read.
 
 **Run it:** on one ticket · or as a Flow (triggered when a ticket is created).
 

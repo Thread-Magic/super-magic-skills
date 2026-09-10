@@ -1,6 +1,6 @@
 ---
 name: NinjaOne Device Lookup from a Ticket
-description: Figure out which device a ticket is about — from the person, their remembered devices, or a hostname in the thread — find it in NinjaOne, and drop the live device details and a deep link into the ticket so the tech starts with context.
+description: Figure out which device a ticket is about (from the person, their remembered devices, or a hostname in the thread) find it in NinjaOne, and drop the live device details and a deep link into the ticket so the tech starts with context.
 category: Devices & Infrastructure
 tools: [search_tickets, search_contacts, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_link, add_ticket_note]
 connectors: [NinjaOne]

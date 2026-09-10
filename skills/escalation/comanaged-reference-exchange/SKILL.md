@@ -1,6 +1,6 @@
 ---
 name: Co-Managed Reference Exchange
-description: Keep ticket references straight across a co-managed IT boundary — recognize the other side's number format, preserve foreign refs, and audit both-way links.
+description: Keep ticket references straight across a co-managed IT boundary: recognize the other side's number format, preserve foreign refs, and audit both-way links.
 category: Escalation
 tools: [search_tickets, add_ticket_note, update_ticket, search_contacts]
 connectors: []

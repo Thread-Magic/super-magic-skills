@@ -12,7 +12,7 @@ outcome: [Risk & Compliance]
 
 # Break-Glass Account Audit
 
-**When to use:** A quarterly emergency-access audit for a managed tenant, before enabling or changing any Conditional Access policy (paired with conditional-access-review and security-defaults-vs-ca migrations), when nobody knows where a client's emergency admin credentials are, or after an incident or lockout where break-glass was (or should have been) used. A break-glass account is insurance that only pays out if it was maintained: excluded from every policy, credentials actually retrievable, alerts firing on use, and tested recently enough to trust. This audit verifies all four — because the discovery moment for a broken break-glass account is a tenant lockout.
+**When to use:** A quarterly emergency-access audit for a managed tenant, before enabling or changing any Conditional Access policy (paired with conditional-access-review and security-defaults-vs-ca migrations), when nobody knows where a client's emergency admin credentials are, or after an incident or lockout where break-glass was (or should have been) used. A break-glass account is insurance that only pays out if it was maintained: excluded from every policy, credentials actually retrievable, alerts firing on use, and tested recently enough to trust. This audit verifies all four, because the discovery moment for a broken break-glass account is a tenant lockout.
 
 **Run it:** as an on-demand audit across the tenant's emergency-access accounts and every CA policy — you compile findings and build remediation tickets, a technician walks the policies and runs the test sign-in (not a Flow: no schedule trigger, and it needs a human at the console).
 

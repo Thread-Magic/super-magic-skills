@@ -1,6 +1,6 @@
 ---
 name: Label and Receipt Printers
-description: Troubleshoot Zebra thermal label and ESC/POS receipt printers — ZPL/EPL print language, driver mode, spooler, and network faults — distinct from MFPs.
+description: Troubleshoot Zebra thermal label and ESC/POS receipt printers (ZPL/EPL print language, driver mode, spooler, and network faults) distinct from MFPs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -12,9 +12,9 @@ outcome: [Faster Resolution & Response]
 
 # Label and Receipt Printers
 
-**When to use:** A Zebra/thermal label printer prints blank, garbage/code, misaligned, or wrong-sized labels; a receipt printer at a POS/register won't print, prints gibberish, or double-prints; labels/receipts stopped after a driver/OS/app change; or barcodes scan poorly / the printer is offline on the network. (Office laser/MFP printing is the printer-troubleshooting playbook; a POS application that won't print is pos-system-issues — the app and the printer are different layers.)
+**When to use:** A Zebra/thermal label printer prints blank, garbage/code, misaligned, or wrong-sized labels; a receipt printer at a POS/register won't print, prints gibberish, or double-prints; labels/receipts stopped after a driver/OS/app change; or barcodes scan poorly / the printer is offline on the network. (Office laser/MFP printing is the printer-troubleshooting playbook; a POS application that won't print is pos-system-issues, the app and the printer are different layers.)
 
-**Run it:** on the one ticket you're working — a tech/user works the device hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech/user works the device hands-on; not unattended.
 
 ## Prompt
 

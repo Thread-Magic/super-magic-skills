@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Intent Bulk Variation Update
 
-**When to use:** "Add this argument to every variation of the <intent>" / "update the reply block across all client variations at once" / "roll this change out to every variation, not just one" — standardizing a shared change while keeping client-specific bits intact.
+**When to use:** "Add this argument to every variation of the <intent>" / "update the reply block across all client variations at once" / "roll this change out to every variation, not just one", standardizing a shared change while keeping client-specific bits intact.
 
 **Run it:** across all of an intent's variations — manually on demand (Flows can't schedule bulk config edits, so there's no Flow trigger for this one).
 

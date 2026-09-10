@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 # Anti-Spam Policy Tuning
 
-**When to use:** A client reports a pattern — "spam is flooding in" or "good mail keeps landing in junk/quarantine" — or asks to "whitelist this vendor's domain," or you're reviewing a tenant's anti-spam posture after repeated incidents. Single-message release requests are quarantine-release-request; single-delivery diagnosis is mail-flow-delivery. This skill changes filter behavior only where evidence shows the filter is wrong, with the narrowest override that fixes it — because every allow-list entry is a hole an attacker can drive through.
+**When to use:** A client reports a pattern ("spam is flooding in" or "good mail keeps landing in junk/quarantine"), or asks to "whitelist this vendor's domain," or you're reviewing a tenant's anti-spam posture after repeated incidents. Single-message release requests are quarantine-release-request; single-delivery diagnosis is mail-flow-delivery. This skill changes filter behavior only where evidence shows the filter is wrong, with the narrowest override that fixes it, because every allow-list entry is a hole an attacker can drive through.
 
 **Run it:** on one client's request — you gather the evidence and build the change, a technician runs it in the Defender portal or PowerShell (not a Flow: it needs a human at the console).
 

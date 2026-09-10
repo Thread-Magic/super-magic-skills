@@ -1,6 +1,6 @@
 ---
 name: Round-Robin Assignment
-description: Distribute incoming tickets fairly across a named technician roster in rotation, honoring exclusion rules — runnable unattended inside a Flow.
+description: Distribute incoming tickets fairly across a named technician roster in rotation, honoring exclusion rules: runnable unattended inside a Flow.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_members, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Halo Agent Teams
-description: HaloPSA team and section routing: team selects the pool, agent selects the person, and unassigned-within-team is a legitimate state — not an error.
+description: HaloPSA team and section routing: team selects the pool, agent selects the person, and unassigned-within-team is a legitimate state, not an error.
 category: PSA-Specific
 tools: [search_tickets, list_boards, update_ticket, add_ticket_note, search_members]
 connectors: []

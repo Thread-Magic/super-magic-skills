@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Fewer Escalations & Less Noise]
 
 **When to use:** A chunk of the fleet stopped reporting to WSUS or shows "not yet reported"; clients see approved updates but downloads sit at 0% or error 0x80244019/0x8024401c-style against the WSUS URL; the WSUS console times out, crashes, or the server disk is full; or patch compliance reports show machines needing updates approved weeks ago.
 
-**Run it:** on the one WSUS-server ticket you're working — a tech works the server hands-on with the patch owner aware; not unattended.
+**Run it:** on the one WSUS-server ticket you're working, a tech works the server hands-on with the patch owner aware; not unattended.
 
 ## Prompt
 

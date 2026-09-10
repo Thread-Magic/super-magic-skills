@@ -1,6 +1,6 @@
 ---
 name: Inspector Read Discipline
-description: Base skill defining how any Liongard inspector is read — resolve the environment, date the dataprint, verify field angles live, and state data age in every answer.
+description: Base skill defining how any Liongard inspector is read: resolve the environment, date the dataprint, verify field angles live, and state data age in every answer.
 category: Liongard Inspectors
 tools: [liongard_environment, liongard_launchpoint, liongard_metric, liongard_query, liongard_events]
 connectors: [Liongard]

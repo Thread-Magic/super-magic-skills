@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 **When to use:** An app or agent fails on the corporate network but works on a hotspot/home network; certificate warnings where the issuer is the firewall/security product rather than a public CA; a wave of "app X stopped working" tickets right after new inspection was rolled out (firewall replacement, SSE/proxy agent); or dev tools, package managers, or update mechanisms failing with certificate or chain errors.
 
-**Run it:** on the one ticket you're working — a tech gathers evidence and routes bypass requests to the security owner; not unattended.
+**Run it:** on the one ticket you're working, a tech gathers evidence and routes bypass requests to the security owner; not unattended.
 
 ## Prompt
 

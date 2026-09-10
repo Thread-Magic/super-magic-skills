@@ -12,7 +12,7 @@ outcome: [Risk & Compliance, Faster Resolution & Response]
 
 # Supporting Real Estate Clients
 
-**When to use:** A residential/commercial brokerage, agent team, or title/escrow company, or a ticket naming Dotloop, SkySlope, DocuSign Rooms, Lone Wolf, kvCORE, Follow Up Boss, MLS access, or Supra/SentriLock lockboxes — and ESPECIALLY any ticket mentioning wires, wiring instructions, closing funds, earnest money, changed payment details, or a suspicious email (treat as a potential incident, not a support request).
+**When to use:** A residential/commercial brokerage, agent team, or title/escrow company, or a ticket naming Dotloop, SkySlope, DocuSign Rooms, Lone Wolf, kvCORE, Follow Up Boss, MLS access, or Supra/SentriLock lockboxes, and ESPECIALLY any ticket mentioning wires, wiring instructions, closing funds, earnest money, changed payment details, or a suspicious email (treat as a potential incident, not a support request).
 
 **Run it:** on one ticket · or across all of this client's tickets.
 

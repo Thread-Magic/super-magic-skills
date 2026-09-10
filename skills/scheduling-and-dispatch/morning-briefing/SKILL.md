@@ -1,6 +1,6 @@
 ---
 name: Morning Briefing
-description: A start-of-day briefing across your tiered support boards — every open human ticket grouped and flagged (unassigned, aging, SLA risk), with the alert/automation noise filtered out, a quick-stats table per board, and the day's key follow-up actions, all in one scannable report.
+description: A start-of-day briefing across your tiered support boards, every open human ticket grouped and flagged (unassigned, aging, SLA risk), with the alert/automation noise filtered out, a quick-stats table per board, and the day's key follow-up actions, all in one scannable report.
 category: Scheduling & Dispatch
 tools: [search_tickets, list_boards, list_ticket_statuses]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response, Fewer Escalations & Less Noise]
 
 # Morning Briefing
 
-**When to use:** Start of the day or shift — a dispatcher or team lead wants one clean, scannable picture of every open ticket across the desk's support tiers, the monitoring/alert noise stripped out, and the day's priorities called out.
+**When to use:** Start of the day or shift, a dispatcher or team lead wants one clean, scannable picture of every open ticket across the desk's support tiers, the monitoring/alert noise stripped out, and the day's priorities called out.
 
 **Run it:** across all open tickets on your support boards, on demand each morning.
 

@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "The database / <LOB app> got slow this morning" or intermittent hangs; reports, saved queries, or a specific screen time out, or deadlock-victim errors (error 1205); "blocking" complaints where one user's action freezes others; or tempdb full, log file growth, or CPU pegged on the SQL host.
 
-**Run it:** on the one ticket you're working — a DBA/tech works it hands-on; not unattended.
+**Run it:** on the one ticket you're working, a DBA/tech works it hands-on; not unattended.
 
 ## Prompt
 

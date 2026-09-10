@@ -1,6 +1,6 @@
 ---
 name: Certificate Expiry Alert
-description: Triage a certificate expiry alert — tier urgency by days remaining, identify what the cert secures and who owns renewal, and route into renewal work.
+description: Triage a certificate expiry alert: tier urgency by days remaining, identify what the cert secures and who owns renewal, and route into renewal work.
 category: Alert Runbooks
 tools: [search_tickets, liongard_metric, liongard_timeline, liongard_launchpoint, search_itglue, search_hudu, search_knowledge_base, add_ticket_note, update_ticket]
 connectors: [Liongard, IT Glue, Hudu]

@@ -1,6 +1,6 @@
 ---
 name: Voice Call QA Review
-description: Review AI-handled voice calls against a rubric — caller identified, issue captured, commitments accurate, clean handoff — with transcript evidence cited.
+description: Review AI-handled voice calls against a rubric (caller identified, issue captured, commitments accurate, clean handoff), with transcript evidence cited.
 category: Voice & Messenger
 tools: [search_tickets, add_ticket_note]
 connectors: []

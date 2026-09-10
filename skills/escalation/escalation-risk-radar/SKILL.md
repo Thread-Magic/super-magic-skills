@@ -1,6 +1,6 @@
 ---
 name: Escalation Risk Radar
-description: Scan open tickets for the early signs of a blow-up — negative sentiment, an SLA deadline closing in, and threads that have gone quiet — score and rank them, so a senior tech can step in before a client escalates.
+description: Scan open tickets for the early signs of a blow-up (negative sentiment, an SLA deadline closing in, and threads that have gone quiet) score and rank them, so a senior tech can step in before a client escalates.
 category: Escalation
 tools: [search_tickets, search_clients, add_ticket_note, update_ticket]
 connectors: []

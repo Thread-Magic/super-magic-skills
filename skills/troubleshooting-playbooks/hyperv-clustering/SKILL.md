@@ -1,6 +1,6 @@
 ---
 name: Hyper-V Clustering
-description: Troubleshoot Hyper-V failover clusters — quorum loss, CSV redirected or offline, failed live migrations, stuck node drains — from cluster and event logs.
+description: Troubleshoot Hyper-V failover clusters (quorum loss, CSV redirected or offline, failed live migrations, stuck node drains) from cluster and event logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "The cluster is down" or a node is paused, down, or isolated; a CSV shows Redirected Access, No Access, or a volume dropped offline; live migration or quick migration fails or hangs and VMs won't move off a node; or draining/pausing a node for patching won't complete, or roles won't come online after a failover.
 
-**Run it:** on the one ticket you're working — a tech with cluster-admin access drives this; not unattended.
+**Run it:** on the one ticket you're working, a tech with cluster-admin access drives this; not unattended.
 
 ## Prompt
 

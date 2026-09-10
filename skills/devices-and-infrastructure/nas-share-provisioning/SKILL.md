@@ -1,6 +1,6 @@
 ---
 name: NAS / File Share Provisioning
-description: Plan and document a new network share — folder structure, permission model, quota, backup inclusion — with an approval gate on the access model first.
+description: Plan and document a new network share (folder structure, permission model, quota, backup inclusion), with an approval gate on the access model first.
 category: Devices & Infrastructure
 tools: [search_itglue, search_knowledge_base, search_ninjaone_devices, create_ticket, add_ticket_note, send_approval]
 connectors: [IT Glue, NinjaOne]
@@ -14,7 +14,7 @@ outcome: [Risk & Compliance]
 
 **When to use:** "Create a new share for the <department> team", provisioning a project/department folder, or restructuring an ad-hoc share into a proper permission model.
 
-**Run it:** on one provisioning ticket, on demand (not a Flow — the access model routes through human approval).
+**Run it:** on one provisioning ticket, on demand (not a Flow, the access model routes through human approval).
 
 ## Prompt
 

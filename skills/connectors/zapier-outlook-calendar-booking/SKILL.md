@@ -1,6 +1,6 @@
 ---
 name: Zapier Outlook Calendar Booking
-description: Book remote sessions and onsite visits on the tech's Outlook calendar — Create Event with Teams link, attendees, ticket reference, mirrored in Thread.
+description: Book remote sessions and onsite visits on the tech's Outlook calendar: Create Event with Teams link, attendees, ticket reference, mirrored in Thread.
 category: Connectors
 tools: [search_tickets, search_contacts, search_members, schedule_ticket, update_schedule_entry, add_ticket_note, create_timezest_scheduling_request]
 connectors: [Zapier: Microsoft Outlook, TimeZest]

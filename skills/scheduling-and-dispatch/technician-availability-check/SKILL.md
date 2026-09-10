@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "Who's the next available tech?" / "who can jump on this call right now?"; "is <tech> free this afternoon?"; or picking a warm-transfer target for a live client call.
 
-**Run it:** across the active roster — a read-only availability answer.
+**Run it:** across the active roster, a read-only availability answer.
 
 ## Prompt
 

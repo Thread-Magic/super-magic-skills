@@ -1,6 +1,6 @@
 ---
 name: Flow Bulk Editor
-description: List the desk's flows, present the target set, then bulk enable, disable, or rename them in one confirmed pass — no editing each flow by hand.
+description: List the desk's flows, present the target set, then bulk enable, disable, or rename them in one confirmed pass, no editing each flow by hand.
 category: Automation & Flows
 tools: [list_flows, get_flow, update_flow]
 connectors: []

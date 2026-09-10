@@ -1,6 +1,6 @@
 ---
 name: Notion Change Log
-description: Append approved changes to a queryable Notion change-log database — what changed, for which client, who approved, and the source ticket.
+description: Append approved changes to a queryable Notion change-log database: what changed, for which client, who approved, and the source ticket.
 category: Connectors
 tools: [search_tickets, send_approval]
 connectors: [Notion]

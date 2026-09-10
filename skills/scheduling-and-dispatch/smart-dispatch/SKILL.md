@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response, Time & Cost Savings (Capacity)]
 
 # Smart Dispatch
 
-**When to use:** "Automate our dispatching" — a Flow fires on ticket creation and the desk wants classify → route → assign → schedule in one pass; or a dispatcher wants one command that does the whole first-pass dispatch instead of running triage, routing, and assignment separately.
+**When to use:** "Automate our dispatching", a Flow fires on ticket creation and the desk wants classify → route → assign → schedule in one pass; or a dispatcher wants one command that does the whole first-pass dispatch instead of running triage, routing, and assignment separately.
 
 **Run it:** on one ticket · or as a Flow that classifies, routes, assigns, and schedules each new ticket.
 

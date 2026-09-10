@@ -1,6 +1,6 @@
 ---
 name: Sweep Honesty
-description: Base skill defining how a skill reports on a search or bulk sweep — result caps, what it could not see, and never presenting a partial pass as a complete one.
+description: Base skill defining how a skill reports on a search or bulk sweep: result caps, what it could not see, and never presenting a partial pass as a complete one.
 category: Automation & Flows
 tools: [search_tickets]
 connectors: []

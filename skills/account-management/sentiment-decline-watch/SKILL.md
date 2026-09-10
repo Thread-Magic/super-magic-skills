@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "Which clients are getting unhappy with us?"; "show me sentiment trends across accounts this month"; or "why is <client>'s sentiment dropping, and what should I do?" For the full four-signal portfolio view, use Client Risk Scan.
 
-**Run it:** across the portfolio or one named client — a manual internal watch, not a Flow.
+**Run it:** across the portfolio or one named client, a manual internal watch, not a Flow.
 
 ## Prompt
 

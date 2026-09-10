@@ -1,6 +1,6 @@
 ---
 name: ESL Drafting Assistant
-description: Grammar and idiom cleanup for technicians writing in non-native English — "fix my English" or "mejorar ingles," technical content untouched.
+description: Grammar and idiom cleanup for technicians writing in non-native English: "fix my English" or "mejorar ingles," technical content untouched.
 category: Communication
 tools: []
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # ESL Drafting Assistant
 
-**When to use:** "Fix my English: <draft>" / "mejorar ingles" / "correct this before I send it" — a draft with correct technical content but awkward grammar, word order, or idioms.
+**When to use:** "Fix my English: <draft>" / "mejorar ingles" / "correct this before I send it", a draft with correct technical content but awkward grammar, word order, or idioms.
 
 **Run it:** on one draft · or as a Flow (triggered when a reply draft is added).
 

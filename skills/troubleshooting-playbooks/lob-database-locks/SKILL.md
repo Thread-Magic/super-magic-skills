@@ -1,6 +1,6 @@
 ---
 name: LOB Database Locks
-description: Clear record-locked-by-another-user tickets in LOB apps — find the locking session in the vendor admin console and release it approved-only, never kill DB.
+description: Clear record-locked-by-another-user tickets in LOB apps: find the locking session in the vendor admin console and release it approved-only, never kill DB.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Fewer Escalations & Less Noise]
 
 **When to use:** "Record locked by another user" and that user is gone, at lunch, or "definitely not in it"; the whole LOB app says a batch/period/module is locked and nobody can work; a stuck login where the user crashed out but the app still counts them as signed in (sometimes eating a license); or repeat lock tickets on the same app where the pattern, not just today's lock, is the problem.
 
-**Run it:** on the one ticket you're working — a tech drives this with the app admin and the vendor; not unattended.
+**Run it:** on the one ticket you're working, a tech drives this with the app admin and the vendor; not unattended.
 
 ## Prompt
 

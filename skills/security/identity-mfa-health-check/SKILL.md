@@ -1,6 +1,6 @@
 ---
 name: Identity MFA Health Check
-description: Review a client's identity hygiene — MFA coverage, privileged accounts, and stale accounts — and return ranked findings with remediation recommendations.
+description: Review a client's identity hygiene (MFA coverage, privileged accounts, and stale accounts), and return ranked findings with remediation recommendations.
 category: Security
 tools: [liongard_identity, search_tickets, add_ticket_note]
 connectors: [Liongard]

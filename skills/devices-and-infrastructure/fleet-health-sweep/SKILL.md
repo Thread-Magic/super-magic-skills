@@ -1,6 +1,6 @@
 ---
 name: Fleet Health Sweep
-description: Sweep a client fleet through the RMM — offline devices, alert clusters, disk pressure, and missing patches — ranked into the top issues needing attention.
+description: Sweep a client fleet through the RMM (offline devices, alert clusters, disk pressure, and missing patches) ranked into the top issues needing attention.
 category: Devices & Infrastructure
 tools: [list_ninjaone_organizations, search_ninjaone_devices, get_ninjaone_device, list_ninjaone_alerts, add_ticket_note]
 connectors: [NinjaOne]
@@ -14,7 +14,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 **When to use:** "Which devices at <client> need attention?", a proactive weekly/monthly health pass, or prepping for an on-site visit / QBR.
 
-**Run it:** across a client's whole fleet, on demand (not a Flow — a cadence sweep has no ticket event to fire on; a Flow can only reach it via Run Skill on a qualifying ticket).
+**Run it:** across a client's whole fleet, on demand (not a Flow, a cadence sweep has no ticket event to fire on; a Flow can only reach it via Run Skill on a qualifying ticket).
 
 ## Prompt
 

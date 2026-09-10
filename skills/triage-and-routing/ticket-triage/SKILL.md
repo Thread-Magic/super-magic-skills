@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # Ticket Triage
 
-**When to use:** A new or unassigned ticket needs classifying and routing — a first pass before dispatch, or a morning sweep of the unassigned intake board.
+**When to use:** A new or unassigned ticket needs classifying and routing, a first pass before dispatch, or a morning sweep of the unassigned intake board.
 
 **Run it:** on one ticket · across all new/unassigned tickets on a board · or as a Flow that triages every ticket the moment it's created.
 

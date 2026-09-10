@@ -1,6 +1,6 @@
 ---
 name: Courtesy Reply Status Revert
-description: When a thanks-only client reply flips a resolved ticket back to open, revert it to the correct status per a fixed per-board map — the only permitted write.
+description: When a thanks-only client reply flips a resolved ticket back to open, revert it to the correct status per a fixed per-board map, the only permitted write.
 category: Triage & Routing
 tools: [search_tickets, update_ticket, list_ticket_statuses]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 # Courtesy Reply Status Revert
 
-**When to use:** Resolved tickets keep reappearing in the active queue because clients say "thanks so much!" — a flow fires on customer-responded status changes to catch courtesy flips, or "revert the status if that last reply was just a thank-you."
+**When to use:** Resolved tickets keep reappearing in the active queue because clients say "thanks so much!", a flow fires on customer-responded status changes to catch courtesy flips, or "revert the status if that last reply was just a thank-you."
 
 **Run it:** on one ticket · or as a Flow (when a resolved ticket flips to a customer-responded status).
 

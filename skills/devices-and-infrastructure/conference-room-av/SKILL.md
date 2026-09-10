@@ -1,6 +1,6 @@
 ---
 name: Conference Room AV
-description: Keep Teams/Zoom Rooms working — room-system health, calendar and resource-mailbox checks, and a pre-meeting checklist for high-stakes boardroom events.
+description: Keep Teams/Zoom Rooms working: room-system health, calendar and resource-mailbox checks, and a pre-meeting checklist for high-stakes boardroom events.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, list_ninjaone_alerts, get_ninjaone_device_activities, get_ninjaone_device_link, search_itglue, search_hudu, search_tickets, add_ticket_note, create_ticket, schedule_ticket]
 connectors: [NinjaOne, IT Glue, Hudu]

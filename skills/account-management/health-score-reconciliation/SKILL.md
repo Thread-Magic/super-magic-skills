@@ -1,6 +1,6 @@
 ---
 name: Health Score Reconciliation
-description: Reconcile a client's own health or satisfaction scores against our ticket reality — where their perception and our data agree, and where they diverge and why.
+description: Reconcile a client's own health or satisfaction scores against our ticket reality: where their perception and our data agree, and where they diverge and why.
 category: Account Management
 tools: [search_tickets, search_clients]
 connectors: []
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "<client> rated us 6/10 — does our data explain that?"; "their CSAT looks great but the account feels rocky — reconcile"; or "compare <client>'s survey feedback with what our tickets show."
 
-**Run it:** across a client's review-period tickets versus their supplied scores — a manual readout, not a Flow.
+**Run it:** across a client's review-period tickets versus their supplied scores, a manual readout, not a Flow.
 
 ## Prompt
 

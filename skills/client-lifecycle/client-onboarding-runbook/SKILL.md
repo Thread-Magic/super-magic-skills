@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "We just signed <client> — set up onboarding"; "run the new-client onboarding checklist for <client>"; or "is <client> ready for go-live? What's still missing?"
 
-**Run it:** on one newly signed client — a tracked readiness checklist, run manually.
+**Run it:** on one newly signed client, a tracked readiness checklist, run manually.
 
 ## Prompt
 

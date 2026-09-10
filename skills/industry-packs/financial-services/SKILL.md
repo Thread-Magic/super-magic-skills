@@ -12,7 +12,7 @@ outcome: [Risk & Compliance, Faster Resolution & Response]
 
 # Supporting Financial Services Clients
 
-**When to use:** An RIA, broker-dealer, bank, credit union, wealth-management firm, or insurance agency, or a ticket naming Orion, Black Diamond, Tamarac, Redtail, Wealthbox, Smarsh, Global Relay, or a trading/custodial platform — anything touching email flow, mailboxes, retention, journaling/archiving, offboarding/deletion, a failed overnight data feed, or a change at a client with a compliance officer.
+**When to use:** An RIA, broker-dealer, bank, credit union, wealth-management firm, or insurance agency, or a ticket naming Orion, Black Diamond, Tamarac, Redtail, Wealthbox, Smarsh, Global Relay, or a trading/custodial platform, anything touching email flow, mailboxes, retention, journaling/archiving, offboarding/deletion, a failed overnight data feed, or a change at a client with a compliance officer.
 
 **Run it:** on one ticket · or across all of this client's tickets.
 

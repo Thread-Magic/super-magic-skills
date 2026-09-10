@@ -1,6 +1,6 @@
 ---
 name: Three Strikes Final Email
-description: Draft the final "we're closing this ticket" email after three documented contact attempts with no client response — only when evidence exists.
+description: Draft the final "we're closing this ticket" email after three documented contact attempts with no client response: only when evidence exists.
 category: Communication
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Retention & Growth (CSAT/Expansion)]
 
 # Three Strikes Final Email
 
-**When to use:** "Three attempts, no response — draft the final email" / "send the we're-closing-this notice" — the follow-up ladder has been exhausted and the ticket is going quiet-closed.
+**When to use:** "Three attempts, no response (draft the final email" / "send the we're-closing-this notice") the follow-up ladder has been exhausted and the ticket is going quiet-closed.
 
 **Run it:** on one ticket · or as a Flow (triggered on a ticket waiting on the client).
 

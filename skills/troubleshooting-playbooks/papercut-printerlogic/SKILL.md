@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Held/secure-release jobs won't release at a release station or via the app/card reader; a printer won't deploy to workstations (PrinterLogic self-service / PaperCut Print Deploy) or the wrong driver installs; users blocked by quota/balance, wrong account charged, or accounting not recording jobs; or the management client/agent isn't connecting to the server / the print provider went offline. A pure spooler, driver, or hardware fault with no management layer involved belongs to printer-troubleshooting.
 
-**Run it:** on the one ticket you're working — a tech works the platform console hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech works the platform console hands-on; not unattended.
 
 ## Prompt
 

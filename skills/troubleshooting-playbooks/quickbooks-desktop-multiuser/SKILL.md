@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** H202/H505 errors switching to multi-user mode, a -6000,-XXX error opening the company file, "someone else has the file open" / a stuck single-user lock, or one workstation can open the file but others can't (often after an update).
 
-**Run it:** on the one ticket you're working — a tech works it with the user; not unattended.
+**Run it:** on the one ticket you're working, a tech works it with the user; not unattended.
 
 ## Prompt
 

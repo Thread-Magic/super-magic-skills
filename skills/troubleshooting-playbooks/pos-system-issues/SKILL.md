@@ -1,6 +1,6 @@
 ---
 name: POS System Issues
-description: Work POS tickets — frozen terminals, failed card payments, back-office sync — by splitting terminal, payment gateway, and back-office with a PCI boundary.
+description: Work POS tickets (frozen terminals, failed card payments, back-office sync) by splitting terminal, payment gateway, and back-office with a PCI boundary.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "The register / POS terminal is frozen or offline" (often store-down urgency); "cash sales work but card payments are declining or timing out"; "sales aren't showing up in the back office / inventory isn't syncing"; or a receipt printer, barcode scanner, or cash-drawer peripheral misbehaving on a lane.
 
-**Run it:** on the one ticket you're working — a tech works it with on-site staff and the vendor/processor; not unattended.
+**Run it:** on the one ticket you're working, a tech works it with on-site staff and the vendor/processor; not unattended.
 
 ## Prompt
 

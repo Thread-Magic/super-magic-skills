@@ -1,6 +1,6 @@
 ---
 name: QuickBooks Invoice Draft
-description: When time-and-materials work on a ticket is done and you want a QuickBooks invoice drafted from its time entries — created as a draft, never sent.
+description: When time-and-materials work on a ticket is done and you want a QuickBooks invoice drafted from its time entries: created as a draft, never sent.
 category: Finance & Billing
 tools: [search_tickets, search_clients, add_ticket_note]
 connectors: [Zapier: QuickBooks]

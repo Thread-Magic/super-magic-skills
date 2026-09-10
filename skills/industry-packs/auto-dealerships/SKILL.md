@@ -12,7 +12,7 @@ outcome: [Risk & Compliance, Faster Resolution & Response]
 
 # Supporting Auto Dealerships
 
-**When to use:** A new/used/powersports/RV dealership or dealer group, or a ticket naming CDK, Reynolds & Reynolds, Dealertrack, Tekion, DealerBuilt, F&I platforms (RouteOne, Dealertrack F&I), OEM tooling, the service lane, or anything month-end — including a DMS-down event where the whole store is on paper.
+**When to use:** A new/used/powersports/RV dealership or dealer group, or a ticket naming CDK, Reynolds & Reynolds, Dealertrack, Tekion, DealerBuilt, F&I platforms (RouteOne, Dealertrack F&I), OEM tooling, the service lane, or anything month-end, including a DMS-down event where the whole store is on paper.
 
 **Run it:** on one ticket · or across all of this client's tickets.
 

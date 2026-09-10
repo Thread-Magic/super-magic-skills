@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "<user> can't join meetings" or joins with no audio/video; "people can't hear me / see me in Teams"; presence stuck on Away/Offline or wrong for everyone; or a guest can't get into a team or meeting and external chat is failing.
 
-**Run it:** on the one ticket you're working — a tech works it with the user; not unattended.
+**Run it:** on the one ticket you're working, a tech works it with the user; not unattended.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: EOL Product Notice
-description: Draft the client notice that a product or OS is reaching end-of-life — verified EOL date, honest risk framing, upgrade paths, decision deadline.
+description: Draft the client notice that a product or OS is reaching end-of-life: verified EOL date, honest risk framing, upgrade paths, decision deadline.
 category: Communication
 tools: [search_tickets, search_itglue, search_hudu, web_search, view_openDraft]
 connectors: [IT Glue, Hudu]

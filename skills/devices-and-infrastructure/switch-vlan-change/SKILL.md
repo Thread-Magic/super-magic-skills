@@ -1,6 +1,6 @@
 ---
 name: Switch VLAN and Port Change
-description: Prepare a switch port or VLAN change safely — blast-radius check, agreed change window, and a rollback config saved before anything on the switch changes.
+description: Prepare a switch port or VLAN change safely: blast-radius check, agreed change window, and a rollback config saved before anything on the switch changes.
 category: Devices & Infrastructure
 tools: [search_itglue, search_hudu, liongard_launchpoint, liongard_device, liongard_timeline, liongard_metric, search_tickets, add_ticket_note, send_approval, schedule_ticket, update_ticket]
 connectors: [IT Glue, Hudu, Liongard]
@@ -14,7 +14,7 @@ outcome: [Risk & Compliance]
 
 **When to use:** "Move the port in <room> to the voice/camera/guest VLAN", adding a VLAN or tagging it onto a trunk, or reviewing a proposed switch change for blast radius.
 
-**Run it:** on one change-request ticket, on demand (not a Flow — the change routes through human approval and a change window).
+**Run it:** on one change-request ticket, on demand (not a Flow, the change routes through human approval and a change window).
 
 ## Prompt
 

@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Fewer Escalations & Less Noise]
 
 **When to use:** "Ever since the Windows 11 upgrade, X is broken" (audio, display, Wi-Fi, dock, LOB app); "my printer disappeared" / "my default PDF app changed" post-upgrade; a machine that refuses to upgrade or was skipped by the rollout (safeguard hold); or a user asking to go back to Windows 10 / a genuinely broken upgrade where rollback is on the table.
 
-**Run it:** on the one ticket you're working — a tech works it and flags wave-level patterns to the rollout owner; not unattended.
+**Run it:** on the one ticket you're working, a tech works it and flags wave-level patterns to the rollout owner; not unattended.
 
 ## Prompt
 

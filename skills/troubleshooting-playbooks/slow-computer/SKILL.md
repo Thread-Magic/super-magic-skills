@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Time & Cost Savings (Capacity)]
 
 **When to use:** A "<user>'s computer is slow" or "everything takes forever" ticket; slowness only at boot/login or only in one app; a device with recurring slowness complaints; or a call on whether a machine is worth more tuning versus reimage/replacement.
 
-**Run it:** on the one device ticket you're working — a tech measures and works it hands-on; not unattended.
+**Run it:** on the one device ticket you're working, a tech measures and works it hands-on; not unattended.
 
 ## Prompt
 

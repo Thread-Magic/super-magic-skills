@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Search returns nothing or misses messages the user can see by scrolling; "something went wrong and your search couldn't be completed" / "results may be incomplete"; recent messages (last hours/days) never appear in results; or search works in Outlook on the web but not desktop, or vice versa.
 
-**Run it:** on the one ticket you're working — a tech works it with the user; not unattended.
+**Run it:** on the one ticket you're working, a tech works it with the user; not unattended.
 
 ## Prompt
 

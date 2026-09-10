@@ -1,6 +1,6 @@
 ---
 name: Closure Note Completeness
-description: Check a ticket's closure note against the house standard — issue, cause, actions, outcome, confirmation — and draft the compliant version when it's short.
+description: Check a ticket's closure note against the house standard (issue, cause, actions, outcome, confirmation), and draft the compliant version when it's short.
 category: QA & Closure
 tools: [search_tickets, add_ticket_note, update_ticket, run_assistive_ai]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 # Closure Note Completeness
 
-**When to use:** "Check my closure note" / "is this ticket documented well enough to close?" — the documentation companion to Ticket QA Review when only note quality is in question, bulk-checking pending closures before EOD, or "draft a compliant closure note for this ticket."
+**When to use:** "Check my closure note" / "is this ticket documented well enough to close?", the documentation companion to Ticket QA Review when only note quality is in question, bulk-checking pending closures before EOD, or "draft a compliant closure note for this ticket."
 
 **Run it:** on one ticket · across all pending closures · or as a Flow (when a ticket reaches ready-to-close).
 

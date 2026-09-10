@@ -1,6 +1,6 @@
 ---
 name: High CPU/Memory Alert
-description: Triage a CPU or memory threshold alert — separate a transient spike from sustained pressure via history, and route servers versus workstations differently.
+description: Triage a CPU or memory threshold alert: separate a transient spike from sustained pressure via history, and route servers versus workstations differently.
 category: Alert Runbooks
 tools: [search_tickets, search_ninjaone_devices, get_ninjaone_device, list_ninjaone_alerts, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

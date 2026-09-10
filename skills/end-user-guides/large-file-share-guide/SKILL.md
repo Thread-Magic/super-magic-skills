@@ -1,6 +1,6 @@
 ---
 name: Large File Share Guide
-description: Draft reply-ready instructions for an end user to send a file too big for email using the client's approved method — attachment bounced, big file.
+description: Draft reply-ready instructions for an end user to send a file too big for email using the client's approved method: attachment bounced, big file.
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Daily Digest
 
-**When to use:** "Give me a summary of my open tickets" / "what needs replies, anything urgent?" / "morning digest" / "what's my day look like?" — the under-a-minute read that names the single first thing to do; ask for "short version" or "3 lines" for the ultra-short variant.
+**When to use:** "Give me a summary of my open tickets" / "what needs replies, anything urgent?" / "morning digest" / "what's my day look like?", the under-a-minute read that names the single first thing to do; ask for "short version" or "3 lines" for the ultra-short variant.
 
 **Run it:** across your own open tickets — run it manually (not a Flow; there's no schedule trigger).
 

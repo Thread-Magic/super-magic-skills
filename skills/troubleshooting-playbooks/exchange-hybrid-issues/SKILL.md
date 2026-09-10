@@ -1,6 +1,6 @@
 ---
 name: Exchange Hybrid Issues
-description: Troubleshoot Exchange hybrid — mail stuck on-prem/cloud, blank free-busy, stalled migrations, user-not-found after moves — starting from mailbox ownership.
+description: Troubleshoot Exchange hybrid (mail stuck on-prem/cloud, blank free-busy, stalled migrations, user-not-found after moves) starting from mailbox ownership.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Mail flows one direction across the hybrid boundary but not the other (or queues on-prem for the "office 365" send connector); free/busy, calendar sharing, or MailTips are blank between on-prem and cloud users; a mailbox migration is stalled, failed, or "completed" but the user is broken; or after a migration a user can't be mailed ("recipient not found"), can't open shared mailboxes, or shows two mailboxes.
 
-**Run it:** on the one ticket you're working — a tech drives the Exchange shell hands-on with the client's infra owner; not unattended.
+**Run it:** on the one ticket you're working, a tech drives the Exchange shell hands-on with the client's infra owner; not unattended.
 
 ## Prompt
 

@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response, Fewer Escalations & Less Noise]
 
 # Transport Rule Management
 
-**When to use:** A ticket asks to "add a disclaimer / external-sender banner to all inbound mail," "block attachments of type X," "redirect invoices@ mail to the finance manager too," or "mail to <recipient> is being modified/redirected and nobody knows why." NOT for spam-filter verdicts (anti-spam-policy-tuning) or connector problems (email-connector-setup). This skill gets a mail flow rule changed without breaking mail flow: the current rule set is captured first, the new rule ships in test mode, rule order is checked, and the ticket note lets the next tech understand — and reverse — the change.
+**When to use:** A ticket asks to "add a disclaimer / external-sender banner to all inbound mail," "block attachments of type X," "redirect invoices@ mail to the finance manager too," or "mail to <recipient> is being modified/redirected and nobody knows why." NOT for spam-filter verdicts (anti-spam-policy-tuning) or connector problems (email-connector-setup). This skill gets a mail flow rule changed without breaking mail flow: the current rule set is captured first, the new rule ships in test mode, rule order is checked, and the ticket note lets the next tech understand (and reverse) the change.
 
 **Run it:** on one client's request — you prepare and verify, a technician runs the cmdlets (not a Flow: it needs a human at the console).
 

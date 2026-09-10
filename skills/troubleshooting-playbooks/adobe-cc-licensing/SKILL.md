@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Creative Cloud apps prompt to sign in repeatedly or loop without completing; "you don't have access to this app" / "subscription expired" for a licensed user; confusion between named-user and shared-device (lab/classroom) licensing; or a new user can't get an app, a departed user's seat needs reclaiming, or federated/SSO sign-in fails.
 
-**Run it:** on the one ticket in front of you — a tech works this with the Adobe admin, not unattended.
+**Run it:** on the one ticket in front of you, a tech works this with the Adobe admin, not unattended.
 
 ## Prompt
 

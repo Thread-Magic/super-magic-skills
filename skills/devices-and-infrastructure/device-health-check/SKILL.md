@@ -1,6 +1,6 @@
 ---
 name: Device Health Check
-description: Diagnose one device via the RMM — alerts, activities, services, disk, reboot, and patch posture — then propose remediation with a deep-link handoff.
+description: Diagnose one device via the RMM (alerts, activities, services, disk, reboot, and patch posture), then propose remediation with a deep-link handoff.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, list_ninjaone_alerts, list_ninjaone_windows_services, get_ninjaone_device_link, search_itglue, add_ticket_note]
 connectors: [NinjaOne, IT Glue]

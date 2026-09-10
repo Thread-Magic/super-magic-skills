@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise, Time & Cost Savings (Capacity)]
 
 # Mailbox Migration Prep
 
-**When to use:** A migration is being scoped or scheduled — a tenant-to-tenant move (acquisition, divestiture, rebrand), an on-prem Exchange to Exchange Online onboarding, "what do we need to check before we migrate mailboxes," or a post-migration "X stopped working" ticket that traces back to skipped prep (use the checklist as the diagnostic). Front-load the pain: everything that will break is listed before cutover, the inventory is complete enough to rebuild what the move drops, and users hear about it before their Outlook does.
+**When to use:** A migration is being scoped or scheduled, a tenant-to-tenant move (acquisition, divestiture, rebrand), an on-prem Exchange to Exchange Online onboarding, "what do we need to check before we migrate mailboxes," or a post-migration "X stopped working" ticket that traces back to skipped prep (use the checklist as the diagnostic). Front-load the pain: everything that will break is listed before cutover, the inventory is complete enough to rebuild what the move drops, and users hear about it before their Outlook does.
 
 **Run it:** on one migration engagement — you prepare the checklist and inventory, a technician executes the exports and the move (not a Flow: it needs a human at the console).
 

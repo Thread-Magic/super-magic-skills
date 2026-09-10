@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "<user>'s Wi-Fi keeps dropping / is slow"; "the conference room has terrible signal" or dead zones; "nobody in the office can get online" or new devices can't join; or guests stuck at a captive portal or devices connecting but getting no address.
 
-**Run it:** on the one ticket you're working — a tech works it and routes infrastructure changes to the network owner; not unattended.
+**Run it:** on the one ticket you're working, a tech works it and routes infrastructure changes to the network owner; not unattended.
 
 ## Prompt
 

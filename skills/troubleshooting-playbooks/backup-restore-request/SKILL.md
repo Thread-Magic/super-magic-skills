@@ -1,6 +1,6 @@
 ---
 name: Backup Restore Request
-description: Intake backup restore requests — deleted files, prior versions, mailboxes, servers — pinning down what, when, RPO limits, and verifying with requester.
+description: Intake backup restore requests (deleted files, prior versions, mailboxes, servers) pinning down what, when, RPO limits, and verifying with requester.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, send_approval, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 **When to use:** "<user> deleted a file/folder — can we get it back?"; "we need <share/mailbox/site> as it was last Tuesday"; a ransomware/corruption recovery-point request (pair with security response); or any request naming a backup product, snapshot, or "previous version."
 
-**Run it:** on the one restore ticket in front of you — an intake-and-execute workflow a tech drives with the requester, not unattended.
+**Run it:** on the one restore ticket in front of you, an intake-and-execute workflow a tech drives with the requester, not unattended.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Change Approval Sender
-description: Flow that fires on Change Approval status: resolve the client's Change Approver and send_approval with the change summary — note-and-stop if unresolved.
+description: Flow that fires on Change Approval status: resolve the client's Change Approver and send_approval with the change summary: note-and-stop if unresolved.
 category: Automation & Flows
 tools: [search_contacts, send_approval, add_ticket_note, search_tickets]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Risk & Compliance]
 
 # Change Approval Sender
 
-**When to use:** A flow fires on tickets entering "Change Approval" (or the desk's equivalent status) and the approval should go out automatically; the desk uses a Change Approver contact type per client; change tickets sit in the approval status because nobody sent the approval. Fires on the STATUS-CHANGE event of entering the change-approval status — never on a timer. Twin of new-ticket-approval-gate (which gates intake); this gates the change stage.
+**When to use:** A flow fires on tickets entering "Change Approval" (or the desk's equivalent status) and the approval should go out automatically; the desk uses a Change Approver contact type per client; change tickets sit in the approval status because nobody sent the approval. Fires on the STATUS-CHANGE event of entering the change-approval status, never on a timer. Twin of new-ticket-approval-gate (which gates intake); this gates the change stage.
 
 **Run it:** on one ticket · or as a Flow (triggered when a ticket enters the change-approval status).
 

@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** vSAN Skyline Health shows warnings/errors or the cluster is resyncing; vMotion / Storage vMotion fails or DRS won't balance or evacuate a host for maintenance; datastore latency spikes, VMs stunned, or an APD/PDL event; or a host is disconnected, not-responding, or won't enter maintenance mode.
 
-**Run it:** on the one ticket you're working — a tech with vSphere access works it hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech with vSphere access works it hands-on; not unattended.
 
 ## Prompt
 

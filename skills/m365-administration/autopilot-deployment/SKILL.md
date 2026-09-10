@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # Autopilot Deployment
 
-**When to use:** A ticket asks to register new laptops for Autopilot / import hardware hashes, a device boots to normal OOBE instead of the company-branded experience, the Enrollment Status Page is stuck or timing out, or someone asks "do we reset this device or re-enroll it?" after a failed deployment. Autopilot fails in three distinct phases — registration (the hash), targeting (the profile), and provisioning (the ESP) — and the fix is different in each. This skill diagnoses by phase and keeps "just wipe it" from becoming the default answer.
+**When to use:** A ticket asks to register new laptops for Autopilot / import hardware hashes, a device boots to normal OOBE instead of the company-branded experience, the Enrollment Status Page is stuck or timing out, or someone asks "do we reset this device or re-enroll it?" after a failed deployment. Autopilot fails in three distinct phases (registration (the hash), targeting (the profile), and provisioning (the ESP)), and the fix is different in each. This skill diagnoses by phase and keeps "just wipe it" from becoming the default answer.
 
 **Run it:** on one device — you diagnose by phase and make the reset/re-enroll call, a technician runs every Intune console action (not a Flow: it needs a human at the console).
 

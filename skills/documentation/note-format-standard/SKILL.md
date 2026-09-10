@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Note Format Standard
 
-**When to use:** Loaded as a companion whenever another skill writes or drafts a ticket note, or "format this as a proper internal note" — the shared standard that makes every note on the desk look like it came from one team.
+**When to use:** Loaded as a companion whenever another skill writes or drafts a ticket note, or "format this as a proper internal note", the shared standard that makes every note on the desk look like it came from one team.
 
 **Run it:** on one ticket · or across any note the desk writes.
 

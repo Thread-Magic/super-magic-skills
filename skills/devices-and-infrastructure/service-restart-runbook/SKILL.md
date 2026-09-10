@@ -1,6 +1,6 @@
 ---
 name: Service Restart Runbook
-description: Restart a crashed Windows service via the RMM — allowlisted safe services only, state verified before and after, with a ticket note posted on completion.
+description: Restart a crashed Windows service via the RMM: allowlisted safe services only, state verified before and after, with a ticket note posted on completion.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, list_ninjaone_windows_services, control_ninjaone_windows_service, add_ticket_note]
 connectors: [NinjaOne]

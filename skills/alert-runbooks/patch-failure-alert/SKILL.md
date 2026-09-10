@@ -1,6 +1,6 @@
 ---
 name: Patch Failure Alert
-description: Triage a patch-failure alert — separate a one-off from a repeat offender, detect reboot-pending as the usual culprit, correlate against the patch window.
+description: Triage a patch-failure alert: separate a one-off from a repeat offender, detect reboot-pending as the usual culprit, correlate against the patch window.
 category: Alert Runbooks
 tools: [search_tickets, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, list_ninjaone_alerts, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

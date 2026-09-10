@@ -1,6 +1,6 @@
 ---
 name: Noise Auto-Close
-description: Close pure-noise tickets — bounce-backs, vendor auto-replies, thanks-only messages, reconnected offline alerts — behind independent stop conditions.
+description: Close pure-noise tickets (bounce-backs, vendor auto-replies, thanks-only messages, reconnected offline alerts) behind independent stop conditions.
 category: Triage & Routing
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise, Time & Cost Savings (Capacity)]
 
 # Noise Auto-Close
 
-**When to use:** Bounce-back / mailer-daemon tickets, vendor or OOO auto-replies, thanks-only replies that spawned a new ticket, or device-offline alerts whose device already reconnected — and a flow that sweeps the intake board for noise.
+**When to use:** Bounce-back / mailer-daemon tickets, vendor or OOO auto-replies, thanks-only replies that spawned a new ticket, or device-offline alerts whose device already reconnected, and a flow that sweeps the intake board for noise.
 
 **Run it:** on one ticket · across the intake board · or as a Flow (when a ticket is created).
 

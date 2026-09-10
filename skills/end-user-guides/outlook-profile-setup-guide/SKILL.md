@@ -1,6 +1,6 @@
 ---
 name: Outlook Profile Setup Guide
-description: Draft reply-ready instructions for an end user to add their work account to Outlook on Windows or Mac — "send the user steps to set up Outlook."
+description: Draft reply-ready instructions for an end user to add their work account to Outlook on Windows or Mac: "send the user steps to set up Outlook."
 category: End-User Guides
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, view_openDraft]
 connectors: [IT Glue, Hudu]

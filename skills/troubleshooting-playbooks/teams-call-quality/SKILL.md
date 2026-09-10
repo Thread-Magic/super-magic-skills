@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "My Teams calls are choppy/robotic/echoing" or video freezes for one user; a whole office reports bad Teams calls (especially at certain times of day); drops/reconnects mid-meeting or "your network is causing poor quality" banners; or complaints only on calls with specific others (direction matters). Teams sign-in/crash/feature problems belong to teams-issues instead.
 
-**Run it:** on the one ticket you're working — a tech runs the isolation tests hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech runs the isolation tests hands-on; not unattended.
 
 ## Prompt
 

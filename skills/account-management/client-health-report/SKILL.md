@@ -1,6 +1,6 @@
 ---
 name: Client Health Report
-description: Summarize a client's support health for a period — volume trend, recurring issues, noisy assets, SLA performance, and a few concrete recommendations.
+description: Summarize a client's support health for a period: volume trend, recurring issues, noisy assets, SLA performance, and a few concrete recommendations.
 category: Account Management
 tools: [search_tickets, search_clients]
 connectors: []
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "Give me a health report for <client> this week"; "how is <client> doing on support lately?"; or a recurring weekly health-check run over each managed client.
 
-**Run it:** across a client's period of tickets (or each managed client in turn) — a manual report, not a Flow.
+**Run it:** across a client's period of tickets (or each managed client in turn), a manual report, not a Flow.
 
 ## Prompt
 

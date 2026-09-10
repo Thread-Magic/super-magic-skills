@@ -1,6 +1,6 @@
 ---
 name: Device Offline Runbook
-description: Work a device-offline alert or "won't connect" ticket — site-wide check first, maintenance windows, last activities, and clear escalate criteria.
+description: Work a device-offline alert or "won't connect" ticket: site-wide check first, maintenance windows, last activities, and clear escalate criteria.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, list_ninjaone_alerts, search_itglue, add_ticket_note]
 connectors: [NinjaOne, IT Glue]

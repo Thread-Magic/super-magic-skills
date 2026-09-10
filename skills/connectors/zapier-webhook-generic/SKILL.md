@@ -1,6 +1,6 @@
 ---
 name: Zapier Webhook Generic
-description: The escape hatch — fire a generic webhook (Rewst, custom automation, homegrown endpoint) from a skill when no named Zapier app covers the system.
+description: The escape hatch: fire a generic webhook (Rewst, custom automation, homegrown endpoint) from a skill when no named Zapier app covers the system.
 category: Connectors
 tools: [search_tickets, add_ticket_note]
 connectors: [Zapier: Webhooks by Zapier]

@@ -1,6 +1,6 @@
 ---
 name: Disk Space Alert
-description: Triage a low-disk-space alert from any monitor — separate threshold noise from real pressure, read growth rate from history, rank consumer hypotheses.
+description: Triage a low-disk-space alert from any monitor: separate threshold noise from real pressure, read growth rate from history, rank consumer hypotheses.
 category: Alert Runbooks
 tools: [search_tickets, search_ninjaone_devices, get_ninjaone_device, list_ninjaone_alerts, get_ninjaone_device_activities, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** A file-server-to-SharePoint/OneDrive migration is failing, skipping items, or reporting errors; "permissions are wrong after migration" — people have too much or too little access; files fail to migrate on path length, illegal characters, or unsupported types; or after cutover, OneDrive/Known Folder Move won't sync or selective-sync is a mess. Steady-state OneDrive/SharePoint sync problems (not migration) belong to onedrive-sharepoint-sync.
 
-**Run it:** on the one migration ticket you're working — a tech runs the tool and remediates hands-on with the client; not unattended.
+**Run it:** on the one migration ticket you're working, a tech runs the tool and remediates hands-on with the client; not unattended.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Troubleshooting Ladder
-description: Base skill defining the order every troubleshooting playbook works in — history, documentation, blast radius, versions, verbatim evidence, then branch — and how it closes out.
+description: Base skill defining the order every troubleshooting playbook works in (history, documentation, blast radius, versions, verbatim evidence, then branch), and how it closes out.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -12,9 +12,9 @@ outcome: [Faster Resolution & Response]
 
 # Troubleshooting Ladder
 
-**When to use:** Working any technical playbook on a ticket, or writing one. It's the shared spine every playbook in this category stands on — the order that stops a tech theorizing before they have evidence.
+**When to use:** Working any technical playbook on a ticket, or writing one. It's the shared spine every playbook in this category stands on, the order that stops a tech theorizing before they have evidence.
 
-**Run it:** on the one ticket you're working — a tech drives the hands-on steps; nothing here executes on a device.
+**Run it:** on the one ticket you're working, a tech drives the hands-on steps; nothing here executes on a device.
 
 ## Prompt
 

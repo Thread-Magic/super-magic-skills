@@ -1,6 +1,6 @@
 ---
 name: New Client 30-Day Review
-description: Friction check on a new client's first 30 days — early recurring issues, expectation mismatches, and onboarding gaps — fixed while the relationship forms.
+description: Friction check on a new client's first 30 days (early recurring issues, expectation mismatches, and onboarding gaps) fixed while the relationship forms.
 category: Account Management
 tools: [search_tickets, search_clients, search_contacts]
 connectors: []
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "<client> has been with us a month — how's it going?"; "run a 30-day review on our new client"; or "any early warning signs from <client>'s onboarding?"
 
-**Run it:** across a new client's first month of history — a manual internal review, not a Flow.
+**Run it:** across a new client's first month of history, a manual internal review, not a Flow.
 
 ## Prompt
 

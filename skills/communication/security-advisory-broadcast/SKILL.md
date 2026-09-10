@@ -1,6 +1,6 @@
 ---
 name: Security Advisory Broadcast
-description: Draft a security advisory going to many clients — new threat, vendor breach, or vulnerability — from verified facts with per-client relevance check.
+description: Draft a security advisory going to many clients (new threat, vendor breach, or vulnerability) from verified facts with per-client relevance check.
 category: Communication
 tools: [search_clients, search_tickets, search_itglue, search_hudu, web_search, view_openDraft]
 connectors: [IT Glue, Hudu]

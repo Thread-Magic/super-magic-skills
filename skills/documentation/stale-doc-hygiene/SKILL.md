@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Risk & Compliance]
 
 # Stale Doc Hygiene
 
-**When to use:** "Which of our docs are stale?" / "audit <client>'s documentation" — a doc was just found wrong mid-ticket, a quarterly hygiene sweep, or before an audit or client handover.
+**When to use:** "Which of our docs are stale?" / "audit <client>'s documentation", a doc was just found wrong mid-ticket, a quarterly hygiene sweep, or before an audit or client handover.
 
 **Run it:** across a client's or category's documentation.
 

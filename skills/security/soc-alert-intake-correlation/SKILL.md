@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 # SOC Alert Intake and Correlation
 
-**When to use:** SOC alerts land on a security board faster than anyone can tier them, and the same case arrives as several tickets. This is the unattended front door: it correlates the case, records the severity facts, applies the priority the protocol demands, and states whether the alert is an Incident — so the first human to open the ticket starts from a decision instead of a raw alert. Related: `security/soc-classification-tree` is the human walk that actually sets type, subtype, and item; this skill only recommends them.
+**When to use:** SOC alerts land on a security board faster than anyone can tier them, and the same case arrives as several tickets. This is the unattended front door: it correlates the case, records the severity facts, applies the priority the protocol demands, and states whether the alert is an Incident, so the first human to open the ticket starts from a decision instead of a raw alert. Related: `security/soc-classification-tree` is the human walk that actually sets type, subtype, and item; this skill only recommends them.
 
 **Run it:** on one ticket · or as a Flow (when a ticket is created on a SOC alert board).
 

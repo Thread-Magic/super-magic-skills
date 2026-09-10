@@ -1,6 +1,6 @@
 ---
 name: Duplicate Hunter
-description: Check whether a ticket duplicates an existing open ticket for the same client, contact or asset, and symptom — and merge only on an exact reference match.
+description: Check whether a ticket duplicates an existing open ticket for the same client, contact or asset, and symptom, and merge only on an exact reference match.
 category: Triage & Routing
 tools: [search_tickets, merge_ticket, add_ticket_note]
 connectors: []

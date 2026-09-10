@@ -1,6 +1,6 @@
 ---
 name: Daily Leadership Digest
-description: A service leader asks what needs their attention today — escalations, SLA breaches, at-risk clients, and staffing flags in one short daily view.
+description: A service leader asks what needs their attention today: escalations, SLA breaches, at-risk clients, and staffing flags in one short daily view.
 category: Reporting & Analytics
 tools: [search_tickets, search_clients, search_members, list_boards]
 connectors: []

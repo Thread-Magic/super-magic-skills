@@ -1,6 +1,6 @@
 ---
 name: IIS Web App
-description: Diagnose IIS web app failures — app pool crashes, rapid-fail protection, binding and SSL problems, HTTP 500/502/503 codes — using HTTP.sys and FREB logs.
+description: Diagnose IIS web app failures (app pool crashes, rapid-fail protection, binding and SSL problems, HTTP 500/502/503 codes) using HTTP.sys and FREB logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** An internal or client-facing site returns 500 / 502.x / 503, an app pool keeps stopping or recycling constantly, HTTPS broke after a cert renewal or the wrong cert is served, or a site works on the server but not remotely (or one app under a site fails while others work).
 
-**Run it:** on the one ticket you're working — a tech with server access drives this; not unattended.
+**Run it:** on the one ticket you're working, a tech with server access drives this; not unattended.
 
 ## Prompt
 

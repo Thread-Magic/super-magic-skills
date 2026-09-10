@@ -1,6 +1,6 @@
 ---
 name: Group Policy Troubleshooting
-description: Diagnose GPO not applying — missing drive mappings, lock screens, software installs — by reading gpresult and walking scope, filtering, and inheritance.
+description: Diagnose GPO not applying (missing drive mappings, lock screens, software installs) by reading gpresult and walking scope, filtering, and inheritance.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, liongard_launchpoint, liongard_metric, liongard_timeline, web_search]
 connectors: [IT Glue, Hudu, Liongard]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** A user's drive mappings, printers, or desktop settings didn't apply; a new GPO was created but machines aren't picking it up; settings apply to some users/machines but not others; or "Group Policy processing failed" events (1058, 1030, 7016, 8194) show up in the ticket.
 
-**Run it:** on the one ticket you're working — a tech reads gpresult hands-on and makes targeted changes with the AD owner aware; not unattended.
+**Run it:** on the one ticket you're working, a tech reads gpresult hands-on and makes targeted changes with the AD owner aware; not unattended.
 
 ## Prompt
 

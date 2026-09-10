@@ -1,6 +1,6 @@
 ---
 name: Technical to Plain English
-description: Translate a technical resolution, diagnosis, or explanation into language a non-technical stakeholder can understand — "make this client-friendly."
+description: Translate a technical resolution, diagnosis, or explanation into language a non-technical stakeholder can understand: "make this client-friendly."
 category: Communication
 tools: [search_tickets]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Retention & Growth (CSAT/Expansion), Time & Cost Savings (Capacity)]
 
 # Technical to Plain English
 
-**When to use:** "Explain this fix in plain English for the client" / "the office manager asked what actually happened — translate this" — any resolution note, diagnosis, or vendor explanation that needs to leave the technical bubble.
+**When to use:** "Explain this fix in plain English for the client" / "the office manager asked what actually happened (translate this") any resolution note, diagnosis, or vendor explanation that needs to leave the technical bubble.
 
 **Run it:** on one ticket.
 

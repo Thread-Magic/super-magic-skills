@@ -1,6 +1,6 @@
 ---
 name: OneDrive Known Folder Move
-description: Work OneDrive Known Folder Move rollout tickets — missing Desktop, sync conflicts, path-length and invalid-character legacy files — without unhooking KFM.
+description: Work OneDrive Known Folder Move rollout tickets (missing Desktop, sync conflicts, path-length and invalid-character legacy files), without unhooking KFM.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Fewer Escalations & Less Noise]
 
 **When to use:** "My desktop files disappeared" / "my documents are gone" right after a KFM rollout hits a machine; OneDrive stuck on specific files with path/character/size errors since folders moved; duplicate folders ("Desktop" and "Desktop on <device>", conflict copies) after KFM applied on multiple machines; or a user/tech asking to turn KFM off on one machine because it's "causing problems." For general sync-client failures unrelated to KFM, use the OneDrive & SharePoint Sync playbook.
 
-**Run it:** on the one ticket you're working — a tech works it with the user and escalates rollout gaps to the deployment owner; not unattended.
+**Run it:** on the one ticket you're working, a tech works it with the user and escalates rollout gaps to the deployment owner; not unattended.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Business Value Summary
-description: Summarize value delivered to a client this period in business terms — outcomes achieved, time saved, incidents prevented — as a client-facing story spine.
+description: Summarize value delivered to a client this period in business terms (outcomes achieved, time saved, incidents prevented) as a client-facing story spine.
 category: Account Management
 tools: [search_tickets, search_clients]
 connectors: []
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "What value did we deliver to <client> this quarter?"; "build the value slide for <client>'s renewal/QBR"; or "client asked what they're paying us for — help me answer."
 
-**Run it:** across a client's period of resolved work — a manual brief, not a Flow.
+**Run it:** across a client's period of resolved work, a manual brief, not a Flow.
 
 ## Prompt
 

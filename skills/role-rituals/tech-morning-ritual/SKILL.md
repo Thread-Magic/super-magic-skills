@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Tech Morning Ritual
 
-**When to use:** "Start my day" / "what should I work on today" / "run my morning ritual" — a tech logging in who wants the queue pre-digested before the huddle.
+**When to use:** "Start my day" / "what should I work on today" / "run my morning ritual", a tech logging in who wants the queue pre-digested before the huddle.
 
 **Run it:** across your own queue and accounts — run it manually (not a Flow; Flows can't schedule a morning cadence).
 

@@ -1,6 +1,6 @@
 ---
 name: Budget Planning Brief
-description: Prep a client's annual IT budget conversation — hardware refresh forecast, license spend, and project pipeline — from tickets, assets, and roadmap items.
+description: Prep a client's annual IT budget conversation (hardware refresh forecast, license spend, and project pipeline) from tickets, assets, and roadmap items.
 category: Account Management
 tools: [search_tickets, search_clients, search_ninjaone_devices]
 connectors: [NinjaOne]
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "<client> wants to talk budget for next year — prep me"; "build a budget planning brief for <client>"; or "what should <client> be budgeting for hardware and projects?"
 
-**Run it:** across a client's trailing year of history — a manual internal brief, not a Flow.
+**Run it:** across a client's trailing year of history, a manual internal brief, not a Flow.
 
 ## Prompt
 

@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response, Time & Cost Savings (Capacity)]
 
 # New Ticket First Touch
 
-**When to use:** "First touch this ticket" / "give me the full first pass on this" — a tech picks up a fresh ticket and wants classification, duplicate check, prior-resolution context, and a draft reply in one go, or intake wants a consistent first-touch package on every new ticket.
+**When to use:** "First touch this ticket" / "give me the full first pass on this", a tech picks up a fresh ticket and wants classification, duplicate check, prior-resolution context, and a draft reply in one go, or intake wants a consistent first-touch package on every new ticket.
 
 **Run it:** on one ticket · across all new tickets on a board · or as a Flow (when a ticket is created).
 

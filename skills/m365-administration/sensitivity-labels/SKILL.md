@@ -12,7 +12,7 @@ outcome: [Risk & Compliance]
 
 # Sensitivity Labels
 
-**When to use:** A client asks to "set up Confidential / Internal / Public document labels," needs data classification for a compliance requirement, wants to "auto-label anything containing card numbers / PHI as Confidential," or wants to "encrypt documents marked Confidential." NOT for the DLP side (blocking sensitive data in transit) — that is purview-dlp-policy; labels classify and can encrypt, DLP prevents movement. This skill treats the rollout as governed, not a big-bang taxonomy: a handful of clear labels, publishing to a pilot before the org, and — above all — treating label encryption as the irreversible, access-breaking decision it is.
+**When to use:** A client asks to "set up Confidential / Internal / Public document labels," needs data classification for a compliance requirement, wants to "auto-label anything containing card numbers / PHI as Confidential," or wants to "encrypt documents marked Confidential." NOT for the DLP side (blocking sensitive data in transit) — that is purview-dlp-policy; labels classify and can encrypt, DLP prevents movement. This skill treats the rollout as governed, not a big-bang taxonomy: a handful of clear labels, publishing to a pilot before the org, and (above all) treating label encryption as the irreversible, access-breaking decision it is.
 
 **Run it:** on one client's request — you prepare and verify, a technician executes in the Purview portal (not a Flow: it needs a human at the console).
 

@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** A user can't connect to the remote desktop / AVD (error, hang, or immediate disconnect), everyone is disconnected from one host or the whole farm, "No Remote Desktop license servers available" appears, or a session is stuck at "Please wait for the user profile service", black screens, or missing printers/drives in-session.
 
-**Run it:** on the one ticket you're working — a tech works the console hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech works the console hands-on; not unattended.
 
 ## Prompt
 

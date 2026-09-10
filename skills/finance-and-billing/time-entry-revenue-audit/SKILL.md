@@ -1,6 +1,6 @@
 ---
 name: Time Entry Revenue Audit
-description: When someone wants to find tickets that were worked with no time logged — revenue leakage by technician or period — and get the gaps fixed the right way.
+description: When someone wants to find tickets that were worked with no time logged (revenue leakage by technician or period), and get the gaps fixed the right way.
 category: Finance & Billing
 tools: [search_tickets, search_members, log_time_entry, add_ticket_note]
 connectors: []

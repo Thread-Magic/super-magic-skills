@@ -1,6 +1,6 @@
 ---
 name: Email Baseline Standard
-description: The base client-email standard other communication skills build on — structure, tone rules, and placeholder discipline for every outbound message.
+description: The base client-email standard other communication skills build on: structure, tone rules, and placeholder discipline for every outbound message.
 category: Communication
 tools: []
 connectors: []
