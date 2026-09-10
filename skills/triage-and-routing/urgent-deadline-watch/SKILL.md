@@ -1,6 +1,6 @@
 ---
 name: Urgent Deadline Watch
-description: Catch a client-stated deadline that is within four hours or already passed, raise the priority, and flag it in an internal note — without mistaking someone's availability for a deadline.
+description: Catch a client-stated deadline inside four hours or already passed, raise the priority, and flag it internally — availability is not a deadline.
 category: Triage & Routing
 tools: [search_tickets, list_ticket_priorities, update_ticket, add_ticket_note]
 connectors: []

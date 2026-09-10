@@ -1,6 +1,6 @@
 ---
 name: Create KBA from Resolved Ticket
-description: Run inside a resolved ticket to turn the technician's resolution notes into a formatted knowledge base article, ready to copy and paste into your documentation platform.
+description: Run inside a resolved ticket to turn its notes into a formatted knowledge base article, ready to paste into your documentation platform.
 category: Documentation
 tools: [search_tickets]
 connectors: []

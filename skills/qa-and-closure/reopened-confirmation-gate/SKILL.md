@@ -1,6 +1,6 @@
 ---
 name: Re-Opened Confirmation Gate
-description: On a re-opened ticket, decide whether the customer's latest reply really closes it out or needs a human — with a hard stop on any phishing reply that hints at interaction or compromise.
+description: Decide whether a re-opened ticket's latest customer reply really closes it out, with a hard stop on any phishing reply hinting at compromise.
 category: QA & Closure
 tools: [search_tickets, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

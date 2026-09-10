@@ -1,6 +1,6 @@
 ---
 name: SOC Alert Intake and Correlation
-description: Process an inbound SOC alert ticket unattended — correlate it to its case number, state the severity facts, set the priority the security protocol requires, and hand a human a documented incident decision.
+description: Process an inbound SOC alert unattended: correlate the case number, record the severity facts, set the required priority, and document the decision.
 category: Security
 tools: [search_tickets, list_ticket_priorities, update_ticket, add_ticket_note]
 connectors: []
