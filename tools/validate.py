@@ -213,6 +213,15 @@ def check(path: Path, all_slugs: set[str], all_categories: set[str],
         errs.append("`name:` is empty")
     if not fm["description"]:
         errs.append("`description:` is empty")
+    # An em dash in a description is always avoidable: it is one trigger sentence, and
+    # sync_skills.py copies it verbatim into the docs page's meta description, where a
+    # dash reads as filler. House rule is em dashes sparingly (CONTRIBUTING.md ->
+    # Punctuation); the description is the one place it is a hard no.
+    if "\u2014" in fm["description"]:
+        errs.append(
+            "description: contains an em dash -- use a comma, colon or period "
+            "(see CONTRIBUTING.md -> Punctuation: em dashes sparingly)"
+        )
     if fm["scope"] not in SCOPES:
         errs.append(f"scope: {fm['scope']!r} -- must be one of {sorted(SCOPES)}")
     if fm["flow"] not in FLOWS:

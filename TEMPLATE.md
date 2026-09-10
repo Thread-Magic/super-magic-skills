@@ -6,7 +6,7 @@ your copy.
 -->
 ---
 name: Short Title Case Name
-description: When to reach for this skill, in one line — this is the trigger the agent matches.
+description: When to reach for this skill, in one line. This is the trigger the agent matches. No em dash: see CONTRIBUTING.md -> Punctuation.
 category: One of the existing folders in skills/
 tools: [search_tickets, add_ticket_note]   # metadata for validation — do NOT name these in the prompt
 connectors: []            # e.g. [NinjaOne]; [Zapier: Microsoft Teams]; [] if native-only

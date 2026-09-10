@@ -81,6 +81,24 @@ metadata; they are never named in the prompt. **One prompt may take several acti
 "show me before you send/close", "when in doubt, do nothing", result-cap honesty, "never invent
 data".
 
+## Punctuation: em dashes sparingly
+
+**The em dash is not a default joiner.** Use a comma for an aside, a colon before an
+explanation or a list, a period when the clause can stand alone, and parentheses for a
+genuine parenthetical. Keep a dash only where the break itself is the point.
+
+This applies to a skill's `description` and its **When to use** / **Run it** prose, which the
+docs generator copies into the page's meta description and body copy. A sweep took those from
+1,060 dashes to 503 across the library, and `tools/validate.py` **fails a `description` that
+contains one**: a description is a single trigger sentence and never needs the break. A dash
+introducing a list almost always wanted to be a colon, e.g. `Summarize a client's support
+health for a period: volume trend, recurring issues, noisy assets, SLA performance`.
+
+**Prompt blocks are exempt and were deliberately left alone.** The prompt is the artifact a
+partner pastes into Super Magic, and repunctuating 5,000 lines of working instructions to suit
+a style rule risks changing what the agent does. Write new prompts to the rule; do not sweep
+old ones.
+
 ## The 3,000-character limit
 
 **A prompt block may not exceed 3,000 characters.** Super Magic caps skill instructions and
