@@ -1,6 +1,6 @@
 ---
 name: Ticket Summary & Closure Note
-description: Produce a clean ticket summary as a resolution note, closure note, or templated P1/P2 handoff — in the requested format and point of view.
+description: Produce a clean ticket summary as a resolution note, closure note, or templated P1/P2 handoff: in the requested format and point of view.
 category: Documentation
 tools: [search_tickets, add_ticket_note]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Ticket Summary & Closure Note
 
-**When to use:** "Write a closure note for this ticket" / "give me a resolution note in our standard format" / "summarize this in first person for my PSA note" — or a P1/P2 being handed to another tech or after-hours team that needs a structured handoff.
+**When to use:** "Write a closure note for this ticket" / "give me a resolution note in our standard format" / "summarize this in first person for my PSA note", or a P1/P2 being handed to another tech or after-hours team that needs a structured handoff.
 
 **Run it:** on one ticket.
 

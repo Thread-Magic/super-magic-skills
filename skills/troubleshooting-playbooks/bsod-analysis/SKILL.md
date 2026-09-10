@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "<user>'s PC blue-screened" — once or repeatedly; random reboots that turn out to be crashes (machine restarts overnight); BSODs starting after a patch cycle, driver update, or new peripheral; or multiple machines at one client crashing the same way.
 
-**Run it:** on the one device ticket you're working — a tech drives evidence collection hands-on, not unattended.
+**Run it:** on the one device ticket you're working, a tech drives evidence collection hands-on, not unattended.
 
 ## Prompt
 

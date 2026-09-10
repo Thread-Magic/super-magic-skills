@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "<user> is leaving Friday — disable everything on their last day" / "terminated effective immediately, cut access now" / "offboard <user>, manager needs their mailbox and files" — any offboarding ticket that needs the checklist built, sequenced, and worked.
 
-**Run it:** on one ticket — a security event with destructive steps, so every action is human-confirmed.
+**Run it:** on one ticket, a security event with destructive steps, so every action is human-confirmed.
 
 ## Prompt
 

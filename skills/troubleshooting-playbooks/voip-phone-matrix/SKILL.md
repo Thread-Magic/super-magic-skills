@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "Callers can't reach us" / inbound dies while outbound works (or vice versa); the ring group isn't ringing a user or calls route to the wrong place; one-way, choppy, or dropping audio; or a phone shows no registration or a new/replacement phone won't provision.
 
-**Run it:** on the one ticket you're working — a tech works it and routes config/carrier changes to their owners; not unattended.
+**Run it:** on the one ticket you're working, a tech works it and routes config/carrier changes to their owners; not unattended.
 
 ## Prompt
 

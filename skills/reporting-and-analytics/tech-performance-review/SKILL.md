@@ -1,6 +1,6 @@
 ---
 name: Tech Performance Review
-description: A manager asks to evaluate a technician's performance over a period — closed, assigned, reopened, time logged, sentiment — with coaching angles, not a verdict.
+description: A manager asks to evaluate a technician's performance over a period (closed, assigned, reopened, time logged, sentiment), with coaching angles, not a verdict.
 category: Reporting & Analytics
 tools: [search_tickets, search_members]
 connectors: []

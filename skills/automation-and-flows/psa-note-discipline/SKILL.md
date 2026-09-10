@@ -1,6 +1,6 @@
 ---
 name: PSA Note Discipline
-description: Base skill defining how a note or reply is written when it may sync to a PSA — plain text, internal vs client-visible, and what never goes in a permanent record.
+description: Base skill defining how a note or reply is written when it may sync to a PSA: plain text, internal vs client-visible, and what never goes in a permanent record.
 category: Automation & Flows
 tools: [add_ticket_note]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # PSA Note Discipline
 
-**When to use:** Writing or reviewing any skill that leaves a note, updates a ticket, or drafts a reply on a desk whose tickets sync to ConnectWise, Autotask, or HaloPSA — which is most of them. Also when a skill's notes are arriving in the PSA as literal asterisks and broken links.
+**When to use:** Writing or reviewing any skill that leaves a note, updates a ticket, or drafts a reply on a desk whose tickets sync to ConnectWise, Autotask, or HaloPSA, which is most of them. Also when a skill's notes are arriving in the PSA as literal asterisks and broken links.
 
 **Run it:** on one ticket · across a set · or as a Flow — it's a base contract you fold into any skill that writes.
 

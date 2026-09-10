@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # Pod-Based Dispatch
 
-**When to use:** The desk aligns each client to a dedicated service pod/team ("<client> is a <Team B> account") and wants new tickets auto-routed to the least-busy tech in that client's pod — a Flow that dispatches each ticket the moment it lands, or a dispatcher clearing an unassigned board.
+**When to use:** The desk aligns each client to a dedicated service pod/team ("<client> is a <Team B> account") and wants new tickets auto-routed to the least-busy tech in that client's pod, a Flow that dispatches each ticket the moment it lands, or a dispatcher clearing an unassigned board.
 
 **Run it:** on one ticket · across a board's unassigned intake · or as a Flow-run **agent** that dispatches every new ticket automatically.
 

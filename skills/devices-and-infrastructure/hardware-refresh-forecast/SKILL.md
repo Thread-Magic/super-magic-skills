@@ -1,6 +1,6 @@
 ---
 name: Hardware Refresh Forecast
-description: Build a 4–5 year hardware refresh workbook per client — devices crossing the age threshold each period and the per-client refresh budget for planning.
+description: Build a 4–5 year hardware refresh workbook per client: devices crossing the age threshold each period and the per-client refresh budget for planning.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, search_itglue, add_ticket_note]
 connectors: [NinjaOne, IT Glue]

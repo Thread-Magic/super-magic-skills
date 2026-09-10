@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Search returns stale/missing/no results or a crawl is stuck or failing; a site or content database won't mount or shows unhealthy; a user can't reach a site/library/item they should (or can reach one they shouldn't); or after a patch/upgrade sites are broken with "the farm needs configuration" or a service app is down.
 
-**Run it:** on the one ticket you're working — a tech with farm-admin access works it hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech with farm-admin access works it hands-on; not unattended.
 
 ## Prompt
 

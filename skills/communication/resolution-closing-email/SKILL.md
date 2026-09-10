@@ -1,6 +1,6 @@
 ---
 name: Resolution Closing Email
-description: Draft the closure email for a resolved ticket — what was wrong, what we did, how to reopen — built from the ticket's actual evidence, not memory.
+description: Draft the closure email for a resolved ticket (what was wrong, what we did, how to reopen) built from the ticket's actual evidence, not memory.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Retention & Growth (CSAT/Expansion)]
 
 # Resolution Closing Email
 
-**When to use:** "Draft the closing email for this ticket" / "write the resolution summary for the client" — a ticket is moving to resolved/closed and the client deserves a proper close-out.
+**When to use:** "Draft the closing email for this ticket" / "write the resolution summary for the client", a ticket is moving to resolved/closed and the client deserves a proper close-out.
 
 **Run it:** on one ticket · or as a Flow (triggered when a ticket moves to resolved).
 

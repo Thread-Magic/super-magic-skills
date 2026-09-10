@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # One-Shot Ticket Workup
 
-**When to use:** "Work up this ticket for me" / "get me caught up and ready to act" / "recap, next step, a reply, and a time entry for #<n>" — returning to an in-flight ticket you need to re-engage fast, and want the full assist in one shot instead of four separate asks.
+**When to use:** "Work up this ticket for me" / "get me caught up and ready to act" / "recap, next step, a reply, and a time entry for #<n>", returning to an in-flight ticket you need to re-engage fast, and want the full assist in one shot instead of four separate asks.
 
 **Run it:** on one in-flight ticket — run it manually (not a Flow; everything here is a preview you approve).
 

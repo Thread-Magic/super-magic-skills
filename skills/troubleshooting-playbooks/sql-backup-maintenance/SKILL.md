@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 **When to use:** The transaction log (.ldf) grew huge or filled the disk ("the log is full", error 9002); a maintenance plan or backup job is failing or backups aren't running as expected; "we can't restore to the point we needed" / point-in-time recovery isn't available; or backups conflict with a VSS/image/app backup and two products are fighting over the database.
 
-**Run it:** on the one ticket you're working — a DBA/tech works it hands-on with the client on RPO decisions; not unattended.
+**Run it:** on the one ticket you're working, a DBA/tech works it hands-on with the client on RPO decisions; not unattended.
 
 ## Prompt
 

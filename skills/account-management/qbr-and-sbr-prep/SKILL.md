@@ -1,6 +1,6 @@
 ---
 name: QBR & SBR Prep
-description: Prepare an internal brief before a quarterly or strategic business review — trends, recurring issues, sentiment, opportunities, agenda, likely questions.
+description: Prepare an internal brief before a quarterly or strategic business review: trends, recurring issues, sentiment, opportunities, agenda, likely questions.
 category: Account Management
 tools: [search_tickets, search_clients, search_contacts, liongard_cyber_risk_dashboard, liongard_metric, search_ninjaone_devices]
 connectors: [Liongard, NinjaOne]
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "I have a QBR with <client> this week — prep me"; "build my SBR talking points for <client>"; "what should I bring to <client>'s quarterly review?"; or a 30-day onboarding-readiness check for a recently signed client.
 
-**Run it:** across a client's review period — a manual internal brief, not a Flow.
+**Run it:** across a client's review period, a manual internal brief, not a Flow.
 
 ## Prompt
 

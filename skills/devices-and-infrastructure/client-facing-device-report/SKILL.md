@@ -1,6 +1,6 @@
 ---
 name: Client-Facing Device Report
-description: Produce a sanitized device inventory and health report a client contact can read — counts, health, risks in plain business language, no raw tool output.
+description: Produce a sanitized device inventory and health report a client contact can read: counts, health, risks in plain business language, no raw tool output.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, list_ninjaone_alerts, add_ticket_note]
 connectors: [NinjaOne]

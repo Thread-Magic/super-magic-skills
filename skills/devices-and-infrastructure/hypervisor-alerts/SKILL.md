@@ -1,6 +1,6 @@
 ---
 name: Hypervisor Alert Triage
-description: Triage Hyper-V and VMware host alerts — datastore capacity, snapshot sprawl, CPU/memory pressure — deciding if the issue is host-level or VM-level first.
+description: Triage Hyper-V and VMware host alerts (datastore capacity, snapshot sprawl, CPU/memory pressure) deciding if the issue is host-level or VM-level first.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, list_ninjaone_alerts, get_ninjaone_device_activities, get_ninjaone_device_link, reset_ninjaone_alert, search_itglue, search_hudu, search_tickets, add_ticket_note, create_ticket, update_ticket]
 connectors: [NinjaOne, IT Glue, Hudu]

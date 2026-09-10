@@ -1,6 +1,6 @@
 ---
 name: Intent Setup Walkthrough
-description: Walk through building a new Triage Agent intent from scratch — check it doesn't already exist, then set the name, description, trigger variations, replies, and any arguments — so a new automatic response is set up cleanly and without duplicates.
+description: Walk through building a new Triage Agent intent from scratch: check it doesn't already exist, then set the name, description, trigger variations, replies, and any arguments, so a new automatic response is set up cleanly and without duplicates.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, set_variation_arguments, set_variation_replies]
 connectors: []
@@ -12,9 +12,9 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Intent Setup Walkthrough
 
-**When to use:** Setting up a new automatic reply for the Triage Agent — "create an intent for password reset requests" — and you want it built end to end without accidentally duplicating one that already exists.
+**When to use:** Setting up a new automatic reply for the Triage Agent ("create an intent for password reset requests"), and you want it built end to end without accidentally duplicating one that already exists.
 
-**Run it:** as a guided setup — one intent at a time, with your confirmation at each step.
+**Run it:** as a guided setup, one intent at a time, with your confirmation at each step.
 
 ## Prompt
 

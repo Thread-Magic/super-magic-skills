@@ -1,6 +1,6 @@
 ---
 name: New Ticket Approval Gate
-description: Configured clients require the designated approver to authorize work on every new ticket — fire send_approval on intake, hold, and record the outcome.
+description: Configured clients require the designated approver to authorize work on every new ticket: fire send_approval on intake, hold, and record the outcome.
 category: Automation & Flows
 tools: [search_tickets, search_clients, search_contacts, send_approval, update_ticket, add_ticket_note]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Risk & Compliance]
 
 # New Ticket Approval Gate
 
-**When to use:** A flow fires on ticket creation for approval-gated clients; "for <client>, no work starts until their office manager approves the request"; co-managed desks where the client's internal IT authorizes which tickets the MSP works. Fires on the ticket-CREATION event — never on a timer.
+**When to use:** A flow fires on ticket creation for approval-gated clients; "for <client>, no work starts until their office manager approves the request"; co-managed desks where the client's internal IT authorizes which tickets the MSP works. Fires on the ticket-CREATION event, never on a timer.
 
 **Run it:** on one ticket · or as a Flow (triggered on ticket creation for approval-gated clients).
 

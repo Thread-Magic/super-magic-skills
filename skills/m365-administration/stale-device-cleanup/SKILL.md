@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Risk & Compliance]
 
 # Stale Device Cleanup
 
-**When to use:** "Entra has <hundreds of> devices that haven't checked in for a year," a periodic device-hygiene pass for a managed tenant, device-count-based licensing or reporting skewed by dead records, or pre-cleanup before a tenant migration or management-tool change. Deleting a device object is the rare hygiene task that can destroy data recovery — BitLocker keys stored on the Entra device object die with it — so this skill sequences the cleanup so keys are preserved first, Autopilot devices are excluded, and nothing is deleted that was merely asleep.
+**When to use:** "Entra has <hundreds of> devices that haven't checked in for a year," a periodic device-hygiene pass for a managed tenant, device-count-based licensing or reporting skewed by dead records, or pre-cleanup before a tenant migration or management-tool change. Deleting a device object is the rare hygiene task that can destroy data recovery (BitLocker keys stored on the Entra device object die with it), so this skill sequences the cleanup so keys are preserved first, Autopilot devices are excluded, and nothing is deleted that was merely asleep.
 
 **Run it:** as an on-demand sweep across every device object in the tenant — you prepare and sequence the cleanup, a technician exports, disables, and deletes (not a Flow: no schedule trigger, and changes need a human at the console).
 

@@ -1,6 +1,6 @@
 ---
 name: Network Share Slowness
-description: Diagnose slow SMB file shares — sluggish copies, crawling folder listings, one office fine — through SMB version, signing, AV filters, and DFS referrals.
+description: Diagnose slow SMB file shares (sluggish copies, crawling folder listings, one office fine) through SMB version, signing, AV filters, and DFS referrals.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "Opening folders on the shared drive takes 30 seconds" or file copies crawl; slowness that appeared after server hardening, a security-tool rollout, or a migration; one site or VLAN slow against a share that's fast elsewhere; or "Excel files on the share take forever" (often not the network at all). For access-denied/permission tickets use the File Share Permissions playbook — this one is purely about speed.
 
-**Run it:** on the one ticket you're working — a tech measures and diagnoses hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech measures and diagnoses hands-on; not unattended.
 
 ## Prompt
 

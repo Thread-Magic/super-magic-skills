@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 **When to use:** External users can't connect through RD Gateway / RD Web or connections drop at the gateway, certificate warnings appear connecting, some users/resources connect while others don't (authorization suspicion), or RD Web sign-in / the MFA prompt in front of the gateway fails.
 
-**Run it:** on the one ticket you're working — a tech works the gateway hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech works the gateway hands-on; not unattended.
 
 ## Prompt
 

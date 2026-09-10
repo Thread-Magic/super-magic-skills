@@ -1,6 +1,6 @@
 ---
 name: Autotask Ticket Categories
-description: Set the right Autotask Ticket Category on a new ticket — the one classification field Assistive AI auto-categorization does not cover. Fetches the desk's own category list every run.
+description: Set the right Autotask Ticket Category on a new ticket, the one classification field Assistive AI auto-categorization does not cover. Fetches the desk's own category list every run.
 category: PSA-Specific
 tools: [search_tickets, list_ticket_categories, set_ticket_category, add_ticket_note]
 connectors: []

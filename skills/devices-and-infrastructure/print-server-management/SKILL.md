@@ -1,6 +1,6 @@
 ---
 name: Print Server Management
-description: Operate a print server layer — spooler triage, disciplined driver deployment (no ad-hoc installs), and planning queue migrations to a new print server.
+description: Operate a print server layer: spooler triage, disciplined driver deployment (no ad-hoc installs), and planning queue migrations to a new print server.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, list_ninjaone_windows_services, control_ninjaone_windows_service, get_ninjaone_device_activities, get_ninjaone_device_link, search_itglue, search_hudu, search_tickets, add_ticket_note, create_ticket, send_approval]
 connectors: [NinjaOne, IT Glue, Hudu]

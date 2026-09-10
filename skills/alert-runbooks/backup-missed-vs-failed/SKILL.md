@@ -1,6 +1,6 @@
 ---
 name: Backup Missed vs Failed Alert
-description: Distinguish a backup that never ran (missed) from one that ran and errored (failed) — two different routes — and always state exposure via last-known-good.
+description: Distinguish a backup that never ran (missed) from one that ran and errored (failed) (two different routes), and always state exposure via last-known-good.
 category: Alert Runbooks
 tools: [search_tickets, get_ninjaone_device, get_ninjaone_device_activities, list_ninjaone_alerts, liongard_metric, liongard_launchpoint, search_itglue, add_ticket_note, update_ticket]
 connectors: [NinjaOne, Liongard, IT Glue]

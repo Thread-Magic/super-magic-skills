@@ -1,6 +1,6 @@
 ---
 name: Mac Support
-description: The Windows tech's ladder for Mac tickets — keychain prompts, MDM enrollment, TCC app permissions, FileVault — mapping macOS causes vs Windows reflexes.
+description: The Windows tech's ladder for Mac tickets (keychain prompts, MDM enrollment, TCC app permissions, FileVault) mapping macOS causes vs Windows reflexes.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -12,9 +12,9 @@ outcome: [Faster Resolution & Response]
 
 # Mac Support
 
-**When to use:** A Mac user gets endless password prompts after a password change ("keychain" anything), a Mac won't enroll in (or fell out of) MDM / profiles aren't applying, an app can't see the screen/camera/mic/files it needs (screen shares show black, mics "don't work"), or FileVault login/recovery issues — or any Mac ticket where the tech says "these steps are for Windows."
+**When to use:** A Mac user gets endless password prompts after a password change ("keychain" anything), a Mac won't enroll in (or fell out of) MDM / profiles aren't applying, an app can't see the screen/camera/mic/files it needs (screen shares show black, mics "don't work"), or FileVault login/recovery issues, or any Mac ticket where the tech says "these steps are for Windows."
 
-**Run it:** on the one ticket you're working — a tech works the Mac hands-on with the user; not unattended.
+**Run it:** on the one ticket you're working, a tech works the Mac hands-on with the user; not unattended.
 
 ## Prompt
 

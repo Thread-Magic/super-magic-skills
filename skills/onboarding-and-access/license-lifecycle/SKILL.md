@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "Assign an M365 license to <user>" / "new hire needs <application> — do we have a spare seat?" / "we're over our license count / why are we paying for <n> seats?" — or a license removal inside an offboarding, or a periodic license-hygiene sweep.
 
-**Run it:** on one ticket — a spend decision, so purchases are approval-gated by a human.
+**Run it:** on one ticket, a spend decision, so purchases are approval-gated by a human.
 
 ## Prompt
 

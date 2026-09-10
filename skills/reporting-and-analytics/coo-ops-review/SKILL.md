@@ -1,6 +1,6 @@
 ---
 name: COO Ops Review
-description: An ops leader asks what the team is doing well and not so well — an honest, evidence-backed operations review of the service desk.
+description: An ops leader asks what the team is doing well and not so well, an honest, evidence-backed operations review of the service desk.
 category: Reporting & Analytics
 tools: [search_tickets, search_members, search_clients, list_boards]
 connectors: []

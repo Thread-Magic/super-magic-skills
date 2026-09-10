@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # Password & MFA Recovery
 
-**When to use:** "I'm locked out" / "reset my password" / "can't sign in" / "new phone — MFA codes don't work" / "user lost their authenticator" — a lockout alert or reset request on the queue.
+**When to use:** "I'm locked out" / "reset my password" / "can't sign in" / "new phone (MFA codes don't work" / "user lost their authenticator") a lockout alert or reset request on the queue.
 
 **Run it:** on one ticket — identity-verification is human-gated; never auto-resets.
 

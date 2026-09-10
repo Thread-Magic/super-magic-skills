@@ -1,6 +1,6 @@
 ---
 name: Zapier SharePoint Ticket Filing
-description: File ticket artifacts — reports, PIRs, signed docs — into the client's SharePoint library with correct foldering and sharing-link hygiene.
+description: File ticket artifacts (reports, PIRs, signed docs) into the client's SharePoint library with correct foldering and sharing-link hygiene.
 category: Connectors
 tools: [search_tickets, add_ticket_note]
 connectors: [Zapier: SharePoint]

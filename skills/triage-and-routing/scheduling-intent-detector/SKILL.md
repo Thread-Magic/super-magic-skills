@@ -1,6 +1,6 @@
 ---
 name: Scheduling Intent Detector
-description: Find "can we get on a call / book a time" requests hiding in recent tickets and route them to scheduling — skipping tickets where a tech has already engaged.
+description: Find "can we get on a call / book a time" requests hiding in recent tickets and route them to scheduling, skipping tickets where a tech has already engaged.
 category: Triage & Routing
 tools: [search_tickets, add_ticket_note, update_ticket, create_timezest_scheduling_request, list_timezest_appointment_types, list_timezest_resources]
 connectors: [TimeZest]

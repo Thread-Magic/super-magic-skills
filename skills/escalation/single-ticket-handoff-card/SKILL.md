@@ -1,6 +1,6 @@
 ---
 name: Single Ticket Handoff Card
-description: Hand one ticket to another technician with a compact card — status table, watch points, overdue-task detection, and a one-sentence next action.
+description: Hand one ticket to another technician with a compact card: status table, watch points, overdue-task detection, and a one-sentence next action.
 category: Escalation
 tools: [search_tickets, add_ticket_note, update_ticket, search_members, schedule_ticket]
 connectors: []

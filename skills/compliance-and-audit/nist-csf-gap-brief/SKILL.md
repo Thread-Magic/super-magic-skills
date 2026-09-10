@@ -1,6 +1,6 @@
 ---
 name: NIST CSF Gap Brief
-description: Map a client's security posture to the NIST Cybersecurity Framework functions and return a plain-language gap brief — no certification or compliance claim.
+description: Map a client's security posture to the NIST Cybersecurity Framework functions and return a plain-language gap brief, no certification or compliance claim.
 category: Compliance & Audit
 tools: [search_tickets, search_itglue, search_hudu, liongard_cyber_risk_dashboard, add_ticket_note]
 connectors: [IT Glue, Hudu, Liongard]

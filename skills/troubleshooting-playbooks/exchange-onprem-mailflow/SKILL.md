@@ -1,6 +1,6 @@
 ---
 name: Exchange On-Prem Mail Flow
-description: Diagnose on-prem Exchange transport — stuck queues, send/receive connector faults, TLS/cert failures, backpressure — using Queue Viewer and protocol logs.
+description: Diagnose on-prem Exchange transport (stuck queues, send/receive connector faults, TLS/cert failures, backpressure) using Queue Viewer and protocol logs.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Mail is queuing on-prem and not delivering (internally or externally); a send/receive connector broke after a change or a "smart host"/relay stopped working; TLS/certificate errors appear in mail flow or a partner stopped accepting mail; or the transport service stopped, backpressure warnings fired, or the Exchange disk filled up.
 
-**Run it:** on the one ticket you're working — a tech drives the queue viewer and shell hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech drives the queue viewer and shell hands-on; not unattended.
 
 ## Prompt
 

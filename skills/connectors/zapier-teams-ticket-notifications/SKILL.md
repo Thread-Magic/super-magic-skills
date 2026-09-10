@@ -1,6 +1,6 @@
 ---
 name: Zapier Teams Ticket Notifications
-description: Post ticket updates and escalations into Microsoft Teams channels — client shared channels, internal escalations channel, or per-board feeds.
+description: Post ticket updates and escalations into Microsoft Teams channels: client shared channels, internal escalations channel, or per-board feeds.
 category: Connectors
 tools: [search_tickets, add_ticket_note]
 connectors: [Zapier: Microsoft Teams]

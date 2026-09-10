@@ -1,6 +1,6 @@
 ---
 name: Premature Confirmation Detector
-description: Catch tickets closed on assumption without customer confirmation — work summaries treated as sign-off, closes minutes after last change — then reopen.
+description: Catch tickets closed on assumption without customer confirmation (work summaries treated as sign-off, closes minutes after last change), then reopen.
 category: QA & Closure
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []

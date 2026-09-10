@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Dispatcher Morning Ritual
 
-**When to use:** "Run morning dispatch" / "open the board" / "get the queue assigned" — the coordinator's first login before the team huddle.
+**When to use:** "Run morning dispatch" / "open the board" / "get the queue assigned", the coordinator's first login before the team huddle.
 
 **Run it:** across the whole intake/unassigned queue — run it manually (not a Flow; Flows can't schedule a daily cadence).
 

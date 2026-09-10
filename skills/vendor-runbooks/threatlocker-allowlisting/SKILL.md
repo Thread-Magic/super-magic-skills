@@ -12,7 +12,7 @@ outcome: [Risk & Compliance, Faster Resolution & Response]
 
 # ThreatLocker Allowlisting
 
-**When to use:** A ThreatLocker approval request (blocked application/script needing allowlisting) lands — the routine, high-volume case; an Elevation Control (run-as-admin) or Storage Control (USB/network-share access) request arrives; or a client is being onboarded and the Learning-vs-Secured mode transition needs handling.
+**When to use:** A ThreatLocker approval request (blocked application/script needing allowlisting) lands, the routine, high-volume case; an Elevation Control (run-as-admin) or Storage Control (USB/network-share access) request arrives; or a client is being onboarded and the Learning-vs-Secured mode transition needs handling.
 
 **Run it:** on the approval-request ticket.
 

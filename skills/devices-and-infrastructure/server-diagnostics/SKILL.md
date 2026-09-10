@@ -1,6 +1,6 @@
 ---
 name: Server Diagnostics
-description: Deep single-server review — services, activities, alert history, role inference, and change correlation via Liongard detections when the tenant is on.
+description: Deep single-server review: services, activities, alert history, role inference, and change correlation via Liongard detections when the tenant is on.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, get_ninjaone_device, list_ninjaone_windows_services, get_ninjaone_device_activities, list_ninjaone_alerts, liongard_detection, liongard_timeline, get_ninjaone_device_link, add_ticket_note]
 connectors: [NinjaOne, Liongard]

@@ -1,6 +1,6 @@
 ---
 name: Fax & eFax
-description: Work fax tickets — dead analog lines, ATA fax page corruption, eFax cloud portals not sending or receiving — across the line, ATA, and portal matrix.
+description: Work fax tickets (dead analog lines, ATA fax page corruption, eFax cloud portals not sending or receiving) across the line, ATA, and portal matrix.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 **When to use:** Faxes aren't sending or being received on a physical fax machine; faxes partially transmit, arrive garbled, or fail only on long documents (classic ATA symptoms); an eFax portal / fax-to-email stopped working or inbound faxes stopped arriving; or a healthcare or legal client reports fax failure (treat as workflow-critical, not legacy).
 
-**Run it:** on the one ticket you're working — a tech drives this with on-site staff and the carrier/vendor; not unattended.
+**Run it:** on the one ticket you're working, a tech drives this with on-site staff and the carrier/vendor; not unattended.
 
 ## Prompt
 

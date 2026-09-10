@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Lead Daily Ritual
 
-**When to use:** "Run my daily" / "what needs my attention today" / "lead morning pass" — a team lead's first session of the day, after the huddle.
+**When to use:** "Run my daily" / "what needs my attention today" / "lead morning pass", a team lead's first session of the day, after the huddle.
 
 **Run it:** across your team's boards — run it manually (not a Flow; Flows can't schedule a daily cadence).
 

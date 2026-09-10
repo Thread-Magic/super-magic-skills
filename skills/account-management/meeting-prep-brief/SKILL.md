@@ -1,6 +1,6 @@
 ---
 name: Meeting Prep Brief
-description: Rapid pre-meeting brief on a client — open items, recent wins and misses, sentiment, likely topics, and landmines — for meetings starting in 30 minutes.
+description: Rapid pre-meeting brief on a client (open items, recent wins and misses, sentiment, likely topics, and landmines) for meetings starting in 30 minutes.
 category: Account Management
 tools: [search_tickets, search_clients, search_contacts]
 connectors: []
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "Meeting with <client> in 30 minutes — prep me"; "quick brief on <client> before my call"; or "what do I need to know before I talk to <contact> at <client>?"
 
-**Run it:** across a client's recent history — a manual chat-only brief, not a Flow.
+**Run it:** across a client's recent history, a manual chat-only brief, not a Flow.
 
 ## Prompt
 

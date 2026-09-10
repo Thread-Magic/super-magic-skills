@@ -1,6 +1,6 @@
 ---
 name: Client Reply
-description: Draft an external client reply in your house voice and format — resolution updates, status notes, closing messages, or any client-facing email on a ticket.
+description: Draft an external client reply in your house voice and format: resolution updates, status notes, closing messages, or any client-facing email on a ticket.
 category: Communication
 tools: [search_tickets, view_openDraft, add_ticket_note]
 connectors: []

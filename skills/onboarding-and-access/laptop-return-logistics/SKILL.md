@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** an offboarding ticket reaches the "recover the device" step for a remote or departed user / "get <user>'s laptop back" / "send a return box to <user>" / a device recovery has stalled and someone asks where it stands.
 
-**Run it:** on one ticket — a tracked recovery sequence a human drives to close.
+**Run it:** on one ticket, a tracked recovery sequence a human drives to close.
 
 ## Prompt
 

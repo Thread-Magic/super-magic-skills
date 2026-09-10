@@ -1,6 +1,6 @@
 ---
 name: Inbox Rule Alert Runbook
-description: An alert fired for a suspicious inbox rule created on a user's mailbox — judge legitimacy, inventory all rules, and remove plus rotate if malicious.
+description: An alert fired for a suspicious inbox rule created on a user's mailbox: judge legitimacy, inventory all rules, and remove plus rotate if malicious.
 category: Security
 tools: [search_tickets, search_contacts, add_ticket_note, update_ticket]
 connectors: []

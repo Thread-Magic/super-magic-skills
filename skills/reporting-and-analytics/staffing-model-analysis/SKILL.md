@@ -1,6 +1,6 @@
 ---
 name: Staffing Model Analysis
-description: Someone asks whether the desk is staffed right — ticket arrival patterns by hour and day versus coverage, and where the desk is under- or over-staffed.
+description: Someone asks whether the desk is staffed right: ticket arrival patterns by hour and day versus coverage, and where the desk is under- or over-staffed.
 category: Reporting & Analytics
 tools: [search_tickets, search_members, list_boards]
 connectors: []

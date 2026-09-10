@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Fewer Escalations & Less Noise]
 
 # SSPR Rollout
 
-**When to use:** A client asks to "enable self-service password reset for <client>," or "we spend too much helpdesk time on password resets" and SSPR is the proposal, or SSPR is enabled but nobody uses it (a registration problem, not a feature problem), or a hybrid client asks for SSPR with on-prem passwords in play. SSPR is sold on one number — password-reset tickets that stop arriving — and this skill rolls it out so that number actually materializes: methods users will register, a campaign that gets them registered, and a before/after measurement so the client sees the payoff.
+**When to use:** A client asks to "enable self-service password reset for <client>," or "we spend too much helpdesk time on password resets" and SSPR is the proposal, or SSPR is enabled but nobody uses it (a registration problem, not a feature problem), or a hybrid client asks for SSPR with on-prem passwords in play. SSPR is sold on one number (password-reset tickets that stop arriving), and this skill rolls it out so that number actually materializes: methods users will register, a campaign that gets them registered, and a before/after measurement so the client sees the payoff.
 
 **Run it:** on one client's rollout — you prepare the plan, comms, and measurements, a technician executes the Entra configuration (not a Flow: it needs a human at the console).
 

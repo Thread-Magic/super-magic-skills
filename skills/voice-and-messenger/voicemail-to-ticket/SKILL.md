@@ -1,6 +1,6 @@
 ---
 name: Voicemail to Ticket
-description: Convert a voicemail transcription into a ticket with a callback commitment — urgency read from what the caller actually said, not from tone guesses.
+description: Convert a voicemail transcription into a ticket with a callback commitment: urgency read from what the caller actually said, not from tone guesses.
 category: Voice & Messenger
 tools: [search_contacts, search_clients, search_tickets, create_ticket, update_ticket, assign_contact, add_ticket_note, list_ticket_priorities]
 connectors: []

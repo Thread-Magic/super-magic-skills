@@ -1,6 +1,6 @@
 ---
 name: PCI DSS Scope Review
-description: Help a client understand PCI DSS scope — what counts as the cardholder data environment (CDE), what's in versus out — not a QSA assessment or AOC.
+description: Help a client understand PCI DSS scope (what counts as the cardholder data environment (CDE), what's in versus out), not a QSA assessment or AOC.
 category: Compliance & Audit
 tools: [search_tickets, search_itglue, search_hudu, add_ticket_note]
 connectors: [IT Glue, Hudu]

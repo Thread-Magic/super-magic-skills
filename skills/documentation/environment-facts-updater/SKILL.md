@@ -1,6 +1,6 @@
 ---
 name: Environment Facts Updater
-description: When a ticket reveals a changed client environment fact — new server, ISP, VPN, or key contact — draft the update for the client documentation platform.
+description: When a ticket reveals a changed client environment fact (new server, ISP, VPN, or key contact) draft the update for the client documentation platform.
 category: Documentation
 tools: [search_tickets, search_itglue, search_hudu, notion-search, notion-fetch, notion-update-page, add_ticket_note]
 connectors: [IT Glue, Hudu, Notion]

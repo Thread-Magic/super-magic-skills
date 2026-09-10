@@ -1,6 +1,6 @@
 ---
 name: Apology With Remedy
-description: Draft the message when the desk genuinely failed — specific acknowledgment, concrete remedy, and one prevention step, without groveling or overreach.
+description: Draft the message when the desk genuinely failed: specific acknowledgment, concrete remedy, and one prevention step, without groveling or overreach.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise, Retention & Growth (CSAT/Expansion)]
 
 # Apology With Remedy
 
-**When to use:** "We really dropped the ball on this one — draft the apology with a make-good" — a failure bigger than a slipped date: wrong change applied, data-affecting mistake, repeated misses, a broken commitment after an escalation. For a simple slipped timeline, use Delay Apology instead.
+**When to use:** "We really dropped the ball on this one (draft the apology with a make-good") a failure bigger than a slipped date: wrong change applied, data-affecting mistake, repeated misses, a broken commitment after an escalation. For a simple slipped timeline, use Delay Apology instead.
 
 **Run it:** on one ticket.
 

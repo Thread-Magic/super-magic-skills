@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** A user gets a temporary profile or "we can't sign you in" on RDS/AVD/shared PCs, FSLogix throws cannot-attach/open-VHD errors, settings/Outlook/Teams cache are lost moving between session hosts, or sign-ins hang at the profile stage after a storage or permissions change.
 
-**Run it:** on the one ticket you're working — a tech works the file server/host console hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech works the file server/host console hands-on; not unattended.
 
 ## Prompt
 

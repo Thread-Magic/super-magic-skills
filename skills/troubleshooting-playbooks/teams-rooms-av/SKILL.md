@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** A meeting room won't join meetings, the calendar is blank, or it shows "no upcoming meetings" when there are; camera, microphone, speaker, display, or the touch console is dead or not detected; the room can't sign in, shows signed-out, or the resource account/license lapsed; or the room "just stopped working" and hasn't been restarted in a long time. General meeting call-quality troubleshooting is teams-call-quality.
 
-**Run it:** on the one ticket you're working — a tech works the room device hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech works the room device hands-on; not unattended.
 
 ## Prompt
 

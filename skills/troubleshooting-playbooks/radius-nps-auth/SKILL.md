@@ -12,9 +12,9 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 # RADIUS / NPS Authentication
 
-**When to use:** Wi-Fi (WPA2/3-Enterprise), wired 802.1X, or VPN auth fails for some or all users — often right after a certificate renewal or policy change — or a new device/user or a whole group is rejected while others authenticate fine, or a network device reports RADIUS timeouts.
+**When to use:** Wi-Fi (WPA2/3-Enterprise), wired 802.1X, or VPN auth fails for some or all users (often right after a certificate renewal or policy change), or a new device/user or a whole group is rejected while others authenticate fine, or a network device reports RADIUS timeouts.
 
-**Run it:** on the one ticket you're working — a tech works the NPS console hands-on; not unattended.
+**Run it:** on the one ticket you're working, a tech works the NPS console hands-on; not unattended.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Connector Degradation
-description: Base skill defining how a skill behaves when an integration it wants isn't connected — do the job with what's native, name the gap, never fake the missing source.
+description: Base skill defining how a skill behaves when an integration it wants isn't connected: do the job with what's native, name the gap, never fake the missing source.
 category: Automation & Flows
 tools: [search_itglue, search_hudu, search_knowledge_base]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Always-On Coverage]
 
 # Connector Degradation
 
-**When to use:** Authoring or reviewing any skill that reaches for IT Glue, Hudu, NinjaOne, Liongard, TimeZest, or any other integration — because it will run on desks where that integration is off.
+**When to use:** Authoring or reviewing any skill that reaches for IT Glue, Hudu, NinjaOne, Liongard, TimeZest, or any other integration, because it will run on desks where that integration is off.
 
 **Run it:** on one ticket · across a set · or as a Flow — it's a base contract you fold into any connector-gated skill.
 

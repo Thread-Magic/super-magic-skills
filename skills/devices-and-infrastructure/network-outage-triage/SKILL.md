@@ -1,6 +1,6 @@
 ---
 name: Network Outage Triage
-description: Triage a suspected site-down — all-devices-offline vs single dead device, ISP vs internal, who to call, and set a comms cadence for the client updates.
+description: Triage a suspected site-down: all-devices-offline vs single dead device, ISP vs internal, who to call, and set a comms cadence for the client updates.
 category: Devices & Infrastructure
 tools: [search_ninjaone_devices, list_ninjaone_alerts, get_ninjaone_device, search_itglue, search_tickets, search_contacts, merge_ticket, add_ticket_note]
 connectors: [NinjaOne, IT Glue]

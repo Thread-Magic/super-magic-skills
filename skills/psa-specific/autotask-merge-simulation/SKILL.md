@@ -1,6 +1,6 @@
 ---
 name: Autotask Merge Simulation
-description: Autotask has no merge API: dedupe tickets via a 5-step manual sequence — verify, pick survivor, cross-note, carry history, complete the source last.
+description: Autotask has no merge API: dedupe tickets via a 5-step manual sequence: verify, pick survivor, cross-note, carry history, complete the source last.
 category: PSA-Specific
 tools: [search_tickets, add_ticket_note, update_ticket]
 connectors: []

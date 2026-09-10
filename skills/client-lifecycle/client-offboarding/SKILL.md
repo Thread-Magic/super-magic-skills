@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "<client> is leaving — start the offboarding"; "run the offboarding checklist for <client>, last day is <date>"; or "what do we still owe <departing client> before cutoff?"
 
-**Run it:** on one departing client — a tracked checklist a human drives; no destructive actions here.
+**Run it:** on one departing client, a tracked checklist a human drives; no destructive actions here.
 
 ## Prompt
 

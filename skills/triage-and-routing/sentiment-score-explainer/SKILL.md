@@ -1,6 +1,6 @@
 ---
 name: Sentiment Score Explainer
-description: Explain why a ticket thread received its sentiment score by citing the exact messages that drove it — no hand-waving, no re-scoring.
+description: Explain why a ticket thread received its sentiment score by citing the exact messages that drove it, no hand-waving, no re-scoring.
 category: Triage & Routing
 tools: [search_tickets, add_ticket_note]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 # Sentiment Score Explainer
 
-**When to use:** "Why did this thread receive this sentiment score?" — a flow fires when sentiment drops and needs an evidence note for the tech, or a lead reviewing flagged-negative tickets wants the driver messages, not a summary.
+**When to use:** "Why did this thread receive this sentiment score?", a flow fires when sentiment drops and needs an evidence note for the tech, or a lead reviewing flagged-negative tickets wants the driver messages, not a summary.
 
 **Run it:** on one ticket · across all flagged-negative tickets · or as a Flow (when a ticket's sentiment drops).
 

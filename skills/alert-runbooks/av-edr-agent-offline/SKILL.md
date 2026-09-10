@@ -1,6 +1,6 @@
 ---
 name: AV/EDR Agent Offline Alert
-description: Triage an AV/EDR agent-offline alert — decide if the device is off or up with a dead agent, quantify unprotected time, and route on the protection gap.
+description: Triage an AV/EDR agent-offline alert: decide if the device is off or up with a dead agent, quantify unprotected time, and route on the protection gap.
 category: Alert Runbooks
 tools: [search_tickets, search_ninjaone_devices, get_ninjaone_device, get_ninjaone_device_activities, list_ninjaone_alerts, get_ninjaone_device_link, add_ticket_note, update_ticket]
 connectors: [NinjaOne]

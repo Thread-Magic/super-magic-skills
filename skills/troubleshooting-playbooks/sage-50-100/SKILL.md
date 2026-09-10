@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Workstations can't connect to / open the company data, Pervasive/Actian PSQL or "Btrieve" status-code errors appear or the engine service is down, one workstation opens the company but others can't (multi-user broke after a change), or there's slowness/lock errors during month-end/year-end close.
 
-**Run it:** on the one ticket you're working — a tech works it hands-on with the finance lead aware; not unattended.
+**Run it:** on the one ticket you're working, a tech works it hands-on with the finance lead aware; not unattended.
 
 ## Prompt
 

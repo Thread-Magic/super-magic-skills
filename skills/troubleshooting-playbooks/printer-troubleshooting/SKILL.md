@@ -1,6 +1,6 @@
 ---
 name: Printer Troubleshooting
-description: Diagnose printing problems — nothing prints, stuck queues, garbled output, wrong printer, scan-to-email fails — via a spooler, driver, and network matrix.
+description: Diagnose printing problems (nothing prints, stuck queues, garbled output, wrong printer, scan-to-email fails) via a spooler, driver, and network matrix.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -12,9 +12,9 @@ outcome: [Faster Resolution & Response]
 
 # Printer Troubleshooting
 
-**When to use:** A user can't print, the print queue is stuck for everyone, pages come out garbled or half-printed or from the wrong tray, jobs vanish silently, or scan-to-email stopped working on the copier — and you need to tell whether it's one printer or a whole office.
+**When to use:** A user can't print, the print queue is stuck for everyone, pages come out garbled or half-printed or from the wrong tray, jobs vanish silently, or scan-to-email stopped working on the copier, and you need to tell whether it's one printer or a whole office.
 
-**Run it:** on the one ticket you're working — a tech or user runs the steps; not unattended.
+**Run it:** on the one ticket you're working, a tech or user runs the steps; not unattended.
 
 ## Prompt
 

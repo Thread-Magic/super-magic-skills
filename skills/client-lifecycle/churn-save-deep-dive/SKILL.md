@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "<client> gave notice / says they're shopping — analyze what went wrong"; "build me a save plan for <client>"; or "full history review on <client> before the retention call."
 
-**Run it:** on one client's full relationship history — a manual internal analysis, not a Flow.
+**Run it:** on one client's full relationship history, a manual internal analysis, not a Flow.
 
 ## Prompt
 

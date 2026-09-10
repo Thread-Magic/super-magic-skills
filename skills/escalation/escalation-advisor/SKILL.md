@@ -1,6 +1,6 @@
 ---
 name: Escalation Advisor
-description: Sweep active tickets against L2/L3, management, and project-conversion trigger lists and recommend which should escalate — before they age into problems.
+description: Sweep active tickets against L2/L3, management, and project-conversion trigger lists and recommend which should escalate: before they age into problems.
 category: Escalation
 tools: [search_tickets, list_boards, list_ticket_priorities, add_ticket_note]
 connectors: []

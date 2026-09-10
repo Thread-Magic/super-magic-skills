@@ -1,6 +1,6 @@
 ---
 name: Onboarding Plan Builder
-description: Draft a new tech's onboarding curriculum from the desk's own resolved tickets — the request types they'll actually face, in real volume order, with practice tickets per phase.
+description: Draft a new tech's onboarding curriculum from the desk's own resolved tickets, the request types they'll actually face, in real volume order, with practice tickets per phase.
 category: Training & Enablement
 tools: [search_tickets, list_boards, search_members, search_knowledge_base]
 connectors: []

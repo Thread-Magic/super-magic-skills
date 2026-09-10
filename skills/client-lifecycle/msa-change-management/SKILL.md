@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "<client> upgraded to the <tier> plan effective <date> — what needs to change?"; "<client> added 15 seats / a new site — process the change"; or "<client> is dropping after-hours coverage — who needs to know and what do we update?"
 
-**Run it:** on one client's agreement change — a manual coordination pass, not a Flow.
+**Run it:** on one client's agreement change, a manual coordination pass, not a Flow.
 
 ## Prompt
 

@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # End-of-Day Wrap-Up
 
-**When to use:** "End of day wrap-up" / "close out my day" / "anything I forgot to follow up on before I leave?" — the end-of-shift hygiene sweep that catches what rots overnight and hands tomorrow-you a first move.
+**When to use:** "End of day wrap-up" / "close out my day" / "anything I forgot to follow up on before I leave?", the end-of-shift hygiene sweep that catches what rots overnight and hands tomorrow-you a first move.
 
 **Run it:** across your own open tickets — run it manually (not a Flow; there's no schedule trigger).
 

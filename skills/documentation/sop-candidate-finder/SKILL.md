@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # SOP Candidate Finder
 
-**When to use:** "What should we document from last month's tickets?" / "find resolutions we keep re-solving from scratch" — a documentation push, a slow week that needs a writing backlog, or capturing a departing senior tech's knowledge.
+**When to use:** "What should we document from last month's tickets?" / "find resolutions we keep re-solving from scratch", a documentation push, a slow week that needs a writing backlog, or capturing a departing senior tech's knowledge.
 
 **Run it:** across all resolved tickets in a window · or as a Flow (triggered to run the sweep on demand).
 

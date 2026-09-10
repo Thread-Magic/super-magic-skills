@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Closure Recategorization
 
-**When to use:** A ticket just entered a resolution/closed-family status and its intake classification looks wrong; "fix the categorization on resolved tickets before they sync out for reporting"; a flow on close should re-classify from the full thread. Fires on the EVENT of entering a resolution status — never on a timer or "N hours after close".
+**When to use:** A ticket just entered a resolution/closed-family status and its intake classification looks wrong; "fix the categorization on resolved tickets before they sync out for reporting"; a flow on close should re-classify from the full thread. Fires on the EVENT of entering a resolution status, never on a timer or "N hours after close".
 
 **Run it:** on one ticket · or as a Flow (triggered when a ticket enters a resolution/closed status).
 

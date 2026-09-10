@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "Which 3 clients should I proactively contact this week and why?"; "who needs a touch from me this week?"; or a recurring Monday-morning outreach planning run.
 
-**Run it:** across the portfolio's last ~30 days — a manual weekly ritual, not a Flow.
+**Run it:** across the portfolio's last ~30 days, a manual weekly ritual, not a Flow.
 
 ## Prompt
 

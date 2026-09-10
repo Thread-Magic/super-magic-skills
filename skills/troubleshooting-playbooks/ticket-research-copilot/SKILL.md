@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Time & Cost Savings (Capacity)]
 
 **When to use:** A tech mid-troubleshoot asks "any similar tickets with a resolution?" or "has this user or client had this before, and what fixed it?"; someone wants everything known about this issue, user, or device in one place; or before escalating, to gather what has already been tried desk-wide so L2/L3 doesn't repeat it.
 
-**Run it:** on the one ticket you're working — a read-only research sweep a tech asks for mid-troubleshoot; not unattended.
+**Run it:** on the one ticket you're working, a read-only research sweep a tech asks for mid-troubleshoot; not unattended.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Autotask SLA Workflow
-description: Autotask SLA event model — First Response, Resolution Plan, Resolved — with clock-pausing statuses and breach-risk assessment for synced desks.
+description: Autotask SLA event model (First Response, Resolution Plan, Resolved), with clock-pausing statuses and breach-risk assessment for synced desks.
 category: PSA-Specific
 tools: [search_tickets, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: AD CS / Internal PKI Issues
-description: Troubleshoot AD CS internal PKI issues — enrollment and template failures, CRL revocation-check errors, and certificate expiry cascades before reissuing.
+description: Troubleshoot AD CS internal PKI issues: enrollment and template failures, CRL revocation-check errors, and certificate expiry cascades before reissuing.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 **When to use:** Auto-enrollment or manual enrollment fails, or a template won't offer or issue; "certificate revoked" / revocation-check failures or apps rejecting internally-issued certs; a CA certificate or widely-used issued cert is expiring/expired and things are breaking; or downstream services (NPS/802.1X, VPN, IIS, LDAPS) failing in ways that trace to certificates.
 
-**Run it:** on the one ticket you're working — a hands-on diagnosis a tech drives with CA-admin access, not something to run unattended.
+**Run it:** on the one ticket you're working, a hands-on diagnosis a tech drives with CA-admin access, not something to run unattended.
 
 ## Prompt
 

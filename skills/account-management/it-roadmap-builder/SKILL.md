@@ -1,6 +1,6 @@
 ---
 name: IT Roadmap Builder
-description: Draft a client IT roadmap from their ticket history plus asset and posture data — what to fix, upgrade, and invest in, organized into investment tiers.
+description: Draft a client IT roadmap from their ticket history plus asset and posture data: what to fix, upgrade, and invest in, organized into investment tiers.
 category: Account Management
 tools: [search_tickets, search_clients, search_ninjaone_devices, list_ninjaone_alerts, liongard_cyber_risk_dashboard, liongard_metric]
 connectors: [NinjaOne, Liongard]
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "Draft an IT roadmap for <client>"; "build <client>'s 12-month technology plan from what we know"; or "what should <client> invest in next year?"
 
-**Run it:** across a client's year of history plus current environment state — a manual internal draft, not a Flow.
+**Run it:** across a client's year of history plus current environment state, a manual internal draft, not a Flow.
 
 ## Prompt
 

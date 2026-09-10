@@ -1,6 +1,6 @@
 ---
 name: Live Call Transfer Brief
-description: One-minute brief for transferring a live in-progress call to another technician — caller context, what's been tried, sentiment alert, and a verbal opener.
+description: One-minute brief for transferring a live in-progress call to another technician: caller context, what's been tried, sentiment alert, and a verbal opener.
 category: Escalation
 tools: [search_tickets, search_contacts, add_ticket_note, run_assistive_ai]
 connectors: []

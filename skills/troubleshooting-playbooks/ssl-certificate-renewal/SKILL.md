@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Risk & Compliance]
 
 **When to use:** Users report certificate warnings on a site, portal, or internal service; an expiry alert fires (monitoring, issuer email, or expiry sweep); a "renew the cert for <service>" request comes in; or after a renewal some clients still see the old/broken cert.
 
-**Run it:** on the one ticket you're working — a tech works the renewal and schedules the swap with the client; not unattended.
+**Run it:** on the one ticket you're working, a tech works the renewal and schedules the swap with the client; not unattended.
 
 ## Prompt
 

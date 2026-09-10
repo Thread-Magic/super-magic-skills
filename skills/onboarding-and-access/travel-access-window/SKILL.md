@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "<user> is traveling to <country> next week and will get blocked" / "user abroad can't sign in — location policy is blocking them" / "open up access for <user> from <date> to <date>" / a sign-in-blocked ticket whose cause turns out to be travel.
 
-**Run it:** on one ticket — a scoped, approval-gated exception a human confirms.
+**Run it:** on one ticket, a scoped, approval-gated exception a human confirms.
 
 ## Prompt
 

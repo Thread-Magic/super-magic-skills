@@ -1,6 +1,6 @@
 ---
 name: Stakeholder Map
-description: Map who matters at a client — contacts organized by role and influence as evidenced in ticket interactions — and where our relationship coverage has gaps.
+description: Map who matters at a client (contacts organized by role and influence as evidenced in ticket interactions), and where our relationship coverage has gaps.
 category: Account Management
 tools: [search_tickets, search_clients, search_contacts]
 connectors: []
@@ -12,9 +12,9 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 # Stakeholder Map
 
-**When to use:** "Who are the key people at <client>?"; "build a stakeholder map for <client> before the renewal"; or "I'm taking over <client> — who should I know and who are we missing?"
+**When to use:** "Who are the key people at <client>?"; "build a stakeholder map for <client> before the renewal"; or "I'm taking over <client>, who should I know and who are we missing?"
 
-**Run it:** across a client's 6–12 months of contact interactions — a manual internal map, not a Flow.
+**Run it:** across a client's 6–12 months of contact interactions, a manual internal map, not a Flow.
 
 ## Prompt
 

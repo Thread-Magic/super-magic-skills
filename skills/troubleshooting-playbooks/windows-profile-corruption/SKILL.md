@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "<user> was logged in with a temporary profile" / "my desktop is empty and everything's gone"; "User Profile Service failed the sign-in" errors; recurring temp-profile logins on one machine or user; or deciding whether to repair a profile or rebuild it.
 
-**Run it:** on the one device ticket you're working — a tech works it hands-on; not unattended.
+**Run it:** on the one device ticket you're working, a tech works it hands-on; not unattended.
 
 ## Prompt
 

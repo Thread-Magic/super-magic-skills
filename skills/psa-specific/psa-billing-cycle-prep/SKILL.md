@@ -1,6 +1,6 @@
 ---
 name: PSA Billing Cycle Prep
-description: Month-end PSA billing readiness sweep: find unposted time, done-but-open tickets, and agreement anomalies before finance runs invoices — clean handoff.
+description: Month-end PSA billing readiness sweep: find unposted time, done-but-open tickets, and agreement anomalies before finance runs invoices: clean handoff.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, search_members, search_clients]
 connectors: []

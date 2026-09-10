@@ -14,7 +14,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 **When to use:** "Double-check <user>'s offboarding — did we get everything?" / a weekly sweep of departures in the last N days / before a client security review or license true-up / an offboarding closed fast under pressure that deserves a calm second pass.
 
-**Run it:** on one departed user's offboarding (or each in a set you point me at) — a read-and-report pass a human reviews.
+**Run it:** on one departed user's offboarding (or each in a set you point me at), a read-and-report pass a human reviews.
 
 ## Prompt
 

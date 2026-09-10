@@ -1,6 +1,6 @@
 ---
 name: Renewal Prep
-description: Build a pre-renewal readout for a client — service record over the term, open risks, the value story, and prep for the pricing conversation.
+description: Build a pre-renewal readout for a client: service record over the term, open risks, the value story, and prep for the pricing conversation.
 category: Account Management
 tools: [search_tickets, search_clients]
 connectors: []
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "<client>'s renewal is coming up — prep me"; "build a renewal readout for <client>"; or "what's our case for the price increase with <client>?"
 
-**Run it:** across a client's contract term of history — a manual internal readout, not a Flow.
+**Run it:** across a client's contract term of history, a manual internal readout, not a Flow.
 
 ## Prompt
 

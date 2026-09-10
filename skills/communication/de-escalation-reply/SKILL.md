@@ -1,6 +1,6 @@
 ---
 name: De-escalation Reply
-description: Draft the response to an angry client message — acknowledge, own what's ours, commit to a concrete next step with a time, without matching their tone.
+description: Draft the response to an angry client message: acknowledge, own what's ours, commit to a concrete next step with a time, without matching their tone.
 category: Communication
 tools: [search_tickets, view_openDraft]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise, Retention & Growth (CSAT/Expansion)]
 
 # De-escalation Reply
 
-**When to use:** "The client is furious — help me respond" — an incoming message is hostile, ALL CAPS, threatening escalation, or dripping with sarcasm, and the next reply matters.
+**When to use:** "The client is furious (help me respond") an incoming message is hostile, ALL CAPS, threatening escalation, or dripping with sarcasm, and the next reply matters.
 
 **Run it:** on one ticket.
 

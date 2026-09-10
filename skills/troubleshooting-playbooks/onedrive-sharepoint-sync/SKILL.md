@@ -1,6 +1,6 @@
 ---
 name: OneDrive / SharePoint Sync
-description: Diagnose OneDrive and SharePoint sync — stuck processing changes, missing files, red X icons — separating client state, library limits, and permissions.
+description: Diagnose OneDrive and SharePoint sync (stuck processing changes, missing files, red X icons) separating client state, library limits, and permissions.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "OneDrive is stuck on processing changes" / red X or paused icon; "files I saved aren't showing up for a user or the team"; sync errors naming specific files or paths; or "a whole library stopped syncing after a reorganization."
 
-**Run it:** on the one ticket you're working — a tech works it with the user; not unattended.
+**Run it:** on the one ticket you're working, a tech works it with the user; not unattended.
 
 ## Prompt
 

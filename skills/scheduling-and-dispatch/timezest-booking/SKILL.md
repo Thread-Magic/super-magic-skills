@@ -1,6 +1,6 @@
 ---
 name: TimeZest Booking
-description: Create a TimeZest scheduling request from a ticket — pick the right appointment type and resource, and drop the self-service booking link into the client reply.
+description: Create a TimeZest scheduling request from a ticket: pick the right appointment type and resource, and drop the self-service booking link into the client reply.
 category: Scheduling & Dispatch
 tools: [search_tickets, get_timezest_scheduling_requests, list_timezest_appointment_types, list_timezest_resources, create_timezest_scheduling_request, add_ticket_note]
 connectors: [TimeZest]

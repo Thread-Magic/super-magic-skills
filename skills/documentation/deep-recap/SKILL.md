@@ -1,6 +1,6 @@
 ---
 name: Deep Recap
-description: Build a full ticket recap covering messages, notes, time entries, related sibling tickets, timeline, and current blockers — beyond the default summary.
+description: Build a full ticket recap covering messages, notes, time entries, related sibling tickets, timeline, and current blockers: beyond the default summary.
 category: Documentation
 tools: [search_tickets, list_recap_templates, add_ticket_note, search_clients]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Deep Recap
 
-**When to use:** "Recap this ticket properly" / "I'm taking over this ticket, catch me up on everything" — a long-running or escalated ticket where the default recap is too thin for a handoff, escalation, manager review, or client status call.
+**When to use:** "Recap this ticket properly" / "I'm taking over this ticket, catch me up on everything", a long-running or escalated ticket where the default recap is too thin for a handoff, escalation, manager review, or client status call.
 
 **Run it:** on one ticket · or as a Flow (triggered when a ticket is escalated).
 

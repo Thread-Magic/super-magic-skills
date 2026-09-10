@@ -1,6 +1,6 @@
 ---
 name: Site-Aware Approval Routing
-description: Resolve a ticket's site, look up the per-site approver from a documented mapping, and send the approval request to that contact — not one hardcoded name.
+description: Resolve a ticket's site, look up the per-site approver from a documented mapping, and send the approval request to that contact, not one hardcoded name.
 category: Automation & Flows
 tools: [search_tickets, search_contacts, send_approval, add_ticket_note]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Risk & Compliance]
 
 # Site-Aware Approval Routing
 
-**When to use:** A client has different approvers per site/location and approvals must reach the right one; "send the approval to whoever signs off for that office"; a change or access request needs sign-off routed by service location. Fires on a supported ticket EVENT — entering an "awaiting approval" status or create on an approval-gated board — never on a timer.
+**When to use:** A client has different approvers per site/location and approvals must reach the right one; "send the approval to whoever signs off for that office"; a change or access request needs sign-off routed by service location. Fires on a supported ticket EVENT (entering an "awaiting approval" status or create on an approval-gated board) never on a timer.
 
 **Run it:** on one ticket · or as a Flow (triggered when a ticket enters an awaiting-approval status or is created on an approval-gated board).
 

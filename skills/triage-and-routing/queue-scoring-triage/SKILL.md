@@ -1,6 +1,6 @@
 ---
 name: Queue Scoring Triage
-description: Produce a ranked triage order for the queue using two-layer scoring — a per-queue baseline plus per-ticket modifiers — so techs work the right ticket next.
+description: Produce a ranked triage order for the queue using two-layer scoring (a per-queue baseline plus per-ticket modifiers), so techs work the right ticket next.
 category: Triage & Routing
 tools: [search_tickets, list_boards, list_ticket_priorities, search_clients]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Faster Resolution & Response]
 
 # Queue Scoring Triage
 
-**When to use:** "What order should we work the queue in?" / "what's next for the team?" — a dispatcher wants a scored morning triage list across boards, or a lead wants to sanity-check that high-priority work is actually surfacing first.
+**When to use:** "What order should we work the queue in?" / "what's next for the team?", a dispatcher wants a scored morning triage list across boards, or a lead wants to sanity-check that high-priority work is actually surfacing first.
 
 **Run it:** across all open tickets — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 

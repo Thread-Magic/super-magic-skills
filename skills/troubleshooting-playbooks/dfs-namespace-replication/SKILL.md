@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Users open a namespace path and land on the wrong (or a slow/remote) server or get "no target"; files created on one server aren't appearing on another or edits are stale between sites; DFSR reports a large backlog, an error state, or a replicated folder stopped replicating; or conflicts/losses ("ConflictAndDeleted") or the staging area/quota is a bottleneck.
 
-**Run it:** on the one ticket you're working — a tech drives this hands-on at the member servers, not unattended.
+**Run it:** on the one ticket you're working, a tech drives this hands-on at the member servers, not unattended.
 
 ## Prompt
 

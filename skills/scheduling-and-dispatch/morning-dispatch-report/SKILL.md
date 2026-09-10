@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "Morning dispatch report" / "what came in overnight?"; a lead standing in for the dispatcher needs the start-of-day picture.
 
-**Run it:** across the desk's boards at start of day — a manual sweep (Flows can't time-trigger it; use an external scheduler if you want it automated).
+**Run it:** across the desk's boards at start of day, a manual sweep (Flows can't time-trigger it; use an external scheduler if you want it automated).
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Industry Pack Frame
-description: Base skill defining how a vertical pack works — the client's calendar first, then blast radius against it, the desk-vs-vendor boundary, and the regulator's data rules.
+description: Base skill defining how a vertical pack works, the client's calendar first, then blast radius against it, the desk-vs-vendor boundary, and the regulator's data rules.
 category: Industry Packs
 tools: [search_tickets, search_itglue, search_hudu, add_ticket_note]
 connectors: [IT Glue, Hudu]
@@ -12,7 +12,7 @@ outcome: [Risk & Compliance]
 
 # Industry Pack Frame
 
-**When to use:** Supporting a client in a regulated or deadline-driven vertical — accounting, legal, healthcare, financial services, construction, manufacturing — or writing a pack for one.
+**When to use:** Supporting a client in a regulated or deadline-driven vertical (accounting, legal, healthcare, financial services, construction, manufacturing), or writing a pack for one.
 
 **Run it:** on the one ticket you're working — it's the shared frame each vertical pack layers its specifics onto.
 

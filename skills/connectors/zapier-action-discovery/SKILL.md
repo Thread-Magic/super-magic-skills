@@ -1,6 +1,6 @@
 ---
 name: Zapier Action Discovery
-description: META skill — before promising a workflow with an external app, verify a Zapier action exists, what fields it takes, and its task cost.
+description: META skill: before promising a workflow with an external app, verify a Zapier action exists, what fields it takes, and its task cost.
 category: Connectors
 tools: []
 connectors: [Zapier]

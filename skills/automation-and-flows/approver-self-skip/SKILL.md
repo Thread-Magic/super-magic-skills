@@ -1,6 +1,6 @@
 ---
 name: Approver Self-Skip
-description: Before firing an approval, check if the ticket submitter is the client's designated approver — if so, skip send_approval and advance with an audit note.
+description: Before firing an approval, check if the ticket submitter is the client's designated approver: if so, skip send_approval and advance with an audit note.
 category: Automation & Flows
 tools: [search_contacts, send_approval, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Approver Self-Skip
 
-**When to use:** A flow reaches its send-approval step and the desk wants self-submitted requests from approvers to pass straight through; the client's office manager (the designated approver) files a request and shouldn't have to approve their own ticket; any approval-gated intake where approvers are also frequent requesters. A deterministic pre-check that wraps new-ticket-approval-gate / change-approval-sender. Runs at the flow's send-approval step — never on a timer.
+**When to use:** A flow reaches its send-approval step and the desk wants self-submitted requests from approvers to pass straight through; the client's office manager (the designated approver) files a request and shouldn't have to approve their own ticket; any approval-gated intake where approvers are also frequent requesters. A deterministic pre-check that wraps new-ticket-approval-gate / change-approval-sender. Runs at the flow's send-approval step, never on a timer.
 
 **Run it:** on one ticket · or as a Flow (triggered at the approval step, on ticket create or status change into the approval stage).
 

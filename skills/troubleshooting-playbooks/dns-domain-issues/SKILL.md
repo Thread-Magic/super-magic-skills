@@ -1,6 +1,6 @@
 ---
 name: DNS & Domain Issues
-description: Diagnose DNS resolution and domain-expiry problems by laddering client to resolver to authoritative — stale records, intranet failing, whole domain dark.
+description: Diagnose DNS resolution and domain-expiry problems by laddering client to resolver to authoritative: stale records, intranet failing, whole domain dark.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search, liongard_domain]
 connectors: [IT Glue, Hudu, Liongard]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** A user can't reach a site or server by name but others can (or by IP works); internal names resolve wrong or not at all and new DNS changes "aren't taking effect"; the client's public website or mail is suddenly unreachable for everyone; or someone asks "did our domain expire?" (or wants a pre-emptive domain/record hygiene check).
 
-**Run it:** on the one ticket you're working — a tech ladders the resolution hands-on and hands DNS edits to the zone owner; not unattended.
+**Run it:** on the one ticket you're working, a tech ladders the resolution hands-on and hands DNS edits to the zone owner; not unattended.
 
 ## Prompt
 

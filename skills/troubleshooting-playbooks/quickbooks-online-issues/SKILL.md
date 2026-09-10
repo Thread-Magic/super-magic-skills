@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** A user reports QuickBooks web problems (pages won't load, dead buttons, "something went wrong"), bank feeds stopped importing or show duplicate/missing transactions, a user can't access the company or hit a user limit, or login works elsewhere but not in one browser/machine.
 
-**Run it:** on the one ticket you're working — a tech works it with the user; not unattended.
+**Run it:** on the one ticket you're working, a tech works it with the user; not unattended.
 
 ## Prompt
 

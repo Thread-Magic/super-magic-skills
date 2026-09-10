@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "<user> can't connect to the VPN" / "VPN connects but nothing loads"; "VPN keeps dropping when I work from home"; "connected to VPN but can't reach <server> by name"; or an MFA/SSO prompt looping during VPN sign-in.
 
-**Run it:** on the one ticket you're working — a tech works it with the user; not unattended.
+**Run it:** on the one ticket you're working, a tech works it with the user; not unattended.
 
 ## Prompt
 

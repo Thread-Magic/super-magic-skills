@@ -1,6 +1,6 @@
 ---
 name: Halo Sync Audit
-description: Sweep Thread ↔ HaloPSA divergence — especially the known pattern of statuses not carrying over — and reconcile toward Halo as the master system.
+description: Sweep Thread ↔ HaloPSA divergence (especially the known pattern of statuses not carrying over), and reconcile toward Halo as the master system.
 category: PSA-Specific
 tools: [search_tickets, list_boards, list_ticket_statuses, update_ticket, add_ticket_note]
 connectors: []

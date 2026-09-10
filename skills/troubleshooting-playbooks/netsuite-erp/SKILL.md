@@ -1,6 +1,6 @@
 ---
 name: NetSuite ERP
-description: Support NetSuite ERP tickets as an MSP — roles and permissions, saved-search visibility, SuiteScript/REST/CSV integration errors — no financial edits.
+description: Support NetSuite ERP tickets as an MSP (roles and permissions, saved-search visibility, SuiteScript/REST/CSV integration errors) no financial edits.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "I can't see / access this record or report" or an "insufficient privileges" error; a saved search or report returns wrong or no results; an integration (CSV import, SuiteScript, REST/SOAP/connector) is throwing errors; or a user can't log in, has the wrong role, or lands in the wrong subsidiary/center.
 
-**Run it:** on the one ticket you're working — a tech diagnoses and hands ERP config to the admin/partner; not unattended.
+**Run it:** on the one ticket you're working, a tech diagnoses and hands ERP config to the admin/partner; not unattended.
 
 ## Prompt
 

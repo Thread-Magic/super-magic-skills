@@ -1,6 +1,6 @@
 ---
 name: Recurring Issue Report
-description: Someone asks which issues keep coming back — chronic problems hitting the same client or device repeatedly — and whether each has a root-cause fix underway.
+description: Someone asks which issues keep coming back (chronic problems hitting the same client or device repeatedly), and whether each has a root-cause fix underway.
 category: Reporting & Analytics
 tools: [search_tickets, search_clients, list_boards]
 connectors: []

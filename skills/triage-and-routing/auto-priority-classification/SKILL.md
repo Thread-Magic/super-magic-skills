@@ -1,6 +1,6 @@
 ---
 name: Auto Priority Classification
-description: Set a ticket's priority from its title and description against the partner's own priority definitions — built for alert boards and intake flows.
+description: Set a ticket's priority from its title and description against the partner's own priority definitions: built for alert boards and intake flows.
 category: Triage & Routing
 tools: [search_tickets, list_ticket_priorities, update_ticket, add_ticket_note]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Faster Resolution & Response]
 
 # Auto Priority Classification
 
-**When to use:** "What priority should this be?" against the desk's own P1/P2/P3 definitions — an alert board that needs every incoming ticket stamped automatically, or a flow firing on create that needs one deterministic priority write.
+**When to use:** "What priority should this be?" against the desk's own P1/P2/P3 definitions, an alert board that needs every incoming ticket stamped automatically, or a flow firing on create that needs one deterministic priority write.
 
 **Run it:** on one ticket · across all tickets on a board · or as a Flow (when a ticket is created).
 

@@ -1,6 +1,6 @@
 ---
 name: Firewall Config Backup Audit
-description: Verify every firewall config backup is current — via Liongard change history or the vendor state — and flag any device whose backup is missing or stale.
+description: Verify every firewall config backup is current (via Liongard change history or the vendor state), and flag any device whose backup is missing or stale.
 category: Devices & Infrastructure
 tools: [liongard_launchpoint, liongard_timeline, liongard_detection, liongard_metric, search_itglue, create_ticket, add_ticket_note]
 connectors: [Liongard, IT Glue]

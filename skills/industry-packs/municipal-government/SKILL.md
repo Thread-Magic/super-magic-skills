@@ -12,7 +12,7 @@ outcome: [Risk & Compliance, Faster Resolution & Response]
 
 # Supporting Municipal Government
 
-**When to use:** A city, town, county, village, utility district, housing authority, library, or other public agency — anything touching email retention/deletion/mailbox lifecycle (public-records check), any work adjacent to police/dispatch/courts or systems holding criminal-justice information (CJIS gate), quotes/purchases/projects (procurement realities), or council/board meeting AV.
+**When to use:** A city, town, county, village, utility district, housing authority, library, or other public agency, anything touching email retention/deletion/mailbox lifecycle (public-records check), any work adjacent to police/dispatch/courts or systems holding criminal-justice information (CJIS gate), quotes/purchases/projects (procurement realities), or council/board meeting AV.
 
 **Run it:** on one ticket · or across all of this client's tickets.
 

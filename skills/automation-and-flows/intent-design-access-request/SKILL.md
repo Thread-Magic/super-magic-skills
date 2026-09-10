@@ -1,6 +1,6 @@
 ---
 name: Access Request Intent Design
-description: Design an access-request intent for folders, distribution lists, and shared mailboxes — capture resource, justification, and approver on intake.
+description: Design an access-request intent for folders, distribution lists, and shared mailboxes: capture resource, justification, and approver on intake.
 category: Automation & Flows
 tools: [list_intents, get_intent, create_intent, update_intent, set_variation_arguments, set_variation_replies, update_variation, search_tickets]
 connectors: []

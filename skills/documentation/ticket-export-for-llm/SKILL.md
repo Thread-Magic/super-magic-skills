@@ -1,6 +1,6 @@
 ---
 name: Ticket Export for LLM
-description: Produce a clean, sanitized, self-contained export of a ticket for pasting into another AI tool — credentials and PII stripped, context preserved.
+description: Produce a clean, sanitized, self-contained export of a ticket for pasting into another AI tool: credentials and PII stripped, context preserved.
 category: Documentation
 tools: [search_tickets]
 connectors: []

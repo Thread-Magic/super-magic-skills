@@ -1,6 +1,6 @@
 ---
 name: Automation Failure Watch
-description: Detect automation-error signatures in notes — 4xx/5xx bodies, Jinja errors, webhook failures — flag the ticket and ping Teams so broken flows get noticed.
+description: Detect automation-error signatures in notes (4xx/5xx bodies, Jinja errors, webhook failures) flag the ticket and ping Teams so broken flows get noticed.
 category: Automation & Flows
 tools: [search_tickets, add_ticket_note]
 connectors: [Zapier: Microsoft Teams]
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Fewer Escalations & Less Noise]
 
 # Automation Failure Watch
 
-**When to use:** Flows or integrations occasionally dump error bodies into ticket notes and nobody watches for them; "alert us when an automation errors out on a ticket"; catching template/rendering failures (unrendered `{{ }}` tokens, Jinja errors) before they ship to a client. Fires on the NOTE-ADDED event (the error note landing) — not a timer.
+**When to use:** Flows or integrations occasionally dump error bodies into ticket notes and nobody watches for them; "alert us when an automation errors out on a ticket"; catching template/rendering failures (unrendered `{{ }}` tokens, Jinja errors) before they ship to a client. Fires on the NOTE-ADDED event (the error note landing), not a timer.
 
 **Run it:** on one ticket · or as a Flow (triggered when a note is added).
 

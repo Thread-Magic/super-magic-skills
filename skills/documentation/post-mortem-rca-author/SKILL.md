@@ -1,6 +1,6 @@
 ---
 name: Post-Mortem & RCA Author
-description: Write a structured post-mortem or root-cause analysis from an incident ticket — executive summary, event timeline, impact, root cause, and action items.
+description: Write a structured post-mortem or root-cause analysis from an incident ticket: executive summary, event timeline, impact, root cause, and action items.
 category: Documentation
 tools: [search_tickets, search_knowledge_base, add_ticket_note]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity)]
 
 # Post-Mortem & RCA Author
 
-**When to use:** "Write an RCA for this outage" / "post-mortem for ticket <number>" — a P1 closed and the client or management wants a formal write-up, or a recurring problem finally got a root cause worth recording.
+**When to use:** "Write an RCA for this outage" / "post-mortem for ticket <number>", a P1 closed and the client or management wants a formal write-up, or a recurring problem finally got a root cause worth recording.
 
 **Run it:** on one ticket.
 

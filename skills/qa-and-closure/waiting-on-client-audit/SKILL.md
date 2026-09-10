@@ -1,6 +1,6 @@
 ---
 name: Waiting-on-Client Audit
-description: Audit every ticket parked in a waiting status: how long, whether a follow-up was sent, and the correct next action — nudge, reschedule, unpark, close.
+description: Audit every ticket parked in a waiting status: how long, whether a follow-up was sent, and the correct next action: nudge, reschedule, unpark, close.
 category: QA & Closure
 tools: [search_tickets, list_ticket_statuses, add_ticket_note, update_ticket, schedule_ticket]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 # Waiting-on-Client Audit
 
-**When to use:** "Audit the waiting-on-client bucket" / "what's actually waiting on clients vs just parked?" — a weekly review before waiting statuses distort aging and XLA numbers, or suspicions that techs park tickets in waiting to stop the clock.
+**When to use:** "Audit the waiting-on-client bucket" / "what's actually waiting on clients vs just parked?", a weekly review before waiting statuses distort aging and XLA numbers, or suspicions that techs park tickets in waiting to stop the clock.
 
 **Run it:** across all tickets in waiting statuses — run it manually; Flows are ticket-event triggered, so a sweep like this can't run itself on a cadence.
 

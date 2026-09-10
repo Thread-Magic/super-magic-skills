@@ -1,6 +1,6 @@
 ---
 name: M365 Sign-in Issues
-description: Diagnose Microsoft 365 and Entra sign-in failures — blocked sign-ins, MFA loops, repeated password prompts, device-trust errors — from the sign-in log.
+description: Diagnose Microsoft 365 and Entra sign-in failures (blocked sign-ins, MFA loops, repeated password prompts, device-trust errors) from the sign-in log.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** A user can't sign in to M365 / Outlook / Teams (with or without an error), MFA prompts loop or the approval never arrives, "you can't get there from here" / device-compliance or trust errors, or the password is accepted but apps keep re-prompting.
 
-**Run it:** on the one ticket you're working — a tech reads the sign-in log hands-on and verifies identity out-of-band; not unattended.
+**Run it:** on the one ticket you're working, a tech reads the sign-in log hands-on and verifies identity out-of-band; not unattended.
 
 ## Prompt
 

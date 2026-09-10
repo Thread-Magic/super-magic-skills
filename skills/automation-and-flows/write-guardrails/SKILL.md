@@ -1,6 +1,6 @@
 ---
 name: Write Guardrails
-description: Base skill defining the gates that sit in front of any action that changes something — confidence bar, show-me-before-send, when-in-doubt-do-nothing, and never invent data.
+description: Base skill defining the gates that sit in front of any action that changes something: confidence bar, show-me-before-send, when-in-doubt-do-nothing, and never invent data.
 category: Automation & Flows
 tools: []
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Fewer Escalations & Less Noise]
 
 # Write Guardrails
 
-**When to use:** Authoring or reviewing any skill that sends, closes, merges, reassigns, deletes, or otherwise changes state — and any skill whose worst day is doing the wrong thing confidently.
+**When to use:** Authoring or reviewing any skill that sends, closes, merges, reassigns, deletes, or otherwise changes state, and any skill whose worst day is doing the wrong thing confidently.
 
 **Run it:** on one ticket · across a set · or as a Flow — it's a base contract you fold into any skill that writes.
 

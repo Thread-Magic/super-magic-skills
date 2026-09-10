@@ -1,6 +1,6 @@
 ---
 name: RAID Degradation Alert
-description: Triage a RAID degraded or failed-member alert with zero-margin urgency — one failure from data loss — and enforce the verify-backups-BEFORE-rebuild rule.
+description: Triage a RAID degraded or failed-member alert with zero-margin urgency (one failure from data loss), and enforce the verify-backups-BEFORE-rebuild rule.
 category: Alert Runbooks
 tools: [search_tickets, get_ninjaone_device, get_ninjaone_device_activities, list_ninjaone_alerts, liongard_metric, liongard_launchpoint, search_itglue, add_ticket_note, update_ticket]
 connectors: [NinjaOne, Liongard, IT Glue]

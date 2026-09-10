@@ -1,6 +1,6 @@
 ---
 name: Dispatch Control Tower
-description: The dispatcher's live picture in one view — unassigned queue, at-risk tickets, today's scheduled work, and which technicians are free to pick up right now.
+description: The dispatcher's live picture in one view: unassigned queue, at-risk tickets, today's scheduled work, and which technicians are free to pick up right now.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_members, list_boards, list_ticket_priorities]
 connectors: []
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "Give me the dispatch picture" / "what's the state of the queue right now?"; a mid-day check-in after a P1 shuffle ("where do we stand?"); or covering someone else's dispatch seat and needing situational awareness fast.
 
-**Run it:** across the desk's support boards — a read-only snapshot, run manually.
+**Run it:** across the desk's support boards, a read-only snapshot, run manually.
 
 ## Prompt
 

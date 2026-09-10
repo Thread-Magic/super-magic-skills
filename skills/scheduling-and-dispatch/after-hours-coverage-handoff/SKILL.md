@@ -1,6 +1,6 @@
 ---
 name: After-Hours Coverage Handoff
-description: Build the end-of-business handoff to on-call or after-hours coverage — open urgent work, expected client callbacks, and site notes the night crew needs.
+description: Build the end-of-business handoff to on-call or after-hours coverage: open urgent work, expected client callbacks, and site notes the night crew needs.
 category: Scheduling & Dispatch
 tools: [search_tickets, search_members, list_ticket_priorities, add_ticket_note]
 connectors: []
@@ -14,7 +14,7 @@ outcome: [Always-On Coverage]
 
 **When to use:** "Build the handoff for tonight's on-call" / "end-of-day handoff"; a lead closing the desk wants what the overnight NOC or answering-service escalation path needs; or a day tech going offline mid-incident needs to hand a hot ticket to coverage.
 
-**Run it:** across the desk's open urgent tickets at end of business — a manual handoff sweep, not a Flow.
+**Run it:** across the desk's open urgent tickets at end of business, a manual handoff sweep, not a Flow.
 
 ## Prompt
 

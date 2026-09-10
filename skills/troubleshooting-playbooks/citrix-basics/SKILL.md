@@ -1,6 +1,6 @@
 ---
 name: Citrix Basics
-description: First-line playbook for Citrix Virtual Apps and Desktops (CVAD/DaaS) — VDA registration, StoreFront vs Workspace, hung sessions — before escalating.
+description: First-line playbook for Citrix Virtual Apps and Desktops (CVAD/DaaS) (VDA registration, StoreFront vs Workspace, hung sessions) before escalating.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Fewer Escalations & Less Noise]
 
 **When to use:** "<user> can't launch their Citrix app/desktop" (spinner, error, or nothing happens); sessions freeze/hang, disconnect repeatedly, or reconnect to a dead session; a published app is missing from a user's store or everyone lost access at once; or the client has Citrix, the MSP has no dedicated Citrix bench, and the desk needs a defensible first pass.
 
-**Run it:** on the one ticket you're working — a generalist tech runs the first pass hands-on, then hands off to the Citrix admin.
+**Run it:** on the one ticket you're working, a generalist tech runs the first pass hands-on, then hands off to the Citrix admin.
 
 ## Prompt
 

@@ -1,6 +1,6 @@
 ---
 name: Tagesübersicht (German)
-description: Tagesübersicht offener Tickets eines Technikers: was auf Antwort wartet, was dringend ist, was heute geplant ist — inklusive 3-Zeilen-Variante.
+description: Tagesübersicht offener Tickets eines Technikers: was auf Antwort wartet, was dringend ist, was heute geplant ist: inklusive 3-Zeilen-Variante.
 category: Localized
 tools: [search_tickets, search_members]
 connectors: []

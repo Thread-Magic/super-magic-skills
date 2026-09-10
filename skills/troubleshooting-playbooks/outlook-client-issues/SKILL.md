@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Outlook crashes, hangs on load, or freezes on specific actions; "Outlook keeps asking for my password" (after M365 sign-in is ruled healthy); search returns nothing / mail missing in Outlook but visible in web; or a crash/hang on send, especially with certain content or one recipient.
 
-**Run it:** on the one ticket you're working — a tech works the isolation steps with the user; not unattended.
+**Run it:** on the one ticket you're working, a tech works the isolation steps with the user; not unattended.
 
 ## Prompt
 

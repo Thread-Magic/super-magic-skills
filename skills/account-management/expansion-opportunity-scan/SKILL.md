@@ -1,6 +1,6 @@
 ---
 name: Expansion Opportunity Scan
-description: Mine a client's ticket history for expansion signals — recurring issues that justify a project or upsell, and training gaps that justify a service offering.
+description: Mine a client's ticket history for expansion signals, recurring issues that justify a project or upsell, and training gaps that justify a service offering.
 category: Account Management
 tools: [search_tickets, search_clients]
 connectors: []
@@ -14,7 +14,7 @@ outcome: [Retention & Growth (CSAT/Expansion)]
 
 **When to use:** "Any upsell opportunities at <client>?"; "what projects should we be proposing to <client> based on their tickets?"; or "scan my accounts for expansion candidates."
 
-**Run it:** across one client's history or the whole portfolio — a manual internal scan, not a Flow.
+**Run it:** across one client's history or the whole portfolio, a manual internal scan, not a Flow.
 
 ## Prompt
 

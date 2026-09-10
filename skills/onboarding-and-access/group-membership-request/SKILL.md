@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** "Add <user> to the VPN users group" / "<user> needs the finance-apps security group" / "remove <user> from admins" — especially a group add requested with no explanation of what it unlocks.
 
-**Run it:** on one ticket — an access-control decision, so approval- and human-gated.
+**Run it:** on one ticket, an access-control decision, so approval- and human-gated.
 
 ## Prompt
 

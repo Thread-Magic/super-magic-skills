@@ -1,6 +1,6 @@
 ---
 name: Dead-Air Call Filter
-description: Detect and close voice sessions that were dead air, instant hangups, or robocalls so they don't pollute the queue — human speech means it isn't dead air.
+description: Detect and close voice sessions that were dead air, instant hangups, or robocalls so they don't pollute the queue: human speech means it isn't dead air.
 category: Voice & Messenger
 tools: [search_tickets, update_ticket, add_ticket_note, list_ticket_statuses]
 connectors: []

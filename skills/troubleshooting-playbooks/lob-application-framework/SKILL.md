@@ -1,6 +1,6 @@
 ---
 name: LOB Application Framework
-description: Generic playbook for any line-of-business app failure — dental, legal, accounting, ERP — identify vendor and version, pull logs, build escalation packets.
+description: Generic playbook for any line-of-business app failure (dental, legal, accounting, ERP) identify vendor and version, pull logs, build escalation packets.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu]
@@ -12,9 +12,9 @@ outcome: [Faster Resolution & Response]
 
 # LOB Application Framework
 
-**When to use:** Any application the desk has no specific playbook for — practice management, ERP, legal, accounting, industry software — that won't open, errors, or lost its database connection; an LOB app that broke after an update (its own or Windows); or deciding what the desk can fix versus what goes to the app vendor.
+**When to use:** Any application the desk has no specific playbook for (practice management, ERP, legal, accounting, industry software) that won't open, errors, or lost its database connection; an LOB app that broke after an update (its own or Windows); or deciding what the desk can fix versus what goes to the app vendor.
 
-**Run it:** on the one ticket you're working — a tech drives the diagnosis and builds the vendor package; not unattended.
+**Run it:** on the one ticket you're working, a tech drives the diagnosis and builds the vendor package; not unattended.
 
 ## Prompt
 

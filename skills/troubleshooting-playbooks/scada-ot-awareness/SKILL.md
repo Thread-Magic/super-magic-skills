@@ -14,7 +14,7 @@ outcome: [Risk & Compliance]
 
 **When to use:** A ticket mentions SCADA, PLC, HMI, ICS, DCS, RTU, a controls/automation network, or "the plant/line/machine network"; a device on an isolated "production"/"process" VLAN or air-gapped network is involved; an engineering workstation/historian/HMI PC that talks to controllers needs attention; or someone asks the MSP to "just get the machine/line back up".
 
-**Run it:** on the one ticket you're working — a tech uses it to recognize the boundary and route safely; not unattended.
+**Run it:** on the one ticket you're working, a tech uses it to recognize the boundary and route safely; not unattended.
 
 ## Prompt
 

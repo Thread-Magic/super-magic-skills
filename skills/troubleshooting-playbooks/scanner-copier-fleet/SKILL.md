@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response]
 
 **When to use:** Scan-to-folder stopped working (often the whole office, often right after a password change or server work), the copier can't reach the share after a migration or security hardening, address-book entries are wrong/missing or need bulk changes, or there are panel error codes / firmware weirdness / "the copier company says it's a network problem".
 
-**Run it:** on the one ticket you're working — a tech works the admin panel and lease-vendor handoff; not unattended.
+**Run it:** on the one ticket you're working, a tech works the admin panel and lease-vendor handoff; not unattended.
 
 ## Prompt
 

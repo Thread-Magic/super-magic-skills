@@ -1,6 +1,6 @@
 ---
 name: Hardware Diagnostics
-description: Work desktop and laptop hardware faults — no-boot, random shutdowns, disk noises, battery and thermal — through POST stages, SMART, and warranty routing.
+description: Work desktop and laptop hardware faults (no-boot, random shutdowns, disk noises, battery and thermal) through POST stages, SMART, and warranty routing.
 category: Troubleshooting Playbooks
 tools: [search_tickets, search_knowledge_base, search_itglue, search_hudu, get_ninjaone_device, get_ninjaone_device_activities, get_ninjaone_device_link, add_ticket_note, web_search]
 connectors: [IT Glue, Hudu, NinjaOne]
@@ -14,7 +14,7 @@ outcome: [Faster Resolution & Response, Time & Cost Savings (Capacity)]
 
 **When to use:** A machine won't turn on or won't boot (any stage of dead); random shutdowns, freezes under load, fan roar, or a burning-hot laptop; a clicking/grinding disk, "SMART error" messages, or suspected failing storage; or a battery that dies in an hour and a repair-vs-warranty-vs-replace decision.
 
-**Run it:** on the one device ticket you're working — a tech drives the hands-on checks and warranty routing; not unattended.
+**Run it:** on the one device ticket you're working, a tech drives the hands-on checks and warranty routing; not unattended.
 
 ## Prompt
 

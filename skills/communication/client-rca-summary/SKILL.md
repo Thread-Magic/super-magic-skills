@@ -1,6 +1,6 @@
 ---
 name: Client RCA Summary
-description: Draft a client-safe root-cause summary for a resolved issue — what happened, impact, cause, and prevention — written defensively for one ticket.
+description: Draft a client-safe root-cause summary for a resolved issue (what happened, impact, cause, and prevention) written defensively for one ticket.
 category: Communication
 tools: [search_tickets, search_knowledge_base, view_openDraft]
 connectors: []
@@ -12,7 +12,7 @@ outcome: [Time & Cost Savings (Capacity), Retention & Growth (CSAT/Expansion)]
 
 # Client RCA Summary
 
-**When to use:** "The client wants to know why this happened — draft an RCA" / "write a root-cause summary for this resolved ticket" — a single incident is resolved and the client asks for an explanation short of a formal outage letter.
+**When to use:** "The client wants to know why this happened (draft an RCA" / "write a root-cause summary for this resolved ticket") a single incident is resolved and the client asks for an explanation short of a formal outage letter.
 
 **Run it:** on one ticket.
 

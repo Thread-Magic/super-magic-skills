@@ -1,6 +1,6 @@
 ---
 name: Messenger Deployment Audit
-description: Report which clients use Messenger versus which are entitled — deployed and active vs. silent — surfacing adoption gaps worth a rollout conversation.
+description: Report which clients use Messenger versus which are entitled (deployed and active vs. silent) surfacing adoption gaps worth a rollout conversation.
 category: Voice & Messenger
 tools: [search_clients, search_tickets, list_boards]
 connectors: []

@@ -1,6 +1,6 @@
 ---
 name: Screenshot OCR Translate
-description: Extract the text from a pasted screenshot — an error dialog, email, or app screen — translate it to English if needed, and summarize what it actually says.
+description: Extract the text from a pasted screenshot (an error dialog, email, or app screen) translate it to English if needed, and summarize what it actually says.
 category: Communication
 tools: [add_ticket_note]
 connectors: []
