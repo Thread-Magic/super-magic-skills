@@ -71,11 +71,20 @@ TOOLS = {
     "search_tickets", "search_clients", "search_contacts", "search_members",
     "search_knowledge_base", "search_thread_docs", "web_search", "list_boards",
     "list_ticket_statuses", "list_ticket_priorities", "list_recap_templates",
+    # PSA classification reads. Postdate the 778823d tool-catalog snapshot these lists
+    # were seeded from. Verified in core: app/Modules/SuperAgent/Tools/Ticket/
+    # ListTicketCategoriesTool.php (AutoTask only) and ListBoardClassificationsTool.php
+    # (ConnectWise + HaloPSA) — each hidden on the PSAs it doesn't serve.
+    "list_ticket_categories", "list_board_classifications",
     # native writes
     "add_ticket_note", "update_ticket", "create_ticket", "assign_contact",
     "log_time_entry", "merge_ticket", "schedule_ticket", "list_schedule_entries",
     "update_schedule_entry",
     "send_approval", "run_assistive_ai",
+    # PSA classification writes, same provenance as the reads above. Note Assistive AI
+    # (run_assistive_ai) covers Issue Type / Sub-Issue Type and ticket type but NOT
+    # AutoTask's Ticket Category — set_ticket_category is the only route to that field.
+    "set_ticket_category", "set_ticket_classification",
     # in-app SuperAgent only
     "view_openDraft", "view_save", "view_list", "view_duplicate", "view_getCurrent",
     "view_listFilterAttributes", "view_searchFilterValues",
