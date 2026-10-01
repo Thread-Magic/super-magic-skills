@@ -36,8 +36,9 @@ say so and make it a manual skill instead.
 3. Map every action to a real flow action; look up any referenced board, status, or
    priority for its real id. Native flow actions are limited (set
    priority/status/board/agreement/team, assign, Reply, Note, Auto-Prioritize/Categorize,
-   Generate Title/Recap, Run Skill, New Super Magic Agent) — anything else must run via
-   Run Skill and that skill's own tools.
+   Generate Title/Recap, Agent Builder) — anything else must run via Agent Builder's
+   Run a Skill mode and that skill's own tools.
+   (The flow tools list Agent Builder as two actions: Run Skill and New Super Magic Agent.)
 
 4. List the existing flows and check for ones on the same trigger and board. Flag overlaps:
    two flows firing on the same event can conflict or double-notify, and flow ordering may
