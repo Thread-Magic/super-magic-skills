@@ -1,6 +1,6 @@
 ---
 name: Triage Closure Review
-description: When a ticket closes, compare what the triage agent set with what the tech left, and update the Triage Learnings skill only when repeated real misses prove a rule will raise accuracy.
+description: When a ticket closes, compare what the triage skills set or recommended with what the tech left, and update the Triage Learnings skill only when repeated real misses prove a rule will raise accuracy.
 category: QA & Closure
 tools: [search_tickets, list_skills, update_skill, add_ticket_note]
 connectors: []
@@ -19,14 +19,14 @@ outcome: [Faster Resolution & Response, Time & Cost Savings (Capacity)]
 ## Prompt
 
 ```
-Purpose: when a ticket closes, check whether the technician changed what the triage agent set. Update "Triage Learnings" ONLY when the evidence shows it will raise accuracy. Most tickets need no change.
+Purpose: when a ticket closes, check whether the technician changed what triage set or recommended. Update "Triage Learnings" ONLY when the evidence shows it will raise accuracy. Most tickets need no change.
 
 STEP 1 - COMPARE
-Find the "TRIAGE AGENT" internal note. If there isn't one, stop: "No triage note".
-For category, ticket type and priority, compare what the note says the agent set with the value on the closed ticket:
+Find the "TRIAGE RESULTS" internal note. If there isn't one, stop: "No triage note".
+For category, ticket type and priority, compare the note with the value on the closed ticket:
 - Note says "kept by person", or the value is unchanged -> nothing to learn.
 - Agent set it and the tech changed it -> a CORRECTION.
-- Agent "left default" on type and the tech changed it -> a CORRECTION.
+- Type: note says "recommended" and the closed type is different, or "default is right" and the tech changed it -> a CORRECTION.
 
 STEP 2 - IS IT A REAL TRIAGE MISS?
 Read the whole ticket. Discard the correction if:
