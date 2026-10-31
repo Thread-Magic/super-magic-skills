@@ -1,6 +1,6 @@
 ---
 name: Self-Learning Triage Orchestrator
-description: Run the self-learning triage skills on a new ticket in a fixed order, filling only the category, type and priority a person has not set, and leave one scored internal note.
+description: Run the self-learning triage skills on a new ticket in a fixed order, setting only the category and priority a person has not set, recommending a ticket type, and leaving one scored internal note.
 category: Automation & Flows
 tools: [load_skill, search_tickets, add_ticket_note]
 connectors: []
@@ -33,7 +33,7 @@ STEP 2 - RUN THE SKILLS, IN THIS ORDER
 2. "Triage Learnings". Always run it.
 3. "Triage Similar Tickets". Always run it.
 4. "Triage Category", only if Category is EMPTY.
-5. "Triage Ticket Type", only if Ticket Type is DEFAULT.
+5. "Triage Ticket Type", only if Ticket Type is DEFAULT. It recommends a type; nothing writes the type.
 6. "Triage Priority", only if Priority is EMPTY.
 7. "Prior Resolution". Always run it.
 For a field SET BY A PERSON, skip its skill and record "kept by person". If a skill is missing, fails or can't decide, record that and continue. Never guess what a missing skill would have done.
@@ -41,9 +41,9 @@ For a field SET BY A PERSON, skip its skill and record "kept by person". If a sk
 STEP 3 - ONE INTERNAL NOTE
 Plain text, no markdown or emojis, never visible to the client. Fold every skill's result into this note; no skill posts a note of its own.
 
-TRIAGE AGENT
+TRIAGE RESULTS
 Category: <value> (set | kept by person) - <one-line reason>
-Type: <value> (set | left default | kept by person) - <one-line reason>
+Type: <value> (recommended | default is right | kept by person) - <one-line reason>
 Priority: <value> (set | kept by person) - <impact and urgency signal>
 Confidence: Category <High/Medium/Low>, Type <High/Medium/Low>, Priority <High/Medium/Low>
 Learned rules used: L<n>, L<n> | none
@@ -56,7 +56,7 @@ Prior resolution: <what fixed it before, one or two lines, with ticket numbers> 
 RULES
 - Never overwrite a field that was SET BY A PERSON.
 - Only use values from the board's live category, type and priority lists. Never invent one.
-- Each field is written once, by its own skill. Don't write fields yourself.
-- Don't change the title, status, board, owner or any other field.
+- Category and priority are written once, by their own skills. Don't write fields yourself.
+- Never change the ticket type, title, status, board, owner or any other field.
 - As a Flow, your entire reply is the note.
 ```

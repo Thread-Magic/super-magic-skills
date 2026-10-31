@@ -2,7 +2,7 @@
 name: Triage Category
 description: Set the category on a new ticket whose category is empty, using learned rules first, then how techs filed similar tickets, then your desk's own category rules.
 category: Triage & Routing
-tools: [list_board_classifications, update_ticket]
+tools: [list_board_classifications, set_ticket_classification, set_ticket_category]
 connectors: []
 scope: single
 flow: yes
